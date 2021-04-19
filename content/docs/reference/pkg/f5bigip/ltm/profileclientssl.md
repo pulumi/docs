@@ -55,8 +55,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-f5bigip/sdk/v3/go/f5bigip/ltm"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -128,19 +128,80 @@ const test_ClientSsl = new f5bigip.ltm.ProfileClientSsl("test-ClientSsl", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProfileClientSsl</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProfileClientSslArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProfileClientSsl</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProfileClientSslArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProfileClientSsl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_non_ssl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authenticate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authenticate_depth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">c3d_client_fallback_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">c3d_drop_unknown_ocsp_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">c3d_ocsp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ca_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cache_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cert_extension_includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cert_key_chains</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProfileClientSslCertKeyChainArgs]]</span> = None<span class="p">, </span><span class="nx">cert_life_span</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cert_lookup_by_ipaddr_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">chain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ciphers</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_cert_ca</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">crl_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forward_proxy_bypass_default_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">full_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">generation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">generic_alert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">handshake_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inherit_cert_keychain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mod_ssl_methods</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">passphrase</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_cert_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ca_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ca_passphrase</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ssl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ssl_passthrough</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renegotiate_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renegotiate_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renegotiation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retain_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secure_renegotiation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_mirroring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_ticket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sni_default</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sni_require</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_c3d</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_forward_proxy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_forward_proxy_bypass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_sign_hash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strict_resume</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tm_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">unclean_shutdown</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProfileClientSsl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">alert_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">allow_non_ssl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">authenticate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">authenticate_depth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                     <span class="nx">c3d_client_fallback_cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">c3d_drop_unknown_ocsp_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">c3d_ocsp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">ca_file</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">cache_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                     <span class="nx">cache_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                     <span class="nx">cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">cert_extension_includes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">cert_key_chains</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ProfileClientSslCertKeyChainArgs]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">cert_life_span</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                     <span class="nx">cert_lookup_by_ipaddr_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">chain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">ciphers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">client_cert_ca</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">crl_file</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">forward_proxy_bypass_default_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">full_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">generation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                     <span class="nx">generic_alert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">handshake_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">inherit_cert_keychain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">mod_ssl_methods</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">passphrase</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">peer_cert_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">proxy_ca_cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">proxy_ca_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">proxy_ca_passphrase</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">proxy_ssl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">proxy_ssl_passthrough</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">renegotiate_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">renegotiate_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">renegotiation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">retain_certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">secure_renegotiation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">session_mirroring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">session_ticket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">sni_default</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">sni_require</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">ssl_c3d</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">ssl_forward_proxy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">ssl_forward_proxy_bypass</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">ssl_sign_hash</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">strict_resume</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">tm_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">unclean_shutdown</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProfileClientSsl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProfileClientSslArgs</a></span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProfileClientSsl</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProfileClientSslArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProfileClientSsl</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProfileClientSsl</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProfileClientSslArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProfileClientSsl</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProfileClientSsl</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProfileClientSslArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProfileClientSsl</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProfileClientSslArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -175,22 +236,32 @@ const test_ClientSsl = new f5bigip.ltm.ProfileClientSsl("test-ClientSsl", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ProfileClientSslArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -199,7 +270,7 @@ const test_ClientSsl = new f5bigip.ltm.ProfileClientSsl("test-ClientSsl", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -223,7 +294,7 @@ const test_ClientSsl = new f5bigip.ltm.ProfileClientSsl("test-ClientSsl", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1286,7 +1357,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile.Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-clientssl-profile`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1295,7 +1366,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#alerttimeout_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Alert time out
 {{% /md %}}</dd><dt class="property-optional"
@@ -1304,7 +1375,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#allownonssl_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Non<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enables or disables acceptance of non-SSL connections, When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -1313,7 +1384,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#authenticate_nodejs" style="color: inherit; text-decoration: inherit;">authenticate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the frequency of client authentication for an SSL session.When `once`,specifies that the system authenticates the client once for an SSL session.
 When `always`, specifies that the system authenticates the client once for an SSL session and also upon reuse of that session.
@@ -1323,7 +1394,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#authenticatedepth_nodejs" style="color: inherit; text-decoration: inherit;">authenticate<wbr>Depth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of certificates to be traversed in a client certificate chain
 {{% /md %}}</dd><dt class="property-optional"
@@ -1332,7 +1403,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#c3dclientfallbackcert_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Client<wbr>Fallback<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the client certificate to use in SSL client certificate constrained delegation. This certificate will be used if client does not provide a cert during the SSL handshake. The default value is none.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1341,7 +1412,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#c3ddropunknownocspstatus_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Drop<wbr>Unknown<wbr>Ocsp<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the BIG-IP action when the OCSP responder returns unknown status. The default value is drop, which causes the onnection to be dropped. Conversely, you can specify ignore, which causes the connection to ignore the unknown status and continue.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1350,7 +1421,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#c3docsp_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Ocsp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the SSL client certificate constrained delegation OCSP object that the BIG-IP SSL should use to connect to the OCSP responder and check the client certificate status.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1359,7 +1430,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#cafile_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client certificate file path. Default None.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1368,7 +1439,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#cachesize_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Cache size (sessions).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1377,7 +1448,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#cachetimeout_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Cache time out
 {{% /md %}}</dd><dt class="property-optional"
@@ -1386,7 +1457,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies a cert name for use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1395,7 +1466,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#certextensionincludes_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Extension<wbr>Includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Cert extension includes for ssl forward proxy
 {{% /md %}}</dd><dt class="property-optional"
@@ -1404,7 +1475,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#certkeychains_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Key<wbr>Chains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileclientsslcertkeychain">Profile<wbr>Client<wbr>Ssl<wbr>Cert<wbr>Key<wbr>Chain[]</a></span>
+        <span class="property-type"><a href="#profileclientsslcertkeychain">pulumi.<wbr>Input<pulumi.<wbr>Input<Profile<wbr>Client<wbr>Ssl<wbr>Cert<wbr>Key<wbr>Chain<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1412,7 +1483,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#certlifespan_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Life<wbr>Span</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Life span of the certificate in days for ssl forward proxy
 {{% /md %}}</dd><dt class="property-optional"
@@ -1421,7 +1492,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#certlookupbyipaddrport_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Lookup<wbr>By<wbr>Ipaddr<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Cert lookup by ip address and port enabled / disabled
 {{% /md %}}</dd><dt class="property-optional"
@@ -1430,7 +1501,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#chain_nodejs" style="color: inherit; text-decoration: inherit;">chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Contains a certificate chain that is relevant to the certificate and key mentioned earlier.This key is optional
 {{% /md %}}</dd><dt class="property-optional"
@@ -1439,7 +1510,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#ciphers_nodejs" style="color: inherit; text-decoration: inherit;">ciphers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1448,7 +1519,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#clientcertca_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert<wbr>Ca</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}client certificate name
 {{% /md %}}</dd><dt class="property-optional"
@@ -1457,7 +1528,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#crlfile_nodejs" style="color: inherit; text-decoration: inherit;">crl<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Certificate revocation file name
 {{% /md %}}</dd><dt class="property-optional"
@@ -1466,7 +1537,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parent profile for this clientssl profile.Once this value has been set, it cannot be changed. Default value is `/Common/clientssl`. It Should Full path `/partition/profile_name`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1475,7 +1546,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#forwardproxybypassdefaultaction_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Proxy<wbr>Bypass<wbr>Default<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Forward proxy bypass default action. (enabled / disabled)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1484,7 +1555,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#fullpath_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}full path of the profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -1493,7 +1564,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}generation
 {{% /md %}}</dd><dt class="property-optional"
@@ -1502,7 +1573,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#genericalert_nodejs" style="color: inherit; text-decoration: inherit;">generic<wbr>Alert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Generic alerts enabled / disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1511,7 +1582,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#handshaketimeout_nodejs" style="color: inherit; text-decoration: inherit;">handshake<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Handshake time out (seconds)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1520,7 +1591,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#inheritcertkeychain_nodejs" style="color: inherit; text-decoration: inherit;">inherit<wbr>Cert<wbr>Keychain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Inherit cert key chain
 {{% /md %}}</dd><dt class="property-optional"
@@ -1529,7 +1600,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Contains a key name
 {{% /md %}}</dd><dt class="property-optional"
@@ -1538,7 +1609,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#modsslmethods_nodejs" style="color: inherit; text-decoration: inherit;">mod<wbr>Ssl<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1547,7 +1618,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1556,7 +1627,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}name of partition
 {{% /md %}}</dd><dt class="property-optional"
@@ -1565,7 +1636,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#passphrase_nodejs" style="color: inherit; text-decoration: inherit;">passphrase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
 {{% /md %}}</dd><dt class="property-optional"
@@ -1574,7 +1645,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#peercertmode_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Cert<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1583,7 +1654,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#proxycacert_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Proxy CA Cert
 {{% /md %}}</dd><dt class="property-optional"
@@ -1592,7 +1663,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#proxycakey_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Ca<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Proxy CA Key
 {{% /md %}}</dd><dt class="property-optional"
@@ -1601,7 +1672,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#proxycapassphrase_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Ca<wbr>Passphrase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Proxy CA Passphrase
 {{% /md %}}</dd><dt class="property-optional"
@@ -1610,7 +1681,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#proxyssl_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1619,7 +1690,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#proxysslpassthrough_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Ssl<wbr>Passthrough</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Proxy SSL passthrough enabled / disabled. Default is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1628,7 +1699,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#renegotiateperiod_nodejs" style="color: inherit; text-decoration: inherit;">renegotiate<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Renogotiate Period (seconds)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1637,7 +1708,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#renegotiatesize_nodejs" style="color: inherit; text-decoration: inherit;">renegotiate<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Renogotiate Size
 {{% /md %}}</dd><dt class="property-optional"
@@ -1646,7 +1717,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#renegotiation_nodejs" style="color: inherit; text-decoration: inherit;">renegotiation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -1655,7 +1726,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#retaincertificate_nodejs" style="color: inherit; text-decoration: inherit;">retain<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1664,7 +1735,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#securerenegotiation_nodejs" style="color: inherit; text-decoration: inherit;">secure<wbr>Renegotiation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
 When `request` is set the system request secure renegotation of SSL connections.
@@ -1676,7 +1747,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1685,7 +1756,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
 <a href="#sessionmirroring_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Mirroring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Session Mirroring (enabled / disabled)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1694,7 +1765,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
 <a href="#sessionticket_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Ticket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Session Ticket (enabled / disabled)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1703,7 +1774,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
 <a href="#snidefault_nodejs" style="color: inherit; text-decoration: inherit;">sni<wbr>Default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
 There can be only one SSL profile with this setting enabled.
@@ -1713,7 +1784,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#snirequire_nodejs" style="color: inherit; text-decoration: inherit;">sni<wbr>Require</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -1722,7 +1793,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#sslc3d_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>C3d</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL client certificate constrained delegation. The default option is disabled. Conversely, you can specify enabled to use the SSL client certificate constrained delegation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1731,7 +1802,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#sslforwardproxy_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Forward<wbr>Proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether SSL forward proxy feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1740,7 +1811,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#sslforwardproxybypass_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Forward<wbr>Proxy<wbr>Bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether SSL forward proxy bypass feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1749,7 +1820,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#sslsignhash_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Sign<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1758,7 +1829,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#strictresume_nodejs" style="color: inherit; text-decoration: inherit;">strict<wbr>Resume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1767,7 +1838,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#tmoptions_nodejs" style="color: inherit; text-decoration: inherit;">tm<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of Enabled selection from a set of industry standard options for handling SSL processing.By default,
 Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usage` : tm_options    = ["dont-insert-empty-fragments","no-tlsv1.3"]
@@ -1777,7 +1848,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#uncleanshutdown_nodejs" style="color: inherit; text-decoration: inherit;">unclean<wbr>Shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
 {{% /md %}}</dd></dl>
@@ -1790,7 +1861,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile.Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-clientssl-profile`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1799,7 +1870,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#alert_timeout_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Alert time out
 {{% /md %}}</dd><dt class="property-optional"
@@ -1808,7 +1879,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#allow_non_ssl_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>non_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enables or disables acceptance of non-SSL connections, When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -1817,7 +1888,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#authenticate_python" style="color: inherit; text-decoration: inherit;">authenticate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the frequency of client authentication for an SSL session.When `once`,specifies that the system authenticates the client once for an SSL session.
 When `always`, specifies that the system authenticates the client once for an SSL session and also upon reuse of that session.
@@ -1827,7 +1898,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#authenticate_depth_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>depth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of certificates to be traversed in a client certificate chain
 {{% /md %}}</dd><dt class="property-optional"
@@ -1836,7 +1907,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#c3d_client_fallback_cert_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>client_<wbr>fallback_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the client certificate to use in SSL client certificate constrained delegation. This certificate will be used if client does not provide a cert during the SSL handshake. The default value is none.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1845,7 +1916,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#c3d_drop_unknown_ocsp_status_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>drop_<wbr>unknown_<wbr>ocsp_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the BIG-IP action when the OCSP responder returns unknown status. The default value is drop, which causes the onnection to be dropped. Conversely, you can specify ignore, which causes the connection to ignore the unknown status and continue.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1854,7 +1925,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#c3d_ocsp_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>ocsp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the SSL client certificate constrained delegation OCSP object that the BIG-IP SSL should use to connect to the OCSP responder and check the client certificate status.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1863,7 +1934,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#ca_file_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client certificate file path. Default None.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1872,7 +1943,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#cache_size_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Cache size (sessions).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1881,7 +1952,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#cache_timeout_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Cache time out
 {{% /md %}}</dd><dt class="property-optional"
@@ -1890,7 +1961,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a cert name for use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1899,7 +1970,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#cert_extension_includes_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>extension_<wbr>includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Cert extension includes for ssl forward proxy
 {{% /md %}}</dd><dt class="property-optional"
@@ -1908,7 +1979,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#cert_key_chains_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>key_<wbr>chains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileclientsslcertkeychain">Sequence[Profile<wbr>Client<wbr>Ssl<wbr>Cert<wbr>Key<wbr>Chain<wbr>Args]</a></span>
+        <span class="property-type"><a href="#profileclientsslcertkeychain">Input[Profile<wbr>Client<wbr>Ssl<wbr>Cert<wbr>Key<wbr>Chain<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1916,7 +1987,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#cert_life_span_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>life_<wbr>span</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Life span of the certificate in days for ssl forward proxy
 {{% /md %}}</dd><dt class="property-optional"
@@ -1925,7 +1996,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#cert_lookup_by_ipaddr_port_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>lookup_<wbr>by_<wbr>ipaddr_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Cert lookup by ip address and port enabled / disabled
 {{% /md %}}</dd><dt class="property-optional"
@@ -1934,7 +2005,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#chain_python" style="color: inherit; text-decoration: inherit;">chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Contains a certificate chain that is relevant to the certificate and key mentioned earlier.This key is optional
 {{% /md %}}</dd><dt class="property-optional"
@@ -1943,7 +2014,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#ciphers_python" style="color: inherit; text-decoration: inherit;">ciphers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1952,7 +2023,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#client_cert_ca_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert_<wbr>ca</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}client certificate name
 {{% /md %}}</dd><dt class="property-optional"
@@ -1961,7 +2032,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#crl_file_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Certificate revocation file name
 {{% /md %}}</dd><dt class="property-optional"
@@ -1970,7 +2041,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parent profile for this clientssl profile.Once this value has been set, it cannot be changed. Default value is `/Common/clientssl`. It Should Full path `/partition/profile_name`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1979,7 +2050,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#forward_proxy_bypass_default_action_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>proxy_<wbr>bypass_<wbr>default_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Forward proxy bypass default action. (enabled / disabled)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1988,7 +2059,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#full_path_python" style="color: inherit; text-decoration: inherit;">full_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}full path of the profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -1997,7 +2068,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}generation
 {{% /md %}}</dd><dt class="property-optional"
@@ -2006,7 +2077,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#generic_alert_python" style="color: inherit; text-decoration: inherit;">generic_<wbr>alert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Generic alerts enabled / disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2015,7 +2086,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#handshake_timeout_python" style="color: inherit; text-decoration: inherit;">handshake_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Handshake time out (seconds)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2024,7 +2095,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#inherit_cert_keychain_python" style="color: inherit; text-decoration: inherit;">inherit_<wbr>cert_<wbr>keychain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Inherit cert key chain
 {{% /md %}}</dd><dt class="property-optional"
@@ -2033,7 +2104,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Contains a key name
 {{% /md %}}</dd><dt class="property-optional"
@@ -2042,7 +2113,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#mod_ssl_methods_python" style="color: inherit; text-decoration: inherit;">mod_<wbr>ssl_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2051,7 +2122,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2060,7 +2131,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}name of partition
 {{% /md %}}</dd><dt class="property-optional"
@@ -2069,7 +2140,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#passphrase_python" style="color: inherit; text-decoration: inherit;">passphrase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
 {{% /md %}}</dd><dt class="property-optional"
@@ -2078,7 +2149,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#peer_cert_mode_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>cert_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2087,7 +2158,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#proxy_ca_cert_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Proxy CA Cert
 {{% /md %}}</dd><dt class="property-optional"
@@ -2096,7 +2167,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#proxy_ca_key_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>ca_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Proxy CA Key
 {{% /md %}}</dd><dt class="property-optional"
@@ -2105,7 +2176,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#proxy_ca_passphrase_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>ca_<wbr>passphrase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Proxy CA Passphrase
 {{% /md %}}</dd><dt class="property-optional"
@@ -2114,7 +2185,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#proxy_ssl_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2123,7 +2194,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#proxy_ssl_passthrough_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>ssl_<wbr>passthrough</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Proxy SSL passthrough enabled / disabled. Default is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2132,7 +2203,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#renegotiate_period_python" style="color: inherit; text-decoration: inherit;">renegotiate_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Renogotiate Period (seconds)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2141,7 +2212,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#renegotiate_size_python" style="color: inherit; text-decoration: inherit;">renegotiate_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Renogotiate Size
 {{% /md %}}</dd><dt class="property-optional"
@@ -2150,7 +2221,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#renegotiation_python" style="color: inherit; text-decoration: inherit;">renegotiation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -2159,7 +2230,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#retain_certificate_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2168,7 +2239,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#secure_renegotiation_python" style="color: inherit; text-decoration: inherit;">secure_<wbr>renegotiation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
 When `request` is set the system request secure renegotation of SSL connections.
@@ -2180,7 +2251,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2189,7 +2260,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
 <a href="#session_mirroring_python" style="color: inherit; text-decoration: inherit;">session_<wbr>mirroring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Session Mirroring (enabled / disabled)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2198,7 +2269,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
 <a href="#session_ticket_python" style="color: inherit; text-decoration: inherit;">session_<wbr>ticket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Session Ticket (enabled / disabled)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2207,7 +2278,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
 <a href="#sni_default_python" style="color: inherit; text-decoration: inherit;">sni_<wbr>default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
 There can be only one SSL profile with this setting enabled.
@@ -2217,7 +2288,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#sni_require_python" style="color: inherit; text-decoration: inherit;">sni_<wbr>require</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -2226,7 +2297,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#ssl_c3d_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>c3d</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL client certificate constrained delegation. The default option is disabled. Conversely, you can specify enabled to use the SSL client certificate constrained delegation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2235,7 +2306,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#ssl_forward_proxy_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>forward_<wbr>proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether SSL forward proxy feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2244,7 +2315,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#ssl_forward_proxy_bypass_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>forward_<wbr>proxy_<wbr>bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether SSL forward proxy bypass feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2253,7 +2324,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#ssl_sign_hash_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>sign_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2262,7 +2333,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#strict_resume_python" style="color: inherit; text-decoration: inherit;">strict_<wbr>resume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2271,7 +2342,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#tm_options_python" style="color: inherit; text-decoration: inherit;">tm_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of Enabled selection from a set of industry standard options for handling SSL processing.By default,
 Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usage` : tm_options    = ["dont-insert-empty-fragments","no-tlsv1.3"]
@@ -2281,7 +2352,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#unclean_shutdown_python" style="color: inherit; text-decoration: inherit;">unclean_<wbr>shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
 {{% /md %}}</dd></dl>
@@ -2350,20 +2421,77 @@ Get an existing ProfileClientSsl resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ProfileClientSslState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ProfileClientSsl</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ProfileClientSslState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ProfileClientSsl</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_non_ssl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authenticate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authenticate_depth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">c3d_client_fallback_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">c3d_drop_unknown_ocsp_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">c3d_ocsp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ca_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cache_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cert_extension_includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cert_key_chains</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProfileClientSslCertKeyChainArgs]]</span> = None<span class="p">, </span><span class="nx">cert_life_span</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cert_lookup_by_ipaddr_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">chain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ciphers</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_cert_ca</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">crl_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forward_proxy_bypass_default_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">full_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">generation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">generic_alert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">handshake_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inherit_cert_keychain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mod_ssl_methods</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">passphrase</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_cert_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ca_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ca_passphrase</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ssl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ssl_passthrough</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renegotiate_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renegotiate_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renegotiation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retain_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secure_renegotiation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_mirroring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_ticket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sni_default</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sni_require</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_c3d</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_forward_proxy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_forward_proxy_bypass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_sign_hash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strict_resume</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tm_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">unclean_shutdown</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ProfileClientSsl</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">alert_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">allow_non_ssl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">authenticate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">authenticate_depth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">c3d_client_fallback_cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">c3d_drop_unknown_ocsp_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">c3d_ocsp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ca_file</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cache_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">cache_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cert_extension_includes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">cert_key_chains</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ProfileClientSslCertKeyChainArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">cert_life_span</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">cert_lookup_by_ipaddr_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">chain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ciphers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">client_cert_ca</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">crl_file</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">forward_proxy_bypass_default_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">full_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">generation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">generic_alert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">handshake_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">inherit_cert_keychain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">mod_ssl_methods</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">passphrase</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">peer_cert_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">proxy_ca_cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">proxy_ca_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">proxy_ca_passphrase</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">proxy_ssl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">proxy_ssl_passthrough</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">renegotiate_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">renegotiate_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">renegotiation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">retain_certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">secure_renegotiation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">session_mirroring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">session_ticket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sni_default</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sni_require</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ssl_c3d</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ssl_forward_proxy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ssl_forward_proxy_bypass</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ssl_sign_hash</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">strict_resume</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tm_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">unclean_shutdown</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> ProfileClientSsl</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProfileClientSsl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ProfileClientSslState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProfileClientSsl</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProfileClientSsl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ProfileClientSslState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProfileClientSsl</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ProfileClientSsl</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ProfileClientSslState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ProfileClientSsl</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ProfileClientSslState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3480,7 +3608,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#state_alerttimeout_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Alert time out
 {{% /md %}}</dd><dt class="property-optional"
@@ -3489,7 +3617,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#state_allownonssl_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Non<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enables or disables acceptance of non-SSL connections, When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -3498,7 +3626,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#state_authenticate_nodejs" style="color: inherit; text-decoration: inherit;">authenticate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the frequency of client authentication for an SSL session.When `once`,specifies that the system authenticates the client once for an SSL session.
 When `always`, specifies that the system authenticates the client once for an SSL session and also upon reuse of that session.
@@ -3508,7 +3636,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_authenticatedepth_nodejs" style="color: inherit; text-decoration: inherit;">authenticate<wbr>Depth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of certificates to be traversed in a client certificate chain
 {{% /md %}}</dd><dt class="property-optional"
@@ -3517,7 +3645,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_c3dclientfallbackcert_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Client<wbr>Fallback<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the client certificate to use in SSL client certificate constrained delegation. This certificate will be used if client does not provide a cert during the SSL handshake. The default value is none.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3526,7 +3654,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_c3ddropunknownocspstatus_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Drop<wbr>Unknown<wbr>Ocsp<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the BIG-IP action when the OCSP responder returns unknown status. The default value is drop, which causes the onnection to be dropped. Conversely, you can specify ignore, which causes the connection to ignore the unknown status and continue.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3535,7 +3663,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_c3docsp_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Ocsp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the SSL client certificate constrained delegation OCSP object that the BIG-IP SSL should use to connect to the OCSP responder and check the client certificate status.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3544,7 +3672,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_cafile_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client certificate file path. Default None.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3553,7 +3681,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_cachesize_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Cache size (sessions).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3562,7 +3690,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_cachetimeout_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Cache time out
 {{% /md %}}</dd><dt class="property-optional"
@@ -3571,7 +3699,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies a cert name for use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3580,7 +3708,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_certextensionincludes_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Extension<wbr>Includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Cert extension includes for ssl forward proxy
 {{% /md %}}</dd><dt class="property-optional"
@@ -3589,7 +3717,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_certkeychains_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Key<wbr>Chains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileclientsslcertkeychain">Profile<wbr>Client<wbr>Ssl<wbr>Cert<wbr>Key<wbr>Chain[]</a></span>
+        <span class="property-type"><a href="#profileclientsslcertkeychain">pulumi.<wbr>Input<pulumi.<wbr>Input<Profile<wbr>Client<wbr>Ssl<wbr>Cert<wbr>Key<wbr>Chain<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3597,7 +3725,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_certlifespan_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Life<wbr>Span</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Life span of the certificate in days for ssl forward proxy
 {{% /md %}}</dd><dt class="property-optional"
@@ -3606,7 +3734,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_certlookupbyipaddrport_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Lookup<wbr>By<wbr>Ipaddr<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Cert lookup by ip address and port enabled / disabled
 {{% /md %}}</dd><dt class="property-optional"
@@ -3615,7 +3743,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_chain_nodejs" style="color: inherit; text-decoration: inherit;">chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Contains a certificate chain that is relevant to the certificate and key mentioned earlier.This key is optional
 {{% /md %}}</dd><dt class="property-optional"
@@ -3624,7 +3752,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_ciphers_nodejs" style="color: inherit; text-decoration: inherit;">ciphers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3633,7 +3761,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_clientcertca_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert<wbr>Ca</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}client certificate name
 {{% /md %}}</dd><dt class="property-optional"
@@ -3642,7 +3770,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_crlfile_nodejs" style="color: inherit; text-decoration: inherit;">crl<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Certificate revocation file name
 {{% /md %}}</dd><dt class="property-optional"
@@ -3651,7 +3779,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parent profile for this clientssl profile.Once this value has been set, it cannot be changed. Default value is `/Common/clientssl`. It Should Full path `/partition/profile_name`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3660,7 +3788,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_forwardproxybypassdefaultaction_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Proxy<wbr>Bypass<wbr>Default<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Forward proxy bypass default action. (enabled / disabled)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3669,7 +3797,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_fullpath_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}full path of the profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -3678,7 +3806,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}generation
 {{% /md %}}</dd><dt class="property-optional"
@@ -3687,7 +3815,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_genericalert_nodejs" style="color: inherit; text-decoration: inherit;">generic<wbr>Alert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Generic alerts enabled / disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3696,7 +3824,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_handshaketimeout_nodejs" style="color: inherit; text-decoration: inherit;">handshake<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Handshake time out (seconds)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3705,7 +3833,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_inheritcertkeychain_nodejs" style="color: inherit; text-decoration: inherit;">inherit<wbr>Cert<wbr>Keychain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Inherit cert key chain
 {{% /md %}}</dd><dt class="property-optional"
@@ -3714,7 +3842,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Contains a key name
 {{% /md %}}</dd><dt class="property-optional"
@@ -3723,7 +3851,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_modsslmethods_nodejs" style="color: inherit; text-decoration: inherit;">mod<wbr>Ssl<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3732,7 +3860,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3741,7 +3869,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile.Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-clientssl-profile`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3750,7 +3878,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}name of partition
 {{% /md %}}</dd><dt class="property-optional"
@@ -3759,7 +3887,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_passphrase_nodejs" style="color: inherit; text-decoration: inherit;">passphrase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
 {{% /md %}}</dd><dt class="property-optional"
@@ -3768,7 +3896,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_peercertmode_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Cert<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3777,7 +3905,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_proxycacert_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Proxy CA Cert
 {{% /md %}}</dd><dt class="property-optional"
@@ -3786,7 +3914,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_proxycakey_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Ca<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Proxy CA Key
 {{% /md %}}</dd><dt class="property-optional"
@@ -3795,7 +3923,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_proxycapassphrase_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Ca<wbr>Passphrase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Proxy CA Passphrase
 {{% /md %}}</dd><dt class="property-optional"
@@ -3804,7 +3932,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_proxyssl_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3813,7 +3941,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_proxysslpassthrough_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Ssl<wbr>Passthrough</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Proxy SSL passthrough enabled / disabled. Default is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3822,7 +3950,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_renegotiateperiod_nodejs" style="color: inherit; text-decoration: inherit;">renegotiate<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Renogotiate Period (seconds)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3831,7 +3959,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_renegotiatesize_nodejs" style="color: inherit; text-decoration: inherit;">renegotiate<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Renogotiate Size
 {{% /md %}}</dd><dt class="property-optional"
@@ -3840,7 +3968,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_renegotiation_nodejs" style="color: inherit; text-decoration: inherit;">renegotiation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -3849,7 +3977,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_retaincertificate_nodejs" style="color: inherit; text-decoration: inherit;">retain<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3858,7 +3986,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_securerenegotiation_nodejs" style="color: inherit; text-decoration: inherit;">secure<wbr>Renegotiation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
 When `request` is set the system request secure renegotation of SSL connections.
@@ -3870,7 +3998,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
 <a href="#state_servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3879,7 +4007,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
 <a href="#state_sessionmirroring_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Mirroring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Session Mirroring (enabled / disabled)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3888,7 +4016,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
 <a href="#state_sessionticket_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Ticket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Session Ticket (enabled / disabled)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3897,7 +4025,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
 <a href="#state_snidefault_nodejs" style="color: inherit; text-decoration: inherit;">sni<wbr>Default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
 There can be only one SSL profile with this setting enabled.
@@ -3907,7 +4035,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#state_snirequire_nodejs" style="color: inherit; text-decoration: inherit;">sni<wbr>Require</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -3916,7 +4044,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#state_sslc3d_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>C3d</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL client certificate constrained delegation. The default option is disabled. Conversely, you can specify enabled to use the SSL client certificate constrained delegation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3925,7 +4053,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#state_sslforwardproxy_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Forward<wbr>Proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether SSL forward proxy feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3934,7 +4062,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#state_sslforwardproxybypass_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Forward<wbr>Proxy<wbr>Bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether SSL forward proxy bypass feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3943,7 +4071,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#state_sslsignhash_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Sign<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3952,7 +4080,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#state_strictresume_nodejs" style="color: inherit; text-decoration: inherit;">strict<wbr>Resume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3961,7 +4089,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#state_tmoptions_nodejs" style="color: inherit; text-decoration: inherit;">tm<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of Enabled selection from a set of industry standard options for handling SSL processing.By default,
 Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usage` : tm_options    = ["dont-insert-empty-fragments","no-tlsv1.3"]
@@ -3971,7 +4099,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#state_uncleanshutdown_nodejs" style="color: inherit; text-decoration: inherit;">unclean<wbr>Shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
 {{% /md %}}</dd></dl>
@@ -3984,7 +4112,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#state_alert_timeout_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Alert time out
 {{% /md %}}</dd><dt class="property-optional"
@@ -3993,7 +4121,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#state_allow_non_ssl_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>non_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enables or disables acceptance of non-SSL connections, When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -4002,7 +4130,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#state_authenticate_python" style="color: inherit; text-decoration: inherit;">authenticate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the frequency of client authentication for an SSL session.When `once`,specifies that the system authenticates the client once for an SSL session.
 When `always`, specifies that the system authenticates the client once for an SSL session and also upon reuse of that session.
@@ -4012,7 +4140,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_authenticate_depth_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>depth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of certificates to be traversed in a client certificate chain
 {{% /md %}}</dd><dt class="property-optional"
@@ -4021,7 +4149,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_c3d_client_fallback_cert_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>client_<wbr>fallback_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the client certificate to use in SSL client certificate constrained delegation. This certificate will be used if client does not provide a cert during the SSL handshake. The default value is none.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4030,7 +4158,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_c3d_drop_unknown_ocsp_status_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>drop_<wbr>unknown_<wbr>ocsp_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the BIG-IP action when the OCSP responder returns unknown status. The default value is drop, which causes the onnection to be dropped. Conversely, you can specify ignore, which causes the connection to ignore the unknown status and continue.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4039,7 +4167,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_c3d_ocsp_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>ocsp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the SSL client certificate constrained delegation OCSP object that the BIG-IP SSL should use to connect to the OCSP responder and check the client certificate status.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4048,7 +4176,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_ca_file_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client certificate file path. Default None.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4057,7 +4185,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_cache_size_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Cache size (sessions).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4066,7 +4194,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_cache_timeout_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Cache time out
 {{% /md %}}</dd><dt class="property-optional"
@@ -4075,7 +4203,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a cert name for use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4084,7 +4212,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_cert_extension_includes_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>extension_<wbr>includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Cert extension includes for ssl forward proxy
 {{% /md %}}</dd><dt class="property-optional"
@@ -4093,7 +4221,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_cert_key_chains_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>key_<wbr>chains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileclientsslcertkeychain">Sequence[Profile<wbr>Client<wbr>Ssl<wbr>Cert<wbr>Key<wbr>Chain<wbr>Args]</a></span>
+        <span class="property-type"><a href="#profileclientsslcertkeychain">Input[Profile<wbr>Client<wbr>Ssl<wbr>Cert<wbr>Key<wbr>Chain<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4101,7 +4229,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_cert_life_span_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>life_<wbr>span</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Life span of the certificate in days for ssl forward proxy
 {{% /md %}}</dd><dt class="property-optional"
@@ -4110,7 +4238,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_cert_lookup_by_ipaddr_port_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>lookup_<wbr>by_<wbr>ipaddr_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Cert lookup by ip address and port enabled / disabled
 {{% /md %}}</dd><dt class="property-optional"
@@ -4119,7 +4247,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_chain_python" style="color: inherit; text-decoration: inherit;">chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Contains a certificate chain that is relevant to the certificate and key mentioned earlier.This key is optional
 {{% /md %}}</dd><dt class="property-optional"
@@ -4128,7 +4256,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_ciphers_python" style="color: inherit; text-decoration: inherit;">ciphers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4137,7 +4265,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_client_cert_ca_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert_<wbr>ca</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}client certificate name
 {{% /md %}}</dd><dt class="property-optional"
@@ -4146,7 +4274,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_crl_file_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Certificate revocation file name
 {{% /md %}}</dd><dt class="property-optional"
@@ -4155,7 +4283,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parent profile for this clientssl profile.Once this value has been set, it cannot be changed. Default value is `/Common/clientssl`. It Should Full path `/partition/profile_name`
 {{% /md %}}</dd><dt class="property-optional"
@@ -4164,7 +4292,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_forward_proxy_bypass_default_action_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>proxy_<wbr>bypass_<wbr>default_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Forward proxy bypass default action. (enabled / disabled)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4173,7 +4301,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_full_path_python" style="color: inherit; text-decoration: inherit;">full_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}full path of the profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -4182,7 +4310,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}generation
 {{% /md %}}</dd><dt class="property-optional"
@@ -4191,7 +4319,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_generic_alert_python" style="color: inherit; text-decoration: inherit;">generic_<wbr>alert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Generic alerts enabled / disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4200,7 +4328,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_handshake_timeout_python" style="color: inherit; text-decoration: inherit;">handshake_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Handshake time out (seconds)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4209,7 +4337,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_inherit_cert_keychain_python" style="color: inherit; text-decoration: inherit;">inherit_<wbr>cert_<wbr>keychain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Inherit cert key chain
 {{% /md %}}</dd><dt class="property-optional"
@@ -4218,7 +4346,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Contains a key name
 {{% /md %}}</dd><dt class="property-optional"
@@ -4227,7 +4355,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_mod_ssl_methods_python" style="color: inherit; text-decoration: inherit;">mod_<wbr>ssl_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4236,7 +4364,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4245,7 +4373,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile.Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-clientssl-profile`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4254,7 +4382,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}name of partition
 {{% /md %}}</dd><dt class="property-optional"
@@ -4263,7 +4391,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_passphrase_python" style="color: inherit; text-decoration: inherit;">passphrase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
 {{% /md %}}</dd><dt class="property-optional"
@@ -4272,7 +4400,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_peer_cert_mode_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>cert_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4281,7 +4409,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_proxy_ca_cert_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Proxy CA Cert
 {{% /md %}}</dd><dt class="property-optional"
@@ -4290,7 +4418,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_proxy_ca_key_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>ca_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Proxy CA Key
 {{% /md %}}</dd><dt class="property-optional"
@@ -4299,7 +4427,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_proxy_ca_passphrase_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>ca_<wbr>passphrase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Proxy CA Passphrase
 {{% /md %}}</dd><dt class="property-optional"
@@ -4308,7 +4436,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_proxy_ssl_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4317,7 +4445,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_proxy_ssl_passthrough_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>ssl_<wbr>passthrough</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Proxy SSL passthrough enabled / disabled. Default is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4326,7 +4454,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_renegotiate_period_python" style="color: inherit; text-decoration: inherit;">renegotiate_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Renogotiate Period (seconds)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4335,7 +4463,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_renegotiate_size_python" style="color: inherit; text-decoration: inherit;">renegotiate_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Renogotiate Size
 {{% /md %}}</dd><dt class="property-optional"
@@ -4344,7 +4472,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_renegotiation_python" style="color: inherit; text-decoration: inherit;">renegotiation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -4353,7 +4481,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_retain_certificate_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4362,7 +4490,7 @@ When `always`, specifies that the system authenticates the client once for an SS
 <a href="#state_secure_renegotiation_python" style="color: inherit; text-decoration: inherit;">secure_<wbr>renegotiation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
 When `request` is set the system request secure renegotation of SSL connections.
@@ -4374,7 +4502,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
 <a href="#state_server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4383,7 +4511,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
 <a href="#state_session_mirroring_python" style="color: inherit; text-decoration: inherit;">session_<wbr>mirroring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Session Mirroring (enabled / disabled)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4392,7 +4520,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
 <a href="#state_session_ticket_python" style="color: inherit; text-decoration: inherit;">session_<wbr>ticket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Session Ticket (enabled / disabled)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4401,7 +4529,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
 <a href="#state_sni_default_python" style="color: inherit; text-decoration: inherit;">sni_<wbr>default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
 There can be only one SSL profile with this setting enabled.
@@ -4411,7 +4539,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#state_sni_require_python" style="color: inherit; text-decoration: inherit;">sni_<wbr>require</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
@@ -4420,7 +4548,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#state_ssl_c3d_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>c3d</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL client certificate constrained delegation. The default option is disabled. Conversely, you can specify enabled to use the SSL client certificate constrained delegation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4429,7 +4557,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#state_ssl_forward_proxy_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>forward_<wbr>proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether SSL forward proxy feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4438,7 +4566,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#state_ssl_forward_proxy_bypass_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>forward_<wbr>proxy_<wbr>bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether SSL forward proxy bypass feature is enabled or not. The default value is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4447,7 +4575,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#state_ssl_sign_hash_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>sign_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4456,7 +4584,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#state_strict_resume_python" style="color: inherit; text-decoration: inherit;">strict_<wbr>resume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4465,7 +4593,7 @@ There can be only one SSL profile with this setting enabled.
 <a href="#state_tm_options_python" style="color: inherit; text-decoration: inherit;">tm_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of Enabled selection from a set of industry standard options for handling SSL processing.By default,
 Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usage` : tm_options    = ["dont-insert-empty-fragments","no-tlsv1.3"]
@@ -4475,7 +4603,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#state_unclean_shutdown_python" style="color: inherit; text-decoration: inherit;">unclean_<wbr>shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
 {{% /md %}}</dd></dl>
@@ -4595,7 +4723,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies a cert name for use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4604,7 +4732,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#chain_nodejs" style="color: inherit; text-decoration: inherit;">chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Contains a certificate chain that is relevant to the certificate and key mentioned earlier.This key is optional
 {{% /md %}}</dd><dt class="property-optional"
@@ -4613,7 +4741,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Contains a key name
 {{% /md %}}</dd><dt class="property-optional"
@@ -4622,7 +4750,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile.Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-clientssl-profile`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4631,7 +4759,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#passphrase_nodejs" style="color: inherit; text-decoration: inherit;">passphrase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4643,7 +4771,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a cert name for use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4652,7 +4780,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#chain_python" style="color: inherit; text-decoration: inherit;">chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Contains a certificate chain that is relevant to the certificate and key mentioned earlier.This key is optional
 {{% /md %}}</dd><dt class="property-optional"
@@ -4661,7 +4789,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Contains a key name
 {{% /md %}}</dd><dt class="property-optional"
@@ -4670,7 +4798,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile.Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-clientssl-profile`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4679,7 +4807,7 @@ Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usag
 <a href="#passphrase_python" style="color: inherit; text-decoration: inherit;">passphrase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
