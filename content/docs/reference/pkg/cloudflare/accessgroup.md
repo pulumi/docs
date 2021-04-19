@@ -36,8 +36,9 @@ requests. Example: `everyone = true`
 * `common_name` - (Optional) Use a certificate common name to authenticate with.
 * `auth_method` - (Optional) A string identifying the authentication
 method code. The list of codes are listed here: https://tools.ietf.org/html/rfc8176#section-2.
-Custom values are also supported.
+Custom values are also supported. Example: `auth_method = ["swk"]`
 * `geo` - (Optional) A list of country codes. Example: `geo = ["US"]`
+* `login_method` - (Optional) A list of identity provider ids. Example: `login_method = [cloudflare_access_identity_provider.my_idp.id]`
 * `gsuite` - (Optional) Use GSuite as the authentication mechanism. Example:
   
   ```hcl
@@ -172,8 +173,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-cloudflare/sdk/v3/go/cloudflare"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -296,19 +297,31 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccessGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccessGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AccessGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupRequireArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccessGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AccessGroupExcludeArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AccessGroupIncludeArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AccessGroupRequireArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccessGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessGroupArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccessGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccessGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccessGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccessGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccessGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccessGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccessGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccessGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -343,22 +356,32 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AccessGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -367,7 +390,7 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -391,7 +414,7 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -568,7 +591,7 @@ full list.
 <a href="#includes_nodejs" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupinclude">Access<wbr>Group<wbr>Include[]</a></span>
+        <span class="property-type"><a href="#accessgroupinclude">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Include<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -578,7 +601,7 @@ full list.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -587,7 +610,7 @@ full list.
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the account the group is associated with. Conflicts with `zone_id`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -596,7 +619,7 @@ full list.
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexclude">Access<wbr>Group<wbr>Exclude[]</a></span>
+        <span class="property-type"><a href="#accessgroupexclude">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Exclude<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -606,7 +629,7 @@ full list.
 <a href="#requires_nodejs" style="color: inherit; text-decoration: inherit;">requires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequire">Access<wbr>Group<wbr>Require[]</a></span>
+        <span class="property-type"><a href="#accessgrouprequire">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Require<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -616,7 +639,7 @@ full list.
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the zone the group is associated with. Conflicts with `account_id`.
 {{% /md %}}</dd></dl>
@@ -629,7 +652,7 @@ full list.
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupinclude">Sequence[Access<wbr>Group<wbr>Include<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupinclude">Input[Access<wbr>Group<wbr>Include<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -639,7 +662,7 @@ full list.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -648,7 +671,7 @@ full list.
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the account the group is associated with. Conflicts with `zone_id`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -657,7 +680,7 @@ full list.
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexclude">Sequence[Access<wbr>Group<wbr>Exclude<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupexclude">Input[Access<wbr>Group<wbr>Exclude<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -667,7 +690,7 @@ full list.
 <a href="#requires_python" style="color: inherit; text-decoration: inherit;">requires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequire">Sequence[Access<wbr>Group<wbr>Require<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgrouprequire">Input[Access<wbr>Group<wbr>Require<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -677,7 +700,7 @@ full list.
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the zone the group is associated with. Conflicts with `account_id`.
 {{% /md %}}</dd></dl>
@@ -746,20 +769,28 @@ Get an existing AccessGroup resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AccessGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AccessGroup</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AccessGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AccessGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupRequireArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AccessGroupExcludeArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AccessGroupIncludeArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AccessGroupRequireArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> AccessGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AccessGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AccessGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AccessGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AccessGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AccessGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AccessGroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -990,7 +1021,7 @@ full list.
 <a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the account the group is associated with. Conflicts with `zone_id`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -999,7 +1030,7 @@ full list.
 <a href="#state_excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexclude">Access<wbr>Group<wbr>Exclude[]</a></span>
+        <span class="property-type"><a href="#accessgroupexclude">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Exclude<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -1009,7 +1040,7 @@ full list.
 <a href="#state_includes_nodejs" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupinclude">Access<wbr>Group<wbr>Include[]</a></span>
+        <span class="property-type"><a href="#accessgroupinclude">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Include<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -1019,7 +1050,7 @@ full list.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1028,7 +1059,7 @@ full list.
 <a href="#state_requires_nodejs" style="color: inherit; text-decoration: inherit;">requires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequire">Access<wbr>Group<wbr>Require[]</a></span>
+        <span class="property-type"><a href="#accessgrouprequire">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Require<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -1038,7 +1069,7 @@ full list.
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the zone the group is associated with. Conflicts with `account_id`.
 {{% /md %}}</dd></dl>
@@ -1051,7 +1082,7 @@ full list.
 <a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the account the group is associated with. Conflicts with `zone_id`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1060,7 +1091,7 @@ full list.
 <a href="#state_excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexclude">Sequence[Access<wbr>Group<wbr>Exclude<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupexclude">Input[Access<wbr>Group<wbr>Exclude<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -1070,7 +1101,7 @@ full list.
 <a href="#state_includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupinclude">Sequence[Access<wbr>Group<wbr>Include<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupinclude">Input[Access<wbr>Group<wbr>Include<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -1080,7 +1111,7 @@ full list.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1089,7 +1120,7 @@ full list.
 <a href="#state_requires_python" style="color: inherit; text-decoration: inherit;">requires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequire">Sequence[Access<wbr>Group<wbr>Require<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgrouprequire">Input[Access<wbr>Group<wbr>Require<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
@@ -1099,7 +1130,7 @@ full list.
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the zone the group is associated with. Conflicts with `account_id`.
 {{% /md %}}</dd></dl>
@@ -1217,6 +1248,14 @@ full list.
             title="Optional">
         <span id="ips_csharp">
 <a href="#ips_csharp" style="color: inherit; text-decoration: inherit;">Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loginmethods_csharp">
+<a href="#loginmethods_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
@@ -1355,6 +1394,14 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loginmethods_go">
+<a href="#loginmethods_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="oktas_go">
 <a href="#oktas_go" style="color: inherit; text-decoration: inherit;">Oktas</a>
 </span>
@@ -1387,7 +1434,7 @@ full list.
 <a href="#anyvalidservicetoken_nodejs" style="color: inherit; text-decoration: inherit;">any<wbr>Valid<wbr>Service<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1395,7 +1442,7 @@ full list.
 <a href="#authmethod_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1403,7 +1450,7 @@ full list.
 <a href="#azures_nodejs" style="color: inherit; text-decoration: inherit;">azures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludeazure">Access<wbr>Group<wbr>Exclude<wbr>Azure[]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludeazure">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Exclude<wbr>Azure<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1411,7 +1458,7 @@ full list.
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1419,7 +1466,7 @@ full list.
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1427,7 +1474,7 @@ full list.
 <a href="#emaildomains_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1435,7 +1482,7 @@ full list.
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1443,7 +1490,7 @@ full list.
 <a href="#everyone_nodejs" style="color: inherit; text-decoration: inherit;">everyone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1451,7 +1498,7 @@ full list.
 <a href="#geos_nodejs" style="color: inherit; text-decoration: inherit;">geos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1459,7 +1506,7 @@ full list.
 <a href="#githubs_nodejs" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludegithub">Access<wbr>Group<wbr>Exclude<wbr>Github[]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludegithub">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Exclude<wbr>Github<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1467,7 +1514,7 @@ full list.
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1475,7 +1522,7 @@ full list.
 <a href="#gsuites_nodejs" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludegsuite">Access<wbr>Group<wbr>Exclude<wbr>Gsuite[]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludegsuite">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Exclude<wbr>Gsuite<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1483,7 +1530,15 @@ full list.
 <a href="#ips_nodejs" style="color: inherit; text-decoration: inherit;">ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loginmethods_nodejs">
+<a href="#loginmethods_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1491,7 +1546,7 @@ full list.
 <a href="#oktas_nodejs" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludeokta">Access<wbr>Group<wbr>Exclude<wbr>Okta[]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludeokta">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Exclude<wbr>Okta<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1499,7 +1554,7 @@ full list.
 <a href="#samls_nodejs" style="color: inherit; text-decoration: inherit;">samls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludesaml">Access<wbr>Group<wbr>Exclude<wbr>Saml[]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludesaml">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Exclude<wbr>Saml<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1507,7 +1562,7 @@ full list.
 <a href="#servicetokens_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1519,7 +1574,7 @@ full list.
 <a href="#any_valid_service_token_python" style="color: inherit; text-decoration: inherit;">any_<wbr>valid_<wbr>service_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1527,7 +1582,7 @@ full list.
 <a href="#auth_method_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1535,7 +1590,7 @@ full list.
 <a href="#azures_python" style="color: inherit; text-decoration: inherit;">azures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludeazure">Sequence[Access<wbr>Group<wbr>Exclude<wbr>Azure<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludeazure">Input[Access<wbr>Group<wbr>Exclude<wbr>Azure<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1543,7 +1598,7 @@ full list.
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1551,7 +1606,7 @@ full list.
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1559,7 +1614,7 @@ full list.
 <a href="#email_domains_python" style="color: inherit; text-decoration: inherit;">email_<wbr>domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1567,7 +1622,7 @@ full list.
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1575,7 +1630,7 @@ full list.
 <a href="#everyone_python" style="color: inherit; text-decoration: inherit;">everyone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1583,7 +1638,7 @@ full list.
 <a href="#geos_python" style="color: inherit; text-decoration: inherit;">geos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1591,7 +1646,7 @@ full list.
 <a href="#githubs_python" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludegithub">Sequence[Access<wbr>Group<wbr>Exclude<wbr>Github<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludegithub">Input[Access<wbr>Group<wbr>Exclude<wbr>Github<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1599,7 +1654,7 @@ full list.
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1607,7 +1662,7 @@ full list.
 <a href="#gsuites_python" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludegsuite">Sequence[Access<wbr>Group<wbr>Exclude<wbr>Gsuite<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludegsuite">Input[Access<wbr>Group<wbr>Exclude<wbr>Gsuite<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1615,7 +1670,15 @@ full list.
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="login_methods_python">
+<a href="#login_methods_python" style="color: inherit; text-decoration: inherit;">login_<wbr>methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1623,7 +1686,7 @@ full list.
 <a href="#oktas_python" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludeokta">Sequence[Access<wbr>Group<wbr>Exclude<wbr>Okta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludeokta">Input[Access<wbr>Group<wbr>Exclude<wbr>Okta<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1631,7 +1694,7 @@ full list.
 <a href="#samls_python" style="color: inherit; text-decoration: inherit;">samls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupexcludesaml">Sequence[Access<wbr>Group<wbr>Exclude<wbr>Saml<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupexcludesaml">Input[Access<wbr>Group<wbr>Exclude<wbr>Saml<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1639,7 +1702,7 @@ full list.
 <a href="#service_tokens_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1693,7 +1756,7 @@ full list.
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1701,7 +1764,7 @@ full list.
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1713,7 +1776,7 @@ full list.
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1721,7 +1784,7 @@ full list.
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1793,7 +1856,7 @@ full list.
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1801,7 +1864,7 @@ full list.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1810,7 +1873,7 @@ full list.
 <a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1822,7 +1885,7 @@ full list.
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1830,7 +1893,7 @@ full list.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1839,7 +1902,7 @@ full list.
 <a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1893,7 +1956,7 @@ full list.
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1901,7 +1964,7 @@ full list.
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1913,7 +1976,7 @@ full list.
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1921,7 +1984,7 @@ full list.
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1977,7 +2040,7 @@ full list.
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1985,7 +2048,7 @@ full list.
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd></dl>
@@ -1998,7 +2061,7 @@ full list.
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2006,7 +2069,7 @@ full list.
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd></dl>
@@ -2077,7 +2140,7 @@ full list.
 <a href="#attributename_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2085,7 +2148,7 @@ full list.
 <a href="#attributevalue_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2093,7 +2156,7 @@ full list.
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2105,7 +2168,7 @@ full list.
 <a href="#attribute_name_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2113,7 +2176,7 @@ full list.
 <a href="#attribute_value_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2121,7 +2184,7 @@ full list.
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2229,6 +2292,14 @@ full list.
             title="Optional">
         <span id="ips_csharp">
 <a href="#ips_csharp" style="color: inherit; text-decoration: inherit;">Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loginmethods_csharp">
+<a href="#loginmethods_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
@@ -2367,6 +2438,14 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loginmethods_go">
+<a href="#loginmethods_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="oktas_go">
 <a href="#oktas_go" style="color: inherit; text-decoration: inherit;">Oktas</a>
 </span>
@@ -2399,7 +2478,7 @@ full list.
 <a href="#anyvalidservicetoken_nodejs" style="color: inherit; text-decoration: inherit;">any<wbr>Valid<wbr>Service<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2407,7 +2486,7 @@ full list.
 <a href="#authmethod_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2415,7 +2494,7 @@ full list.
 <a href="#azures_nodejs" style="color: inherit; text-decoration: inherit;">azures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludeazure">Access<wbr>Group<wbr>Include<wbr>Azure[]</a></span>
+        <span class="property-type"><a href="#accessgroupincludeazure">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Include<wbr>Azure<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2423,7 +2502,7 @@ full list.
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2431,7 +2510,7 @@ full list.
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2439,7 +2518,7 @@ full list.
 <a href="#emaildomains_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2447,7 +2526,7 @@ full list.
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2455,7 +2534,7 @@ full list.
 <a href="#everyone_nodejs" style="color: inherit; text-decoration: inherit;">everyone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2463,7 +2542,7 @@ full list.
 <a href="#geos_nodejs" style="color: inherit; text-decoration: inherit;">geos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2471,7 +2550,7 @@ full list.
 <a href="#githubs_nodejs" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludegithub">Access<wbr>Group<wbr>Include<wbr>Github[]</a></span>
+        <span class="property-type"><a href="#accessgroupincludegithub">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Include<wbr>Github<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2479,7 +2558,7 @@ full list.
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2487,7 +2566,7 @@ full list.
 <a href="#gsuites_nodejs" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludegsuite">Access<wbr>Group<wbr>Include<wbr>Gsuite[]</a></span>
+        <span class="property-type"><a href="#accessgroupincludegsuite">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Include<wbr>Gsuite<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2495,7 +2574,15 @@ full list.
 <a href="#ips_nodejs" style="color: inherit; text-decoration: inherit;">ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loginmethods_nodejs">
+<a href="#loginmethods_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2503,7 +2590,7 @@ full list.
 <a href="#oktas_nodejs" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludeokta">Access<wbr>Group<wbr>Include<wbr>Okta[]</a></span>
+        <span class="property-type"><a href="#accessgroupincludeokta">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Include<wbr>Okta<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2511,7 +2598,7 @@ full list.
 <a href="#samls_nodejs" style="color: inherit; text-decoration: inherit;">samls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludesaml">Access<wbr>Group<wbr>Include<wbr>Saml[]</a></span>
+        <span class="property-type"><a href="#accessgroupincludesaml">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Include<wbr>Saml<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2519,7 +2606,7 @@ full list.
 <a href="#servicetokens_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2531,7 +2618,7 @@ full list.
 <a href="#any_valid_service_token_python" style="color: inherit; text-decoration: inherit;">any_<wbr>valid_<wbr>service_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2539,7 +2626,7 @@ full list.
 <a href="#auth_method_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2547,7 +2634,7 @@ full list.
 <a href="#azures_python" style="color: inherit; text-decoration: inherit;">azures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludeazure">Sequence[Access<wbr>Group<wbr>Include<wbr>Azure<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupincludeazure">Input[Access<wbr>Group<wbr>Include<wbr>Azure<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2555,7 +2642,7 @@ full list.
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2563,7 +2650,7 @@ full list.
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2571,7 +2658,7 @@ full list.
 <a href="#email_domains_python" style="color: inherit; text-decoration: inherit;">email_<wbr>domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2579,7 +2666,7 @@ full list.
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2587,7 +2674,7 @@ full list.
 <a href="#everyone_python" style="color: inherit; text-decoration: inherit;">everyone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2595,7 +2682,7 @@ full list.
 <a href="#geos_python" style="color: inherit; text-decoration: inherit;">geos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2603,7 +2690,7 @@ full list.
 <a href="#githubs_python" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludegithub">Sequence[Access<wbr>Group<wbr>Include<wbr>Github<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupincludegithub">Input[Access<wbr>Group<wbr>Include<wbr>Github<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2611,7 +2698,7 @@ full list.
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2619,7 +2706,7 @@ full list.
 <a href="#gsuites_python" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludegsuite">Sequence[Access<wbr>Group<wbr>Include<wbr>Gsuite<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupincludegsuite">Input[Access<wbr>Group<wbr>Include<wbr>Gsuite<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2627,7 +2714,15 @@ full list.
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="login_methods_python">
+<a href="#login_methods_python" style="color: inherit; text-decoration: inherit;">login_<wbr>methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2635,7 +2730,7 @@ full list.
 <a href="#oktas_python" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludeokta">Sequence[Access<wbr>Group<wbr>Include<wbr>Okta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupincludeokta">Input[Access<wbr>Group<wbr>Include<wbr>Okta<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2643,7 +2738,7 @@ full list.
 <a href="#samls_python" style="color: inherit; text-decoration: inherit;">samls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgroupincludesaml">Sequence[Access<wbr>Group<wbr>Include<wbr>Saml<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgroupincludesaml">Input[Access<wbr>Group<wbr>Include<wbr>Saml<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2651,7 +2746,7 @@ full list.
 <a href="#service_tokens_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2705,7 +2800,7 @@ full list.
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2713,7 +2808,7 @@ full list.
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2725,7 +2820,7 @@ full list.
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2733,7 +2828,7 @@ full list.
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2805,7 +2900,7 @@ full list.
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2813,7 +2908,7 @@ full list.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2822,7 +2917,7 @@ full list.
 <a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2834,7 +2929,7 @@ full list.
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2842,7 +2937,7 @@ full list.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2851,7 +2946,7 @@ full list.
 <a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2905,7 +3000,7 @@ full list.
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2913,7 +3008,7 @@ full list.
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2925,7 +3020,7 @@ full list.
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2933,7 +3028,7 @@ full list.
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2989,7 +3084,7 @@ full list.
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2997,7 +3092,7 @@ full list.
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd></dl>
@@ -3010,7 +3105,7 @@ full list.
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3018,7 +3113,7 @@ full list.
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd></dl>
@@ -3089,7 +3184,7 @@ full list.
 <a href="#attributename_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3097,7 +3192,7 @@ full list.
 <a href="#attributevalue_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3105,7 +3200,7 @@ full list.
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3117,7 +3212,7 @@ full list.
 <a href="#attribute_name_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3125,7 +3220,7 @@ full list.
 <a href="#attribute_value_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3133,7 +3228,7 @@ full list.
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3241,6 +3336,14 @@ full list.
             title="Optional">
         <span id="ips_csharp">
 <a href="#ips_csharp" style="color: inherit; text-decoration: inherit;">Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loginmethods_csharp">
+<a href="#loginmethods_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
@@ -3379,6 +3482,14 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loginmethods_go">
+<a href="#loginmethods_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="oktas_go">
 <a href="#oktas_go" style="color: inherit; text-decoration: inherit;">Oktas</a>
 </span>
@@ -3411,7 +3522,7 @@ full list.
 <a href="#anyvalidservicetoken_nodejs" style="color: inherit; text-decoration: inherit;">any<wbr>Valid<wbr>Service<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3419,7 +3530,7 @@ full list.
 <a href="#authmethod_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3427,7 +3538,7 @@ full list.
 <a href="#azures_nodejs" style="color: inherit; text-decoration: inherit;">azures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequireazure">Access<wbr>Group<wbr>Require<wbr>Azure[]</a></span>
+        <span class="property-type"><a href="#accessgrouprequireazure">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Require<wbr>Azure<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3435,7 +3546,7 @@ full list.
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3443,7 +3554,7 @@ full list.
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3451,7 +3562,7 @@ full list.
 <a href="#emaildomains_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3459,7 +3570,7 @@ full list.
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3467,7 +3578,7 @@ full list.
 <a href="#everyone_nodejs" style="color: inherit; text-decoration: inherit;">everyone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3475,7 +3586,7 @@ full list.
 <a href="#geos_nodejs" style="color: inherit; text-decoration: inherit;">geos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3483,7 +3594,7 @@ full list.
 <a href="#githubs_nodejs" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequiregithub">Access<wbr>Group<wbr>Require<wbr>Github[]</a></span>
+        <span class="property-type"><a href="#accessgrouprequiregithub">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Require<wbr>Github<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3491,7 +3602,7 @@ full list.
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3499,7 +3610,7 @@ full list.
 <a href="#gsuites_nodejs" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequiregsuite">Access<wbr>Group<wbr>Require<wbr>Gsuite[]</a></span>
+        <span class="property-type"><a href="#accessgrouprequiregsuite">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Require<wbr>Gsuite<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3507,7 +3618,15 @@ full list.
 <a href="#ips_nodejs" style="color: inherit; text-decoration: inherit;">ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loginmethods_nodejs">
+<a href="#loginmethods_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3515,7 +3634,7 @@ full list.
 <a href="#oktas_nodejs" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequireokta">Access<wbr>Group<wbr>Require<wbr>Okta[]</a></span>
+        <span class="property-type"><a href="#accessgrouprequireokta">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Require<wbr>Okta<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3523,7 +3642,7 @@ full list.
 <a href="#samls_nodejs" style="color: inherit; text-decoration: inherit;">samls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequiresaml">Access<wbr>Group<wbr>Require<wbr>Saml[]</a></span>
+        <span class="property-type"><a href="#accessgrouprequiresaml">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Group<wbr>Require<wbr>Saml<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3531,7 +3650,7 @@ full list.
 <a href="#servicetokens_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3543,7 +3662,7 @@ full list.
 <a href="#any_valid_service_token_python" style="color: inherit; text-decoration: inherit;">any_<wbr>valid_<wbr>service_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3551,7 +3670,7 @@ full list.
 <a href="#auth_method_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3559,7 +3678,7 @@ full list.
 <a href="#azures_python" style="color: inherit; text-decoration: inherit;">azures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequireazure">Sequence[Access<wbr>Group<wbr>Require<wbr>Azure<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgrouprequireazure">Input[Access<wbr>Group<wbr>Require<wbr>Azure<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3567,7 +3686,7 @@ full list.
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3575,7 +3694,7 @@ full list.
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3583,7 +3702,7 @@ full list.
 <a href="#email_domains_python" style="color: inherit; text-decoration: inherit;">email_<wbr>domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3591,7 +3710,7 @@ full list.
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3599,7 +3718,7 @@ full list.
 <a href="#everyone_python" style="color: inherit; text-decoration: inherit;">everyone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3607,7 +3726,7 @@ full list.
 <a href="#geos_python" style="color: inherit; text-decoration: inherit;">geos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3615,7 +3734,7 @@ full list.
 <a href="#githubs_python" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequiregithub">Sequence[Access<wbr>Group<wbr>Require<wbr>Github<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgrouprequiregithub">Input[Access<wbr>Group<wbr>Require<wbr>Github<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3623,7 +3742,7 @@ full list.
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3631,7 +3750,7 @@ full list.
 <a href="#gsuites_python" style="color: inherit; text-decoration: inherit;">gsuites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequiregsuite">Sequence[Access<wbr>Group<wbr>Require<wbr>Gsuite<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgrouprequiregsuite">Input[Access<wbr>Group<wbr>Require<wbr>Gsuite<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3639,7 +3758,15 @@ full list.
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="login_methods_python">
+<a href="#login_methods_python" style="color: inherit; text-decoration: inherit;">login_<wbr>methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3647,7 +3774,7 @@ full list.
 <a href="#oktas_python" style="color: inherit; text-decoration: inherit;">oktas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequireokta">Sequence[Access<wbr>Group<wbr>Require<wbr>Okta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgrouprequireokta">Input[Access<wbr>Group<wbr>Require<wbr>Okta<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3655,7 +3782,7 @@ full list.
 <a href="#samls_python" style="color: inherit; text-decoration: inherit;">samls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessgrouprequiresaml">Sequence[Access<wbr>Group<wbr>Require<wbr>Saml<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessgrouprequiresaml">Input[Access<wbr>Group<wbr>Require<wbr>Saml<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3663,7 +3790,7 @@ full list.
 <a href="#service_tokens_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3717,7 +3844,7 @@ full list.
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3725,7 +3852,7 @@ full list.
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3737,7 +3864,7 @@ full list.
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3745,7 +3872,7 @@ full list.
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3817,7 +3944,7 @@ full list.
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3825,7 +3952,7 @@ full list.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3834,7 +3961,7 @@ full list.
 <a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3846,7 +3973,7 @@ full list.
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3854,7 +3981,7 @@ full list.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3863,7 +3990,7 @@ full list.
 <a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3917,7 +4044,7 @@ full list.
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3925,7 +4052,7 @@ full list.
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3937,7 +4064,7 @@ full list.
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3945,7 +4072,7 @@ full list.
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4001,7 +4128,7 @@ full list.
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4009,7 +4136,7 @@ full list.
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd></dl>
@@ -4022,7 +4149,7 @@ full list.
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4030,7 +4157,7 @@ full list.
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
 {{% /md %}}</dd></dl>
@@ -4101,7 +4228,7 @@ full list.
 <a href="#attributename_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4109,7 +4236,7 @@ full list.
 <a href="#attributevalue_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4117,7 +4244,7 @@ full list.
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4129,7 +4256,7 @@ full list.
 <a href="#attribute_name_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4137,7 +4264,7 @@ full list.
 <a href="#attribute_value_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4145,7 +4272,7 @@ full list.
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

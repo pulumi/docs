@@ -70,8 +70,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-cloudflare/sdk/v3/go/cloudflare"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -171,19 +171,30 @@ const foobar = new cloudflare.PageRule("foobar", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PageRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PageRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PageRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PageRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PageRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[PageRuleActionsArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PageRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PageRuleActionsArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PageRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PageRuleArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPageRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PageRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PageRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPageRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PageRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PageRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PageRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PageRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PageRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PageRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -218,22 +229,32 @@ const foobar = new cloudflare.PageRule("foobar", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PageRuleArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -242,7 +263,7 @@ const foobar = new cloudflare.PageRule("foobar", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -266,7 +287,7 @@ const foobar = new cloudflare.PageRule("foobar", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -419,7 +440,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactions">Page<wbr>Rule<wbr>Actions</a></span>
+        <span class="property-type"><a href="#pageruleactions">pulumi<wbr>Input<Page<wbr>Rule<wbr>Actions<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The actions taken by the page rule, options given below.
 {{% /md %}}</dd><dt class="property-required"
@@ -428,7 +449,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL pattern to target with the page rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -437,7 +458,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to which the page rule should be added.
 {{% /md %}}</dd><dt class="property-optional"
@@ -446,7 +467,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The priority of the page rule among others for this target, the higher the number the higher the priority as per [API documentation](https://api.cloudflare.com/#page-rules-for-a-zone-create-page-rule).
 {{% /md %}}</dd><dt class="property-optional"
@@ -455,7 +476,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether the page rule is active or disabled.
 {{% /md %}}</dd></dl>
@@ -468,7 +489,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactions">Page<wbr>Rule<wbr>Actions<wbr>Args</a></span>
+        <span class="property-type"><a href="#pageruleactions">Input[Page<wbr>Rule<wbr>Actions<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The actions taken by the page rule, options given below.
 {{% /md %}}</dd><dt class="property-required"
@@ -477,7 +498,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL pattern to target with the page rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -486,7 +507,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to which the page rule should be added.
 {{% /md %}}</dd><dt class="property-optional"
@@ -495,7 +516,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The priority of the page rule among others for this target, the higher the number the higher the priority as per [API documentation](https://api.cloudflare.com/#page-rules-for-a-zone-create-page-rule).
 {{% /md %}}</dd><dt class="property-optional"
@@ -504,7 +525,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether the page rule is active or disabled.
 {{% /md %}}</dd></dl>
@@ -573,20 +594,27 @@ Get an existing PageRule resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PageRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PageRule</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PageRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PageRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[PageRuleActionsArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PageRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PageRuleActionsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> PageRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPageRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PageRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PageRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPageRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PageRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PageRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PageRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PageRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PageRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PageRuleState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -793,7 +821,7 @@ The following state arguments are supported:
 <a href="#state_actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactions">Page<wbr>Rule<wbr>Actions</a></span>
+        <span class="property-type"><a href="#pageruleactions">pulumi<wbr>Input<Page<wbr>Rule<wbr>Actions<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The actions taken by the page rule, options given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -802,7 +830,7 @@ The following state arguments are supported:
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The priority of the page rule among others for this target, the higher the number the higher the priority as per [API documentation](https://api.cloudflare.com/#page-rules-for-a-zone-create-page-rule).
 {{% /md %}}</dd><dt class="property-optional"
@@ -811,7 +839,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether the page rule is active or disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -820,7 +848,7 @@ The following state arguments are supported:
 <a href="#state_target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL pattern to target with the page rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -829,7 +857,7 @@ The following state arguments are supported:
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to which the page rule should be added.
 {{% /md %}}</dd></dl>
@@ -842,7 +870,7 @@ The following state arguments are supported:
 <a href="#state_actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactions">Page<wbr>Rule<wbr>Actions<wbr>Args</a></span>
+        <span class="property-type"><a href="#pageruleactions">Input[Page<wbr>Rule<wbr>Actions<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The actions taken by the page rule, options given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -851,7 +879,7 @@ The following state arguments are supported:
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The priority of the page rule among others for this target, the higher the number the higher the priority as per [API documentation](https://api.cloudflare.com/#page-rules-for-a-zone-create-page-rule).
 {{% /md %}}</dd><dt class="property-optional"
@@ -860,7 +888,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether the page rule is active or disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -869,7 +897,7 @@ The following state arguments are supported:
 <a href="#state_target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL pattern to target with the page rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -878,7 +906,7 @@ The following state arguments are supported:
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to which the page rule should be added.
 {{% /md %}}</dd></dl>
@@ -1576,7 +1604,7 @@ The following state arguments are supported:
 <a href="#alwaysonline_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Online</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1585,7 +1613,7 @@ The following state arguments are supported:
 <a href="#alwaysusehttps_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Use<wbr>Https</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1594,7 +1622,7 @@ The following state arguments are supported:
 <a href="#automatichttpsrewrites_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Https<wbr>Rewrites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1603,7 +1631,7 @@ The following state arguments are supported:
 <a href="#browsercachettl_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Cache<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Time To Live for the browser cache. `0` means 'Respect Existing Headers'
 {{% /md %}}</dd><dt class="property-optional"
@@ -1612,7 +1640,7 @@ The following state arguments are supported:
 <a href="#browsercheck_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1621,7 +1649,7 @@ The following state arguments are supported:
 <a href="#bypasscacheoncookie_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Cache<wbr>On<wbr>Cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String value of cookie name to conditionally bypass cache the page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1630,7 +1658,7 @@ The following state arguments are supported:
 <a href="#cachebydevicetype_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>By<wbr>Device<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1639,7 +1667,7 @@ The following state arguments are supported:
 <a href="#cachedeceptionarmor_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Deception<wbr>Armor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1648,7 +1676,7 @@ The following state arguments are supported:
 <a href="#cachekeyfields_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachekeyfields">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields</a></span>
+        <span class="property-type"><a href="#pageruleactionscachekeyfields">pulumi<wbr>Input<Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Controls how Cloudflare creates Cache Keys used to identify files in cache. See below for full description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1657,7 +1685,7 @@ The following state arguments are supported:
 <a href="#cachelevel_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether to set the cache level to `"bypass"`, `"basic"`, `"simplified"`, `"aggressive"`, or `"cache_everything"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1666,7 +1694,7 @@ The following state arguments are supported:
 <a href="#cacheoncookie_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>On<wbr>Cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String value of cookie name to conditionally cache the page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1675,7 +1703,7 @@ The following state arguments are supported:
 <a href="#cachettlbystatuses_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Ttl<wbr>By<wbr>Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachettlbystatus">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Ttl<wbr>By<wbr>Status[]</a></span>
+        <span class="property-type"><a href="#pageruleactionscachettlbystatus">pulumi<wbr>Input<pulumi<wbr>Input<Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Ttl<wbr>By<wbr>Status<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Set cache TTL based on the response status from the origin web server. Can be specified multiple times. See below for full description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1684,7 +1712,7 @@ The following state arguments are supported:
 <a href="#disableapps_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Apps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1693,7 +1721,7 @@ The following state arguments are supported:
 <a href="#disableperformance_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1702,7 +1730,7 @@ The following state arguments are supported:
 <a href="#disablerailgun_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Railgun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1711,7 +1739,7 @@ The following state arguments are supported:
 <a href="#disablesecurity_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1720,7 +1748,7 @@ The following state arguments are supported:
 <a href="#edgecachettl_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Cache<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Time To Live for the edge cache.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1729,7 +1757,7 @@ The following state arguments are supported:
 <a href="#emailobfuscation_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Obfuscation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1738,7 +1766,7 @@ The following state arguments are supported:
 <a href="#explicitcachecontrol_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Cache<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether origin Cache-Control action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1747,7 +1775,7 @@ The following state arguments are supported:
 <a href="#forwardingurl_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionsforwardingurl">Page<wbr>Rule<wbr>Actions<wbr>Forwarding<wbr>Url</a></span>
+        <span class="property-type"><a href="#pageruleactionsforwardingurl">pulumi<wbr>Input<Page<wbr>Rule<wbr>Actions<wbr>Forwarding<wbr>Url<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The URL to forward to, and with what status. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1756,7 +1784,7 @@ The following state arguments are supported:
 <a href="#hostheaderoverride_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Header<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value of the Host header to send.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1765,7 +1793,7 @@ The following state arguments are supported:
 <a href="#ipgeolocation_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Geolocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1774,7 +1802,7 @@ The following state arguments are supported:
 <a href="#minifies_nodejs" style="color: inherit; text-decoration: inherit;">minifies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionsminify">Page<wbr>Rule<wbr>Actions<wbr>Minify[]</a></span>
+        <span class="property-type"><a href="#pageruleactionsminify">pulumi<wbr>Input<pulumi<wbr>Input<Page<wbr>Rule<wbr>Actions<wbr>Minify<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The configuration for HTML, CSS and JS minification. See below for full list of options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1783,7 +1811,7 @@ The following state arguments are supported:
 <a href="#mirage_nodejs" style="color: inherit; text-decoration: inherit;">mirage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1792,7 +1820,7 @@ The following state arguments are supported:
 <a href="#opportunisticencryption_nodejs" style="color: inherit; text-decoration: inherit;">opportunistic<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1801,7 +1829,7 @@ The following state arguments are supported:
 <a href="#originerrorpagepassthru_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Error<wbr>Page<wbr>Pass<wbr>Thru</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1810,7 +1838,7 @@ The following state arguments are supported:
 <a href="#polish_nodejs" style="color: inherit; text-decoration: inherit;">polish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether this action is `"off"`, `"lossless"` or `"lossy"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1819,7 +1847,7 @@ The following state arguments are supported:
 <a href="#resolveoverride_nodejs" style="color: inherit; text-decoration: inherit;">resolve<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Overridden origin server name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1828,7 +1856,7 @@ The following state arguments are supported:
 <a href="#respectstrongetag_nodejs" style="color: inherit; text-decoration: inherit;">respect<wbr>Strong<wbr>Etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1837,7 +1865,7 @@ The following state arguments are supported:
 <a href="#responsebuffering_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Buffering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1846,7 +1874,7 @@ The following state arguments are supported:
 <a href="#rocketloader_nodejs" style="color: inherit; text-decoration: inherit;">rocket<wbr>Loader</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether to set the rocket loader to `"on"`, `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1855,7 +1883,7 @@ The following state arguments are supported:
 <a href="#securitylevel_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether to set the security level to `"off"`, `"essentially_off"`, `"low"`, `"medium"`, `"high"`, or `"under_attack"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1864,7 +1892,7 @@ The following state arguments are supported:
 <a href="#serversideexclude_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Exclude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1873,7 +1901,7 @@ The following state arguments are supported:
 <a href="#sortquerystringforcache_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Query<wbr>String<wbr>For<wbr>Cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1882,7 +1910,7 @@ The following state arguments are supported:
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether to set the SSL mode to `"off"`, `"flexible"`, `"full"`, `"strict"`, or `"origin_pull"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1891,7 +1919,7 @@ The following state arguments are supported:
 <a href="#trueclientipheader_nodejs" style="color: inherit; text-decoration: inherit;">true<wbr>Client<wbr>Ip<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1900,7 +1928,7 @@ The following state arguments are supported:
 <a href="#waf_nodejs" style="color: inherit; text-decoration: inherit;">waf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd></dl>
@@ -1913,7 +1941,7 @@ The following state arguments are supported:
 <a href="#always_online_python" style="color: inherit; text-decoration: inherit;">always_<wbr>online</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1922,7 +1950,7 @@ The following state arguments are supported:
 <a href="#always_use_https_python" style="color: inherit; text-decoration: inherit;">always_<wbr>use_<wbr>https</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1931,7 +1959,7 @@ The following state arguments are supported:
 <a href="#automatic_https_rewrites_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>https_<wbr>rewrites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1940,7 +1968,7 @@ The following state arguments are supported:
 <a href="#browser_cache_ttl_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>cache_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Time To Live for the browser cache. `0` means 'Respect Existing Headers'
 {{% /md %}}</dd><dt class="property-optional"
@@ -1949,7 +1977,7 @@ The following state arguments are supported:
 <a href="#browser_check_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1958,7 +1986,7 @@ The following state arguments are supported:
 <a href="#bypass_cache_on_cookie_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>cache_<wbr>on_<wbr>cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String value of cookie name to conditionally bypass cache the page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1967,7 +1995,7 @@ The following state arguments are supported:
 <a href="#cache_by_device_type_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>by_<wbr>device_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1976,7 +2004,7 @@ The following state arguments are supported:
 <a href="#cache_deception_armor_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>deception_<wbr>armor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1985,7 +2013,7 @@ The following state arguments are supported:
 <a href="#cache_key_fields_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachekeyfields">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Args</a></span>
+        <span class="property-type"><a href="#pageruleactionscachekeyfields">Input[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Controls how Cloudflare creates Cache Keys used to identify files in cache. See below for full description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1994,7 +2022,7 @@ The following state arguments are supported:
 <a href="#cache_level_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether to set the cache level to `"bypass"`, `"basic"`, `"simplified"`, `"aggressive"`, or `"cache_everything"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2003,7 +2031,7 @@ The following state arguments are supported:
 <a href="#cache_on_cookie_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>on_<wbr>cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String value of cookie name to conditionally cache the page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2012,7 +2040,7 @@ The following state arguments are supported:
 <a href="#cache_ttl_by_statuses_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>ttl_<wbr>by_<wbr>statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachettlbystatus">Sequence[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Ttl<wbr>By<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pageruleactionscachettlbystatus">Input[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Ttl<wbr>By<wbr>Status<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Set cache TTL based on the response status from the origin web server. Can be specified multiple times. See below for full description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2021,7 +2049,7 @@ The following state arguments are supported:
 <a href="#disable_apps_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>apps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2030,7 +2058,7 @@ The following state arguments are supported:
 <a href="#disable_performance_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2039,7 +2067,7 @@ The following state arguments are supported:
 <a href="#disable_railgun_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>railgun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2048,7 +2076,7 @@ The following state arguments are supported:
 <a href="#disable_security_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2057,7 +2085,7 @@ The following state arguments are supported:
 <a href="#edge_cache_ttl_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>cache_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The Time To Live for the edge cache.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2066,7 +2094,7 @@ The following state arguments are supported:
 <a href="#email_obfuscation_python" style="color: inherit; text-decoration: inherit;">email_<wbr>obfuscation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2075,7 +2103,7 @@ The following state arguments are supported:
 <a href="#explicit_cache_control_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>cache_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether origin Cache-Control action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2084,7 +2112,7 @@ The following state arguments are supported:
 <a href="#forwarding_url_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionsforwardingurl">Page<wbr>Rule<wbr>Actions<wbr>Forwarding<wbr>Url<wbr>Args</a></span>
+        <span class="property-type"><a href="#pageruleactionsforwardingurl">Input[Page<wbr>Rule<wbr>Actions<wbr>Forwarding<wbr>Url<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The URL to forward to, and with what status. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2093,7 +2121,7 @@ The following state arguments are supported:
 <a href="#host_header_override_python" style="color: inherit; text-decoration: inherit;">host_<wbr>header_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value of the Host header to send.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2102,7 +2130,7 @@ The following state arguments are supported:
 <a href="#ip_geolocation_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>geolocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2111,7 +2139,7 @@ The following state arguments are supported:
 <a href="#minifies_python" style="color: inherit; text-decoration: inherit;">minifies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionsminify">Sequence[Page<wbr>Rule<wbr>Actions<wbr>Minify<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pageruleactionsminify">Input[Page<wbr>Rule<wbr>Actions<wbr>Minify<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for HTML, CSS and JS minification. See below for full list of options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2120,7 +2148,7 @@ The following state arguments are supported:
 <a href="#mirage_python" style="color: inherit; text-decoration: inherit;">mirage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2129,7 +2157,7 @@ The following state arguments are supported:
 <a href="#opportunistic_encryption_python" style="color: inherit; text-decoration: inherit;">opportunistic_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2138,7 +2166,7 @@ The following state arguments are supported:
 <a href="#origin_error_page_pass_thru_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>error_<wbr>page_<wbr>pass_<wbr>thru</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2147,7 +2175,7 @@ The following state arguments are supported:
 <a href="#polish_python" style="color: inherit; text-decoration: inherit;">polish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"off"`, `"lossless"` or `"lossy"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2156,7 +2184,7 @@ The following state arguments are supported:
 <a href="#resolve_override_python" style="color: inherit; text-decoration: inherit;">resolve_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Overridden origin server name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2165,7 +2193,7 @@ The following state arguments are supported:
 <a href="#respect_strong_etag_python" style="color: inherit; text-decoration: inherit;">respect_<wbr>strong_<wbr>etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2174,7 +2202,7 @@ The following state arguments are supported:
 <a href="#response_buffering_python" style="color: inherit; text-decoration: inherit;">response_<wbr>buffering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2183,7 +2211,7 @@ The following state arguments are supported:
 <a href="#rocket_loader_python" style="color: inherit; text-decoration: inherit;">rocket_<wbr>loader</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether to set the rocket loader to `"on"`, `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2192,7 +2220,7 @@ The following state arguments are supported:
 <a href="#security_level_python" style="color: inherit; text-decoration: inherit;">security_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether to set the security level to `"off"`, `"essentially_off"`, `"low"`, `"medium"`, `"high"`, or `"under_attack"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2201,7 +2229,7 @@ The following state arguments are supported:
 <a href="#server_side_exclude_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>exclude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2210,7 +2238,7 @@ The following state arguments are supported:
 <a href="#sort_query_string_for_cache_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>query_<wbr>string_<wbr>for_<wbr>cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2219,7 +2247,7 @@ The following state arguments are supported:
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether to set the SSL mode to `"off"`, `"flexible"`, `"full"`, `"strict"`, or `"origin_pull"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2228,7 +2256,7 @@ The following state arguments are supported:
 <a href="#true_client_ip_header_python" style="color: inherit; text-decoration: inherit;">true_<wbr>client_<wbr>ip_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2237,7 +2265,7 @@ The following state arguments are supported:
 <a href="#waf_python" style="color: inherit; text-decoration: inherit;">waf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
 {{% /md %}}</dd></dl>
@@ -2350,7 +2378,7 @@ The following state arguments are supported:
 <a href="#cookie_nodejs" style="color: inherit; text-decoration: inherit;">cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachekeyfieldscookie">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Cookie</a></span>
+        <span class="property-type"><a href="#pageruleactionscachekeyfieldscookie">pulumi<wbr>Input<Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Cookie<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Controls what cookies go into Cache Key:
 {{% /md %}}</dd><dt class="property-required"
@@ -2359,7 +2387,7 @@ The following state arguments are supported:
 <a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachekeyfieldsheader">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Header</a></span>
+        <span class="property-type"><a href="#pageruleactionscachekeyfieldsheader">pulumi<wbr>Input<Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Header<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Controls what HTTP headers go into Cache Key:
 {{% /md %}}</dd><dt class="property-required"
@@ -2368,7 +2396,7 @@ The following state arguments are supported:
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachekeyfieldshost">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Host</a></span>
+        <span class="property-type"><a href="#pageruleactionscachekeyfieldshost">pulumi<wbr>Input<Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Host<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Controls which Host header goes into Cache Key:
 {{% /md %}}</dd><dt class="property-required"
@@ -2377,7 +2405,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachekeyfieldsquerystring">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#pageruleactionscachekeyfieldsquerystring">pulumi<wbr>Input<Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Query<wbr>String<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Controls which URL query string parameters go into the Cache Key.
 {{% /md %}}</dd><dt class="property-required"
@@ -2386,7 +2414,7 @@ The following state arguments are supported:
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachekeyfieldsuser">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>User</a></span>
+        <span class="property-type"><a href="#pageruleactionscachekeyfieldsuser">pulumi<wbr>Input<Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>User<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Controls which end user-related features go into the Cache Key.
 {{% /md %}}</dd></dl>
@@ -2399,7 +2427,7 @@ The following state arguments are supported:
 <a href="#cookie_python" style="color: inherit; text-decoration: inherit;">cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachekeyfieldscookie">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Cookie<wbr>Args</a></span>
+        <span class="property-type"><a href="#pageruleactionscachekeyfieldscookie">Input[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Cookie<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Controls what cookies go into Cache Key:
 {{% /md %}}</dd><dt class="property-required"
@@ -2408,7 +2436,7 @@ The following state arguments are supported:
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachekeyfieldsheader">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Header<wbr>Args</a></span>
+        <span class="property-type"><a href="#pageruleactionscachekeyfieldsheader">Input[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Controls what HTTP headers go into Cache Key:
 {{% /md %}}</dd><dt class="property-required"
@@ -2417,7 +2445,7 @@ The following state arguments are supported:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachekeyfieldshost">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Host<wbr>Args</a></span>
+        <span class="property-type"><a href="#pageruleactionscachekeyfieldshost">Input[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Host<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Controls which Host header goes into Cache Key:
 {{% /md %}}</dd><dt class="property-required"
@@ -2426,7 +2454,7 @@ The following state arguments are supported:
 <a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachekeyfieldsquerystring">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Query<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#pageruleactionscachekeyfieldsquerystring">Input[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Query<wbr>String<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Controls which URL query string parameters go into the Cache Key.
 {{% /md %}}</dd><dt class="property-required"
@@ -2435,7 +2463,7 @@ The following state arguments are supported:
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachekeyfieldsuser">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>User<wbr>Args</a></span>
+        <span class="property-type"><a href="#pageruleactionscachekeyfieldsuser">Input[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Controls which end user-related features go into the Cache Key.
 {{% /md %}}</dd></dl>
@@ -2494,7 +2522,7 @@ The following state arguments are supported:
 <a href="#checkpresences_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Presences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Check for presence of specified HTTP headers, without including their actual values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2503,7 +2531,7 @@ The following state arguments are supported:
 <a href="#includes_nodejs" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
 {{% /md %}}</dd></dl>
@@ -2516,7 +2544,7 @@ The following state arguments are supported:
 <a href="#check_presences_python" style="color: inherit; text-decoration: inherit;">check_<wbr>presences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Check for presence of specified HTTP headers, without including their actual values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2525,7 +2553,7 @@ The following state arguments are supported:
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
 {{% /md %}}</dd></dl>
@@ -2602,7 +2630,7 @@ The following state arguments are supported:
 <a href="#checkpresences_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Presences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Check for presence of specified HTTP headers, without including their actual values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2611,7 +2639,7 @@ The following state arguments are supported:
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Exclude these query string parameters from Cache Key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2620,7 +2648,7 @@ The following state arguments are supported:
 <a href="#includes_nodejs" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
 {{% /md %}}</dd></dl>
@@ -2633,7 +2661,7 @@ The following state arguments are supported:
 <a href="#check_presences_python" style="color: inherit; text-decoration: inherit;">check_<wbr>presences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Check for presence of specified HTTP headers, without including their actual values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2642,7 +2670,7 @@ The following state arguments are supported:
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Exclude these query string parameters from Cache Key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2651,7 +2679,7 @@ The following state arguments are supported:
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
 {{% /md %}}</dd></dl>
@@ -2692,7 +2720,7 @@ The following state arguments are supported:
 <a href="#resolved_nodejs" style="color: inherit; text-decoration: inherit;">resolved</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}`false` (default) - includes the Host header in the HTTP request sent to the origin; `true` - includes the Host header that was resolved to get the origin IP for the request (e.g. changed with Resolve Override Page Rule).
 {{% /md %}}</dd></dl>
@@ -2705,7 +2733,7 @@ The following state arguments are supported:
 <a href="#resolved_python" style="color: inherit; text-decoration: inherit;">resolved</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}`false` (default) - includes the Host header in the HTTP request sent to the origin; `true` - includes the Host header that was resolved to get the origin IP for the request (e.g. changed with Resolve Override Page Rule).
 {{% /md %}}</dd></dl>
@@ -2782,7 +2810,7 @@ The following state arguments are supported:
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Exclude these query string parameters from Cache Key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2791,7 +2819,7 @@ The following state arguments are supported:
 <a href="#ignore_nodejs" style="color: inherit; text-decoration: inherit;">ignore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}`false` (default) - all query string parameters are used for Cache Key, unless explicitly excluded; `true` - all query string parameters are ignored; value is ignored if any of `exclude` or `include` is non-empty.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2800,7 +2828,7 @@ The following state arguments are supported:
 <a href="#includes_nodejs" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
 {{% /md %}}</dd></dl>
@@ -2813,7 +2841,7 @@ The following state arguments are supported:
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Exclude these query string parameters from Cache Key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2822,7 +2850,7 @@ The following state arguments are supported:
 <a href="#ignore_python" style="color: inherit; text-decoration: inherit;">ignore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}`false` (default) - all query string parameters are used for Cache Key, unless explicitly excluded; `true` - all query string parameters are ignored; value is ignored if any of `exclude` or `include` is non-empty.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2831,7 +2859,7 @@ The following state arguments are supported:
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
 {{% /md %}}</dd></dl>
@@ -2908,7 +2936,7 @@ The following state arguments are supported:
 <a href="#devicetype_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}`true` - classifies a request as “mobile”, “desktop”, or “tablet” based on the User Agent; defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2917,7 +2945,7 @@ The following state arguments are supported:
 <a href="#geo_nodejs" style="color: inherit; text-decoration: inherit;">geo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}`true` - includes the client’s country, derived from the IP address; defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2926,7 +2954,7 @@ The following state arguments are supported:
 <a href="#lang_nodejs" style="color: inherit; text-decoration: inherit;">lang</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}`true` - includes the first language code contained in the `Accept-Language` header sent by the client; defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -2939,7 +2967,7 @@ The following state arguments are supported:
 <a href="#device_type_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}`true` - classifies a request as “mobile”, “desktop”, or “tablet” based on the User Agent; defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2948,7 +2976,7 @@ The following state arguments are supported:
 <a href="#geo_python" style="color: inherit; text-decoration: inherit;">geo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}`true` - includes the client’s country, derived from the IP address; defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2957,7 +2985,7 @@ The following state arguments are supported:
 <a href="#lang_python" style="color: inherit; text-decoration: inherit;">lang</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}`true` - includes the first language code contained in the `Accept-Language` header sent by the client; defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -3018,7 +3046,7 @@ The following state arguments are supported:
 <a href="#codes_nodejs" style="color: inherit; text-decoration: inherit;">codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A HTTP code (e.g. `404`) or range of codes (e.g. `400-499`)
 {{% /md %}}</dd><dt class="property-required"
@@ -3027,7 +3055,7 @@ The following state arguments are supported:
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Duration a resource lives in the Cloudflare cache.
 * positive number - cache for specified duration in seconds
@@ -3041,7 +3069,7 @@ The following state arguments are supported:
 <a href="#codes_python" style="color: inherit; text-decoration: inherit;">codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A HTTP code (e.g. `404`) or range of codes (e.g. `400-499`)
 {{% /md %}}</dd><dt class="property-required"
@@ -3050,7 +3078,7 @@ The following state arguments are supported:
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Duration a resource lives in the Cloudflare cache.
 * positive number - cache for specified duration in seconds
@@ -3110,7 +3138,7 @@ The following state arguments are supported:
 <a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The status code to use for the redirection.
 {{% /md %}}</dd><dt class="property-required"
@@ -3119,7 +3147,7 @@ The following state arguments are supported:
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL to which the page rule should forward.
 {{% /md %}}</dd></dl>
@@ -3132,7 +3160,7 @@ The following state arguments are supported:
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The status code to use for the redirection.
 {{% /md %}}</dd><dt class="property-required"
@@ -3141,7 +3169,7 @@ The following state arguments are supported:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL to which the page rule should forward.
 {{% /md %}}</dd></dl>
@@ -3218,7 +3246,7 @@ The following state arguments are supported:
 <a href="#css_nodejs" style="color: inherit; text-decoration: inherit;">css</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether CSS should be minified. Valid values are `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3227,7 +3255,7 @@ The following state arguments are supported:
 <a href="#html_nodejs" style="color: inherit; text-decoration: inherit;">html</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether HTML should be minified. Valid values are `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3236,7 +3264,7 @@ The following state arguments are supported:
 <a href="#js_nodejs" style="color: inherit; text-decoration: inherit;">js</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether Javascript should be minified. Valid values are `"on"` or `"off"`.
 {{% /md %}}</dd></dl>
@@ -3249,7 +3277,7 @@ The following state arguments are supported:
 <a href="#css_python" style="color: inherit; text-decoration: inherit;">css</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether CSS should be minified. Valid values are `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3258,7 +3286,7 @@ The following state arguments are supported:
 <a href="#html_python" style="color: inherit; text-decoration: inherit;">html</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether HTML should be minified. Valid values are `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3267,7 +3295,7 @@ The following state arguments are supported:
 <a href="#js_python" style="color: inherit; text-decoration: inherit;">js</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether Javascript should be minified. Valid values are `"on"` or `"off"`.
 {{% /md %}}</dd></dl>
