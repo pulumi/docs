@@ -94,8 +94,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/v2/go/mongodbatlas"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -227,19 +227,29 @@ const test = new mongodbatlas.EncryptionAtRest("test", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EncryptionAtRest</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EncryptionAtRestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EncryptionAtRest</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EncryptionAtRestArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EncryptionAtRest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aws_kms</span><span class="p">:</span> <span class="nx">Optional[EncryptionAtRestAwsKmsArgs]</span> = None<span class="p">, </span><span class="nx">azure_key_vault</span><span class="p">:</span> <span class="nx">Optional[EncryptionAtRestAzureKeyVaultArgs]</span> = None<span class="p">, </span><span class="nx">google_cloud_kms</span><span class="p">:</span> <span class="nx">Optional[EncryptionAtRestGoogleCloudKmsArgs]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">EncryptionAtRest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">aws_kms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EncryptionAtRestAwsKmsArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">azure_key_vault</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EncryptionAtRestAzureKeyVaultArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">google_cloud_kms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EncryptionAtRestGoogleCloudKmsArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">EncryptionAtRest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EncryptionAtRestArgs</a></span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEncryptionAtRest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EncryptionAtRestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EncryptionAtRest</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEncryptionAtRest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EncryptionAtRestArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EncryptionAtRest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EncryptionAtRest</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EncryptionAtRestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EncryptionAtRest</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EncryptionAtRestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -274,22 +284,32 @@ const test = new mongodbatlas.EncryptionAtRest("test", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">EncryptionAtRestArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -298,7 +318,7 @@ const test = new mongodbatlas.EncryptionAtRest("test", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -322,7 +342,7 @@ const test = new mongodbatlas.EncryptionAtRest("test", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -457,7 +477,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -466,7 +486,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 <a href="#awskms_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Kms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms</a></span>
+        <span class="property-type"><a href="#encryptionatrestawskms">pulumi<wbr>Input<Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies AWS KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -475,7 +495,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 <a href="#azurekeyvault_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault</a></span>
+        <span class="property-type"><a href="#encryptionatrestazurekeyvault">pulumi<wbr>Input<Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies Azure Key Vault configuration details and whether Encryption at Rest is enabled for an Atlas project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -484,7 +504,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 <a href="#googlecloudkms_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Cloud<wbr>Kms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms</a></span>
+        <span class="property-type"><a href="#encryptionatrestgooglecloudkms">pulumi<wbr>Input<Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies GCP KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
 {{% /md %}}</dd></dl>
@@ -497,7 +517,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -506,7 +526,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 <a href="#aws_kms_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>kms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionatrestawskms">Input[Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies AWS KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -515,7 +535,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 <a href="#azure_key_vault_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionatrestazurekeyvault">Input[Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies Azure Key Vault configuration details and whether Encryption at Rest is enabled for an Atlas project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -524,7 +544,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 <a href="#google_cloud_kms_python" style="color: inherit; text-decoration: inherit;">google_<wbr>cloud_<wbr>kms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Input[Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies GCP KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
 {{% /md %}}</dd></dl>
@@ -593,20 +613,26 @@ Get an existing EncryptionAtRest resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">EncryptionAtRestState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">EncryptionAtRest</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">EncryptionAtRestState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">EncryptionAtRest</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aws_kms</span><span class="p">:</span> <span class="nx">Optional[EncryptionAtRestAwsKmsArgs]</span> = None<span class="p">, </span><span class="nx">azure_key_vault</span><span class="p">:</span> <span class="nx">Optional[EncryptionAtRestAzureKeyVaultArgs]</span> = None<span class="p">, </span><span class="nx">google_cloud_kms</span><span class="p">:</span> <span class="nx">Optional[EncryptionAtRestGoogleCloudKmsArgs]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EncryptionAtRest</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">aws_kms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EncryptionAtRestAwsKmsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">azure_key_vault</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EncryptionAtRestAzureKeyVaultArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">google_cloud_kms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EncryptionAtRestGoogleCloudKmsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> EncryptionAtRest</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEncryptionAtRest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">EncryptionAtRestState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EncryptionAtRest</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEncryptionAtRest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">EncryptionAtRestState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EncryptionAtRest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">EncryptionAtRest</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">EncryptionAtRestState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">EncryptionAtRest</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">EncryptionAtRestState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -795,7 +821,7 @@ The following state arguments are supported:
 <a href="#state_awskms_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Kms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms</a></span>
+        <span class="property-type"><a href="#encryptionatrestawskms">pulumi<wbr>Input<Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies AWS KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -804,7 +830,7 @@ The following state arguments are supported:
 <a href="#state_azurekeyvault_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault</a></span>
+        <span class="property-type"><a href="#encryptionatrestazurekeyvault">pulumi<wbr>Input<Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies Azure Key Vault configuration details and whether Encryption at Rest is enabled for an Atlas project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -813,7 +839,7 @@ The following state arguments are supported:
 <a href="#state_googlecloudkms_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Cloud<wbr>Kms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms</a></span>
+        <span class="property-type"><a href="#encryptionatrestgooglecloudkms">pulumi<wbr>Input<Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies GCP KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -822,7 +848,7 @@ The following state arguments are supported:
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the project.
 {{% /md %}}</dd></dl>
@@ -835,7 +861,7 @@ The following state arguments are supported:
 <a href="#state_aws_kms_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>kms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionatrestawskms">Input[Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies AWS KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -844,7 +870,7 @@ The following state arguments are supported:
 <a href="#state_azure_key_vault_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionatrestazurekeyvault">Input[Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies Azure Key Vault configuration details and whether Encryption at Rest is enabled for an Atlas project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -853,7 +879,7 @@ The following state arguments are supported:
 <a href="#state_google_cloud_kms_python" style="color: inherit; text-decoration: inherit;">google_<wbr>cloud_<wbr>kms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Input[Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies GCP KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -862,7 +888,7 @@ The following state arguments are supported:
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the project.
 {{% /md %}}</dd></dl>
@@ -1002,7 +1028,7 @@ The following state arguments are supported:
 <a href="#accesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM access key ID with permissions to access the customer master key specified by customerMasterKeyID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1011,7 +1037,7 @@ The following state arguments are supported:
 <a href="#customermasterkeyid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Master<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS customer master key used to encrypt and decrypt the MongoDB master keys.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1020,7 +1046,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1029,7 +1055,7 @@ The following state arguments are supported:
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS region in which the AWS customer master key exists: CA_CENTRAL_1, US_EAST_1, US_EAST_2, US_WEST_1, US_WEST_2, SA_EAST_1
 {{% /md %}}</dd><dt class="property-optional"
@@ -1038,7 +1064,7 @@ The following state arguments are supported:
 <a href="#roleid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of an AWS IAM role authorized to manage an AWS customer master key. To find the ID for an existing IAM role check the `role_id` attribute of the `mongodbatlas.CloudProviderAccess` resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1047,7 +1073,7 @@ The following state arguments are supported:
 <a href="#secretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM secret access key with permissions to access the customer master key specified by customerMasterKeyID.
 {{% /md %}}</dd></dl>
@@ -1060,7 +1086,7 @@ The following state arguments are supported:
 <a href="#access_key_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM access key ID with permissions to access the customer master key specified by customerMasterKeyID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1069,7 +1095,7 @@ The following state arguments are supported:
 <a href="#customer_master_key_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>master_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS customer master key used to encrypt and decrypt the MongoDB master keys.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1078,7 +1104,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1087,7 +1113,7 @@ The following state arguments are supported:
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS region in which the AWS customer master key exists: CA_CENTRAL_1, US_EAST_1, US_EAST_2, US_WEST_1, US_WEST_2, SA_EAST_1
 {{% /md %}}</dd><dt class="property-optional"
@@ -1096,7 +1122,7 @@ The following state arguments are supported:
 <a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of an AWS IAM role authorized to manage an AWS customer master key. To find the ID for an existing IAM role check the `role_id` attribute of the `mongodbatlas.CloudProviderAccess` resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1105,7 +1131,7 @@ The following state arguments are supported:
 <a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM secret access key with permissions to access the customer master key specified by customerMasterKeyID.
 {{% /md %}}</dd></dl>
@@ -1290,7 +1316,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1299,7 +1325,7 @@ The following state arguments are supported:
 <a href="#azureenvironment_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure environment where the Azure account credentials reside. Valid values are the following: AZURE, AZURE_CHINA, AZURE_GERMANY
 {{% /md %}}</dd><dt class="property-optional"
@@ -1308,7 +1334,7 @@ The following state arguments are supported:
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client ID, also known as the application ID, for an Azure application associated with the Azure AD tenant.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1317,7 +1343,7 @@ The following state arguments are supported:
 <a href="#keyidentifier_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique identifier of a key in an Azure Key Vault.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1326,7 +1352,7 @@ The following state arguments are supported:
 <a href="#keyvaultname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an Azure Key Vault containing your key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1335,7 +1361,7 @@ The following state arguments are supported:
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Resource group that contains an Azure Key Vault.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1344,7 +1370,7 @@ The following state arguments are supported:
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The secret associated with the Azure Key Vault specified by azureKeyVault.tenantID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1353,7 +1379,7 @@ The following state arguments are supported:
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique identifier associated with an Azure subscription.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1362,7 +1388,7 @@ The following state arguments are supported:
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique identifier for an Azure AD tenant within an Azure subscription.
 {{% /md %}}</dd></dl>
@@ -1375,7 +1401,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1384,7 +1410,7 @@ The following state arguments are supported:
 <a href="#azure_environment_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure environment where the Azure account credentials reside. Valid values are the following: AZURE, AZURE_CHINA, AZURE_GERMANY
 {{% /md %}}</dd><dt class="property-optional"
@@ -1393,7 +1419,7 @@ The following state arguments are supported:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client ID, also known as the application ID, for an Azure application associated with the Azure AD tenant.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1402,7 +1428,7 @@ The following state arguments are supported:
 <a href="#key_identifier_python" style="color: inherit; text-decoration: inherit;">key_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique identifier of a key in an Azure Key Vault.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1411,7 +1437,7 @@ The following state arguments are supported:
 <a href="#key_vault_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an Azure Key Vault containing your key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1420,7 +1446,7 @@ The following state arguments are supported:
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Resource group that contains an Azure Key Vault.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1429,7 +1455,7 @@ The following state arguments are supported:
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The secret associated with the Azure Key Vault specified by azureKeyVault.tenantID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1438,7 +1464,7 @@ The following state arguments are supported:
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique identifier associated with an Azure subscription.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1447,7 +1473,7 @@ The following state arguments are supported:
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique identifier for an Azure AD tenant within an Azure subscription.
 {{% /md %}}</dd></dl>
@@ -1524,7 +1550,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1533,7 +1559,7 @@ The following state arguments are supported:
 <a href="#keyversionresourceid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Version<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Key Version Resource ID from your GCP account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1542,7 +1568,7 @@ The following state arguments are supported:
 <a href="#serviceaccountkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String-formatted JSON object containing GCP KMS credentials from your GCP account.
 {{% /md %}}</dd></dl>
@@ -1555,7 +1581,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1564,7 +1590,7 @@ The following state arguments are supported:
 <a href="#key_version_resource_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>version_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Key Version Resource ID from your GCP account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1573,7 +1599,7 @@ The following state arguments are supported:
 <a href="#service_account_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String-formatted JSON object containing GCP KMS credentials from your GCP account.
 {{% /md %}}</dd></dl>

@@ -88,8 +88,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/v2/go/mongodbatlas"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -231,19 +231,32 @@ const test = new mongodbatlas.AlertConfiguration("test", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AlertConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AlertConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AlertConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">matchers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertConfigurationMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">metric_threshold</span><span class="p">:</span> <span class="nx">Optional[AlertConfigurationMetricThresholdArgs]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertConfigurationNotificationArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[AlertConfigurationThresholdArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AlertConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                       <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                       <span class="nx">event_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">matchers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AlertConfigurationMatcherArgs]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">metric_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AlertConfigurationMetricThresholdArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AlertConfigurationNotificationArgs]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AlertConfigurationThresholdArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AlertConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertConfigurationArgs</a></span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlertConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AlertConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlertConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AlertConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AlertConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AlertConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AlertConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AlertConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -278,22 +291,32 @@ const test = new mongodbatlas.AlertConfiguration("test", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AlertConfigurationArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -302,7 +325,7 @@ const test = new mongodbatlas.AlertConfiguration("test", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -326,7 +349,7 @@ const test = new mongodbatlas.AlertConfiguration("test", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -509,7 +532,7 @@ The AlertConfiguration resource accepts the following [input]({{< relref "/docs/
 <a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of event that will trigger an alert.
 {{% /md %}}</dd><dt class="property-required"
@@ -518,7 +541,7 @@ The AlertConfiguration resource accepts the following [input]({{< relref "/docs/
 <a href="#notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationnotification">Alert<wbr>Configuration<wbr>Notification[]</a></span>
+        <span class="property-type"><a href="#alertconfigurationnotification">pulumi<wbr>Input<pulumi<wbr>Input<Alert<wbr>Configuration<wbr>Notification<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -526,7 +549,7 @@ The AlertConfiguration resource accepts the following [input]({{< relref "/docs/
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project where the alert configuration will create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -535,7 +558,7 @@ The AlertConfiguration resource accepts the following [input]({{< relref "/docs/
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}It is not required, but If the attribute is omitted, by default will be false, and the configuration would be disabled. You must set true to enable the configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -544,7 +567,7 @@ The AlertConfiguration resource accepts the following [input]({{< relref "/docs/
 <a href="#matchers_nodejs" style="color: inherit; text-decoration: inherit;">matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationmatcher">Alert<wbr>Configuration<wbr>Matcher[]</a></span>
+        <span class="property-type"><a href="#alertconfigurationmatcher">pulumi<wbr>Input<pulumi<wbr>Input<Alert<wbr>Configuration<wbr>Matcher<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -552,7 +575,7 @@ The AlertConfiguration resource accepts the following [input]({{< relref "/docs/
 <a href="#metricthreshold_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationmetricthreshold">Alert<wbr>Configuration<wbr>Metric<wbr>Threshold</a></span>
+        <span class="property-type"><a href="#alertconfigurationmetricthreshold">pulumi<wbr>Input<Alert<wbr>Configuration<wbr>Metric<wbr>Threshold<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -560,7 +583,7 @@ The AlertConfiguration resource accepts the following [input]({{< relref "/docs/
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationthreshold">Alert<wbr>Configuration<wbr>Threshold</a></span>
+        <span class="property-type"><a href="#alertconfigurationthreshold">pulumi<wbr>Input<Alert<wbr>Configuration<wbr>Threshold<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
 {{% /md %}}</dd></dl>
@@ -573,7 +596,7 @@ The AlertConfiguration resource accepts the following [input]({{< relref "/docs/
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of event that will trigger an alert.
 {{% /md %}}</dd><dt class="property-required"
@@ -582,7 +605,7 @@ The AlertConfiguration resource accepts the following [input]({{< relref "/docs/
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationnotification">Sequence[Alert<wbr>Configuration<wbr>Notification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertconfigurationnotification">Input[Alert<wbr>Configuration<wbr>Notification<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -590,7 +613,7 @@ The AlertConfiguration resource accepts the following [input]({{< relref "/docs/
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project where the alert configuration will create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -599,7 +622,7 @@ The AlertConfiguration resource accepts the following [input]({{< relref "/docs/
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}It is not required, but If the attribute is omitted, by default will be false, and the configuration would be disabled. You must set true to enable the configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -608,7 +631,7 @@ The AlertConfiguration resource accepts the following [input]({{< relref "/docs/
 <a href="#matchers_python" style="color: inherit; text-decoration: inherit;">matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationmatcher">Sequence[Alert<wbr>Configuration<wbr>Matcher<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertconfigurationmatcher">Input[Alert<wbr>Configuration<wbr>Matcher<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -616,7 +639,7 @@ The AlertConfiguration resource accepts the following [input]({{< relref "/docs/
 <a href="#metric_threshold_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationmetricthreshold">Alert<wbr>Configuration<wbr>Metric<wbr>Threshold<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertconfigurationmetricthreshold">Input[Alert<wbr>Configuration<wbr>Metric<wbr>Threshold<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -624,7 +647,7 @@ The AlertConfiguration resource accepts the following [input]({{< relref "/docs/
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationthreshold">Alert<wbr>Configuration<wbr>Threshold<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertconfigurationthreshold">Input[Alert<wbr>Configuration<wbr>Threshold<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
 {{% /md %}}</dd></dl>
@@ -801,20 +824,32 @@ Get an existing AlertConfiguration resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AlertConfigurationState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AlertConfiguration</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AlertConfigurationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AlertConfiguration</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">matchers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertConfigurationMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">metric_threshold</span><span class="p">:</span> <span class="nx">Optional[AlertConfigurationMetricThresholdArgs]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertConfigurationNotificationArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[AlertConfigurationThresholdArgs]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AlertConfiguration</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">alert_configuration_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">event_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">matchers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AlertConfigurationMatcherArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">metric_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AlertConfigurationMetricThresholdArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AlertConfigurationNotificationArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AlertConfigurationThresholdArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> AlertConfiguration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AlertConfigurationState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AlertConfigurationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AlertConfiguration</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AlertConfigurationState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AlertConfiguration</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AlertConfigurationState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1105,7 +1140,7 @@ The following state arguments are supported:
 <a href="#state_alertconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Configuration<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique identifier for the alert configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1114,7 +1149,7 @@ The following state arguments are supported:
 <a href="#state_created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp in ISO 8601 date and time format in UTC when this alert configuration was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1123,7 +1158,7 @@ The following state arguments are supported:
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}It is not required, but If the attribute is omitted, by default will be false, and the configuration would be disabled. You must set true to enable the configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1132,7 +1167,7 @@ The following state arguments are supported:
 <a href="#state_eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of event that will trigger an alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1141,7 +1176,7 @@ The following state arguments are supported:
 <a href="#state_matchers_nodejs" style="color: inherit; text-decoration: inherit;">matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationmatcher">Alert<wbr>Configuration<wbr>Matcher[]</a></span>
+        <span class="property-type"><a href="#alertconfigurationmatcher">pulumi<wbr>Input<pulumi<wbr>Input<Alert<wbr>Configuration<wbr>Matcher<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1149,7 +1184,7 @@ The following state arguments are supported:
 <a href="#state_metricthreshold_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationmetricthreshold">Alert<wbr>Configuration<wbr>Metric<wbr>Threshold</a></span>
+        <span class="property-type"><a href="#alertconfigurationmetricthreshold">pulumi<wbr>Input<Alert<wbr>Configuration<wbr>Metric<wbr>Threshold<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1157,7 +1192,7 @@ The following state arguments are supported:
 <a href="#state_notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationnotification">Alert<wbr>Configuration<wbr>Notification[]</a></span>
+        <span class="property-type"><a href="#alertconfigurationnotification">pulumi<wbr>Input<pulumi<wbr>Input<Alert<wbr>Configuration<wbr>Notification<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1165,7 +1200,7 @@ The following state arguments are supported:
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project where the alert configuration will create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1174,7 +1209,7 @@ The following state arguments are supported:
 <a href="#state_threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationthreshold">Alert<wbr>Configuration<wbr>Threshold</a></span>
+        <span class="property-type"><a href="#alertconfigurationthreshold">pulumi<wbr>Input<Alert<wbr>Configuration<wbr>Threshold<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1183,7 +1218,7 @@ The following state arguments are supported:
 <a href="#state_updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp in ISO 8601 date and time format in UTC when this alert configuration was last updated.
 {{% /md %}}</dd></dl>
@@ -1196,7 +1231,7 @@ The following state arguments are supported:
 <a href="#state_alert_configuration_id_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>configuration_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the alert configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1205,7 +1240,7 @@ The following state arguments are supported:
 <a href="#state_created_python" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp in ISO 8601 date and time format in UTC when this alert configuration was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1214,7 +1249,7 @@ The following state arguments are supported:
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}It is not required, but If the attribute is omitted, by default will be false, and the configuration would be disabled. You must set true to enable the configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1223,7 +1258,7 @@ The following state arguments are supported:
 <a href="#state_event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of event that will trigger an alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1232,7 +1267,7 @@ The following state arguments are supported:
 <a href="#state_matchers_python" style="color: inherit; text-decoration: inherit;">matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationmatcher">Sequence[Alert<wbr>Configuration<wbr>Matcher<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertconfigurationmatcher">Input[Alert<wbr>Configuration<wbr>Matcher<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1240,7 +1275,7 @@ The following state arguments are supported:
 <a href="#state_metric_threshold_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationmetricthreshold">Alert<wbr>Configuration<wbr>Metric<wbr>Threshold<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertconfigurationmetricthreshold">Input[Alert<wbr>Configuration<wbr>Metric<wbr>Threshold<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1248,7 +1283,7 @@ The following state arguments are supported:
 <a href="#state_notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationnotification">Sequence[Alert<wbr>Configuration<wbr>Notification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertconfigurationnotification">Input[Alert<wbr>Configuration<wbr>Notification<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1256,7 +1291,7 @@ The following state arguments are supported:
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project where the alert configuration will create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1265,7 +1300,7 @@ The following state arguments are supported:
 <a href="#state_threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationthreshold">Alert<wbr>Configuration<wbr>Threshold<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertconfigurationthreshold">Input[Alert<wbr>Configuration<wbr>Threshold<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1274,7 +1309,7 @@ The following state arguments are supported:
 <a href="#state_updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp in ISO 8601 date and time format in UTC when this alert configuration was last updated.
 {{% /md %}}</dd></dl>
@@ -1376,7 +1411,7 @@ Accepted values are:
 <a href="#fieldname_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the field in the target object to match on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1385,7 +1420,7 @@ Accepted values are:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Operator to apply when checking the current metric value against the threshold value.
 Accepted values are:
@@ -1397,7 +1432,7 @@ Accepted values are:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value to test with the specified operator. If `field_name` is set to TYPE_NAME, you can match on the following values:
 - `PRIMARY`
@@ -1415,7 +1450,7 @@ Accepted values are:
 <a href="#field_name_python" style="color: inherit; text-decoration: inherit;">field_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the field in the target object to match on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1424,7 +1459,7 @@ Accepted values are:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Operator to apply when checking the current metric value against the threshold value.
 Accepted values are:
@@ -1436,7 +1471,7 @@ Accepted values are:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value to test with the specified operator. If `field_name` is set to TYPE_NAME, you can match on the following values:
 - `PRIMARY`
@@ -1594,7 +1629,7 @@ Accepted values are:
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the metric to check. The full list of current options is available [here](https://docs.atlas.mongodb.com/reference/alert-host-metrics/#measurement-types)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1603,7 +1638,7 @@ Accepted values are:
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This must be set to AVERAGE. Atlas computes the current metric value as an average.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1612,7 +1647,7 @@ Accepted values are:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Operator to apply when checking the current metric value against the threshold value.
 Accepted values are:
@@ -1624,7 +1659,7 @@ Accepted values are:
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1633,7 +1668,7 @@ Accepted values are:
 <a href="#units_nodejs" style="color: inherit; text-decoration: inherit;">units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The units for the threshold value. Depends on the type of metric.
 Accepted values are:
@@ -1663,7 +1698,7 @@ Accepted values are:
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the metric to check. The full list of current options is available [here](https://docs.atlas.mongodb.com/reference/alert-host-metrics/#measurement-types)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1672,7 +1707,7 @@ Accepted values are:
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This must be set to AVERAGE. Atlas computes the current metric value as an average.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1681,7 +1716,7 @@ Accepted values are:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Operator to apply when checking the current metric value against the threshold value.
 Accepted values are:
@@ -1693,7 +1728,7 @@ Accepted values are:
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1702,7 +1737,7 @@ Accepted values are:
 <a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The units for the threshold value. Depends on the type of metric.
 Accepted values are:
@@ -2144,7 +2179,7 @@ Accepted values are:
 <a href="#apitoken_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Slack API token. Required for the SLACK notifications type. If the token later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2153,7 +2188,7 @@ Accepted values are:
 <a href="#channelname_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Slack channel name. Required for the SLACK notifications type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2162,7 +2197,7 @@ Accepted values are:
 <a href="#datadogapikey_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>Api<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Datadog API Key. Found in the Datadog dashboard. Required for the DATADOG notifications type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2171,7 +2206,7 @@ Accepted values are:
 <a href="#datadogregion_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Region that indicates which API URL to use. Accepted regions are: `US`, `EU`. The default Datadog region is US.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2180,7 +2215,7 @@ Accepted values are:
 <a href="#delaymin_nodejs" style="color: inherit; text-decoration: inherit;">delay<wbr>Min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait after an alert condition is detected before sending out the first notification.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2189,7 +2224,7 @@ Accepted values are:
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Email address to which alert notifications are sent. Required for the EMAIL notifications type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2198,7 +2233,7 @@ Accepted values are:
 <a href="#emailenabled_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag indicating if email notifications should be sent. Configurable for `ORG`, `GROUP`, and `USER` notifications types.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2207,7 +2242,7 @@ Accepted values are:
 <a href="#flowname_nodejs" style="color: inherit; text-decoration: inherit;">flow<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Flowdock flow name in lower-case letters. Required for the `FLOWDOCK` notifications type
 {{% /md %}}</dd><dt class="property-optional"
@@ -2216,7 +2251,7 @@ Accepted values are:
 <a href="#flowdockapitoken_nodejs" style="color: inherit; text-decoration: inherit;">flowdock<wbr>Api<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Flowdock personal API token. Required for the `FLOWDOCK` notifications type. If the token later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2225,7 +2260,7 @@ Accepted values are:
 <a href="#intervalmin_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait between successive notifications for unacknowledged alerts that are not resolved. The minimum value is 5.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2234,7 +2269,7 @@ Accepted values are:
 <a href="#mobilenumber_nodejs" style="color: inherit; text-decoration: inherit;">mobile<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Mobile number to which alert notifications are sent. Required for the SMS notifications type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2243,7 +2278,7 @@ Accepted values are:
 <a href="#opsgenieapikey_nodejs" style="color: inherit; text-decoration: inherit;">ops<wbr>Genie<wbr>Api<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Opsgenie API Key. Required for the `OPS_GENIE` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2252,7 +2287,7 @@ Accepted values are:
 <a href="#opsgenieregion_nodejs" style="color: inherit; text-decoration: inherit;">ops<wbr>Genie<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Region that indicates which API URL to use. Accepted regions are: `US` ,`EU`. The default Opsgenie region is US.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2261,7 +2296,7 @@ Accepted values are:
 <a href="#orgname_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Flowdock organization name in lower-case letters. This is the name that appears after www.flowdock.com/app/ in the URL string. Required for the FLOWDOCK notifications type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2270,7 +2305,7 @@ Accepted values are:
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2278,7 +2313,7 @@ Accepted values are:
 <a href="#servicekey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}PagerDuty service key. Required for the PAGER_DUTY notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2287,7 +2322,7 @@ Accepted values are:
 <a href="#smsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag indicating if text message notifications should be sent. Configurable for `ORG`, `GROUP`, and `USER` notifications types.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2296,7 +2331,7 @@ Accepted values are:
 <a href="#teamid_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique identifier of a team.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2305,7 +2340,7 @@ Accepted values are:
 <a href="#typename_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of alert notification.
 Accepted values are:
@@ -2318,7 +2353,7 @@ Accepted values are:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the Atlas user to which to send notifications. Only a user in the project that owns the alert configuration is allowed here. Required for the `USER` notifications type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2327,7 +2362,7 @@ Accepted values are:
 <a href="#victoropsapikey_nodejs" style="color: inherit; text-decoration: inherit;">victor<wbr>Ops<wbr>Api<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}VictorOps API key. Required for the `VICTOR_OPS` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2336,7 +2371,7 @@ Accepted values are:
 <a href="#victoropsroutingkey_nodejs" style="color: inherit; text-decoration: inherit;">victor<wbr>Ops<wbr>Routing<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}VictorOps routing key. Optional for the `VICTOR_OPS` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
 {{% /md %}}</dd></dl>
@@ -2349,7 +2384,7 @@ Accepted values are:
 <a href="#api_token_python" style="color: inherit; text-decoration: inherit;">api_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Slack API token. Required for the SLACK notifications type. If the token later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2358,7 +2393,7 @@ Accepted values are:
 <a href="#channel_name_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Slack channel name. Required for the SLACK notifications type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2367,7 +2402,7 @@ Accepted values are:
 <a href="#datadog_api_key_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>api_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Datadog API Key. Found in the Datadog dashboard. Required for the DATADOG notifications type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2376,7 +2411,7 @@ Accepted values are:
 <a href="#datadog_region_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Region that indicates which API URL to use. Accepted regions are: `US`, `EU`. The default Datadog region is US.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2385,7 +2420,7 @@ Accepted values are:
 <a href="#delay_min_python" style="color: inherit; text-decoration: inherit;">delay_<wbr>min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait after an alert condition is detected before sending out the first notification.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2394,7 +2429,7 @@ Accepted values are:
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Email address to which alert notifications are sent. Required for the EMAIL notifications type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2403,7 +2438,7 @@ Accepted values are:
 <a href="#email_enabled_python" style="color: inherit; text-decoration: inherit;">email_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag indicating if email notifications should be sent. Configurable for `ORG`, `GROUP`, and `USER` notifications types.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2412,7 +2447,7 @@ Accepted values are:
 <a href="#flow_name_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Flowdock flow name in lower-case letters. Required for the `FLOWDOCK` notifications type
 {{% /md %}}</dd><dt class="property-optional"
@@ -2421,7 +2456,7 @@ Accepted values are:
 <a href="#flowdock_api_token_python" style="color: inherit; text-decoration: inherit;">flowdock_<wbr>api_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Flowdock personal API token. Required for the `FLOWDOCK` notifications type. If the token later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2430,7 +2465,7 @@ Accepted values are:
 <a href="#interval_min_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait between successive notifications for unacknowledged alerts that are not resolved. The minimum value is 5.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2439,7 +2474,7 @@ Accepted values are:
 <a href="#mobile_number_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Mobile number to which alert notifications are sent. Required for the SMS notifications type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2448,7 +2483,7 @@ Accepted values are:
 <a href="#ops_genie_api_key_python" style="color: inherit; text-decoration: inherit;">ops_<wbr>genie_<wbr>api_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Opsgenie API Key. Required for the `OPS_GENIE` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2457,7 +2492,7 @@ Accepted values are:
 <a href="#ops_genie_region_python" style="color: inherit; text-decoration: inherit;">ops_<wbr>genie_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Region that indicates which API URL to use. Accepted regions are: `US` ,`EU`. The default Opsgenie region is US.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2466,7 +2501,7 @@ Accepted values are:
 <a href="#org_name_python" style="color: inherit; text-decoration: inherit;">org_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Flowdock organization name in lower-case letters. This is the name that appears after www.flowdock.com/app/ in the URL string. Required for the FLOWDOCK notifications type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2475,7 +2510,7 @@ Accepted values are:
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2483,7 +2518,7 @@ Accepted values are:
 <a href="#service_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}PagerDuty service key. Required for the PAGER_DUTY notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2492,7 +2527,7 @@ Accepted values are:
 <a href="#sms_enabled_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag indicating if text message notifications should be sent. Configurable for `ORG`, `GROUP`, and `USER` notifications types.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2501,7 +2536,7 @@ Accepted values are:
 <a href="#team_id_python" style="color: inherit; text-decoration: inherit;">team_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique identifier of a team.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2510,7 +2545,7 @@ Accepted values are:
 <a href="#type_name_python" style="color: inherit; text-decoration: inherit;">type_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of alert notification.
 Accepted values are:
@@ -2523,7 +2558,7 @@ Accepted values are:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the Atlas user to which to send notifications. Only a user in the project that owns the alert configuration is allowed here. Required for the `USER` notifications type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2532,7 +2567,7 @@ Accepted values are:
 <a href="#victor_ops_api_key_python" style="color: inherit; text-decoration: inherit;">victor_<wbr>ops_<wbr>api_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}VictorOps API key. Required for the `VICTOR_OPS` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2541,7 +2576,7 @@ Accepted values are:
 <a href="#victor_ops_routing_key_python" style="color: inherit; text-decoration: inherit;">victor_<wbr>ops_<wbr>routing_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}VictorOps routing key. Optional for the `VICTOR_OPS` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
 {{% /md %}}</dd></dl>
@@ -2658,7 +2693,7 @@ Accepted values are:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Operator to apply when checking the current metric value against the threshold value.
 Accepted values are:
@@ -2670,7 +2705,7 @@ Accepted values are:
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2679,7 +2714,7 @@ Accepted values are:
 <a href="#units_nodejs" style="color: inherit; text-decoration: inherit;">units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The units for the threshold value. Depends on the type of metric.
 Accepted values are:
@@ -2709,7 +2744,7 @@ Accepted values are:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Operator to apply when checking the current metric value against the threshold value.
 Accepted values are:
@@ -2721,7 +2756,7 @@ Accepted values are:
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2730,7 +2765,7 @@ Accepted values are:
 <a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The units for the threshold value. Depends on the type of metric.
 Accepted values are:
