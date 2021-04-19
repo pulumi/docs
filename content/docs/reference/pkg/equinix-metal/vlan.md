@@ -38,20 +38,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        // Create a new VLAN in facility "sv15"
-        var vlan1Vlan = new EquinixMetal.Vlan("vlan1Vlan", new EquinixMetal.VlanArgs
+        // Create a new VLAN in datacenter "ewr1"
+        var vlan1 = new EquinixMetal.Vlan("vlan1", new EquinixMetal.VlanArgs
         {
             Description = "VLAN in New Jersey",
-            Facility = "sv15",
+            Facility = "ewr1",
             ProjectId = local.Project_id,
-        });
-        // Create a new VLAN in metro "esv"
-        var vlan1Index_vlanVlan = new EquinixMetal.Vlan("vlan1Index/vlanVlan", new EquinixMetal.VlanArgs
-        {
-            Description = "VLAN in New Jersey",
-            Metro = "sv",
-            ProjectId = local.Project_id,
-            Vxlan = 1040,
         });
     }
 
@@ -68,25 +60,16 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-equinix-metal/sdk/v2/go/equinix-metal"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := equinix - metal.NewVlan(ctx, "vlan1Vlan", &equinix-metal.VlanArgs{
+		_, err := equinix - metal.NewVlan(ctx, "vlan1", &equinix-metal.VlanArgs{
 			Description: pulumi.String("VLAN in New Jersey"),
-			Facility:    pulumi.String("sv15"),
+			Facility:    pulumi.String("ewr1"),
 			ProjectId:   pulumi.Any(local.Project_id),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = equinix - metal.NewVlan(ctx, "vlan1Index_vlanVlan", &equinix-metal.VlanArgs{
-			Description: pulumi.String("VLAN in New Jersey"),
-			Metro:       pulumi.String("sv"),
-			ProjectId:   pulumi.Any(local.Project_id),
-			Vxlan:       pulumi.Int(1040),
 		})
 		if err != nil {
 			return err
@@ -106,17 +89,11 @@ func main() {
 import pulumi
 import pulumi_equinix_metal as equinix_metal
 
-# Create a new VLAN in facility "sv15"
-vlan1_vlan = equinix_metal.Vlan("vlan1Vlan",
+# Create a new VLAN in datacenter "ewr1"
+vlan1 = equinix_metal.Vlan("vlan1",
     description="VLAN in New Jersey",
-    facility="sv15",
+    facility="ewr1",
     project_id=local["project_id"])
-# Create a new VLAN in metro "esv"
-vlan1_index_vlan_vlan = equinix_metal.Vlan("vlan1Index/vlanVlan",
-    description="VLAN in New Jersey",
-    metro="sv",
-    project_id=local["project_id"],
-    vxlan=1040)
 ```
 
 
@@ -130,18 +107,11 @@ vlan1_index_vlan_vlan = equinix_metal.Vlan("vlan1Index/vlanVlan",
 import * as pulumi from "@pulumi/pulumi";
 import * as equinix_metal from "@pulumi/equinix-metal";
 
-// Create a new VLAN in facility "sv15"
-const vlan1Vlan = new equinix_metal.Vlan("vlan1Vlan", {
+// Create a new VLAN in datacenter "ewr1"
+const vlan1 = new equinix_metal.Vlan("vlan1", {
     description: "VLAN in New Jersey",
-    facility: "sv15",
+    facility: "ewr1",
     projectId: local.project_id,
-});
-// Create a new VLAN in metro "esv"
-const vlan1Index_vlanVlan = new equinix_metal.Vlan("vlan1Index/vlanVlan", {
-    description: "VLAN in New Jersey",
-    metro: "sv",
-    projectId: local.project_id,
-    vxlan: 1040,
 });
 ```
 
@@ -162,30 +132,19 @@ const vlan1Index_vlanVlan = new equinix_metal.Vlan("vlan1Index/vlanVlan", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Vlan</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VlanArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Vlan</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Vlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-         <span class="nx">facility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, Facility]]]</span> = None<span class="p">,</span>
-         <span class="nx">metro</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-         <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-         <span class="nx">vxlan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Vlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VlanArgs</a></span><span class="p">,</span>
-         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Vlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">facility</span><span class="p">:</span> <span class="nx">Optional[Union[str, Facility]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVlan</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VlanArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Vlan</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVlan</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Vlan</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Vlan</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VlanArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Vlan</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VlanArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -220,32 +179,22 @@ const vlan1Index_vlanVlan = new equinix_metal.Vlan("vlan1Index/vlanVlan", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">VlanArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -254,7 +203,7 @@ const vlan1Index_vlanVlan = new equinix_metal.Vlan("vlan1Index/vlanVlan", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -278,7 +227,7 @@ const vlan1Index_vlanVlan = new equinix_metal.Vlan("vlan1Index/vlanVlan", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -329,6 +278,15 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="facility_csharp">
+<a href="#facility_csharp" style="color: inherit; text-decoration: inherit;">Facility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#facility">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Facility</a></span>
+    </dt>
+    <dd>{{% md %}}Facility where to create the VLAN
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
 </span>
@@ -345,37 +303,20 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="facility_csharp">
-<a href="#facility_csharp" style="color: inherit; text-decoration: inherit;">Facility</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#facility">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Facility</a></span>
-    </dt>
-    <dd>{{% md %}}Facility where to create the VLAN
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="metro_csharp">
-<a href="#metro_csharp" style="color: inherit; text-decoration: inherit;">Metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vxlan_csharp">
-<a href="#vxlan_csharp" style="color: inherit; text-decoration: inherit;">Vxlan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}VLAN ID, must be unique in metro
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="facility_go">
+<a href="#facility_go" style="color: inherit; text-decoration: inherit;">Facility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#facility">Facility</a></span>
+    </dt>
+    <dd>{{% md %}}Facility where to create the VLAN
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -393,43 +334,26 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="facility_go">
-<a href="#facility_go" style="color: inherit; text-decoration: inherit;">Facility</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#facility">Facility</a></span>
-    </dt>
-    <dd>{{% md %}}Facility where to create the VLAN
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="metro_go">
-<a href="#metro_go" style="color: inherit; text-decoration: inherit;">Metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vxlan_go">
-<a href="#vxlan_go" style="color: inherit; text-decoration: inherit;">Vxlan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}VLAN ID, must be unique in metro
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="facility_nodejs">
+<a href="#facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#facility">Facility</a></span>
+    </dt>
+    <dd>{{% md %}}Facility where to create the VLAN
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of parent project
 {{% /md %}}</dd><dt class="property-optional"
@@ -438,46 +362,29 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="facility_nodejs">
-<a href="#facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#facility">pulumi<wbr>Input<Facility></a></span>
-    </dt>
-    <dd>{{% md %}}Facility where to create the VLAN
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="metro_nodejs">
-<a href="#metro_nodejs" style="color: inherit; text-decoration: inherit;">metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vxlan_nodejs">
-<a href="#vxlan_nodejs" style="color: inherit; text-decoration: inherit;">vxlan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
-    </dt>
-    <dd>{{% md %}}VLAN ID, must be unique in metro
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="facility_python">
+<a href="#facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#facility">Facility</a></span>
+    </dt>
+    <dd>{{% md %}}Facility where to create the VLAN
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of parent project
 {{% /md %}}</dd><dt class="property-optional"
@@ -486,35 +393,9 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description string
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="facility_python">
-<a href="#facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#facility">Input[Facility]</a></span>
-    </dt>
-    <dd>{{% md %}}Facility where to create the VLAN
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="metro_python">
-<a href="#metro_python" style="color: inherit; text-decoration: inherit;">metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vxlan_python">
-<a href="#vxlan_python" style="color: inherit; text-decoration: inherit;">vxlan</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
-    </dt>
-    <dd>{{% md %}}VLAN ID, must be unique in metro
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -534,7 +415,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vxlan_csharp">
+<a href="#vxlan_csharp" style="color: inherit; text-decoration: inherit;">Vxlan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}VXLAN segment ID
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -546,7 +436,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vxlan_go">
+<a href="#vxlan_go" style="color: inherit; text-decoration: inherit;">Vxlan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}VXLAN segment ID
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -558,7 +457,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vxlan_nodejs">
+<a href="#vxlan_nodejs" style="color: inherit; text-decoration: inherit;">vxlan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}VXLAN segment ID
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -570,7 +478,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vxlan_python">
+<a href="#vxlan_python" style="color: inherit; text-decoration: inherit;">vxlan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}VXLAN segment ID
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -581,27 +498,20 @@ Get an existing Vlan resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">VlanState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Vlan</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VlanState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Vlan</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">facility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, Facility]]]</span> = None<span class="p">,</span>
-        <span class="nx">metro</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">vxlan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> Vlan</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">facility</span><span class="p">:</span> <span class="nx">Optional[Union[str, Facility]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vxlan</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Vlan</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVlan<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">VlanState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Vlan</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVlan<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VlanState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Vlan</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Vlan</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">VlanState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Vlan</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VlanState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -724,14 +634,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Facility where to create the VLAN
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_metro_csharp">
-<a href="#state_metro_csharp" style="color: inherit; text-decoration: inherit;">Metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
 </span>
@@ -747,7 +649,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}VLAN ID, must be unique in metro
+    <dd>{{% md %}}VXLAN segment ID
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -772,14 +674,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Facility where to create the VLAN
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_metro_go">
-<a href="#state_metro_go" style="color: inherit; text-decoration: inherit;">Metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
 </span>
@@ -795,7 +689,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}VLAN ID, must be unique in metro
+    <dd>{{% md %}}VXLAN segment ID
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -806,7 +700,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string
 {{% /md %}}</dd><dt class="property-optional"
@@ -815,24 +709,16 @@ The following state arguments are supported:
 <a href="#state_facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#facility">pulumi<wbr>Input<Facility></a></span>
+        <span class="property-type">string | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}Facility where to create the VLAN
 {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_metro_nodejs">
-<a href="#state_metro_nodejs" style="color: inherit; text-decoration: inherit;">metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of parent project
 {{% /md %}}</dd><dt class="property-optional"
@@ -841,9 +727,9 @@ The following state arguments are supported:
 <a href="#state_vxlan_nodejs" style="color: inherit; text-decoration: inherit;">vxlan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}VLAN ID, must be unique in metro
+    <dd>{{% md %}}VXLAN segment ID
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -854,7 +740,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description string
 {{% /md %}}</dd><dt class="property-optional"
@@ -863,24 +749,16 @@ The following state arguments are supported:
 <a href="#state_facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#facility">Input[Facility]</a></span>
+        <span class="property-type">str | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}Facility where to create the VLAN
 {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_metro_python">
-<a href="#state_metro_python" style="color: inherit; text-decoration: inherit;">metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of parent project
 {{% /md %}}</dd><dt class="property-optional"
@@ -889,9 +767,9 @@ The following state arguments are supported:
 <a href="#state_vxlan_python" style="color: inherit; text-decoration: inherit;">vxlan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}VLAN ID, must be unique in metro
+    <dd>{{% md %}}VXLAN segment ID
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

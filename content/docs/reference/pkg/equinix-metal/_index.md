@@ -33,12 +33,10 @@ A Pulumi package for creating and managing equinix-metal cloud resources.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconnection" title="GetConnection"><span class="symbol function"></span>GetConnection</a></li>
     <li><a href="getdevice" title="GetDevice"><span class="symbol function"></span>GetDevice</a></li>
     <li><a href="getdevicebgpneighbors" title="GetDeviceBgpNeighbors"><span class="symbol function"></span>GetDeviceBgpNeighbors</a></li>
     <li><a href="getfacility" title="GetFacility"><span class="symbol function"></span>GetFacility</a></li>
     <li><a href="getipblockranges" title="GetIpBlockRanges"><span class="symbol function"></span>GetIpBlockRanges</a></li>
-    <li><a href="getmetro" title="GetMetro"><span class="symbol function"></span>GetMetro</a></li>
     <li><a href="getoperatingsystem" title="GetOperatingSystem"><span class="symbol function"></span>GetOperatingSystem</a></li>
     <li><a href="getorganization" title="GetOrganization"><span class="symbol function"></span>GetOrganization</a></li>
     <li><a href="getprecreatedipblock" title="GetPrecreatedIpBlock"><span class="symbol function"></span>GetPrecreatedIpBlock</a></li>
@@ -46,7 +44,6 @@ A Pulumi package for creating and managing equinix-metal cloud resources.
     <li><a href="getprojectsshkey" title="GetProjectSshKey"><span class="symbol function"></span>GetProjectSshKey</a></li>
     <li><a href="getspotmarketprice" title="GetSpotMarketPrice"><span class="symbol function"></span>GetSpotMarketPrice</a></li>
     <li><a href="getspotmarketrequest" title="GetSpotMarketRequest"><span class="symbol function"></span>GetSpotMarketRequest</a></li>
-    <li><a href="getvirtualcircuit" title="GetVirtualCircuit"><span class="symbol function"></span>GetVirtualCircuit</a></li>
     <li><a href="getvolume" title="GetVolume"><span class="symbol function"></span>GetVolume</a></li>
 </ul>
 
@@ -59,6 +56,6 @@ A Pulumi package for creating and managing equinix-metal cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`metal` Terraform Provider](https://github.com/equinix/terraform-provider-metal).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.0.0</dd>
+	<dd>1.4.0</dd>
 </dl>
 
