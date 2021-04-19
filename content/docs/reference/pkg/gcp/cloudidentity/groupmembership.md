@@ -91,8 +91,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudidentity"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudidentity"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -220,19 +220,29 @@ const cloudIdentityGroupMembershipBasic = new gcp.cloudidentity.GroupMembership(
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GroupMembership</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupMembershipArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GroupMembership</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupMembershipArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GroupMembership</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">member_key</span><span class="p">:</span> <span class="nx">Optional[GroupMembershipMemberKeyArgs]</span> = None<span class="p">, </span><span class="nx">preferred_member_key</span><span class="p">:</span> <span class="nx">Optional[GroupMembershipPreferredMemberKeyArgs]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupMembershipRoleArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GroupMembership</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">member_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GroupMembershipMemberKeyArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">preferred_member_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GroupMembershipPreferredMemberKeyArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GroupMembershipRoleArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GroupMembership</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupMembershipArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGroupMembership</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GroupMembershipArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GroupMembership</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGroupMembership</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GroupMembershipArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GroupMembership</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GroupMembership</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GroupMembershipArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GroupMembership</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GroupMembershipArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -267,22 +277,32 @@ const cloudIdentityGroupMembershipBasic = new gcp.cloudidentity.GroupMembership(
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GroupMembershipArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -291,7 +311,7 @@ const cloudIdentityGroupMembershipBasic = new gcp.cloudidentity.GroupMembership(
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -315,7 +335,7 @@ const cloudIdentityGroupMembershipBasic = new gcp.cloudidentity.GroupMembership(
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -458,7 +478,7 @@ Structure is documented below.
 <a href="#group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Group to create this membership in.
 {{% /md %}}</dd><dt class="property-required"
@@ -467,7 +487,7 @@ Structure is documented below.
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmembershiprole">Group<wbr>Membership<wbr>Role[]</a></span>
+        <span class="property-type"><a href="#groupmembershiprole">pulumi.<wbr>Input<pulumi.<wbr>Input<Group<wbr>Membership<wbr>Role<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The MembershipRoles that apply to the Membership.
 Must not contain duplicate MembershipRoles with the same name.
@@ -478,7 +498,7 @@ Structure is documented below.
 <a href="#memberkey_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key</a></span>
+        <span class="property-type"><a href="#groupmembershipmemberkey">pulumi.<wbr>Input<Group<wbr>Membership<wbr>Member<wbr>Key<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
@@ -488,7 +508,7 @@ Structure is documented below.
 <a href="#preferredmemberkey_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Member<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmembershippreferredmemberkey">Group<wbr>Membership<wbr>Preferred<wbr>Member<wbr>Key</a></span>
+        <span class="property-type"><a href="#groupmembershippreferredmemberkey">pulumi.<wbr>Input<Group<wbr>Membership<wbr>Preferred<wbr>Member<wbr>Key<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
@@ -502,7 +522,7 @@ Structure is documented below.
 <a href="#group_python" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Group to create this membership in.
 {{% /md %}}</dd><dt class="property-required"
@@ -511,7 +531,7 @@ Structure is documented below.
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmembershiprole">Sequence[Group<wbr>Membership<wbr>Role<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupmembershiprole">Input[Group<wbr>Membership<wbr>Role<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The MembershipRoles that apply to the Membership.
 Must not contain duplicate MembershipRoles with the same name.
@@ -522,7 +542,7 @@ Structure is documented below.
 <a href="#member_key_python" style="color: inherit; text-decoration: inherit;">member_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupmembershipmemberkey">Input[Group<wbr>Membership<wbr>Member<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
@@ -532,7 +552,7 @@ Structure is documented below.
 <a href="#preferred_member_key_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>member_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmembershippreferredmemberkey">Group<wbr>Membership<wbr>Preferred<wbr>Member<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupmembershippreferredmemberkey">Input[Group<wbr>Membership<wbr>Preferred<wbr>Member<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
@@ -750,20 +770,30 @@ Get an existing GroupMembership resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">GroupMembershipState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GroupMembership</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">GroupMembershipState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GroupMembership</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">member_key</span><span class="p">:</span> <span class="nx">Optional[GroupMembershipMemberKeyArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_member_key</span><span class="p">:</span> <span class="nx">Optional[GroupMembershipPreferredMemberKeyArgs]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupMembershipRoleArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GroupMembership</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">member_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GroupMembershipMemberKeyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">preferred_member_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GroupMembershipPreferredMemberKeyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GroupMembershipRoleArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> GroupMembership</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroupMembership<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">GroupMembershipState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GroupMembership</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroupMembership<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">GroupMembershipState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GroupMembership</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GroupMembership</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">GroupMembershipState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GroupMembership</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">GroupMembershipState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1034,7 +1064,7 @@ Structure is documented below.
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time when the Membership was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1043,7 +1073,7 @@ Structure is documented below.
 <a href="#state_group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Group to create this membership in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1052,7 +1082,7 @@ Structure is documented below.
 <a href="#state_memberkey_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key</a></span>
+        <span class="property-type"><a href="#groupmembershipmemberkey">pulumi.<wbr>Input<Group<wbr>Membership<wbr>Member<wbr>Key<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
@@ -1062,7 +1092,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
 Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
@@ -1072,7 +1102,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
 <a href="#state_preferredmemberkey_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Member<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmembershippreferredmemberkey">Group<wbr>Membership<wbr>Preferred<wbr>Member<wbr>Key</a></span>
+        <span class="property-type"><a href="#groupmembershippreferredmemberkey">pulumi.<wbr>Input<Group<wbr>Membership<wbr>Preferred<wbr>Member<wbr>Key<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
@@ -1082,7 +1112,7 @@ Structure is documented below.
 <a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmembershiprole">Group<wbr>Membership<wbr>Role[]</a></span>
+        <span class="property-type"><a href="#groupmembershiprole">pulumi.<wbr>Input<pulumi.<wbr>Input<Group<wbr>Membership<wbr>Role<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The MembershipRoles that apply to the Membership.
 Must not contain duplicate MembershipRoles with the same name.
@@ -1093,7 +1123,7 @@ Structure is documented below.
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the membership.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1102,7 +1132,7 @@ Structure is documented below.
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time when the Membership was last updated.
 {{% /md %}}</dd></dl>
@@ -1115,7 +1145,7 @@ Structure is documented below.
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time when the Membership was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1124,7 +1154,7 @@ Structure is documented below.
 <a href="#state_group_python" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Group to create this membership in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1133,7 +1163,7 @@ Structure is documented below.
 <a href="#state_member_key_python" style="color: inherit; text-decoration: inherit;">member_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupmembershipmemberkey">Input[Group<wbr>Membership<wbr>Member<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
@@ -1143,7 +1173,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
 Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
@@ -1153,7 +1183,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
 <a href="#state_preferred_member_key_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>member_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmembershippreferredmemberkey">Group<wbr>Membership<wbr>Preferred<wbr>Member<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupmembershippreferredmemberkey">Input[Group<wbr>Membership<wbr>Preferred<wbr>Member<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
@@ -1163,7 +1193,7 @@ Structure is documented below.
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmembershiprole">Sequence[Group<wbr>Membership<wbr>Role<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupmembershiprole">Input[Group<wbr>Membership<wbr>Role<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The MembershipRoles that apply to the Membership.
 Must not contain duplicate MembershipRoles with the same name.
@@ -1174,7 +1204,7 @@ Structure is documented below.
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the membership.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1183,7 +1213,7 @@ Structure is documented below.
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time when the Membership was last updated.
 {{% /md %}}</dd></dl>
@@ -1271,7 +1301,7 @@ and must be in the form of `identitysources/{identity_source_id}`.
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the entity.
 For Google-managed entities, the id must be the email address of an existing
@@ -1285,7 +1315,7 @@ Must be unique within a namespace.
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The namespace in which the entity exists.
 If not specified, the EntityKey represents a Google-managed entity
@@ -1303,7 +1333,7 @@ and must be in the form of `identitysources/{identity_source_id}`.
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the entity.
 For Google-managed entities, the id must be the email address of an existing
@@ -1317,7 +1347,7 @@ Must be unique within a namespace.
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The namespace in which the entity exists.
 If not specified, the EntityKey represents a Google-managed entity
@@ -1401,7 +1431,7 @@ and must be in the form of `identitysources/{identity_source_id}`.
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the entity.
 For Google-managed entities, the id must be the email address of an existing
@@ -1415,7 +1445,7 @@ Must be unique within a namespace.
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The namespace in which the entity exists.
 If not specified, the EntityKey represents a Google-managed entity
@@ -1433,7 +1463,7 @@ and must be in the form of `identitysources/{identity_source_id}`.
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the entity.
 For Google-managed entities, the id must be the email address of an existing
@@ -1447,7 +1477,7 @@ Must be unique within a namespace.
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The namespace in which the entity exists.
 If not specified, the EntityKey represents a Google-managed entity
@@ -1495,7 +1525,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
 Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
@@ -1509,7 +1539,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
 Possible values are `OWNER`, `MANAGER`, and `MEMBER`.

@@ -93,8 +93,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/certificateauthority"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/certificateauthority"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -296,8 +296,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/certificateauthority"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/certificateauthority"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -473,19 +473,37 @@ const _default = new gcp.certificateauthority.Authority("default", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Authority</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AuthorityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Authority</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AuthorityArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Authority</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_authority_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[AuthorityConfigArgs]</span> = None<span class="p">, </span><span class="nx">disable_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcs_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">issuing_options</span><span class="p">:</span> <span class="nx">Optional[AuthorityIssuingOptionsArgs]</span> = None<span class="p">, </span><span class="nx">key_spec</span><span class="p">:</span> <span class="nx">Optional[AuthorityKeySpecArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">lifetime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Authority</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">certificate_authority_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AuthorityConfigArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">disable_on_delete</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+              <span class="nx">gcs_bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">issuing_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AuthorityIssuingOptionsArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">key_spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AuthorityKeySpecArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+              <span class="nx">lifetime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Authority</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AuthorityArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAuthority</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AuthorityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Authority</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAuthority</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AuthorityArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Authority</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Authority</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AuthorityArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Authority</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AuthorityArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -520,22 +538,32 @@ const _default = new gcp.certificateauthority.Authority("default", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AuthorityArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -544,7 +572,7 @@ const _default = new gcp.certificateauthority.Authority("default", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -568,7 +596,7 @@ const _default = new gcp.certificateauthority.Authority("default", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -899,7 +927,7 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
 <a href="#certificateauthorityid_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user provided Resource ID for this Certificate Authority.
 {{% /md %}}</dd><dt class="property-required"
@@ -908,7 +936,7 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfig">Authority<wbr>Config</a></span>
+        <span class="property-type"><a href="#authorityconfig">pulumi.<wbr>Input<Authority<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
@@ -918,7 +946,7 @@ Structure is documented below.
 <a href="#keyspec_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authoritykeyspec">Authority<wbr>Key<wbr>Spec</a></span>
+        <span class="property-type"><a href="#authoritykeyspec">pulumi.<wbr>Input<Authority<wbr>Key<wbr>Spec<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority
 is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
@@ -930,7 +958,7 @@ Structure is documented below.
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
@@ -940,7 +968,7 @@ running `gcloud beta privateca locations list`.
 <a href="#disableondelete_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>On<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
 on delete. If the Certitificate Authorities is not disabled,
@@ -951,7 +979,7 @@ it cannot be deleted. Use with care. Defaults to `false`.
 <a href="#gcsbucket_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Storage bucket where this CertificateAuthority will publish content,
 such as the CA certificate and CRLs. This must be a bucket name, without any prefixes
@@ -964,7 +992,7 @@ created.
 <a href="#issuingoptions_nodejs" style="color: inherit; text-decoration: inherit;">issuing<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityissuingoptions">Authority<wbr>Issuing<wbr>Options</a></span>
+        <span class="property-type"><a href="#authorityissuingoptions">pulumi.<wbr>Input<Authority<wbr>Issuing<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
 Structure is documented below.
@@ -974,7 +1002,7 @@ Structure is documented below.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass":
@@ -985,7 +1013,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
 <a href="#lifetime_nodejs" style="color: inherit; text-decoration: inherit;">lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
@@ -996,7 +1024,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1006,7 +1034,7 @@ If it is not provided, the provider project is used.
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Tier of this CertificateAuthority. `ENTERPRISE` Certificate Authorities track
 server side certificates issued, and support certificate revocation. For more details,
@@ -1019,7 +1047,7 @@ Possible values are `ENTERPRISE` and `DEVOPS`.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Type of this CertificateAuthority.
 > **Note:** For `SUBORDINATE` Certificate Authorities, they need to
@@ -1037,7 +1065,7 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
 <a href="#certificate_authority_id_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user provided Resource ID for this Certificate Authority.
 {{% /md %}}</dd><dt class="property-required"
@@ -1046,7 +1074,7 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfig">Authority<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityconfig">Input[Authority<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
@@ -1056,7 +1084,7 @@ Structure is documented below.
 <a href="#key_spec_python" style="color: inherit; text-decoration: inherit;">key_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authoritykeyspec">Authority<wbr>Key<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#authoritykeyspec">Input[Authority<wbr>Key<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority
 is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
@@ -1068,7 +1096,7 @@ Structure is documented below.
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
@@ -1078,7 +1106,7 @@ running `gcloud beta privateca locations list`.
 <a href="#disable_on_delete_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>on_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
 on delete. If the Certitificate Authorities is not disabled,
@@ -1089,7 +1117,7 @@ it cannot be deleted. Use with care. Defaults to `false`.
 <a href="#gcs_bucket_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Storage bucket where this CertificateAuthority will publish content,
 such as the CA certificate and CRLs. This must be a bucket name, without any prefixes
@@ -1102,7 +1130,7 @@ created.
 <a href="#issuing_options_python" style="color: inherit; text-decoration: inherit;">issuing_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityissuingoptions">Authority<wbr>Issuing<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityissuingoptions">Input[Authority<wbr>Issuing<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
 Structure is documented below.
@@ -1112,7 +1140,7 @@ Structure is documented below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass":
@@ -1123,7 +1151,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
 <a href="#lifetime_python" style="color: inherit; text-decoration: inherit;">lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
@@ -1134,7 +1162,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1144,7 +1172,7 @@ If it is not provided, the provider project is used.
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Tier of this CertificateAuthority. `ENTERPRISE` Certificate Authorities track
 server side certificates issued, and support certificate revocation. For more details,
@@ -1157,7 +1185,7 @@ Possible values are `ENTERPRISE` and `DEVOPS`.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Type of this CertificateAuthority.
 > **Note:** For `SUBORDINATE` Certificate Authorities, they need to
@@ -1463,20 +1491,40 @@ Get an existing Authority resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AuthorityState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Authority</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AuthorityState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Authority</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[AuthorityAccessUrlArgs]]</span> = None<span class="p">, </span><span class="nx">certificate_authority_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[AuthorityConfigArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcs_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">issuing_options</span><span class="p">:</span> <span class="nx">Optional[AuthorityIssuingOptionsArgs]</span> = None<span class="p">, </span><span class="nx">key_spec</span><span class="p">:</span> <span class="nx">Optional[AuthorityKeySpecArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">lifetime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pem_ca_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Authority</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">access_urls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AuthorityAccessUrlArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">certificate_authority_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AuthorityConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">disable_on_delete</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">gcs_bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">issuing_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AuthorityIssuingOptionsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">key_spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AuthorityKeySpecArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">lifetime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pem_ca_certificates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Authority</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthority<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AuthorityState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Authority</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthority<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AuthorityState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Authority</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Authority</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AuthorityState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Authority</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AuthorityState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1977,7 +2025,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 <a href="#state_accessurls_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityaccessurl">Authority<wbr>Access<wbr>Url[]</a></span>
+        <span class="property-type"><a href="#authorityaccessurl">pulumi.<wbr>Input<pulumi.<wbr>Input<Authority<wbr>Access<wbr>Url<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}URLs for accessing content published by this CA, such as the CA certificate and CRLs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1986,7 +2034,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 <a href="#state_certificateauthorityid_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user provided Resource ID for this Certificate Authority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1995,7 +2043,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 <a href="#state_config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfig">Authority<wbr>Config</a></span>
+        <span class="property-type"><a href="#authorityconfig">pulumi.<wbr>Input<Authority<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
@@ -2005,7 +2053,7 @@ Structure is documented below.
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was created. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
@@ -2015,7 +2063,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 <a href="#state_disableondelete_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>On<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
 on delete. If the Certitificate Authorities is not disabled,
@@ -2026,7 +2074,7 @@ it cannot be deleted. Use with care. Defaults to `false`.
 <a href="#state_gcsbucket_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Storage bucket where this CertificateAuthority will publish content,
 such as the CA certificate and CRLs. This must be a bucket name, without any prefixes
@@ -2039,7 +2087,7 @@ created.
 <a href="#state_issuingoptions_nodejs" style="color: inherit; text-decoration: inherit;">issuing<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityissuingoptions">Authority<wbr>Issuing<wbr>Options</a></span>
+        <span class="property-type"><a href="#authorityissuingoptions">pulumi.<wbr>Input<Authority<wbr>Issuing<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
 Structure is documented below.
@@ -2049,7 +2097,7 @@ Structure is documented below.
 <a href="#state_keyspec_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authoritykeyspec">Authority<wbr>Key<wbr>Spec</a></span>
+        <span class="property-type"><a href="#authoritykeyspec">pulumi.<wbr>Input<Authority<wbr>Key<wbr>Spec<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority
 is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
@@ -2061,7 +2109,7 @@ Structure is documented below.
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass":
@@ -2072,7 +2120,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
 <a href="#state_lifetime_nodejs" style="color: inherit; text-decoration: inherit;">lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
@@ -2083,7 +2131,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
@@ -2093,7 +2141,7 @@ running `gcloud beta privateca locations list`.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource name for this CertificateAuthority in the format projects/*/locations/*/certificateAuthorities/*.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2102,7 +2150,7 @@ running `gcloud beta privateca locations list`.
 <a href="#state_pemcacertificates_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Ca<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such
 that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the
@@ -2113,7 +2161,7 @@ current CertificateAuthority's certificate.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2123,7 +2171,7 @@ If it is not provided, the provider project is used.
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The State for this CertificateAuthority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2132,7 +2180,7 @@ If it is not provided, the provider project is used.
 <a href="#state_tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Tier of this CertificateAuthority. `ENTERPRISE` Certificate Authorities track
 server side certificates issued, and support certificate revocation. For more details,
@@ -2145,7 +2193,7 @@ Possible values are `ENTERPRISE` and `DEVOPS`.
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Type of this CertificateAuthority.
 > **Note:** For `SUBORDINATE` Certificate Authorities, they need to
@@ -2159,7 +2207,7 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was updated. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
@@ -2173,7 +2221,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 <a href="#state_access_urls_python" style="color: inherit; text-decoration: inherit;">access_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityaccessurl">Sequence[Authority<wbr>Access<wbr>Url<wbr>Args]</a></span>
+        <span class="property-type"><a href="#authorityaccessurl">Input[Authority<wbr>Access<wbr>Url<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}URLs for accessing content published by this CA, such as the CA certificate and CRLs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2182,7 +2230,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 <a href="#state_certificate_authority_id_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user provided Resource ID for this Certificate Authority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2191,7 +2239,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 <a href="#state_config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfig">Authority<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityconfig">Input[Authority<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
@@ -2201,7 +2249,7 @@ Structure is documented below.
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was created. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
@@ -2211,7 +2259,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 <a href="#state_disable_on_delete_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>on_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
 on delete. If the Certitificate Authorities is not disabled,
@@ -2222,7 +2270,7 @@ it cannot be deleted. Use with care. Defaults to `false`.
 <a href="#state_gcs_bucket_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Storage bucket where this CertificateAuthority will publish content,
 such as the CA certificate and CRLs. This must be a bucket name, without any prefixes
@@ -2235,7 +2283,7 @@ created.
 <a href="#state_issuing_options_python" style="color: inherit; text-decoration: inherit;">issuing_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityissuingoptions">Authority<wbr>Issuing<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityissuingoptions">Input[Authority<wbr>Issuing<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
 Structure is documented below.
@@ -2245,7 +2293,7 @@ Structure is documented below.
 <a href="#state_key_spec_python" style="color: inherit; text-decoration: inherit;">key_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authoritykeyspec">Authority<wbr>Key<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#authoritykeyspec">Input[Authority<wbr>Key<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority
 is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
@@ -2257,7 +2305,7 @@ Structure is documented below.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass":
@@ -2268,7 +2316,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
 <a href="#state_lifetime_python" style="color: inherit; text-decoration: inherit;">lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
@@ -2279,7 +2327,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
@@ -2289,7 +2337,7 @@ running `gcloud beta privateca locations list`.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource name for this CertificateAuthority in the format projects/*/locations/*/certificateAuthorities/*.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2298,7 +2346,7 @@ running `gcloud beta privateca locations list`.
 <a href="#state_pem_ca_certificates_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>ca_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such
 that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the
@@ -2309,7 +2357,7 @@ current CertificateAuthority's certificate.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2319,7 +2367,7 @@ If it is not provided, the provider project is used.
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The State for this CertificateAuthority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2328,7 +2376,7 @@ If it is not provided, the provider project is used.
 <a href="#state_tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Tier of this CertificateAuthority. `ENTERPRISE` Certificate Authorities track
 server side certificates issued, and support certificate revocation. For more details,
@@ -2341,7 +2389,7 @@ Possible values are `ENTERPRISE` and `DEVOPS`.
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Type of this CertificateAuthority.
 > **Note:** For `SUBORDINATE` Certificate Authorities, they need to
@@ -2355,7 +2403,7 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was updated. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
@@ -2420,7 +2468,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 <a href="#cacertificateaccessurl_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Certificate<wbr>Access<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2428,7 +2476,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 <a href="#crlaccessurl_nodejs" style="color: inherit; text-decoration: inherit;">crl<wbr>Access<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2440,7 +2488,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 <a href="#ca_certificate_access_url_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>certificate_<wbr>access_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2448,7 +2496,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 <a href="#crl_access_url_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>access_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2514,7 +2562,7 @@ Structure is documented below.
 <a href="#reusableconfig_nodejs" style="color: inherit; text-decoration: inherit;">reusable<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigreusableconfig">Authority<wbr>Config<wbr>Reusable<wbr>Config</a></span>
+        <span class="property-type"><a href="#authorityconfigreusableconfig">pulumi.<wbr>Input<Authority<wbr>Config<wbr>Reusable<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
@@ -2526,7 +2574,7 @@ found by running `gcloud beta privateca reusable-configs list`.
 <a href="#subjectconfig_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigsubjectconfig">Authority<wbr>Config<wbr>Subject<wbr>Config</a></span>
+        <span class="property-type"><a href="#authorityconfigsubjectconfig">pulumi.<wbr>Input<Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
@@ -2540,7 +2588,7 @@ Structure is documented below.
 <a href="#reusable_config_python" style="color: inherit; text-decoration: inherit;">reusable_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigreusableconfig">Authority<wbr>Config<wbr>Reusable<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityconfigreusableconfig">Input[Authority<wbr>Config<wbr>Reusable<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
@@ -2552,7 +2600,7 @@ found by running `gcloud beta privateca reusable-configs list`.
 <a href="#subject_config_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigsubjectconfig">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityconfigsubjectconfig">Input[Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
@@ -2600,7 +2648,7 @@ found by running `gcloud beta privateca reusable-configs list`.
 <a href="#reusableconfig_nodejs" style="color: inherit; text-decoration: inherit;">reusable<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
@@ -2616,7 +2664,7 @@ found by running `gcloud beta privateca reusable-configs list`.
 <a href="#reusable_config_python" style="color: inherit; text-decoration: inherit;">reusable_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
@@ -2700,7 +2748,7 @@ Structure is documented below.
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The common name of the distinguished name.
 {{% /md %}}</dd><dt class="property-required"
@@ -2709,7 +2757,7 @@ Structure is documented below.
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigsubjectconfigsubject">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject</a></span>
+        <span class="property-type"><a href="#authorityconfigsubjectconfigsubject">pulumi.<wbr>Input<Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
@@ -2719,7 +2767,7 @@ Structure is documented below.
 <a href="#subjectaltname_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigsubjectconfigsubjectaltname">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name</a></span>
+        <span class="property-type"><a href="#authorityconfigsubjectconfigsubjectaltname">pulumi.<wbr>Input<Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
@@ -2733,7 +2781,7 @@ Structure is documented below.
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The common name of the distinguished name.
 {{% /md %}}</dd><dt class="property-required"
@@ -2742,7 +2790,7 @@ Structure is documented below.
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigsubjectconfigsubject">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityconfigsubjectconfigsubject">Input[Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
@@ -2752,7 +2800,7 @@ Structure is documented below.
 <a href="#subject_alt_name_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigsubjectconfigsubjectaltname">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityconfigsubjectconfigsubjectaltname">Input[Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
@@ -2902,7 +2950,7 @@ Structure is documented below.
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The organization of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2911,7 +2959,7 @@ Structure is documented below.
 <a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The country code of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2920,7 +2968,7 @@ Structure is documented below.
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2929,7 +2977,7 @@ Structure is documented below.
 <a href="#organizationalunit_nodejs" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The organizational unit of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2938,7 +2986,7 @@ Structure is documented below.
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2947,7 +2995,7 @@ Structure is documented below.
 <a href="#province_nodejs" style="color: inherit; text-decoration: inherit;">province</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2956,7 +3004,7 @@ Structure is documented below.
 <a href="#streetaddress_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The street address of the subject.
 {{% /md %}}</dd></dl>
@@ -2969,7 +3017,7 @@ Structure is documented below.
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The organization of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2978,7 +3026,7 @@ Structure is documented below.
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The country code of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2987,7 +3035,7 @@ Structure is documented below.
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2996,7 +3044,7 @@ Structure is documented below.
 <a href="#organizational_unit_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The organizational unit of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3005,7 +3053,7 @@ Structure is documented below.
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3014,7 +3062,7 @@ Structure is documented below.
 <a href="#province_python" style="color: inherit; text-decoration: inherit;">province</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3023,7 +3071,7 @@ Structure is documented below.
 <a href="#street_address_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The street address of the subject.
 {{% /md %}}</dd></dl>
@@ -3118,7 +3166,7 @@ Structure is documented below.
 <a href="#dnsnames_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3127,7 +3175,7 @@ Structure is documented below.
 <a href="#emailaddresses_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3136,7 +3184,7 @@ Structure is documented below.
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3145,7 +3193,7 @@ Structure is documented below.
 <a href="#uris_nodejs" style="color: inherit; text-decoration: inherit;">uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.
 {{% /md %}}</dd></dl>
@@ -3158,7 +3206,7 @@ Structure is documented below.
 <a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3167,7 +3215,7 @@ Structure is documented below.
 <a href="#email_addresses_python" style="color: inherit; text-decoration: inherit;">email_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3176,7 +3224,7 @@ Structure is documented below.
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3185,7 +3233,7 @@ Structure is documented below.
 <a href="#uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.
 {{% /md %}}</dd></dl>
@@ -3250,7 +3298,7 @@ rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
 <a href="#includecacerturl_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Ca<wbr>Cert<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, includes a URL to the issuing CA certificate in the "authority
 information access" X.509 extension.
@@ -3260,7 +3308,7 @@ information access" X.509 extension.
 <a href="#includecrlaccessurl_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Crl<wbr>Access<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, includes a URL to the CRL corresponding to certificates issued from a
 CertificateAuthority. CRLs will expire 7 days from their creation. However, we will
@@ -3275,7 +3323,7 @@ rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
 <a href="#include_ca_cert_url_python" style="color: inherit; text-decoration: inherit;">include_<wbr>ca_<wbr>cert_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, includes a URL to the issuing CA certificate in the "authority
 information access" X.509 extension.
@@ -3285,7 +3333,7 @@ information access" X.509 extension.
 <a href="#include_crl_access_url_python" style="color: inherit; text-decoration: inherit;">include_<wbr>crl_<wbr>access_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, includes a URL to the CRL corresponding to certificates issued from a
 CertificateAuthority. CRLs will expire 7 days from their creation. However, we will
@@ -3352,7 +3400,7 @@ Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `R
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The algorithm to use for creating a managed Cloud KMS key for a for a simplified
 experience. All managed keys will be have their ProtectionLevel as HSM.
@@ -3363,7 +3411,7 @@ Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `R
 <a href="#cloudkmskeyversion_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Kms<wbr>Key<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource name for an existing Cloud KMS CryptoKeyVersion in the format
 `projects/*/locations/*/keyRings/*/cryptoKeys/*/cryptoKeyVersions/*`.
@@ -3377,7 +3425,7 @@ Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `R
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The algorithm to use for creating a managed Cloud KMS key for a for a simplified
 experience. All managed keys will be have their ProtectionLevel as HSM.
@@ -3388,7 +3436,7 @@ Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `R
 <a href="#cloud_kms_key_version_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>kms_<wbr>key_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource name for an existing Cloud KMS CryptoKeyVersion in the format
 `projects/*/locations/*/keyRings/*/cryptoKeys/*/cryptoKeyVersions/*`.

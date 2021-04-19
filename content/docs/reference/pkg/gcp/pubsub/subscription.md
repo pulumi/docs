@@ -77,8 +77,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -217,8 +217,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -352,8 +352,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -459,8 +459,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -547,19 +547,38 @@ const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Subscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Subscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SubscriptionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Subscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ack_deadline_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dead_letter_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionDeadLetterPolicyArgs]</span> = None<span class="p">, </span><span class="nx">enable_message_ordering</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expiration_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionExpirationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">message_retention_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_config</span><span class="p">:</span> <span class="nx">Optional[SubscriptionPushConfigArgs]</span> = None<span class="p">, </span><span class="nx">retain_acked_messages</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionRetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Subscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">ack_deadline_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                 <span class="nx">dead_letter_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SubscriptionDeadLetterPolicyArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">enable_message_ordering</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">expiration_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SubscriptionExpirationPolicyArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">message_retention_duration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">push_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SubscriptionPushConfigArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">retain_acked_messages</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SubscriptionRetryPolicyArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">topic</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Subscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SubscriptionArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Subscription</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SubscriptionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Subscription</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Subscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SubscriptionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Subscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SubscriptionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -594,22 +613,32 @@ const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SubscriptionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -618,7 +647,7 @@ const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -642,7 +671,7 @@ const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1039,7 +1068,7 @@ Structure is documented below.
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A reference to a Topic resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1048,7 +1077,7 @@ Structure is documented below.
 <a href="#ackdeadlineseconds_nodejs" style="color: inherit; text-decoration: inherit;">ack<wbr>Deadline<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
 before the subscriber should acknowledge the message. After message
@@ -1071,7 +1100,7 @@ will eventually redeliver the message.
 <a href="#deadletterpolicy_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy</a></span>
+        <span class="property-type"><a href="#subscriptiondeadletterpolicy">pulumi.<wbr>Input<Subscription<wbr>Dead<wbr>Letter<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
@@ -1087,7 +1116,7 @@ Structure is documented below.
 <a href="#enablemessageordering_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Message<wbr>Ordering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, messages published with the same orderingKey in PubsubMessage will be delivered to
 the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
@@ -1098,7 +1127,7 @@ may be delivered in any order.
 <a href="#expirationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy</a></span>
+        <span class="property-type"><a href="#subscriptionexpirationpolicy">pulumi.<wbr>Input<Subscription<wbr>Expiration<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration.
 A subscription is considered active as long as any connected subscriber
@@ -1114,7 +1143,7 @@ Structure is documented below.
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The subscription only delivers the messages that match the filter.
 Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
@@ -1126,7 +1155,7 @@ you can't modify the filter.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this Subscription.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1135,7 +1164,7 @@ you can't modify the filter.
 <a href="#messageretentionduration_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
 backlog, from the moment a message is published. If
@@ -1151,7 +1180,7 @@ by 's'. Example: `"600.5s"`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the subscription.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1160,7 +1189,7 @@ by 's'. Example: `"600.5s"`.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1170,7 +1199,7 @@ If it is not provided, the provider project is used.
 <a href="#pushconfig_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfig">pulumi.<wbr>Input<Subscription<wbr>Push<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
@@ -1182,7 +1211,7 @@ Structure is documented below.
 <a href="#retainackedmessages_nodejs" style="color: inherit; text-decoration: inherit;">retain<wbr>Acked<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
 messages are not expunged from the subscription's backlog, even if
@@ -1194,7 +1223,7 @@ messageRetentionDuration window.
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">pulumi.<wbr>Input<Subscription<wbr>Retry<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
 If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
@@ -1210,7 +1239,7 @@ Structure is documented below.
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A reference to a Topic resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1219,7 +1248,7 @@ Structure is documented below.
 <a href="#ack_deadline_seconds_python" style="color: inherit; text-decoration: inherit;">ack_<wbr>deadline_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
 before the subscriber should acknowledge the message. After message
@@ -1242,7 +1271,7 @@ will eventually redeliver the message.
 <a href="#dead_letter_policy_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#subscriptiondeadletterpolicy">Input[Subscription<wbr>Dead<wbr>Letter<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
@@ -1258,7 +1287,7 @@ Structure is documented below.
 <a href="#enable_message_ordering_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>message_<wbr>ordering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, messages published with the same orderingKey in PubsubMessage will be delivered to
 the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
@@ -1269,7 +1298,7 @@ may be delivered in any order.
 <a href="#expiration_policy_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#subscriptionexpirationpolicy">Input[Subscription<wbr>Expiration<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration.
 A subscription is considered active as long as any connected subscriber
@@ -1285,7 +1314,7 @@ Structure is documented below.
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The subscription only delivers the messages that match the filter.
 Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
@@ -1297,7 +1326,7 @@ you can't modify the filter.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this Subscription.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1306,7 +1335,7 @@ you can't modify the filter.
 <a href="#message_retention_duration_python" style="color: inherit; text-decoration: inherit;">message_<wbr>retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
 backlog, from the moment a message is published. If
@@ -1322,7 +1351,7 @@ by 's'. Example: `"600.5s"`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the subscription.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1331,7 +1360,7 @@ by 's'. Example: `"600.5s"`.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1341,7 +1370,7 @@ If it is not provided, the provider project is used.
 <a href="#push_config_python" style="color: inherit; text-decoration: inherit;">push_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfig">Input[Subscription<wbr>Push<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
@@ -1353,7 +1382,7 @@ Structure is documented below.
 <a href="#retain_acked_messages_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>acked_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
 messages are not expunged from the subscription's backlog, even if
@@ -1365,7 +1394,7 @@ messageRetentionDuration window.
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Input[Subscription<wbr>Retry<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
 If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
@@ -1473,20 +1502,36 @@ Get an existing Subscription resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SubscriptionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Subscription</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SubscriptionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Subscription</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ack_deadline_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dead_letter_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionDeadLetterPolicyArgs]</span> = None<span class="p">, </span><span class="nx">enable_message_ordering</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expiration_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionExpirationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">message_retention_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_config</span><span class="p">:</span> <span class="nx">Optional[SubscriptionPushConfigArgs]</span> = None<span class="p">, </span><span class="nx">retain_acked_messages</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionRetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Subscription</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">ack_deadline_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">dead_letter_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SubscriptionDeadLetterPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">enable_message_ordering</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">expiration_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SubscriptionExpirationPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">message_retention_duration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">push_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SubscriptionPushConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">retain_acked_messages</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SubscriptionRetryPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">topic</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Subscription</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SubscriptionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Subscription</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SubscriptionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Subscription</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Subscription</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SubscriptionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Subscription</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SubscriptionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1955,7 +2000,7 @@ Structure is documented below.
 <a href="#state_ackdeadlineseconds_nodejs" style="color: inherit; text-decoration: inherit;">ack<wbr>Deadline<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
 before the subscriber should acknowledge the message. After message
@@ -1978,7 +2023,7 @@ will eventually redeliver the message.
 <a href="#state_deadletterpolicy_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy</a></span>
+        <span class="property-type"><a href="#subscriptiondeadletterpolicy">pulumi.<wbr>Input<Subscription<wbr>Dead<wbr>Letter<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
@@ -1994,7 +2039,7 @@ Structure is documented below.
 <a href="#state_enablemessageordering_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Message<wbr>Ordering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, messages published with the same orderingKey in PubsubMessage will be delivered to
 the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
@@ -2005,7 +2050,7 @@ may be delivered in any order.
 <a href="#state_expirationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy</a></span>
+        <span class="property-type"><a href="#subscriptionexpirationpolicy">pulumi.<wbr>Input<Subscription<wbr>Expiration<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration.
 A subscription is considered active as long as any connected subscriber
@@ -2021,7 +2066,7 @@ Structure is documented below.
 <a href="#state_filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The subscription only delivers the messages that match the filter.
 Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
@@ -2033,7 +2078,7 @@ you can't modify the filter.
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this Subscription.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2042,7 +2087,7 @@ you can't modify the filter.
 <a href="#state_messageretentionduration_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
 backlog, from the moment a message is published. If
@@ -2058,7 +2103,7 @@ by 's'. Example: `"600.5s"`.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the subscription.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2067,7 +2112,7 @@ by 's'. Example: `"600.5s"`.
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Path of the subscription in the format projects/{project}/subscriptions/{name}
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd><dt class="property-optional"
@@ -2076,7 +2121,7 @@ by 's'. Example: `"600.5s"`.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2086,7 +2131,7 @@ If it is not provided, the provider project is used.
 <a href="#state_pushconfig_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfig">pulumi.<wbr>Input<Subscription<wbr>Push<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
@@ -2098,7 +2143,7 @@ Structure is documented below.
 <a href="#state_retainackedmessages_nodejs" style="color: inherit; text-decoration: inherit;">retain<wbr>Acked<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
 messages are not expunged from the subscription's backlog, even if
@@ -2110,7 +2155,7 @@ messageRetentionDuration window.
 <a href="#state_retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">pulumi.<wbr>Input<Subscription<wbr>Retry<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
 If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
@@ -2122,7 +2167,7 @@ Structure is documented below.
 <a href="#state_topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A reference to a Topic resource.
 {{% /md %}}</dd></dl>
@@ -2135,7 +2180,7 @@ Structure is documented below.
 <a href="#state_ack_deadline_seconds_python" style="color: inherit; text-decoration: inherit;">ack_<wbr>deadline_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
 before the subscriber should acknowledge the message. After message
@@ -2158,7 +2203,7 @@ will eventually redeliver the message.
 <a href="#state_dead_letter_policy_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#subscriptiondeadletterpolicy">Input[Subscription<wbr>Dead<wbr>Letter<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
@@ -2174,7 +2219,7 @@ Structure is documented below.
 <a href="#state_enable_message_ordering_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>message_<wbr>ordering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, messages published with the same orderingKey in PubsubMessage will be delivered to
 the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
@@ -2185,7 +2230,7 @@ may be delivered in any order.
 <a href="#state_expiration_policy_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#subscriptionexpirationpolicy">Input[Subscription<wbr>Expiration<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration.
 A subscription is considered active as long as any connected subscriber
@@ -2201,7 +2246,7 @@ Structure is documented below.
 <a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The subscription only delivers the messages that match the filter.
 Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
@@ -2213,7 +2258,7 @@ you can't modify the filter.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this Subscription.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2222,7 +2267,7 @@ you can't modify the filter.
 <a href="#state_message_retention_duration_python" style="color: inherit; text-decoration: inherit;">message_<wbr>retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
 backlog, from the moment a message is published. If
@@ -2238,7 +2283,7 @@ by 's'. Example: `"600.5s"`.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the subscription.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2247,7 +2292,7 @@ by 's'. Example: `"600.5s"`.
 <a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Path of the subscription in the format projects/{project}/subscriptions/{name}
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd><dt class="property-optional"
@@ -2256,7 +2301,7 @@ by 's'. Example: `"600.5s"`.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2266,7 +2311,7 @@ If it is not provided, the provider project is used.
 <a href="#state_push_config_python" style="color: inherit; text-decoration: inherit;">push_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfig">Input[Subscription<wbr>Push<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
@@ -2278,7 +2323,7 @@ Structure is documented below.
 <a href="#state_retain_acked_messages_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>acked_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
 messages are not expunged from the subscription's backlog, even if
@@ -2290,7 +2335,7 @@ messageRetentionDuration window.
 <a href="#state_retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Input[Subscription<wbr>Retry<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
 If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
@@ -2302,7 +2347,7 @@ Structure is documented below.
 <a href="#state_topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A reference to a Topic resource.
 {{% /md %}}</dd></dl>
@@ -2400,7 +2445,7 @@ If this parameter is 0, a default value of 5 is used.
 <a href="#deadlettertopic_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the topic to which dead letter messages should be published.
 Format is `projects/{project}/topics/{topic}`.
@@ -2417,7 +2462,7 @@ since messages published to a topic with no subscriptions are lost.
 <a href="#maxdeliveryattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of delivery attempts for any message. The value must be
 between 5 and 100.
@@ -2437,7 +2482,7 @@ If this parameter is 0, a default value of 5 is used.
 <a href="#dead_letter_topic_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the topic to which dead letter messages should be published.
 Format is `projects/{project}/topics/{topic}`.
@@ -2454,7 +2499,7 @@ since messages published to a topic with no subscriptions are lost.
 <a href="#max_delivery_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of delivery attempts for any message. The value must be
 between 5 and 100.
@@ -2510,7 +2555,7 @@ Example - "3.5s".
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the "time-to-live" duration for an associated resource. The
 resource expires if it is not active for a period of ttl.
@@ -2527,7 +2572,7 @@ Example - "3.5s".
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the "time-to-live" duration for an associated resource. The
 resource expires if it is not active for a period of ttl.
@@ -2650,7 +2695,7 @@ Structure is documented below.
 <a href="#pushendpoint_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A URL locating the endpoint to which messages should be pushed.
 For example, a Webhook endpoint might use
@@ -2661,7 +2706,7 @@ For example, a Webhook endpoint might use
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Endpoint configuration attributes.
 Every endpoint has a set of API supported attributes that can
@@ -2687,7 +2732,7 @@ The possible values for this attribute are:
 <a href="#oidctoken_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfigoidctoken">pulumi.<wbr>Input<Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}If specified, Pub/Sub will generate and attach an OIDC JWT token as
 an Authorization header in the HTTP request for every pushed message.
@@ -2702,7 +2747,7 @@ Structure is documented below.
 <a href="#push_endpoint_python" style="color: inherit; text-decoration: inherit;">push_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A URL locating the endpoint to which messages should be pushed.
 For example, a Webhook endpoint might use
@@ -2713,7 +2758,7 @@ For example, a Webhook endpoint might use
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Endpoint configuration attributes.
 Every endpoint has a set of API supported attributes that can
@@ -2739,7 +2784,7 @@ The possible values for this attribute are:
 <a href="#oidc_token_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token<wbr>Args</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Input[Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If specified, Pub/Sub will generate and attach an OIDC JWT token as
 an Authorization header in the HTTP request for every pushed message.
@@ -2816,7 +2861,7 @@ Note: if not specified, the Push endpoint URL will be used.
 <a href="#serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Service account email to be used for generating the OIDC token.
 The caller (for subscriptions.create, subscriptions.patch, and
@@ -2828,7 +2873,7 @@ iam.serviceAccounts.actAs permission for the service account.
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Audience to be used when generating OIDC token. The audience claim
 identifies the recipients that the JWT is intended for. The audience
@@ -2846,7 +2891,7 @@ Note: if not specified, the Push endpoint URL will be used.
 <a href="#service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Service account email to be used for generating the OIDC token.
 The caller (for subscriptions.create, subscriptions.patch, and
@@ -2858,7 +2903,7 @@ iam.serviceAccounts.actAs permission for the service account.
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Audience to be used when generating OIDC token. The audience claim
 identifies the recipients that the JWT is intended for. The audience
@@ -2926,7 +2971,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#maximumbackoff_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Backoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
@@ -2936,7 +2981,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#minimumbackoff_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Backoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
@@ -2950,7 +2995,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#maximum_backoff_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>backoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
@@ -2960,7 +3005,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#minimum_backoff_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>backoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".

@@ -111,8 +111,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/dataproc"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -293,19 +293,38 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hadoop_config</span><span class="p">:</span> <span class="nx">Optional[JobHadoopConfigArgs]</span> = None<span class="p">, </span><span class="nx">hive_config</span><span class="p">:</span> <span class="nx">Optional[JobHiveConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">pig_config</span><span class="p">:</span> <span class="nx">Optional[JobPigConfigArgs]</span> = None<span class="p">, </span><span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[JobPlacementArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pyspark_config</span><span class="p">:</span> <span class="nx">Optional[JobPysparkConfigArgs]</span> = None<span class="p">, </span><span class="nx">reference</span><span class="p">:</span> <span class="nx">Optional[JobReferenceArgs]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[JobSchedulingArgs]</span> = None<span class="p">, </span><span class="nx">spark_config</span><span class="p">:</span> <span class="nx">Optional[JobSparkConfigArgs]</span> = None<span class="p">, </span><span class="nx">sparksql_config</span><span class="p">:</span> <span class="nx">Optional[JobSparksqlConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">hadoop_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobHadoopConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">hive_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobHiveConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">pig_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobPigConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobPlacementArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pyspark_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobPysparkConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">reference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobReferenceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobSchedulingArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">spark_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobSparkConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">sparksql_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobSparksqlConfigArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -340,22 +359,32 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -364,7 +393,7 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -388,7 +417,7 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -693,7 +722,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobplacement">Job<wbr>Placement</a></span>
+        <span class="property-type"><a href="#jobplacement">pulumi.<wbr>Input<Job<wbr>Placement<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The config of job placement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -702,7 +731,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}By default, you can only delete inactive jobs within
 Dataproc. Setting this to true, and calling destroy, will ensure that the
@@ -713,7 +742,7 @@ job is first cancelled before issuing the delete.
 <a href="#hadoopconfig_nodejs" style="color: inherit; text-decoration: inherit;">hadoop<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobhadoopconfig">pulumi.<wbr>Input<Job<wbr>Hadoop<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The config of Hadoop job
 {{% /md %}}</dd><dt class="property-optional"
@@ -722,7 +751,7 @@ job is first cancelled before issuing the delete.
 <a href="#hiveconfig_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobhiveconfig">pulumi.<wbr>Input<Job<wbr>Hive<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The config of hive job
 {{% /md %}}</dd><dt class="property-optional"
@@ -731,7 +760,7 @@ job is first cancelled before issuing the delete.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}The list of labels (key/value pairs) to add to the job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -740,7 +769,7 @@ job is first cancelled before issuing the delete.
 <a href="#pigconfig_nodejs" style="color: inherit; text-decoration: inherit;">pig<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobpigconfig">pulumi.<wbr>Input<Job<wbr>Pig<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The config of pag job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -749,7 +778,7 @@ job is first cancelled before issuing the delete.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The project in which the `cluster` can be found and jobs
 subsequently run against. If it is not provided, the provider project is used.
@@ -759,7 +788,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#pysparkconfig_nodejs" style="color: inherit; text-decoration: inherit;">pyspark<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobpysparkconfig">pulumi.<wbr>Input<Job<wbr>Pyspark<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The config of pySpark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -768,7 +797,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#reference_nodejs" style="color: inherit; text-decoration: inherit;">reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreference">Job<wbr>Reference</a></span>
+        <span class="property-type"><a href="#jobreference">pulumi.<wbr>Input<Job<wbr>Reference<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The reference of the job
 {{% /md %}}</dd><dt class="property-optional"
@@ -777,7 +806,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Cloud Dataproc region. This essentially determines which clusters are available
 for this job to be submitted to. If not specified, defaults to `global`.
@@ -787,7 +816,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling</a></span>
+        <span class="property-type"><a href="#jobscheduling">pulumi.<wbr>Input<Job<wbr>Scheduling<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -796,7 +825,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#sparkconfig_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobsparkconfig">pulumi.<wbr>Input<Job<wbr>Spark<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The config of the Spark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -805,7 +834,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#sparksqlconfig_nodejs" style="color: inherit; text-decoration: inherit;">sparksql<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobsparksqlconfig">pulumi.<wbr>Input<Job<wbr>Sparksql<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The config of SparkSql job
 {{% /md %}}</dd></dl>
@@ -818,7 +847,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobplacement">Job<wbr>Placement<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobplacement">Input[Job<wbr>Placement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config of job placement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -827,7 +856,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}By default, you can only delete inactive jobs within
 Dataproc. Setting this to true, and calling destroy, will ensure that the
@@ -838,7 +867,7 @@ job is first cancelled before issuing the delete.
 <a href="#hadoop_config_python" style="color: inherit; text-decoration: inherit;">hadoop_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobhadoopconfig">Input[Job<wbr>Hadoop<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config of Hadoop job
 {{% /md %}}</dd><dt class="property-optional"
@@ -847,7 +876,7 @@ job is first cancelled before issuing the delete.
 <a href="#hive_config_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobhiveconfig">Input[Job<wbr>Hive<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config of hive job
 {{% /md %}}</dd><dt class="property-optional"
@@ -856,7 +885,7 @@ job is first cancelled before issuing the delete.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of labels (key/value pairs) to add to the job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -865,7 +894,7 @@ job is first cancelled before issuing the delete.
 <a href="#pig_config_python" style="color: inherit; text-decoration: inherit;">pig_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobpigconfig">Input[Job<wbr>Pig<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config of pag job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -874,7 +903,7 @@ job is first cancelled before issuing the delete.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The project in which the `cluster` can be found and jobs
 subsequently run against. If it is not provided, the provider project is used.
@@ -884,7 +913,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#pyspark_config_python" style="color: inherit; text-decoration: inherit;">pyspark_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobpysparkconfig">Input[Job<wbr>Pyspark<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config of pySpark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -893,7 +922,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#reference_python" style="color: inherit; text-decoration: inherit;">reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreference">Job<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobreference">Input[Job<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The reference of the job
 {{% /md %}}</dd><dt class="property-optional"
@@ -902,7 +931,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Cloud Dataproc region. This essentially determines which clusters are available
 for this job to be submitted to. If not specified, defaults to `global`.
@@ -912,7 +941,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#scheduling_python" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobscheduling">Input[Job<wbr>Scheduling<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -921,7 +950,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#spark_config_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobsparkconfig">Input[Job<wbr>Spark<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config of the Spark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -930,7 +959,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#sparksql_config_python" style="color: inherit; text-decoration: inherit;">sparksql_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobsparksqlconfig">Input[Job<wbr>Sparksql<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config of SparkSql job
 {{% /md %}}</dd></dl>
@@ -1107,20 +1136,38 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">JobState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Job</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">JobState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Job</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">driver_controls_files_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver_output_resource_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hadoop_config</span><span class="p">:</span> <span class="nx">Optional[JobHadoopConfigArgs]</span> = None<span class="p">, </span><span class="nx">hive_config</span><span class="p">:</span> <span class="nx">Optional[JobHiveConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">pig_config</span><span class="p">:</span> <span class="nx">Optional[JobPigConfigArgs]</span> = None<span class="p">, </span><span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[JobPlacementArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pyspark_config</span><span class="p">:</span> <span class="nx">Optional[JobPysparkConfigArgs]</span> = None<span class="p">, </span><span class="nx">reference</span><span class="p">:</span> <span class="nx">Optional[JobReferenceArgs]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[JobSchedulingArgs]</span> = None<span class="p">, </span><span class="nx">spark_config</span><span class="p">:</span> <span class="nx">Optional[JobSparkConfigArgs]</span> = None<span class="p">, </span><span class="nx">sparksql_config</span><span class="p">:</span> <span class="nx">Optional[JobSparksqlConfigArgs]</span> = None<span class="p">, </span><span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[JobStatusArgs]]</span> = None<span class="p">) -&gt;</span> Job</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">driver_controls_files_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">driver_output_resource_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">hadoop_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobHadoopConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">hive_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobHiveConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">pig_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobPigConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobPlacementArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pyspark_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobPysparkConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">reference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobReferenceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobSchedulingArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">spark_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobSparkConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">sparksql_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobSparksqlConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[JobStatusArgs]]]]</span> = None<span class="p">) -&gt;</span> Job</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">JobState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">JobState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Job</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">JobState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Job</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">JobState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1533,7 +1580,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_drivercontrolsfilesuri_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Controls<wbr>Files<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1542,7 +1589,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_driveroutputresourceuri_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Output<wbr>Resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A URI pointing to the location of the stdout of the job's driver program.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1551,7 +1598,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}By default, you can only delete inactive jobs within
 Dataproc. Setting this to true, and calling destroy, will ensure that the
@@ -1562,7 +1609,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_hadoopconfig_nodejs" style="color: inherit; text-decoration: inherit;">hadoop<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobhadoopconfig">pulumi.<wbr>Input<Job<wbr>Hadoop<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The config of Hadoop job
 {{% /md %}}</dd><dt class="property-optional"
@@ -1571,7 +1618,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_hiveconfig_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobhiveconfig">pulumi.<wbr>Input<Job<wbr>Hive<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The config of hive job
 {{% /md %}}</dd><dt class="property-optional"
@@ -1580,7 +1627,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}The list of labels (key/value pairs) to add to the job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1589,7 +1636,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_pigconfig_nodejs" style="color: inherit; text-decoration: inherit;">pig<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobpigconfig">pulumi.<wbr>Input<Job<wbr>Pig<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The config of pag job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1598,7 +1645,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobplacement">Job<wbr>Placement</a></span>
+        <span class="property-type"><a href="#jobplacement">pulumi.<wbr>Input<Job<wbr>Placement<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The config of job placement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1607,7 +1654,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The project in which the `cluster` can be found and jobs
 subsequently run against. If it is not provided, the provider project is used.
@@ -1617,7 +1664,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#state_pysparkconfig_nodejs" style="color: inherit; text-decoration: inherit;">pyspark<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobpysparkconfig">pulumi.<wbr>Input<Job<wbr>Pyspark<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The config of pySpark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1626,7 +1673,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#state_reference_nodejs" style="color: inherit; text-decoration: inherit;">reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreference">Job<wbr>Reference</a></span>
+        <span class="property-type"><a href="#jobreference">pulumi.<wbr>Input<Job<wbr>Reference<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The reference of the job
 {{% /md %}}</dd><dt class="property-optional"
@@ -1635,7 +1682,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Cloud Dataproc region. This essentially determines which clusters are available
 for this job to be submitted to. If not specified, defaults to `global`.
@@ -1645,7 +1692,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling</a></span>
+        <span class="property-type"><a href="#jobscheduling">pulumi.<wbr>Input<Job<wbr>Scheduling<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1654,7 +1701,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_sparkconfig_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobsparkconfig">pulumi.<wbr>Input<Job<wbr>Spark<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The config of the Spark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1663,7 +1710,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_sparksqlconfig_nodejs" style="color: inherit; text-decoration: inherit;">sparksql<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobsparksqlconfig">pulumi.<wbr>Input<Job<wbr>Sparksql<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The config of SparkSql job
 {{% /md %}}</dd><dt class="property-optional"
@@ -1672,7 +1719,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatus">Job<wbr>Status[]</a></span>
+        <span class="property-type"><a href="#jobstatus">pulumi.<wbr>Input<pulumi.<wbr>Input<Job<wbr>Status<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
 {{% /md %}}</dd></dl>
@@ -1685,7 +1732,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_driver_controls_files_uri_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>controls_<wbr>files_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1694,7 +1741,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_driver_output_resource_uri_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>output_<wbr>resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A URI pointing to the location of the stdout of the job's driver program.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1703,7 +1750,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}By default, you can only delete inactive jobs within
 Dataproc. Setting this to true, and calling destroy, will ensure that the
@@ -1714,7 +1761,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_hadoop_config_python" style="color: inherit; text-decoration: inherit;">hadoop_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobhadoopconfig">Input[Job<wbr>Hadoop<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config of Hadoop job
 {{% /md %}}</dd><dt class="property-optional"
@@ -1723,7 +1770,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_hive_config_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobhiveconfig">Input[Job<wbr>Hive<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config of hive job
 {{% /md %}}</dd><dt class="property-optional"
@@ -1732,7 +1779,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of labels (key/value pairs) to add to the job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1741,7 +1788,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_pig_config_python" style="color: inherit; text-decoration: inherit;">pig_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobpigconfig">Input[Job<wbr>Pig<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config of pag job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1750,7 +1797,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobplacement">Job<wbr>Placement<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobplacement">Input[Job<wbr>Placement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config of job placement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1759,7 +1806,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The project in which the `cluster` can be found and jobs
 subsequently run against. If it is not provided, the provider project is used.
@@ -1769,7 +1816,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#state_pyspark_config_python" style="color: inherit; text-decoration: inherit;">pyspark_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobpysparkconfig">Input[Job<wbr>Pyspark<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config of pySpark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1778,7 +1825,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#state_reference_python" style="color: inherit; text-decoration: inherit;">reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreference">Job<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobreference">Input[Job<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The reference of the job
 {{% /md %}}</dd><dt class="property-optional"
@@ -1787,7 +1834,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Cloud Dataproc region. This essentially determines which clusters are available
 for this job to be submitted to. If not specified, defaults to `global`.
@@ -1797,7 +1844,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_scheduling_python" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobscheduling">Input[Job<wbr>Scheduling<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1806,7 +1853,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_spark_config_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobsparkconfig">Input[Job<wbr>Spark<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config of the Spark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1815,7 +1862,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_sparksql_config_python" style="color: inherit; text-decoration: inherit;">sparksql_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobsparksqlconfig">Input[Job<wbr>Sparksql<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config of SparkSql job
 {{% /md %}}</dd><dt class="property-optional"
@@ -1824,7 +1871,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatus">Sequence[Job<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobstatus">Input[Job<wbr>Status<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
 {{% /md %}}</dd></dl>
@@ -1998,7 +2045,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#archiveuris_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2007,7 +2054,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2016,7 +2063,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#fileuris_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2025,7 +2072,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2034,7 +2081,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhadoopconfigloggingconfig">Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobhadoopconfigloggingconfig">pulumi.<wbr>Input<Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2042,7 +2089,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#mainclass_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2051,7 +2098,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#mainjarfileuri_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Jar<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'. Conflicts with `main_class`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2060,7 +2107,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
 {{% /md %}}</dd></dl>
@@ -2073,7 +2120,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#archive_uris_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2082,7 +2129,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2091,7 +2138,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#file_uris_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2100,7 +2147,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2109,7 +2156,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhadoopconfigloggingconfig">Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobhadoopconfigloggingconfig">Input[Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2117,7 +2164,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#main_class_python" style="color: inherit; text-decoration: inherit;">main_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2126,7 +2173,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#main_jar_file_uri_python" style="color: inherit; text-decoration: inherit;">main_<wbr>jar_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'. Conflicts with `main_class`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2135,7 +2182,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
 {{% /md %}}</dd></dl>
@@ -2174,7 +2221,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#driverloglevels_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2186,7 +2233,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#driver_log_levels_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>log_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2320,7 +2367,7 @@ Conflicts with `query_file_uri`
 <a href="#continueonfailure_nodejs" style="color: inherit; text-decoration: inherit;">continue<wbr>On<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2329,7 +2376,7 @@ Conflicts with `query_file_uri`
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2338,7 +2385,7 @@ Conflicts with `query_file_uri`
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2347,7 +2394,7 @@ Conflicts with `query_file_uri`
 <a href="#queryfileuri_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.
 Conflicts with `query_list`
@@ -2357,7 +2404,7 @@ Conflicts with `query_list`
 <a href="#querylists_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
@@ -2367,7 +2414,7 @@ Conflicts with `query_file_uri`
 <a href="#scriptvariables_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
 {{% /md %}}</dd></dl>
@@ -2380,7 +2427,7 @@ Conflicts with `query_file_uri`
 <a href="#continue_on_failure_python" style="color: inherit; text-decoration: inherit;">continue_<wbr>on_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2389,7 +2436,7 @@ Conflicts with `query_file_uri`
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2398,7 +2445,7 @@ Conflicts with `query_file_uri`
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2407,7 +2454,7 @@ Conflicts with `query_file_uri`
 <a href="#query_file_uri_python" style="color: inherit; text-decoration: inherit;">query_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.
 Conflicts with `query_list`
@@ -2417,7 +2464,7 @@ Conflicts with `query_list`
 <a href="#query_lists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
@@ -2427,7 +2474,7 @@ Conflicts with `query_file_uri`
 <a href="#script_variables_python" style="color: inherit; text-decoration: inherit;">script_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
 {{% /md %}}</dd></dl>
@@ -2578,7 +2625,7 @@ Conflicts with `query_file_uri`
 <a href="#continueonfailure_nodejs" style="color: inherit; text-decoration: inherit;">continue<wbr>On<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2587,7 +2634,7 @@ Conflicts with `query_file_uri`
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2596,7 +2643,7 @@ Conflicts with `query_file_uri`
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpigconfigloggingconfig">Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobpigconfigloggingconfig">pulumi.<wbr>Input<Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2604,7 +2651,7 @@ Conflicts with `query_file_uri`
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2613,7 +2660,7 @@ Conflicts with `query_file_uri`
 <a href="#queryfileuri_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.
 Conflicts with `query_list`
@@ -2623,7 +2670,7 @@ Conflicts with `query_list`
 <a href="#querylists_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
@@ -2633,7 +2680,7 @@ Conflicts with `query_file_uri`
 <a href="#scriptvariables_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
 {{% /md %}}</dd></dl>
@@ -2646,7 +2693,7 @@ Conflicts with `query_file_uri`
 <a href="#continue_on_failure_python" style="color: inherit; text-decoration: inherit;">continue_<wbr>on_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2655,7 +2702,7 @@ Conflicts with `query_file_uri`
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2664,7 +2711,7 @@ Conflicts with `query_file_uri`
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpigconfigloggingconfig">Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobpigconfigloggingconfig">Input[Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2672,7 +2719,7 @@ Conflicts with `query_file_uri`
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2681,7 +2728,7 @@ Conflicts with `query_file_uri`
 <a href="#query_file_uri_python" style="color: inherit; text-decoration: inherit;">query_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.
 Conflicts with `query_list`
@@ -2691,7 +2738,7 @@ Conflicts with `query_list`
 <a href="#query_lists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
@@ -2701,7 +2748,7 @@ Conflicts with `query_file_uri`
 <a href="#script_variables_python" style="color: inherit; text-decoration: inherit;">script_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
 {{% /md %}}</dd></dl>
@@ -2740,7 +2787,7 @@ Conflicts with `query_file_uri`
 <a href="#driverloglevels_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2752,7 +2799,7 @@ Conflicts with `query_file_uri`
 <a href="#driver_log_levels_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>log_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2806,7 +2853,7 @@ Conflicts with `query_file_uri`
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2814,7 +2861,7 @@ Conflicts with `query_file_uri`
 <a href="#clusteruuid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2826,7 +2873,7 @@ Conflicts with `query_file_uri`
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2834,7 +2881,7 @@ Conflicts with `query_file_uri`
 <a href="#cluster_uuid_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2998,7 +3045,7 @@ Conflicts with `query_file_uri`
 <a href="#mainpythonfileuri_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Python<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the main Python file to use as the driver. Must be a .py file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3007,7 +3054,7 @@ Conflicts with `query_file_uri`
 <a href="#archiveuris_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3016,7 +3063,7 @@ Conflicts with `query_file_uri`
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3025,7 +3072,7 @@ Conflicts with `query_file_uri`
 <a href="#fileuris_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3034,7 +3081,7 @@ Conflicts with `query_file_uri`
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3043,7 +3090,7 @@ Conflicts with `query_file_uri`
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpysparkconfigloggingconfig">Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobpysparkconfigloggingconfig">pulumi.<wbr>Input<Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3051,7 +3098,7 @@ Conflicts with `query_file_uri`
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3060,7 +3107,7 @@ Conflicts with `query_file_uri`
 <a href="#pythonfileuris_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
 {{% /md %}}</dd></dl>
@@ -3073,7 +3120,7 @@ Conflicts with `query_file_uri`
 <a href="#main_python_file_uri_python" style="color: inherit; text-decoration: inherit;">main_<wbr>python_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the main Python file to use as the driver. Must be a .py file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3082,7 +3129,7 @@ Conflicts with `query_file_uri`
 <a href="#archive_uris_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3091,7 +3138,7 @@ Conflicts with `query_file_uri`
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3100,7 +3147,7 @@ Conflicts with `query_file_uri`
 <a href="#file_uris_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3109,7 +3156,7 @@ Conflicts with `query_file_uri`
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3118,7 +3165,7 @@ Conflicts with `query_file_uri`
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpysparkconfigloggingconfig">Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobpysparkconfigloggingconfig">Input[Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3126,7 +3173,7 @@ Conflicts with `query_file_uri`
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3135,7 +3182,7 @@ Conflicts with `query_file_uri`
 <a href="#python_file_uris_python" style="color: inherit; text-decoration: inherit;">python_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
 {{% /md %}}</dd></dl>
@@ -3174,7 +3221,7 @@ Conflicts with `query_file_uri`
 <a href="#driverloglevels_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3186,7 +3233,7 @@ Conflicts with `query_file_uri`
 <a href="#driver_log_levels_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>log_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3224,7 +3271,7 @@ Conflicts with `query_file_uri`
 <a href="#jobid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3236,7 +3283,7 @@ Conflicts with `query_file_uri`
 <a href="#job_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3290,7 +3337,7 @@ Conflicts with `query_file_uri`
 <a href="#maxfailuresperhour_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failures<wbr>Per<wbr>Hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3298,7 +3345,7 @@ Conflicts with `query_file_uri`
 <a href="#maxfailurestotal_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failures<wbr>Total</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3310,7 +3357,7 @@ Conflicts with `query_file_uri`
 <a href="#max_failures_per_hour_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failures_<wbr>per_<wbr>hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3318,7 +3365,7 @@ Conflicts with `query_file_uri`
 <a href="#max_failures_total_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failures_<wbr>total</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3482,7 +3529,7 @@ Conflicts with `query_file_uri`
 <a href="#archiveuris_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3491,7 +3538,7 @@ Conflicts with `query_file_uri`
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3500,7 +3547,7 @@ Conflicts with `query_file_uri`
 <a href="#fileuris_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3509,7 +3556,7 @@ Conflicts with `query_file_uri`
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3518,7 +3565,7 @@ Conflicts with `query_file_uri`
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparkconfigloggingconfig">Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobsparkconfigloggingconfig">pulumi.<wbr>Input<Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3526,7 +3573,7 @@ Conflicts with `query_file_uri`
 <a href="#mainclass_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3535,7 +3582,7 @@ Conflicts with `query_file_uri`
 <a href="#mainjarfileuri_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Jar<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'. Conflicts with `main_class`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3544,7 +3591,7 @@ Conflicts with `query_file_uri`
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
 {{% /md %}}</dd></dl>
@@ -3557,7 +3604,7 @@ Conflicts with `query_file_uri`
 <a href="#archive_uris_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3566,7 +3613,7 @@ Conflicts with `query_file_uri`
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3575,7 +3622,7 @@ Conflicts with `query_file_uri`
 <a href="#file_uris_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3584,7 +3631,7 @@ Conflicts with `query_file_uri`
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3593,7 +3640,7 @@ Conflicts with `query_file_uri`
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparkconfigloggingconfig">Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobsparkconfigloggingconfig">Input[Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3601,7 +3648,7 @@ Conflicts with `query_file_uri`
 <a href="#main_class_python" style="color: inherit; text-decoration: inherit;">main_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3610,7 +3657,7 @@ Conflicts with `query_file_uri`
 <a href="#main_jar_file_uri_python" style="color: inherit; text-decoration: inherit;">main_<wbr>jar_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'. Conflicts with `main_class`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3619,7 +3666,7 @@ Conflicts with `query_file_uri`
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
 {{% /md %}}</dd></dl>
@@ -3658,7 +3705,7 @@ Conflicts with `query_file_uri`
 <a href="#driverloglevels_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3670,7 +3717,7 @@ Conflicts with `query_file_uri`
 <a href="#driver_log_levels_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>log_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3802,7 +3849,7 @@ Conflicts with `query_file_uri`
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3811,7 +3858,7 @@ Conflicts with `query_file_uri`
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">pulumi.<wbr>Input<Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3819,7 +3866,7 @@ Conflicts with `query_file_uri`
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3828,7 +3875,7 @@ Conflicts with `query_file_uri`
 <a href="#queryfileuri_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.
 Conflicts with `query_list`
@@ -3838,7 +3885,7 @@ Conflicts with `query_list`
 <a href="#querylists_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
@@ -3848,7 +3895,7 @@ Conflicts with `query_file_uri`
 <a href="#scriptvariables_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
 {{% /md %}}</dd></dl>
@@ -3861,7 +3908,7 @@ Conflicts with `query_file_uri`
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3870,7 +3917,7 @@ Conflicts with `query_file_uri`
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">Input[Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3878,7 +3925,7 @@ Conflicts with `query_file_uri`
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3887,7 +3934,7 @@ Conflicts with `query_file_uri`
 <a href="#query_file_uri_python" style="color: inherit; text-decoration: inherit;">query_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.
 Conflicts with `query_list`
@@ -3897,7 +3944,7 @@ Conflicts with `query_list`
 <a href="#query_lists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
@@ -3907,7 +3954,7 @@ Conflicts with `query_file_uri`
 <a href="#script_variables_python" style="color: inherit; text-decoration: inherit;">script_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
 {{% /md %}}</dd></dl>
@@ -3946,7 +3993,7 @@ Conflicts with `query_file_uri`
 <a href="#driverloglevels_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3958,7 +4005,7 @@ Conflicts with `query_file_uri`
 <a href="#driver_log_levels_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>log_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4044,7 +4091,7 @@ Conflicts with `query_file_uri`
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4052,7 +4099,7 @@ Conflicts with `query_file_uri`
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4060,7 +4107,7 @@ Conflicts with `query_file_uri`
 <a href="#statestarttime_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4068,7 +4115,7 @@ Conflicts with `query_file_uri`
 <a href="#substate_nodejs" style="color: inherit; text-decoration: inherit;">substate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4080,7 +4127,7 @@ Conflicts with `query_file_uri`
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4088,7 +4135,7 @@ Conflicts with `query_file_uri`
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4096,7 +4143,7 @@ Conflicts with `query_file_uri`
 <a href="#state_start_time_python" style="color: inherit; text-decoration: inherit;">state_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4104,7 +4151,7 @@ Conflicts with `query_file_uri`
 <a href="#substate_python" style="color: inherit; text-decoration: inherit;">substate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

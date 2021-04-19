@@ -92,8 +92,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -252,8 +252,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -345,19 +345,42 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket_policy_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketCorArgs]]</span> = None<span class="p">, </span><span class="nx">default_event_based_hold</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[BucketEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketLifecycleRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[BucketLoggingArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requester_pays</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[BucketRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uniform_bucket_level_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[BucketVersioningArgs]</span> = None<span class="p">, </span><span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[BucketWebsiteArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">bucket_policy_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BucketCorArgs]]]]</span> = None<span class="p">,</span>
+           <span class="nx">default_event_based_hold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketEncryptionArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BucketLifecycleRuleArgs]]]]</span> = None<span class="p">,</span>
+           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketLoggingArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">requester_pays</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketRetentionPolicyArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">uniform_bucket_level_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketVersioningArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketWebsiteArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[BucketArgs]</a></span> = None<span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBucket</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bucket</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBucket</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bucket</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -392,22 +415,32 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BucketArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -416,7 +449,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -440,7 +473,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -813,7 +846,7 @@ is not provided, the provider project is used.
 <a href="#bucketpolicyonly_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Policy<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket. This field will be removed in the next major release of the provider.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the uniform_bucket_level_access as this field has been renamed by Google.{{% /md %}}</p></dd><dt class="property-optional"
@@ -822,7 +855,7 @@ is not provided, the provider project is used.
 <a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcor">Bucket<wbr>Cor[]</a></span>
+        <span class="property-type"><a href="#bucketcor">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Cor<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -831,7 +864,7 @@ is not provided, the provider project is used.
 <a href="#defaulteventbasedhold_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Event<wbr>Based<wbr>Hold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -839,7 +872,7 @@ is not provided, the provider project is used.
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#bucketencryption">pulumi.<wbr>Input<Bucket<wbr>Encryption<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The bucket's encryption configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -848,7 +881,7 @@ is not provided, the provider project is used.
 <a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When deleting a bucket, this
 boolean option will delete all contained objects. If you try to delete a
@@ -859,7 +892,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -868,7 +901,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#lifecyclerules_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">Bucket<wbr>Lifecycle<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -877,7 +910,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 {{% /md %}}</dd><dt class="property-optional"
@@ -886,7 +919,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging</a></span>
+        <span class="property-type"><a href="#bucketlogging">pulumi.<wbr>Input<Bucket<wbr>Logging<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -895,7 +928,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -904,7 +937,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -914,7 +947,7 @@ is not provided, the provider project is used.
 <a href="#requesterpays_nodejs" style="color: inherit; text-decoration: inherit;">requester<wbr>Pays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -923,7 +956,7 @@ is not provided, the provider project is used.
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#bucketretentionpolicy">pulumi.<wbr>Input<Bucket<wbr>Retention<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -932,7 +965,7 @@ is not provided, the provider project is used.
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -941,7 +974,7 @@ is not provided, the provider project is used.
 <a href="#uniformbucketlevelaccess_nodejs" style="color: inherit; text-decoration: inherit;">uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -950,7 +983,7 @@ is not provided, the provider project is used.
 <a href="#versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning</a></span>
+        <span class="property-type"><a href="#bucketversioning">pulumi.<wbr>Input<Bucket<wbr>Versioning<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -959,7 +992,7 @@ is not provided, the provider project is used.
 <a href="#website_nodejs" style="color: inherit; text-decoration: inherit;">website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website</a></span>
+        <span class="property-type"><a href="#bucketwebsite">pulumi.<wbr>Input<Bucket<wbr>Website<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration if the bucket acts as a website. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -972,7 +1005,7 @@ is not provided, the provider project is used.
 <a href="#bucket_policy_only_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>policy_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket. This field will be removed in the next major release of the provider.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the uniform_bucket_level_access as this field has been renamed by Google.{{% /md %}}</p></dd><dt class="property-optional"
@@ -981,7 +1014,7 @@ is not provided, the provider project is used.
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcor">Sequence[Bucket<wbr>Cor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketcor">Input[Bucket<wbr>Cor<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -990,7 +1023,7 @@ is not provided, the provider project is used.
 <a href="#default_event_based_hold_python" style="color: inherit; text-decoration: inherit;">default_<wbr>event_<wbr>based_<wbr>hold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -998,7 +1031,7 @@ is not provided, the provider project is used.
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketencryption">Input[Bucket<wbr>Encryption<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's encryption configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1007,7 +1040,7 @@ is not provided, the provider project is used.
 <a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When deleting a bucket, this
 boolean option will delete all contained objects. If you try to delete a
@@ -1018,7 +1051,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1027,7 +1060,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">Input[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1036,7 +1069,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1045,7 +1078,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketlogging">Input[Bucket<wbr>Logging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1054,7 +1087,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1063,7 +1096,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -1073,7 +1106,7 @@ is not provided, the provider project is used.
 <a href="#requester_pays_python" style="color: inherit; text-decoration: inherit;">requester_<wbr>pays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1082,7 +1115,7 @@ is not provided, the provider project is used.
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketretentionpolicy">Input[Bucket<wbr>Retention<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1091,7 +1124,7 @@ is not provided, the provider project is used.
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1100,7 +1133,7 @@ is not provided, the provider project is used.
 <a href="#uniform_bucket_level_access_python" style="color: inherit; text-decoration: inherit;">uniform_<wbr>bucket_<wbr>level_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1109,7 +1142,7 @@ is not provided, the provider project is used.
 <a href="#versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketversioning">Input[Bucket<wbr>Versioning<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1118,7 +1151,7 @@ is not provided, the provider project is used.
 <a href="#website_python" style="color: inherit; text-decoration: inherit;">website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketwebsite">Input[Bucket<wbr>Website<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration if the bucket acts as a website. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -1259,20 +1292,41 @@ Get an existing Bucket resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">BucketState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Bucket</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">BucketState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Bucket</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket_policy_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketCorArgs]]</span> = None<span class="p">, </span><span class="nx">default_event_based_hold</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[BucketEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketLifecycleRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[BucketLoggingArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requester_pays</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[BucketRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uniform_bucket_level_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[BucketVersioningArgs]</span> = None<span class="p">, </span><span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[BucketWebsiteArgs]</span> = None<span class="p">) -&gt;</span> Bucket</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">bucket_policy_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BucketCorArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">default_event_based_hold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketEncryptionArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BucketLifecycleRuleArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketLoggingArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">requester_pays</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketRetentionPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">uniform_bucket_level_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketVersioningArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BucketWebsiteArgs]]</span> = None<span class="p">) -&gt;</span> Bucket</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucket<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">BucketState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bucket</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucket<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">BucketState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bucket</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Bucket</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">BucketState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Bucket</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">BucketState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1735,7 +1789,7 @@ is not provided, the provider project is used.
 <a href="#state_bucketpolicyonly_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Policy<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket. This field will be removed in the next major release of the provider.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the uniform_bucket_level_access as this field has been renamed by Google.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1744,7 +1798,7 @@ is not provided, the provider project is used.
 <a href="#state_cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcor">Bucket<wbr>Cor[]</a></span>
+        <span class="property-type"><a href="#bucketcor">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Cor<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1753,7 +1807,7 @@ is not provided, the provider project is used.
 <a href="#state_defaulteventbasedhold_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Event<wbr>Based<wbr>Hold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1761,7 +1815,7 @@ is not provided, the provider project is used.
 <a href="#state_encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#bucketencryption">pulumi.<wbr>Input<Bucket<wbr>Encryption<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The bucket's encryption configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1770,7 +1824,7 @@ is not provided, the provider project is used.
 <a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When deleting a bucket, this
 boolean option will delete all contained objects. If you try to delete a
@@ -1781,7 +1835,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1790,7 +1844,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#state_lifecyclerules_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">Bucket<wbr>Lifecycle<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1799,7 +1853,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1808,7 +1862,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#state_logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging</a></span>
+        <span class="property-type"><a href="#bucketlogging">pulumi.<wbr>Input<Bucket<wbr>Logging<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1817,7 +1871,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1826,7 +1880,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -1836,7 +1890,7 @@ is not provided, the provider project is used.
 <a href="#state_requesterpays_nodejs" style="color: inherit; text-decoration: inherit;">requester<wbr>Pays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1845,7 +1899,7 @@ is not provided, the provider project is used.
 <a href="#state_retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#bucketretentionpolicy">pulumi.<wbr>Input<Bucket<wbr>Retention<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1854,7 +1908,7 @@ is not provided, the provider project is used.
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1863,7 +1917,7 @@ is not provided, the provider project is used.
 <a href="#state_storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1872,7 +1926,7 @@ is not provided, the provider project is used.
 <a href="#state_uniformbucketlevelaccess_nodejs" style="color: inherit; text-decoration: inherit;">uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1881,7 +1935,7 @@ is not provided, the provider project is used.
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The base URL of the bucket, in the format `gs://<bucket-name>`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1890,7 +1944,7 @@ is not provided, the provider project is used.
 <a href="#state_versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning</a></span>
+        <span class="property-type"><a href="#bucketversioning">pulumi.<wbr>Input<Bucket<wbr>Versioning<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1899,7 +1953,7 @@ is not provided, the provider project is used.
 <a href="#state_website_nodejs" style="color: inherit; text-decoration: inherit;">website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website</a></span>
+        <span class="property-type"><a href="#bucketwebsite">pulumi.<wbr>Input<Bucket<wbr>Website<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration if the bucket acts as a website. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -1912,7 +1966,7 @@ is not provided, the provider project is used.
 <a href="#state_bucket_policy_only_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>policy_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket. This field will be removed in the next major release of the provider.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the uniform_bucket_level_access as this field has been renamed by Google.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1921,7 +1975,7 @@ is not provided, the provider project is used.
 <a href="#state_cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcor">Sequence[Bucket<wbr>Cor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketcor">Input[Bucket<wbr>Cor<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1930,7 +1984,7 @@ is not provided, the provider project is used.
 <a href="#state_default_event_based_hold_python" style="color: inherit; text-decoration: inherit;">default_<wbr>event_<wbr>based_<wbr>hold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1938,7 +1992,7 @@ is not provided, the provider project is used.
 <a href="#state_encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketencryption">Input[Bucket<wbr>Encryption<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's encryption configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1947,7 +2001,7 @@ is not provided, the provider project is used.
 <a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When deleting a bucket, this
 boolean option will delete all contained objects. If you try to delete a
@@ -1958,7 +2012,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1967,7 +2021,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#state_lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">Input[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1976,7 +2030,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1985,7 +2039,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#state_logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketlogging">Input[Bucket<wbr>Logging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1994,7 +2048,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2003,7 +2057,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -2013,7 +2067,7 @@ is not provided, the provider project is used.
 <a href="#state_requester_pays_python" style="color: inherit; text-decoration: inherit;">requester_<wbr>pays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2022,7 +2076,7 @@ is not provided, the provider project is used.
 <a href="#state_retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketretentionpolicy">Input[Bucket<wbr>Retention<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2031,7 +2085,7 @@ is not provided, the provider project is used.
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2040,7 +2094,7 @@ is not provided, the provider project is used.
 <a href="#state_storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2049,7 +2103,7 @@ is not provided, the provider project is used.
 <a href="#state_uniform_bucket_level_access_python" style="color: inherit; text-decoration: inherit;">uniform_<wbr>bucket_<wbr>level_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2058,7 +2112,7 @@ is not provided, the provider project is used.
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The base URL of the bucket, in the format `gs://<bucket-name>`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2067,7 +2121,7 @@ is not provided, the provider project is used.
 <a href="#state_versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketversioning">Input[Bucket<wbr>Versioning<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2076,7 +2130,7 @@ is not provided, the provider project is used.
 <a href="#state_website_python" style="color: inherit; text-decoration: inherit;">website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketwebsite">Input[Bucket<wbr>Website<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration if the bucket acts as a website. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -2180,7 +2234,7 @@ is not provided, the provider project is used.
 <a href="#maxageseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The value, in seconds, to return in the [Access-Control-Max-Age header](https://www.w3.org/TR/cors/#access-control-max-age-response-header) used in preflight responses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2189,7 +2243,7 @@ is not provided, the provider project is used.
 <a href="#methods_nodejs" style="color: inherit; text-decoration: inherit;">methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2198,7 +2252,7 @@ is not provided, the provider project is used.
 <a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of [Origins](https://tools.ietf.org/html/rfc6454) eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2207,7 +2261,7 @@ is not provided, the provider project is used.
 <a href="#responseheaders_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of HTTP headers other than the [simple response headers](https://www.w3.org/TR/cors/#simple-response-header) to give permission for the user-agent to share across domains.
 {{% /md %}}</dd></dl>
@@ -2220,7 +2274,7 @@ is not provided, the provider project is used.
 <a href="#max_age_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The value, in seconds, to return in the [Access-Control-Max-Age header](https://www.w3.org/TR/cors/#access-control-max-age-response-header) used in preflight responses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2229,7 +2283,7 @@ is not provided, the provider project is used.
 <a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2238,7 +2292,7 @@ is not provided, the provider project is used.
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of [Origins](https://tools.ietf.org/html/rfc6454) eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2247,7 +2301,7 @@ is not provided, the provider project is used.
 <a href="#response_headers_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of HTTP headers other than the [simple response headers](https://www.w3.org/TR/cors/#simple-response-header) to give permission for the user-agent to share across domains.
 {{% /md %}}</dd></dl>
@@ -2286,7 +2340,7 @@ is not provided, the provider project is used.
 <a href="#defaultkmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2298,7 +2352,7 @@ is not provided, the provider project is used.
 <a href="#default_kms_key_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2356,7 +2410,7 @@ is not provided, the provider project is used.
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruleaction">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Action</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleaction">pulumi.<wbr>Input<Bucket<wbr>Lifecycle<wbr>Rule<wbr>Action<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Lifecycle Rule's action configuration. A single block of this type is supported. Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2365,7 +2419,7 @@ is not provided, the provider project is used.
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulecondition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Condition</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerulecondition">pulumi.<wbr>Input<Bucket<wbr>Lifecycle<wbr>Rule<wbr>Condition<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -2378,7 +2432,7 @@ is not provided, the provider project is used.
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruleaction">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleaction">Input[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Lifecycle Rule's action configuration. A single block of this type is supported. Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2387,7 +2441,7 @@ is not provided, the provider project is used.
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulecondition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerulecondition">Input[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -2446,7 +2500,7 @@ is not provided, the provider project is used.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the action of this Lifecycle Rule. Supported values include: `Delete` and `SetStorageClass`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2455,7 +2509,7 @@ is not provided, the provider project is used.
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 {{% /md %}}</dd></dl>
@@ -2468,7 +2522,7 @@ is not provided, the provider project is used.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the action of this Lifecycle Rule. Supported values include: `Delete` and `SetStorageClass`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2477,7 +2531,7 @@ is not provided, the provider project is used.
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 {{% /md %}}</dd></dl>
@@ -2662,7 +2716,7 @@ is not provided, the provider project is used.
 <a href="#age_nodejs" style="color: inherit; text-decoration: inherit;">age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Minimum age of an object in days to satisfy this condition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2671,7 +2725,7 @@ is not provided, the provider project is used.
 <a href="#createdbefore_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2680,7 +2734,7 @@ is not provided, the provider project is used.
 <a href="#customtimebefore_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Time<wbr>Before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2689,7 +2743,7 @@ is not provided, the provider project is used.
 <a href="#dayssincecustomtime_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Since<wbr>Custom<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Date in RFC 3339 (e.g. `2017-06-13`) when an object's Custom-Time metadata is earlier than the date specified in this condition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2698,7 +2752,7 @@ is not provided, the provider project is used.
 <a href="#dayssincenoncurrenttime_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Relevant only for versioned objects. Number of days elapsed since the noncurrent timestamp of an object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2707,7 +2761,7 @@ is not provided, the provider project is used.
 <a href="#matchesstorageclasses_nodejs" style="color: inherit; text-decoration: inherit;">matches<wbr>Storage<wbr>Classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}[Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects to satisfy this condition. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`, `STANDARD`, `DURABLE_REDUCED_AVAILABILITY`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2716,7 +2770,7 @@ is not provided, the provider project is used.
 <a href="#noncurrenttimebefore_nodejs" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Time<wbr>Before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Relevant only for versioned objects. The date in RFC 3339 (e.g. `2017-06-13`) when the object became nonconcurrent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2725,7 +2779,7 @@ is not provided, the provider project is used.
 <a href="#numnewerversions_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Newer<wbr>Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2734,7 +2788,7 @@ is not provided, the provider project is used.
 <a href="#withstate_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: `"LIVE"`, `"ARCHIVED"`, `"ANY"`.
 {{% /md %}}</dd></dl>
@@ -2747,7 +2801,7 @@ is not provided, the provider project is used.
 <a href="#age_python" style="color: inherit; text-decoration: inherit;">age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Minimum age of an object in days to satisfy this condition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2756,7 +2810,7 @@ is not provided, the provider project is used.
 <a href="#created_before_python" style="color: inherit; text-decoration: inherit;">created_<wbr>before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2765,7 +2819,7 @@ is not provided, the provider project is used.
 <a href="#custom_time_before_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>time_<wbr>before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2774,7 +2828,7 @@ is not provided, the provider project is used.
 <a href="#days_since_custom_time_python" style="color: inherit; text-decoration: inherit;">days_<wbr>since_<wbr>custom_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Date in RFC 3339 (e.g. `2017-06-13`) when an object's Custom-Time metadata is earlier than the date specified in this condition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2783,7 +2837,7 @@ is not provided, the provider project is used.
 <a href="#days_since_noncurrent_time_python" style="color: inherit; text-decoration: inherit;">days_<wbr>since_<wbr>noncurrent_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Relevant only for versioned objects. Number of days elapsed since the noncurrent timestamp of an object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2792,7 +2846,7 @@ is not provided, the provider project is used.
 <a href="#matches_storage_classes_python" style="color: inherit; text-decoration: inherit;">matches_<wbr>storage_<wbr>classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}[Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects to satisfy this condition. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`, `STANDARD`, `DURABLE_REDUCED_AVAILABILITY`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2801,7 +2855,7 @@ is not provided, the provider project is used.
 <a href="#noncurrent_time_before_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>time_<wbr>before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Relevant only for versioned objects. The date in RFC 3339 (e.g. `2017-06-13`) when the object became nonconcurrent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2810,7 +2864,7 @@ is not provided, the provider project is used.
 <a href="#num_newer_versions_python" style="color: inherit; text-decoration: inherit;">num_<wbr>newer_<wbr>versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2819,7 +2873,7 @@ is not provided, the provider project is used.
 <a href="#with_state_python" style="color: inherit; text-decoration: inherit;">with_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: `"LIVE"`, `"ARCHIVED"`, `"ANY"`.
 {{% /md %}}</dd></dl>
@@ -2880,7 +2934,7 @@ by default GCS sets this to this bucket's name.
 <a href="#logbucket_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The bucket that will receive log objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2889,7 +2943,7 @@ by default GCS sets this to this bucket's name.
 <a href="#logobjectprefix_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Object<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The object prefix for log objects. If it's not provided,
 by default GCS sets this to this bucket's name.
@@ -2903,7 +2957,7 @@ by default GCS sets this to this bucket's name.
 <a href="#log_bucket_python" style="color: inherit; text-decoration: inherit;">log_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The bucket that will receive log objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2912,7 +2966,7 @@ by default GCS sets this to this bucket's name.
 <a href="#log_object_prefix_python" style="color: inherit; text-decoration: inherit;">log_<wbr>object_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The object prefix for log objects. If it's not provided,
 by default GCS sets this to this bucket's name.
@@ -2972,7 +3026,7 @@ by default GCS sets this to this bucket's name.
 <a href="#retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 2,147,483,647 seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2981,7 +3035,7 @@ by default GCS sets this to this bucket's name.
 <a href="#islocked_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Locked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set to `true`, the bucket will be [locked](https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket) and permanently restrict edits to the bucket's retention policy.  Caution: Locking a bucket is an irreversible action.
 {{% /md %}}</dd></dl>
@@ -2994,7 +3048,7 @@ by default GCS sets this to this bucket's name.
 <a href="#retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 2,147,483,647 seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3003,7 +3057,7 @@ by default GCS sets this to this bucket's name.
 <a href="#is_locked_python" style="color: inherit; text-decoration: inherit;">is_<wbr>locked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the bucket will be [locked](https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket) and permanently restrict edits to the bucket's retention policy.  Caution: Locking a bucket is an irreversible action.
 {{% /md %}}</dd></dl>
@@ -3044,7 +3098,7 @@ by default GCS sets this to this bucket's name.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}While set to `true`, versioning is fully enabled for this bucket.
 {{% /md %}}</dd></dl>
@@ -3057,7 +3111,7 @@ by default GCS sets this to this bucket's name.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}While set to `true`, versioning is fully enabled for this bucket.
 {{% /md %}}</dd></dl>
@@ -3120,7 +3174,7 @@ resource is not found.
 <a href="#mainpagesuffix_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Page<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Behaves as the bucket's directory index where
 missing objects are treated as potential directories.
@@ -3130,7 +3184,7 @@ missing objects are treated as potential directories.
 <a href="#notfoundpage_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Found<wbr>Page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The custom object to return when a requested
 resource is not found.
@@ -3144,7 +3198,7 @@ resource is not found.
 <a href="#main_page_suffix_python" style="color: inherit; text-decoration: inherit;">main_<wbr>page_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Behaves as the bucket's directory index where
 missing objects are treated as potential directories.
@@ -3154,7 +3208,7 @@ missing objects are treated as potential directories.
 <a href="#not_found_page_python" style="color: inherit; text-decoration: inherit;">not_<wbr>found_<wbr>page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The custom object to return when a requested
 resource is not found.

@@ -69,8 +69,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/datacatalog"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -184,8 +184,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/datacatalog"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -343,8 +343,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/datacatalog"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -508,19 +508,35 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Entry</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EntryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Entry</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EntryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Entry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entry_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entry_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gcs_fileset_spec</span><span class="p">:</span> <span class="nx">Optional[EntryGcsFilesetSpecArgs]</span> = None<span class="p">, </span><span class="nx">linked_resource</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_specified_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_specified_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Entry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">entry_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">entry_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">gcs_fileset_spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EntryGcsFilesetSpecArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">linked_resource</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">user_specified_system</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">user_specified_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Entry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EntryArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEntry</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EntryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Entry</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEntry</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EntryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Entry</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Entry</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EntryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Entry</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EntryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -555,22 +571,32 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">EntryArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -579,7 +605,7 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -603,7 +629,7 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -882,7 +908,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#entrygroup_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the entry group this entry is in.
 {{% /md %}}</dd><dt class="property-required"
@@ -891,7 +917,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#entryid_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The id of the entry to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -900,7 +926,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Entry description, which can consist of several sentences or paragraphs that describe entry contents.
 {{% /md %}}</dd><dt class="property-optional"
@@ -909,7 +935,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Display information such as title and description. A short name to identify the entry,
 for example, "Analytics Data - Jan 2011".
@@ -919,7 +945,7 @@ for example, "Analytics Data - Jan 2011".
 <a href="#gcsfilesetspec_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Fileset<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrygcsfilesetspec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrygcsfilesetspec">pulumi.<wbr>Input<Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
 Structure is documented below.
@@ -929,7 +955,7 @@ Structure is documented below.
 <a href="#linkedresource_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource this metadata entry refers to.
 For Google Cloud Platform resources, linkedResource is the full name of the resource.
@@ -943,7 +969,7 @@ this field is optional and defaults to an empty string.
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Schema of the entry (e.g. BigQuery, GoogleSQL, Avro schema), as a json string. An entry might not have any schema
 attached to it. See
@@ -955,7 +981,7 @@ for what fields this schema can contain.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
@@ -966,7 +992,7 @@ Possible values are `FILESET`.
 <a href="#userspecifiedsystem_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Specified<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog does not integrate with.
 userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers,
@@ -977,7 +1003,7 @@ and underscores; are case insensitive; must be at least 1 character and at most 
 <a href="#userspecifiedtype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Specified<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Entry type if it does not fit any of the input-allowed values listed in EntryType enum above.
 When creating an entry, users should check the enum values first, if nothing matches the entry
@@ -994,7 +1020,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#entry_group_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the entry group this entry is in.
 {{% /md %}}</dd><dt class="property-required"
@@ -1003,7 +1029,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#entry_id_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The id of the entry to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1012,7 +1038,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Entry description, which can consist of several sentences or paragraphs that describe entry contents.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1021,7 +1047,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Display information such as title and description. A short name to identify the entry,
 for example, "Analytics Data - Jan 2011".
@@ -1031,7 +1057,7 @@ for example, "Analytics Data - Jan 2011".
 <a href="#gcs_fileset_spec_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>fileset_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrygcsfilesetspec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#entrygcsfilesetspec">Input[Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
 Structure is documented below.
@@ -1041,7 +1067,7 @@ Structure is documented below.
 <a href="#linked_resource_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource this metadata entry refers to.
 For Google Cloud Platform resources, linkedResource is the full name of the resource.
@@ -1055,7 +1081,7 @@ this field is optional and defaults to an empty string.
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Schema of the entry (e.g. BigQuery, GoogleSQL, Avro schema), as a json string. An entry might not have any schema
 attached to it. See
@@ -1067,7 +1093,7 @@ for what fields this schema can contain.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
@@ -1078,7 +1104,7 @@ Possible values are `FILESET`.
 <a href="#user_specified_system_python" style="color: inherit; text-decoration: inherit;">user_<wbr>specified_<wbr>system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog does not integrate with.
 userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers,
@@ -1089,7 +1115,7 @@ and underscores; are case insensitive; must be at least 1 character and at most 
 <a href="#user_specified_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>specified_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Entry type if it does not fit any of the input-allowed values listed in EntryType enum above.
 When creating an entry, users should check the enum values first, if nothing matches the entry
@@ -1318,20 +1344,36 @@ Get an existing Entry resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">EntryState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Entry</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">EntryState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Entry</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bigquery_date_sharded_specs</span><span class="p">:</span> <span class="nx">Optional[Sequence[EntryBigqueryDateShardedSpecArgs]]</span> = None<span class="p">, </span><span class="nx">bigquery_table_specs</span><span class="p">:</span> <span class="nx">Optional[Sequence[EntryBigqueryTableSpecArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entry_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entry_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gcs_fileset_spec</span><span class="p">:</span> <span class="nx">Optional[EntryGcsFilesetSpecArgs]</span> = None<span class="p">, </span><span class="nx">integrated_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linked_resource</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_specified_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_specified_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Entry</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">bigquery_date_sharded_specs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EntryBigqueryDateShardedSpecArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">bigquery_table_specs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EntryBigqueryTableSpecArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">entry_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">entry_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">gcs_fileset_spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EntryGcsFilesetSpecArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">integrated_system</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">linked_resource</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">user_specified_system</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">user_specified_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Entry</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEntry<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">EntryState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Entry</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEntry<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">EntryState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Entry</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Entry</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">EntryState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Entry</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">EntryState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1742,7 +1784,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#state_bigquerydateshardedspecs_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Date<wbr>Sharded<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerydateshardedspec">Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec[]</a></span>
+        <span class="property-type"><a href="#entrybigquerydateshardedspec">pulumi.<wbr>Input<pulumi.<wbr>Input<Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
@@ -1752,7 +1794,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
 <a href="#state_bigquerytablespecs_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Table<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec[]</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespec">pulumi.<wbr>Input<pulumi.<wbr>Input<Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1761,7 +1803,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Entry description, which can consist of several sentences or paragraphs that describe entry contents.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1770,7 +1812,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Display information such as title and description. A short name to identify the entry,
 for example, "Analytics Data - Jan 2011".
@@ -1780,7 +1822,7 @@ for example, "Analytics Data - Jan 2011".
 <a href="#state_entrygroup_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the entry group this entry is in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1789,7 +1831,7 @@ for example, "Analytics Data - Jan 2011".
 <a href="#state_entryid_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The id of the entry to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1798,7 +1840,7 @@ for example, "Analytics Data - Jan 2011".
 <a href="#state_gcsfilesetspec_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Fileset<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrygcsfilesetspec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrygcsfilesetspec">pulumi.<wbr>Input<Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
 Structure is documented below.
@@ -1808,7 +1850,7 @@ Structure is documented below.
 <a href="#state_integratedsystem_nodejs" style="color: inherit; text-decoration: inherit;">integrated<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1817,7 +1859,7 @@ Structure is documented below.
 <a href="#state_linkedresource_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource this metadata entry refers to.
 For Google Cloud Platform resources, linkedResource is the full name of the resource.
@@ -1831,7 +1873,7 @@ this field is optional and defaults to an empty string.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Data Catalog resource name of the entry in URL format. Example:
 projects/{project_id}/locations/{location}/entryGroups/{entryGroupId}/entries/{entryId}. Note that this Entry and its
@@ -1842,7 +1884,7 @@ child resources may not actually be stored in the location in this name.
 <a href="#state_schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Schema of the entry (e.g. BigQuery, GoogleSQL, Avro schema), as a json string. An entry might not have any schema
 attached to it. See
@@ -1854,7 +1896,7 @@ for what fields this schema can contain.
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
@@ -1865,7 +1907,7 @@ Possible values are `FILESET`.
 <a href="#state_userspecifiedsystem_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Specified<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog does not integrate with.
 userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers,
@@ -1876,7 +1918,7 @@ and underscores; are case insensitive; must be at least 1 character and at most 
 <a href="#state_userspecifiedtype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Specified<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Entry type if it does not fit any of the input-allowed values listed in EntryType enum above.
 When creating an entry, users should check the enum values first, if nothing matches the entry
@@ -1893,7 +1935,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#state_bigquery_date_sharded_specs_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>date_<wbr>sharded_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerydateshardedspec">Sequence[Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#entrybigquerydateshardedspec">Input[Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
@@ -1903,7 +1945,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
 <a href="#state_bigquery_table_specs_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>table_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespec">Sequence[Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespec">Input[Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1912,7 +1954,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Entry description, which can consist of several sentences or paragraphs that describe entry contents.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1921,7 +1963,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Display information such as title and description. A short name to identify the entry,
 for example, "Analytics Data - Jan 2011".
@@ -1931,7 +1973,7 @@ for example, "Analytics Data - Jan 2011".
 <a href="#state_entry_group_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the entry group this entry is in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1940,7 +1982,7 @@ for example, "Analytics Data - Jan 2011".
 <a href="#state_entry_id_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The id of the entry to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1949,7 +1991,7 @@ for example, "Analytics Data - Jan 2011".
 <a href="#state_gcs_fileset_spec_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>fileset_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrygcsfilesetspec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#entrygcsfilesetspec">Input[Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
 Structure is documented below.
@@ -1959,7 +2001,7 @@ Structure is documented below.
 <a href="#state_integrated_system_python" style="color: inherit; text-decoration: inherit;">integrated_<wbr>system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1968,7 +2010,7 @@ Structure is documented below.
 <a href="#state_linked_resource_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource this metadata entry refers to.
 For Google Cloud Platform resources, linkedResource is the full name of the resource.
@@ -1982,7 +2024,7 @@ this field is optional and defaults to an empty string.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Data Catalog resource name of the entry in URL format. Example:
 projects/{project_id}/locations/{location}/entryGroups/{entryGroupId}/entries/{entryId}. Note that this Entry and its
@@ -1993,7 +2035,7 @@ child resources may not actually be stored in the location in this name.
 <a href="#state_schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Schema of the entry (e.g. BigQuery, GoogleSQL, Avro schema), as a json string. An entry might not have any schema
 attached to it. See
@@ -2005,7 +2047,7 @@ for what fields this schema can contain.
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
@@ -2016,7 +2058,7 @@ Possible values are `FILESET`.
 <a href="#state_user_specified_system_python" style="color: inherit; text-decoration: inherit;">user_<wbr>specified_<wbr>system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog does not integrate with.
 userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers,
@@ -2027,7 +2069,7 @@ and underscores; are case insensitive; must be at least 1 character and at most 
 <a href="#state_user_specified_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>specified_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Entry type if it does not fit any of the input-allowed values listed in EntryType enum above.
 When creating an entry, users should check the enum values first, if nothing matches the entry
@@ -2111,7 +2153,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2119,7 +2161,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#shardcount_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2127,7 +2169,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#tableprefix_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2139,7 +2181,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2147,7 +2189,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#shard_count_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2155,7 +2197,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#table_prefix_python" style="color: inherit; text-decoration: inherit;">table_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2225,7 +2267,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#tablesourcetype_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Source<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2233,7 +2275,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#tablespecs_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespectablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec[]</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespectablespec">pulumi.<wbr>Input<pulumi.<wbr>Input<Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2241,7 +2283,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#viewspecs_nodejs" style="color: inherit; text-decoration: inherit;">view<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespecviewspec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec[]</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespecviewspec">pulumi.<wbr>Input<pulumi.<wbr>Input<Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2253,7 +2295,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#table_source_type_python" style="color: inherit; text-decoration: inherit;">table_<wbr>source_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2261,7 +2303,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#table_specs_python" style="color: inherit; text-decoration: inherit;">table_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespectablespec">Sequence[Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespectablespec">Input[Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2269,7 +2311,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#view_specs_python" style="color: inherit; text-decoration: inherit;">view_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespecviewspec">Sequence[Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespecviewspec">Input[Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2307,7 +2349,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#groupedentry_nodejs" style="color: inherit; text-decoration: inherit;">grouped<wbr>Entry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2319,7 +2361,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#grouped_entry_python" style="color: inherit; text-decoration: inherit;">grouped_<wbr>entry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2357,7 +2399,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#viewquery_nodejs" style="color: inherit; text-decoration: inherit;">view<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2369,7 +2411,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#view_query_python" style="color: inherit; text-decoration: inherit;">view_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2451,7 +2493,7 @@ Structure is documented below.
 <a href="#filepatterns_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Patterns to identify a set of files in Google Cloud Storage.
 See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames)
@@ -2470,7 +2512,7 @@ for more information. Note that bucket wildcards are currently not supported. Ex
 <a href="#samplegcsfilespecs_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Gcs<wbr>File<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrygcsfilesetspecsamplegcsfilespec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Sample<wbr>Gcs<wbr>File<wbr>Spec[]</a></span>
+        <span class="property-type"><a href="#entrygcsfilesetspecsamplegcsfilespec">pulumi.<wbr>Input<pulumi.<wbr>Input<Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Sample<wbr>Gcs<wbr>File<wbr>Spec<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}-
 Sample files contained in this fileset, not all files contained in this fileset are represented here.
@@ -2485,7 +2527,7 @@ Structure is documented below.
 <a href="#file_patterns_python" style="color: inherit; text-decoration: inherit;">file_<wbr>patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Patterns to identify a set of files in Google Cloud Storage.
 See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames)
@@ -2504,7 +2546,7 @@ for more information. Note that bucket wildcards are currently not supported. Ex
 <a href="#sample_gcs_file_specs_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>gcs_<wbr>file_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrygcsfilesetspecsamplegcsfilespec">Sequence[Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Sample<wbr>Gcs<wbr>File<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#entrygcsfilesetspecsamplegcsfilespec">Input[Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Sample<wbr>Gcs<wbr>File<wbr>Spec<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}-
 Sample files contained in this fileset, not all files contained in this fileset are represented here.
@@ -2569,7 +2611,7 @@ The size of the file, in bytes.
 <a href="#filepath_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}-
 The full file path
@@ -2579,7 +2621,7 @@ The full file path
 <a href="#sizebytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}-
 The size of the file, in bytes.
@@ -2593,7 +2635,7 @@ The size of the file, in bytes.
 <a href="#file_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}-
 The full file path
@@ -2603,7 +2645,7 @@ The full file path
 <a href="#size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}-
 The size of the file, in bytes.

@@ -16,7 +16,7 @@ require (
 	github.com/gostaticanalysis/analysisutil v0.7.1 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
-	github.com/julz/importas v0.0.0-20210405141620-a22c8f743dc9 // indirect
+	github.com/julz/importas v0.0.0-20210419104244-841f0c0fe66d // indirect
 	github.com/magiconair/properties v1.8.5 // indirect
 	github.com/mattn/go-runewidth v0.0.12 // indirect
 	github.com/mgechev/revive v1.0.6 // indirect

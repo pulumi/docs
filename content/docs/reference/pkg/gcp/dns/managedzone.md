@@ -64,8 +64,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/dns"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -189,9 +189,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/dns"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -378,9 +378,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/dns"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -582,9 +582,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/dns"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -749,10 +749,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/servicedirectory"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/dns"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/servicedirectory"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -867,19 +867,38 @@ const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedZone</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedZone</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedZoneArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedZone</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dnssec_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZoneDnssecConfigArgs]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">forwarding_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZoneForwardingConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZonePeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_visibility_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZonePrivateVisibilityConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reverse_lookup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">service_directory_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZoneServiceDirectoryConfigArgs]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ManagedZone</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">dnssec_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagedZoneDnssecConfigArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">forwarding_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagedZoneForwardingConfigArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">peering_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagedZonePeeringConfigArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">private_visibility_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagedZonePrivateVisibilityConfigArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">reverse_lookup</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">service_directory_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagedZoneServiceDirectoryConfigArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ManagedZone</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedZoneArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedZone</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagedZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedZone</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedZone</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagedZoneArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedZone</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedZone</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ManagedZoneArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedZone</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ManagedZoneArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -914,22 +933,32 @@ const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ManagedZoneArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -938,7 +967,7 @@ const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -962,7 +991,7 @@ const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1289,7 +1318,7 @@ Possible values are `private` and `public`.
 <a href="#dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The DNS name of this managed zone, for instance "example.com.".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1298,7 +1327,7 @@ Possible values are `private` and `public`.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1307,7 +1336,7 @@ Possible values are `private` and `public`.
 <a href="#dnssecconfig_nodejs" style="color: inherit; text-decoration: inherit;">dnssec<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}DNSSEC configuration
 Structure is documented below.
@@ -1317,7 +1346,7 @@ Structure is documented below.
 <a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set this true to delete all records in the zone.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1326,7 +1355,7 @@ Structure is documented below.
 <a href="#forwardingconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
 for this zone. The value of this field contains the set of destinations
@@ -1338,7 +1367,7 @@ Structure is documented below.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this ManagedZone.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1347,7 +1376,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User assigned name for this resource.
 Must be unique within the project.
@@ -1357,7 +1386,7 @@ Must be unique within the project.
 <a href="#peeringconfig_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
 zone. The value of this field contains the network to peer with.
@@ -1368,7 +1397,7 @@ Structure is documented below.
 <a href="#privatevisibilityconfig_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Visibility<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud
 resources that the zone is visible from.
@@ -1379,7 +1408,7 @@ Structure is documented below.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1389,7 +1418,7 @@ If it is not provided, the provider project is used.
 <a href="#reverselookup_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Lookup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
 lookup queries using automatically configured records for VPC resources. This only applies
@@ -1400,7 +1429,7 @@ to networks listed under `private_visibility_config`.
 <a href="#servicedirectoryconfig_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Directory<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1409,7 +1438,7 @@ to networks listed under `private_visibility_config`.
 <a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
@@ -1425,7 +1454,7 @@ Possible values are `private` and `public`.
 <a href="#dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The DNS name of this managed zone, for instance "example.com.".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1434,7 +1463,7 @@ Possible values are `private` and `public`.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1443,7 +1472,7 @@ Possible values are `private` and `public`.
 <a href="#dnssec_config_python" style="color: inherit; text-decoration: inherit;">dnssec_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">Input[Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}DNSSEC configuration
 Structure is documented below.
@@ -1453,7 +1482,7 @@ Structure is documented below.
 <a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set this true to delete all records in the zone.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1462,7 +1491,7 @@ Structure is documented below.
 <a href="#forwarding_config_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">Input[Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
 for this zone. The value of this field contains the set of destinations
@@ -1474,7 +1503,7 @@ Structure is documented below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this ManagedZone.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1483,7 +1512,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User assigned name for this resource.
 Must be unique within the project.
@@ -1493,7 +1522,7 @@ Must be unique within the project.
 <a href="#peering_config_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">Input[Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
 zone. The value of this field contains the network to peer with.
@@ -1504,7 +1533,7 @@ Structure is documented below.
 <a href="#private_visibility_config_python" style="color: inherit; text-decoration: inherit;">private_<wbr>visibility_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Input[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud
 resources that the zone is visible from.
@@ -1515,7 +1544,7 @@ Structure is documented below.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1525,7 +1554,7 @@ If it is not provided, the provider project is used.
 <a href="#reverse_lookup_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>lookup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
 lookup queries using automatically configured records for VPC resources. This only applies
@@ -1536,7 +1565,7 @@ to networks listed under `private_visibility_config`.
 <a href="#service_directory_config_python" style="color: inherit; text-decoration: inherit;">service_<wbr>directory_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Input[Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1545,7 +1574,7 @@ to networks listed under `private_visibility_config`.
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
@@ -1653,20 +1682,36 @@ Get an existing ManagedZone resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ManagedZoneState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ManagedZone</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ManagedZoneState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ManagedZone</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dnssec_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZoneDnssecConfigArgs]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">forwarding_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZoneForwardingConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">peering_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZonePeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_visibility_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZonePrivateVisibilityConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reverse_lookup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">service_directory_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZoneServiceDirectoryConfigArgs]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ManagedZone</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">dnssec_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagedZoneDnssecConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">forwarding_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagedZoneForwardingConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name_servers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">peering_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagedZonePeeringConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">private_visibility_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagedZonePrivateVisibilityConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">reverse_lookup</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">service_directory_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagedZoneServiceDirectoryConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> ManagedZone</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetManagedZone<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ManagedZoneState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedZone</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetManagedZone<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ManagedZoneState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedZone</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ManagedZone</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ManagedZoneState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ManagedZone</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ManagedZoneState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2065,7 +2110,7 @@ Possible values are `private` and `public`.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2074,7 +2119,7 @@ Possible values are `private` and `public`.
 <a href="#state_dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The DNS name of this managed zone, for instance "example.com.".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2083,7 +2128,7 @@ Possible values are `private` and `public`.
 <a href="#state_dnssecconfig_nodejs" style="color: inherit; text-decoration: inherit;">dnssec<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}DNSSEC configuration
 Structure is documented below.
@@ -2093,7 +2138,7 @@ Structure is documented below.
 <a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set this true to delete all records in the zone.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2102,7 +2147,7 @@ Structure is documented below.
 <a href="#state_forwardingconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
 for this zone. The value of this field contains the set of destinations
@@ -2114,7 +2159,7 @@ Structure is documented below.
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this ManagedZone.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2123,7 +2168,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User assigned name for this resource.
 Must be unique within the project.
@@ -2133,7 +2178,7 @@ Must be unique within the project.
 <a href="#state_nameservers_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Delegate your managed_zone to these virtual name servers; defined by the server
 {{% /md %}}</dd><dt class="property-optional"
@@ -2142,7 +2187,7 @@ Must be unique within the project.
 <a href="#state_peeringconfig_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
 zone. The value of this field contains the network to peer with.
@@ -2153,7 +2198,7 @@ Structure is documented below.
 <a href="#state_privatevisibilityconfig_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Visibility<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud
 resources that the zone is visible from.
@@ -2164,7 +2209,7 @@ Structure is documented below.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2174,7 +2219,7 @@ If it is not provided, the provider project is used.
 <a href="#state_reverselookup_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Lookup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
 lookup queries using automatically configured records for VPC resources. This only applies
@@ -2185,7 +2230,7 @@ to networks listed under `private_visibility_config`.
 <a href="#state_servicedirectoryconfig_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Directory<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2194,7 +2239,7 @@ to networks listed under `private_visibility_config`.
 <a href="#state_visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
@@ -2210,7 +2255,7 @@ Possible values are `private` and `public`.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2219,7 +2264,7 @@ Possible values are `private` and `public`.
 <a href="#state_dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The DNS name of this managed zone, for instance "example.com.".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2228,7 +2273,7 @@ Possible values are `private` and `public`.
 <a href="#state_dnssec_config_python" style="color: inherit; text-decoration: inherit;">dnssec_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">Input[Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}DNSSEC configuration
 Structure is documented below.
@@ -2238,7 +2283,7 @@ Structure is documented below.
 <a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set this true to delete all records in the zone.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2247,7 +2292,7 @@ Structure is documented below.
 <a href="#state_forwarding_config_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">Input[Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
 for this zone. The value of this field contains the set of destinations
@@ -2259,7 +2304,7 @@ Structure is documented below.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this ManagedZone.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2268,7 +2313,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User assigned name for this resource.
 Must be unique within the project.
@@ -2278,7 +2323,7 @@ Must be unique within the project.
 <a href="#state_name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Delegate your managed_zone to these virtual name servers; defined by the server
 {{% /md %}}</dd><dt class="property-optional"
@@ -2287,7 +2332,7 @@ Must be unique within the project.
 <a href="#state_peering_config_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">Input[Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
 zone. The value of this field contains the network to peer with.
@@ -2298,7 +2343,7 @@ Structure is documented below.
 <a href="#state_private_visibility_config_python" style="color: inherit; text-decoration: inherit;">private_<wbr>visibility_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Input[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud
 resources that the zone is visible from.
@@ -2309,7 +2354,7 @@ Structure is documented below.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2319,7 +2364,7 @@ If it is not provided, the provider project is used.
 <a href="#state_reverse_lookup_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>lookup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
 lookup queries using automatically configured records for VPC resources. This only applies
@@ -2330,7 +2375,7 @@ to networks listed under `private_visibility_config`.
 <a href="#state_service_directory_config_python" style="color: inherit; text-decoration: inherit;">service_<wbr>directory_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Input[Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2339,7 +2384,7 @@ to networks listed under `private_visibility_config`.
 <a href="#state_visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
@@ -2460,7 +2505,7 @@ Possible values are `off`, `on`, and `transfer`.
 <a href="#defaultkeyspecs_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Key<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec[]</a></span>
+        <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">pulumi.<wbr>Input<pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specifies parameters that will be used for generating initial DnsKeys
 for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
@@ -2473,7 +2518,7 @@ Structure is documented below.
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifies what kind of resource this is
 {{% /md %}}</dd><dt class="property-optional"
@@ -2482,7 +2527,7 @@ Structure is documented below.
 <a href="#nonexistence_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Existence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the mechanism used to provide authenticated denial-of-existence responses.
 non_existence can only be updated when the state is `off`.
@@ -2493,7 +2538,7 @@ Possible values are `nsec` and `nsec3`.
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether DNSSEC is enabled, and what mode it is in
 Possible values are `off`, `on`, and `transfer`.
@@ -2507,7 +2552,7 @@ Possible values are `off`, `on`, and `transfer`.
 <a href="#default_key_specs_python" style="color: inherit; text-decoration: inherit;">default_<wbr>key_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">Sequence[Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">Input[Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specifies parameters that will be used for generating initial DnsKeys
 for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
@@ -2520,7 +2565,7 @@ Structure is documented below.
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifies what kind of resource this is
 {{% /md %}}</dd><dt class="property-optional"
@@ -2529,7 +2574,7 @@ Structure is documented below.
 <a href="#non_existence_python" style="color: inherit; text-decoration: inherit;">non_<wbr>existence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the mechanism used to provide authenticated denial-of-existence responses.
 non_existence can only be updated when the state is `off`.
@@ -2540,7 +2585,7 @@ Possible values are `nsec` and `nsec3`.
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether DNSSEC is enabled, and what mode it is in
 Possible values are `off`, `on`, and `transfer`.
@@ -2650,7 +2695,7 @@ Possible values are `keySigning` and `zoneSigning`.
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key
 Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
@@ -2660,7 +2705,7 @@ Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`
 <a href="#keylength_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Length of the keys in bits
 {{% /md %}}</dd><dt class="property-optional"
@@ -2669,7 +2714,7 @@ Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`
 <a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether this is a key signing key (KSK) or a zone
 signing key (ZSK). Key signing keys have the Secure Entry
@@ -2684,7 +2729,7 @@ Possible values are `keySigning` and `zoneSigning`.
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifies what kind of resource this is
 {{% /md %}}</dd></dl>
@@ -2697,7 +2742,7 @@ Possible values are `keySigning` and `zoneSigning`.
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key
 Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
@@ -2707,7 +2752,7 @@ Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`
 <a href="#key_length_python" style="color: inherit; text-decoration: inherit;">key_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Length of the keys in bits
 {{% /md %}}</dd><dt class="property-optional"
@@ -2716,7 +2761,7 @@ Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`
 <a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether this is a key signing key (KSK) or a zone
 signing key (ZSK). Key signing keys have the Secure Entry
@@ -2731,7 +2776,7 @@ Possible values are `keySigning` and `zoneSigning`.
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifies what kind of resource this is
 {{% /md %}}</dd></dl>
@@ -2778,7 +2823,7 @@ Structure is documented below.
 <a href="#targetnameservers_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Name<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server[]</a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">pulumi.<wbr>Input<pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of target name servers to forward to. Cloud DNS will
 select the best available name server if more than
@@ -2794,7 +2839,7 @@ Structure is documented below.
 <a href="#target_name_servers_python" style="color: inherit; text-decoration: inherit;">target_<wbr>name_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">Sequence[Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">Input[Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of target name servers to forward to. Cloud DNS will
 select the best available name server if more than
@@ -2862,7 +2907,7 @@ Possible values are `default` and `private`.
 <a href="#ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}IPv4 address of a target name server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2871,7 +2916,7 @@ Possible values are `default` and `private`.
 <a href="#forwardingpath_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Forwarding path for this TargetNameServer. If unset or `default` Cloud DNS will make forwarding
 decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
@@ -2887,7 +2932,7 @@ Possible values are `default` and `private`.
 <a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}IPv4 address of a target name server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2896,7 +2941,7 @@ Possible values are `default` and `private`.
 <a href="#forwarding_path_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Forwarding path for this TargetNameServer. If unset or `default` Cloud DNS will make forwarding
 decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
@@ -2942,7 +2987,7 @@ Structure is documented below.
 <a href="#targetnetwork_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network</a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The network with which to peer.
 Structure is documented below.
@@ -2956,7 +3001,7 @@ Structure is documented below.
 <a href="#target_network_python" style="color: inherit; text-decoration: inherit;">target_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Input[Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The network with which to peer.
 Structure is documented below.
@@ -3002,7 +3047,7 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
 <a href="#networkurl_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The id or fully qualified URL of the VPC network to forward queries to.
 This should be formatted like `projects/{project}/global/networks/{network}` or
@@ -3017,7 +3062,7 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
 <a href="#network_url_python" style="color: inherit; text-decoration: inherit;">network_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The id or fully qualified URL of the VPC network to forward queries to.
 This should be formatted like `projects/{project}/global/networks/{network}` or
@@ -3060,7 +3105,7 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network[]</a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">pulumi.<wbr>Input<pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of VPC networks that can see this zone. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -3073,7 +3118,7 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">Sequence[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">Input[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of VPC networks that can see this zone. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -3118,7 +3163,7 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
 <a href="#networkurl_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The id or fully qualified URL of the VPC network to forward queries to.
 This should be formatted like `projects/{project}/global/networks/{network}` or
@@ -3133,7 +3178,7 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
 <a href="#network_url_python" style="color: inherit; text-decoration: inherit;">network_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The id or fully qualified URL of the VPC network to forward queries to.
 This should be formatted like `projects/{project}/global/networks/{network}` or
@@ -3178,7 +3223,7 @@ Structure is documented below.
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace</a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The namespace associated with the zone.
 Structure is documented below.
@@ -3192,7 +3237,7 @@ Structure is documented below.
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Input[Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The namespace associated with the zone.
 Structure is documented below.
@@ -3242,7 +3287,7 @@ Ignored for `public` visibility zones.
 <a href="#namespaceurl_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The fully qualified or partial URL of the service directory namespace that should be
 associated with the zone. This should be formatted like
@@ -3259,7 +3304,7 @@ Ignored for `public` visibility zones.
 <a href="#namespace_url_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The fully qualified or partial URL of the service directory namespace that should be
 associated with the zone. This should be formatted like

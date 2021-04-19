@@ -83,8 +83,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudscheduler"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -235,9 +235,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler"
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudscheduler"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -370,9 +370,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler"
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudscheduler"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -471,19 +471,36 @@ const job = new gcp.cloudscheduler.Job("job", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_engine_http_target</span><span class="p">:</span> <span class="nx">Optional[JobAppEngineHttpTargetArgs]</span> = None<span class="p">, </span><span class="nx">attempt_deadline</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_target</span><span class="p">:</span> <span class="nx">Optional[JobHttpTargetArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pubsub_target</span><span class="p">:</span> <span class="nx">Optional[JobPubsubTargetArgs]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[JobRetryConfigArgs]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">app_engine_http_target</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobAppEngineHttpTargetArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">attempt_deadline</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">http_target</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobHttpTargetArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pubsub_target</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobPubsubTargetArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobRetryConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[JobArgs]</a></span> = None<span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -518,22 +535,32 @@ const job = new gcp.cloudscheduler.Job("job", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -542,7 +569,7 @@ const job = new gcp.cloudscheduler.Job("job", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -566,7 +593,7 @@ const job = new gcp.cloudscheduler.Job("job", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -871,7 +898,7 @@ The value of this field must be a time zone name from the tz database.
 <a href="#appenginehttptarget_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine<wbr>Http<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobappenginehttptarget">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target</a></span>
+        <span class="property-type"><a href="#jobappenginehttptarget">pulumi.<wbr>Input<Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}App Engine HTTP target.
 If the job providers a App Engine HTTP target the cron will
@@ -883,7 +910,7 @@ Structure is documented below.
 <a href="#attemptdeadline_nodejs" style="color: inherit; text-decoration: inherit;">attempt<wbr>Deadline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is
 cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
@@ -899,7 +926,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A human-readable description for the job.
 This string must not contain more than 500 characters.
@@ -909,7 +936,7 @@ This string must not contain more than 500 characters.
 <a href="#httptarget_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptarget">Job<wbr>Http<wbr>Target</a></span>
+        <span class="property-type"><a href="#jobhttptarget">pulumi.<wbr>Input<Job<wbr>Http<wbr>Target<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}HTTP target.
 If the job providers a http_target the cron will
@@ -921,7 +948,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -930,7 +957,7 @@ Structure is documented below.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -940,7 +967,7 @@ If it is not provided, the provider project is used.
 <a href="#pubsubtarget_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpubsubtarget">Job<wbr>Pubsub<wbr>Target</a></span>
+        <span class="property-type"><a href="#jobpubsubtarget">pulumi.<wbr>Input<Job<wbr>Pubsub<wbr>Target<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Pub/Sub target
 If the job providers a Pub/Sub target the cron will publish
@@ -952,7 +979,7 @@ Structure is documented below.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Region where the scheduler job resides. If it is not provided, this provider will use the provider default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -961,7 +988,7 @@ Structure is documented below.
 <a href="#retryconfig_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobretryconfig">Job<wbr>Retry<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobretryconfig">pulumi.<wbr>Input<Job<wbr>Retry<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}By default, if a job does not complete successfully,
 meaning that an acknowledgement is not received from the handler,
@@ -973,7 +1000,7 @@ Structure is documented below.
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Describes the schedule on which the job will be executed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -982,7 +1009,7 @@ Structure is documented below.
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule.
 The value of this field must be a time zone name from the tz database.
@@ -996,7 +1023,7 @@ The value of this field must be a time zone name from the tz database.
 <a href="#app_engine_http_target_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine_<wbr>http_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobappenginehttptarget">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobappenginehttptarget">Input[Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}App Engine HTTP target.
 If the job providers a App Engine HTTP target the cron will
@@ -1008,7 +1035,7 @@ Structure is documented below.
 <a href="#attempt_deadline_python" style="color: inherit; text-decoration: inherit;">attempt_<wbr>deadline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is
 cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
@@ -1024,7 +1051,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A human-readable description for the job.
 This string must not contain more than 500 characters.
@@ -1034,7 +1061,7 @@ This string must not contain more than 500 characters.
 <a href="#http_target_python" style="color: inherit; text-decoration: inherit;">http_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptarget">Job<wbr>Http<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobhttptarget">Input[Job<wbr>Http<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}HTTP target.
 If the job providers a http_target the cron will
@@ -1046,7 +1073,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1055,7 +1082,7 @@ Structure is documented below.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1065,7 +1092,7 @@ If it is not provided, the provider project is used.
 <a href="#pubsub_target_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpubsubtarget">Job<wbr>Pubsub<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobpubsubtarget">Input[Job<wbr>Pubsub<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pub/Sub target
 If the job providers a Pub/Sub target the cron will publish
@@ -1077,7 +1104,7 @@ Structure is documented below.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Region where the scheduler job resides. If it is not provided, this provider will use the provider default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1086,7 +1113,7 @@ Structure is documented below.
 <a href="#retry_config_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobretryconfig">Job<wbr>Retry<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobretryconfig">Input[Job<wbr>Retry<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}By default, if a job does not complete successfully,
 meaning that an acknowledgement is not received from the handler,
@@ -1098,7 +1125,7 @@ Structure is documented below.
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Describes the schedule on which the job will be executed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1107,7 +1134,7 @@ Structure is documented below.
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule.
 The value of this field must be a time zone name from the tz database.
@@ -1177,20 +1204,33 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">JobState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Job</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">JobState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Job</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_engine_http_target</span><span class="p">:</span> <span class="nx">Optional[JobAppEngineHttpTargetArgs]</span> = None<span class="p">, </span><span class="nx">attempt_deadline</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_target</span><span class="p">:</span> <span class="nx">Optional[JobHttpTargetArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pubsub_target</span><span class="p">:</span> <span class="nx">Optional[JobPubsubTargetArgs]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[JobRetryConfigArgs]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Job</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">app_engine_http_target</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobAppEngineHttpTargetArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">attempt_deadline</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">http_target</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobHttpTargetArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pubsub_target</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobPubsubTargetArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobRetryConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Job</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">JobState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">JobState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Job</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">JobState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Job</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">JobState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1549,7 +1589,7 @@ The value of this field must be a time zone name from the tz database.
 <a href="#state_appenginehttptarget_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine<wbr>Http<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobappenginehttptarget">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target</a></span>
+        <span class="property-type"><a href="#jobappenginehttptarget">pulumi.<wbr>Input<Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}App Engine HTTP target.
 If the job providers a App Engine HTTP target the cron will
@@ -1561,7 +1601,7 @@ Structure is documented below.
 <a href="#state_attemptdeadline_nodejs" style="color: inherit; text-decoration: inherit;">attempt<wbr>Deadline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is
 cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
@@ -1577,7 +1617,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A human-readable description for the job.
 This string must not contain more than 500 characters.
@@ -1587,7 +1627,7 @@ This string must not contain more than 500 characters.
 <a href="#state_httptarget_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptarget">Job<wbr>Http<wbr>Target</a></span>
+        <span class="property-type"><a href="#jobhttptarget">pulumi.<wbr>Input<Job<wbr>Http<wbr>Target<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}HTTP target.
 If the job providers a http_target the cron will
@@ -1599,7 +1639,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1608,7 +1648,7 @@ Structure is documented below.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1618,7 +1658,7 @@ If it is not provided, the provider project is used.
 <a href="#state_pubsubtarget_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpubsubtarget">Job<wbr>Pubsub<wbr>Target</a></span>
+        <span class="property-type"><a href="#jobpubsubtarget">pulumi.<wbr>Input<Job<wbr>Pubsub<wbr>Target<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Pub/Sub target
 If the job providers a Pub/Sub target the cron will publish
@@ -1630,7 +1670,7 @@ Structure is documented below.
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Region where the scheduler job resides. If it is not provided, this provider will use the provider default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1639,7 +1679,7 @@ Structure is documented below.
 <a href="#state_retryconfig_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobretryconfig">Job<wbr>Retry<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobretryconfig">pulumi.<wbr>Input<Job<wbr>Retry<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}By default, if a job does not complete successfully,
 meaning that an acknowledgement is not received from the handler,
@@ -1651,7 +1691,7 @@ Structure is documented below.
 <a href="#state_schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Describes the schedule on which the job will be executed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1660,7 +1700,7 @@ Structure is documented below.
 <a href="#state_timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule.
 The value of this field must be a time zone name from the tz database.
@@ -1674,7 +1714,7 @@ The value of this field must be a time zone name from the tz database.
 <a href="#state_app_engine_http_target_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine_<wbr>http_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobappenginehttptarget">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobappenginehttptarget">Input[Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}App Engine HTTP target.
 If the job providers a App Engine HTTP target the cron will
@@ -1686,7 +1726,7 @@ Structure is documented below.
 <a href="#state_attempt_deadline_python" style="color: inherit; text-decoration: inherit;">attempt_<wbr>deadline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is
 cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
@@ -1702,7 +1742,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A human-readable description for the job.
 This string must not contain more than 500 characters.
@@ -1712,7 +1752,7 @@ This string must not contain more than 500 characters.
 <a href="#state_http_target_python" style="color: inherit; text-decoration: inherit;">http_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptarget">Job<wbr>Http<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobhttptarget">Input[Job<wbr>Http<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}HTTP target.
 If the job providers a http_target the cron will
@@ -1724,7 +1764,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1733,7 +1773,7 @@ Structure is documented below.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1743,7 +1783,7 @@ If it is not provided, the provider project is used.
 <a href="#state_pubsub_target_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpubsubtarget">Job<wbr>Pubsub<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobpubsubtarget">Input[Job<wbr>Pubsub<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pub/Sub target
 If the job providers a Pub/Sub target the cron will publish
@@ -1755,7 +1795,7 @@ Structure is documented below.
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Region where the scheduler job resides. If it is not provided, this provider will use the provider default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1764,7 +1804,7 @@ Structure is documented below.
 <a href="#state_retry_config_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobretryconfig">Job<wbr>Retry<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobretryconfig">Input[Job<wbr>Retry<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}By default, if a job does not complete successfully,
 meaning that an acknowledgement is not received from the handler,
@@ -1776,7 +1816,7 @@ Structure is documented below.
 <a href="#state_schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Describes the schedule on which the job will be executed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1785,7 +1825,7 @@ Structure is documented below.
 <a href="#state_time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule.
 The value of this field must be a time zone name from the tz database.
@@ -1926,7 +1966,7 @@ Repeated headers are not supported, but a header value can contain commas.
 <a href="#relativeuri_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The relative URI.
 The relative URL must begin with "/" and must be a valid HTTP relative URL.
@@ -1939,7 +1979,7 @@ No spaces are allowed, and the maximum length allowed is 2083 characters
 <a href="#appenginerouting_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine<wbr>Routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobappenginehttptargetappenginerouting">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>App<wbr>Engine<wbr>Routing</a></span>
+        <span class="property-type"><a href="#jobappenginehttptargetappenginerouting">pulumi.<wbr>Input<Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>App<wbr>Engine<wbr>Routing<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}App Engine Routing setting for the job.
 Structure is documented below.
@@ -1949,7 +1989,7 @@ Structure is documented below.
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}HTTP request body.
 A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
@@ -1961,7 +2001,7 @@ A base64-encoded string.
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}This map contains the header field names and values.
 Repeated headers are not supported, but a header value can contain commas.
@@ -1971,7 +2011,7 @@ Repeated headers are not supported, but a header value can contain commas.
 <a href="#httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Which HTTP method to use for the request.
 {{% /md %}}</dd></dl>
@@ -1984,7 +2024,7 @@ Repeated headers are not supported, but a header value can contain commas.
 <a href="#relative_uri_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The relative URI.
 The relative URL must begin with "/" and must be a valid HTTP relative URL.
@@ -1997,7 +2037,7 @@ No spaces are allowed, and the maximum length allowed is 2083 characters
 <a href="#app_engine_routing_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine_<wbr>routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobappenginehttptargetappenginerouting">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>App<wbr>Engine<wbr>Routing<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobappenginehttptargetappenginerouting">Input[Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>App<wbr>Engine<wbr>Routing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}App Engine Routing setting for the job.
 Structure is documented below.
@@ -2007,7 +2047,7 @@ Structure is documented below.
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}HTTP request body.
 A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
@@ -2019,7 +2059,7 @@ A base64-encoded string.
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}This map contains the header field names and values.
 Repeated headers are not supported, but a header value can contain commas.
@@ -2029,7 +2069,7 @@ Repeated headers are not supported, but a header value can contain commas.
 <a href="#http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Which HTTP method to use for the request.
 {{% /md %}}</dd></dl>
@@ -2112,7 +2152,7 @@ By default, the job is sent to the version which is the default version when the
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}App instance.
 By default, the job is sent to an instance which is available when the job is attempted.
@@ -2122,7 +2162,7 @@ By default, the job is sent to an instance which is available when the job is at
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}App service.
 By default, the job is sent to the service which is the default service when the job is attempted.
@@ -2132,7 +2172,7 @@ By default, the job is sent to the service which is the default service when the
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}App version.
 By default, the job is sent to the version which is the default version when the job is attempted.
@@ -2146,7 +2186,7 @@ By default, the job is sent to the version which is the default version when the
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}App instance.
 By default, the job is sent to an instance which is available when the job is attempted.
@@ -2156,7 +2196,7 @@ By default, the job is sent to an instance which is available when the job is at
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}App service.
 By default, the job is sent to the service which is the default service when the job is attempted.
@@ -2166,7 +2206,7 @@ By default, the job is sent to the service which is the default service when the
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}App version.
 By default, the job is sent to the version which is the default version when the job is attempted.
@@ -2314,7 +2354,7 @@ Structure is documented below.
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The full URI path that the request will be sent to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2323,7 +2363,7 @@ Structure is documented below.
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}HTTP request body.
 A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
@@ -2335,7 +2375,7 @@ A base64-encoded string.
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}This map contains the header field names and values.
 Repeated headers are not supported, but a header value can contain commas.
@@ -2345,7 +2385,7 @@ Repeated headers are not supported, but a header value can contain commas.
 <a href="#httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Which HTTP method to use for the request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2354,7 +2394,7 @@ Repeated headers are not supported, but a header value can contain commas.
 <a href="#oauthtoken_nodejs" style="color: inherit; text-decoration: inherit;">oauth<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptargetoauthtoken">Job<wbr>Http<wbr>Target<wbr>Oauth<wbr>Token</a></span>
+        <span class="property-type"><a href="#jobhttptargetoauthtoken">pulumi.<wbr>Input<Job<wbr>Http<wbr>Target<wbr>Oauth<wbr>Token<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Contains information needed for generating an OAuth token.
 This type of authorization should be used when sending requests to a GCP endpoint.
@@ -2365,7 +2405,7 @@ Structure is documented below.
 <a href="#oidctoken_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptargetoidctoken">Job<wbr>Http<wbr>Target<wbr>Oidc<wbr>Token</a></span>
+        <span class="property-type"><a href="#jobhttptargetoidctoken">pulumi.<wbr>Input<Job<wbr>Http<wbr>Target<wbr>Oidc<wbr>Token<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Contains information needed for generating an OpenID Connect token.
 This type of authorization should be used when sending requests to third party endpoints or Cloud Run.
@@ -2380,7 +2420,7 @@ Structure is documented below.
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The full URI path that the request will be sent to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2389,7 +2429,7 @@ Structure is documented below.
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}HTTP request body.
 A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
@@ -2401,7 +2441,7 @@ A base64-encoded string.
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}This map contains the header field names and values.
 Repeated headers are not supported, but a header value can contain commas.
@@ -2411,7 +2451,7 @@ Repeated headers are not supported, but a header value can contain commas.
 <a href="#http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Which HTTP method to use for the request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2420,7 +2460,7 @@ Repeated headers are not supported, but a header value can contain commas.
 <a href="#oauth_token_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptargetoauthtoken">Job<wbr>Http<wbr>Target<wbr>Oauth<wbr>Token<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobhttptargetoauthtoken">Input[Job<wbr>Http<wbr>Target<wbr>Oauth<wbr>Token<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed for generating an OAuth token.
 This type of authorization should be used when sending requests to a GCP endpoint.
@@ -2431,7 +2471,7 @@ Structure is documented below.
 <a href="#oidc_token_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptargetoidctoken">Job<wbr>Http<wbr>Target<wbr>Oidc<wbr>Token<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobhttptargetoidctoken">Input[Job<wbr>Http<wbr>Target<wbr>Oidc<wbr>Token<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed for generating an OpenID Connect token.
 This type of authorization should be used when sending requests to third party endpoints or Cloud Run.
@@ -2496,7 +2536,7 @@ The service account must be within the same project as the job.
 <a href="#serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Service account email to be used for generating OAuth token.
 The service account must be within the same project as the job.
@@ -2506,7 +2546,7 @@ The service account must be within the same project as the job.
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OAuth scope to be used for generating OAuth access token. If not specified,
 "https://www.googleapis.com/auth/cloud-platform" will be used.
@@ -2520,7 +2560,7 @@ The service account must be within the same project as the job.
 <a href="#service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Service account email to be used for generating OAuth token.
 The service account must be within the same project as the job.
@@ -2530,7 +2570,7 @@ The service account must be within the same project as the job.
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OAuth scope to be used for generating OAuth access token. If not specified,
 "https://www.googleapis.com/auth/cloud-platform" will be used.
@@ -2594,7 +2634,7 @@ the URI specified in target will be used.
 <a href="#serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Service account email to be used for generating OAuth token.
 The service account must be within the same project as the job.
@@ -2604,7 +2644,7 @@ The service account must be within the same project as the job.
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Audience to be used when generating OIDC token. If not specified,
 the URI specified in target will be used.
@@ -2618,7 +2658,7 @@ the URI specified in target will be used.
 <a href="#service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Service account email to be used for generating OAuth token.
 The service account must be within the same project as the job.
@@ -2628,7 +2668,7 @@ The service account must be within the same project as the job.
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Audience to be used when generating OIDC token. If not specified,
 the URI specified in target will be used.
@@ -2718,7 +2758,7 @@ A base64-encoded string.
 <a href="#topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The full resource name for the Cloud Pub/Sub topic to which
 messages will be published when a job is delivered. ~>**NOTE:**
@@ -2730,7 +2770,7 @@ PublishRequest.name, e.g. `projects/my-project/topics/my-topic`.
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Attributes for PubsubMessage.
 Pubsub message must contain either non-empty data, or at least one attribute.
@@ -2740,7 +2780,7 @@ Pubsub message must contain either non-empty data, or at least one attribute.
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message payload for PubsubMessage.
 Pubsub message must contain either non-empty data, or at least one attribute.
@@ -2755,7 +2795,7 @@ A base64-encoded string.
 <a href="#topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The full resource name for the Cloud Pub/Sub topic to which
 messages will be published when a job is delivered. ~>**NOTE:**
@@ -2767,7 +2807,7 @@ PublishRequest.name, e.g. `projects/my-project/topics/my-topic`.
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Attributes for PubsubMessage.
 Pubsub message must contain either non-empty data, or at least one attribute.
@@ -2777,7 +2817,7 @@ Pubsub message must contain either non-empty data, or at least one attribute.
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message payload for PubsubMessage.
 Pubsub message must contain either non-empty data, or at least one attribute.
@@ -2910,7 +2950,7 @@ Values greater than 5 and negative values are not allowed.
 <a href="#maxbackoffduration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Backoff<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to wait before retrying a job after it fails.
 A duration in seconds with up to nine fractional digits, terminated by 's'.
@@ -2920,7 +2960,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'.
 <a href="#maxdoublings_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Doublings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The time between retries will double maxDoublings times.
 A job's retry interval starts at minBackoffDuration,
@@ -2932,7 +2972,7 @@ and finally retries retries at intervals of maxBackoffDuration up to retryCount 
 <a href="#maxretryduration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retry<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time limit for retrying a failed job, measured from time when an execution was first attempted.
 If specified with retryCount, the job will be retried until both limits are reached.
@@ -2943,7 +2983,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'.
 <a href="#minbackoffduration_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Backoff<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The minimum amount of time to wait before retrying a job after it fails.
 A duration in seconds with up to nine fractional digits, terminated by 's'.
@@ -2953,7 +2993,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'.
 <a href="#retrycount_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of attempts that the system will make to run a
 job using the exponential backoff procedure described by maxDoublings.
@@ -2968,7 +3008,7 @@ Values greater than 5 and negative values are not allowed.
 <a href="#max_backoff_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>backoff_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to wait before retrying a job after it fails.
 A duration in seconds with up to nine fractional digits, terminated by 's'.
@@ -2978,7 +3018,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'.
 <a href="#max_doublings_python" style="color: inherit; text-decoration: inherit;">max_<wbr>doublings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The time between retries will double maxDoublings times.
 A job's retry interval starts at minBackoffDuration,
@@ -2990,7 +3030,7 @@ and finally retries retries at intervals of maxBackoffDuration up to retryCount 
 <a href="#max_retry_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retry_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time limit for retrying a failed job, measured from time when an execution was first attempted.
 If specified with retryCount, the job will be retried until both limits are reached.
@@ -3001,7 +3041,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'.
 <a href="#min_backoff_duration_python" style="color: inherit; text-decoration: inherit;">min_<wbr>backoff_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The minimum amount of time to wait before retrying a job after it fails.
 A duration in seconds with up to nine fractional digits, terminated by 's'.
@@ -3011,7 +3051,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'.
 <a href="#retry_count_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of attempts that the system will make to run a
 job using the exponential backoff procedure described by maxDoublings.
