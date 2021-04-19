@@ -272,8 +272,9 @@ Also, change the content type of your `index.html` object so that it is served a
 
 ```go
 bucketObject, err := storage.NewBucketObject(ctx, "index.html", &storage.BucketObjectArgs{
-    Bucket: bucket.Name,
-    Source: pulumi.NewFileAsset("index.html")
+    Bucket:      bucket.Name,
+    ContentType: pulumi.String("text/html"),
+    Source:      pulumi.NewFileAsset("index.html"),
 })
 if err != nil {
     return err
@@ -358,13 +359,16 @@ Previewing update (dev):
      pulumi:pulumi:Stack              quickstart-dev
  ~   ├─ gcp:storage:Bucket            my-bucket              update     [diff: +website]
  +   └─ gcp:storage:BucketIAMBinding  my-bucket-IAMBinding   create
+ +-  └─ gcp:storage:BucketObject      index.html             replace    [diff: ~contentType]
 
 Outputs:
   + BucketEndpoint: "http://storage.googleapis.com/my-bucket-0167228/index.html-50b2ce9"
 
 Resources:
-    ~ 2 to update
-    1 unchanged
+    + 1 to create
+    ~ 1 to update
+    +-1 to replace
+    3 changes. 1 unchanged
 
 Do you want to perform this update?
 > yes
@@ -372,7 +376,7 @@ Do you want to perform this update?
   details
 ```
 
-Select `yes` to deploy both changes:
+Select `yes` to deploy the changes:
 
 ```
 Do you want to perform this update? yes
@@ -382,7 +386,7 @@ Updating (dev):
     pulumi:pulumi:Stack              quickstart-dev
  ~   ├─ gcp:storage:Bucket            my-bucket              updated     [diff: +website]
  +   └─ gcp:storage:BucketIAMBinding  my-bucket-IAMBinding   created
-
+ +-  └─ gcp:storage:BucketObject      index.html             replaced    [diff: ~contentType];
 Outputs:
   + BucketEndpoint: "http://storage.googleapis.com/my-bucket-0167228/index.html-50b2ce9"
     BucketName    : "gs://my-bucket-0167228"
@@ -390,7 +394,8 @@ Outputs:
 Resources:
     + 1 created
     ~ 1 updated
-    2 changes. 2 unchanged
+    +-1 replaced
+    3 changes. 1 unchanged
 
 Duration: 8s
 ```
