@@ -64,6 +64,7 @@ REPOS=(
     "tls"
     "vault"
     "venafi"
+    "yandex"
 )
 
 branch=$(git rev-parse --abbrev-ref HEAD)
