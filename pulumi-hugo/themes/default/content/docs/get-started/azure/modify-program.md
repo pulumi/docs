@@ -12,7 +12,7 @@ menu:
 aliases: ["/docs/quickstart/azure/modify-program/"]
 ---
 
-Now that your S3 bucket is provisioned, let's add an object to it. First, from within your project directory, create a new `index.html` file with some content in it.
+Now that your storage account is provisioned, let's add an object to it. First, from within your project directory, create a new `index.html` file with some content in it.
 
 {{< chooser os "macos,linux,windows" / >}}
 
