@@ -233,7 +233,10 @@ func main() {
 
         if isMinikube {
             ip = frontend.Spec.ApplyT(func(val *corev1.ServiceSpec) string {
-                return *val.ClusterIP
+                if val.ClusterIP != nil {
+				    return *val.ClusterIP
+			    }
+			    return ""
             }).(pulumi.StringOutput)
         } else {
             ip = frontend.Status.ApplyT(func(val *corev1.ServiceStatus) string {
