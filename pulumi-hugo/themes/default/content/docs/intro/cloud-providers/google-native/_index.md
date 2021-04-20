@@ -46,7 +46,7 @@ import * as pulumi from "@pulumi/pulumi";
 
 const config = new pulumi.Config("google-native");
 const project = config.require("project");
-const bucketName = "pulumi-google-native-ts-01";
+const bucketName = "pulumi-goog-native-ts-01";
 
 // Create a Google Cloud resource (Storage Bucket)
 const bucket = new storage.Bucket("my-bucket", {
@@ -69,7 +69,7 @@ from pulumi_google_native.storage import v1 as storage
 config = pulumi.Config()
 project = config.require('project')
 # Create a Google Cloud resource (Storage Bucket)
-bucket_name = "google-native-bucket-py-01"
+bucket_name = "pulumi-goog-native-bucket-py-01"
 bucket = storage.Bucket('my-bucket', name=bucket_name, bucket=bucket_name, project=project)
 
 # Export the bucket self-link
@@ -88,7 +88,7 @@ import (
 )
 
 func main() {
-	const bucketName = "google-native-bucket-go-01"
+	const bucketName = "pulumi-goog-native-bucket-go-01"
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		conf := config.New(ctx, "google-native")
 		project := conf.Require("project")
@@ -123,7 +123,7 @@ class Program
         Deployment.Run(() => {
             var config = new Config("google-native");
             var project = config.Require("project");
-            var bucketName = "google-native-bucket-cs-01";
+            var bucketName = "pulumi-goog-native-bucket-cs-01";
             // Create a Google Cloud resource (Storage Bucket)
             var bucket = new Bucket("my-bucket", new BucketArgs{
                 Name = bucketName,

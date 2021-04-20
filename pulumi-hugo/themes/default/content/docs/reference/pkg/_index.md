@@ -54,6 +54,11 @@ explore what's possible, you've come to the right place.
 
 {{< resource-providers "azure" >}}
 
+### Preview Providers
+
+{{< resource-providers "google-native" >}}
+
+
 ## Package Documentation
 
 SDK reference documentation, organized by language.
