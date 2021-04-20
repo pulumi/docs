@@ -24,7 +24,7 @@ explore what's possible, you've come to the right place.
 
 ### Cloud Providers
 
-{{< resource-providers "digitalocean,linode,vsphere,fastly,equinix-metal,openstack,alicloud,cloudamqp,hcloud,civo,yandex-cloud" >}}
+{{< resource-providers "digitalocean,linode,vsphere,fastly,equinix-metal,openstack,alicloud,cloudamqp,hcloud,civo,yandex" >}}
 
 ### Infrastructure
 
