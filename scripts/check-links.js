@@ -40,6 +40,21 @@ if (!maxRetries || Number.isNaN(maxRetries)) {
     maxRetries = 0;
 }
 
+// Globally patch bhttp, broken-link-checker's HTTP library. We do with sadness because
+// BLC doesn't expose an API for setting custom HTTP headers, and many services reject
+// HTTP requests that lack certain headers (like Accept) or other characteristics.
+const bhttp = require("bhttp");
+const oldRequest = bhttp.request;
+bhttp.request = function() {
+    const [ url, options, callback ] = arguments;
+
+    // Modify request options.
+    // https://git.cryto.net/joepie91/node-bhttp/src/branch/master/lib/bhttp.js#L886
+    options.headers.accept = "*/*";
+
+    return oldRequest.apply(this, arguments);
+};
+
 // If the passed-in url is simply "local", assume that means we should start a server
 // and to test a local build at the usual location. Otherwise, just test the URL.
 if (baseURL === "local") {
@@ -82,10 +97,14 @@ function getChecker(scope, brokenLinks) {
     const requestMethod = "GET";
     const filterLevel = 1;
 
+    // Specify an alternative user agent, as BLC's default doesn't pass some services' validations.
+    const userAgent = "pulumi+blc/0.1";
+
     if (scope === "page") {
         const opts = {
             requestMethod,
             filterLevel,
+            userAgent,
             excludeInternalLinks: true,
             excludedKeywords: [
                 ...getDefaultExcludedKeywords(),
@@ -101,6 +120,7 @@ function getChecker(scope, brokenLinks) {
         const opts = {
             requestMethod,
             filterLevel,
+            userAgent,
             excludedKeywords: getDefaultExcludedKeywords(),
         };
 
