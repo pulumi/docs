@@ -75,7 +75,7 @@ For Azure projects, you will be prompted for the Azure location. You can accept 
 To list all available locations, use the `az account list-locations` command.
 
 ```bash
-$ az account list-locations
+$ az account list-locations --output table
 ```
 
 You can then change the region for your stack by using the `pulumi config set` command as shown below:
