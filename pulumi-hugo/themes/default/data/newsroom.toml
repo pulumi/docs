@@ -1,4 +1,10 @@
 [[releases]]
+date = "20th April 2021"
+title = "New Pulumi Cloud Engineering Platform Smashes Silos Among Developer, Infrastructure, and Security Teams"
+summary = "New capabilities -- including native providers for all major clouds, Pulumi Packages and an Automation API -- enable cloud engineering best practices, increase collaboration, and accelerate innovation with the freedom to use any language, for any workload, on any cloud"
+url = "https://info.pulumi.com/press-release/cloud-engineering-announcement"
+
+[[releases]]
 date = "27th October 2020"
 title = "Pulumi Raises $37.5M in Series B Funding to Accelerate Industry-wide Shift to Cloud Engineering"
 summary = "New NEA-led investment will be used to realize Pulumi’s mission of empowering all developers and infrastructure experts to collaboratively deliver modern cloud software."
