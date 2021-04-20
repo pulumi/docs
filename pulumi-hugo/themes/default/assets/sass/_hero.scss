@@ -68,6 +68,7 @@
         // 145px is the combined height of nav and header
         height: calc(50vh - 145px);
         min-height: 400px;
+        max-height: 600px;
     }
 
     .dot-overlay {
