@@ -1,7 +1,9 @@
 .toc {
-    @apply text-sm text-blue-800 pb-8;
+    @apply text-sm pb-8;
 
     a {
+        @apply text-blue-800;
+
         &:hover {
             @apply text-blue-700;
         }
@@ -11,12 +13,18 @@
         @apply font-semibold;
     }
 
-    h4 {
-        @apply text-base;
+    h5 {
+        @apply font-body font-semibold text-base text-blue-800;
+
+        a {
+            &:hover {
+                @apply text-blue-700;
+            }
+        }
     }
 
-    h5 {
-        @apply text-blue-800 uppercase tracking-wide font-bold text-sm;
+    ul {
+        @apply list-none p-0;
     }
 }
 

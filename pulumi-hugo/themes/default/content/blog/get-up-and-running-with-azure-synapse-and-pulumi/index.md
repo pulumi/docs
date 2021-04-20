@@ -54,11 +54,9 @@ You can check out the [full source code](https://github.com/pulumi/examples/tree
 
 Let's start by defining a resource group to contain all other resources. Be sure to adjust its name and region to your preferred values.
 
-<div class="note note-info" role="alert">
-    <p>
-        Choose the language below to adjust the contents of this blog. Your choice is applied throughout the article.
-    </p>
-</div>
+{{< notes type="info" >}}
+Choose the language below to adjust the contents of this blog. Your choice is applied throughout the article.
+{{< /notes >}}
 
 {{< chooser language "python,csharp,typescript" />}}
 

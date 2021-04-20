@@ -12,32 +12,28 @@
         {{ $target = "" }}
     {{ end }}
 
-    <article class="rounded shadow-md bg-white border border-gray-200 mb-10 flex flex-col mx-2 md:mx-0 content-tile">
-        <a href="{{ $href }}" rel="{{ $relref }}" target="{{ $target }}" class="w-full h-full">
-            <span class="block w-full h-full p-4 relative">
-                <span class="block flex border-solid border-b border-gray-200 pb-2">
-                    <span>
-                        <span class="flex items-center justify-center h-12 w-12 rounded-full bg-purple-500 text-white mr-3">
-                            <i class="fas fa-{{ .icon }}"></i>
-                        </span>
-                    </span>
-                    <span>
-                        <span class="font-bold text-xl">
-                            {{ .data.Params.title }}
-                            {{ if .external }}<i class="text-sm ml-2 fas fa-external-link-alt"></i>{{ end }}
-                        </span>
+    <article class="card bg-white mb-10 flex flex-col mx-2 md:mx-0 content-tile">
+        <a href="{{ $href }}" rel="{{ $relref }}" target="{{ $target }}" class="w-full h-full hover:underline">
+            <span class="block w-full h-full p-4 flex flex-col">
+                <span class="block pb-2 mb-4">
+                    <div class="bg-violet-100 rounded-full inline-block p-4 w-16 h-16 flex items-center justify-center">
+                        <i class="fas fa-{{ .icon }} text-violet-600 text-3xl"></i>
+                    </div>
+                </span>
+                <span class="block">
+                    <h6 class="">
+                        {{ .data.Params.title }}
+                        {{ if .external }}<i class="text-sm ml-2 fas fa-external-link-alt"></i>{{ end }}
+                    </h6>
+                    <span class="my-0 py-1 inline-block mr-3 text-gray-600">
+                        <i class="fas fa-calendar mr-2"></i>
+                        {{ .displayDate }}
                     </span>
                 </span>
-                <span class="block mt-3">
-                    <p class="m-0 pt-0 text-gray-700">
+                <span class="flex-grow flex flex-col justify-start mt-3">
+                    <p class="m-0 mb-4 pt-0 text-gray-700">
                         {{ .description }}
                     </p>
-                </span>
-                <span class="block absolute bottom-0 mb-5">
-                    <span class="my-0 py-1 px-2 inline-block mr-3 text-gray-600">
-                            <i class="fas fa-calendar mr-2"></i>
-                            {{ .displayDate }}
-                    </span>
                 </span>
             </span>
         </a>

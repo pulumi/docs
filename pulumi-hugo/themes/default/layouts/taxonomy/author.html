@@ -13,15 +13,17 @@
                 <header>
                     <div class="flex items-top">
                         <span class="rounded-full mr-4 md:mr-6">
-                            <img class="rounded-full w-32 bg-gray-300 p-1" src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}">
+                            <img class="rounded-full w-32 bg-blue-200 p-1" src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}">
                         </span>
                         <div>
-                            <h1 class="no-anchor">{{ $authorData.name }}</h1>
+                            <h1 class="no-anchor mb-0">{{ $authorData.name }}</h1>
                             <div>
                                 {{ if eq $authorData.status "guest" }}
                                     <span class="rounded-full bg-blue-200 px-2 py-1 text-xs font-bold mr-3">Guest</span>
                                 {{ end }}
-                                {{ $authorData.title }}
+                                <span class="text-sm text-gray-700">
+                                    {{ $authorData.title }}
+                                </span>
                             </div>
                             <span>
                                 {{ if $authorData.social }}
@@ -36,7 +38,7 @@
                     <article class="my-8 pb-8 border-b border-gray-200">
                         <h2 class="no-anchor"><a data-track="{{ .Title | urlize }}" href="{{ .Permalink }}">{{ .Title }}</a></h2>
                         <div class="flex items-center">
-                            <time>
+                            <time class="text-sm text-gray-700">
                                 {{ .Date.Format "Monday, Jan 2, 2006" }}
                             </time>
                         </div>

@@ -1,0 +1,4 @@
+<div class="icon-{{ .icon }} icon-{{ .icon }}-{{ .icon_color }}">
+    {{ $path := .icon | printf "%s/%s" "icons" | printf "%s" }}
+    {{ partial $path }}
+</div>

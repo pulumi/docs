@@ -15,10 +15,10 @@ Welcome to the Pulumi documentation! These pages cover what Pulumi is, how to ge
 Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> infrastructure as code tool for creating, deploying, and managing cloud infrastructure. Pulumi works with traditional infrastructure like VMs, networks, and databases, in addition to modern architectures, including containers, Kubernetes clusters, and serverless functions. Pulumi supports dozens of public, private, and hybrid cloud service providers.
 
 <div class="flex justify-center py-6">
-    <a class="btn btn-lg mx-1 my-1" href="{{< relref "/docs/get-started" >}}">GET STARTED</a>
+    <a class="btn btn-lg mx-1 my-1" href="{{< relref "/docs/get-started" >}}">Get Started</a>
 </div>
 
-<div class="bg-gray-100 border-t border-b border-gray-300 max-w-6xl my-4 px-4 py-2">
+<div class="bg-gray-100 rounded max-w-6xl my-4 px-4 py-2">
     <div class="md:flex justify-between items-center">
         <a class="block rounded hover:bg-gray-200 transition-all my-2 py-4 text-center px-6" href="{{< relref "/docs/get-started/aws" >}}">
             <img class="inline-block h-8 w-auto -mb-2" src="/logos/tech/aws.svg">
@@ -38,7 +38,7 @@ Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open sou
 <div class="my-4 md:flex py-8">
     <div class="md:w-1/3">
         <h3 class="no-anchor">Why Pulumi?</h3>
-        <p class="text-sm text-gray-600">
+        <p class="text-sm text-gray-700">
             By using <a href="{{< relref "/docs/intro/languages" >}}">familiar languages</a>
             for infrastructure as code, you get many benefits: IDEs, abstractions including functions, classes,
             and packages, existing debugging and testing tools, and more. The result is greater productivity
@@ -47,7 +47,7 @@ Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open sou
     </div>
     <div class="md:mx-8 md:w-1/3">
         <h3 class="no-anchor">Alternatives</h3>
-        <p class="text-sm text-gray-600">
+        <p class="text-sm text-gray-700">
             <a href="{{< relref "/docs/intro/vs" >}}">Other approaches</a> use YAML,
             JSON, or proprietary domain-specific languages (DSLs) that you need to
             master and train your team to use. These alternative approaches reinvent
@@ -57,7 +57,7 @@ Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open sou
     </div>
     <div class="md:w-1/3">
         <h3 class="no-anchor">Community</h3>
-        <p class="text-sm text-gray-600">
+        <p class="text-sm text-gray-700">
             Pulumi is <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a>,
             extensible, and is backed by a growing community of cloud practitioners.
             Benefit from reusable libraries for common architectures, or share your own. Languages

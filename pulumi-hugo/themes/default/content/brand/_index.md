@@ -13,50 +13,56 @@ sections:
       anchor: colors
 
 logos:
-    - name: Pulumi wordmark (purple)
-      file: pulumi-wordmark-purple
+    - name: Pulumi wordmark on white
+      file: logo-on-white
       size: 64
       bg: false
-    - name: Pulumi wordmark (purple)
-      file: pulumi-wordmark-white
+    - name: Pulumi wordmark on black
+      file: logo-on-black
       size: 64
       bg: true
-    - name: Pulumi mark (purple)
-      file: pulumi-mark-purple
+    - name: Pulumi avatar on black
+      file: avatar-on-black
       size: 40
       bg: false
-    - name: Pulumi mark
-      file: pulumi-mark-white
+    - name: Pulumi avatar on white
+      file: avatar-on-white
       size: 40
       bg: true
-    - name: Pulumi mark (circular)
-      file: pulumi-mark-circle-purple
-      size: 48
-      bg: false
     - name: Pulumipus (8-bit)
       file: pulumipus-8bit
       size: 40
       bg: false
 
 colors:
+    - name: Yellow
+      hex: "#f7bf2a"
+      rgb: "247, 191, 42"
+      cmyk: "0, 22, 80, 3"
+      pms: "123 C"
+    - name: Salmon
+      hex: "#f26e7e"
+      rgb: "242, 110, 126"
+      cmyk: " 0, 52, 45, 5"
+      pms: "1777 C"
+    - name: Fuchsia
+      hex: "#bd4c85"
+      rgb: "189, 76, 133"
+      cmyk: "0, 44, 22, 26"
+      pms: "2062 C"
     - name: Purple
-      hex: "#512668"
-      rgb: "81, 38, 104"
-      cmyk: "22, 63, 0, 59"
-      pms: "269 C"
-    - name: Orange
-      hex: "#EE975C"
-      rgb: "238, 151, 92"
-      cmyk: "0, 37, 61, 7"
-      pms: "157 C"
+      hex: "#8a3391"
+      rgb: "138, 51, 145"
+      cmyk: "3, 37, 0, 43"
+      pms: "513 C"
+    - name: Violet
+      hex: "#805ac3"
+      rgb: "128, 90, 195"
+      cmyk: "26, 41, 0, 24"
+      pms: "2088 C"
     - name: Blue
-      hex: "#52A6DA"
-      rgb: "82, 166, 218"
-      cmyk: "62, 24, 0, 15"
-      pms: "292 C"
-    - name: Green
-      hex: "#2FC89F"
-      rgb: "47, 200, 159"
-      cmyk: "76, 0, 21, 22"
-      pms: "7465 C"
+      hex: "#4d5bd9"
+      rgb: "77, 91, 217"
+      cmyk: "55, 4, 0, 15"
+      pms: "2726 C"
 ---

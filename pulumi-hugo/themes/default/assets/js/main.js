@@ -86,6 +86,14 @@ function getQueryVariable(variable) {
 }
 
 (function ($) {
+    const el = document.querySelector(".header-container");
+
+    const observer = new IntersectionObserver(([e]) => {
+        console.log(e.intersectionRatio, e.target.classList);
+        e.target.classList.toggle("is-pinned", e.intersectionRatio < 1)
+    }, { threshold: [1] });
+
+    observer.observe(el);
 
     // Set up toggle functionality.
     bindToggles(".toggle");

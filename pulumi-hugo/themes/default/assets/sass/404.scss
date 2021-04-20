@@ -2,7 +2,7 @@
 @import "fonts";
 
 body {
-    background-color: map-get($purple, 500);
+    background-color: map-get($gray, 900);
 }
 
 $base-header-height: 3.779vw;
@@ -18,7 +18,7 @@ $position-left: 27vw;
 
 // The content is put inside of #clouds-and-beams.
 #clouds-and-beams {
-    color: map-get($gray, 100);
+    color: white;
     line-height: 1.1;
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-size: 1.4em;
@@ -31,12 +31,10 @@ $position-left: 27vw;
 
     h1 {
         font-weight: 700;
-        text-shadow: 2px 2px 2px map-get($gray, 800);
     }
 
     h2 {
         font-weight: 400;
-        text-shadow: 2px 2px 2px map-get($gray, 800);
     }
 
     a {
@@ -50,40 +48,17 @@ $position-left: 27vw;
 
     p {
         line-height: 1.5;
-        text-shadow: 2px 2px 2px map-get($gray, 800);
     }
 
     @media (max-width: $width-break) {
         // Need to interpolate Sass variables when used in calc function.
         top: calc(#{ $position-top } * 1.5);
         left: calc(#{ $position-left } * 1.5);
-
-        h1 {
-            text-shadow: calc(.14vw * 1.5) calc(.14vw * 1.5) calc(.28vw * 1.5) rgba(32, 21, 75, 0.5);
-        }
-
-        h2 {
-        }
-
-        p {
-            text-shadow: calc(.14vw * 1.5) calc(.14vw * 1.5) calc(.28vw * 1.5) rgba(32, 21, 75, 0.5);
-        }
     }
 
     @media (min-width: $width-break) {
         top: $position-top;
         left: $position-left;
-
-        h1 {
-            text-shadow: .14vw .14vw .28vw rgba(32, 21, 75, 0.5);
-        }
-
-        h2 {
-        }
-
-        p {
-            text-shadow: .14vw .14vw .28vw rgba(32, 21, 75, 0.5);
-        }
     }
 }
 

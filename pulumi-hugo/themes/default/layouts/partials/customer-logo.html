@@ -1,0 +1,24 @@
+{{ $logoClass := "customer-logo" }}
+{{ if eq .black true }}
+    {{ $logoClass = "customer-logo-black" }}
+{{ else if eq .hoverable true }}
+    {{ $logoClass = "customer-logo-hoverable" }}
+{{ end }}
+
+{{ if eq .logo "ro" }}
+    <span class="w-full h-full">
+        {{ if eq .hoverable true }}
+            <span class="ro-hoverable">
+                <span class="ro-gray">{{ partial "customer-logos/ro-gray" }}</span>
+                <span class="ro-color">{{ partial "customer-logos/ro-color" }}</span>
+            </span>
+        {{ else }}
+            {{ partial "customer-logos/ro-color" }}
+        {{ end }}
+    </span>
+{{ else }}
+    <span class="{{ $logoClass }} w-full h-full">
+        {{ $path := .logo | printf "%s/%s" "customer-logos" | printf "%s" }}
+        {{ partial $path }}
+    </span>
+{{ end }}

@@ -1,10 +1,18 @@
-{{ $warning := eq (.Get "type") "warning" }}
-{{ $class := cond $warning "warning" "info" }}
-{{ $icon := cond $warning "exclamation-triangle" "info-circle" }}
-<div class="note note-{{ $class }}" role="alert">
-    <p>
-        <i class="fas fa-{{ $icon }} pr-2"></i>
-        {{- .Inner | markdownify -}}
-    </p>
-</div>
+{{ $type := default "info" (.Get "type") }}
+{{ $label := "Note" }}
+{{ $icon := "info-circle" }}
 
+{{ if eq $type "warning" }}
+    {{ $label = "Warning" }}
+    {{ $icon = "exclamation-triangle" }}
+{{ end }}
+
+<div class="note note-{{ $type }}" role="alert">
+    <div class="note-heading">
+        <i class="fas fa-{{ $icon }} mr-1"></i>
+        <span>{{ $label }}</span>
+    </div>
+    <div class="note-body">
+        {{- .Inner | markdownify -}}
+    </div>
+</div>

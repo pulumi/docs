@@ -1,9 +1,21 @@
 .pulumi-event-list-container {
+    .event-list-filter a {
+        @apply text-gray-600;
+
+        &:hover {
+            @apply text-violet-400;
+        }
+
+        &[href="#all"] {
+            @apply text-violet-600;
+        }
+    }
+
     @each $filter-name in "all", "featured", "upcoming", "videos", "pulumitv" {
         ##{$filter-name}:target {
             @if $filter-name != "all" {
                 ~ .event-list-filter li[data-filter-name="all"] a {
-                    @apply text-gray-700;
+                    @apply text-gray-600;
                 }
 
                 ~ h3[data-filter-title="all"] {
@@ -12,7 +24,7 @@
             }
 
             ~ .event-list-filter li[data-filter-name="#{$filter-name}"] a {
-                @apply text-blue-500;
+                @apply text-violet-600;
             }
 
             ~ h3[data-filter-title="#{$filter-name}"] {

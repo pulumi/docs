@@ -1,18 +1,19 @@
-import { Component, Element, h, Listen, Prop, State } from "@stencil/core";
+import { Component, Element, Host, h, Listen, Prop, State } from "@stencil/core";
 import { Store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
-import { setLanguage, setK8sLanguage, setOS, setCloud } from "../../store/actions/preferences";
+import { setLanguage, setK8sLanguage, setOS, setCloud, setPersona } from "../../store/actions/preferences";
 
 export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic";
 export type K8sLanguageKey = "typescript" | "yaml" | "typescript-kx";
 export type OSKey = "macos" | "linux" | "windows";
 export type CloudKey = "aws" | "azure" | "gcp" | "kubernetes" | "digitalocean" | "docker";
+export type PersonaKey = "developer" | "devops" | "security" | "leader";
 
 export type ChooserMode = "local" | "global";
 export type ChooserOptionStyle = "tabbed" | "none";
-export type ChooserType = "language" | "k8s-language" | "os" | "cloud";
-export type ChooserKey = LanguageKey | K8sLanguageKey | OSKey | CloudKey;
-export type ChooserOption = SupportedLanguage | SupportedK8sLanguage | SupportedOS | SupportedCloud;
+export type ChooserType = "language" | "k8s-language" | "os" | "cloud" | "persona";
+export type ChooserKey = LanguageKey | K8sLanguageKey | OSKey | CloudKey | PersonaKey;
+export type ChooserOption = SupportedLanguage | SupportedK8sLanguage | SupportedOS | SupportedCloud | SupportedPersona;
 
 interface SupportedLanguage {
     key: LanguageKey;
@@ -35,6 +36,12 @@ interface SupportedOS {
 
 interface SupportedCloud {
     key: CloudKey;
+    name: string;
+    preview: boolean;
+}
+
+interface SupportedPersona {
+    key: PersonaKey;
     name: string;
     preview: boolean;
 }
@@ -111,6 +118,7 @@ export class Chooser {
     setK8sLanguage: typeof setK8sLanguage;
     setOS: typeof setOS;
     setCloud: typeof setCloud;
+    setPersona: typeof setPersona;
 
     componentWillLoad() {
 
@@ -141,11 +149,11 @@ export class Chooser {
         this.parseOptions();
 
         // Map internal methods to actions defined on the store.
-        this.store.mapDispatchToProps(this, { setLanguage, setK8sLanguage, setOS, setCloud });
+        this.store.mapDispatchToProps(this, { setLanguage, setK8sLanguage, setOS, setCloud, setPersona });
 
         // Map currently selected values from the store, so we can use them in this component.
         this.storeUnsubscribe = this.store.mapStateToProps(this, (state: AppState) => {
-            const { preferences: { language, k8sLanguage, os, cloud } } = state;
+            const { preferences: { language, k8sLanguage, os, cloud, persona } } = state;
 
             // In some cases, the user's preferred (i.e., most recently selected) choice
             // may not be available as an option. When that happens, we switch into local
@@ -187,6 +195,8 @@ export class Chooser {
                     return preferredOrDefault(os);
                 case "cloud":
                    return preferredOrDefault(cloud);
+                case "persona":
+                    return preferredOrDefault(persona);
                 default:
                     return {};
             }
@@ -194,19 +204,21 @@ export class Chooser {
     }
 
     render() {
-        return [
-            <ul>
-                {
-                    // Render the current set of options, marking the selected one active.
-                    this.currentOptions.map(opt => <li class={this.selection === opt.key ? "active" : ""}>
-                        <a onClick={(event) => this.makeChoice(event, this.type, opt)}>
-                            {opt.name} { opt.preview ? <span>PREVIEW</span> : ""}
-                        </a>
-                    </li>)
-                }
-            </ul>,
-            <slot></slot>
-        ];
+        return(
+            <Host selection={this.selection}>
+                <ul>
+                    {
+                        // Render the current set of options, marking the selected one active.
+                        this.currentOptions.map(opt => <li class={this.selection === opt.key ? "active" : ""}>
+                            <a onClick={(event) => this.makeChoice(event, this.type, opt)}>
+                                {opt.name} { opt.preview ? <span>PREVIEW</span> : ""}
+                            </a>
+                        </li>)
+                    }
+                </ul>
+                <slot></slot>
+            </Host>
+        );
     }
 
     // The choosable elements of this chooser, if any.
@@ -254,6 +266,9 @@ export class Chooser {
             case "cloud":
                 options = this.supportedClouds;
                 break;
+            case "persona":
+                options = this.supportedPersonas;
+                break;
         }
 
         this.currentOptions = options.filter(opt => keys.includes(opt.key))
@@ -270,9 +285,23 @@ export class Chooser {
         var el = event.target as Element;
         var distanceFromViewportTop = el.getBoundingClientRect().top;
 
-        window.requestAnimationFrame(function() {
-            window.scroll(0, el["offsetTop"] - distanceFromViewportTop);
+        window.requestAnimationFrame(() => {
+            // Get the element's *new* position, post-reflow.
+            const distanceFromDocumentTop = this.getDistanceFromDocumentTop(el);
+            window.scroll(0, distanceFromDocumentTop - distanceFromViewportTop);
         });
+    }
+
+    // Return the distance between the upper edge of an element and the top of the document.
+    // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+    // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent
+    private getDistanceFromDocumentTop(el: Element): number {
+        let offsetTop = 0;
+        while (el) {
+            offsetTop += el["offsetTop"];
+            el = el["offsetParent"];
+        }
+        return offsetTop;
     }
 
     private setChoice(type: ChooserType, choice: ChooserOption) {
@@ -293,6 +322,9 @@ export class Chooser {
                 case "cloud":
                     this.setCloud(key as CloudKey);
                     break;
+                case "persona":
+                    this.setPersona(key as PersonaKey);
+                    break;
             }
         }
     }
@@ -306,6 +338,31 @@ export class Chooser {
             });
         }
     }
+
+    // The list of supported personas.
+    private supportedPersonas: SupportedPersona[] = [
+        {
+            key: "developer",
+            name: "Developers",
+            preview: false,
+        },
+        {
+            key: "devops",
+            name: "DevOps & Infra Teams",
+            preview: false,
+        },
+        {
+            key: "security",
+            name: "Security Engineers",
+            preview: false,
+        },
+        {
+            key: "leader",
+            name: "Engineering Leaders",
+            preview: false,
+        },
+
+    ]
 
     // The list of supported languages.
     private supportedLanguages: SupportedLanguage[] = [

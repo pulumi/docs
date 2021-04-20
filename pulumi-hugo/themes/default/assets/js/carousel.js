@@ -34,6 +34,11 @@
             return;
         }
 
+        if ($(".carousel-always-visible-cli-only").length) {
+            showCLIOnly();
+            return;
+        }
+
         $(".carousel-item")
             .css("opacity", 0)
             .css("pointer-events", "none")
@@ -106,6 +111,11 @@
     function showCLI() {
         startTyping(1);
         showLines(1);
+    }
+
+    function showCLIOnly() {
+        startTyping(0);
+        showLines(0);
     }
 
     function showConsole() {

@@ -1,97 +1,64 @@
 {{ define "hero" }}
-    <header class="header-hero">
-        <div class="container mx-auto text-center flex-col">
-            <img class="block mx-auto max-w-xs lg:max-w-md mb-12" src="/images/product/PulumiCrosswalkK8sWhite.png">
-            <h1>Production-Ready Kubernetes for Teams</h1>
-            <p>
-                Work as a team to deliver Kubernetes to any cloud, AWS, Azure, Google Cloud, or private.
-            </p>
-            <span>
-                <a class="mx-auto font-bold text-xl" href="{{ relref . "/blog/crosswalk-kubernetes" }}">Read the blog</a>.
-            </span>
-        </div>
-    </header>
+    {{ partial "hero" (dict "title" "Pulumi Crosswalk for Kubernetes") }}
 {{ end }}
 
 {{ define "main" }}
-    <nav class="nav-section-sticky">
-        <div class="container mx-auto uppercase">
-            <ul>
-                <li><a href="#benefits">Benefits </a></li>
-                <li><a href="#case-study">Case Study </a></li>
-                <li><a href="#architecture">Architecture </a></li>
-                <li><a href="#infrastructure">Infrastructure</a></li>
-                <li><a href="#applications">Applications </a></li>
-            </ul>
+    <section id="overview" class="max-w-4xl mx-auto text-center my-24">
+        <h3>Production-Ready Kubernetes for Teams</h3>
+        <p>
+            Work as a team to deliver Kubernetes to any cloud, AWS, Azure, Google Cloud, or private.
+        </p>
+        <img class="w-full" src="/images/docs/quickstart/kubernetes/cake.svg" alt="Pulumi Crosswalk for Kubernetes Architecture">
+        <div class="mt-8">
+            <a class="btn-primary" href="{{ relref . "/blog/crosswalk-kubernetes" }}">Read the blog</a>.
         </div>
-    </nav>
+    </section>
 
-    <section id="benefits" class="py-16 px-4 px-4">
+    <section id="benefits" class="mt-16 px-4">
         <div class="container mx-auto">
             <div class="md:flex mx-auto max-w-5xl mb-8">
-                <div class="md:w/13 p-4">
-                    <img class="inline-block h-10 mb-4" src="/icons/immutable_infastrc_icon.svg">
-                    <h3 class="mt-2">Production-Ready</h3>
-                    <p class="text-sm text-gray-600">
-                        Create, deploy, and manage clusters and their associated infrastructure
-                        in any cloud, including Amazon EKS, Azure AKS, and Google Cloud GKE.
-                        Leverage built-in security, scale, and manageability.
-                    </p>
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "lightning" "icon_color" "violet") }}
+                        <h5>Production-Ready</h5>
+                        <p>
+                            Create, deploy, and manage clusters in any cloud, including Amazon EKS, Azure AKS, and Google Cloud GKE. Leverage built-in security, scale, and manageability.
+                        </p>
+                    </div>
                 </div>
-                <div class="md:w/13 p-4 md:mx-8">
-                    <img class="inline-block h-10 mb-4" src="/icons/reusable-component.svg">
-                    <h3 class="mt-2">Easy Development</h3>
-                    <p class="text-sm text-gray-600">
-                        Eliminate walls of YAML and mountains of Bash, using
-                        real programming languages and world class tools. Share and
-                        reuse patterns with a growing community of practitioners.
-                    </p>
+
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "rocketship" "icon_color" "yellow") }}
+                        <h5>Easy Development</h5>
+                        <p>
+                            Eliminate walls of YAML and mountains of Bash, using
+                            real programming languages and world class tools. Share and
+                            reuse patterns with a growing community of practitioners.
+                        </p>
+                    </div>
                 </div>
-                <div class="md:w/13 p-4">
-                    <img class="inline-block h-10 mb-4" src="/icons/realCode_icon.svg">
-                    <h3 class="mt-2">Operational Insights</h3>
-                    <p class="text-sm text-gray-600">
-                        Continuously deliver your applications and infrastructure, and
-                        tackle Day Two and beyond challenges. Gain operational insights
-                        in realtime using Cloud Query Language (CQL).
-                    </p>
+
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "code" "icon_color" "violet") }}
+                        <h5>Operational Insights</h5>
+                        <p>
+                            Continuously deliver your applications and infrastructure, and
+                            tackle Day Two and beyond challenges. Gain operational insights
+                            in realtime using Cloud Query Language (CQL).
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="case-study" class="bg-gray-200 py-16 px-4">
-        <div class="container mx-auto text-center px-4">
-            <div class="flex justify-center mb-4">
-                <img class="h-20" src="/logos/customers/credijusto_logo.png" alt="Credijusto">
-            </div>
-            <blockquote class="border-orange-500 italic text-gray-800 mb-8 max-w-5xl mx-auto">
-                Pulumi enables our teams to deploy, scale and manage Kubernetes clusters in a
-                fraction of the time that it took them previously, by giving them the ability
-                to work with the languages they already know, bypassing YAML and unwieldy DSLs.
-                It helps bring together application and infrastructure developers by eliminating
-                silos and reducing friction in their workflows and interactions. We're excited
-                that Pulumi Crosswalk for Kubernetes will simplify our infrastructure provisioning
-                even further, advancing application lifecycle management throughout our organization.
-            </blockquote>
-            <div class="text-sm">
-                <div class="text-black font-bold">Fernando Carletti, Head of DevOps</div>
-                <a class="link" href="https://credijusto.com/">Credijusto</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="architecture" class="py-16 px-4">
+    <section id="infrastructure" class="py-16 px-4">
         <div class="container mx-auto">
-            <img class="block mx-auto lg:max-w-5xl" src="/images/docs/quickstart/kubernetes/cake.svg" alt="Pulumi Crosswalk for Kubernetes Architecture">
-        </div>
-    </section>
-
-    <section id="infrastructure" class="bg-gray-200 py-16 px-4">
-        <div class="container mx-auto">
-            <div class="md:flex my-8">
+            <div class="md:flex my-8 px-4">
                 <div class="md:w-1/2 md:mr-4">
-                    <h2>Playbooks for Infrastructure</h2>
+                    <h3>Playbooks for Infrastructure</h3>
                     <p>
                         Create, deploy, and manage production-ready infrastructure leveraging
                         hosted Kubernetes offerings such as Amazon Elastic Kubernetes Service (EKS),
@@ -104,8 +71,8 @@
                         focus more on code and business logic, and less on YAML or DSL
                         configuration languages.
                     </p>
-                    <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/guides/crosswalk/kubernetes" }}">Get Started</a>
+                    <p class="my-8">
+                        <a class="btn-primary" href="{{ relref . "/docs/guides/crosswalk/kubernetes" }}">Get Started</a>
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
@@ -143,11 +110,11 @@ const restrictivePSP = new k8s.policy.v1beta1.PodSecurityPolicy("restrictive", {
         </div>
     </section>
 
-    <section id="applications" class="bg-gray-100 py-16 px-4">
+    <section id="applications" class="py-16 px-4">
         <div class="container mx-auto">
-            <div class="md:flex my-8">
+            <div class="md:flex my-8 px-4">
                 <div class="md:w-1/2 md:mr-4">
-                    <h2>Simplified Application Configuration</h2>
+                    <h3>Simplified Application Configuration</h3>
                     <p>
                         Using libraries, you can focus on the most important parts of
                         your application configuration, eliminating toil and boilerplate.
@@ -160,8 +127,8 @@ const restrictivePSP = new k8s.policy.v1beta1.PodSecurityPolicy("restrictive", {
                         also leverage highly configurable and extensible components to enforce
                         best practices within your team.
                     </p>
-                    <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/guides/crosswalk/kubernetes" }}">Get Started</a>
+                    <p class="my-8">
+                        <a class="btn-primary my-2" href="{{ relref . "/docs/guides/crosswalk/kubernetes" }}">Get Started</a>
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
@@ -188,4 +155,30 @@ const service = deployment.createService({
         </div>
     </section>
 
+    <section id="case-study" class="container mx-auto mb-24">
+        <div class="text-center">
+            <div class="w-full lg:w-1/2 lg:mx-auto p-6">
+                <div class="flex flex-col card p-6 bg-white relative">
+                    <p class="text-left mt-0 italic text-black">
+                        Pulumi enables our teams to deploy, scale and manage Kubernetes clusters in a
+                        fraction of the time that it took them previously, by giving them the ability
+                        to work with the languages they already know, bypassing YAML and unwieldy DSLs.
+                        It helps bring together application and infrastructure developers by eliminating
+                        silos and reducing friction in their workflows and interactions. We're excited
+                        that Pulumi Crosswalk for Kubernetes will simplify our infrastructure provisioning
+                        even further, advancing application lifecycle management throughout our organization.
+                    </p>
+                    <div class="flex flex-grow items-end">
+                        <div class="w-2/3 text-left">
+                            <p class="text-black mb-0">Fernando Carletti</p>
+                            <p class="mt-0">Head of DevOps</p>
+                        </div>
+                        <div class="w-1/3 my-4">
+                            {{ partial "customer-logo.html" (dict "logo" "credijusto") }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {{ end }}

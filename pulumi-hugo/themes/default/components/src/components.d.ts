@@ -21,6 +21,9 @@ import {
 import {
   SourceKind,
 } from './components/convert/convert';
+import {
+  SwiperOptions,
+} from 'swiper';
 
 export namespace Components {
   interface PulumiAudio {
@@ -71,6 +74,27 @@ export namespace Components {
     'goToWebinarKey'?: string;
   }
   interface PulumiRoot {}
+  interface PulumiSlotMachine {
+    'centerImages': string;
+    'leftImages': string;
+    'rightImages': string;
+  }
+  interface PulumiSwipeable {}
+  interface PulumiSwiper {
+    'autoplay': boolean;
+    'autoplayDelay': string;
+    'centeredSlides': boolean;
+    'direction': SwiperOptions["direction"];
+    'enableMouseEvents': boolean;
+    'initialSlide': string;
+    'loop': boolean;
+    'navControls': boolean;
+    'slides': string;
+    'spaceBetween': string;
+    'speed': string;
+    'startSwiper': () => Promise<void>;
+    'stopSwiper': () => Promise<void>;
+  }
   interface PulumiTooltip {
     'hide': () => Promise<unknown>;
     'show': () => Promise<unknown>;
@@ -158,6 +182,24 @@ declare global {
     new (): HTMLPulumiRootElement;
   };
 
+  interface HTMLPulumiSlotMachineElement extends Components.PulumiSlotMachine, HTMLStencilElement {}
+  var HTMLPulumiSlotMachineElement: {
+    prototype: HTMLPulumiSlotMachineElement;
+    new (): HTMLPulumiSlotMachineElement;
+  };
+
+  interface HTMLPulumiSwipeableElement extends Components.PulumiSwipeable, HTMLStencilElement {}
+  var HTMLPulumiSwipeableElement: {
+    prototype: HTMLPulumiSwipeableElement;
+    new (): HTMLPulumiSwipeableElement;
+  };
+
+  interface HTMLPulumiSwiperElement extends Components.PulumiSwiper, HTMLStencilElement {}
+  var HTMLPulumiSwiperElement: {
+    prototype: HTMLPulumiSwiperElement;
+    new (): HTMLPulumiSwiperElement;
+  };
+
   interface HTMLPulumiTooltipElement extends Components.PulumiTooltip, HTMLStencilElement {}
   var HTMLPulumiTooltipElement: {
     prototype: HTMLPulumiTooltipElement;
@@ -188,6 +230,9 @@ declare global {
     'pulumi-greenhouse-jobs-list': HTMLPulumiGreenhouseJobsListElement;
     'pulumi-hubspot-form': HTMLPulumiHubspotFormElement;
     'pulumi-root': HTMLPulumiRootElement;
+    'pulumi-slot-machine': HTMLPulumiSlotMachineElement;
+    'pulumi-swipeable': HTMLPulumiSwipeableElement;
+    'pulumi-swiper': HTMLPulumiSwiperElement;
     'pulumi-tooltip': HTMLPulumiTooltipElement;
     'pulumi-top-button': HTMLPulumiTopButtonElement;
     'pulumi-webinar-form-select': HTMLPulumiWebinarFormSelectElement;
@@ -245,6 +290,25 @@ declare namespace LocalJSX {
   interface PulumiRoot {
     'onRendered'?: (event: CustomEvent<any>) => void;
   }
+  interface PulumiSlotMachine {
+    'centerImages'?: string;
+    'leftImages'?: string;
+    'rightImages'?: string;
+  }
+  interface PulumiSwipeable {}
+  interface PulumiSwiper {
+    'autoplay'?: boolean;
+    'autoplayDelay'?: string;
+    'centeredSlides'?: boolean;
+    'direction'?: SwiperOptions["direction"];
+    'enableMouseEvents'?: boolean;
+    'initialSlide'?: string;
+    'loop'?: boolean;
+    'navControls'?: boolean;
+    'slides'?: string;
+    'spaceBetween'?: string;
+    'speed'?: string;
+  }
   interface PulumiTooltip {}
   interface PulumiTopButton {}
   interface PulumiWebinarFormSelect {
@@ -266,6 +330,9 @@ declare namespace LocalJSX {
     'pulumi-greenhouse-jobs-list': PulumiGreenhouseJobsList;
     'pulumi-hubspot-form': PulumiHubspotForm;
     'pulumi-root': PulumiRoot;
+    'pulumi-slot-machine': PulumiSlotMachine;
+    'pulumi-swipeable': PulumiSwipeable;
+    'pulumi-swiper': PulumiSwiper;
     'pulumi-tooltip': PulumiTooltip;
     'pulumi-top-button': PulumiTopButton;
     'pulumi-webinar-form-select': PulumiWebinarFormSelect;
@@ -290,6 +357,9 @@ declare module "@stencil/core" {
       'pulumi-greenhouse-jobs-list': LocalJSX.PulumiGreenhouseJobsList & JSXBase.HTMLAttributes<HTMLPulumiGreenhouseJobsListElement>;
       'pulumi-hubspot-form': LocalJSX.PulumiHubspotForm & JSXBase.HTMLAttributes<HTMLPulumiHubspotFormElement>;
       'pulumi-root': LocalJSX.PulumiRoot & JSXBase.HTMLAttributes<HTMLPulumiRootElement>;
+      'pulumi-slot-machine': LocalJSX.PulumiSlotMachine & JSXBase.HTMLAttributes<HTMLPulumiSlotMachineElement>;
+      'pulumi-swipeable': LocalJSX.PulumiSwipeable & JSXBase.HTMLAttributes<HTMLPulumiSwipeableElement>;
+      'pulumi-swiper': LocalJSX.PulumiSwiper & JSXBase.HTMLAttributes<HTMLPulumiSwiperElement>;
       'pulumi-tooltip': LocalJSX.PulumiTooltip & JSXBase.HTMLAttributes<HTMLPulumiTooltipElement>;
       'pulumi-top-button': LocalJSX.PulumiTopButton & JSXBase.HTMLAttributes<HTMLPulumiTopButtonElement>;
       'pulumi-webinar-form-select': LocalJSX.PulumiWebinarFormSelect & JSXBase.HTMLAttributes<HTMLPulumiWebinarFormSelectElement>;

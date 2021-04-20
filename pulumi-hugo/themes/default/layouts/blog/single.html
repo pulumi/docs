@@ -15,7 +15,7 @@
                     {{ end }}
 
                     <div class="flex items-center">
-                        <span>
+                        <span class="text-sm text-gray-700">
                             {{ partial "blog/authors.html" (dict "context" . "authors" .Params.authors) }}
                         </span>
                     </div>
@@ -39,7 +39,7 @@
                 </article>
             </div>
 
-            <div class="md:w-3/12 md:pl-8 mt-16">
+            <div class="md:w-3/12 md:pl-8">
                 <div class="sticky-sidebar">
                     {{ partial "blog/right-nav.html" . }}
                     <div class="mt-8">

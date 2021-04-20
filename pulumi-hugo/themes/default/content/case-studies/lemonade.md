@@ -71,9 +71,8 @@ automating infrastructure for every environment. Embedded business logic helped 
 that resources get appropriately sized for each environment --- keeping costs low and
 allowing maximum reuse of infrastructure code.
 
-> "With Pulumi, we can utilize our infrastructure much better because we have the ability to
-> embed business logic. We're not limited to one-size-fits-all configurations, but can
-> actually implement environment-specific customizations for our infrastructure."
+> “Pulumi’s Automation API helps us to build on existing best practices and further automate
+> our deployment process -- eliminating manual tasks and exception handling.”
 >
 > --- Igor Shapiro, Principal Engineer at Lemonade
 

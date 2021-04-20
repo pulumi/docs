@@ -17,6 +17,14 @@ pulumi-greenhouse-jobs-list {
         li {
             @apply mb-4;
 
+            .job-title {
+                @apply text-black font-semibold;
+
+                &:hover {
+                    @apply underline;
+                }
+            }
+
             .job-location {
                 @apply text-sm text-gray-600;
             }

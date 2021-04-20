@@ -50,33 +50,33 @@
                 {{ $toggle_state = "toggleVisible" }}
             {{ end }}
 
-            <div class="{{ $toggle_state }}">
-                <div class="collapsed">
-                    <div class="sidenav-topic {{ $sidenav_selected }}">
+            <ul class="{{ $toggle_state }}">
+                <ul class="collapsed">
+                    <li class="sidenav-topic {{ $sidenav_selected }}">
                         <a href="{{ .URL }}">{{ .Name }}</a>
                         {{- if .HasChildren -}}
                             <span class="toggleButton">
                                 <i class="fas fa-caret-right"></i>
                             </span>
                         {{- end -}}
-                    </div>
-                </div>
-                <div class="expanded">
-                    <div class="sidenav-topic {{ if .HasChildren }} sidenav-parent {{ end }} {{ $sidenav_selected }}">
+                    </li>
+                </ul>
+                <ul class="expanded">
+                    <li class="sidenav-topic {{ if .HasChildren }} sidenav-parent {{ end }} {{ $sidenav_selected }}">
                         <a href="{{ .URL }}">{{ .Name }}</a>
                         {{- if .HasChildren -}}
                             <span class="toggleButton">
                                 <i class="fas fa-caret-down"></i>
                             </span>
                         {{- end -}}
-                    </div>
+                    </li>
                     {{ if .HasChildren }}
                         <div class="sidenav-subsection">
                             {{ template "toc" (dict "page" $page "menu" .Children) }}
                         </div>
                     {{ end }}
-                </div>
-            </div>
+                </ul>
+            </ul>
         {{ end }}
     {{ end }}
 {{ end }}

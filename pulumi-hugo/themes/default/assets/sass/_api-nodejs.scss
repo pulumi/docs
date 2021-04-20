@@ -45,10 +45,6 @@ ul.api {
             @apply btn truncate bg-transparent inline-block p-1;
 
             max-width: 250px;
-
-            &:hover {
-                @apply rounded bg-gray-200;
-            }
         }
 
         .symbol {

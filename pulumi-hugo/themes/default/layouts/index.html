@@ -1,275 +1,325 @@
 {{ define "hero" }}
-    <header class="header-hero-home text-center mb-8 relative px-4">
-
-        {{ partial "alert" . }}
-
-        <div class="relative">
-            <div class="relative overflow-visible inline-block">
-
-                <h1 class="font-sans font-body font-normal">
-                    {{ .Params.heading }}
-                </h1>
-                <p class="mt-2">
-                    {{ .Params.subhead | markdownify }}
-                </p>
-                <div class="md:absolute inline-block" style="top: -4rem; right: -14rem;">
-                    <img class="w-48" src="/images/mascot/pulumipus.svg" alt="Pulumi mascot">
-                </div>
-            </div>
-
+    <header class="home-page-hero">
+        <div class="dot-background-container pointer-events-none">
+            <div class="dot-background"></div>
+        </div>
+        <div class="dot-overlay"></div>
+        <div class="home-page-hero-content">
+            <h1 class="relative">
+                <span class="rainbow-text" data-text={{index (.Params.hero.title) 0}}>{{ index (.Params.hero.title) 0 }}</span><br />
+                <span class="rainbow-text" data-text={{index (.Params.hero.title) 1}}>{{ index (.Params.hero.title) 1 }}</span>
+            </h1>
+            <p class="text-center max-w-xl leading-7">{{ .Params.hero.description }}</p>
             <div class="mt-8">
-                <a href="{{ relref . "/docs/get-started" }}"
-                        class="my-2 md:my-0 md:mx-2 btn bg-purple-300 hover:bg-purple-200 border-none px-8 py-4 transition-all text-sm rounded-full uppercase shadow-lg"
-                        title="Create your first project with Pulumi">
-                    Get Started
-                </a>
-            </div>
-            <div class="mt-8 text-sm text-purple-100">
-                Pulumi is <a class="text-white hover:underline" href="{{ relref . "/pricing#community-edition" }}">free</a>
-                and <a class="text-white hover:underline" href="https://github.com/pulumi/pulumi" target="_blank">open source</a>.
+                <a class="home-hero-btn-primary" href="{{ relref . "/docs/get-started" }}">{{ .Params.hero.cta_text }}</a>
             </div>
         </div>
     </header>
 {{ end }}
 
 {{ define "main" }}
-    <section class="pb-16 px-4" style="background: linear-gradient(#ffffff 50%, #f5fbff 100%);">
-        <div class="container mx-auto text-center">
-
-            <!-- Carousel -->
-            {{ partial "carousel" . }}
-
-            <!-- CTA 0 -->
-            <div class="mt-6 md:mt-12 mx-auto max-w-3xl md:flex items-center bg-white px-8 py-6 rounded-lg border border-gray-300 shadow-md">
-                <div>
-                    <i class="text-green-600 fas fa-check text-4xl"></i>
+    <section class="container mx-auto mt-20">
+        <div class="flex flex-col lg:flex-row h-full">
+            <div class="w-full lg:w-1/2 mt-16 lg:mt-0 h-full flex items-center justify-center relative overflow-hidden">
+                <div class="slot-machine-overlay">
+                    <div class="overlay-top"></div>
+                    <div class="overlay-middle flex justify-center items-center">
+                        <div class="w-1/6 hidden lg:block"><object class="m-auto" data="/images/home/plus.svg"> </object></div>
+                        <div class="w-1/6"></div>
+                        <div class="w-1/6 hidden lg:block"><object class="m-auto" data="/images/home/plus.svg"> </object></div>
+                    </div>
+                    <div class="overlay-end"></div>
                 </div>
-                <div class="md:ml-8 md:mr-6 text-left pt-3 pb-6 md:py-0">
-                    {{ (index .Params.ctas 0) | markdownify }}
-                </div>
-                <div class="inline-flex items-center">
-                    <a class="btn group w-40 md:ml-4 text-left pl-6 py-3 rounded-lg" href="{{ relref . "/docs/get-started" }}" title="Create your first project with Pulumi">
-                        <span>Get Started</span>
-                        <span class="pl-1 group-hover:pl-2 transition-all">&rarr;</span>
-                    </a>
-                </div>
+                <pulumi-slot-machine
+                    left-images="{{ delimit .Params.overview.logos.clouds "," }}"
+                    center-images="{{ delimit .Params.overview.logos.languages "," }}"
+                    right-images="{{ delimit .Params.overview.logos.identity "," }}"
+                >
+                </pulumi-slot-machine>
             </div>
-        </div>
-    </section>
 
-    <!-- Testimonials -->
-    <section class="py-16 px-4" style="background: url(/images/home/waves-blue.svg) repeat-x; background-position: top left;">
-        <div>
-            <div class="container mx-auto md:flex items-start">
-                <div class="md:w-1/3 mx-auto bg-white py-8 px-10 text-sm rounded rounded-lg shadow-lg border border-gray-300 relative">
-                    <i class="fa fa-quote-left text-gray-200 absolute top-0 left-0 ml-4 mt-4 text-5xl z-0"></i>
-                    <p class="leading-loose mt-0 z-10 relative text-gray-800">
-                        {{ (index .Params.quotes 0).body }}
-                    </p>
-                    <div class="leading-relaxed flex items-start">
-                        <div>
-                            <div class="text-blue-700 font-semibold">
-                                {{ (index .Params.quotes 0).name }}
-                            </div>
-                            <div class="text-blue-500">
-                                {{ (index .Params.quotes 0).title }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/3 md:mx-8 my-8 md:my-0 bg-white py-8 px-10 text-sm rounded rounded-lg shadow-lg border border-gray-300 relative">
-                    <i class="fa fa-quote-left text-gray-200 absolute top-0 left-0 ml-4 mt-4 text-5xl z-0"></i>
-                    <p class="leading-loose mt-0 z-10 relative text-gray-800">
-                        {{ (index .Params.quotes 1).body }}
-                    </p>
-                    <div class="leading-relaxed flex items-start">
-                        <div>
-                            <div class="text-blue-700 font-semibold">
-                                {{ (index .Params.quotes 1).name }}
-                            </div>
-                            <div class="text-blue-500">
-                                {{ (index .Params.quotes 1).title }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/3 bg-white py-8 px-10 text-sm rounded rounded-lg shadow-lg border border-gray-300 relative shadow-lg">
-                    <i class="fa fa-quote-left text-gray-200 absolute top-0 left-0 ml-4 mt-4 text-5xl z-0"></i>
-                    <p class="leading-loose mt-0 z-10 relative text-gray-800">
-                        {{ (index .Params.quotes 2).body }}
-                    </p>
-                    <div class="leading-relaxed flex items-start">
-                        <div>
-                            <div class="text-blue-700 font-semibold">
-                                {{ (index .Params.quotes 2).name }}
-                            </div>
-                            <div class="text-blue-500">
-                                {{ (index .Params.quotes 2).title }}
-                            </div>
-                        </div>
+            <div class="w-full lg:w-1/2 order-first lg:order-last h-full flex flex-col justify-center items-center">
+                <div class="w-8/12 text-center">
+                    <h2>
+                        {{ index (.Params.overview.title) 0}}<br />
+                        {{ index (.Params.overview.title) 1}}<br />
+                        {{ index (.Params.overview.title) 2}}
+                    </h2>
+                    <p class="text-lg">{{ .Params.overview.description | markdownify }}</p>
+                    <div class="mt-16">
+                        {{ partial "cta/primary-get-started" . }}
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Customer logos -->
-    <section id="customers" class="mb-16 px-4">
-        <h3 class="mt-12 mb-8 text-center">
-            Powering cloud engineering for industry leading organizations
-        </h3>
+    <section class="mb-8 mt-16 lg:my-32 px-6 lg:px-0 relative">
+        <div class="shape-background home-build-section">
+            <div class="shape-container">
+                <div class="circle-left"></div>
+                <div class="circle-center"></div>
+                <div class="circle-right"></div>
+            </div>
+        </div>
+
         <div class="container mx-auto">
-            <div class="lg:flex items-center justify-center my-4">
-                <a data-track="customer-logo" href="https://www.snowflake.com/" target="_blank" rel="noreferrer noopener">
-                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-12 mx-8" src="/logos/customers/snowflake-logo.svg" alt="Snowflake" title="Snowflake">
-                </a>
-                <a data-track="customer-logo" href="https://www.tableau.com/" target="_blank" rel="noreferrer noopener">
-                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
-                </a>
-                <a data-track="customer-logo" href="https://www.mbusa.com/"  target="_blank" rel="noreferrer noopener">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-12 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
-                </a>
-                <a data-track="customer-logo" href="https://www.mindbodyonline.com/" target="_blank" rel="noreferrer noopener">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-6 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
-                </a>
-                <a data-track="customer-logo" href="https://www.nih.gov/" target="_blank" rel="noreferrer noopener">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-10 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
-                </a>
-            </div>
-            <div class="lg:flex items-center justify-center my-4">
-                <a data-track="customer-logo" href="https://www.linio.com/" target="_blank" rel="noreferrer noopener">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8 mx-8" src="/logos/customers/linio_logo.png" alt="Linio" title="Linio">
-                </a>
-                <a data-track="customer-logo" href="https://www.cockroachlabs.com/" target="_blank" rel="noreferrer noopener">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8 mx-8" src="/logos/customers/cockroach-labs-logo.svg" alt="Cockroach Labs" title="Cockroach Labs">
-                </a>
-                <a data-track="customer-logo" href="https://www.sourcegraph.com/" target="_blank" rel="noreferrer noopener">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-6 mx-8" src="/logos/customers/sourcegraph-logo.svg" alt="Sourcegraph" title="Sourcegraph">
-                </a>
-                <a data-track="customer-logo" href="https://www.snopes.com/" target="_blank" rel="noreferrer noopener">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-10 mx-8" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes">
-                </a>
-                <a data-track="customer-logo" href="https://www.lemonade.com/"  target="_blank" rel="noreferrer noopener">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8 mx-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade">
-                </a>
-                <a data-track="customer-logo" href="https://codepen.io/"  target="_blank" rel="noreferrer noopener">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8 mx-8" src="/logos/customers/codepen.svg" alt="CodePen" title="CodePen">
-                </a>
-            </div>
-            <div class="lg:flex items-center justify-center my-4">
-                <a data-track="customer-logo" href="https://www.lykke.com/" target="_blank" rel="noreferrer noopener">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8 mx-8" src="/logos/customers/lykke_logo.svg" alt="Lykke" title="Lykke">
-                </a>
-                <a data-track="customer-logo" href="https://www.ware2go.co/" target="_blank" rel="noreferrer noopener">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-5 mx-8" src="/logos/customers/ware2go_logo.png" title="Ware2Go" alt="Ware2Go">
-                </a>
-                <a data-track="customer-logo" href="https://credijusto.com/"  target="_blank" rel="noreferrer noopener">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-10 mx-8" src="/logos/customers/credijusto_logo.svg" alt="Credijusto" title="Credijusto">
-                </a>
-                <a data-track="customer-logo" href="https://www.proofpoint.com/"  target="_blank" rel="noreferrer noopener">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8 mx-8" src="/logos/customers/menta_logo.svg" alt="Menta Network" title="Menta Network">
-                </a>
-                <a data-track="customer-logo" href="https://pinpoint.com/" target="_blank" rel="noreferrer noopener">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8 mx-8" src="/logos/customers/pinpoint.svg" alt="Pinpoint" title="Pinpoint">
-                </a>
-            </div>
-        </div>
-        <p class="text-blue-500 text-center font-bold mt-10">
-            <a data-track="logos-case-study" href="{{ relref . "/case-studies" }}">Read our case studies</a> &rarr;
-        </p>
-    </section>
+            <div class="flex flex-col lg:flex-row">
+                <div class="w-full lg:w-1/2 lg:mr-32 z-10 bg-white px-8 rounded">
+                    <h2>{{ .Params.build.title }}</h2>
+                    <p class="text-lg">{{ .Params.build.description }}</p>
 
-    <div class="max-w-3xl border-b border-gray-200 mx-4 md:mx-auto"></div>
+                    {{ range $item := .Params.build.items }}
+                        <h6>{{ $item.title }}</h6>
+                        <p>{{ $item.description }}</p>
+                    {{ end }}
 
-    <!-- Articles -->
-    <section class="bg-white py-16 md:py-24 px-4">
-        <div class="container mx-auto md:flex items-start">
-            <article class="md:w-1/3">
-                <div class="text-gray-600 uppercase text-sm">
-                    {{ (index .Params.articles 0).label }}
+                    <div class="mt-16">
+                        {{ partial "cta/primary-get-started" . }}
+                    </div>
                 </div>
-                <h3 class="mt-2">
-                    <a data-track="article" class="text-blue-700 hover:text-blue-500" href="{{ relref . (index .Params.articles 0).url }}">
-                        {{ (index .Params.articles 0).title }}
-                    </a>
-                </h3>
-                <p class="text-gray-600">
-                    {{ (index .Params.articles 0).summary | markdownify }}
-                </p>
-                <p class="text-blue-500">
-                    <a data-track="article-read-on" href="{{ relref . (index .Params.articles 0).url }}" class="hover:mr-1 transition-all">Read on</a> &rarr;
-                </p>
-            </article>
-            <article class="md:w-1/3 md:mx-8 my-12 md:my-0 py-12 md:py-0 border-t border-b border-gray-200 md:border-none">
-                <div class="text-gray-600 uppercase text-sm">
-                    {{ (index .Params.articles 1).label }}
+
+                <div class="w-full lg:w-1/2 flex items-start justify-center mt-12 lg:mt-0">
+                    <pulumi-chooser type="language" options="typescript,javascript,python,go,csharp">
+                        <pulumi-choosable type="language" class="highlight" value="typescript">
+                            <img src="/images/home/typescript.svg" alt="" />
+                        </pulumi-choosable>
+
+                        <pulumi-choosable type="language" class="highlight" value="javascript">
+                            <img src="/images/home/javascript.svg" alt="" />
+                        </pulumi-choosable>
+
+                        <pulumi-choosable type="language" class="highlight" value="python">
+                            <img src="/images/home/python.svg" alt="" />
+                        </pulumi-choosable>
+
+                        <pulumi-choosable type="language" class="highlight" value="go">
+                            <img src="/images/home/go.svg" alt="" />
+                        </pulumi-choosable>
+
+                        <pulumi-choosable type="language" class="highlight" value="csharp">
+                            <img src="/images/home/c-sharp.svg" alt="" />
+                        </pulumi-choosable>
+                    </pulumi-chooser>
                 </div>
-                <h3 class="mt-2">
-                    <a data-track="article" class="text-blue-700 hover:text-blue-500" href="{{ relref . (index .Params.articles 1).url }}">
-                        {{ (index .Params.articles 1).title }}
-                    </a>
-                </h3>
-                <p class="text-gray-600">
-                    {{ (index .Params.articles 1).summary | markdownify }}
-                </p>
-                <p class="text-blue-500">
-                    <a data-track="article-read-on" href="{{ relref . (index .Params.articles 1).url }}" class="hover:mr-1 transition-all">Read on</a> &rarr;
-                </p>
-            </article>
-            <article class="md:w-1/3">
-                <div class="text-gray-600 uppercase text-sm">
-                    {{ (index .Params.articles 2).label }}
-                </div>
-                <h3 class="mt-2">
-                    <a data-track="article" class="text-blue-700 hover:text-blue-500" href="{{ relref . (index .Params.articles 2).url }}">
-                        {{ (index .Params.articles 2).title }}
-                    </a>
-                </h3>
-                <p class="text-gray-600">
-                    {{ (index .Params.articles 2).summary | markdownify }}
-                </p>
-                <p class="text-blue-500">
-                    <a data-track="article-read-on" href="{{ relref . (index .Params.articles 2).url }}" class="hover:mr-1 transition-all">Read on</a> &rarr;
-                </p>
-            </article>
+            </div>
+
+            <div class="flex flex-col lg:flex-row justify-center items-stretch my-8 lg:my-32 px-6 lg:px-0">
+                {{ range $item := .Params.use_cases }}
+                    <div class="card p-10 mx-4 text-center bg-white z-10 h-full my-6 lg:my-0">
+                        <div>
+                            {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                        </div>
+                        <h5>{{ $item.title }}</h5>
+                        <p>{{ $item.description }}</p>
+                    </div>
+                {{ end }}
+            </div>
         </div>
     </section>
 
-    <div class="max-w-3xl border-b border-gray-200 mx-4 md:mx-auto"></div>
-
-    <div class="max-w-4xl my-24 mx-auto px-4">
-        <div class="text-center mb-8">
-            <h3>{{ .Params.video.heading }}</h3>
-            <p class="my-0">
-                {{ .Params.video.subhead }}
-            </p>
+    <section class="py-16 lg:my-32 px-6 lg:px-0 relative">
+        <div class="shape-background home-deploy-section">
+            <div class="shape-container">
+                <div class="dot-background-container">
+                    <div class="dot-background-overlay"></div>
+                    <div class="dot-background no-animate"></div>
+                </div>
+                <div class="circle-left"></div>
+                <div class="circle-right"></div>
+            </div>
         </div>
 
-        <!-- Rendered with Hugo's YouTube shortcode: https://gohugo.io/content-management/shortcodes/#youtube -->
-        <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <div class="container mx-auto flex flex-col lg:flex-row">
+            <div class="w-full lg:w-1/2 flex items-center justify-center mt-12 lg:mt-0">
+                <img class="rounded-xl shadow-2xl" src="/images/home/deploy-graphic.svg" alt="Pulumi Pipeline" />
+            </div>
+            <div class="w-full lg:w-1/2 order-first lg:order-last lg:ml-32 z-10 bg-white px-8 rounded">
+                <h2>{{ .Params.deploy.title }}</h2>
+                <p class="text-lg">{{ .Params.deploy.description }}</p>
+
+                {{ range $item := .Params.deploy.items }}
+                    <h6>{{ $item.title }}</h6>
+                    <p>{{ $item.description }}</p>
+                {{ end }}
+
+                <div class="mt-16">
+                    {{ partial "cta/primary-get-started" . }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-16 lg:py-32 px-6 lg:px-0 relative">
+        <div class="shape-background home-manage-section">
+            <div class="shape-container">
+                <div class="dot-background-container">
+                    <div class="dot-background-overlay"></div>
+                    <div class="dot-background no-animate"></div>
+                </div>
+                <div class="circle-left"></div>
+                <div class="circle-right"></div>
+            </div>
+        </div>
+
+        <div class="container mx-auto flex flex-col lg:flex-row">
+            <div class="w-full lg:w-1/2 lg:mr-32 z-10 bg-white px-8 rounded">
+                <h2>{{ .Params.manage.title }}</h2>
+                <p class="text-lg">{{ .Params.manage.description }}</p>
+
+                {{ range $item := .Params.manage.items }}
+                    <h6>{{ $item.title }}</h6>
+                    <p>{{ $item.description }}</p>
+                {{ end }}
+
+                <div class="mt-16">
+                    {{ partial "cta/primary-get-started" . }}
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/2 flex items-center justify-center mt-12 lg:mt-0">
+                <img class="rounded-xl shadow-2xl" src="/images/home/pulumi-console.svg" alt="Pulumi Console" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="container mx-auto my-16 lg:my-24 relative">
+
+        <h2 class="text-center">{{ .Params.benefits.title }}</h2>
+        <div class="benefits-section relative">
+            <div class="shape-background home-benefits-section">
+                <div class="shape-container">
+                    <div class="circle-left"></div>
+                    <div class="circle-right"></div>
+                </div>
+            </div>
+            {{ range $item := .Params.benefits.items }}
+                <div class="benefits-item card z-10 bg-white">
+                    <div class="icon-section">
+                        {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                    </div>
+                    <div>
+                        <h5>{{ $item.title }}</h5>
+                    </div>
+                    <div class="description">
+                        <p>{{ $item.description }}</p>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <!-- Logos -->
+    <section class="container mx-auto text-center my-0 mb-16 lg:my-24 overflow-hidden px-3">
+        <h3 class="text-center mb-10 hidden lg:block">{{ .Params.customer_logos.title }}</h3>
+        <h6 class="text-center mb-10 lg:hidden">{{ .Params.customer_logos.title }}</h6>
+        <pulumi-swiper loop="true" autoplay="true" autoplay-delay="2500" speed="2000">
+            {{ range $logoBunch := .Params.customer_logos.logos }}
+                <pulumi-swipeable>
+                    <div class="flex flex-wrap items-center justify-center">
+                        {{ range $logo := $logoBunch.items }}
+                            <div class="w-1/3 lg:w-1/5 px-2 py-4 lg:py-0 lg:px-8">
+                                {{ partial "customer-logo.html" (dict "logo" $logo "hoverable" true) }}
+                            </div>
+                        {{ end }}
+                    </div>
+                </pulumi-swipeable>
+            {{ end }}
+        </pulumi-swiper>
+    </section>
+
+    <!-- Video -->
+    <section class="container mx-auto mt-28 relative">
+        <div class="shape-background home-video-section">
+            <div class="shape-container">
+                <div class="circle-left"></div>
+                <div class="circle-right"></div>
+            </div>
+        </div>
+        <div class="rounded-xl shadow-2xl w-3/4 mx-auto" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
             <iframe
                 src="//www.youtube.com/embed/6f8KF6UGN7g?rel=0"
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
                 allowfullscreen=""
                 title="Introduction to Pulumi: Modern Infrastructure as Code"
-                srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/6f8KF6UGN7g?autoplay=1><img src='/images/home/youtube-preview.png' alt='Introduction to Pulumi: Modern Infrastructure as Code'></a>"
+                srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/6f8KF6UGN7g?autoplay=1><img src='/images/home/youtube-preview.svg' alt='Introduction to Pulumi: Modern Infrastructure as Code'></a>"
             ></iframe>
         </div>
-    </div>
+    </section>
 
-    <div class="text-center pb-24 text-lg px-4" style="background: linear-gradient(#ffffff, #f7fafc);">
-        <div class="md:inline-flex items-center shadow-lg bg-white rounded px-4 md:px-12 py-6 mx-auto border border-gray-400">
-            <div class="text-left">
-                <p class="text-gray-700 leading-relaxed mt-0 md:mt-4">
-                    {{ (index .Params.ctas 1) | markdownify }}
-                </p>
-            </div>
-            <div class="inline-flex items-center md:ml-10">
-                <a class="btn group w-40 text-left pl-6 py-3 rounded-lg" href="{{ relref . "/docs/get-started" }}" title="Create your first project with Pulumi">
-                    <span>Get Started</span>
-                    <span class="pl-1 group-hover:pl-2 transition-all">&rarr;</span>
-                </a>
+    <!-- Get Started -->
+    <section class="my-16 lg:my-32 lg:pt-48 relative overflow-hidden flex flex-col">
+        <div class="container mx-auto px-3">
+            <div class="w-full bg-violet-600 text-white rounded shadow p-16 lg:pt-56 text-center">
+                <h2 class="text-white">{{ .Params.get_started.title }}</h2>
+                <p class="text-white">{{ .Params.get_started.description }}</p>
+                <div class="mt-16">
+                    <a class="btn-secondary" href="{{ relref . "/docs/get-started" }}">{{ .Params.get_started.cta_text }}</a>
+                </div>
             </div>
         </div>
-    </div>
+
+        <div class="w-full order-first pb-16 lg:hidden">
+            <pulumi-swiper
+                slides="1"
+                centered-slides="true"
+                initial-slide="3"
+                loop="true"
+                autoplay="true"
+                autoplay-delay="5000"
+                speed="1000"
+            >
+                {{ range $tweet := .Params.get_started.tweets }}
+                    <pulumi-swipeable>
+                        <div class="w-full px-4">
+                            <div class="flex flex-col card p-6 bg-white h-56">
+                                <p class="text-left mt-0">{{ $tweet.text }}</p>
+                                <div class="flex flex-grow items-end">
+                                    <div>
+                                        <img class="rounded-full w-12 h-12" src="{{ $tweet.avatar }}" />
+                                    </div>
+                                    <p class="ml-4 text-gray-600">{{ $tweet.username }}</p>
+                                    <div class="flex-grow flex justify-end my-4">
+                                        <img src="/logos/tech/twitter.svg" alt="Twitter" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </pulumi-swipeable>
+                {{ end }}
+            </pulumi-swiper>
+        </div>
+        <div class="large-container mx-auto absolute top-0 left-0 pt-16 hidden lg:block">
+            <pulumi-swiper
+                slides="3"
+                centered-slides="true"
+                initial-slide="3"
+                loop="true"
+                autoplay="true"
+                autoplay-delay="4000"
+                speed="1000"
+            >
+                {{ range $tweet := .Params.get_started.tweets }}
+                    <pulumi-swipeable>
+                        <div class="w-full px-4 text-left">
+                            <div class="flex flex-col card p-6 bg-white h-64">
+                                <p class="flex-grow mt-0">{{ $tweet.text }}</p>
+                                <div class="flex items-center w-full">
+                                    <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">
+                                        <!-- If the browser fails to load the Twitter avatar, just hide it. -->
+                                        <img class="rounded-full border-none w-12 h-12 mr-4" src="{{ $tweet.avatar }}" onerror="$(this).hide();" />
+                                    </a>
+                                    <a href="{{ $tweet.link }}" class="flex-grow text-gray-600 hover:text-gray-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                                        {{ $tweet.username }}
+                                    </a>
+                                    <img src="/logos/tech/twitter.svg" alt="Twitter" />
+                                </div>
+                            </div>
+                        </div>
+                    </pulumi-swipeable>
+                {{ end }}
+            </pulumi-swiper>
+        </div>
+    </section>
 {{ end }}

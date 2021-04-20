@@ -81,10 +81,10 @@ kubernetes_overview:
                     package main
 
                     import (
-                        corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
-                        "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/helm/v3"
-                        metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/meta/v1"
-                        "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+                        corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
+                        "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/helm/v3"
+                        metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
+                        "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
                     )
 
                     func main() {
@@ -221,20 +221,24 @@ detail_sections:
       cta_url: "/blog/new-kubernetes-superpowers"
       items:
           - title: Everything In One Place
+            icon: cloud-with-nodes
+            icon_color: violet
             description: Easily make the best use of existing Kubernetes tools such as Helm, and reduce the friction caused by multiple deployment tools and models across complex architectures.
-            icon: fa-tools
 
           - title: Efficient Adoption
+            icon: lightning
+            icon_color: yellow
             description: There’s no need to rewrite your existing Kubernetes configurations to get started with Pulumi. You can efficiently adopt existing K8s resources to deploy your application to save time and effort.
-            icon: fa-book
 
           - title: Secrets Management
+            icon: security
+            icon_color: salmon
             description: Use Pulumi to ensure secret data is encrypted in transit, at rest, and physically anywhere it gets stored. Bring your own preferred cloud encryption provider or use Pulumi's native secrets provider.
-            icon: fa-key
 
           - title: Pulumi Kubernetes Operator
+            icon: pen
+            icon_color: fuchsia
             description: The Pulumi Kubernetes Operator gives you a Kubernetes controller that deploys cloud infrastructure for you and your team.
-            icon: fa-people-carry
 
     - title: Kubernetes Best Practices with Pulumi Crosswalk
       description: |
@@ -243,20 +247,24 @@ detail_sections:
       cta_url: "/docs/guides/crosswalk/kubernetes"
       items:
           - title: Day 2 and Beyond
+            icon: cycle
+            icon_color: blue
             description: By using Pulumi Crosswalk for Kubernetes, you can benefit from tried-and-true “Day Two and beyond” integrations and playbooks, improving your infrastructure security, manageability, and cost effectiveness.
-            icon: fa-sun
 
           - title: Accessible Kubernetes
+            icon: collab
+            icon_color: purple
             description: Through Pulumi's Crosswalk for Kubernetes library extensions, the authorship experience has improved to make the Kubernetes API more accessible and approachable to operators and developers of all backgrounds.
-            icon: fa-users
 
           - title: Focus on Delivering Value
+            icon: nodes
+            icon_color: salmon
             description: With Pulumi you'll focus more on functionality and business logic of your Kubernetes infrastructure and applications, and less on low-level implementation details.
-            icon: fa-chalkboard-teacher
 
           - title: Avoid Pitfalls
+            icon: code
+            icon_color: yellow
             description: Discover solutions to the hardest Kubernetes problems to avoid mitigating pitfalls around infrastructure, security, governance, reliability, and maintainability of the K8s cluster, its workloads, and underlying resources.
-            icon: fa-pager
 
 contact_us_form:
     section_id: contact

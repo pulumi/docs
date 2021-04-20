@@ -1,25 +1,8 @@
 {{ define "hero" }}
-    <header class="header-hero">
-        <div class="container mx-auto">
-            <div class="mx-auto text-center">
-                <h1>Program the cloud.</h1>
-            </div>
-        </div>
-    </header>
+    {{ partial "hero" (dict "title" "About Us") }}
 {{ end }}
 
 {{ define "main" }}
-    <nav class="nav-section-sticky">
-        <div class="container mx-auto uppercase">
-            <ul>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#board">Board</a></li>
-                <li><a href="#newsroom">Newsroom</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <section class="max-w-4xl container mx-auto py-8 px-4 text-center text-lg">
         <p>
             Pulumi is a venture backed startup in Seattle whose mission is to enable every
@@ -54,8 +37,8 @@
             </ul>
             <div class="text-center mb-16 mt-8">
                 <h3>Join the Team</h3>
-                <p>
-                    <a href="{{ relref . "/careers" }}">Browse our open positions</a>.
+                <p class="mt-8">
+                    <a class="btn-secondary" href="{{ relref . "/careers" }}">Browse our open positions</a>.
                 </p>
             </div>
         </div>
@@ -149,20 +132,5 @@
         </div>
     </section>
 
-    <section class="bg-purple-500 py-24 text-white text-center px-4">
-        <img class="inline-block md:mx-auto" src="/images/cloud.png">
-        <h2 class="mt-0 text-white text-4xl">Why Pulumi?</h2>
-        <p class="mb-8 md:max-w-3xl md:mx-auto text-xl text-purple-100 leading-loose">
-            Find out how Pulumi provides a programming model for the cloud, designed to
-            unlock the full power of serverless, container, and data service architectures
-            with Cloud Native Infrastructure as Code.
-        </p>
-        <a class="btn" href="{{ relref . "/why-pulumi" }}">Learn More</a>
-    </section>
-
     {{ partial "contact-us.html" . }}
-
-    {{ partial "social.html" . }}
-
-    {{ partial "learnmore-contactus.html" . }}
 {{ end }}

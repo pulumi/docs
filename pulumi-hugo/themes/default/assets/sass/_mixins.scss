@@ -14,3 +14,9 @@
         content: "#{$unicode}";
     }
 }
+
+@mixin gradient-border() {
+    border-bottom: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%);
+}

@@ -75,10 +75,9 @@ they implemented. The fact that Pulumi enabled teams to use their favorite langu
 instead of domain-specific tools to manage configuration was a game-changer for
 Credijusto:
 
-> "I think it's even unfair to Terraform to compare Terraform with Pulumi because once you
-> use a familiar programming language to tackle a problem, you see that you can do way more in
-> less time. So, Pulumi was a natural choice based on the background and skills of our
-> people in DevOps."
+> "Once you use a familiar programming language to tackle a problem, you
+> see that you can do way more in less time. Pulumi was a natural choice
+> based on the background and skills of our people in DevOps.""
 >
 > &mdash; Fernando Carlietti, Lead DevOps Engineer, Credijusto.
 

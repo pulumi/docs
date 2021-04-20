@@ -1,10 +1,10 @@
 nav {
 
     &.nav-section-sticky {
-        @apply bg-purple-900 text-base text-white px-4;
+        @apply bg-white text-base text-black px-4;
 
         ul {
-            @apply flex list-none justify-around items-center flex-wrap text-sm py-2 p-0;
+            @apply flex list-none justify-around items-center flex-wrap text-base py-2 p-0;
 
             @screen md {
                 @apply text-base py-0;
@@ -12,14 +12,14 @@ nav {
 
             li {
                 > a {
-                    @apply block py-2 px-4 text-white text-center;
+                    @apply block py-2 px-4 text-black font-normal text-base text-center;
 
                     @screen md {
                         @apply py-4;
                     }
 
                     &:hover {
-                        @apply text-gray-300;
+                        @apply underline;
                     }
                 }
             }

@@ -1,99 +1,66 @@
 {{ define "hero" }}
-    <header class="header-hero">
-        <div class="container mx-auto text-center flex-col">
-            <img class="block mx-auto max-w-xs lg:max-w-md mb-12" src="/images/product/PulumiCrosswalkWhite.png">
-            <h1>Well-Architected Infrastructure as Code for AWS</h1>
-            <p>
-                The easiest way to AWS &mdash; from development to production.
-            </p>
-            <span>
-                <a class="mx-auto font-bold text-xl" href="{{ relref . "/blog/introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws" }}">Read the blog</a>.
-            </span>
-        </div>
-    </header>
+    {{ partial "hero" (dict "title" "Pulumi Crosswalk for AWS") }}
 {{ end }}
 
 {{ define "main" }}
-    <nav class="nav-section-sticky">
-        <div class="container mx-auto uppercase">
-            <ul>
-                <li><a href="#benefits">Benefits </a></li>
-                <li><a href="#case-study">Case Study </a></li>
-                <li><a href="#architecture">Architecture </a></li>
-                <li><a href="#applications">Applications </a></li>
-                <li><a href="#infrastructure">Infrastructure</a></li>
-            </ul>
+    <section id="overview" class="max-w-4xl mx-auto text-center my-24">
+        <h3>Well-Architected Infrastructure as Code for AWS</h3>
+        <p>
+            The easiest way to AWS &mdash; from development to production.
+        </p>
+        <img class="w-full" src="/images/docs/reference/crosswalk/aws/arch.png" alt="Pulumi Crosswalk architecture">
+        <div class="mt-8">
+            <a class="btn-primary" href="{{ relref . "/blog/introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws" }}">Read the blog</a>.
         </div>
-    </nav>
+    </section>
 
-    <section id="benefits" class="py-16 px-4 px-4">
+    <section id="benefits" class="mt-16 px-4">
         <div class="container mx-auto">
             <div class="md:flex mx-auto max-w-5xl mb-8">
-                <div class="md:w/13 p-4">
-                    <img class="inline-block h-10 mb-4" src="/icons/immutable_infastrc_icon.svg">
-                    <h3 class="mt-2">Easiest Way to AWS</h3>
-                    <p class="text-sm text-gray-600">
-                        Provision services that are Well-Architected by default. Benefit
-                        from patterns that worked for customers who have gone to
-                        production. Easy to get started, and easy to do the right thing.
-                    </p>
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "lightning" "icon_color" "violet") }}
+                        <h5>Easiest Way to AWS</h5>
+                        <p>
+                            Provision services that are Well-Architected by default. Benefit
+                            from patterns that worked for customers who have gone to
+                            production. Easy to get started, and easy to do the right thing.
+                        </p>
+                    </div>
                 </div>
-                <div class="md:w/13 p-4 md:mx-8">
-                    <img class="inline-block h-10 mb-4" src="/icons/reusable-component.svg">
-                    <h3 class="mt-2">Desktop to Production</h3>
-                    <p class="text-sm text-gray-600">
-                        Best in class productivity means you can rapidly deploy
-                        applications and infrastructure, with the confidence that what you
-                        build is production ready out-of-the-box.
-                    </p>
+
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "rocketship" "icon_color" "yellow") }}
+                        <h5>Desktop to Production</h5>
+                        <p>
+                            Best in class productivity means you can rapidly deploy
+                            applications and infrastructure, with the confidence that what you
+                            build is production ready out-of-the-box.
+                        </p>
+                    </div>
                 </div>
-                <div class="md:w/13 p-4">
-                    <img class="inline-block h-10 mb-4" src="/icons/realCode_icon.svg">
-                    <h3 class="mt-2">Use Familiar Languages</h3>
-                    <p class="text-sm text-gray-600">
-                        Pulumi's unique approach to infrastructure as code uses familiar
-                        languages you already know and love, meaning you can use your
-                        favorite tools and engineering practices.
-                    </p>
+
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "code" "icon_color" "violet") }}
+                        <h5>Use Familiar Languages</h5>
+                        <p>
+                            Pulumi's unique approach to infrastructure as code uses familiar
+                            languages you already know and love, meaning you can use your
+                            favorite tools and engineering practices.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="case-study" class="bg-gray-200 py-16 px-4">
-        <div class="container mx-auto text-center px-4">
-            <div class="flex justify-center mb-4">
-                <img class="md:max-w-sm" src="/logos/customers/tableau_logo.png" alt="Tableau Software">
-            </div>
-            <blockquote class="border-orange-500 italic text-gray-800 mb-8 max-w-5xl mx-auto">
-                We've been happily using Pulumi’s EKS support for more than three months
-                now. Our team was looking for an end-to-end solution to tame the
-                complexity of Kubernetes on AWS and ensure we adhere to AWS best
-                practices. Pulumi’s Crosswalk effort has equipped our team to scale far
-                better than the alternative approaches of home-grown solutions, scripts
-                and DSLs. Our delivery is now automated and we can now deliver new
-                application and infrastructure features with much faster turn-around,
-                sometimes in just a few hours. Pulumi is a key contributor to our team’s
-                improvement in productivity.
-            </blockquote>
-            <div class="text-sm">
-                <div class="text-black font-bold">Pankaj Dhingra, Senior Director of Cloud Engineering</div>
-                <a class="link" href="http://tableau.com/">Tableau Software</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="architecture" class="py-16 px-4">
+    <section id="applications" class="my-24 px-4">
         <div class="container mx-auto">
-            <img class="block mx-auto lg:max-w-5xl" src="/images/docs/reference/crosswalk/aws/arch.png" alt="Pulumi Crosswalk architecture">
-        </div>
-    </section>
-
-    <section id="applications" class="bg-gray-200 py-16 px-4">
-        <div class="container mx-auto">
-            <div class="md:flex my-8">
+            <div class="md:flex my-8 px-4">
                 <div class="md:w-1/2 md:mr-4">
-                    <h2>Containers and Serverless</h2>
+                    <h3>Containers and Serverless</h3>
                     <p>
                         Get up and running on "day one" with containers -- using Amazon
                         Elastic Container Service (ECS), including "Fargate" or Kubernetes
@@ -106,8 +73,8 @@
                         focus more on code and business logic, and less on YAML or DSL
                         configuration languages.
                     </p>
-                    <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/guides/crosswalk/aws" }}">Get Started</a>
+                    <p class="my-8">
+                        <a class="btn-primary" href="{{ relref . "/docs/guides/crosswalk/aws" }}">Get Started</a>
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
@@ -138,11 +105,11 @@ export const url = lb.endpoint.hostname;` }}
         </div>
     </section>
 
-    <section id="infrastructure" class="bg-gray-100 py-16 px-4">
+    <section id="infrastructure" class="py-16 px-4">
         <div class="container mx-auto">
-            <div class="md:flex my-8">
+            <div class="md:flex my-8 px-4">
                 <div class="md:w-1/2 md:mr-4">
-                    <h2>Secure Infrastructure as Code</h2>
+                    <h3>Secure Infrastructure as Code</h3>
                     <p>
                         Create, manage, and integrate "day two and beyond" infrastructure
                         for security, networking, clusters, and monitoring. Instead of
@@ -155,8 +122,8 @@ export const url = lb.endpoint.hostname;` }}
                         leverage highly configurable and extensible components to enforce
                         best practices within your team.
                     </p>
-                    <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/guides/crosswalk/aws" }}">Get Started</a>
+                    <p class="my-8">
+                        <a class="btn-primary my-2" href="{{ relref . "/docs/guides/crosswalk/aws" }}">Get Started</a>
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
@@ -186,4 +153,32 @@ export const vpcPublicSubnetIds = vpc.publicSubnetIds;` }}
         </div>
     </section>
 
+    <section id="case-study" class="container mx-auto mb-24">
+        <div class="text-center">
+            <div class="w-full lg:w-1/2 lg:mx-auto p-6">
+                <div class="flex flex-col card p-6 bg-white relative">
+                    <p class="text-left mt-0 italic text-black">
+                        We've been happily using Pulumi’s EKS support for more than three months
+                        now. Our team was looking for an end-to-end solution to tame the
+                        complexity of Kubernetes on AWS and ensure we adhere to AWS best
+                        practices. Pulumi’s Crosswalk effort has equipped our team to scale far
+                        better than the alternative approaches of home-grown solutions, scripts
+                        and DSLs. Our delivery is now automated and we can now deliver new
+                        application and infrastructure features with much faster turn-around,
+                        sometimes in just a few hours. Pulumi is a key contributor to our team’s
+                        improvement in productivity.
+                    </p>
+                    <div class="flex flex-grow items-end">
+                        <div class="w-2/3 text-left">
+                            <p class="text-black mb-0">Pankaj Dhingra</p>
+                            <p class="mt-0">Senior Director of Cloud Engineering</p>
+                        </div>
+                        <div class="w-1/3 my-4">
+                            {{ partial "customer-logo.html" (dict "logo" "tableau") }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {{ end }}

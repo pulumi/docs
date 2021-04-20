@@ -1,0 +1,213 @@
+.top-nav-bar {
+    @apply text-sm;
+
+    @screen lg {
+        @apply pt-6 pb-3 px-4;
+    }
+
+    .top-nav-container {
+        @apply flex flex-col mx-auto;
+
+        @screen lg {
+            @apply flex-row;
+        }
+
+        ul li {
+            white-space: nowrap;
+        }
+
+        .top-nav-banner-cta-container {
+            @apply w-full text-right;
+
+            @screen lg {
+                @apply flex-grow justify-start mt-0 text-left mr-4;
+            }
+
+            .top-nav-banner-cta {
+                @apply px-3 py-2 rounded text-left;
+
+                @screen lg {
+                    @apply inline-block;
+                }
+
+                // TODO: update color
+                background-color: rgba(128, 90, 195, 0.15);
+
+                .top-nav-banner-cta-text {
+                    // TODO: update color
+                    color: #805AC3;
+                }
+            }
+        }
+    }
+}
+
+.header-container {
+    @apply sticky z-50 bg-white py-6;
+    top: -1px;
+
+    @screen lg {
+        @apply py-3 mt-0;
+    }
+
+    &.is-pinned {
+        @apply shadow;
+    }
+
+    .logo-container {
+        @apply w-1/2 pl-6;
+
+        @screen lg {
+            @apply flex items-center justify-start pl-0;
+
+            width: calc(100% / 7);
+        }
+    }
+
+    .cta-container {
+        @apply hidden;
+
+        @screen lg {
+            @apply flex items-center justify-center;
+            width: calc(100% / 7);
+        }
+
+        .header-btn-primary {
+            @apply text-white bg-violet-600 text-base py-3 px-6 rounded-full;
+
+            @screen xl {
+                @apply text-lg;
+            }
+
+            &:hover {
+                @apply no-underline;
+                background: linear-gradient(90deg, #BE5188 0%, theme("colors.violet.600") 100%);
+            }
+
+            &:focus {
+                @apply bg-blue-600;
+            }
+        }
+    }
+
+    .desktop-menu {
+        @apply hidden;
+
+        @screen lg {
+            @apply flex list-none justify-center;
+            width: calc((100% / 7) * 5);
+
+            li:not(.header-dropdown-item) {
+                @apply flex items-center justify-center text-center;
+                width: calc(100% / 5);
+
+                &:hover {
+                    a, .dropdown-title {
+                        @apply opacity-50;
+                    }
+                }
+
+                &.header-nav-item-drop-down {
+                    @apply relative cursor-pointer;
+
+                    .header-nav-drop-down-menu {
+                        @apply w-full absolute hidden pt-8 top-0 mt-3;
+
+                        ul {
+                            @apply bg-white p-6 text-left rounded shadow-xl;
+                            white-space: nowrap;
+
+                            a {
+                                &:hover {
+                                    @apply opacity-75;
+                                }
+                            }
+                        }
+                    }
+
+                    .dropdown-menu-caret {
+                        content: '';
+                        margin-left: 0.5rem;
+
+                        width: 0;
+                        height: 0;
+
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        border-top: 5px solid black;
+                    }
+
+                    &:hover {
+                        .dropdown-menu-caret {
+                            transform: rotate(180deg);
+                            opacity: 0.5;
+                        }
+
+                        .header-nav-drop-down-menu {
+                            @apply block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mobile-menu-toggle {
+        @apply hidden;
+    }
+
+    .mobile-menu-toggle:checked + .mobile-menu-icon {
+        .mobile-menu-closed {
+            @apply hidden;
+        }
+
+        .mobile-menu-open {
+            @apply block;
+        }
+    }
+
+    .mobile-menu {
+        @apply hidden w-full;
+
+        @screen lg {
+            @apply hidden;
+        }
+
+        ul {
+            @apply pt-8 ml-4;
+
+            li {
+                @apply mb-4;
+            }
+
+            .mobile-menu-item {
+                @apply text-2xl font-medium text-black;
+            }
+
+            .mobile-menu-subitem {
+                @apply ml-4 text-lg;
+            }
+        }
+    }
+
+    .mobile-menu-toggle:checked + .mobile-menu-icon + .mobile-menu {
+        @apply block;
+
+        @screen lg {
+            @apply hidden;
+        }
+    }
+
+    .mobile-menu-icon {
+        @apply absolute;
+        right: 1rem;
+
+        @screen lg {
+            @apply hidden;
+        }
+
+        label {
+            @apply cursor-pointer;
+        }
+    }
+}

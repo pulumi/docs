@@ -1,40 +1,53 @@
 .note {
-    p {
-        @apply leading-relaxed;
+    @apply my-4 rounded border-2 text-sm;
+
+    .note-heading {
+        @apply mb-2 font-semibold text-xs;
     }
 
-    span {
-           @apply font-bold;
+    .note-heading, .note-body {
+        @apply px-3 py-2;
+    }
+
+    .note-body {
+        a {
+            @apply underline;
+        }
+    }
+
+    p {
+        @apply leading-relaxed;
+
+        &:first-child {
+            @apply mt-0;
+        }
+
+        &:last-child {
+            @apply mb-0;
+        }
     }
 
     &.note-info {
-        @apply bg-blue-100 text-blue-800 my-4 px-4 rounded border border-blue-200;
+        @apply border-blue-100;
 
-        a {
-            @apply text-blue-900 underline;
+        .note-heading {
+            @apply bg-blue-100 text-blue-900;
         }
-
     }
 
     &.note-warning {
-        @apply bg-yellow-200 text-yellow-900 my-4 px-4 rounded border border-l-4 border-yellow-200;
+        @apply border-orange-100;
 
-
-        a {
-            @apply text-yellow-900 underline;
+        .note-heading {
+            @apply bg-orange-100 text-orange-900;
         }
-
-        code {
-               @apply bg-orange-200;
-        }
-
     }
 
     &.note-deprecated {
-        @apply bg-orange-200 text-orange-600 my-4 px-5 py-4 rounded;
+        @apply border-orange-100;
 
-        code {
-            @apply bg-orange-300;
+        .note-heading {
+            @apply bg-orange-100 text-orange-900;
         }
     }
 }

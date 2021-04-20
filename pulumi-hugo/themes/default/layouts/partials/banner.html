@@ -1,17 +1,12 @@
-{{ $name := "pulumiup-banner" }}
-{{ $summary := "PulumiUP: Hear from technical leaders as they present the vision for the future of cloud engineering." }}
+{{ $summary := "Learn about the future of Cloud Engineering at PulumiUP." }}
 {{ $url := relref . "/pulumi-up" }}
 {{ $label := "Save Your Spot"}}
-{{ $external := false }}
 
-{{/* When a banner is dismissed, its `name` property is recorded in localStorage to
-prevent it from being shown again, so be sure to name new banners uniquely to prevent them
-from being suppressed. */}}
-<pulumi-banner name="{{ $name }}" dismissible>
-    <div class="content">
-        <span class="summary">{{ $summary | safeHTML }}</span>
-        <span class="cta">
-            <a href="{{ $url }}" {{ if $external }} target="_blank" rel="noopener noreferrer" {{ end }}>{{ $label | safeHTML }}</a>
-        </span>
+<div class="top-nav-banner-cta-container">
+    <div class="top-nav-banner-cta">
+        <a href="{{ $url }}" class="top-nav-banner-cta-text">
+            {{ $summary }}
+            <span class="underline"> {{ $label }}</span>
+        </a>
     </div>
-</pulumi-banner>
+</div>

@@ -33,6 +33,7 @@ describe("normalizeState", () => {
                         os: "macos",
                         cloud: "aws",
                         k8sLanguage: "typescript",
+                        persona: "developer",
                     },
                 });
             });

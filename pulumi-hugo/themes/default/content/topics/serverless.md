@@ -100,7 +100,7 @@ examples:
           exports.endpoint = endpoint.url;
       cta:
           url: /docs/get-started/
-          label: GET STARTED
+          label: Get Started
 
     - id: code-bucket
       title: Using storage buckets easily
@@ -124,7 +124,7 @@ examples:
           exports.bucketName = videos.bucket;
       cta:
           url: /docs/get-started/
-          label: GET STARTED
+          label: Get Started
 
     - id: code-table
       title: Stash info into a document database
@@ -153,7 +153,7 @@ examples:
           });
       cta:
           url: /docs/get-started/
-          label: GET STARTED
+          label: Get Started
 
     - id: code-timer
       title: Super-simple serverless cron jobs
@@ -184,7 +184,7 @@ examples:
           });
       cta:
           url: /docs/get-started/
-          label: GET STARTED
+          label: Get Started
 
     - id: code-queue
       title: Post AWS SQS Messages to Slack
@@ -219,7 +219,7 @@ examples:
           };
       cta:
           url: /docs/get-started/
-          label: GET STARTED
+          label: Get Started
 
     - id: code-topic
       title: Subscribe to an SNS endpoint
@@ -247,12 +247,12 @@ examples:
           });
       cta:
           url: /docs/get-started/
-          label: GET STARTED
+          label: Get Started
 
 contact_us_form:
     section_id: contact
     hubspot_form_id: c086198d-0e76-4ec3-9304-7f2c60788447
-    headline: Need help with container management?
+    headline: Need help with serverless?
     quote:
         title: Learn how top engineering teams are using Pulumi to simplify their serverless applications.
         name: Josh Imhoff

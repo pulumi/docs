@@ -5,6 +5,7 @@ import { OSKey } from "../../components/chooser/chooser";
 // Define the default set of preferences.
 const getInitialState = (): PreferencesState => {
     return {
+        persona: "developer",
         language: "typescript",
         k8sLanguage: "typescript",
         os: guessOS(),
@@ -40,6 +41,8 @@ export const preferences = (currentState = getInitialState(), action: Preference
             return { ...currentState, os: action.key };
         case TypeKeys.SET_CLOUD:
             return { ...currentState, cloud: action.key };
+        case TypeKeys.SET_PERSONA:
+            return { ...currentState, persona: action.key };
         default:
             return currentState;
     }

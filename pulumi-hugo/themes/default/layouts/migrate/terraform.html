@@ -1,8 +1,12 @@
 {{ define "hero" }}
-    <header class="header-hero">
-        <div class="header-hero-items container mx-auto">
-            <div class="header-hero-item">
-                <h1>Migrating to Pulumi from Terraform</h1>
+    {{ partial "hero" (dict "title" "Migrating to Pulumi from Terraform") }}
+{{ end }}
+
+{{ define "main" }}
+    <section id="overview" class="max-w-4xl mx-auto px-2 my-16">
+        <div class="text-center px-3 container mx-auto">
+            <div>
+                <h2>Increase productivity with programming languages</h2>
                 <p>
                     Terraform uses a proprietary DSL called HCL to describe and provision
                     infrastructure resources.
@@ -13,59 +17,42 @@
                     and reuse, and developer approachability &mdash; while still supporting
                     robust infrastructure as code provisioning across many clouds.
                 </p>
-                <section class="container text-center max-w-2xl">
-                    <div class="header-hero-actions rounded bg-purple-700 py-8 px-16" style="flex-direction: column">
-                        <h3 class="text-gray-300">Automating your migration</h3>
-                        <ul>
-                            <li class="text-orange-500 my-4">
-                                <span class="-ml-4">→</span>
+            </div>
+            <div class="max-w-2xl mx-auto">
+                <div class="py-8 px-16" style="flex-direction: column">
+                    <h4>Automating your migration</h4>
+                    <ul class="text-left">
+                        <li class="my-4">
+                            <a href="{{ relref . "/blog/using-terraform-remote-state-with-pulumi" }}" class="link">
                                 <strong>Coexist</strong>
-                                <a href="{{ relref . "/blog/using-terraform-remote-state-with-pulumi" }}" class="link
-                                    text-blue-400">with Terraform, by using remote state from Pulumi</a>
-                            </li>
-                            <li class="text-orange-500 my-4">
-                                <span class="-ml-4">→</span>
+                                with Terraform, by using remote state from Pulumi
+                            </a>
+                        </li>
+                        <li class="my-4">
+                            <a href="{{ relref . "/blog/from-terraform-to-infrastructure-as-software" }}" class="link">
                                 <strong>Convert</strong>
-                                <a href="{{ relref . "/blog/from-terraform-to-infrastructure-as-software" }}"
-                                    class="link text-blue-400">HCL to Pulumi code</a>
-                            </li>
-                            <li class="text-orange-500 my-4">
-                                <span class="-ml-4">→</span>
+                                HCL to Pulumi code
+                            </a>
+                        </li>
+                        <li class="my-4">
+                            <a href="{{ relref . "/blog/adopting-existing-cloud-resources-into-pulumi" }}" class="link">
                                 <strong>Adopt</strong>
-                                <a href="{{ relref . "/blog/adopting-existing-cloud-resources-into-pulumi" }}"
-                                    class="link text-blue-400">existing resource state into Pulumi</a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-            <div class="header-hero-item">
-                {{ partial "form-section" (dict "form" .Params.hero_form) }}
+                                existing resource state into Pulumi
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </header>
-{{ end }}
+    </section>
 
-{{ define "main" }}
-    <nav class="nav-section-sticky">
-        <div class="container mx-auto uppercase">
-            <ul>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#code">Code</a></li>
-                <li><a href="#how-it-works">How it Works</a></li>
-                <li><a href="#get-started">Get Started</a></li>
-                <li><a href="#contact-us">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
+    {{ partial "benefits.html" .Params }}
 
-    {{ partial "benefits-v2.html" . }}
-
-    <section id="code" class="bg-gray-200 py-16 px-4">
+    <section id="code" class="py-16 px-4">
         <div class="container mx-auto">
             <div class="md:flex my-8">
-                <div class="md:w-1/2 md:mr-4">
-                    <h2>Take advantage of real coding features with Pulumi</h2>
+                <div class="md:w-1/2 md:mr-4 md:pr-24">
+                    <h3>Take advantage of real coding features with Pulumi</h3>
                     <p>
                         Pulumi provides a more expressive and efficient way to define cloud resources:
                     </p>
@@ -75,8 +62,8 @@
                         <li>On-the-fly error checking</li>
                         <li>Freeform code instead of complex interpolations</li>
                     </ul>
-                    <p>
-                        <a href="https://github.com/pulumi/examples">Find many other examples here</a>.
+                    <p class="my-8">
+                        <a class="link" href="https://github.com/pulumi/examples">Find many other examples here</a>.
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
@@ -146,8 +133,8 @@ resource "aws_s3_bucket_object" "favicon.ico" {
     <section id="code" class="bg-gray-100 py-16">
         <div class="container mx-auto">
             <div class="md:flex my-8">
-                <div class="md:w-1/2 md:mr-4">
-                    <h2>Productive cloud native programming</h2>
+                <div class="md:w-1/2 md:mr-4 md:pr-24">
+                    <h3>Productive cloud native programming</h3>
                     <p>
                         Pulumi is designed with cloud native computing in mind - from
                         containers to serverless, providing a productive model for quickly
@@ -159,8 +146,8 @@ resource "aws_s3_bucket_object" "favicon.ico" {
                         <li>Use JavaScript for both infrastructure and Lambda callbacks</li>
                         <li>Avoid the need for significant boiler plate code</li>
                     </ul>
-                    <p>
-                        <a href="https://github.com/pulumi/examples">Find many other examples here</a>.
+                    <p class="my-8">
+                        <a class="link" href="https://github.com/pulumi/examples">Find many other examples here</a>.
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
@@ -256,6 +243,4 @@ output "bucket_name" {
     {{ partial "get-started.html" . }}
 
     {{ partial "form-section" (dict "form" .Params.contact_us_form) }}
-
-    {{ partial "more-from-pulumi.html" . }}
 {{ end }}

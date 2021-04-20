@@ -7,24 +7,7 @@
             </div>
         </header>
     {{ else }}
-        <div>
-            <header class="header-hero-dark py-0 pt-16 px-4">
-                {{ with .Params.hero }}
-                    <div class="container mx-auto text-white md:flex justify-around items-center">
-                        <div class="md:w-1/2">
-                            <h1 class="text-white">{{ .title }}</h1>
-                        </div>
-                        <div class="md:w-1/2 md:ml-8">
-                            <div class="text-center">
-                                <img class="inline-block w-56" src="{{ .image }}">
-                            </div>
-                        </div>
-                    </div>
-                {{ end }}
-            </header>
-
-            <img class="w-full h-20" src="/images/waves.svg">
-        </div>
+        {{ partial "hero.html" (dict "title" .Params.hero.title "small_title" "true") }}
     {{ end }}
 {{ end }}
 
@@ -37,7 +20,7 @@
                 <div class="md:w-1/2 md:mx-8">
                     {{ $preRecorded := .Params.pre_recorded }}
                     {{ with .Params.main }}
-                        <h2>{{ .title }}</h2>
+                        <h4>Overview</h4>
                         <p><a href="#webinarRegistrationForm" class="btn md:hidden">{{ $buttonText }}</a></p>
                         {{ if eq $preRecorded true }}
                             <span class="uppercase text-orange text-sm font-bold">On Demand | Recorded on:</span>
@@ -45,16 +28,18 @@
                         {{ if $multipleSessions }}
                             <span>Multiple sessions available. Check the registration form for dates and times.</span>
                         {{ else }}
-                            <pulumi-datetime class="uppercase text-orange text-sm font-bold" date="{{ .sortable_date }}"></pulumi-datetime>
+                            <h6 class="mt-4"><pulumi-datetime class="uppercase text-orange text-sm font-bold" date="{{ .sortable_date }}"></pulumi-datetime></h6>
                         {{ end }}
-                        <p class="uppercase text-orange text-sm font-bold mt-2">DURATION: {{ .duration }}</p>
+                        <h6 class="mt-2">Duration: {{ .duration }}</h6>
                         {{ if .youtube_url }}
-                            <a href="{{ .youtube_url }}" target="_blank" rel="noopener noreferrer" class="btn">WATCH NOW</a>
+                            <div class="my-8">
+                                <a href="{{ .youtube_url }}" target="_blank" rel="noopener noreferrer" class="btn-secondary">WATCH NOW</a>
+                            </div>
                         {{ end }}
-                        <div class="text-gray-600">
+                        <div class="description text-gray-600">
                             {{ .description | markdownify }}
                         </div>
-                        <h6 class="uppercase">Presenters</h6>
+                        <h4>Presenters</h4>
                         <ul class="list-none p-0">
                             {{ range .presenters }}
                                 <li class="mb-4">
@@ -64,7 +49,7 @@
                             {{ end }}
                         </ul>
                         {{ if isset . "learn" }}
-                            <h3 class="text-orange">Join us to learn:</h3>
+                            <h4 class="text-orange">Join us to learn:</h4>
                             <ul class="text-gray-600">
                                 {{ range .learn }}
                                     <li>{{ . }}</li>
@@ -75,7 +60,7 @@
                 </div>
                 <div id="webinarRegistrationForm" class="mt-10 md:mt-0 md:w-1/2 md:mx-8 bg-gray-200 rounded p-6">
                     {{ if .Params.unlisted }}
-                        <h3 class="text-orange">Recording Coming Soon!</h3>
+                        <h4 class="text-orange">Recording Coming Soon!</h4>
                         <p>
                             This live webinar is no longer available. The recording will be posted to this page when it is available.
                         </p>
@@ -84,7 +69,7 @@
                         {{ if isset .Params.form "header" }}
                             {{ $formHeader = .Params.form.header }}
                         {{ end }}
-                        <h3 class="text-orange">{{ $formHeader }}</h3>
+                        <h4 class="text-orange">{{ $formHeader }}</h4>
                         {{ if $multipleSessions }}
                             <pulumi-webinar-form-select
                                 label-class="block mb-2 font-normal text-sm"
@@ -105,17 +90,17 @@
                             <iframe src="{{ .youtube_url }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
                         </div>
                         <div class="my-10 flex">
-                            <a href="#gettingStartedList" class="btn">GET STARTED WITH PULUMI</a>
-                            <a href="{{ relref $topLevelContext "/resources" }}" class="ml-3 btn btn-orange">MORE RESOURCES</a>
+                            <a href="#gettingStartedList" class="btn-primary mr-4">Get Started With Pulumi</a>
+                            <a href="{{ relref $topLevelContext "/resources" }}" class="btn-secondary">More Resources</a>
                         </div>
-                        <span class="uppercase text-orange text-sm font-bold">Recorded on:</span>
-                        <time class="webinar-datetime uppercase text-orange text-sm font-bold">
+                        <span class="text-sm font-bold">Recorded on:</span>
+                        <time class="webinar-datetime text-sm font-bold">
                             <span data-datetime="{{ .sortable_date }}">{{ .datetime }}</span>
                         </time>
-                        <p class="text-gray-600">
+                        <p class="description text-gray-600">
                             {{ .description | markdownify }}
                         </p>
-                        <h6 class="uppercase">Presenters</h6>
+                        <h4>Presenters</h4>
                         <ul class="list-none p-0">
                             {{ range .presenters }}
                                 <li class="mb-4">
@@ -125,7 +110,7 @@
                             {{ end }}
                         </ul>
                         {{ if isset . "learn" }}
-                            <h3 class="text-orange">What you will learn:</h3>
+                            <h4>What you will learn:</h4>
                             <ul class="text-gray-600">
                                 {{ range .learn }}
                                     <li>{{ . }}</li>
@@ -135,8 +120,8 @@
                     {{ end }}
                     {{ if .Params.transcript }}
                         <div class="mt-10">
-                            <h3>Transcript</h3>
-                            <p>{{ .Params.transcript | markdownify }}</p>
+                            <h4>Transcript</h4>
+                            <p class="description">{{ .Params.transcript | markdownify }}</p>
                         </div>
                     {{ end }}
                 </div>
@@ -151,52 +136,14 @@
             {{ else }}
                 <div>
             {{ end }}
-                <h3 class="text-orange">Get Started with Pulumi:</h3>
+                <h4 class="text-orange">Get Started with Pulumi</h4>
                 <ul class="text-gray-600">
-                    <li><strong><a href="{{ relref . "/docs/get-started/aws" }}">Create an AWS S3 Bucket</a></strong> then modify the bucket to host a static website.</li>
-                    <li><strong><a href="{{ relref . "/docs/get-started/azure" }}">Create an Azure Resource Group and Storage Account</a></strong>, then export the storage account’s connection string.</li>
-                    <li><strong><a href="{{ relref . "/docs/get-started/gcp" }}">Create a Google Cloud Storage Bucket</a></strong> and apply labels to that bucket.</li>
-                    <li><strong><a href="{{ relref . "/docs/get-started/kubernetes" }}">Create a Kubernetes NGINX deployment</a></strong> and add a config value for MiniKube deployments.</li>
-                    <li><strong><a href="{{ relref . "/docs/tutorials" }}">More topics and tutorials.</a></strong></li>
+                    <li><strong><a class="link" href="{{ relref . "/docs/get-started/aws" }}">Create an AWS S3 Bucket</a></strong> then modify the bucket to host a static website.</li>
+                    <li><strong><a class="link" href="{{ relref . "/docs/get-started/azure" }}">Create an Azure Resource Group and Storage Account</a></strong>, then export the storage account’s connection string.</li>
+                    <li><strong><a class="link" href="{{ relref . "/docs/get-started/gcp" }}">Create a Google Cloud Storage Bucket</a></strong> and apply labels to that bucket.</li>
+                    <li><strong><a class="link" href="{{ relref . "/docs/get-started/kubernetes" }}">Create a Kubernetes NGINX deployment</a></strong> and add a config value for MiniKube deployments.</li>
+                    <li><strong><a class="link" href="{{ relref . "/docs/tutorials" }}">More topics and tutorials.</a></strong></li>
                 </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="px-4">
-        <div class="container mx-auto max-w-5xl mb-16">
-            <div class="flex mb-16">
-                <div class="mr-8 flex-shrink-0">
-                    <img src="/icons/case_study.svg">
-                </div>
-                <div>
-                    <h6 class="text-gray-600 uppercase">Study</h6>
-                    <div class="text-xl">How Learning Machine Improved Time to Ship</div>
-                    <p class="text-gray-600">
-                        Pulumi helped Learning Machine deliver a more agile, streamlined
-                        DevOps experience for the benefit of their customers, with
-                        significant reductions in code and boilerplate.
-                    </p>
-                    <a data-track="cta-learning-machine" class="link" href="https://cdn2.hubspot.net/hubfs/4429525/Content/AWS-Pulumi-CaseStudy.pdf">
-                        View the case study &raquo;
-                    </a>
-                </div>
-            </div>
-            <div class="flex">
-                <div class="mr-8 flex-shrink-0">
-                    <img src="/icons/ebook.svg">
-                </div>
-                <div>
-                    <h6 class="text-gray-600 uppercase">Ebook</h6>
-                    <div class="text-xl">Implementing Cloud Native Infrastructure for your Organization</div>
-                    <p class="text-gray-600">
-                        Learn how Pulumi's cloud native development platform provides a
-                        single model for building and deploying infrastructure as code.
-                    </p>
-                    <a data-track="cta-aws-ebook" class="link" href="https://cdn2.hubspot.net/hubfs/4429525/Content/AWS-Ebook.pdf">
-                        Download the ebook &raquo;
-                    </a>
-                </div>
             </div>
         </div>
     </section>

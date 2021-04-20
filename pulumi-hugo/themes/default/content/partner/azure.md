@@ -50,7 +50,7 @@ hero:
                 import (
                     "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
                     "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-                    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+                    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
                 )
 
                 func main() {
@@ -124,20 +124,24 @@ detail_sections:
     cta_url: "/blog/full-coverage-of-azure-resources-with-azure-native"
     items:
         - title: Everything In One Place
+          icon: cloud-with-nodes
+          icon_color: violet
           description: The SDKs include full coverage for Azure services, including Azure Static Web Apps, Azure Synapse Analytics, Azure Logic Apps, Azure Service Fabric, Azure Blockchain Service, Azure API Management, and dozens of other services.
-          icon: fa-tools
 
         - title: Efficient Adoption
+          icon: lightning
+          icon_color: yellow
           description: There’s no need to rewrite your existing Azure configurations to get started with Pulumi. You can efficiently adopt existing Azure resources to deploy your application to yourself save time and effort.
-          icon: fa-book
 
         - title: Secrets Management
+          icon: security
+          icon_color: salmon
           description: Use Pulumi to ensure secret data is encrypted in transit, at rest, and physically anywhere it gets stored. Bring your own preferred cloud encryption provider or use Pulumi's native secrets provider.
-          icon: fa-key
 
         - title: Convenience Functions
+          icon: pen
+          icon_color: fuchsia
           description: The provider also contains functions to retrieve keys, secrets, and connection strings from all resources that expose them.
-          icon: fa-people-carry
 
   - title: Always Up to Date
     description: |
@@ -149,20 +153,24 @@ detail_sections:
     cta_url: "/blog/full-coverage-of-azure-resources-with-azure-native"
     items:
         - title: Auto Generated
+          icon: cycle
+          icon_color: blue
           description: An automated pipeline releases updated resources within hours after any current API specifications are merged. Auto generated means less manual implementation and fewer chances for bugs, meaning a high fidelity, high quality experience.
-          icon: fa-sun
 
         - title: Familiar Concepts
+          icon: collab
+          icon_color: purple
           description: Azure Resource Manager API is structured around Resource Providers &mdash; high-level groups like `storage`, `compute`, or `web`. We map Resource Providers to top-level modules or namespaces in Pulumi SDKs.
-          icon: fa-users
 
         - title: API Versions
+          icon: nodes
+          icon_color: salmon
           description: Each resource provider defines one or more API versions, for example, `2015-05-01`, `2020-09-01`, or `2020-08-01-preview`. Every version of every ARM API is available in Pulumi SDKs, and each version has its own module or namespace.
-          icon: fa-chalkboard-teacher
 
         - title: All Languages
+          icon: code
+          icon_color: yellow
           description: The Pulumi Azure provider is available in all Pulumi languages, including JavaScript, TypeScript, Python, Go, and .NET Core. All SDKs are open source on GitHub and available as npm, NuGet, PyPI, and Go modules.
-          icon: fa-pager
 
 superpowers:
   - title: Multi Cloud
