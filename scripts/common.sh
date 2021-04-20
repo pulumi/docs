@@ -148,5 +148,5 @@ retry() {
 }
 
 hugo_theme_path() {
-    echo "github.com/pulumi/pulumi-hugo-internal/themes/default"
+    echo "github.com/pulumi/pulumi-hugo/themes/default"
 }
