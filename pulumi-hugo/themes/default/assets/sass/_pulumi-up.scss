@@ -45,7 +45,7 @@ $orange900: theme("colors.orange.900");
         @include neon-sign-animation($light, $medium, $dark, $pulseTime, $name);
     }
 
-    color: $light;
+    color: $light !important;
     text-shadow: 0 0 15px, 0 0 2px, 0 0 1em $medium, 0 0 0.5em $medium, 0 0 0.1em $medium, 0 10px 3px #000;
 }
 

@@ -15,7 +15,7 @@
                         playing-text="PAUSE THE VIBE"
                         url="https://www.pulumi.com/uploads/pulumiup-background-loop.mp4"
                     ></pulumi-audio>
-                    <a href="#register" class="btn btn-orange orange-neon inline-block ml-8">Grab Your Spot</a>
+                    <a href="https://www.bigmarker.com/pulumi/PulumiUP" target="_blank" rel="noreferrer noopener" class="btn btn-orange orange-neon inline-block ml-8">Join Now</a>
                 </div>
                 <div class="lg:mt-16">
                     <pulumi-date-countdown
@@ -31,7 +31,7 @@
                 <div class="w-full">
                     <div class="mb-24">
                         <pulumi-datetime class="section-title-blue text-center mt-16 md:mt-4" date="2021-04-20T09:00:00-07:00"></pulumi-datetime>
-                        <p class="max-w-3xl mx-auto text-lg">
+                        <p class="max-w-3xl mx-auto text-lg text-white">
                             PulumiUP is a two-hour virtual event for anyone who is interested in cloud engineering,
                             cloud infrastructure, software development, modern applications, or Pulumi.
                             Whether you’re a seasoned cloud engineer or just curious to learn what’s all
@@ -39,16 +39,16 @@
                             the future of building on the cloud.
                         </p>
                         <div class="text-center">
-                            <a href="#register" class="btn btn-lg btn-orange orange-neon">Grab Your Spot</a>
+                            <a href="https://www.bigmarker.com/pulumi/PulumiUP" target="_blank" rel="noreferrer noopener" class="btn btn-lg btn-orange orange-neon">Join Now</a>
                         </div>
                     </div>
-                    <div data-title="The Plan" class="neon-callout-box-green max-w-5xl mx-auto p-16 pt-4">
+                    <div data-title="The Plan" class="neon-callout-box-green p-16 pt-4">
                         <div class="">
                             <div class="mt-16 max-w-3xl mx-auto">
                                 {{ range $index, $section := .Params.event_sections }}
                                     <h3 class="section-title-green"><span class="section-title-blue">ACT {{ $section.act }}</span> "{{ $section.title }}"</h3>
                                     <div class="mb-16">
-                                        <p class="mx-auto text-lg">{{ $section.description | markdownify }}</p>
+                                        <p class="mx-auto text-lg text-white">{{ $section.description | markdownify }}</p>
                                         <div class="mt-8">
                                             <h4 class="plot-cast-title">Starring</h4>
                                             <div class="flex flex-col flex-wrap md:flex-row justify-center items-center">
@@ -73,31 +73,19 @@
                                     </div>
                                 {{ end }}
                                 <div class="my-12 text-center">
-                                    <a href="#register" class="btn btn-lg btn-orange">Grab Your Spot</a>
+                                    <a href="https://www.bigmarker.com/pulumi/PulumiUP" target="_blank" rel="noreferrer noopener" class="btn btn-lg btn-orange">Join Now</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="register" class="mb-0 py-16 text-white px-4 lg:px-0">
-                <div class="container mx-auto w-full lg:w-1/2 bg-white py-8 px-10 text-sm rounded rounded-lg shadow-lg border border-gray-300 relative">
-                    {{ with .Params.register_form }}
-                        <div class="mx-auto">
-                            <h2 class="text-black text-center">{{ .headline }}</h2>
-                            <div class="hs-form hs-form-fg-dark hs-demo-form text-black">
-                                <pulumi-hubspot-form form-id="{{ .hubspot_form_id }}"></pulumi-hubspot-form>
-                            </div>
-                        </div>
-                    {{ end }}
-                </div>
-            </section>
-            <section id="after-party" class="px-4">
+            <section id="after-party" class="px-4 mt-16">
                 <div data-title="The After Party" class="neon-callout-box-green p-16 text-center">
                     <div class="max-w-3xl mx-auto mt-16 md:mt-0">
                         <a class="section-title-orange-link" target="_blank" href="https://clublink.to/event/P9OW41kM">PulumiUP Virtual Afterparty w/ AWS Startups</a>
                         <pulumi-datetime class="plot-cast-title text-base mt-4" date="2021-04-20T16:15:00-07:00"></pulumi-datetime>
-                        <p>
+                        <p class="text-white">
                             Join us as we wind down the PulumiUP and awesome talks about all things Infrastructure-as-Code
                             with our chill afterparty with speakers, attendees & the AWS Startups team 😎
                         </p>
@@ -116,7 +104,7 @@
                                     <li class="mb-16">
                                         <a class="section-title-green-link" href="{{ $item.url }}">{{ $item.title }}</a>
                                         <pulumi-datetime class="plot-cast-title text-base mt-4" date="{{ $item.datetime }}"></pulumi-datetime>
-                                        <p>{{ $item.description }}</p>
+                                        <p class="text-white">{{ $item.description }}</p>
                                         <div class="my-8">
                                             <a href="{{ $item.url }}" class="btn btn-lg btn-orange-translucent">Register Now</a>
                                         </div>
@@ -132,7 +120,7 @@
                                 {{ range $item := .Params.binge }}
                                     <li class="mb-16">
                                         <a class="section-title-orange-link" href="{{ $item.url }}">{{ $item.title }}</a>
-                                        <p>{{ $item.description }}</p>
+                                        <p class="text-white">{{ $item.description }}</p>
                                         <div class="my-8">
                                             <a href="{{ $item.url }}" class="btn btn-lg btn-orange-translucent">Watch Now</a>
                                         </div>
