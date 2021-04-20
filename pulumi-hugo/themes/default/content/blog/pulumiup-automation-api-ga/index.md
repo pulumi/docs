@@ -1,6 +1,6 @@
 ---
 title: "Build your perfect interface for the cloud: Automation API"
-date: 2021-04-20T00:00:00-07:00
+date: 2021-04-20T00:00:02-07:00
 meta_desc: Automation API brings the Pulumi modern IaC engine to any application
 meta_image: meta.png
 authors:

@@ -1,6 +1,6 @@
 ---
 title: "Unify app and infra delivery with Pulumi's CI/CD Assistant"
-date: 2021-04-20T00:00:00-07:00
+date: 2021-04-20T00:00:01-07:00
 meta_desc: Set up a combined CI/CD pipeline for your applications and infrastructure using Pulumi
 meta_image: meta.png
 authors:

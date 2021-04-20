@@ -1,6 +1,6 @@
 ---
 title: "Google Cloud Native provider: full coverage of Google Cloud"
-date: 2021-04-20T00:00:00-07:00
+date: 2021-04-20T00:00:04-07:00
 meta_desc: Pulumi native provider for Google Cloud with 100% API coverage and same-day updates now available in public preview
 meta_image: meta.png
 authors:
