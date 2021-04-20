@@ -76,7 +76,7 @@ $ curl $(pulumi stack output staticEndpoint)
 {{% choosable language python %}}
 
 ```bash
-$ curl $(pulumi stack output static_endpoint)
+$ curl $(pulumi stack output staticEndpoint)
 ```
 
 {{% /choosable %}}
