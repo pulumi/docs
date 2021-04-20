@@ -13,7 +13,7 @@ aliases:
 ---
 
 {{% notes type="info" %}}
-The content and examples in this guide refer to Pulumi's GitHub Action v2. Pulumi's GitHub Action v1 has been deprecated
+The content and examples in this guide refer to Pulumi's GitHub Action v3. Pulumi's GitHub Action v1 has been deprecated
 and will reach its End of Life (EOL) on August 31st, 2021.
 {{% /notes %}}
 
@@ -88,9 +88,9 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v1.0.1
+        uses: pulumi/action-install-pulumi-cli@v1
       - run: npm install
-      - uses: pulumi/actions@v2
+      - uses: pulumi/actions@v3
         with:
           command: preview
           stack-name: dev
@@ -129,9 +129,9 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v1.0.1
+        uses: pulumi/action-install-pulumi-cli@v1
       - run: npm install
-      - uses: pulumi/actions@v2
+      - uses: pulumi/actions@v3
         with:
           command: up
           stack-name: dev
@@ -243,9 +243,9 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v1.0.1
+        uses: pulumi/action-install-pulumi-cli@v1
       - run: npm install
-      - uses: pulumi/actions@v2
+      - uses: pulumi/actions@v3
         with:
           command: preview
           stack-name: dev
@@ -292,9 +292,9 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v1.0.1
+        uses: pulumi/action-install-pulumi-cli@v1
       - run: npm install
-      - uses: pulumi/actions@v2
+      - uses: pulumi/actions@v3
         with:
           command: preview
           stack-name: dev
@@ -337,9 +337,9 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v1.0.1
+        uses: pulumi/action-install-pulumi-cli@v1
       - run: npm install
-      - uses: pulumi/actions@v2
+      - uses: pulumi/actions@v3
         with:
           command: preview
           comment-on-pr: true
