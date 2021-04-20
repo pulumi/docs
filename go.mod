@@ -23,7 +23,7 @@ require (
 	github.com/pelletier/go-toml v1.9.0 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/polyfloyd/go-errorlint v0.0.0-20210418123303-74da32850375 // indirect
-	github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210420144905-376db569544b // indirect
+	github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210420180605-5a9c775a3d1c // indirect
 	github.com/quasilyte/go-ruleguard v0.3.4 // indirect
 	github.com/quasilyte/regex/syntax v0.0.0-20200805063351-8f842688393c // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
