@@ -24,7 +24,7 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/polyfloyd/go-errorlint v0.0.0-20210418123303-74da32850375 // indirect
 	github.com/pulumi/pulumi-hugo/themes/current v0.0.0-20210401204950-a55b707cca76
-	github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210419225943-3431f32ed55e // indirect
+	github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210420015507-f4d9a5ebea36 // indirect
 	github.com/quasilyte/go-ruleguard v0.3.4 // indirect
 	github.com/quasilyte/regex/syntax v0.0.0-20200805063351-8f842688393c // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
