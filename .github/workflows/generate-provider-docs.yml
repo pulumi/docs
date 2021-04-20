@@ -81,13 +81,6 @@ jobs:
           dotnet-version: ${{matrix.dotnetverson}}
       - run: make ensure ensure_tools
         working-directory: docs
-      - name: Go based tool installs
-        run: |
-          go get -u github.com/cbroglie/mustache
-          go get -u github.com/gobuffalo/packr
-          go get -u github.com/pkg/errors
-        working-directory: docs
-      # We only want to run typedoc and python doc for non-resource providers
       - if: github.event.action == 'non-resource-provider'
         name: run yarn install in nodejs sdk
         run: yarn install && yarn run tsc
