@@ -1,7 +1,7 @@
 ---
 # TODO: update these values
 title: Cloud Engineering
-meta_desc: Cloud Engineering is a thing that people that helps them and other people make more money. If you are not doing you are messing up, big time.
+meta_desc: Apply software engineering practices and tools across infrastructure, development, and compliance teams to tame the complexity of modern cloud applications.
 
 type: page
 layout: cloud-engineering
@@ -158,8 +158,8 @@ case_studies:
           name: Fernando Carlietti
           title: Lead DevOps Engineer, Credijusto
           quote: |
-            Once you use a familiar programming language to tackle a problem, you see that 
-            you can do way more in less time. Pulumi was a natural choice based on the background 
+            Once you use a familiar programming language to tackle a problem, you see that
+            you can do way more in less time. Pulumi was a natural choice based on the background
             and skills of our people in DevOps.
 
         - company: lemonade
@@ -167,16 +167,16 @@ case_studies:
           name: Igor Shapiro
           title: Principal Engineer at Lemonade
           quote: |
-            Pulumi’s Automation API helps us to build on existing best practices and further automate 
+            Pulumi’s Automation API helps us to build on existing best practices and further automate
             our deployment process &mdash; eliminating manual tasks and exception handling.
 
         - company: hyland
           link: case-studies/learning-machine/
-          name: 
-          title: 
+          name:
+          title:
           quote: |
-            Pulumi is the foundational technology that allowed us to transform our 
-            organization…Our industry moves with incredible speed and using tools like 
+            Pulumi is the foundational technology that allowed us to transform our
+            organization…Our industry moves with incredible speed and using tools like
             Pulumi are absolutely essential to providing teams with the agility that they require.
 
         - company: menta
@@ -184,10 +184,10 @@ case_studies:
           name: Ernesto Mendoza
           title: CTO at Menta Network
           quote: |
-            At Menta Network we have a lot of experience with Ansible and Puppet but wanted 
-            to shift to more modern tools to manage our infrastructure. We tried Terraform but 
-            found that Pulumi was far easier to use given its Python support. Ultimately, Pulumi 
-            is just as robust as Terraform and has the added benefit of reducing the complexity 
+            At Menta Network we have a lot of experience with Ansible and Puppet but wanted
+            to shift to more modern tools to manage our infrastructure. We tried Terraform but
+            found that Pulumi was far easier to use given its Python support. Ultimately, Pulumi
+            is just as robust as Terraform and has the added benefit of reducing the complexity
             of managing many configurations and environments.
 
         - company: sourcegraph
@@ -195,11 +195,11 @@ case_studies:
           name: Beyang Liu
           title: Sourcegraph CTO
           quote: |
-            Pulumi has changed how our team works by giving us deployment superpowers. It’s great 
+            Pulumi has changed how our team works by giving us deployment superpowers. It’s great
             to run ‘pulumi up’ and not have to worry about deploying an invalid configuration.
 
         - company: fenergo
-          link: 
+          link:
           name: Keith Redmond
           title:  VP of SaaS Engineering, Fenergo
           quote: |
