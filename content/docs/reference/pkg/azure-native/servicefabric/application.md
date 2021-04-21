@@ -96,7 +96,69 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	servicefabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabric"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := servicefabric.NewApplication(ctx, "application", &servicefabric.ApplicationArgs{
+			ApplicationName: pulumi.String("myApp"),
+			ClusterName:     pulumi.String("myCluster"),
+			MaximumNodes:    pulumi.Float64(3),
+			Metrics: servicefabric.ApplicationMetricDescriptionArray{
+				&servicefabric.ApplicationMetricDescriptionArgs{
+					MaximumCapacity:          pulumi.Float64(3),
+					Name:                     pulumi.String("metric1"),
+					ReservationCapacity:      pulumi.Float64(1),
+					TotalApplicationCapacity: pulumi.Float64(5),
+				},
+			},
+			MinimumNodes: pulumi.Float64(1),
+			Parameters: pulumi.StringMap{
+				"param1": pulumi.String("value1"),
+			},
+			RemoveApplicationCapacity: pulumi.Bool(false),
+			ResourceGroupName:         pulumi.String("resRg"),
+			TypeName:                  pulumi.String("myAppType"),
+			TypeVersion:               pulumi.String("1.0"),
+			UpgradePolicy: &servicefabric.ApplicationUpgradePolicyArgs{
+				ApplicationHealthPolicy: &servicefabric.ArmApplicationHealthPolicyArgs{
+					ConsiderWarningAsError: pulumi.Bool(true),
+					DefaultServiceTypeHealthPolicy: &servicefabric.ArmServiceTypeHealthPolicyArgs{
+						MaxPercentUnhealthyPartitionsPerService: pulumi.Int(0),
+						MaxPercentUnhealthyReplicasPerPartition: pulumi.Int(0),
+						MaxPercentUnhealthyServices:             pulumi.Int(0),
+					},
+					MaxPercentUnhealthyDeployedApplications: pulumi.Int(0),
+				},
+				ForceRestart: pulumi.Bool(false),
+				RollingUpgradeMonitoringPolicy: &servicefabric.ArmRollingUpgradeMonitoringPolicyArgs{
+					FailureAction:             pulumi.String("Rollback"),
+					HealthCheckRetryTimeout:   pulumi.String("00:10:00"),
+					HealthCheckStableDuration: pulumi.String("00:05:00"),
+					HealthCheckWaitDuration:   pulumi.String("00:02:00"),
+					UpgradeDomainTimeout:      pulumi.String("1.06:00:00"),
+					UpgradeTimeout:            pulumi.String("01:00:00"),
+				},
+				UpgradeMode:                   pulumi.String("Monitored"),
+				UpgradeReplicaSetCheckTimeout: pulumi.String("01:00:00"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
