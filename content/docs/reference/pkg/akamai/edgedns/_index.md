@@ -30,6 +30,6 @@ Explore the resources and functions of the akamai.edgedns module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.0.0</dd>
+	<dd>2.0.1</dd>
 </dl>
 
