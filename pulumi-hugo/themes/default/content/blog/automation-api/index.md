@@ -34,7 +34,7 @@ So far, our users have applied the Pulumi Automation API to these scenarios:
 
 The Automation API is a new subpackage in each of Pulumi’s language-specific SDKs that provides APIs to create and manage Stacks and perform lifecycle operations like update, refresh, preview, and destroy. It is a strongly typed and safe way to use Pulumi in embedded contexts such as web servers without having to shell out to a CLI.
 
-You can define a Pulumi program as a function within your codebase rather than in a separate project and use methods to get and set configuration parameters programmatically. The Automation API uses a gRPC interface to execute programs that control and communicate with the core Pulumi engine. It still requires a Pulumi CLI installation, as this is how we bundle and distribute the core engine. Today it’s available in preview for [TypeScript/JavaScript](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/x/automation), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto) and [Python](https://github.com/pulumi/pulumi/tree/master/sdk/python/lib/pulumi/x/automation), with support for [C#](https://github.com/pulumi/pulumi/compare/auto/dotnet) under active development.
+You can define a Pulumi program as a function within your codebase rather than in a separate project and use methods to get and set configuration parameters programmatically. The Automation API uses a gRPC interface to execute programs that control and communicate with the core Pulumi engine. It still requires a Pulumi CLI installation, as this is how we bundle and distribute the core engine. Today it’s available in preview for [TypeScript/JavaScript](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/automation), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto) and [Python](https://github.com/pulumi/pulumi/tree/master/sdk/python/lib/pulumi/automation), with support for [C#](https://github.com/pulumi/pulumi/compare/auto/dotnet) under active development.
 
 ## Platform APIs
 
@@ -624,9 +624,9 @@ Our VM provisioner uses Automation API, backed by Pulumi’s desired state model
 
 The Automation API is your tool to tame Cloud Engineering complexity and give your team the leverage to automate your cloud infrastructure. It is completely open source and available today for TypeScript/JavaScript, Go and Python. Want to learn more? Come hang out with us in the [#automation-api community slack channel](https://pulumi-community.slack.com/archives/C019YSXN04B). Download the latest Pulumi release and check out these resources to get started:
 
-- [Go documentation](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto)
-- [JavaScript/TypeScript documentation](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/x/automation/)
-- [Python documentation](https://www.pulumi.com/docs/reference/pkg/python/pulumi/#module-pulumi.x.automation)  
+- [Go documentation](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto)
+- [JavaScript/TypeScript documentation](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/automation)
+- [Python documentation](https://www.pulumi.com/docs/reference/pkg/python/pulumi/#module-pulumi.x.automation)
 - [The Automation API examples repo](https://github.com/pulumi/automation-api-examples)
 - The list of [known issues](https://github.com/pulumi/pulumi/issues?q=is%3Aissue+is%3Aopen+label%3Aarea%2Fautomation-api). Please [file more](https://github.com/pulumi/pulumi/issues/new?assignees=&labels=needs-triage&template=bug_report.md&title=) as you find them!
 - [The Pulumi Kubernetes Operator](https://github.com/pulumi/pulumi-kubernetes-operator)

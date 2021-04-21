@@ -9,7 +9,7 @@ meta_desc: |
 
 customer_name: Credijusto
 customer_logo: /logos/customers/credijusto_logo.svg
-customer_url: https://www.credijusto.com
+customer_url: https://credijusto.com
 
 exec_summary: |
     Founded in 2015, [Credijusto](https://credijusto.com/) provides asset-backed loans and

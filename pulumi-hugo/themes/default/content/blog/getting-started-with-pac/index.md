@@ -94,7 +94,7 @@ CrossGuard validated the desired state of the S3 bucket against the `no-public-r
 
 ## Exposed Databases
 
-Like S3 buckets, exposed services are another source of data breaches. Misconfigured databases, failing to set passwords, or dev services open to the public are responsible for releases of Personal Identifiable Information (PII) that range well into the millions of customers. Many of these breaches were due to misconfigured Elasticsearch instances that were public and not secured with a password, such as the recent exposure of a [Microsoft customer service database](https://siliconangle.com/2020/01/22/microsoft-exposes-250m-customer-service-records-via-misconfigured-elasticsearch-database/).
+Like S3 buckets, exposed services are another source of data breaches. Misconfigured databases, failing to set passwords, or dev services open to the public are responsible for releases of Personal Identifiable Information (PII) that range well into the millions of customers. Many of these breaches were due to misconfigured Elasticsearch instances that were public and not secured with a password, such as the recent exposure of a Microsoft customer service database.
 
 We’ll take the same approach that we used to secure S3 buckets. First, we'll create an Elasticsearch deployment, write a policy, then apply it.
 

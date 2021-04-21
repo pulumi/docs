@@ -35,7 +35,7 @@ key_features:
               icon: puzzle
               icon_color: yellow
               description:
-                Deploy and configure cloud infrastructure with  [Pulumi Packages](/docs/docs/guides/pulumi-packages/), which can be
+                Deploy and configure cloud infrastructure with  [Pulumi Packages](/docs/guides/pulumi-packages/), which can be
                 shared and reused by anyone and in any language.
 
         - description: Deploy cloud infrastructure and applications together
@@ -51,7 +51,7 @@ key_features:
               icon: gear
               icon_color: salmon
               description: |
-                Run deployments from your application code at runtime with [Automation API](/docs/docs/guides/automation-api/). Create infrastructure APIs, custom platforms, and CLIs.
+                Run deployments from your application code at runtime with [Automation API](/docs/guides/automation-api/). Create infrastructure APIs, custom platforms, and CLIs.
 
             - title: Preview and test changes
               icon: eye
