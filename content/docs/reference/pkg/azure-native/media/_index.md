@@ -60,6 +60,6 @@ Explore the resources and functions of the azure-native.media module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.0.1</dd>
+	<dd>1.1.0</dd>
 </dl>
 
