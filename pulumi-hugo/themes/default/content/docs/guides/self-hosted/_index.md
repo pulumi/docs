@@ -8,7 +8,9 @@ meta_desc: Pulumi Enterprise Edition gives you the option to self-host Pulumi wi
 ---
 
 {{% notes type="info" %}}
-Self-hosting is only available with the **Pulumi Enterprise Edition**. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
+Self-hosting is only available with **Pulumi Enterprise Edition**. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
+
+To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends]({{< relref "/docs/intro/concepts/state" >}}).
 {{% /notes %}}
 
 This guide walks you through the components that are required to get the Pulumi Service running in your own environment.

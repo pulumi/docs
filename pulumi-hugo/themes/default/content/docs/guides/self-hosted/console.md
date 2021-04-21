@@ -9,7 +9,9 @@ meta_desc: Pulumi Console is one of the components required for self-hosting Pul
 ---
 
 {{% notes type="info" %}}
-Self-hosting is only available with the **Pulumi Enterprise Edition**. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
+Self-hosting is only available with **Pulumi Enterprise Edition**. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
+
+To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends]({{< relref "/docs/intro/concepts/state" >}}).
 {{% /notes %}}
 
 The Pulumi Console allows users to view the stacks they have created, see any past activities recorded for those stacks. It also allows you to manage RBAC for your users.
