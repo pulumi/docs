@@ -10,7 +10,7 @@ tags:
     - PulumiUP
 ---
 
-My professional background has included nearly ten years of managing field events and user conferences. I never thought I would say this, but I miss traveling. I even missed Vegas and AWS reInvent this year. I miss connecting with customers and advocates in our communities. I wish we could all be looking forward to getting together in person in Seattle or Austin or _insert any city here_. As the year continued, it became clear we were not going back to in-person events anytime soon, and everyone in the industry pivoted to virtual programs while video conferencing became an all-day activity.
+My professional background has included nearly ten years of managing field events and user conferences. I never thought I would say this, but I miss traveling. I even missed Vegas and AWS re:Invent this year. I miss connecting with customers and advocates in our communities. I wish we could all be looking forward to getting together in person in Seattle or Austin or _insert any city here_. As the year continued, it became clear we were not going back to in-person events anytime soon, and everyone in the industry pivoted to virtual programs while video conferencing became an all-day activity.
 
 <!--more-->
 
