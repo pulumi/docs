@@ -1730,8 +1730,7 @@ It fails if a stack with that name already exists.</p>
 <dt id="pulumi.automation.Stack.select">
 <em class="property">classmethod </em><code class="sig-name descname">select</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">workspace</span><span class="p">:</span> <span class="n">pulumi.automation._workspace.Workspace</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.Stack<a class="headerlink" href="#pulumi.automation.Stack.select" title="Permalink to this definition"></a></dt>
 <dd><p>Selects stack using the given workspace, and stack name.
-It returns an error if the given Stack does not exist. All LocalWorkspace operations will call <code class="docutils literal notranslate"><span class="pre">select</span></code> before
-running.</p>
+It returns an error if the given Stack does not exist.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
