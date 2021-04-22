@@ -14,18 +14,18 @@ customer_url: https://credijusto.com
 exec_summary: |
     Founded in 2015, [Credijusto](https://credijusto.com/) provides asset-backed loans and
     equipment leases to small and medium-sized enterprises (SMEs). With approximately 300
-    employees, it has launched several new financial products at better rates, faster
-    delivery, and peerless customer experience when compared to traditional lenders. Its
-    operations are supported by an AWS-based hybrid cloud architecture. Pulumi enabled the
-    company to migrate quickly and easily from Hashicorp Terraform and other legacy
-    configuration tools, which limited their teams' ability to scale. Using Pulumi has
-    helped Credijusto to migrate from Amazon ECS to Amazon EKS, and to make use of [AWS
-    Lambda](https://aws.amazon.com/lambda/) using familiar programming languages. This enables
-    the company to modernize its infrastructure quickly and cleanly, ensuring reliability
-    and accelerating recovery times when needed. Beyond infrastructure configuration and
-    deployment, Credijusto is going one step further in using the new Pulumi CrossGuard
-    "Policy as Code" capabilities to ensure that engineering teams stand up new services
-    that comply with company standards.
+    employees, it has launched several new financial products at better rates, faster delivery,
+    and peerless customer experience when compared to traditional lenders. Its operations
+    are supported by an AWS-based hybrid cloud architecture. Pulumi enabled the company
+    to migrate quickly and easily from Hashicorp Terraform and other legacy configuration
+    tools, which limited their teams’ ability to scale. Using Pulumi has helped Credijusto
+    to migrate from Amazon ECS to Amazon EKS, and to make use of [AWS Lambda](https://aws.amazon.com/lambda/)
+    and [Amazon RDS](https://aws.amazon.com/rds/) using real programming languages. This
+    enables the company to modernize its infrastructure quickly and cleanly, ensuring
+    reliability and accelerating recovery times when needed. Beyond infrastructure configuration
+    and deployment, Credijusto is going one step further in using the new Pulumi CrossGuard
+    ‘Policy as Code’ capabilities to ensure that engineering teams stand up new services that
+    comply with company standards.
 
 
 sections:
@@ -104,6 +104,19 @@ tagging, naming, and metadata for new resources.
 Pulumi made network configurations extremely simple and easy to replicate across
 environments at Credijusto. Below is an example of how Credijusto used Pulumi to configure
 multiple subnets per availability zone and environment.
+
+In addition to using EKS with Cluster Autoscaler to dynamically scale their Kubernetes
+clusters, the Credijusto team also took advantage of the
+[Amazon Relational Database Service](https://aws.amazon.com/rds/) (RDS)
+and [Amazon Aurora](https://aws.amazon.com/rds/aurora/) to enable the database for
+each application to scale with demand.
+
+> "Our database setup relies on a dedicated Amazon Aurora cluster for each product. Everything
+> is configured by Pulumi, by a custom resource that we built to create and manage all related
+> resources (credentials, Option Groups, Parameter Groups, Subnets, Security Groups, Policies, etc.).
+> This ensures a standard configuration across all of our databases."
+>
+> &mdash; Fernando Carlietti, Lead DevOps Engineer, Credijusto.
 
 <img class="block mx-auto md:max-w-4xl my-8" src="/images/case-studies/credijusto-architecture.png" alt="Credijusto architecture">
 

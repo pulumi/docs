@@ -63,24 +63,32 @@ more complete solution to support both existing and new services.
 
 Lemonade chose Pulumi for its ability to deploy infrastructure with reusable libraries
 that could be shared between developers, using their preferred language and cloud. Pulumi
-also empowers its users to create and deploy serverless components like AWS Lambda and AWS
-EKS --- features Lemonade needed to scale in order to support its growing customer base.
+also empowers its users to create and deploy serverless components like AWS Lambda and Amazon
+Elastic Kubernetes Service (EKS) --- features Lemonade needed to scale in order to support its
+growing customer base.
 
 Pulumi enabled Lemonade to centralize its processes, managing all AWS components and
 automating infrastructure for every environment. Embedded business logic helped ensure
 that resources get appropriately sized for each environment --- keeping costs low and
 allowing maximum reuse of infrastructure code.
 
-> “Pulumi’s Automation API helps us to build on existing best practices and further automate
-> our deployment process -- eliminating manual tasks and exception handling.”
+> “With Pulumi, we can utilize our infrastructure much better because we have the ability
+> to embed business logic. We’re not limited to one-size-fits-all configurations, but
+> can actually implement environment-specific customizations for our infrastructure.”
 >
 > --- Igor Shapiro, Principal Engineer at Lemonade
 
+Beyond managing serverless capabilities, the Lemonade team was able to take advantage of
+the rich managed database features of the [Amazon Relational Database Service](https://aws.amazon.com/rds/)
+(Amazon RDS). With RDS and Pulumi, the team was able to provision and update databases like
+any other service resource using Pulumi. The team was able to get up and running quickly using
+Amazon Aurora -- enabling scale while retaining compatibility with MySQL and PostgreSQL.
+
 In addition to providing the infrastructure features that Lemonade was looking for,
-Pulumi's platform improved Lemonade's CI/CD process via out-of-the-box integration with
-Jenkins. By empowering their service owners with the ability to self-provision and deploy
-resources alongside their application code, Pulumi helped Lemonade engineers be more agile
-when developing, testing, deploying, and scaling new applications and services.
+Pulumi's platform improved Lemonade's CI/CD process via out-of-the-box integrations with
+Jenkins and Datadog. By empowering their service owners with the ability to self-provision
+and deploy resources alongside their application code, Pulumi helped Lemonade engineers be
+more agile when developing, testing, deploying, monitoring, and scaling new applications and services.
 
 ## Results {#results}
 
@@ -99,7 +107,10 @@ CloudTrail, and automated credential rotation for increased security.
 > that developers can leverage to provision new resources and enforce organizational
 > policies for logging, permissions, resource tagging, and security. This empowered our
 > developer teams to self-provision resources and ship new capabilities faster without
-> having to wait for the infrastructure team to deploy new resources on their behalf."
+> having to wait for the infrastructure team to deploy new resources on their behalf.
+> At the same time, we’re able to provision/update databases managed by Amazon RDS with
+> protection from deletion so infrastructure changes can happen on the fly - without risk
+> to our production data."
 >
 > --- Igor Shapiro, Principal Engineer at Lemonade
 
@@ -107,6 +118,17 @@ Lemonade's infrastructure team was able to simplify tasks like automatically com
 CIDR blocks, correctly connecting their networks to the VPC transit gateway and handling
 production traffic differently from other environments --- something that simply can't be
 done with Terraform.
+
+Finally, the team was able to leverage Pulumi’s new Automation API to further simplify deployments.
+The Automation API allowed Lemonade to embed the Pulumi engine directly within their application
+code, enabling them to programmatically run deployments at run-time. For example: customizing runners
+for multi-step provisioning, automating recovery for well-known errors like fixing state for interrupted
+jobs and managing approvals for sensitive operations like deleting old resources.
+
+> “Pulumi’s Automation API helps us to build on existing best practices and further automate
+> our deployment process -- eliminating manual tasks and exception handling.”
+>
+> --- Igor Shapiro, Principal Engineer at Lemonade
 
 Using Pulumi to automatically manage its infrastructure has allowed Lemonade’s leadership
 to rest easy about the efficiency and security of its infrastructure and ensure that
