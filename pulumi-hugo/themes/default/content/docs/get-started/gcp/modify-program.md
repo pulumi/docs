@@ -111,7 +111,7 @@ In `main.go`, create the `BucketObject` right after creating the bucket itself.
 ```go
 bucketObject, err := storage.NewBucketObject(ctx, "index.html", &storage.BucketObjectArgs{
     Bucket: bucket.Name,
-    Source: pulumi.NewFileAsset("index.html")
+    Source: pulumi.NewFileAsset("index.html"),
 })
 if err != nil {
     return err
