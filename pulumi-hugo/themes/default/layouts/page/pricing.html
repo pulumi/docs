@@ -849,10 +849,10 @@
 
         <p class="text-2xl font-bold lg:hidden mt-12 pl-5">Product</p>
         <ul class="list-none p-0 mx-5 xl:ml-12" data-faq-type="faq-product">
-            <li class="accordion-item text-2xl">
+            <li class="accordion-item text-2xl py-3">
                 {{ partial "accordian-header" (dict "text" "How do I get started?" "large_header" true) }}
 
-                <div class="accordion-item-body text-base">
+                <div class="accordion-item-body-no-animation text-base">
                     <p>
                         To get started with a team-based plan, simply <a class="link" href="https://app.pulumi.com/signup">
                         sign up for free</a> using your identity provider of choice (ideally the same one your organization will
@@ -869,10 +869,10 @@
                 </div>
             </li>
 
-            <li class="accordion-item text-2xl">
+            <li class="accordion-item text-2xl py-3 border-t-2">
                 {{ partial "accordian-header" (dict "text" "What is an organization?" "large_header" true) }}
 
-                <div class="accordion-item-body text-base">
+                <div class="accordion-item-body-no-animation text-base">
                     <p>
                         An organization is a shared workspace for your business
                         to collaborate across multiple projects at once. Organizations may be backed by
@@ -892,10 +892,10 @@
                 </div>
             </li>
 
-            <li class="accordion-item text-2xl">
+            <li class="accordion-item text-2xl py-3 border-t-2">
                 {{ partial "accordian-header" (dict "text" "What are projects and stacks?" "large_header" true) }}
 
-                <div class="accordion-item-body text-base">
+                <div class="accordion-item-body-no-animation text-base">
                     <p>
                         Pulumi <a class="link" href="{{ relref . "/docs/intro/concepts/project" }}">projects</a>
                         and <a class="link" href="{{ relref . "/docs/intro/concepts/stack" }}">stacks</a> are a way to organize
@@ -909,10 +909,10 @@
                 </div>
             </li>
 
-            <li class="accordion-item text-2xl">
+            <li class="accordion-item text-2xl py-3 border-t-2">
                 {{ partial "accordian-header" (dict "text" "Can I start small and upgrade later?" "large_header" true) }}
 
-                <div class="accordion-item-body text-base">
+                <div class="accordion-item-body-no-animation text-base">
                     <p>
                         Yes! We designed the editions to make it easy
                         to get started with Team Starter, and once you’ve outgrown it, upgrading to Team
@@ -921,10 +921,10 @@
                 </div>
             </li>
 
-            <li class="accordion-item text-2xl">
+            <li class="accordion-item text-2xl py-3 border-t-2">
                 {{ partial "accordian-header" (dict "text" "Is Pulumi SOC 2 compliant?" "large_header" true) }}
 
-                <div class="accordion-item-body text-base">
+                <div class="accordion-item-body-no-animation text-base">
                     <p>
                         Yes, Pulumi has completed the SOC 2 Type 2 compliance process. Pulumi is committed to operational excellence
                         for our customers.
@@ -932,10 +932,10 @@
                 </div>
             </li>
 
-            <li class="accordion-item text-2xl">
+            <li class="accordion-item text-2xl py-3 border-t-2 border-b-2">
                 {{ partial "accordian-header" (dict "text" "How do I convince my boss?" "large_header" true) }}
 
-                <div class="accordion-item-body-large text-base">
+                <div class="accordion-item-body-no-animation text-base">
                     <p>
                         Do you want to use Pulumi in your organization, but aren't sure how to bring it up with your boss?
                         We've created a sample email to help you explain its benefits. Feel free to use the full letter or
@@ -997,10 +997,10 @@
 
         <p class="text-2xl font-bold lg:hidden mt-12 pl-5">Billing and Support</p>
         <ul class="list-none p-0 mx-5 xl:ml-12 lg:hidden" data-faq-type="faq-billing">
-            <li class="accordion-item text-2xl">
+            <li class="accordion-item text-2xl py-3 border-t-2">
                 {{ partial "accordian-header" (dict "text" "Can I use Pulumi for free?" "large_header" true) }}
 
-                <div class="accordion-item-body text-base">
+                <div class="accordion-item-body-no-animation text-base">
                     <p>
                         Yes! There are three ways to use Pulumi for free.
                     </p>
@@ -1024,20 +1024,20 @@
                 </div>
             </li>
 
-            <li class="accordion-item text-2xl">
+            <li class="accordion-item text-2xl py-3 border-t-2">
                 {{ partial "accordian-header" (dict "text" "How can organizations not seeking a profit use Pulumi for free?" "large_header" true) }}
 
-                <div class="accordion-item-body text-base">
+                <div class="accordion-item-body-no-animation text-base">
                     <p>
                         The <a class="link" href="{{ relref . "open-source-free-tier/" }}">Open-Source Free Tier</a> allows organizations not seeking a profit with projects under an open-source license to use Pulumi for free.
                     </p>
                 </div>
             </li>
 
-            <li class="accordion-item text-2xl">
+            <li class="accordion-item text-2xl py-3 border-t-2">
                 {{ partial "accordian-header" (dict "text" "How much will Pulumi cost?" "large_header" true) }}
 
-                <div class="accordion-item-body text-base">
+                <div class="accordion-item-body-no-animation text-base">
                     <p>
                         The Team Starter edition of Pulumi has a single price
                         that includes 3 users. You cannot extend your account beyond these 3 users.
@@ -1059,10 +1059,10 @@
                 </div>
             </li>
 
-            <li class="accordion-item text-2xl">
+            <li class="accordion-item text-2xl py-3 border-t-2">
                 {{ partial "accordian-header" (dict "text" "What payment options do you accept?" "large_header" true) }}
 
-                <div class="accordion-item-body text-base">
+                <div class="accordion-item-body-no-animation text-base">
                     <p>
                         Monthly subscriptions are payable by credit
                         card (we use Stripe for processing). Annual subscriptions may be paid via credit
@@ -1071,10 +1071,10 @@
                 </div>
             </li>
 
-            <li class="accordion-item text-2xl">
+            <li class="accordion-item text-2xl py-3 border-t-2">
                 {{ partial "accordian-header" (dict "text" "What if I have billing or account issues?" "large_header" true) }}
 
-                <div class="accordion-item-body text-base">
+                <div class="accordion-item-body-no-animation text-base">
                     <p>
                         For any billing or related issues,
                         please <a class="link" href="#contact">contact us</a>.
@@ -1082,10 +1082,10 @@
                 </div>
             </li>
 
-            <li class="accordion-item text-2xl">
+            <li class="accordion-item text-2xl py-3 border-t-2">
                 {{ partial "accordian-header" (dict "text" "What if I am not satisfied with my Pulumi purchase?" "large_header" true) }}
 
-                <div class="accordion-item-body text-base">
+                <div class="accordion-item-body-no-animation text-base">
                     <p>
                         If you're not satisfied with
                         Pulumi, we offer a 30-day money-back guarantee. No questions asked. <a class="link" href="#contact">Contact us</a>
@@ -1094,10 +1094,10 @@
                 </div>
             </li>
 
-            <li class="accordion-item text-2xl">
+            <li class="accordion-item text-2xl py-3 border-t-2">
                 {{ partial "accordian-header" (dict "text" "How do I get support for Pulumi?" "large_header" true) }}
 
-                <div class="accordion-item-body text-base">
+                <div class="accordion-item-body-no-animation text-base">
                     <p>
                         We support Pulumi via online means (our Slack
                         community, or via email, or web).

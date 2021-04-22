@@ -15,7 +15,6 @@
                         playing-text="PAUSE THE VIBE"
                         url="https://www.pulumi.com/uploads/pulumiup-background-loop.mp4"
                     ></pulumi-audio>
-                    <a href="https://www.bigmarker.com/pulumi/PulumiUP" target="_blank" rel="noreferrer noopener" class="btn btn-orange orange-neon inline-block ml-8">Watch Now</a>
                 </div>
             </div>
         </div>
@@ -23,19 +22,17 @@
             <section id="main-event">
                 <div class="w-full">
                     <div class="mb-24">
-                        <pulumi-datetime class="section-title-blue text-center mt-16 md:mt-4" date="2021-04-20T09:00:00-07:00"></pulumi-datetime>
-                        <p class="max-w-3xl mx-auto text-lg text-white">
-                            PulumiUP is a two-hour virtual event for anyone who is interested in cloud engineering,
-                            cloud infrastructure, software development, modern applications, or Pulumi.
-                            Whether you’re a seasoned cloud engineer or just curious to learn what’s all
-                            the fuss about cloud engineering, PulumiUP will teach you something new about
-                            the future of building on the cloud.
-                        </p>
-                        <div class="text-center">
-                            <a href="https://www.bigmarker.com/pulumi/PulumiUP" target="_blank" rel="noreferrer noopener" class="btn btn-lg btn-orange orange-neon">Watch Now</a>
+                        <h2 class="section-title-blue text-center mt-16 md:mt-4">Watch The Annoucements</h2>
+                        <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                            <iframe
+                                src="//www.youtube.com/embed/Zko70KVGcgo?rel=0"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+                                allowfullscreen=""
+                                title="PulumiUP: Announcing Pulumi 3.0"
+                            ></iframe>
                         </div>
                     </div>
-                    <div data-title="The Plan" class="neon-callout-box-green p-16 pt-4">
+                    <div data-title="Agenda" class="neon-callout-box-green p-16 pt-4">
                         <div class="">
                             <div class="mt-16 max-w-3xl mx-auto">
                                 {{ range $index, $section := .Params.event_sections }}
@@ -65,29 +62,12 @@
                                         </div>
                                     </div>
                                 {{ end }}
-                                <div class="my-12 text-center">
-                                    <a href="https://www.bigmarker.com/pulumi/PulumiUP" target="_blank" rel="noreferrer noopener" class="btn btn-lg btn-orange">Watch Now</a>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="after-party" class="px-4 mt-16">
-                <div data-title="The After Party" class="neon-callout-box-green p-16 text-center">
-                    <div class="max-w-3xl mx-auto mt-16 md:mt-0">
-                        <a class="section-title-orange-link" target="_blank" href="https://clublink.to/event/P9OW41kM">PulumiUP Virtual Afterparty w/ AWS Startups</a>
-                        <pulumi-datetime class="plot-cast-title text-base mt-4" date="2021-04-20T16:15:00-07:00"></pulumi-datetime>
-                        <p class="text-white">
-                            Join us as we wind down the PulumiUP and awesome talks about all things Infrastructure-as-Code
-                            with our chill afterparty with speakers, attendees & the AWS Startups team 😎
-                        </p>
-                        <div class="my-8">
-                            <a href="https://clublink.to/event/P9OW41kM" target="_blank" class="btn btn-lg btn-orange-translucent">Join on Clubhouse</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
             <section id="sessions" class="mt-16">
                 <div class="flex flex-col lg:flex-row">
                     <div class="w-full lg:w-1/2 p-4">
@@ -126,5 +106,35 @@
             </section>
         </div>
     </div>
+
+    <section id="thank-you" class="container mx-auto my-16 bg-white">
+        <h3 class="text-center">Supported by our friends at</h3>
+        <ul class="list-none lg:flex">
+            <li class="w-1/3 lg:w-1/6 p-6 mx-auto">
+                <img class="w-full lg:h-16" src="/logos/tech/aws.svg" alt="Amazon Web Services" />
+            </li>
+
+            <li class="w-1/3 lg:w-1/6 p-6 mx-auto">
+                <img class="w-full lg:h-16" src="/logos/customers/fenergo-wordmark.svg" alt="Fenergo" />
+            </li>
+
+            <li class="w-1/3 lg:w-1/6 p-6 mx-auto">
+                <img class="w-full lg:h-16" src="/logos/tech/github.svg" alt="Github" />
+            </li>
+
+            <li class="w-1/3 lg:w-1/6 p-6 mx-auto">
+                <img class="w-full lg:h-16" src="/logos/tech/honeycomb-logo.svg" alt="Honeycomb" />
+            </li>
+
+            <li class="w-1/3 lg:w-1/6 p-6 mx-auto">
+                <img class="w-full lg:h-16" src="/logos/tech/jfrog.svg" alt="JFrog" />
+            </li>
+
+            <li class="w-1/3 lg:w-1/6 p-6 mx-auto">
+                <img class="w-full lg:h-16" src="/logos/customers/snowflake-logo.svg" alt="Snowflake" />
+            </li>
+        </ul>
+    </section>
+
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Vibur" />
 {{ end }}

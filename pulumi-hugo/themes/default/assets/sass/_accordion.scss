@@ -13,6 +13,10 @@
         transition: max-height 1s ease-out;
     }
 
+    .accordion-item-body-no-animation {
+        @apply hidden;
+    }
+
     input[type="checkbox"]:checked {
         ~ .accordion-label {
             .closed-accordion {
@@ -40,6 +44,10 @@
             @screen md {
                 max-height: 90rem;
             }
+        }
+
+        ~ .accordion-item-body-no-animation {
+            @apply block;
         }
     }
 }

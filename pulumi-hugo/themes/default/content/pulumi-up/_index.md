@@ -23,7 +23,7 @@ event_sections:
 
     - title: The Tools
       act: II
-      speakers: [ "luke-hoban", "sophia-parafina", "komal-ali" ]
+      speakers: [ "luke-hoban", "lee-zen", "komal-ali" ]
       description: |
         During part two, Joe Duffy and Pulumi CTO Luke Hoban will walk us through new announcements about Pulumi's
         Cloud Engineering Platform and present demos with help from assorted Pulumi team members. You will
@@ -38,18 +38,6 @@ event_sections:
         helped them be successful in this new era of software development.
 
 workshops:
-    - title: Introduction To Pulumi
-      url: /resources/introduction-to-pulumi/?date=2021/04/20
-      datetime: 2021-04-20T14:00:00-07:00
-      description: |
-        In this workshop, you will learn the fundamentals of Infrastructure as Code through guided exercises using Pulumi's Cloud Engineering platform.
-
-    - title: Getting Started with Automation API
-      url: /resources/getting-started-with-automation-api
-      datetime: 2021-04-21T09:00:00-07:00
-      description: |
-        Pulumi’s Automation API opens new horizons for infrastructure provisioning. In this workshop, you’ll examine the powerful new capabilities of Pulumi’s latest feature by building a Python & Flask web application that lets developers deploy applications at the click of a button.
-
     - title: Getting Started with Azure Native
       url: /resources/getting-started-with-azure-native
       datetime: 2021-04-27T09:00:00-07:00
