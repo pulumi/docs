@@ -42,19 +42,23 @@ Google Cloud Native is available in public preview today for all Pulumi language
 {{% choosable language typescript %}}
 
 ```typescript
-import * as storage from "@pulumi/google-native/storage/v1";
 import * as pulumi from "@pulumi/pulumi";
+import * as google from "@pulumi/google-native";
+
 const config = new pulumi.Config("google-native");
 const project = config.require("project");
-const bucketName = "pulumi-google-native-ts-01";
-// Create a Google Cloud resource (Storage Bucket)
-const bucket = new storage.Bucket("my-bucket", {
-    name:bucketName,
-    bucket:bucketName,
-    project: project,
+
+const region = "us-central1";
+const clusterName = "gke-native";
+
+const cluster = new google.container.v1.Cluster("cluster", {
+    projectsId: project,
+    locationsId: region,
+    clustersId: clusterName,
+    name: clusterName,
+    parent: `projects/${project}/locations/${region}`,
+    autopilot: { enabled: true }
 });
-// Export the DNS name of the bucket
-export const bucketName = bucket.selfLink;
 ```
 
 {{% /choosable %}}
@@ -62,14 +66,21 @@ export const bucketName = bucket.selfLink;
 
 ```python
 import pulumi
-from pulumi_google_native.storage import v1 as storage
-config = pulumi.Config()
+from pulumi_google_native.container import v1 as container
+
+config = pulumi.Config('google-native')
 project = config.require('project')
-# Create a Google Cloud resource (Storage Bucket)
-bucket_name = "google-native-bucket-py-01"
-bucket = storage.Bucket('my-bucket', name=bucket_name, bucket=bucket_name, project=project)
-# Export the DNS name of the bucket
-pulumi.export('bucket_name', bucket.self_link)
+
+region = "us-central1"
+cluster_name = "gke-native"
+
+cluster = container.Cluster(
+            "cluster",
+            projects_id=project,
+            locations_id=region,
+            clusters_id=cluster_name,
+            name=cluster_name,
+            autopilot=container.AutopilotArgs(enabled=True))
 ```
 
 {{% /choosable %}}
@@ -77,27 +88,37 @@ pulumi.export('bucket_name', bucket.self_link)
 
 ```go
 package main
+
 import (
-        storage "github.com/pulumi/pulumi-google-native/sdk/go/google/storage/v1"
-        "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+    container "github.com/pulumi/pulumi-google-native/sdk/go/google/container/v1"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
+
 func main() {
-        const bucketName = "google-native-bucket-go-01"
-        pulumi.Run(func(ctx *pulumi.Context) error {
-                conf    := config.New(ctx, "google-native")
-                project := conf.Require("project")
-                // Create a Google Cloud resource (Storage Bucket)
-                bucket, err := storage.NewBucket(ctx, "bucket", &storage.BucketArgs{
-                        Name:    pulumi.StringPtr(bucketName),
-                        Bucket:  pulumi.String(project),
-                        Project: pulumi.String("pulumi-development"),
-                })
-                if err != nil {
-                        return err
-                }
-                ctx.Export("bucketName", bucket.SelfLink)
-                return nil
+    const region = "us-central1"
+    const clusterName = "gke-native"
+
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        conf := config.New(ctx, "google-native")
+        project := conf.Require("project")
+        cluster, err := container.NewCluster(ctx, "cluster", &container.ClusterArgs{
+            Name:        pulumi.StringPtr(clusterName),
+            ClustersId:  pulumi.String(clusterName),
+            LocationsId: pulumi.String(region),
+            ProjectsId:  pulumi.String(project),
+            Autopilot: container.AutopilotArgs{
+                Enabled: pulumi.Bool(true),
+            },
         })
+        if err != nil {
+            return err
+        }
+
+        ctx.Export("clusterSelfLink", cluster.SelfLink)
+
+        return nil
+    })
 }
 ```
 
@@ -107,13 +128,28 @@ func main() {
 ```csharp
 using System.Threading.Tasks;
 using Pulumi;
-using Pulumi.GoogleNative;
+using Pulumi.GoogleNative.Container.V1;
+using Pulumi.GoogleNative.Container.V1.Inputs;
+
 class Program
 {
-    static Task Main() =>
-        Deployment.Run(() => {
-            var bucket = new GoogleNative.Storage.v1.Bucket("my-bucket");
+    static Task<int> Main() => Deployment.RunAsync(() =>
+    {
+        var config = new Config("google-native");
+        var project = config.Require("project");
+
+        var region = "us-central1";
+        var clusterName = "gke-native";
+
+        var cluster = new Cluster("cluster", new ClusterArgs
+        {
+            ProjectsId = project,
+            LocationsId = region,
+            ClustersId = clusterName,
+            Name = clusterName,
+            Autopilot = new AutopilotArgs { Enabled = true }
         });
+    });
 }
 ```
 
@@ -121,7 +157,7 @@ class Program
 
 {{< /chooser >}}
 
-API documentation is available in our API reference.
+API documentation is available in our [API reference]({{< relref "/docs/reference/pkg/google-native">}}).
 
 ## Works side-by-side with the existing Pulumi GCP Provider
 
