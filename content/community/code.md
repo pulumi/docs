@@ -1,6 +1,6 @@
 # Community Code
 
-Here is a curated list of community created repositories, libraries, components, projects, and code that use Pulumi. If you believe something is missing, send us a pull request. 
+Here is a curated list of community created repositories, libraries, components, projects, and code that use Pulumi. If you believe something is missing, send us a [pull request](https://github.com/pulumi/docs/edit/master/content/community/code.md). 
 
 
 ## Frameworks/Platforms
@@ -27,3 +27,4 @@ Here is a curated list of community created repositories, libraries, components,
 
 ## Cool Code/Projects
 [Tinkerbell](https://github.com/tinkerbell) - Bare metal provisioning engine
+[Ploy](https://github.com/jaxxstorm/ploy) - Heroku like experience for deploying Docker images
