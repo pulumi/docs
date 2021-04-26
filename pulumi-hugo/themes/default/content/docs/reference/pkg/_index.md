@@ -48,7 +48,7 @@ explore what's possible, you've come to the right place.
 
 ### Utilities
 
-{{< resource-providers "random,tls,cloudinit" false >}}
+{{< resource-providers "random,tls,cloudinit,libvirt" false >}}
 
 ### Classic Providers
 
