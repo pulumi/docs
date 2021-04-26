@@ -288,7 +288,7 @@ func (mocks) NewResource(args MockResourceArgs) (string, resource.PropertyMap, e
 }
 
 func (mocks) Call(args MockCallArgs) (resource.PropertyMap, error) {
-	return args.Inputs, nil
+	return args.Args, nil
 }
 ```
 
