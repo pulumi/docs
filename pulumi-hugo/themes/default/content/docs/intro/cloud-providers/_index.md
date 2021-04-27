@@ -84,6 +84,7 @@ aliases: ["/docs/reference/clouds/"]
 * [Random]({{< relref "./random" >}})
 * [TLS]({{< relref "./tls" >}})
 * [cloud-init]({{< relref "./cloudinit" >}})
+* [libvirt]({{< relref "./libvirt" >}})
 
 ## Classic Providers
 
