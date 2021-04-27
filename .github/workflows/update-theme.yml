@@ -12,6 +12,11 @@ jobs:
         with:
           go-version: 1.16.x
 
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -31,6 +36,11 @@ jobs:
         run: |
           hugo mod get github.com/pulumi/pulumi-hugo/themes/default
 
+      - name: Identify relevant commits
+        id: diffdetails
+        run: |
+            echo "::set-output name=message::$(node scripts/get-module-diff-details.js)"
+
       - name: Create a pull request
         uses: peter-evans/create-pull-request@v3
         with:
@@ -41,4 +51,6 @@ jobs:
           commit-message: Update the module reference for pulumi/pulumi-hugo
           token: ${{ secrets.PULUMI_BOT_TOKEN }}
           body: |
-            Updates the Hugo module reference to bring the latest from https://github.com/pulumi/pulumi-hugo.
+            Brings in the latest from https://github.com/pulumi/pulumi-hugo, including:
+
+            ${{ steps.diffdetails.outputs.message }}
