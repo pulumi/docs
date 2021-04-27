@@ -1,15 +1,16 @@
 ---
 title: SAML Single Sign-on (SSO)
-meta_desc: This page provides an overview of how to configure any SAML 2.0 identity provider
-           with the Pulumi Console.
+meta_desc:
+  This page provides an overview of how to configure any SAML 2.0 identity provider
+  with the Pulumi Console.
 menu:
-    userguides:
-        weight: 8
-        identifier: saml
+  userguides:
+    weight: 8
+    identifier: saml
 
 aliases:
-- /docs/reference/service/saml-overview/
-- /docs/console/accounts/saml/
+  - /docs/reference/service/saml-overview/
+  - /docs/console/accounts/saml/
 ---
 
 The [Pulumi Console](https://app.pulumi.com) can be configured to work with any SAML 2.0 identity provider. SAML support requires Pulumi Enterprise Edition. To learn more about the capabilities of the Enterprise Edition, refer to the [pricing page]({{< relref "/pricing" >}}).
@@ -27,3 +28,4 @@ If you're looking to integrate Pulumi with your SAML 2.0 identity provider, refe
 - [Azure Active Directory]({{< relref "aad" >}})
 - [G Suite (Google)]({{< relref "gsuite" >}})
 - [Okta]({{< relref "okta" >}})
+- [OneLogin]({{< relref "onelogin" >}})

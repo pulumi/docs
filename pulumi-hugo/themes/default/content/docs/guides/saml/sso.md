@@ -1,14 +1,15 @@
 ---
 title: Single Sign-on with SAML (SSO)
-meta_desc: This page provides a walkthrough important aspects of configuring any SAML
-           (Security Assertion Markup Language) 2.0 identity provider.
+meta_desc:
+  This page provides a walkthrough important aspects of configuring any SAML
+  (Security Assertion Markup Language) 2.0 identity provider.
 menu:
-    userguides:
-        parent: saml
-        weight: 1
+  userguides:
+    parent: saml
+    weight: 1
 
 aliases:
-- /docs/intro/console/accounts/saml/
+  - /docs/intro/console/accounts/saml/
 ---
 
 This document walks through the important aspects of configuring any SAML (Security Assertion Markup Language) 2.0 identity provider to work
@@ -19,24 +20,25 @@ with the [Pulumi Console]({{< relref "/docs/intro/console" >}}).
 > - [Azure Active Directory]({{< relref "aad" >}})
 > - [G Suite (Google)]({{< relref "gsuite" >}})
 > - [Okta]({{< relref "okta" >}})
+> - [OneLogin]({{< relref "onelogin" >}})
 
 ## Terminology
 
 - **IdP** stands for Identity Provider. An IdP is a service that acts as a user directory.
 - **SP** stands for Service Provider. A service provider relies on an identity provider for authentication.
 - **IdP Metadata XML** is the XML configuration document provided by your IdP. It contains public information about your user directory,
-which can be used by the service provider to make authentication requests.
+  which can be used by the service provider to make authentication requests.
 
 ## Configuration Properties
 
 The following are the only properties you will really be configuring when you set up SAML SSO with your IdP.
 
-| Name | Other Names | Required |
-|----- | ---------- |-----------|
-| Single sign on URL | ACS URL | Yes |
-| Entity ID | Metadata _or_ Audience URL | Yes |
-| Default relay state | Start _or_ Application Start URL | No |
-| Name identifier format | Name Identifier, Name | Yes |
+| Name                   | Other Names                      | Required |
+| ---------------------- | -------------------------------- | -------- |
+| Single sign on URL     | ACS URL                          | Yes      |
+| Entity ID              | Metadata _or_ Audience URL       | Yes      |
+| Default relay state    | Start _or_ Application Start URL | No       |
+| Name identifier format | Name Identifier, Name            | Yes      |
 
 ### Single Sign On URL
 
@@ -67,8 +69,7 @@ The relay state is a URL, which itself is passed as a query parameter in SSO req
 The name ID format is one of the most important aspects of your SAML SSO configuration. It defines how an identity provider identifies a user on the downstream service. The value of the format defines what value would be used for the user's `Subject`.
 
 > **Note:** Pulumi only accepts stable and persistent identifiers for users. Identity providers must be able to set either a persistent randomly unique identifier (`urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`) or the user's email address (`urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress`) as the user's `Subject` value.
-<br />
-> **Important:** Once your name ID format is configured and your users have started to use SSO, **DO NOT** change the name identifier. That will prevent your users from being able to sign in.
+> <br /> > **Important:** Once your name ID format is configured and your users have started to use SSO, **DO NOT** change the name identifier. That will prevent your users from being able to sign in.
 
 ## Troubleshooting
 
