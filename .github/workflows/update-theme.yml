@@ -37,10 +37,11 @@ jobs:
           hugo mod get github.com/pulumi/pulumi-hugo/themes/default
 
       - name: Identify relevant commits
-        id: diffdetails
         run: |
             make ensure
-            echo "::set-output name=message::$(node scripts/get-module-diff-details.js)"
+            echo 'NEW_COMMITS<<EOF' >> $GITHUB_ENV
+            node scripts/get-module-diff-details.js >> $GITHUB_ENV
+            echo 'EOF' >> $GITHUB_ENV
 
       - name: Create a pull request
         uses: peter-evans/create-pull-request@v3
@@ -54,4 +55,4 @@ jobs:
           body: |
             Brings in the latest from https://github.com/pulumi/pulumi-hugo, including:
 
-            ${{ steps.diffdetails.outputs.message }}
+            ${{ env.NEW_COMMITS }}
