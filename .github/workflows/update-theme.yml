@@ -39,6 +39,7 @@ jobs:
       - name: Identify relevant commits
         id: diffdetails
         run: |
+            make ensure
             echo "::set-output name=message::$(node scripts/get-module-diff-details.js)"
 
       - name: Create a pull request
