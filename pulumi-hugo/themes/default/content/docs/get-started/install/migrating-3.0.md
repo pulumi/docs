@@ -299,7 +299,7 @@ func (mocks) Call(token string, args resource.PropertyMap, provider string) (res
 }
 
 //after
-func (mocks) NewResource(args MockResourceArgs) (string, resource.PropertyMap, error) {
+func (mocks) NewResource(args pulumi.MockResourceArgs) (string, resource.PropertyMap, error) {
 	outputs := args.Inputs.Mappable()
 	if args.Token == "aws:ec2/instance:Instance" {
 		outputs["publicIp"] = "203.0.113.12"
@@ -308,7 +308,7 @@ func (mocks) NewResource(args MockResourceArgs) (string, resource.PropertyMap, e
 	return args.Name + "_id", resource.NewPropertyMapFromMap(outputs), nil
 }
 
-func (mocks) Call(args MockCallArgs) (resource.PropertyMap, error) {
+func (mocks) Call(args pulumi.MockCallArgs) (resource.PropertyMap, error) {
 	outputs := map[string]interface{}{}
 	if args.Token == "aws:ec2/getAmi:getAmi" {
 		outputs["architecture"] = "x86_64"
