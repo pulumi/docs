@@ -28,6 +28,6 @@ Explore the resources and functions of the azure.proximity module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.0.0</dd>
+	<dd>4.0.1</dd>
 </dl>
 
