@@ -173,15 +173,15 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 report = azure_native.costmanagement.Report("report",
-    definition={
-        "dataset": {
-            "aggregation": {
+    definition=azure_native.costmanagement.ReportDefinitionArgs(
+        dataset=azure_native.costmanagement.ReportDatasetArgs(
+            aggregation={
                 "costSum": azure_native.costmanagement.ReportAggregationArgs(
                     function="Sum",
                     name="PreTaxCost",
                 ),
             },
-            "configuration": azure_native.costmanagement.ReportDatasetConfigurationArgs(
+            configuration=azure_native.costmanagement.ReportDatasetConfigurationArgs(
                 columns=[
                     "Date",
                     "MeterId",
@@ -190,10 +190,10 @@ report = azure_native.costmanagement.Report("report",
                     "PreTaxCost",
                 ],
             ),
-            "filter": {
+            filter={
                 "and": [
-                    {
-                        "or": [
+                    azure_native.costmanagement.ReportFilterArgs(
+                        or_=[
                             azure_native.costmanagement.ReportFilterArgs(
                                 dimension=azure_native.costmanagement.ReportComparisonExpressionArgs(
                                     name="ResourceLocation",
@@ -215,7 +215,7 @@ report = azure_native.costmanagement.Report("report",
                                 ),
                             ),
                         ],
-                    },
+                    ),
                     azure_native.costmanagement.ReportFilterArgs(
                         dimension=azure_native.costmanagement.ReportComparisonExpressionArgs(
                             name="ResourceGroup",
@@ -225,8 +225,8 @@ report = azure_native.costmanagement.Report("report",
                     ),
                 ],
             },
-            "granularity": "Daily",
-            "grouping": [
+            granularity="Daily",
+            grouping=[
                 azure_native.costmanagement.ReportGroupingArgs(
                     name="SubscriptionName",
                     type="Dimension",
@@ -236,10 +236,10 @@ report = azure_native.costmanagement.Report("report",
                     type="Tag",
                 ),
             ],
-        },
-        "timeframe": "MonthToDate",
-        "type": "Usage",
-    },
+        ),
+        timeframe="MonthToDate",
+        type="Usage",
+    ),
     delivery_info=azure_native.costmanagement.ReportDeliveryInfoArgs(
         destination=azure_native.costmanagement.ReportDeliveryDestinationArgs(
             container="reports",

@@ -2736,25 +2736,29 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Integration<wbr>Runtime<wbr>Reference</dt>
     <dd>IntegrationRuntimeReference</dd><dt>Linked<wbr>Service<wbr>Reference</dt>
-    <dd>LinkedServiceReference</dd></dl>
+    <dd>LinkedServiceReference</dd><dt>Credential<wbr>Reference</dt>
+    <dd>CredentialReference</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Integration<wbr>Runtime<wbr>Entity<wbr>Reference<wbr>Type<wbr>Integration<wbr>Runtime<wbr>Reference</dt>
     <dd>IntegrationRuntimeReference</dd><dt>Integration<wbr>Runtime<wbr>Entity<wbr>Reference<wbr>Type<wbr>Linked<wbr>Service<wbr>Reference</dt>
-    <dd>LinkedServiceReference</dd></dl>
+    <dd>LinkedServiceReference</dd><dt>Integration<wbr>Runtime<wbr>Entity<wbr>Reference<wbr>Type<wbr>Credential<wbr>Reference</dt>
+    <dd>CredentialReference</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Integration<wbr>Runtime<wbr>Reference</dt>
     <dd>IntegrationRuntimeReference</dd><dt>Linked<wbr>Service<wbr>Reference</dt>
-    <dd>LinkedServiceReference</dd></dl>
+    <dd>LinkedServiceReference</dd><dt>Credential<wbr>Reference</dt>
+    <dd>CredentialReference</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>INTEGRATION_RUNTIME_REFERENCE</dt>
     <dd>IntegrationRuntimeReference</dd><dt>LINKED_SERVICE_REFERENCE</dt>
-    <dd>LinkedServiceReference</dd></dl>
+    <dd>LinkedServiceReference</dd><dt>CREDENTIAL_REFERENCE</dt>
+    <dd>CredentialReference</dd></dl>
 {{% /choosable %}}
 
 <h4 id="integrationruntimelicensetype">Integration<wbr>Runtime<wbr>License<wbr>Type</h4>
@@ -3226,6 +3230,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="managedcredential_csharp">
+<a href="#managedcredential_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#entityreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="packagestores_csharp">
 <a href="#packagestores_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Stores</a>
 </span>
@@ -3285,6 +3297,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string | <a href="#integrationruntimelicensetype">Integration<wbr>Runtime<wbr>License<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="managedcredential_go">
+<a href="#managedcredential_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="packagestores_go">
 <a href="#packagestores_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Stores</a>
@@ -3346,6 +3366,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="managedcredential_nodejs">
+<a href="#managedcredential_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="packagestores_nodejs">
 <a href="#packagestores_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Stores</a>
 </span>
@@ -3405,6 +3433,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str | <a href="#integrationruntimelicensetype">Integration<wbr>Runtime<wbr>License<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="managed_credential_python">
+<a href="#managed_credential_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="package_stores_python">
 <a href="#package_stores_python" style="color: inherit; text-decoration: inherit;">package_<wbr>stores</a>
@@ -3468,6 +3504,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="managedcredential_csharp">
+<a href="#managedcredential_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="packagestores_csharp">
 <a href="#packagestores_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Stores</a>
 </span>
@@ -3527,6 +3571,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="managedcredential_go">
+<a href="#managedcredential_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="packagestores_go">
 <a href="#packagestores_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Stores</a>
@@ -3588,6 +3640,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="managedcredential_nodejs">
+<a href="#managedcredential_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="packagestores_nodejs">
 <a href="#packagestores_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Stores</a>
 </span>
@@ -3647,6 +3707,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="managed_credential_python">
+<a href="#managed_credential_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="package_stores_python">
 <a href="#package_stores_python" style="color: inherit; text-decoration: inherit;">package_<wbr>stores</a>

@@ -21,6 +21,7 @@ Explore the resources and functions of the azure-native.elastic module.
     <li><a href="gettagrule" title="GetTagRule"><span class="symbol function"></span>GetTagRule</a></li>
     <li><a href="listdeploymentinfo" title="ListDeploymentInfo"><span class="symbol function"></span>ListDeploymentInfo</a></li>
     <li><a href="listmonitoredresource" title="ListMonitoredResource"><span class="symbol function"></span>ListMonitoredResource</a></li>
+    <li><a href="listvmhost" title="ListVMHost"><span class="symbol function"></span>ListVMHost</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +31,6 @@ Explore the resources and functions of the azure-native.elastic module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.1.0</dd>
+	<dd>1.2.0</dd>
 </dl>
 

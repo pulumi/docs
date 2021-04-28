@@ -23689,15 +23689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amazons3compatiblelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sheetname_csharp">
-<a href="#sheetname_csharp" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}The sheet of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -23771,6 +23763,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sheetindex_csharp">
+<a href="#sheetindex_csharp" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheetname_csharp">
+<a href="#sheetname_csharp" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The sheet name of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="structure_csharp">
 <a href="#structure_csharp" style="color: inherit; text-decoration: inherit;">Structure</a>
 </span>
@@ -23797,15 +23805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
     </dt>
-    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sheetname_go">
-<a href="#sheetname_go" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}The sheet of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -23879,6 +23879,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sheetindex_go">
+<a href="#sheetindex_go" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheetname_go">
+<a href="#sheetname_go" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The sheet name of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="structure_go">
 <a href="#structure_go" style="color: inherit; text-decoration: inherit;">Structure</a>
 </span>
@@ -23905,15 +23921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sheetname_nodejs">
-<a href="#sheetname_nodejs" style="color: inherit; text-decoration: inherit;">sheet<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}The sheet of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -23987,6 +23995,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sheetindex_nodejs">
+<a href="#sheetindex_nodejs" style="color: inherit; text-decoration: inherit;">sheet<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheetname_nodejs">
+<a href="#sheetname_nodejs" style="color: inherit; text-decoration: inherit;">sheet<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The sheet name of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="structure_nodejs">
 <a href="#structure_nodejs" style="color: inherit; text-decoration: inherit;">structure</a>
 </span>
@@ -24013,15 +24037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sheet_name_python">
-<a href="#sheet_name_python" style="color: inherit; text-decoration: inherit;">sheet_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}The sheet of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -24095,6 +24111,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sheet_index_python">
+<a href="#sheet_index_python" style="color: inherit; text-decoration: inherit;">sheet_<wbr>index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheet_name_python">
+<a href="#sheet_name_python" style="color: inherit; text-decoration: inherit;">sheet_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The sheet name of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="structure_python">
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span>
@@ -24123,15 +24155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sheetname_csharp">
-<a href="#sheetname_csharp" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}The sheet of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -24205,6 +24229,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sheetindex_csharp">
+<a href="#sheetindex_csharp" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheetname_csharp">
+<a href="#sheetname_csharp" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The sheet name of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="structure_csharp">
 <a href="#structure_csharp" style="color: inherit; text-decoration: inherit;">Structure</a>
 </span>
@@ -24231,15 +24271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sheetname_go">
-<a href="#sheetname_go" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}The sheet of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -24313,6 +24345,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sheetindex_go">
+<a href="#sheetindex_go" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheetname_go">
+<a href="#sheetname_go" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The sheet name of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="structure_go">
 <a href="#structure_go" style="color: inherit; text-decoration: inherit;">Structure</a>
 </span>
@@ -24339,15 +24387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sheetname_nodejs">
-<a href="#sheetname_nodejs" style="color: inherit; text-decoration: inherit;">sheet<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}The sheet of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -24421,6 +24461,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sheetindex_nodejs">
+<a href="#sheetindex_nodejs" style="color: inherit; text-decoration: inherit;">sheet<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheetname_nodejs">
+<a href="#sheetname_nodejs" style="color: inherit; text-decoration: inherit;">sheet<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The sheet name of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="structure_nodejs">
 <a href="#structure_nodejs" style="color: inherit; text-decoration: inherit;">structure</a>
 </span>
@@ -24447,15 +24503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sheet_name_python">
-<a href="#sheet_name_python" style="color: inherit; text-decoration: inherit;">sheet_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}The sheet of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -24528,6 +24576,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheet_index_python">
+<a href="#sheet_index_python" style="color: inherit; text-decoration: inherit;">sheet_<wbr>index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheet_name_python">
+<a href="#sheet_name_python" style="color: inherit; text-decoration: inherit;">sheet_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The sheet name of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="structure_python">
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>

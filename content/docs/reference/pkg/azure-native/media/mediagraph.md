@@ -292,8 +292,8 @@ media_graph = azure_native.media.MediaGraph("mediaGraph",
         name="AssetSink",
         odata_type="#Microsoft.Media.MediaGraphAssetSink",
     )],
-    sources=[azure_native.media.MediaGraphRtspSourceArgs(
-        endpoint={
+    sources=[{
+        "endpoint": {
             "credentials": azure_native.media.MediaGraphUsernamePasswordCredentialsArgs(
                 odata_type="#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
                 password="examplepassword",
@@ -330,10 +330,10 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
                 ignore_signature=False,
             ),
         },
-        name="rtspSource",
-        odata_type="#Microsoft.Media.MediaGraphRtspSource",
-        transport="Http",
-    )])
+        "name": "rtspSource",
+        "odataType": "#Microsoft.Media.MediaGraphRtspSource",
+        "transport": "Http",
+    }])
 
 ```
 

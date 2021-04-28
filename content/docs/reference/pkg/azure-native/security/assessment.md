@@ -1132,7 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Azure resource Id of the assessed resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="category">Category</h4>
+<h4 id="categories">Categories</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Compute</dt>
@@ -1144,11 +1144,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Category<wbr>Compute</dt>
-    <dd>Compute</dd><dt>Category<wbr>Networking</dt>
-    <dd>Networking</dd><dt>Category<wbr>Data</dt>
-    <dd>Data</dd><dt>Category<wbr>Identity<wbr>And<wbr>Access</dt>
-    <dd>IdentityAndAccess</dd><dt>Category<wbr>Io<wbr>T</dt>
+<dl class="tabular"><dt>Categories<wbr>Compute</dt>
+    <dd>Compute</dd><dt>Categories<wbr>Networking</dt>
+    <dd>Networking</dd><dt>Categories<wbr>Data</dt>
+    <dd>Data</dd><dt>Categories<wbr>Identity<wbr>And<wbr>Access</dt>
+    <dd>IdentityAndAccess</dd><dt>Categories<wbr>Io<wbr>T</dt>
     <dd>IoT</dd></dl>
 {{% /choosable %}}
 
@@ -2169,11 +2169,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_csharp">
-<a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
+        <span id="categories_csharp">
+<a href="#categories_csharp" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Category&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Categories&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2261,8 +2261,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_go">
-<a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
+        <span id="categories_go">
+<a href="#categories_go" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -2353,11 +2353,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_nodejs">
-<a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
+        <span id="categories_nodejs">
+<a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Category[]</span>
+        <span class="property-type">string | Categories[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2445,11 +2445,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_python">
-<a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
+        <span id="categories_python">
+<a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Category]]</span>
+        <span class="property-type">Sequence[Union[str, Categories]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2547,8 +2547,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_csharp">
-<a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
+        <span id="categories_csharp">
+<a href="#categories_csharp" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
@@ -2647,8 +2647,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_go">
-<a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
+        <span id="categories_go">
+<a href="#categories_go" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -2747,8 +2747,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_nodejs">
-<a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
+        <span id="categories_nodejs">
+<a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -2847,8 +2847,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_python">
-<a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
+        <span id="categories_python">
+<a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
