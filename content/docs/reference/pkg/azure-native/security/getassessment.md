@@ -1251,8 +1251,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_csharp">
-<a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
+        <span id="categories_csharp">
+<a href="#categories_csharp" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
@@ -1351,8 +1351,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_go">
-<a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
+        <span id="categories_go">
+<a href="#categories_go" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -1451,8 +1451,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_nodejs">
-<a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
+        <span id="categories_nodejs">
+<a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -1551,8 +1551,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_python">
-<a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
+        <span id="categories_python">
+<a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>

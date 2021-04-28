@@ -170,7 +170,9 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="streamanalytics/" title="streamanalytics"><span class="symbol module"></span>streamanalytics</a></li>
     <li><a href="subscription/" title="subscription"><span class="symbol module"></span>subscription</a></li>
     <li><a href="synapse/" title="synapse"><span class="symbol module"></span>synapse</a></li>
+    <li><a href="testbase/" title="testbase"><span class="symbol module"></span>testbase</a></li>
     <li><a href="timeseriesinsights/" title="timeseriesinsights"><span class="symbol module"></span>timeseriesinsights</a></li>
+    <li><a href="videoanalyzer/" title="videoanalyzer"><span class="symbol module"></span>videoanalyzer</a></li>
     <li><a href="virtualmachineimages/" title="virtualmachineimages"><span class="symbol module"></span>virtualmachineimages</a></li>
     <li><a href="visualstudio/" title="visualstudio"><span class="symbol module"></span>visualstudio</a></li>
     <li><a href="vmwarecloudsimple/" title="vmwarecloudsimple"><span class="symbol module"></span>vmwarecloudsimple</a></li>
@@ -192,6 +194,6 @@ A native Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.1.0</dd>
+	<dd>1.2.0</dd>
 </dl>
 

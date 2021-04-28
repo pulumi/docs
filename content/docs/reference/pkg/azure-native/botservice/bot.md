@@ -49,6 +49,7 @@ class MyStack : Stack
                 Endpoint = "http://mybot.coffee",
                 IconUrl = "http://myicon",
                 IsCmekEnabled = true,
+                IsIsolated = false,
                 LuisAppIds = 
                 {
                     "luisappid1",
@@ -56,6 +57,7 @@ class MyStack : Stack
                 },
                 LuisKey = "luiskey",
                 MsaAppId = "exampleappid",
+                SchemaTransformationVersion = "1.0",
             },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "samplebotname",
@@ -106,12 +108,14 @@ func main() {
 				Endpoint:                          pulumi.String("http://mybot.coffee"),
 				IconUrl:                           pulumi.String("http://myicon"),
 				IsCmekEnabled:                     pulumi.Bool(true),
+				IsIsolated:                        pulumi.Bool(false),
 				LuisAppIds: pulumi.StringArray{
 					pulumi.String("luisappid1"),
 					pulumi.String("luisappid2"),
 				},
-				LuisKey:  pulumi.String("luiskey"),
-				MsaAppId: pulumi.String("exampleappid"),
+				LuisKey:                     pulumi.String("luiskey"),
+				MsaAppId:                    pulumi.String("exampleappid"),
+				SchemaTransformationVersion: pulumi.String("1.0"),
 			},
 			ResourceGroupName: pulumi.String("OneResourceGroupName"),
 			ResourceName:      pulumi.String("samplebotname"),
@@ -157,12 +161,14 @@ bot = azure_native.botservice.Bot("bot",
         endpoint="http://mybot.coffee",
         icon_url="http://myicon",
         is_cmek_enabled=True,
+        is_isolated=False,
         luis_app_ids=[
             "luisappid1",
             "luisappid2",
         ],
         luis_key="luiskey",
         msa_app_id="exampleappid",
+        schema_transformation_version="1.0",
     ),
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname",
@@ -201,12 +207,14 @@ const bot = new azure_native.botservice.Bot("bot", {
         endpoint: "http://mybot.coffee",
         iconUrl: "http://myicon",
         isCmekEnabled: true,
+        isIsolated: false,
         luisAppIds: [
             "luisappid1",
             "luisappid2",
         ],
         luisKey: "luiskey",
         msaAppId: "exampleappid",
+        schemaTransformationVersion: "1.0",
     },
     resourceGroupName: "OneResourceGroupName",
     resourceName: "samplebotname",
@@ -891,6 +899,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isisolated_csharp">
+<a href="#isisolated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luisappids_csharp">
 <a href="#luisappids_csharp" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
 </span>
@@ -905,7 +921,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schematransformationversion_csharp">
+<a href="#schematransformationversion_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Transformation<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -991,6 +1015,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isisolated_go">
+<a href="#isisolated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luisappids_go">
 <a href="#luisappids_go" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
 </span>
@@ -1005,7 +1037,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schematransformationversion_go">
+<a href="#schematransformationversion_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Transformation<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1091,6 +1131,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isisolated_nodejs">
+<a href="#isisolated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luisappids_nodejs">
 <a href="#luisappids_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>App<wbr>Ids</a>
 </span>
@@ -1105,7 +1153,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schematransformationversion_nodejs">
+<a href="#schematransformationversion_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Transformation<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1191,6 +1247,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="is_isolated_python">
+<a href="#is_isolated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luis_app_ids_python">
 <a href="#luis_app_ids_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>app_<wbr>ids</a>
 </span>
@@ -1205,7 +1269,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_transformation_version_python">
+<a href="#schema_transformation_version_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>transformation_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="botpropertiesresponse">Bot<wbr>Properties<wbr>Response</h4>
@@ -1317,6 +1389,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isisolated_csharp">
+<a href="#isisolated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luisappids_csharp">
 <a href="#luisappids_csharp" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
 </span>
@@ -1331,7 +1411,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schematransformationversion_csharp">
+<a href="#schematransformationversion_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Transformation<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1441,6 +1529,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isisolated_go">
+<a href="#isisolated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luisappids_go">
 <a href="#luisappids_go" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
 </span>
@@ -1455,7 +1551,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schematransformationversion_go">
+<a href="#schematransformationversion_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Transformation<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1565,6 +1669,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isisolated_nodejs">
+<a href="#isisolated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luisappids_nodejs">
 <a href="#luisappids_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>App<wbr>Ids</a>
 </span>
@@ -1579,7 +1691,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schematransformationversion_nodejs">
+<a href="#schematransformationversion_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Transformation<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1689,6 +1809,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="is_isolated_python">
+<a href="#is_isolated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luis_app_ids_python">
 <a href="#luis_app_ids_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>app_<wbr>ids</a>
 </span>
@@ -1703,7 +1831,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_transformation_version_python">
+<a href="#schema_transformation_version_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>transformation_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kind">Kind</h4>

@@ -954,14 +954,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The last time when the sku was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="maxcapacityreservationlevel_csharp">
-<a href="#maxcapacityreservationlevel_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity<wbr>Reservation<wbr>Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -989,14 +981,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time when the sku was updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="maxcapacityreservationlevel_go">
-<a href="#maxcapacityreservationlevel_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity<wbr>Reservation<wbr>Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1026,14 +1010,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The last time when the sku was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="maxcapacityreservationlevel_nodejs">
-<a href="#maxcapacityreservationlevel_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity<wbr>Reservation<wbr>Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1061,14 +1037,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time when the sku was updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="max_capacity_reservation_level_python">
-<a href="#max_capacity_reservation_level_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity_<wbr>reservation_<wbr>level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>

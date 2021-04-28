@@ -55,18 +55,6 @@ class MyStack : Stack
                             RelativeMountPath = "azfiles",
                         },
                     },
-                    FileServers = 
-                    {
-                        new AzureNative.BatchAI.Inputs.FileServerReferenceArgs
-                        {
-                            FileServer = new AzureNative.BatchAI.Inputs.ResourceIdArgs
-                            {
-                                Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspaces/fileservers/fileservercedd134b",
-                            },
-                            MountOptions = "rw",
-                            RelativeMountPath = "nfs",
-                        },
-                    },
                 },
             },
             ResourceGroupName = "demo_resource_group",
@@ -127,15 +115,6 @@ func main() {
 							RelativeMountPath: pulumi.String("azfiles"),
 						},
 					},
-					FileServers: batchai.FileServerReferenceArray{
-						&batchai.FileServerReferenceArgs{
-							FileServer: &batchai.ResourceIdArgs{
-								Id: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspaces/fileservers/fileservercedd134b"),
-							},
-							MountOptions:      pulumi.String("rw"),
-							RelativeMountPath: pulumi.String("nfs"),
-						},
-					},
 				},
 			},
 			ResourceGroupName: pulumi.String("demo_resource_group"),
@@ -188,13 +167,6 @@ cluster = azure_native.batchai.Cluster("cluster",
                 file_mode="0777",
                 relative_mount_path="azfiles",
             )],
-            file_servers=[azure_native.batchai.FileServerReferenceArgs(
-                file_server=azure_native.batchai.ResourceIdArgs(
-                    id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspaces/fileservers/fileservercedd134b",
-                ),
-                mount_options="rw",
-                relative_mount_path="nfs",
-            )],
         ),
     ),
     resource_group_name="demo_resource_group",
@@ -239,13 +211,6 @@ const cluster = new azure_native.batchai.Cluster("cluster", {
                 directoryMode: "0777",
                 fileMode: "0777",
                 relativeMountPath: "azfiles",
-            }],
-            fileServers: [{
-                fileServer: {
-                    id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspaces/fileservers/fileservercedd134b",
-                },
-                mountOptions: "rw",
-                relativeMountPath: "nfs",
             }],
         },
     },

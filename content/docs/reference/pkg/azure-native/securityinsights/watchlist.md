@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.securityinsights.Watchlist resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a Watchlist in Azure Security Insights.
-API Version: 2019-01-01-preview.
+API Version: 2021-03-01-preview.
 
 {{% examples %}}
 
@@ -20,7 +20,7 @@ API Version: 2019-01-01-preview.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-### Creates a watchlist.
+### Creates or updates a watchlist and bulk creates watchlist items.
 
 
 {{< example csharp >}}
@@ -39,6 +39,7 @@ class MyStack : Stack
             Description = "Watchlist from CSV content",
             DisplayName = "High Value Assets Watchlist",
             Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+            ItemsSearchKey = "header1",
             NumberOfLinesToSkip = 1,
             OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
             Provider = "Microsoft",
@@ -78,6 +79,7 @@ func main() {
 			Description:                         pulumi.String("Watchlist from CSV content"),
 			DisplayName:                         pulumi.String("High Value Assets Watchlist"),
 			Etag:                                pulumi.String("\"0300bf09-0000-0000-0000-5c37296e0000\""),
+			ItemsSearchKey:                      pulumi.String("header1"),
 			NumberOfLinesToSkip:                 pulumi.Int(1),
 			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
 			Provider:                            pulumi.String("Microsoft"),
@@ -112,6 +114,7 @@ watchlist = azure_native.securityinsights.Watchlist("watchlist",
     description="Watchlist from CSV content",
     display_name="High Value Assets Watchlist",
     etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    items_search_key="header1",
     number_of_lines_to_skip=1,
     operational_insights_resource_provider="Microsoft.OperationalInsights",
     provider="Microsoft",
@@ -141,12 +144,140 @@ const watchlist = new azure_native.securityinsights.Watchlist("watchlist", {
     description: "Watchlist from CSV content",
     displayName: "High Value Assets Watchlist",
     etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    itemsSearchKey: "header1",
     numberOfLinesToSkip: 1,
     operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
     provider: "Microsoft",
     rawContent: `This line will be skipped
 header1,header2
 value1,value2`,
+    resourceGroupName: "myRg",
+    source: "Local file",
+    watchlistAlias: "highValueAsset",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+### Creates or updates a watchlist.
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var watchlist = new AzureNative.SecurityInsights.Watchlist("watchlist", new AzureNative.SecurityInsights.WatchlistArgs
+        {
+            Description = "Watchlist from CSV content",
+            DisplayName = "High Value Assets Watchlist",
+            Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+            ItemsSearchKey = "header1",
+            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
+            Provider = "Microsoft",
+            ResourceGroupName = "myRg",
+            Source = "Local file",
+            WatchlistAlias = "highValueAsset",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := securityinsights.NewWatchlist(ctx, "watchlist", &securityinsights.WatchlistArgs{
+			Description:                         pulumi.String("Watchlist from CSV content"),
+			DisplayName:                         pulumi.String("High Value Assets Watchlist"),
+			Etag:                                pulumi.String("\"0300bf09-0000-0000-0000-5c37296e0000\""),
+			ItemsSearchKey:                      pulumi.String("header1"),
+			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
+			Provider:                            pulumi.String("Microsoft"),
+			ResourceGroupName:                   pulumi.String("myRg"),
+			Source:                              pulumi.String("Local file"),
+			WatchlistAlias:                      pulumi.String("highValueAsset"),
+			WorkspaceName:                       pulumi.String("myWorkspace"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+watchlist = azure_native.securityinsights.Watchlist("watchlist",
+    description="Watchlist from CSV content",
+    display_name="High Value Assets Watchlist",
+    etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    items_search_key="header1",
+    operational_insights_resource_provider="Microsoft.OperationalInsights",
+    provider="Microsoft",
+    resource_group_name="myRg",
+    source="Local file",
+    watchlist_alias="highValueAsset",
+    workspace_name="myWorkspace")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const watchlist = new azure_native.securityinsights.Watchlist("watchlist", {
+    description: "Watchlist from CSV content",
+    displayName: "High Value Assets Watchlist",
+    etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    itemsSearchKey: "header1",
+    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
+    provider: "Microsoft",
     resourceGroupName: "myRg",
     source: "Local file",
     watchlistAlias: "highValueAsset",
@@ -187,6 +318,7 @@ value1,value2`,
               <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">is_deleted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">items_search_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
               <span class="nx">number_of_lines_to_skip</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
               <span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -366,6 +498,14 @@ The Watchlist resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The display name of the watchlist{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="itemssearchkey_csharp">
+<a href="#itemssearchkey_csharp" style="color: inherit; text-decoration: inherit;">Items<wbr>Search<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The search key is used to optimize query performance when using watchlists for joins with other data. For example, enable a column with IP addresses to be the designated SearchKey field, then use this field as the key field when joining to other event data by IP address.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="operationalinsightsresourceprovider_csharp">
 <a href="#operationalinsightsresourceprovider_csharp" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
 </span>
@@ -388,7 +528,7 @@ The Watchlist resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -562,6 +702,14 @@ The Watchlist resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The display name of the watchlist{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="itemssearchkey_go">
+<a href="#itemssearchkey_go" style="color: inherit; text-decoration: inherit;">Items<wbr>Search<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The search key is used to optimize query performance when using watchlists for joins with other data. For example, enable a column with IP addresses to be the designated SearchKey field, then use this field as the key field when joining to other event data by IP address.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="operationalinsightsresourceprovider_go">
 <a href="#operationalinsightsresourceprovider_go" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
 </span>
@@ -584,7 +732,7 @@ The Watchlist resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -758,6 +906,14 @@ The Watchlist resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The display name of the watchlist{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="itemssearchkey_nodejs">
+<a href="#itemssearchkey_nodejs" style="color: inherit; text-decoration: inherit;">items<wbr>Search<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The search key is used to optimize query performance when using watchlists for joins with other data. For example, enable a column with IP addresses to be the designated SearchKey field, then use this field as the key field when joining to other event data by IP address.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="operationalinsightsresourceprovider_nodejs">
 <a href="#operationalinsightsresourceprovider_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
 </span>
@@ -780,7 +936,7 @@ The Watchlist resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -954,6 +1110,14 @@ The Watchlist resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The display name of the watchlist{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="items_search_key_python">
+<a href="#items_search_key_python" style="color: inherit; text-decoration: inherit;">items_<wbr>search_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The search key is used to optimize query performance when using watchlists for joins with other data. For example, enable a column with IP addresses to be the designated SearchKey field, then use this field as the key field when joining to other event data by IP address.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="operational_insights_resource_provider_python">
 <a href="#operational_insights_resource_provider_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>insights_<wbr>resource_<wbr>provider</a>
 </span>
@@ -976,7 +1140,7 @@ The Watchlist resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1165,6 +1329,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="systemdata_csharp">
+<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -1192,6 +1364,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="systemdata_go">
+<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1221,6 +1401,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="systemdata_nodejs">
+<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -1248,6 +1436,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="system_data_python">
+<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1292,6 +1488,216 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>LOCAL_FILE</dt>
     <dd>Local file</dd><dt>REMOTE_STORAGE</dt>
     <dd>Remote storage</dd></dl>
+{{% /choosable %}}
+
+<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_csharp">
+<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_csharp">
+<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_csharp">
+<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_go">
+<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_go">
+<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_go">
+<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_nodejs">
+<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_nodejs">
+<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_nodejs">
+<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_by_type_python">
+<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_at_python">
+<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_type_python">
+<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="watchlistuserinfo">Watchlist<wbr>User<wbr>Info</h4>
@@ -1463,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:securityinsights:Watchlist highValueAsset /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/watchlists/highValueAsset 
+$ pulumi import azure-native:securityinsights:Watchlist highValueAsset /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/watchlists/highValueAsset 
 ```
 
 

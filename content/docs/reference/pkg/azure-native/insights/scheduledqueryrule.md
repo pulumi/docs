@@ -501,6 +501,7 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
 <span class="k">def </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                        <span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[Union[AlertingActionArgs, LogToMetricActionArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">auto_mitigate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[Union[str, Enabled]]</span> = None<span class="p">,</span>
@@ -689,6 +690,14 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="automitigate_csharp">
+<a href="#automitigate_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Mitigate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The flag that indicates whether the alert should be automatically resolved or not. The default is true.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -772,6 +781,14 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#source">Source</a></span>
     </dt>
     <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="automitigate_go">
+<a href="#automitigate_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Mitigate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The flag that indicates whether the alert should be automatically resolved or not. The default is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -857,6 +874,14 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="automitigate_nodejs">
+<a href="#automitigate_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Mitigate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The flag that indicates whether the alert should be automatically resolved or not. The default is true.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -940,6 +965,14 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#source">Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="auto_mitigate_python">
+<a href="#auto_mitigate_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>mitigate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The flag that indicates whether the alert should be automatically resolved or not. The default is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>

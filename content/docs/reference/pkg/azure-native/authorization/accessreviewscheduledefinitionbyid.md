@@ -134,6 +134,7 @@ const accessReviewScheduleDefinitionById = new azure_native.authorization.Access
                                        <span class="nx">description_for_reviewers</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                        <span class="nx">end_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                       <span class="nx">inactive_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                        <span class="nx">instance_duration_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                                        <span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessReviewInstanceArgs]]</span> = None<span class="p">,</span>
                                        <span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -365,6 +366,14 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
     </dt>
     <dd>{{% md %}}The DateTime when the review is scheduled to end. Required if type is endDate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="inactiveduration_csharp">
+<a href="#inactiveduration_csharp" style="color: inherit; text-decoration: inherit;">Inactive<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds)){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancedurationindays_csharp">
 <a href="#instancedurationindays_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Duration<wbr>In<wbr>Days</a>
 </span>
@@ -528,6 +537,14 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DateTime when the review is scheduled to end. Required if type is endDate{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="inactiveduration_go">
+<a href="#inactiveduration_go" style="color: inherit; text-decoration: inherit;">Inactive<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds)){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancedurationindays_go">
 <a href="#instancedurationindays_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Duration<wbr>In<wbr>Days</a>
@@ -693,6 +710,14 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
     </dt>
     <dd>{{% md %}}The DateTime when the review is scheduled to end. Required if type is endDate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="inactiveduration_nodejs">
+<a href="#inactiveduration_nodejs" style="color: inherit; text-decoration: inherit;">inactive<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds)){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancedurationindays_nodejs">
 <a href="#instancedurationindays_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Duration<wbr>In<wbr>Days</a>
 </span>
@@ -857,6 +882,14 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
     </dt>
     <dd>{{% md %}}The DateTime when the review is scheduled to end. Required if type is endDate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="inactive_duration_python">
+<a href="#inactive_duration_python" style="color: inherit; text-decoration: inherit;">inactive_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds)){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instance_duration_in_days_python">
 <a href="#instance_duration_in_days_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>duration_<wbr>in_<wbr>days</a>
 </span>
@@ -964,6 +997,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="assignmentstate_csharp">
+<a href="#assignmentstate_csharp" style="color: inherit; text-decoration: inherit;">Assignment<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The role assignment state eligible/active to review{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -1047,6 +1088,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="assignmentstate_go">
+<a href="#assignmentstate_go" style="color: inherit; text-decoration: inherit;">Assignment<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The role assignment state eligible/active to review{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1132,6 +1181,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="assignmentstate_nodejs">
+<a href="#assignmentstate_nodejs" style="color: inherit; text-decoration: inherit;">assignment<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The role assignment state eligible/active to review{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1215,6 +1272,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="assignment_state_python">
+<a href="#assignment_state_python" style="color: inherit; text-decoration: inherit;">assignment_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The role assignment state eligible/active to review{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>

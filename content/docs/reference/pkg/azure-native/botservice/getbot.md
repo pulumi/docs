@@ -562,6 +562,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isisolated_csharp">
+<a href="#isisolated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luisappids_csharp">
 <a href="#luisappids_csharp" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
 </span>
@@ -576,7 +584,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schematransformationversion_csharp">
+<a href="#schematransformationversion_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Transformation<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -686,6 +702,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isisolated_go">
+<a href="#isisolated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luisappids_go">
 <a href="#luisappids_go" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
 </span>
@@ -700,7 +724,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schematransformationversion_go">
+<a href="#schematransformationversion_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Transformation<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -810,6 +842,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isisolated_nodejs">
+<a href="#isisolated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luisappids_nodejs">
 <a href="#luisappids_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>App<wbr>Ids</a>
 </span>
@@ -824,7 +864,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schematransformationversion_nodejs">
+<a href="#schematransformationversion_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Transformation<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -934,6 +982,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="is_isolated_python">
+<a href="#is_isolated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luis_app_ids_python">
 <a href="#luis_app_ids_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>app_<wbr>ids</a>
 </span>
@@ -948,7 +1004,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_transformation_version_python">
+<a href="#schema_transformation_version_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>transformation_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>

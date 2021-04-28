@@ -570,7 +570,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#workspacepublicnetworkaccess">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Workspace<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Enable or Disable pubic network access to workspace{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable or Disable public network access to workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="purviewconfiguration_csharp">
 <a href="#purviewconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Purview<wbr>Configuration</a>
@@ -718,7 +718,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#workspacepublicnetworkaccess">Workspace<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Enable or Disable pubic network access to workspace{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable or Disable public network access to workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="purviewconfiguration_go">
 <a href="#purviewconfiguration_go" style="color: inherit; text-decoration: inherit;">Purview<wbr>Configuration</a>
@@ -866,7 +866,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#workspacepublicnetworkaccess">Workspace<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Enable or Disable pubic network access to workspace{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable or Disable public network access to workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="purviewconfiguration_nodejs">
 <a href="#purviewconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">purview<wbr>Configuration</a>
@@ -1014,7 +1014,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#workspacepublicnetworkaccess">Workspace<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Enable or Disable pubic network access to workspace{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable or Disable public network access to workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="purview_configuration_python">
 <a href="#purview_configuration_python" style="color: inherit; text-decoration: inherit;">purview_<wbr>configuration</a>
