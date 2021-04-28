@@ -24,7 +24,7 @@ jobs:
       - name: Create a pull request
         uses: peter-evans/create-pull-request@v3
         with:
-          branch: pulumi-hugo/refresh
+          branch: tutorials/refresh
           author: Pulumi Bot <bot@pulumi.com>
           committer: Pulumi Bot <bot@pulumi.com>
           title: Update tutorials
