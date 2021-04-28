@@ -72,8 +72,8 @@ The following tutorials highlight the Google Cloud platform using complete end-t
 ## Other Examples and Tutorials
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-{{< tutorials-index-gcp >}}
+{{< tutorials-index gcp >}}
 
-If you'd like to see a new tutorial, please [request one](
-https://github.com/pulumi/docs/issues/new?title=New%20GCP%20Tutorial%20Request).
+If you'd like to see a new Google Cloud tutorial, please [request one](
+https://github.com/pulumi/examples/issues/new?title=New%20GCP%20Tutorial%20Request).
 Pull requests are also welcome!

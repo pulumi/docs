@@ -161,8 +161,8 @@ These tutorials tackle difficult "day two" tasks:
 ## Other Examples and Tutorials
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-{{< tutorials-index-kubernetes >}}
+{{< tutorials-index kubernetes >}}
 
-If you'd like to see a new tutorial, please [request one](
-https://github.com/pulumi/docs/issues/new?title=New%20Kubernetes%20Tutorial%20Request).
+If you'd like to see a new Kubernetes tutorial, please [request one](
+https://github.com/pulumi/examples/issues/new?title=New%20Kubernetes%20Tutorial%20Request).
 Pull requests are also welcome!

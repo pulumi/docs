@@ -24,7 +24,7 @@ From VMs to Serverless to Containers, our collection of tutorials below represen
             <li><a href="{{< relref "aws/s3-website" >}}">S3 Static Website</a></li>
         </ul>
         <p class="mt-6">
-            <a class="btn btn-secondary" href="{{< relref "aws" >}}">VIEW MORE</a>
+            <a class="btn btn-secondary" href="{{< relref "/docs/tutorials/aws" >}}">VIEW MORE</a>
         </p>
     </div>
     <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
@@ -38,7 +38,7 @@ From VMs to Serverless to Containers, our collection of tutorials below represen
             <li><a href="{{< relref "azure/azure-ts-webserver" >}}">Azure Virtual Machine</a></li>
         </ul>
         <p class="mt-6">
-            <a class="btn btn-secondary" href="{{< relref "azure" >}}">VIEW MORE</a>
+            <a class="btn btn-secondary" href="{{< relref "/docs/tutorials/azure" >}}">VIEW MORE</a>
         </p>
     </div>
 </div>
@@ -55,7 +55,7 @@ From VMs to Serverless to Containers, our collection of tutorials below represen
             <li><a href="{{< relref "gcp/gcp-ts-k8s-ruby-on-rails-postgresql" >}}">Containerized App</a></li>
         </ul>
         <p class="mt-6">
-            <a class="btn btn-secondary" href="{{< relref "gcp" >}}">VIEW MORE</a>
+            <a class="btn btn-secondary" href="{{< relref "/docs/tutorials/gcp" >}}">VIEW MORE</a>
         </p>
     </div>
     <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
@@ -73,7 +73,7 @@ From VMs to Serverless to Containers, our collection of tutorials below represen
             <li><a href="{{< relref "kubernetes/guestbook" >}}">Guestbook App</a></li>
         </ul>
         <p class="mt-6">
-            <a class="btn btn-secondary" href="{{< relref "kubernetes" >}}">VIEW MORE</a>
+            <a class="btn btn-secondary" href="{{< relref "/docs/tutorials/kubernetes" >}}">VIEW MORE</a>
         </p>
     </div>
 </div>

@@ -77,8 +77,8 @@ The following Amazon Web Services (AWS) tutorials highlight the platform using c
 ## Other Examples and Tutorials
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-{{< tutorials-index-aws >}}
+{{< tutorials-index aws >}}
 
 If you'd like to see a new AWS tutorial, please [request one](
-https://github.com/pulumi/docs/issues/new?title=New%20AWS%20Tutorial%20Request).
+https://github.com/pulumi/examples/issues/new?title=New%20AWS%20Tutorial%20Request).
 Pull requests are also welcome!

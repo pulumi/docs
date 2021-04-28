@@ -124,8 +124,8 @@ The following tutorials highlight the Azure platform using complete end-to-end s
 ## Other Examples and Tutorials
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-{{< tutorials-index-azure >}}
+{{< tutorials-index azure >}}
 
-If you'd like to see a new tutorial, please [request one](
-https://github.com/pulumi/docs/issues/new?title=New%20Azure%20Tutorial%20Request).
+If you'd like to see a new Azure tutorial, please [request one](
+https://github.com/pulumi/examples/issues/new?title=New%20Azure%20Tutorial%20Request).
 Pull requests are also welcome!
