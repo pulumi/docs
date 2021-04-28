@@ -22,11 +22,8 @@ import (
 )
 
 var (
-	templates = packr.NewBox("./templates")
-
-	cloudIndexTemplate  = parseTemplate("cloud_index.tmpl")
-	globalIndexTemplate = parseTemplate("global_index.tmpl")
-	tutorialTemplate    = parseTemplate("tutorial.tmpl")
+	templates        = packr.NewBox("./templates")
+	tutorialTemplate = parseTemplate("tutorial.tmpl")
 )
 
 func parseTemplate(name string) *mustache.Template {
