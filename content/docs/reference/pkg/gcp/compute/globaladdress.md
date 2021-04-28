@@ -395,11 +395,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The purpose of the resource. For global internal addresses it can be
+    <dd>{{% md %}}The purpose of the resource. Possible values include:
 * VPC_PEERING - for peer networks
 * PRIVATE_SERVICE_CONNECT - for Private Service Connect networks
-This should only be set when using an Internal address.
-Possible values are `VPC_PEERING` and `PRIVATE_SERVICE_CONNECT`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -513,11 +511,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The purpose of the resource. For global internal addresses it can be
+    <dd>{{% md %}}The purpose of the resource. Possible values include:
 * VPC_PEERING - for peer networks
 * PRIVATE_SERVICE_CONNECT - for Private Service Connect networks
-This should only be set when using an Internal address.
-Possible values are `VPC_PEERING` and `PRIVATE_SERVICE_CONNECT`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -631,11 +627,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The purpose of the resource. For global internal addresses it can be
+    <dd>{{% md %}}The purpose of the resource. Possible values include:
 * VPC_PEERING - for peer networks
 * PRIVATE_SERVICE_CONNECT - for Private Service Connect networks
-This should only be set when using an Internal address.
-Possible values are `VPC_PEERING` and `PRIVATE_SERVICE_CONNECT`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -749,11 +743,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The purpose of the resource. For global internal addresses it can be
+    <dd>{{% md %}}The purpose of the resource. Possible values include:
 * VPC_PEERING - for peer networks
 * PRIVATE_SERVICE_CONNECT - for Private Service Connect networks
-This should only be set when using an Internal address.
-Possible values are `VPC_PEERING` and `PRIVATE_SERVICE_CONNECT`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1186,11 +1178,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The purpose of the resource. For global internal addresses it can be
+    <dd>{{% md %}}The purpose of the resource. Possible values include:
 * VPC_PEERING - for peer networks
 * PRIVATE_SERVICE_CONNECT - for Private Service Connect networks
-This should only be set when using an Internal address.
-Possible values are `VPC_PEERING` and `PRIVATE_SERVICE_CONNECT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
@@ -1331,11 +1321,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The purpose of the resource. For global internal addresses it can be
+    <dd>{{% md %}}The purpose of the resource. Possible values include:
 * VPC_PEERING - for peer networks
 * PRIVATE_SERVICE_CONNECT - for Private Service Connect networks
-This should only be set when using an Internal address.
-Possible values are `VPC_PEERING` and `PRIVATE_SERVICE_CONNECT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
@@ -1476,11 +1464,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The purpose of the resource. For global internal addresses it can be
+    <dd>{{% md %}}The purpose of the resource. Possible values include:
 * VPC_PEERING - for peer networks
 * PRIVATE_SERVICE_CONNECT - for Private Service Connect networks
-This should only be set when using an Internal address.
-Possible values are `VPC_PEERING` and `PRIVATE_SERVICE_CONNECT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
@@ -1621,11 +1607,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The purpose of the resource. For global internal addresses it can be
+    <dd>{{% md %}}The purpose of the resource. Possible values include:
 * VPC_PEERING - for peer networks
 * PRIVATE_SERVICE_CONNECT - for Private Service Connect networks
-This should only be set when using an Internal address.
-Possible values are `VPC_PEERING` and `PRIVATE_SERVICE_CONNECT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
