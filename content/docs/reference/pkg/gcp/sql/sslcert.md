@@ -65,7 +65,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/sql"
-	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
