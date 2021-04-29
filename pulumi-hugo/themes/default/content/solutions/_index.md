@@ -42,7 +42,7 @@ use_cases:
             Adopt Pulumi when your existing infrastructure provisioning tool has reached its limits. Pulumi provides YAML or JSON file converters or you can use Pulumi 
             alongside existing tools.
 
-        - name: On-premise to cloud migration
+        - name: On-premises to cloud migration
           description: |
             Simplify your cloud migration with Modern Infrastructure-as-Code. Pulumi lets you model and automate the provisioning of infrastructure being migrated 
             to the cloud to increase speed and success. 
