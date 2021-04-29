@@ -3586,7 +3586,8 @@ row N is just skipped. Otherwise row N is used to extract column names for the d
     </dt>
     <dd>{{% md %}}The format of the data files. For CSV files, specify "CSV". For datastore backups, specify "DATASTORE_BACKUP".
 For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro, specify "AVRO". For parquet, specify "PARQUET".
-For orc, specify "ORC". The default value is CSV.
+For orc, specify "ORC". [Beta] For Bigtable, specify "BIGTABLE".
+The default value is CSV.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timepartitioning_csharp">
@@ -3815,7 +3816,8 @@ row N is just skipped. Otherwise row N is used to extract column names for the d
     </dt>
     <dd>{{% md %}}The format of the data files. For CSV files, specify "CSV". For datastore backups, specify "DATASTORE_BACKUP".
 For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro, specify "AVRO". For parquet, specify "PARQUET".
-For orc, specify "ORC". The default value is CSV.
+For orc, specify "ORC". [Beta] For Bigtable, specify "BIGTABLE".
+The default value is CSV.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timepartitioning_go">
@@ -4044,7 +4046,8 @@ row N is just skipped. Otherwise row N is used to extract column names for the d
     </dt>
     <dd>{{% md %}}The format of the data files. For CSV files, specify "CSV". For datastore backups, specify "DATASTORE_BACKUP".
 For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro, specify "AVRO". For parquet, specify "PARQUET".
-For orc, specify "ORC". The default value is CSV.
+For orc, specify "ORC". [Beta] For Bigtable, specify "BIGTABLE".
+The default value is CSV.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timepartitioning_nodejs">
@@ -4273,7 +4276,8 @@ row N is just skipped. Otherwise row N is used to extract column names for the d
     </dt>
     <dd>{{% md %}}The format of the data files. For CSV files, specify "CSV". For datastore backups, specify "DATASTORE_BACKUP".
 For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro, specify "AVRO". For parquet, specify "PARQUET".
-For orc, specify "ORC". The default value is CSV.
+For orc, specify "ORC". [Beta] For Bigtable, specify "BIGTABLE".
+The default value is CSV.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_partitioning_python">

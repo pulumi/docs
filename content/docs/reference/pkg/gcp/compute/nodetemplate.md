@@ -135,19 +135,16 @@ class MyStack : Stack
         }));
         var template = new Gcp.Compute.NodeTemplate("template", new Gcp.Compute.NodeTemplateArgs
         {
-            Region = "us-central1",
-            NodeType = "n1-node-96-624",
             NodeAffinityLabels = 
             {
                 { "foo", "baz" },
             },
+            NodeType = "n1-node-96-624",
+            Region = "us-central1",
             ServerBinding = new Gcp.Compute.Inputs.NodeTemplateServerBindingArgs
             {
                 Type = "RESTART_NODE_ON_MINIMAL_SERVERS",
             },
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
     }
 
@@ -178,15 +175,15 @@ func main() {
 			return err
 		}
 		_, err = compute.NewNodeTemplate(ctx, "template", &compute.NodeTemplateArgs{
-			Region:   pulumi.String("us-central1"),
-			NodeType: pulumi.String("n1-node-96-624"),
 			NodeAffinityLabels: pulumi.StringMap{
 				"foo": pulumi.String("baz"),
 			},
+			NodeType: pulumi.String("n1-node-96-624"),
+			Region:   pulumi.String("us-central1"),
 			ServerBinding: &compute.NodeTemplateServerBindingArgs{
 				Type: pulumi.String("RESTART_NODE_ON_MINIMAL_SERVERS"),
 			},
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -207,15 +204,14 @@ import pulumi_gcp as gcp
 
 central1a = gcp.compute.get_node_types(zone="us-central1-a")
 template = gcp.compute.NodeTemplate("template",
-    region="us-central1",
-    node_type="n1-node-96-624",
     node_affinity_labels={
         "foo": "baz",
     },
+    node_type="n1-node-96-624",
+    region="us-central1",
     server_binding=gcp.compute.NodeTemplateServerBindingArgs(
         type="RESTART_NODE_ON_MINIMAL_SERVERS",
-    ),
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    ))
 ```
 
 
@@ -229,20 +225,18 @@ template = gcp.compute.NodeTemplate("template",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const central1a = gcp.compute.getNodeTypes({
+const central1a = pulumi.output(gcp.compute.getNodeTypes({
     zone: "us-central1-a",
-});
+}, { async: true }));
 const template = new gcp.compute.NodeTemplate("template", {
-    region: "us-central1",
-    nodeType: "n1-node-96-624",
     nodeAffinityLabels: {
         foo: "baz",
     },
+    nodeType: "n1-node-96-624",
+    region: "us-central1",
     serverBinding: {
         type: "RESTART_NODE_ON_MINIMAL_SERVERS",
     },
-}, {
-    provider: google_beta,
 });
 ```
 
