@@ -49,7 +49,7 @@ Pulumi Packages bring the full power of the modern cloud and the amazing creativ
 {{% /choosable %}}
 {{% choosable language go %}}
 
-1. Choose from any of Pulumi’s [cloud provider]({{< relref "/docs/intro/cloud-providers" >}}) packages or search the TODO WHAT TO SEARCH for other Pulumi Packages
+1. Choose from any of Pulumi’s [cloud provider]({{< relref "/docs/intro/cloud-providers" >}}) packages
 1. Install into your project with `go get [package-url]`
 1. Reference a namespace in the newly-installed package and start writing code
 
