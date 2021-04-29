@@ -291,4 +291,13 @@ main {
     text-shadow: none;
 }
 
+#architectures {
+    @apply text-center;
+
+    h2 {
+        @apply pl-2 pr-2 inline;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+}
+
 @tailwind utilities;
