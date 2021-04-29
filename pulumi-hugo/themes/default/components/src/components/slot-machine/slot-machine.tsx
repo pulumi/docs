@@ -83,14 +83,14 @@ export class SlotMachine {
                     <pulumi-swiper
                         ref={(el) => this.leftSwiper = el}
                         direction="vertical"
-                        slides="3"
-                        centered-slides="true"
+                        slides={3}
+                        centered-slides={true}
                         loop={true}
                         autoplay={true}
-                        autoplayDelay="300"
-                        speed="1000"
+                        autoplayDelay={300}
+                        speed={1000}
                         enable-mouse-events={false}
-                        space-between="120"
+                        space-between={120}
                     >
                         {this.renderImageList(this.leftImages.split(","))}
                     </pulumi-swiper>
@@ -100,14 +100,14 @@ export class SlotMachine {
                     <pulumi-swiper
                         ref={(el) => this.centerSwiper = el}
                         direction="vertical"
-                        slides="3"
-                        centered-slides="true"
+                        slides={3}
+                        centered-slides={true}
                         loop={true}
                         autoplay={true}
-                        autoplayDelay="300"
-                        speed="1000"
+                        autoplayDelay={300}
+                        speed={1000}
                         enable-mouse-events={false}
-                        space-between="120"
+                        space-between={120}
                     >
                         {this.renderImageList(this.centerImages.split(","))}
                     </pulumi-swiper>
@@ -117,14 +117,14 @@ export class SlotMachine {
                     <pulumi-swiper
                         ref={(el) => this.rightSwiper = el}
                         direction="vertical"
-                        slides="3"
-                        centered-slides="true"
+                        slides={3}
+                        centered-slides={true}
                         loop={true}
                         autoplay={true}
-                        autoplayDelay="300"
-                        speed="1000"
+                        autoplayDelay={300}
+                        speed={1000}
                         enable-mouse-events={false}
-                        space-between="120"
+                        space-between={120}
                     >
                         {this.renderImageList(this.rightImages.split(","))}
                     </pulumi-swiper>

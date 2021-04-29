@@ -21,9 +21,6 @@ import {
 import {
   SourceKind,
 } from './components/convert/convert';
-import {
-  SwiperOptions,
-} from 'swiper';
 
 export namespace Components {
   interface PulumiAudio {
@@ -82,16 +79,16 @@ export namespace Components {
   interface PulumiSwipeable {}
   interface PulumiSwiper {
     'autoplay': boolean;
-    'autoplayDelay': string;
+    'autoplayDelay': number;
     'centeredSlides': boolean;
-    'direction': SwiperOptions["direction"];
+    'direction': "vertical" | "horizontal";
     'enableMouseEvents': boolean;
-    'initialSlide': string;
+    'initialSlide': number;
     'loop': boolean;
     'navControls': boolean;
-    'slides': string;
-    'spaceBetween': string;
-    'speed': string;
+    'slides': number;
+    'spaceBetween': number;
+    'speed': number;
     'startSwiper': () => Promise<void>;
     'stopSwiper': () => Promise<void>;
   }
@@ -298,16 +295,16 @@ declare namespace LocalJSX {
   interface PulumiSwipeable {}
   interface PulumiSwiper {
     'autoplay'?: boolean;
-    'autoplayDelay'?: string;
+    'autoplayDelay'?: number;
     'centeredSlides'?: boolean;
-    'direction'?: SwiperOptions["direction"];
+    'direction'?: "vertical" | "horizontal";
     'enableMouseEvents'?: boolean;
-    'initialSlide'?: string;
+    'initialSlide'?: number;
     'loop'?: boolean;
     'navControls'?: boolean;
-    'slides'?: string;
-    'spaceBetween'?: string;
-    'speed'?: string;
+    'slides'?: number;
+    'spaceBetween'?: number;
+    'speed'?: number;
   }
   interface PulumiTooltip {}
   interface PulumiTopButton {}

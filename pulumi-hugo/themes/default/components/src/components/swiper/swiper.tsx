@@ -1,5 +1,7 @@
 import { Component, Element, h, Prop, State, Method } from "@stencil/core";
-import SwiperJS, { Autoplay, Navigation, SwiperOptions } from "swiper";
+import SwiperJS, { Autoplay, Navigation } from "swiper";
+import { AutoplayOptions } from "swiper/components/autoplay";
+import { NavigationOptions } from "swiper/components/navigation";
 
 @Component({
     tag: "pulumi-swiper",
@@ -10,7 +12,7 @@ export class Swiper {
     el: Element;
 
     @Prop()
-    speed = "300";
+    speed = 300;
 
     @Prop()
     loop = false;
@@ -19,31 +21,31 @@ export class Swiper {
     autoplay = false;
 
     @Prop()
-    autoplayDelay = "3000";
+    autoplayDelay = 3000;
 
     @Prop()
     navControls = false;
 
     @Prop()
-    slides = "1";
+    slides = 1;
 
     @Prop()
     centeredSlides = false;
 
     @Prop()
-    initialSlide = "1";
+    initialSlide = 1;
 
     @Prop()
-    direction: SwiperOptions["direction"] = "horizontal";
+    direction: "vertical" | "horizontal" = "horizontal";
 
     @Prop()
     enableMouseEvents = true;
 
     @Prop()
-    spaceBetween = "0";
+    spaceBetween = 0;
 
     @State()
-    swiperHash = Math.random().toString(5).substring(2, 15) + Math.random().toString(5).substring(2, 15);
+    swiperID = Math.random().toString(5).substring(2, 15) + Math.random().toString(5).substring(2, 15);
 
     @State()
     containerClass: string;
@@ -58,6 +60,7 @@ export class Swiper {
 
     componentWillLoad() {
         const modules = [];
+
         if (this.autoplay) {
             modules.push(Autoplay);
         }
@@ -68,45 +71,39 @@ export class Swiper {
 
         SwiperJS.use(modules);
 
-        this.containerClass = `swiper-container-${this.swiperHash}`;
-        this.nextBtnClass = `swiper-button-next-${this.swiperHash}`;
-        this.previousBtnClass = `swiper-button-prev-${this.swiperHash}`;
+        this.containerClass = `swiper-container-${this.swiperID}`;
+        this.nextBtnClass = `swiper-button-next-${this.swiperID}`;
+        this.previousBtnClass = `swiper-button-prev-${this.swiperID}`;
     }
 
     componentDidLoad() {
-        let autoplay: any = false;
-        if (this.autoplay) {
-            autoplay = {
-                delay: parseInt(this.autoplayDelay),
-                disableOnInteraction: true,
-            };
-        }
 
-        let navigation: any = false;
-        if (this.navControls) {
-            navigation = {
-                nextEl: `.swiper-button-next.${this.nextBtnClass}`,
-                prevEl: `.swiper-button-prev.${this.previousBtnClass}`,
-            };
-        }
+        const autoplayOptions: AutoplayOptions = {
+            delay: this.autoplayDelay,
+            disableOnInteraction: true,
+        };
+
+        let navigationOptions: NavigationOptions = {
+            nextEl: `.swiper-button-next.${this.nextBtnClass}`,
+            prevEl: `.swiper-button-prev.${this.previousBtnClass}`,
+        };
 
         const swipeContainer = this.el.querySelector(`.swiper-container.${this.containerClass}`) as HTMLElement;
         this.swiper = new SwiperJS(swipeContainer, {
-            speed: parseInt(this.speed),
+            speed: this.speed,
             direction: this.direction,
             loop: this.loop,
             centeredSlides: this.centeredSlides,
-            initialSlide: parseInt(this.initialSlide),
-            autoplay,
-            navigation,
-            slidesPerView: parseInt(this.slides),
-            spaceBetween: parseInt(this.spaceBetween),
+            initialSlide: this.initialSlide,
+            autoplay: this.autoplay ? autoplayOptions : false,
+            navigation: this.navControls ? navigationOptions : false,
+            slidesPerView: this.slides,
+            spaceBetween: this.spaceBetween,
         });
 
-        this.stopSwiper();
-
         if (this.autoplay) {
-            this.swiper.autoplay.start();
+            this.startSwiper();
+
             if (this.enableMouseEvents) {
                 swipeContainer.addEventListener("mouseenter", this.stopSwiper.bind(this));
                 swipeContainer.addEventListener("mouseleave", this.startSwiper.bind(this));
@@ -115,13 +112,17 @@ export class Swiper {
     }
 
     @Method()
-    public stopSwiper() {
-        this.swiper.autoplay.stop();
+    public async stopSwiper() {
+        if (this.autoplay) {
+            this.swiper.autoplay.stop();
+        }
     }
 
     @Method()
-    public startSwiper() {
-        this.swiper.autoplay.start();
+    public async startSwiper() {
+        if (this.autoplay) {
+            this.swiper.autoplay.start();
+        }
     }
 
     render() {
