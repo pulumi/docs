@@ -73,19 +73,11 @@
         }
 
         .header-btn-primary {
-            @apply text-white bg-violet-600 text-base py-3 px-6 rounded-full;
+            @extend .btn-primary;
+            @apply py-3 px-6;
 
             @screen xl {
                 @apply text-lg;
-            }
-
-            &:hover {
-                @apply no-underline;
-                background: linear-gradient(90deg, #BE5188 0%, theme("colors.violet.600") 100%);
-            }
-
-            &:focus {
-                @apply bg-blue-600;
             }
         }
     }

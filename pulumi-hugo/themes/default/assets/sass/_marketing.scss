@@ -67,23 +67,12 @@ body:not(.section-docs):not(.section-blog):not(.section-authors):not(.section-ta
     }
 
     .btn-primary {
-        @apply text-white bg-violet-600;
-
-        &.disabled {
-            @apply bg-purple-600;
-        }
-
-        &:hover {
-            background: linear-gradient(90deg, #BE5188 0%, theme("colors.violet.600") 100%);
-        }
-
-        &:focus {
-            @apply bg-blue-600;
-        }
+        @include gradient-button;
     }
 
     .btn-secondary {
         @apply bg-white text-violet-600 border-2 border-violet-600;
+        @include transition;
 
         &.disabled {
             opacity: 0.3rem;
@@ -96,6 +85,11 @@ body:not(.section-docs):not(.section-blog):not(.section-authors):not(.section-ta
         &:focus {
             @apply bg-violet-200;
         }
+    }
+
+    // Make the borders transparent when the button is over a background of the same color.
+    .bg-violet-600 .btn-secondary {
+        @apply border-transparent;
     }
 
     @screen md {

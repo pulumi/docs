@@ -1,7 +1,6 @@
 @import "colors";
 @import "mixins";
 
-// Old Styles
 .btn {
     @include transition;
 
@@ -41,30 +40,6 @@
     }
 }
 
-.btn-purple {
-    @apply bg-purple-500 border-purple-500;
-
-    &:hover {
-        @apply bg-purple-200 border-purple-700;
-    }
-}
-
-.btn-purple-transparent {
-    @apply bg-transparent border-purple-500 text-purple-500;
-
-    &:hover {
-        @apply bg-purple-500 text-white border-purple-500;
-    }
-}
-
-.btn-white {
-    @apply bg-white text-gray-900 border-white;
-
-    &:hover {
-        @apply bg-gray-300 text-gray-900;
-    }
-}
-
 .btn-translucent {
     background-color: rgba($brand-blue, 0.3);
     border-color: rgba($brand-blue, 0.5);
@@ -90,6 +65,10 @@
 
     &:hover {
         @apply border-gray-700 text-gray-700 bg-transparent;
+    }
+
+    i {
+        @apply mr-1;
     }
 }
 

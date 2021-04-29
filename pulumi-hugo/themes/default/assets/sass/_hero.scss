@@ -84,7 +84,7 @@
         @screen lg {
             @apply pt-8;
         }
-        
+
         p {
             @apply text-lg rounded px-2;
             background-color: rgba(255, 255, 255, 0.7);
@@ -106,20 +106,8 @@
         }
 
         .home-hero-btn-primary {
-            @apply text-white bg-violet-600 text-lg py-4 px-12 rounded-full;
-
-            &:hover {
-                @apply no-underline;
-                background: linear-gradient(90deg, #BE5188 0%, theme("colors.violet.600") 100%);
-            }
-
-            &:focus {
-                @apply bg-blue-600;
-            }
-
-            @media (min-width: 2000px) {
-                @apply text-2xl;
-            }
+            @include gradient-button;
+            @apply py-4 px-12 text-lg;
         }
     }
 }
