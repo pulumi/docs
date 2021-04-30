@@ -643,7 +643,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration options for alert triggers on this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizedkeys_csharp">
 <a href="#authorizedkeys_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Keys</a>
@@ -825,7 +826,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration options for alert triggers on this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizedkeys_go">
 <a href="#authorizedkeys_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Keys</a>
@@ -1007,7 +1009,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration options for alert triggers on this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizedkeys_nodejs">
 <a href="#authorizedkeys_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Keys</a>
@@ -1189,7 +1192,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration options for alert triggers on this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorized_keys_python">
 <a href="#authorized_keys_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>keys</a>
@@ -1425,7 +1429,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Information about the resources available to this Linode.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1502,7 +1507,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Information about the resources available to this Linode.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1579,7 +1585,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Information about the resources available to this Linode.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1656,7 +1663,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Information about the resources available to this Linode.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1829,7 +1837,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration options for alert triggers on this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizedkeys_csharp">
 <a href="#state_authorizedkeys_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Keys</a>
@@ -2001,7 +2010,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Information about the resources available to this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stackscriptdata_csharp">
 <a href="#state_stackscriptdata_csharp" style="color: inherit; text-decoration: inherit;">Stackscript<wbr>Data</a>
@@ -2076,7 +2086,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration options for alert triggers on this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizedkeys_go">
 <a href="#state_authorizedkeys_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Keys</a>
@@ -2248,7 +2259,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Information about the resources available to this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stackscriptdata_go">
 <a href="#state_stackscriptdata_go" style="color: inherit; text-decoration: inherit;">Stackscript<wbr>Data</a>
@@ -2323,7 +2335,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration options for alert triggers on this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizedkeys_nodejs">
 <a href="#state_authorizedkeys_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Keys</a>
@@ -2495,7 +2508,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Information about the resources available to this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stackscriptdata_nodejs">
 <a href="#state_stackscriptdata_nodejs" style="color: inherit; text-decoration: inherit;">stackscript<wbr>Data</a>
@@ -2570,7 +2584,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration options for alert triggers on this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorized_keys_python">
 <a href="#state_authorized_keys_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>keys</a>
@@ -2742,7 +2757,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Information about the resources available to this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stackscript_data_python">
 <a href="#state_stackscript_data_python" style="color: inherit; text-decoration: inherit;">stackscript_<wbr>data</a>
