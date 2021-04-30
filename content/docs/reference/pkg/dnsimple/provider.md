@@ -31,6 +31,7 @@ construction to achieve fine-grained programmatic control over provider settings
 <span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
              <span class="nx">account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">sandbox</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -203,6 +204,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API v2 token for API operations.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sandbox_csharp">
+<a href="#sandbox_csharp" style="color: inherit; text-decoration: inherit;">Sandbox</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to enable the sandbox API.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -225,6 +235,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API v2 token for API operations.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sandbox_go">
+<a href="#sandbox_go" style="color: inherit; text-decoration: inherit;">Sandbox</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to enable the sandbox API.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -247,6 +266,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API v2 token for API operations.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sandbox_nodejs">
+<a href="#sandbox_nodejs" style="color: inherit; text-decoration: inherit;">sandbox</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to enable the sandbox API.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -269,6 +297,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API v2 token for API operations.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sandbox_python">
+<a href="#sandbox_python" style="color: inherit; text-decoration: inherit;">sandbox</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to enable the sandbox API.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -341,6 +378,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`dnsimple` Terraform Provider](https://github.com/terraform-providers/terraform-provider-dnsimple).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`dnsimple` Terraform Provider](https://github.com/dnsimple/terraform-provider-dnsimple).{{% /md %}}</dd>
 </dl>
 

@@ -14,6 +14,7 @@ A Pulumi package for creating and managing dnsimple cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="emailforward" title="EmailForward"><span class="symbol resource"></span>EmailForward</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="record" title="Record"><span class="symbol resource"></span>Record</a></li>
 </ul>
@@ -25,8 +26,8 @@ A Pulumi package for creating and managing dnsimple cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`dnsimple` Terraform Provider](https://github.com/terraform-providers/terraform-provider-dnsimple).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`dnsimple` Terraform Provider](https://github.com/dnsimple/terraform-provider-dnsimple).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.1.0</dd>
 </dl>
 
