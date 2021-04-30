@@ -50,11 +50,8 @@ class MyStack : Stack
             MongoDbMajorVersion = "4.2",
             ProjectId = "<YOUR-PROJECT-ID>",
             ProviderBackupEnabled = true,
-            ProviderDiskIops = 300,
-            ProviderEncryptEbsVolume = true,
             ProviderInstanceSizeName = "M40",
             ProviderName = "AWS",
-            ProviderVolumeType = "STANDARD",
             ReplicationSpecs = 
             {
                 new Mongodbatlas.Inputs.ClusterReplicationSpecArgs
@@ -101,11 +98,8 @@ func main() {
 			MongoDbMajorVersion:      pulumi.String("4.2"),
 			ProjectId:                pulumi.String("<YOUR-PROJECT-ID>"),
 			ProviderBackupEnabled:    pulumi.Bool(true),
-			ProviderDiskIops:         pulumi.Int(300),
-			ProviderEncryptEbsVolume: pulumi.Bool(true),
 			ProviderInstanceSizeName: pulumi.String("M40"),
 			ProviderName:             pulumi.String("AWS"),
-			ProviderVolumeType:       pulumi.String("STANDARD"),
 			ReplicationSpecs: mongodbatlas.ClusterReplicationSpecArray{
 				&mongodbatlas.ClusterReplicationSpecArgs{
 					NumShards: pulumi.Int(1),
@@ -145,11 +139,8 @@ cluster_test = mongodbatlas.Cluster("cluster-test",
     mongo_db_major_version="4.2",
     project_id="<YOUR-PROJECT-ID>",
     provider_backup_enabled=True,
-    provider_disk_iops=300,
-    provider_encrypt_ebs_volume=True,
     provider_instance_size_name="M40",
     provider_name="AWS",
-    provider_volume_type="STANDARD",
     replication_specs=[mongodbatlas.ClusterReplicationSpecArgs(
         num_shards=1,
         regions_configs=[mongodbatlas.ClusterReplicationSpecRegionsConfigArgs(
@@ -179,12 +170,9 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     mongoDbMajorVersion: "4.2",
     projectId: "<YOUR-PROJECT-ID>",
     providerBackupEnabled: true,
-    providerDiskIops: 300,
-    providerEncryptEbsVolume: true,
     providerInstanceSizeName: "M40",
     //Provider Settings "block"
     providerName: "AWS",
-    providerVolumeType: "STANDARD",
     replicationSpecs: [{
         numShards: 1,
         regionsConfigs: [{
@@ -547,10 +535,8 @@ class MyStack : Stack
             NumShards = 1,
             ProjectId = "<YOUR-PROJECT-ID>",
             ProviderBackupEnabled = true,
-            ProviderDiskIops = 300,
             ProviderInstanceSizeName = "M10",
             ProviderName = "AWS",
-            ProviderVolumeType = "STANDARD",
             ReplicationSpecs = 
             {
                 new Mongodbatlas.Inputs.ClusterReplicationSpecArgs
@@ -610,10 +596,8 @@ func main() {
 			NumShards:                pulumi.Int(1),
 			ProjectId:                pulumi.String("<YOUR-PROJECT-ID>"),
 			ProviderBackupEnabled:    pulumi.Bool(true),
-			ProviderDiskIops:         pulumi.Int(300),
 			ProviderInstanceSizeName: pulumi.String("M10"),
 			ProviderName:             pulumi.String("AWS"),
-			ProviderVolumeType:       pulumi.String("STANDARD"),
 			ReplicationSpecs: mongodbatlas.ClusterReplicationSpecArray{
 				&mongodbatlas.ClusterReplicationSpecArgs{
 					NumShards: pulumi.Int(1),
@@ -664,10 +648,8 @@ cluster_test = mongodbatlas.Cluster("cluster-test",
     num_shards=1,
     project_id="<YOUR-PROJECT-ID>",
     provider_backup_enabled=True,
-    provider_disk_iops=300,
     provider_instance_size_name="M10",
     provider_name="AWS",
-    provider_volume_type="STANDARD",
     replication_specs=[mongodbatlas.ClusterReplicationSpecArgs(
         num_shards=1,
         regions_configs=[
@@ -710,11 +692,9 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     numShards: 1,
     projectId: "<YOUR-PROJECT-ID>",
     providerBackupEnabled: true,
-    providerDiskIops: 300,
     providerInstanceSizeName: "M10",
     //Provider Settings "block"
     providerName: "AWS",
-    providerVolumeType: "STANDARD",
     replicationSpecs: [{
         numShards: 1,
         regionsConfigs: [
@@ -767,10 +747,8 @@ class MyStack : Stack
             NumShards = 1,
             ProjectId = "<YOUR-PROJECT-ID>",
             ProviderBackupEnabled = true,
-            ProviderDiskIops = 240,
             ProviderInstanceSizeName = "M30",
             ProviderName = "AWS",
-            ProviderVolumeType = "STANDARD",
             ReplicationSpecs = 
             {
                 new Mongodbatlas.Inputs.ClusterReplicationSpecArgs
@@ -832,10 +810,8 @@ func main() {
 			NumShards:                pulumi.Int(1),
 			ProjectId:                pulumi.String("<YOUR-PROJECT-ID>"),
 			ProviderBackupEnabled:    pulumi.Bool(true),
-			ProviderDiskIops:         pulumi.Int(240),
 			ProviderInstanceSizeName: pulumi.String("M30"),
 			ProviderName:             pulumi.String("AWS"),
-			ProviderVolumeType:       pulumi.String("STANDARD"),
 			ReplicationSpecs: mongodbatlas.ClusterReplicationSpecArray{
 				&mongodbatlas.ClusterReplicationSpecArgs{
 					NumShards: pulumi.Int(2),
@@ -887,10 +863,8 @@ cluster_test = mongodbatlas.Cluster("cluster-test",
     num_shards=1,
     project_id="<YOUR-PROJECT-ID>",
     provider_backup_enabled=True,
-    provider_disk_iops=240,
     provider_instance_size_name="M30",
     provider_name="AWS",
-    provider_volume_type="STANDARD",
     replication_specs=[
         mongodbatlas.ClusterReplicationSpecArgs(
             num_shards=2,
@@ -932,11 +906,9 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     numShards: 1,
     projectId: "<YOUR-PROJECT-ID>",
     providerBackupEnabled: true,
-    providerDiskIops: 240,
     providerInstanceSizeName: "M30",
     //Provider Settings "block"
     providerName: "AWS",
-    providerVolumeType: "STANDARD",
     replicationSpecs: [
         {
             numShards: 2,
@@ -1107,6 +1079,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
             <span class="nx">backing_provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">backup_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">bi_connector</span><span class="p">:</span> <span class="nx">Optional[ClusterBiConnectorArgs]</span> = None<span class="p">,</span>
+            <span class="nx">bi_connector_config</span><span class="p">:</span> <span class="nx">Optional[ClusterBiConnectorConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
             <span class="nx">encryption_at_rest_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1366,13 +1339,22 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="biconnector_csharp">
 <a href="#biconnector_csharp" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbiconnector">Cluster<wbr>Bi<wbr>Connector<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details. **DEPRECATED** Use `bi_connector_config` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use bi_connector_config instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="biconnectorconfig_csharp">
+<a href="#biconnectorconfig_csharp" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterbiconnectorconfig">Cluster<wbr>Bi<wbr>Connector<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1485,7 +1467,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
+    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.  This setting requires that `provider_instance_size_name` to be M30 or greater and cannot be used with clusters with local NVMe SSDs.  The default value for `provider_disk_iops` is the same as the cluster tier's Standard IOPS value, as viewable in the Atlas console.  It is used in cases where a higher number of IOPS is needed and possible.  If a value is submitted that is lower or equal to the default IOPS value for the cluster tier Atlas ignores the requested value and uses the default.  More details available under the providerSettings.diskIOPS parameter: [MongoDB API Clusters](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerdisktypename_csharp">
@@ -1495,16 +1477,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P15 - 256GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at https://docs.atlas.mongodb.com/reference/api/clusters-create-one/.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="providerencryptebsvolume_csharp">
 <a href="#providerencryptebsvolume_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Encrypt<wbr>Ebs<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}**(Deprecated) The Flag is always true.** Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}All EBS volumes are encrypted by default, the option to disable encryption has been removed{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="providerregionname_csharp">
 <a href="#providerregionname_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Region<wbr>Name</a>
@@ -1522,7 +1504,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` required if setting IOPS higher than the default instance IOPS.
+    <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` is ONLY required if setting IOPS higher than the default instance IOPS.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationfactor_csharp">
@@ -1630,13 +1612,22 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="biconnector_go">
 <a href="#biconnector_go" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbiconnector">Cluster<wbr>Bi<wbr>Connector</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details. **DEPRECATED** Use `bi_connector_config` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use bi_connector_config instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="biconnectorconfig_go">
+<a href="#biconnectorconfig_go" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterbiconnectorconfig">Cluster<wbr>Bi<wbr>Connector<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1749,7 +1740,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
+    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.  This setting requires that `provider_instance_size_name` to be M30 or greater and cannot be used with clusters with local NVMe SSDs.  The default value for `provider_disk_iops` is the same as the cluster tier's Standard IOPS value, as viewable in the Atlas console.  It is used in cases where a higher number of IOPS is needed and possible.  If a value is submitted that is lower or equal to the default IOPS value for the cluster tier Atlas ignores the requested value and uses the default.  More details available under the providerSettings.diskIOPS parameter: [MongoDB API Clusters](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerdisktypename_go">
@@ -1759,16 +1750,16 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P15 - 256GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at https://docs.atlas.mongodb.com/reference/api/clusters-create-one/.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="providerencryptebsvolume_go">
 <a href="#providerencryptebsvolume_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Encrypt<wbr>Ebs<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}**(Deprecated) The Flag is always true.** Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}All EBS volumes are encrypted by default, the option to disable encryption has been removed{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="providerregionname_go">
 <a href="#providerregionname_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Region<wbr>Name</a>
@@ -1786,7 +1777,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` required if setting IOPS higher than the default instance IOPS.
+    <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` is ONLY required if setting IOPS higher than the default instance IOPS.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationfactor_go">
@@ -1894,13 +1885,22 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="biconnector_nodejs">
 <a href="#biconnector_nodejs" style="color: inherit; text-decoration: inherit;">bi<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbiconnector">Cluster<wbr>Bi<wbr>Connector<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details. **DEPRECATED** Use `bi_connector_config` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use bi_connector_config instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="biconnectorconfig_nodejs">
+<a href="#biconnectorconfig_nodejs" style="color: inherit; text-decoration: inherit;">bi<wbr>Connector<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterbiconnectorconfig">Cluster<wbr>Bi<wbr>Connector<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2013,7 +2013,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
+    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.  This setting requires that `provider_instance_size_name` to be M30 or greater and cannot be used with clusters with local NVMe SSDs.  The default value for `provider_disk_iops` is the same as the cluster tier's Standard IOPS value, as viewable in the Atlas console.  It is used in cases where a higher number of IOPS is needed and possible.  If a value is submitted that is lower or equal to the default IOPS value for the cluster tier Atlas ignores the requested value and uses the default.  More details available under the providerSettings.diskIOPS parameter: [MongoDB API Clusters](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerdisktypename_nodejs">
@@ -2023,16 +2023,16 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P15 - 256GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at https://docs.atlas.mongodb.com/reference/api/clusters-create-one/.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="providerencryptebsvolume_nodejs">
 <a href="#providerencryptebsvolume_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Encrypt<wbr>Ebs<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}**(Deprecated) The Flag is always true.** Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}All EBS volumes are encrypted by default, the option to disable encryption has been removed{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="providerregionname_nodejs">
 <a href="#providerregionname_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Region<wbr>Name</a>
@@ -2050,7 +2050,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` required if setting IOPS higher than the default instance IOPS.
+    <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` is ONLY required if setting IOPS higher than the default instance IOPS.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationfactor_nodejs">
@@ -2158,13 +2158,22 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="bi_connector_python">
 <a href="#bi_connector_python" style="color: inherit; text-decoration: inherit;">bi_<wbr>connector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbiconnector">Cluster<wbr>Bi<wbr>Connector<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details. **DEPRECATED** Use `bi_connector_config` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use bi_connector_config instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="bi_connector_config_python">
+<a href="#bi_connector_config_python" style="color: inherit; text-decoration: inherit;">bi_<wbr>connector_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterbiconnectorconfig">Cluster<wbr>Bi<wbr>Connector<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2277,7 +2286,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
+    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.  This setting requires that `provider_instance_size_name` to be M30 or greater and cannot be used with clusters with local NVMe SSDs.  The default value for `provider_disk_iops` is the same as the cluster tier's Standard IOPS value, as viewable in the Atlas console.  It is used in cases where a higher number of IOPS is needed and possible.  If a value is submitted that is lower or equal to the default IOPS value for the cluster tier Atlas ignores the requested value and uses the default.  More details available under the providerSettings.diskIOPS parameter: [MongoDB API Clusters](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_disk_type_name_python">
@@ -2287,16 +2296,16 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P15 - 256GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at https://docs.atlas.mongodb.com/reference/api/clusters-create-one/.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="provider_encrypt_ebs_volume_python">
 <a href="#provider_encrypt_ebs_volume_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>encrypt_<wbr>ebs_<wbr>volume</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}**(Deprecated) The Flag is always true.** Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}All EBS volumes are encrypted by default, the option to disable encryption has been removed{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="provider_region_name_python">
 <a href="#provider_region_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>region_<wbr>name</a>
@@ -2314,7 +2323,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` required if setting IOPS higher than the default instance IOPS.
+    <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` is ONLY required if setting IOPS higher than the default instance IOPS.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_factor_python">
@@ -2425,6 +2434,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Flag that indicates whether the cluster is paused or not.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="providerencryptebsvolumeflag_csharp">
+<a href="#providerencryptebsvolumeflag_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Encrypt<wbr>Ebs<wbr>Volume<wbr>Flag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snapshotbackuppolicies_csharp">
 <a href="#snapshotbackuppolicies_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Backup<wbr>Policies</a>
@@ -2543,6 +2560,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Flag that indicates whether the cluster is paused or not.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="providerencryptebsvolumeflag_go">
+<a href="#providerencryptebsvolumeflag_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Encrypt<wbr>Ebs<wbr>Volume<wbr>Flag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="snapshotbackuppolicies_go">
 <a href="#snapshotbackuppolicies_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Backup<wbr>Policies</a>
 </span>
@@ -2659,6 +2684,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Flag that indicates whether the cluster is paused or not.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="providerencryptebsvolumeflag_nodejs">
+<a href="#providerencryptebsvolumeflag_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Encrypt<wbr>Ebs<wbr>Volume<wbr>Flag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snapshotbackuppolicies_nodejs">
 <a href="#snapshotbackuppolicies_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Backup<wbr>Policies</a>
@@ -2777,6 +2810,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Flag that indicates whether the cluster is paused or not.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="provider_encrypt_ebs_volume_flag_python">
+<a href="#provider_encrypt_ebs_volume_flag_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>encrypt_<wbr>ebs_<wbr>volume_<wbr>flag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="snapshot_backup_policies_python">
 <a href="#snapshot_backup_policies_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>backup_<wbr>policies</a>
 </span>
@@ -2834,6 +2875,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
         <span class="nx">backing_provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">backup_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">bi_connector</span><span class="p">:</span> <span class="nx">Optional[ClusterBiConnectorArgs]</span> = None<span class="p">,</span>
+        <span class="nx">bi_connector_config</span><span class="p">:</span> <span class="nx">Optional[ClusterBiConnectorConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[ClusterConnectionStringsArgs]</span> = None<span class="p">,</span>
@@ -2857,6 +2899,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
         <span class="nx">provider_disk_iops</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">provider_disk_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">provider_encrypt_ebs_volume</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">provider_encrypt_ebs_volume_flag</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">provider_instance_size_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">provider_region_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -3033,13 +3076,22 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_biconnector_csharp">
 <a href="#state_biconnector_csharp" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbiconnector">Cluster<wbr>Bi<wbr>Connector<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details. **DEPRECATED** Use `bi_connector_config` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use bi_connector_config instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_biconnectorconfig_csharp">
+<a href="#state_biconnectorconfig_csharp" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterbiconnectorconfig">Cluster<wbr>Bi<wbr>Connector<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3233,7 +3285,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
+    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.  This setting requires that `provider_instance_size_name` to be M30 or greater and cannot be used with clusters with local NVMe SSDs.  The default value for `provider_disk_iops` is the same as the cluster tier's Standard IOPS value, as viewable in the Atlas console.  It is used in cases where a higher number of IOPS is needed and possible.  If a value is submitted that is lower or equal to the default IOPS value for the cluster tier Atlas ignores the requested value and uses the default.  More details available under the providerSettings.diskIOPS parameter: [MongoDB API Clusters](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerdisktypename_csharp">
@@ -3243,16 +3295,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P15 - 256GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at https://docs.atlas.mongodb.com/reference/api/clusters-create-one/.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_providerencryptebsvolume_csharp">
 <a href="#state_providerencryptebsvolume_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Encrypt<wbr>Ebs<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}**(Deprecated) The Flag is always true.** Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}All EBS volumes are encrypted by default, the option to disable encryption has been removed{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_providerencryptebsvolumeflag_csharp">
+<a href="#state_providerencryptebsvolumeflag_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Encrypt<wbr>Ebs<wbr>Volume<wbr>Flag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerinstancesizename_csharp">
 <a href="#state_providerinstancesizename_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Instance<wbr>Size<wbr>Name</a>
@@ -3289,7 +3349,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` required if setting IOPS higher than the default instance IOPS.
+    <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` is ONLY required if setting IOPS higher than the default instance IOPS.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationfactor_csharp">
@@ -3402,13 +3462,22 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_biconnector_go">
 <a href="#state_biconnector_go" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbiconnector">Cluster<wbr>Bi<wbr>Connector</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details. **DEPRECATED** Use `bi_connector_config` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use bi_connector_config instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_biconnectorconfig_go">
+<a href="#state_biconnectorconfig_go" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterbiconnectorconfig">Cluster<wbr>Bi<wbr>Connector<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3602,7 +3671,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
+    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.  This setting requires that `provider_instance_size_name` to be M30 or greater and cannot be used with clusters with local NVMe SSDs.  The default value for `provider_disk_iops` is the same as the cluster tier's Standard IOPS value, as viewable in the Atlas console.  It is used in cases where a higher number of IOPS is needed and possible.  If a value is submitted that is lower or equal to the default IOPS value for the cluster tier Atlas ignores the requested value and uses the default.  More details available under the providerSettings.diskIOPS parameter: [MongoDB API Clusters](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerdisktypename_go">
@@ -3612,16 +3681,24 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P15 - 256GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at https://docs.atlas.mongodb.com/reference/api/clusters-create-one/.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_providerencryptebsvolume_go">
 <a href="#state_providerencryptebsvolume_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Encrypt<wbr>Ebs<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}**(Deprecated) The Flag is always true.** Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}All EBS volumes are encrypted by default, the option to disable encryption has been removed{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_providerencryptebsvolumeflag_go">
+<a href="#state_providerencryptebsvolumeflag_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Encrypt<wbr>Ebs<wbr>Volume<wbr>Flag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerinstancesizename_go">
 <a href="#state_providerinstancesizename_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Instance<wbr>Size<wbr>Name</a>
@@ -3658,7 +3735,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` required if setting IOPS higher than the default instance IOPS.
+    <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` is ONLY required if setting IOPS higher than the default instance IOPS.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationfactor_go">
@@ -3771,13 +3848,22 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_biconnector_nodejs">
 <a href="#state_biconnector_nodejs" style="color: inherit; text-decoration: inherit;">bi<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbiconnector">Cluster<wbr>Bi<wbr>Connector<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details. **DEPRECATED** Use `bi_connector_config` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use bi_connector_config instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_biconnectorconfig_nodejs">
+<a href="#state_biconnectorconfig_nodejs" style="color: inherit; text-decoration: inherit;">bi<wbr>Connector<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterbiconnectorconfig">Cluster<wbr>Bi<wbr>Connector<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3971,7 +4057,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
+    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.  This setting requires that `provider_instance_size_name` to be M30 or greater and cannot be used with clusters with local NVMe SSDs.  The default value for `provider_disk_iops` is the same as the cluster tier's Standard IOPS value, as viewable in the Atlas console.  It is used in cases where a higher number of IOPS is needed and possible.  If a value is submitted that is lower or equal to the default IOPS value for the cluster tier Atlas ignores the requested value and uses the default.  More details available under the providerSettings.diskIOPS parameter: [MongoDB API Clusters](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerdisktypename_nodejs">
@@ -3981,16 +4067,24 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P15 - 256GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at https://docs.atlas.mongodb.com/reference/api/clusters-create-one/.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_providerencryptebsvolume_nodejs">
 <a href="#state_providerencryptebsvolume_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Encrypt<wbr>Ebs<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}**(Deprecated) The Flag is always true.** Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}All EBS volumes are encrypted by default, the option to disable encryption has been removed{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_providerencryptebsvolumeflag_nodejs">
+<a href="#state_providerencryptebsvolumeflag_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Encrypt<wbr>Ebs<wbr>Volume<wbr>Flag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerinstancesizename_nodejs">
 <a href="#state_providerinstancesizename_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Instance<wbr>Size<wbr>Name</a>
@@ -4027,7 +4121,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` required if setting IOPS higher than the default instance IOPS.
+    <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` is ONLY required if setting IOPS higher than the default instance IOPS.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationfactor_nodejs">
@@ -4140,13 +4234,22 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_bi_connector_python">
 <a href="#state_bi_connector_python" style="color: inherit; text-decoration: inherit;">bi_<wbr>connector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbiconnector">Cluster<wbr>Bi<wbr>Connector<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details. **DEPRECATED** Use `bi_connector_config` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use bi_connector_config instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_bi_connector_config_python">
+<a href="#state_bi_connector_config_python" style="color: inherit; text-decoration: inherit;">bi_<wbr>connector_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterbiconnectorconfig">Cluster<wbr>Bi<wbr>Connector<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4340,7 +4443,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
+    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.  This setting requires that `provider_instance_size_name` to be M30 or greater and cannot be used with clusters with local NVMe SSDs.  The default value for `provider_disk_iops` is the same as the cluster tier's Standard IOPS value, as viewable in the Atlas console.  It is used in cases where a higher number of IOPS is needed and possible.  If a value is submitted that is lower or equal to the default IOPS value for the cluster tier Atlas ignores the requested value and uses the default.  More details available under the providerSettings.diskIOPS parameter: [MongoDB API Clusters](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provider_disk_type_name_python">
@@ -4350,16 +4453,24 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P15 - 256GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at https://docs.atlas.mongodb.com/reference/api/clusters-create-one/.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_provider_encrypt_ebs_volume_python">
 <a href="#state_provider_encrypt_ebs_volume_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>encrypt_<wbr>ebs_<wbr>volume</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}**(Deprecated) The Flag is always true.** Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}All EBS volumes are encrypted by default, the option to disable encryption has been removed{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_provider_encrypt_ebs_volume_flag_python">
+<a href="#state_provider_encrypt_ebs_volume_flag_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>encrypt_<wbr>ebs_<wbr>volume_<wbr>flag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provider_instance_size_name_python">
 <a href="#state_provider_instance_size_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>instance_<wbr>size_<wbr>name</a>
@@ -4396,7 +4507,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` required if setting IOPS higher than the default instance IOPS.
+    <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` is ONLY required if setting IOPS higher than the default instance IOPS.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replication_factor_python">
@@ -4815,6 +4926,108 @@ Do not specify this field when creating a multi-region cluster using the replica
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not BI Connector for Atlas is enabled on the cluster.l
+*
+- Set to `true` to enable BI Connector for Atlas.
+- Set to `false` to disable BI Connector for Atlas.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="read_preference_python">
+<a href="#read_preference_python" style="color: inherit; text-decoration: inherit;">read_<wbr>preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the read preference to be used by BI Connector for Atlas on the cluster. Each BI Connector for Atlas read preference contains a distinct combination of [readPreference](https://docs.mongodb.com/manual/core/read-preference/) and [readPreferenceTags](https://docs.mongodb.com/manual/core/read-preference/#tag-sets) options. For details on BI Connector for Atlas read preferences, refer to the [BI Connector Read Preferences Table](https://docs.atlas.mongodb.com/tutorial/create-global-writes-cluster/#bic-read-preferences).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clusterbiconnectorconfig">Cluster<wbr>Bi<wbr>Connector<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not BI Connector for Atlas is enabled on the cluster.l
+*
+- Set to `true` to enable BI Connector for Atlas.
+- Set to `false` to disable BI Connector for Atlas.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="readpreference_csharp">
+<a href="#readpreference_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the read preference to be used by BI Connector for Atlas on the cluster. Each BI Connector for Atlas read preference contains a distinct combination of [readPreference](https://docs.mongodb.com/manual/core/read-preference/) and [readPreferenceTags](https://docs.mongodb.com/manual/core/read-preference/#tag-sets) options. For details on BI Connector for Atlas read preferences, refer to the [BI Connector Read Preferences Table](https://docs.atlas.mongodb.com/tutorial/create-global-writes-cluster/#bic-read-preferences).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not BI Connector for Atlas is enabled on the cluster.l
+*
+- Set to `true` to enable BI Connector for Atlas.
+- Set to `false` to disable BI Connector for Atlas.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="readpreference_go">
+<a href="#readpreference_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the read preference to be used by BI Connector for Atlas on the cluster. Each BI Connector for Atlas read preference contains a distinct combination of [readPreference](https://docs.mongodb.com/manual/core/read-preference/) and [readPreferenceTags](https://docs.mongodb.com/manual/core/read-preference/#tag-sets) options. For details on BI Connector for Atlas read preferences, refer to the [BI Connector Read Preferences Table](https://docs.atlas.mongodb.com/tutorial/create-global-writes-cluster/#bic-read-preferences).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not BI Connector for Atlas is enabled on the cluster.l
+*
+- Set to `true` to enable BI Connector for Atlas.
+- Set to `false` to disable BI Connector for Atlas.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="readpreference_nodejs">
+<a href="#readpreference_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the read preference to be used by BI Connector for Atlas on the cluster. Each BI Connector for Atlas read preference contains a distinct combination of [readPreference](https://docs.mongodb.com/manual/core/read-preference/) and [readPreferenceTags](https://docs.mongodb.com/manual/core/read-preference/#tag-sets) options. For details on BI Connector for Atlas read preferences, refer to the [BI Connector Read Preferences Table](https://docs.atlas.mongodb.com/tutorial/create-global-writes-cluster/#bic-read-preferences).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not BI Connector for Atlas is enabled on the cluster.l
 *

@@ -41,7 +41,18 @@ class MyStack : Stack
     {
         var user = new Mongodbatlas.DatabaseUser("user", new Mongodbatlas.DatabaseUserArgs
         {
+            ProjectId = "<PROJECT-ID>",
+            Username = "myUsername",
+            X509Type = "MANAGED",
             DatabaseName = "$external",
+            Roles = 
+            {
+                new Mongodbatlas.Inputs.DatabaseUserRoleArgs
+                {
+                    RoleName = "atlasAdmin",
+                    DatabaseName = "admin",
+                },
+            },
             Labels = 
             {
                 new Mongodbatlas.Inputs.DatabaseUserLabelArgs
@@ -50,23 +61,12 @@ class MyStack : Stack
                     Value = "My Value",
                 },
             },
-            ProjectId = "<PROJECT-ID>",
-            Roles = 
-            {
-                new Mongodbatlas.Inputs.DatabaseUserRoleArgs
-                {
-                    DatabaseName = "admin",
-                    RoleName = "atlasAdmin",
-                },
-            },
-            Username = "myUsername",
-            X509Type = "MANAGED",
         });
         var test = new Mongodbatlas.X509AuthenticationDatabaseUser("test", new Mongodbatlas.X509AuthenticationDatabaseUserArgs
         {
-            MonthsUntilExpiration = 2,
             ProjectId = user.ProjectId,
             Username = user.Username,
+            MonthsUntilExpiration = 2,
         });
     }
 
@@ -92,30 +92,30 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		user, err := mongodbatlas.NewDatabaseUser(ctx, "user", &mongodbatlas.DatabaseUserArgs{
+			ProjectId:    pulumi.String("<PROJECT-ID>"),
+			Username:     pulumi.String("myUsername"),
+			X509Type:     pulumi.String("MANAGED"),
 			DatabaseName: pulumi.String(fmt.Sprintf("%v%v", "$", "external")),
+			Roles: mongodbatlas.DatabaseUserRoleArray{
+				&mongodbatlas.DatabaseUserRoleArgs{
+					RoleName:     pulumi.String("atlasAdmin"),
+					DatabaseName: pulumi.String("admin"),
+				},
+			},
 			Labels: mongodbatlas.DatabaseUserLabelArray{
 				&mongodbatlas.DatabaseUserLabelArgs{
 					Key:   pulumi.String("My Key"),
 					Value: pulumi.String("My Value"),
 				},
 			},
-			ProjectId: pulumi.String("<PROJECT-ID>"),
-			Roles: mongodbatlas.DatabaseUserRoleArray{
-				&mongodbatlas.DatabaseUserRoleArgs{
-					DatabaseName: pulumi.String("admin"),
-					RoleName:     pulumi.String("atlasAdmin"),
-				},
-			},
-			Username: pulumi.String("myUsername"),
-			X509Type: pulumi.String("MANAGED"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = mongodbatlas.NewX509AuthenticationDatabaseUser(ctx, "test", &mongodbatlas.X509AuthenticationDatabaseUserArgs{
-			MonthsUntilExpiration: pulumi.Int(2),
 			ProjectId:             user.ProjectId,
 			Username:              user.Username,
+			MonthsUntilExpiration: pulumi.Int(2),
 		})
 		if err != nil {
 			return err
@@ -136,22 +136,22 @@ import pulumi
 import pulumi_mongodbatlas as mongodbatlas
 
 user = mongodbatlas.DatabaseUser("user",
+    project_id="<PROJECT-ID>",
+    username="myUsername",
+    x509_type="MANAGED",
     database_name="$external",
+    roles=[mongodbatlas.DatabaseUserRoleArgs(
+        role_name="atlasAdmin",
+        database_name="admin",
+    )],
     labels=[mongodbatlas.DatabaseUserLabelArgs(
         key="My Key",
         value="My Value",
-    )],
-    project_id="<PROJECT-ID>",
-    roles=[mongodbatlas.DatabaseUserRoleArgs(
-        database_name="admin",
-        role_name="atlasAdmin",
-    )],
-    username="myUsername",
-    x509_type="MANAGED")
+    )])
 test = mongodbatlas.X509AuthenticationDatabaseUser("test",
-    months_until_expiration=2,
     project_id=user.project_id,
-    username=user.username)
+    username=user.username,
+    months_until_expiration=2)
 ```
 
 
@@ -165,23 +165,23 @@ import * as pulumi from "@pulumi/pulumi";
 import * as mongodbatlas from "@pulumi/mongodbatlas";
 
 const user = new mongodbatlas.DatabaseUser("user", {
-    databaseName: "$external",
+    projectId: "<PROJECT-ID>",
+    username: "myUsername",
+    x509Type: "MANAGED",
+    databaseName: `$external`,
+    roles: [{
+        roleName: "atlasAdmin",
+        databaseName: "admin",
+    }],
     labels: [{
         key: "My Key",
         value: "My Value",
     }],
-    projectId: "<PROJECT-ID>",
-    roles: [{
-        databaseName: "admin",
-        roleName: "atlasAdmin",
-    }],
-    username: "myUsername",
-    x509Type: "MANAGED",
 });
 const test = new mongodbatlas.X509AuthenticationDatabaseUser("test", {
-    monthsUntilExpiration: 2,
     projectId: user.projectId,
     username: user.username,
+    monthsUntilExpiration: 2,
 });
 ```
 

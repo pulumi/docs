@@ -37,6 +37,7 @@ Database users can be imported using project ID and username, in the format `pro
                  <span class="nx">aws_iam_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseUserLabelArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">ldap_auth_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseUserRoleArgs]]</span> = None<span class="p">,</span>
@@ -222,7 +223,7 @@ The DatabaseUser resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for authenticating to MongoDB.
+    <dd>{{% md %}}Username for authenticating to MongoDB. USER_ARN or ROLE_ARN if `aws_iam_type` is USER or ROLE.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authdatabasename_csharp">
@@ -260,6 +261,15 @@ Accepted values include:
         <span class="property-type"><a href="#databaseuserlabel">List&lt;Database<wbr>User<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ldapauthtype_csharp">
+<a href="#ldapauthtype_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Auth<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method by which the provided `username` is authenticated. If no value is given, Atlas uses the default value of `NONE`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -314,7 +324,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for authenticating to MongoDB.
+    <dd>{{% md %}}Username for authenticating to MongoDB. USER_ARN or ROLE_ARN if `aws_iam_type` is USER or ROLE.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authdatabasename_go">
@@ -352,6 +362,15 @@ Accepted values include:
         <span class="property-type"><a href="#databaseuserlabel">[]Database<wbr>User<wbr>Label</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ldapauthtype_go">
+<a href="#ldapauthtype_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Auth<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method by which the provided `username` is authenticated. If no value is given, Atlas uses the default value of `NONE`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -406,7 +425,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for authenticating to MongoDB.
+    <dd>{{% md %}}Username for authenticating to MongoDB. USER_ARN or ROLE_ARN if `aws_iam_type` is USER or ROLE.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authdatabasename_nodejs">
@@ -444,6 +463,15 @@ Accepted values include:
         <span class="property-type"><a href="#databaseuserlabel">Database<wbr>User<wbr>Label<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ldapauthtype_nodejs">
+<a href="#ldapauthtype_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Auth<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method by which the provided `username` is authenticated. If no value is given, Atlas uses the default value of `NONE`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -498,7 +526,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Username for authenticating to MongoDB.
+    <dd>{{% md %}}Username for authenticating to MongoDB. USER_ARN or ROLE_ARN if `aws_iam_type` is USER or ROLE.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_database_name_python">
@@ -536,6 +564,15 @@ Accepted values include:
         <span class="property-type"><a href="#databaseuserlabel">Sequence[Database<wbr>User<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ldap_auth_type_python">
+<a href="#ldap_auth_type_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>auth_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Method by which the provided `username` is authenticated. If no value is given, Atlas uses the default value of `NONE`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -638,6 +675,7 @@ Get an existing DatabaseUser resource's state with the given name, ID, and optio
         <span class="nx">aws_iam_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseUserLabelArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">ldap_auth_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseUserRoleArgs]]</span> = None<span class="p">,</span>
@@ -792,6 +830,15 @@ Accepted values include:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ldapauthtype_csharp">
+<a href="#state_ldapauthtype_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Auth<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method by which the provided `username` is authenticated. If no value is given, Atlas uses the default value of `NONE`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_password_csharp">
 <a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
@@ -832,7 +879,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for authenticating to MongoDB.
+    <dd>{{% md %}}Username for authenticating to MongoDB. USER_ARN or ROLE_ARN if `aws_iam_type` is USER or ROLE.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_x509type_csharp">
@@ -884,6 +931,15 @@ Accepted values include:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ldapauthtype_go">
+<a href="#state_ldapauthtype_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Auth<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method by which the provided `username` is authenticated. If no value is given, Atlas uses the default value of `NONE`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_password_go">
 <a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
@@ -924,7 +980,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for authenticating to MongoDB.
+    <dd>{{% md %}}Username for authenticating to MongoDB. USER_ARN or ROLE_ARN if `aws_iam_type` is USER or ROLE.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_x509type_go">
@@ -976,6 +1032,15 @@ Accepted values include:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ldapauthtype_nodejs">
+<a href="#state_ldapauthtype_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Auth<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method by which the provided `username` is authenticated. If no value is given, Atlas uses the default value of `NONE`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_password_nodejs">
 <a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
@@ -1016,7 +1081,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for authenticating to MongoDB.
+    <dd>{{% md %}}Username for authenticating to MongoDB. USER_ARN or ROLE_ARN if `aws_iam_type` is USER or ROLE.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_x509type_nodejs">
@@ -1068,6 +1133,15 @@ Accepted values include:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ldap_auth_type_python">
+<a href="#state_ldap_auth_type_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>auth_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Method by which the provided `username` is authenticated. If no value is given, Atlas uses the default value of `NONE`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_password_python">
 <a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
@@ -1108,7 +1182,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Username for authenticating to MongoDB.
+    <dd>{{% md %}}Username for authenticating to MongoDB. USER_ARN or ROLE_ARN if `aws_iam_type` is USER or ROLE.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_x509_type_python">

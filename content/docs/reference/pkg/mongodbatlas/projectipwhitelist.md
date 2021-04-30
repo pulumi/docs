@@ -250,7 +250,7 @@ class MyStack : Stack
         {
             DependsOn = 
             {
-                "mongodbatlas_network_peering.test",
+                testNetworkPeering,
             },
         });
     }
@@ -283,7 +283,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = mongodbatlas.NewNetworkPeering(ctx, "testNetworkPeering", &mongodbatlas.NetworkPeeringArgs{
+		testNetworkPeering, err := mongodbatlas.NewNetworkPeering(ctx, "testNetworkPeering", &mongodbatlas.NetworkPeeringArgs{
 			ProjectId:           pulumi.String("<PROJECT-ID>"),
 			ContainerId:         testNetworkContainer.ContainerId,
 			AccepterRegionName:  pulumi.String("us-east-1"),
@@ -300,7 +300,7 @@ func main() {
 			AwsSecurityGroup: pulumi.String("sg-0026348ec11780bd1"),
 			Comment:          pulumi.String("TestAcc for awsSecurityGroup"),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"mongodbatlas_network_peering.test",
+			testNetworkPeering,
 		}))
 		if err != nil {
 			return err
@@ -337,7 +337,7 @@ test_project_ip_whitelist = mongodbatlas.ProjectIpWhitelist("testProjectIpWhitel
     project_id="<PROJECT-ID>",
     aws_security_group="sg-0026348ec11780bd1",
     comment="TestAcc for awsSecurityGroup",
-    opts=pulumi.ResourceOptions(depends_on=["mongodbatlas_network_peering.test"]))
+    opts=pulumi.ResourceOptions(depends_on=[test_network_peering]))
 ```
 
 
@@ -370,7 +370,7 @@ const testProjectIpWhitelist = new mongodbatlas.ProjectIpWhitelist("testProjectI
     awsSecurityGroup: "sg-0026348ec11780bd1",
     comment: "TestAcc for awsSecurityGroup",
 }, {
-    dependsOn: ["mongodbatlas_network_peering.test"],
+    dependsOn: [testNetworkPeering],
 });
 ```
 
