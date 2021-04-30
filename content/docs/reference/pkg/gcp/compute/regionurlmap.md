@@ -48,6 +48,7 @@ class MyStack : Stack
         {
             Region = "us-central1",
             Protocol = "HTTP",
+            LoadBalancingScheme = "INTERNAL_MANAGED",
             TimeoutSec = 10,
             HealthChecks = 
             {
@@ -58,6 +59,7 @@ class MyStack : Stack
         {
             Region = "us-central1",
             Protocol = "HTTP",
+            LoadBalancingScheme = "INTERNAL_MANAGED",
             TimeoutSec = 10,
             HealthChecks = 
             {
@@ -151,9 +153,10 @@ func main() {
 			return err
 		}
 		login, err := compute.NewRegionBackendService(ctx, "login", &compute.RegionBackendServiceArgs{
-			Region:     pulumi.String("us-central1"),
-			Protocol:   pulumi.String("HTTP"),
-			TimeoutSec: pulumi.Int(10),
+			Region:              pulumi.String("us-central1"),
+			Protocol:            pulumi.String("HTTP"),
+			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
+			TimeoutSec:          pulumi.Int(10),
 			HealthChecks: pulumi.String(pulumi.String{
 				_default.ID(),
 			}),
@@ -162,9 +165,10 @@ func main() {
 			return err
 		}
 		home, err := compute.NewRegionBackendService(ctx, "home", &compute.RegionBackendServiceArgs{
-			Region:     pulumi.String("us-central1"),
-			Protocol:   pulumi.String("HTTP"),
-			TimeoutSec: pulumi.Int(10),
+			Region:              pulumi.String("us-central1"),
+			Protocol:            pulumi.String("HTTP"),
+			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
+			TimeoutSec:          pulumi.Int(10),
 			HealthChecks: pulumi.String(pulumi.String{
 				_default.ID(),
 			}),
@@ -241,11 +245,13 @@ default = gcp.compute.RegionHealthCheck("default",
 login = gcp.compute.RegionBackendService("login",
     region="us-central1",
     protocol="HTTP",
+    load_balancing_scheme="INTERNAL_MANAGED",
     timeout_sec=10,
     health_checks=[default.id])
 home = gcp.compute.RegionBackendService("home",
     region="us-central1",
     protocol="HTTP",
+    load_balancing_scheme="INTERNAL_MANAGED",
     timeout_sec=10,
     health_checks=[default.id])
 regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
@@ -300,12 +306,14 @@ const _default = new gcp.compute.RegionHealthCheck("default", {
 const login = new gcp.compute.RegionBackendService("login", {
     region: "us-central1",
     protocol: "HTTP",
+    loadBalancingScheme: "INTERNAL_MANAGED",
     timeoutSec: 10,
     healthChecks: [_default.id],
 });
 const home = new gcp.compute.RegionBackendService("home", {
     region: "us-central1",
     protocol: "HTTP",
+    loadBalancingScheme: "INTERNAL_MANAGED",
     timeoutSec: 10,
     healthChecks: [_default.id],
 });

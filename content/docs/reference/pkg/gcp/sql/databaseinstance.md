@@ -2475,15 +2475,6 @@ configuration is detailed below. Required if `clone` is not set.
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="pointintime_csharp">
-<a href="#pointintime_csharp" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of the point in time that should be restored.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="sourceinstancename_csharp">
 <a href="#sourceinstancename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Name</a>
 </span>
@@ -2491,20 +2482,20 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source instance which will be cloned.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="pointintime_go">
-<a href="#pointintime_go" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pointintime_csharp">
+<a href="#pointintime_csharp" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of the point in time that should be restored.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourceinstancename_go">
 <a href="#sourceinstancename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Name</a>
@@ -2513,20 +2504,20 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source instance which will be cloned.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="pointintime_nodejs">
-<a href="#pointintime_nodejs" style="color: inherit; text-decoration: inherit;">point<wbr>In<wbr>Time</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pointintime_go">
+<a href="#pointintime_go" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of the point in time that should be restored.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourceinstancename_nodejs">
 <a href="#sourceinstancename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance<wbr>Name</a>
@@ -2535,20 +2526,20 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source instance which will be cloned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pointintime_nodejs">
+<a href="#pointintime_nodejs" style="color: inherit; text-decoration: inherit;">point<wbr>In<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of the point in time that should be restored.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="point_in_time_python">
-<a href="#point_in_time_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of the point in time that should be restored.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_instance_name_python">
 <a href="#source_instance_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance_<wbr>name</a>
@@ -2557,6 +2548,15 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the source instance which will be cloned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="point_in_time_python">
+<a href="#point_in_time_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of the point in time that should be restored.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
