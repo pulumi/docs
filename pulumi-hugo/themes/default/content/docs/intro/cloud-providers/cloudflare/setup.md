@@ -12,9 +12,11 @@ The [Pulumi Cloudflare provider]({{< relref "./" >}}) uses the Cloudflare SDK to
 
 Once obtained, there are two ways to communicate your configuration parameters to Pulumi:
 
-1. Set the environment variables `CLOUDFLARE_EMAIL` and `CLOUDFLARE_API_KEY`:
+1. Set the environment variable `CLOUDFLARE_API_TOKEN` (or the legacy `CLOUDFLARE_EMAIL` and `CLOUDFLARE_API_KEY`):
 
     ```bash
+    $ export CLOUDFLARE_API_TOKEN=YYYYYY
+    # Legacy
     $ export CLOUDFLARE_EMAIL=XXXXXX
     $ export CLOUDFLARE_API_KEY=YYYYYY
     ```
@@ -22,6 +24,8 @@ Once obtained, there are two ways to communicate your configuration parameters t
 2. If you prefer that they be stored alongside your Pulumi stack for easy multi-user access:
 
     ```bash
+    $ pulumi config set cloudflare:apiToken
+    # Legacy
     $ pulumi config set cloudflare:email XXXXXX
     $ pulumi config set cloudflare:apiKey YYYYYY --secret
     ```
