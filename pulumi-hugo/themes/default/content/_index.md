@@ -167,11 +167,13 @@ get_started:
       text: |
         I'm actually learning more about TS/JS with Pulumi. It really has been a joy to use. Kudos to the team for making such an awesome tool!
 
-    - username: willbackslash
-      avatar: https://pbs.twimg.com/profile_images/1321904551968993280/LK3X7W2X_400x400.jpg
-      link: https://twitter.com/willbackslash/status/1366399625314230275
+    - username: claudiordgz
+      avatar: https://pbs.twimg.com/profile_images/985903897750507525/RH_psYD__400x400.jpg
+      link: https://twitter.com/claudiordgz/status/1384692096729157635
       text: |
-        Pulumi is real IAC
+        Being able to build infrastructure in TypeScript brings tears of joy to my eyes
+
+        thank you @PulumiCorp
 
     - username: JanDamaschke
       avatar: https://pbs.twimg.com/profile_images/1317179630638477314/592UdUFD_400x400.jpg
