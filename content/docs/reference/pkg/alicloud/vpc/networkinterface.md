@@ -50,7 +50,7 @@ class MyStack : Stack
         var vswitch = new AliCloud.Vpc.Switch("vswitch", new AliCloud.Vpc.SwitchArgs
         {
             CidrBlock = "192.168.0.0/24",
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+            ZoneId = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
             VpcId = vpc.Id,
         });
         var @group = new AliCloud.Ecs.SecurityGroup("group", new AliCloud.Ecs.SecurityGroupArgs
@@ -111,9 +111,9 @@ func main() {
 			return err
 		}
 		vswitch, err := vpc.NewSwitch(ctx, "vswitch", &vpc.SwitchArgs{
-			CidrBlock:        pulumi.String("192.168.0.0/24"),
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			VpcId:            vpc.ID(),
+			CidrBlock: pulumi.String("192.168.0.0/24"),
+			ZoneId:    pulumi.String(defaultZones.Zones[0].Id),
+			VpcId:     vpc.ID(),
 		})
 		if err != nil {
 			return err
@@ -160,7 +160,7 @@ vpc = alicloud.vpc.Network("vpc",
 default_zones = alicloud.get_zones(available_resource_creation="VSwitch")
 vswitch = alicloud.vpc.Switch("vswitch",
     cidr_block="192.168.0.0/24",
-    availability_zone=default_zones.zones[0].id,
+    zone_id=default_zones.zones[0].id,
     vpc_id=vpc.id)
 group = alicloud.ecs.SecurityGroup("group", vpc_id=vpc.id)
 default_network_interface = alicloud.vpc.NetworkInterface("defaultNetworkInterface",
@@ -192,7 +192,7 @@ const defaultZones = alicloud.getZones({
 });
 const vswitch = new alicloud.vpc.Switch("vswitch", {
     cidrBlock: "192.168.0.0/24",
-    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+    zoneId: defaultZones.then(defaultZones => defaultZones.zones[0].id),
     vpcId: vpc.id,
 });
 const group = new alicloud.ecs.SecurityGroup("group", {vpcId: vpc.id});

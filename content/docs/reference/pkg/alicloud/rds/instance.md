@@ -49,7 +49,7 @@ class MyStack : Stack
         {
             VpcId = exampleNetwork.Id,
             CidrBlock = "172.16.0.0/24",
-            AvailabilityZone = exampleZones.Apply(exampleZones => exampleZones.Zones[0].Id),
+            ZoneId = exampleZones.Apply(exampleZones => exampleZones.Zones[0].Id),
         });
         var exampleInstance = new AliCloud.Rds.Instance("exampleInstance", new AliCloud.Rds.InstanceArgs
         {
@@ -109,9 +109,9 @@ func main() {
 			return err
 		}
 		exampleSwitch, err := vpc.NewSwitch(ctx, "exampleSwitch", &vpc.SwitchArgs{
-			VpcId:            exampleNetwork.ID(),
-			CidrBlock:        pulumi.String("172.16.0.0/24"),
-			AvailabilityZone: pulumi.String(exampleZones.Zones[0].Id),
+			VpcId:     exampleNetwork.ID(),
+			CidrBlock: pulumi.String("172.16.0.0/24"),
+			ZoneId:    pulumi.String(exampleZones.Zones[0].Id),
 		})
 		if err != nil {
 			return err
@@ -156,7 +156,7 @@ example_network = alicloud.vpc.Network("exampleNetwork", cidr_block="172.16.0.0/
 example_switch = alicloud.vpc.Switch("exampleSwitch",
     vpc_id=example_network.id,
     cidr_block="172.16.0.0/24",
-    availability_zone=example_zones.zones[0].id)
+    zone_id=example_zones.zones[0].id)
 example_instance = alicloud.rds.Instance("exampleInstance",
     engine="MySQL",
     engine_version="5.6",
@@ -189,7 +189,7 @@ const exampleNetwork = new alicloud.vpc.Network("exampleNetwork", {cidrBlock: "1
 const exampleSwitch = new alicloud.vpc.Switch("exampleSwitch", {
     vpcId: exampleNetwork.id,
     cidrBlock: "172.16.0.0/24",
-    availabilityZone: exampleZones.then(exampleZones => exampleZones.zones[0].id),
+    zoneId: exampleZones.then(exampleZones => exampleZones.zones[0].id),
 });
 const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
     engine: "MySQL",
@@ -244,7 +244,7 @@ const exampleNetwork = new alicloud.vpc.Network("exampleNetwork", {cidrBlock: "1
 const exampleSwitch = new alicloud.vpc.Switch("exampleSwitch", {
     vpcId: exampleNetwork.id,
     cidrBlock: "172.16.0.0/24",
-    availabilityZone: data.alicloud_zones.example.zones[0].id,
+    zoneId: data.alicloud_zones.example.zones[0].id,
 });
 const _default = new alicloud.rds.Instance("default", {
     engine: "MySQL",
@@ -634,8 +634,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_csharp">
 <a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -925,8 +924,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_go">
 <a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -1216,8 +1214,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_nodejs">
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
@@ -1507,8 +1504,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_id_python">
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
@@ -2128,8 +2124,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2446,8 +2441,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2764,8 +2758,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3082,8 +3075,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
