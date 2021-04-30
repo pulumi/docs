@@ -838,6 +838,16 @@ the load balancer.
 A valid value is true (UP) or false (DOWN). Defaults to true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="backup_csharp">
+<a href="#backup_csharp" style="color: inherit; text-decoration: inherit;">Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A bool that indicates whether the the member is
+backup. Requires octavia microversion 2.1 or later.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -908,6 +918,16 @@ the load balancer.
     </dt>
     <dd>{{% md %}}The administrative state of the member.
 A valid value is true (UP) or false (DOWN). Defaults to true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backup_go">
+<a href="#backup_go" style="color: inherit; text-decoration: inherit;">Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A bool that indicates whether the the member is
+backup. Requires octavia microversion 2.1 or later.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
@@ -982,6 +1002,16 @@ the load balancer.
 A valid value is true (UP) or false (DOWN). Defaults to true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="backup_nodejs">
+<a href="#backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A bool that indicates whether the the member is
+backup. Requires octavia microversion 2.1 or later.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1052,6 +1082,16 @@ the load balancer.
     </dt>
     <dd>{{% md %}}The administrative state of the member.
 A valid value is true (UP) or false (DOWN). Defaults to true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backup_python">
+<a href="#backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A bool that indicates whether the the member is
+backup. Requires octavia microversion 2.1 or later.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">

@@ -122,6 +122,7 @@ const lb1 = new openstack.loadbalancer.LoadBalancer("lb_1", {
 <span class="k">def </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                  <span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">loadbalancer_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -298,6 +299,17 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 A valid value is true (UP) or false (DOWN).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="availabilityzone_csharp">
+<a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability zone of the Loadbalancer.
+Changing this creates a new loadbalancer. Available only for Octavia
+microversion 2.14 or later.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -429,6 +441,17 @@ It is required to Neutron LBaaS but optional for Octavia.
     </dt>
     <dd>{{% md %}}The administrative state of the Loadbalancer.
 A valid value is true (UP) or false (DOWN).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="availabilityzone_go">
+<a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability zone of the Loadbalancer.
+Changing this creates a new loadbalancer. Available only for Octavia
+microversion 2.14 or later.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -564,6 +587,17 @@ It is required to Neutron LBaaS but optional for Octavia.
 A valid value is true (UP) or false (DOWN).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="availabilityzone_nodejs">
+<a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability zone of the Loadbalancer.
+Changing this creates a new loadbalancer. Available only for Octavia
+microversion 2.14 or later.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -695,6 +729,17 @@ It is required to Neutron LBaaS but optional for Octavia.
     </dt>
     <dd>{{% md %}}The administrative state of the Loadbalancer.
 A valid value is true (UP) or false (DOWN).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="availability_zone_python">
+<a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The availability zone of the Loadbalancer.
+Changing this creates a new loadbalancer. Available only for Octavia
+microversion 2.14 or later.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -889,6 +934,7 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">loadbalancer_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1020,6 +1066,17 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The administrative state of the Loadbalancer.
 A valid value is true (UP) or false (DOWN).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_availabilityzone_csharp">
+<a href="#state_availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability zone of the Loadbalancer.
+Changing this creates a new loadbalancer. Available only for Octavia
+microversion 2.14 or later.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -1155,6 +1212,17 @@ It is required to Neutron LBaaS but optional for Octavia.
 A valid value is true (UP) or false (DOWN).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_availabilityzone_go">
+<a href="#state_availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability zone of the Loadbalancer.
+Changing this creates a new loadbalancer. Available only for Octavia
+microversion 2.14 or later.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -1288,6 +1356,17 @@ It is required to Neutron LBaaS but optional for Octavia.
 A valid value is true (UP) or false (DOWN).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_availabilityzone_nodejs">
+<a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability zone of the Loadbalancer.
+Changing this creates a new loadbalancer. Available only for Octavia
+microversion 2.14 or later.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1419,6 +1498,17 @@ It is required to Neutron LBaaS but optional for Octavia.
     </dt>
     <dd>{{% md %}}The administrative state of the Loadbalancer.
 A valid value is true (UP) or false (DOWN).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_availability_zone_python">
+<a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The availability zone of the Loadbalancer.
+Changing this creates a new loadbalancer. Available only for Octavia
+microversion 2.14 or later.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
