@@ -187,9 +187,9 @@ class MyStack : Stack
             {
                 
                 {
-                    { "action", new AzureNative.Network.Inputs.FirewallPolicyFilterRuleActionArgs
+                    { "action", 
                     {
-                        Type = "Deny",
+                        { "type", "Deny" },
                     } },
                     { "name", "Example-Filter-Rule" },
                     { "ruleConditions", 
@@ -250,9 +250,9 @@ firewall_policy_rule_group = azure_native.network.FirewallPolicyRuleGroup("firew
     resource_group_name="rg1",
     rule_group_name="ruleGroup1",
     rules=[{
-        "action": azure_native.network.FirewallPolicyFilterRuleActionArgs(
-            type="Deny",
-        ),
+        "action": {
+            "type": "Deny",
+        },
         "name": "Example-Filter-Rule",
         "ruleConditions": [{
             "destinationIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],

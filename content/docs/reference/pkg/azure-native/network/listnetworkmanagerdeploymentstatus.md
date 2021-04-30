@@ -27,12 +27,11 @@ API Version: 2021-02-01-preview.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_network_manager_deployment_status(</span><span class="nx">deployment_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, DeploymentType]]]</span> = None<span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_network_manager_deployment_status(</span><span class="nx">deployment_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, ConfigurationType]]]</span> = None<span class="p">,</span>
                                            <span class="nx">network_manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                            <span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                            <span class="nx">skip_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                           <span class="nx">top</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListNetworkManagerDeploymentStatusResult</code></pre></div>
 {{% /choosable %}}
 
@@ -79,9 +78,9 @@ The following arguments are supported:
 <a href="#deploymenttypes_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Deployment<wbr>Type&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Configuration<wbr>Type&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}List of configurations' deployment types.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of deployment types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_csharp">
 <a href="#regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -97,15 +96,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="top_csharp">
-<a href="#top_csharp" style="color: inherit; text-decoration: inherit;">Top</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -133,7 +124,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of configurations' deployment types.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of deployment types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_go">
 <a href="#regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -149,15 +140,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="top_go">
-<a href="#top_go" style="color: inherit; text-decoration: inherit;">Top</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -183,9 +166,9 @@ The following arguments are supported:
 <a href="#deploymenttypes_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Deployment<wbr>Type[]</span>
+        <span class="property-type">string | Configuration<wbr>Type[]</span>
     </dt>
-    <dd>{{% md %}}List of configurations' deployment types.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of deployment types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_nodejs">
 <a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -201,15 +184,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="top_nodejs">
-<a href="#top_nodejs" style="color: inherit; text-decoration: inherit;">top</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -235,9 +210,9 @@ The following arguments are supported:
 <a href="#deployment_types_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Deployment<wbr>Type]]</span>
+        <span class="property-type">Sequence[Union[str, Configuration<wbr>Type]]</span>
     </dt>
-    <dd>{{% md %}}List of configurations' deployment types.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of deployment types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_python">
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -253,15 +228,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="top_python">
-<a href="#top_python" style="color: inherit; text-decoration: inherit;">top</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -276,13 +243,13 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="nextlink_csharp">
-<a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
+        <span id="skiptoken_csharp">
+<a href="#skiptoken_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the URL to get the next page of results.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -296,13 +263,13 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="nextlink_go">
-<a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
+        <span id="skiptoken_go">
+<a href="#skiptoken_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the URL to get the next page of results.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -316,13 +283,13 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="nextlink_nodejs">
-<a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
+        <span id="skiptoken_nodejs">
+<a href="#skiptoken_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the URL to get the next page of results.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -336,13 +303,13 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="next_link_python">
-<a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
+        <span id="skip_token_python">
+<a href="#skip_token_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the URL to get the next page of results.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -359,7 +326,7 @@ The following output properties are available:
 ## Supporting Types
 
 
-<h4 id="deploymenttype">Deployment<wbr>Type</h4>
+<h4 id="configurationtype">Configuration<wbr>Type</h4>
 
 
 
