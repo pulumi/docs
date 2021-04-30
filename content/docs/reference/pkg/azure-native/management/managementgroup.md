@@ -489,14 +489,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="path_csharp">
-<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouppathelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Management.<wbr>Outputs.<wbr>Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
 </span>
@@ -532,14 +524,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#managementgroupchildinforesponse">[]Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="path_go">
-<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouppathelementresponse">[]Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -577,14 +561,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="path_nodejs">
-<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouppathelementresponse">Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
@@ -620,14 +596,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#managementgroupchildinforesponse">Sequence[Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="path_python">
-<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouppathelementresponse">Sequence[Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -939,6 +907,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementgrouppathelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Management.<wbr>Inputs.<wbr>Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="updatedby_csharp">
 <a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
 </span>
@@ -974,6 +950,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#parentgroupinforesponse">Parent<wbr>Group<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementgrouppathelementresponse">[]Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedby_go">
 <a href="#updatedby_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
@@ -1011,6 +995,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementgrouppathelementresponse">Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="updatedby_nodejs">
 <a href="#updatedby_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>By</a>
 </span>
@@ -1046,6 +1038,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#parentgroupinforesponse">Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementgrouppathelementresponse">Sequence[Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updated_by_python">
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>

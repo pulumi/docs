@@ -43,8 +43,8 @@ class MyStack : Stack
             },
             Input = 
             {
-                { "@odata.type", "#Microsoft.Media.JobInputAsset" },
                 { "assetName", "job1-InputAsset" },
+                { "odataType", "#Microsoft.Media.JobInputAsset" },
             },
             JobName = "job1",
             Outputs = 
@@ -89,8 +89,8 @@ job = azure_native.media.Job("job",
         "key1": "value1",
     },
     input={
-        "@odata.type": "#Microsoft.Media.JobInputAsset",
         "assetName": "job1-InputAsset",
+        "odataType": "#Microsoft.Media.JobInputAsset",
     },
     job_name="job1",
     outputs=[azure_native.media.JobOutputAssetArgs(
@@ -120,8 +120,8 @@ const job = new azure_native.media.Job("job", {
         key1: "value1",
     },
     input: {
-        "@odata.type": "#Microsoft.Media.JobInputAsset",
         assetName: "job1-InputAsset",
+        odataType: "#Microsoft.Media.JobInputAsset",
     },
     jobName: "job1",
     outputs: [{

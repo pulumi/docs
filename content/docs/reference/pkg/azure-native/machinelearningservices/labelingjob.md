@@ -135,19 +135,19 @@ import pulumi_azure_native as azure_native
 
 labeling_job = azure_native.machinelearningservices.LabelingJob("labelingJob",
     labeling_job_id="testLabelingJob",
-    properties=azure_native.machinelearningservices.LabelingJobPropertiesArgs(
-        dataset_configuration=azure_native.machinelearningservices.LabelingDatasetConfigurationArgs(
+    properties={
+        "datasetConfiguration": azure_native.machinelearningservices.LabelingDatasetConfigurationArgs(
             asset_name="testdataasset",
             dataset_version="1",
             enable_incremental_dataset_refresh=True,
         ),
-        job_instructions=azure_native.machinelearningservices.LabelingJobInstructionsArgs(
+        "jobInstructions": azure_native.machinelearningservices.LabelingJobInstructionsArgs(
             uri="https://www.testjobInstructions.com/labeling1.txt",
         ),
-        label_categories={
-            "testCategory": {
-                "allowMultiSelect": False,
-                "classes": {
+        "labelCategories": {
+            "testCategory": azure_native.machinelearningservices.LabelCategoryArgs(
+                allow_multi_select=False,
+                classes={
                     "testClass1": azure_native.machinelearningservices.LabelClassArgs(
                         display_name="testClass1",
                         subclasses={
@@ -160,14 +160,14 @@ labeling_job = azure_native.machinelearningservices.LabelingJob("labelingJob",
                         display_name="testClass2",
                     ),
                 },
-                "displayName": "testCategory",
-            },
+                display_name="testCategory",
+            ),
         },
-        labeling_job_media_properties=azure_native.machinelearningservices.LabelingJobImagePropertiesArgs(
+        "labelingJobMediaProperties": azure_native.machinelearningservices.LabelingJobImagePropertiesArgs(
             annotation_type="BoundingBox",
             media_type="Image",
         ),
-        ml_assist_configuration=azure_native.machinelearningservices.MLAssistConfigurationArgs(
+        "mlAssistConfiguration": azure_native.machinelearningservices.MLAssistConfigurationArgs(
             inferencing_compute_binding=azure_native.machinelearningservices.ComputeBindingArgs(
                 compute_id="inferencingcompute",
             ),
@@ -178,17 +178,17 @@ labeling_job = azure_native.machinelearningservices.LabelingJob("labelingJob",
                 compute_id="trainingcompute",
             ),
         ),
-        properties={
+        "properties": {
             "additionalProp1": "string",
             "additionalProp2": "string",
             "additionalProp3": "string",
         },
-        tags={
+        "tags": {
             "additionalProp1": "string",
             "additionalProp2": "string",
             "additionalProp3": "string",
         },
-    ),
+    },
     resource_group_name="workspace-1234",
     workspace_name="testworkspace")
 

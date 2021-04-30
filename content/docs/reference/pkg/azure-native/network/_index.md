@@ -12,6 +12,7 @@ Explore the resources and functions of the azure-native.network module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="adminrule" title="AdminRule"><span class="symbol resource"></span>AdminRule</a></li>
+    <li><a href="adminrulecollection" title="AdminRuleCollection"><span class="symbol resource"></span>AdminRuleCollection</a></li>
     <li><a href="applicationgateway" title="ApplicationGateway"><span class="symbol resource"></span>ApplicationGateway</a></li>
     <li><a href="applicationgatewayprivateendpointconnection" title="ApplicationGatewayPrivateEndpointConnection"><span class="symbol resource"></span>ApplicationGatewayPrivateEndpointConnection</a></li>
     <li><a href="applicationsecuritygroup" title="ApplicationSecurityGroup"><span class="symbol resource"></span>ApplicationSecurityGroup</a></li>
@@ -76,14 +77,16 @@ Explore the resources and functions of the azure-native.network module.
     <li><a href="routefilterrule" title="RouteFilterRule"><span class="symbol resource"></span>RouteFilterRule</a></li>
     <li><a href="routetable" title="RouteTable"><span class="symbol resource"></span>RouteTable</a></li>
     <li><a href="rulesengine" title="RulesEngine"><span class="symbol resource"></span>RulesEngine</a></li>
-    <li><a href="securityconfiguration" title="SecurityConfiguration"><span class="symbol resource"></span>SecurityConfiguration</a></li>
+    <li><a href="securityadminconfiguration" title="SecurityAdminConfiguration"><span class="symbol resource"></span>SecurityAdminConfiguration</a></li>
     <li><a href="securitypartnerprovider" title="SecurityPartnerProvider"><span class="symbol resource"></span>SecurityPartnerProvider</a></li>
     <li><a href="securityrule" title="SecurityRule"><span class="symbol resource"></span>SecurityRule</a></li>
+    <li><a href="securityuserconfiguration" title="SecurityUserConfiguration"><span class="symbol resource"></span>SecurityUserConfiguration</a></li>
     <li><a href="serviceendpointpolicy" title="ServiceEndpointPolicy"><span class="symbol resource"></span>ServiceEndpointPolicy</a></li>
     <li><a href="serviceendpointpolicydefinition" title="ServiceEndpointPolicyDefinition"><span class="symbol resource"></span>ServiceEndpointPolicyDefinition</a></li>
     <li><a href="subnet" title="Subnet"><span class="symbol resource"></span>Subnet</a></li>
     <li><a href="trafficmanagerusermetricskey" title="TrafficManagerUserMetricsKey"><span class="symbol resource"></span>TrafficManagerUserMetricsKey</a></li>
     <li><a href="userrule" title="UserRule"><span class="symbol resource"></span>UserRule</a></li>
+    <li><a href="userrulecollection" title="UserRuleCollection"><span class="symbol resource"></span>UserRuleCollection</a></li>
     <li><a href="virtualappliancesite" title="VirtualApplianceSite"><span class="symbol resource"></span>VirtualApplianceSite</a></li>
     <li><a href="virtualhub" title="VirtualHub"><span class="symbol resource"></span>VirtualHub</a></li>
     <li><a href="virtualhubbgpconnection" title="VirtualHubBgpConnection"><span class="symbol resource"></span>VirtualHubBgpConnection</a></li>
@@ -110,6 +113,7 @@ Explore the resources and functions of the azure-native.network module.
 <ul class="api">
     <li><a href="getactivesessions" title="GetActiveSessions"><span class="symbol function"></span>GetActiveSessions</a></li>
     <li><a href="getadminrule" title="GetAdminRule"><span class="symbol function"></span>GetAdminRule</a></li>
+    <li><a href="getadminrulecollection" title="GetAdminRuleCollection"><span class="symbol function"></span>GetAdminRuleCollection</a></li>
     <li><a href="getapplicationgateway" title="GetApplicationGateway"><span class="symbol function"></span>GetApplicationGateway</a></li>
     <li><a href="getapplicationgatewaybackendhealthondemand" title="GetApplicationGatewayBackendHealthOnDemand"><span class="symbol function"></span>GetApplicationGatewayBackendHealthOnDemand</a></li>
     <li><a href="getapplicationgatewayprivateendpointconnection" title="GetApplicationGatewayPrivateEndpointConnection"><span class="symbol function"></span>GetApplicationGatewayPrivateEndpointConnection</a></li>
@@ -179,14 +183,16 @@ Explore the resources and functions of the azure-native.network module.
     <li><a href="getroutefilterrule" title="GetRouteFilterRule"><span class="symbol function"></span>GetRouteFilterRule</a></li>
     <li><a href="getroutetable" title="GetRouteTable"><span class="symbol function"></span>GetRouteTable</a></li>
     <li><a href="getrulesengine" title="GetRulesEngine"><span class="symbol function"></span>GetRulesEngine</a></li>
-    <li><a href="getsecurityconfiguration" title="GetSecurityConfiguration"><span class="symbol function"></span>GetSecurityConfiguration</a></li>
+    <li><a href="getsecurityadminconfiguration" title="GetSecurityAdminConfiguration"><span class="symbol function"></span>GetSecurityAdminConfiguration</a></li>
     <li><a href="getsecuritypartnerprovider" title="GetSecurityPartnerProvider"><span class="symbol function"></span>GetSecurityPartnerProvider</a></li>
     <li><a href="getsecurityrule" title="GetSecurityRule"><span class="symbol function"></span>GetSecurityRule</a></li>
+    <li><a href="getsecurityuserconfiguration" title="GetSecurityUserConfiguration"><span class="symbol function"></span>GetSecurityUserConfiguration</a></li>
     <li><a href="getserviceendpointpolicy" title="GetServiceEndpointPolicy"><span class="symbol function"></span>GetServiceEndpointPolicy</a></li>
     <li><a href="getserviceendpointpolicydefinition" title="GetServiceEndpointPolicyDefinition"><span class="symbol function"></span>GetServiceEndpointPolicyDefinition</a></li>
     <li><a href="getsubnet" title="GetSubnet"><span class="symbol function"></span>GetSubnet</a></li>
     <li><a href="gettrafficmanagerusermetricskey" title="GetTrafficManagerUserMetricsKey"><span class="symbol function"></span>GetTrafficManagerUserMetricsKey</a></li>
     <li><a href="getuserrule" title="GetUserRule"><span class="symbol function"></span>GetUserRule</a></li>
+    <li><a href="getuserrulecollection" title="GetUserRuleCollection"><span class="symbol function"></span>GetUserRuleCollection</a></li>
     <li><a href="getvirtualappliancesite" title="GetVirtualApplianceSite"><span class="symbol function"></span>GetVirtualApplianceSite</a></li>
     <li><a href="getvirtualhub" title="GetVirtualHub"><span class="symbol function"></span>GetVirtualHub</a></li>
     <li><a href="getvirtualhubbgpconnection" title="GetVirtualHubBgpConnection"><span class="symbol function"></span>GetVirtualHubBgpConnection</a></li>
@@ -212,6 +218,9 @@ Explore the resources and functions of the azure-native.network module.
     <li><a href="getvpnsite" title="GetVpnSite"><span class="symbol function"></span>GetVpnSite</a></li>
     <li><a href="getwebapplicationfirewallpolicy" title="GetWebApplicationFirewallPolicy"><span class="symbol function"></span>GetWebApplicationFirewallPolicy</a></li>
     <li><a href="getzone" title="GetZone"><span class="symbol function"></span>GetZone</a></li>
+    <li><a href="listactiveconfiguration" title="ListActiveConfiguration"><span class="symbol function"></span>ListActiveConfiguration</a></li>
+    <li><a href="listeffectiveconfiguration" title="ListEffectiveConfiguration"><span class="symbol function"></span>ListEffectiveConfiguration</a></li>
+    <li><a href="listeffectiveconfigurationbysubnet" title="ListEffectiveConfigurationBySubnet"><span class="symbol function"></span>ListEffectiveConfigurationBySubnet</a></li>
     <li><a href="listeffectivevirtualnetworkbynetworkgroup" title="ListEffectiveVirtualNetworkByNetworkGroup"><span class="symbol function"></span>ListEffectiveVirtualNetworkByNetworkGroup</a></li>
     <li><a href="listeffectivevirtualnetworkbynetworkmanager" title="ListEffectiveVirtualNetworkByNetworkManager"><span class="symbol function"></span>ListEffectiveVirtualNetworkByNetworkManager</a></li>
     <li><a href="listnetworkmanagerdeploymentstatus" title="ListNetworkManagerDeploymentStatus"><span class="symbol function"></span>ListNetworkManagerDeploymentStatus</a></li>
@@ -224,6 +233,6 @@ Explore the resources and functions of the azure-native.network module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.2.0</dd>
+	<dd>1.3.0</dd>
 </dl>
 
