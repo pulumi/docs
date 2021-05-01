@@ -40,9 +40,9 @@ const domain = new do.Domain("test", {
 {{% choosable language typescript %}}
 
 ```typescript
-import * as do from "@pulumi/digitalocean";
+import * as digitalocean from "@pulumi/digitalocean";
 
-const instance = new do.Domain("test", {
+const instance = new digitalocean.Domain("test", {
   name: "mydomain.com",
   ipAddress: "192.168.10.10",
 });
