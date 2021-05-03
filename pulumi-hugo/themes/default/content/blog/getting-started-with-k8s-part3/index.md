@@ -213,7 +213,7 @@ const ordersService = new k8s.core.v1.Service("orders", {
 });
 ```
 
-If we look at the [manifest](https://github.com/microservices-demo/microservices-demo/blob/master/deploy/kubernetes/manifests/orders-db-dep.yaml) for the orders-db deployment, we can see that the code follows it closely. You can find the full [Sock Shop code in the Pulumi examples repository](https://github.com/pulumi/examples/tree/master/kubernetes-ts-sock-shop).
+If we look at the [orders-db deployment manifest](https://github.com/microservices-demo/microservices-demo/blob/master/deploy/kubernetes/manifests/13-orders-db-dep.yaml), we can see that the code follows it closely. You can find the full [Sock Shop code in the Pulumi examples repository](https://github.com/pulumi/examples/tree/master/kubernetes-ts-sock-shop).
 
 Although we encapsulate the deployment in a single large script, we can improve that by creating components using classes to abstract the implementation details.
 
