@@ -314,7 +314,7 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.
+    <dd>{{% md %}}The name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
@@ -363,7 +363,7 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.
+    <dd>{{% md %}}The name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
@@ -412,7 +412,7 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.
+    <dd>{{% md %}}The name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
@@ -461,7 +461,7 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the database.
+    <dd>{{% md %}}The name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
@@ -741,7 +741,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.
+    <dd>{{% md %}}The name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_csharp">
@@ -799,7 +799,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.
+    <dd>{{% md %}}The name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_go">
@@ -857,7 +857,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.
+    <dd>{{% md %}}The name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_nodejs">
@@ -915,7 +915,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the database.
+    <dd>{{% md %}}The name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_python">

@@ -199,7 +199,8 @@ const testCapacityProvider = new aws.ecs.CapacityProvider("testCapacityProvider"
                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                      <span class="nx">auto_scaling_group_provider</span><span class="p">:</span> <span class="nx">Optional[CapacityProviderAutoScalingGroupProviderArgs]</span> = None<span class="p">,</span>
                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                     <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">CapacityProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CapacityProviderArgs</a></span><span class="p">,</span>
@@ -361,7 +362,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument defining the provider for the ECS auto scaling group. Defined below.
+    <dd>{{% md %}}Configuration block for the provider for the ECS auto scaling group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -370,7 +371,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the capacity provider.
+    <dd>{{% md %}}Name of the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -379,8 +380,15 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -392,7 +400,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument defining the provider for the ECS auto scaling group. Defined below.
+    <dd>{{% md %}}Configuration block for the provider for the ECS auto scaling group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -401,7 +409,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the capacity provider.
+    <dd>{{% md %}}Name of the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -410,8 +418,15 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -423,7 +438,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument defining the provider for the ECS auto scaling group. Defined below.
+    <dd>{{% md %}}Configuration block for the provider for the ECS auto scaling group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -432,7 +447,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the capacity provider.
+    <dd>{{% md %}}Name of the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -441,8 +456,15 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -454,7 +476,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument defining the provider for the ECS auto scaling group. Defined below.
+    <dd>{{% md %}}Configuration block for the provider for the ECS auto scaling group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -463,7 +485,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the capacity provider.
+    <dd>{{% md %}}Name of the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -472,8 +494,15 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -492,7 +521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the capacity provider.
+    <dd>{{% md %}}ARN that identifies the capacity provider.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -513,7 +542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the capacity provider.
+    <dd>{{% md %}}ARN that identifies the capacity provider.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -534,7 +563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the capacity provider.
+    <dd>{{% md %}}ARN that identifies the capacity provider.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -555,7 +584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the capacity provider.
+    <dd>{{% md %}}ARN that identifies the capacity provider.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -586,7 +615,8 @@ Get an existing CapacityProvider resource's state with the given name, ID, and o
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">auto_scaling_group_provider</span><span class="p">:</span> <span class="nx">Optional[CapacityProviderAutoScalingGroupProviderArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> CapacityProvider</code></pre></div>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> CapacityProvider</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -705,7 +735,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the capacity provider.
+    <dd>{{% md %}}ARN that identifies the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalinggroupprovider_csharp">
@@ -714,7 +744,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument defining the provider for the ECS auto scaling group. Defined below.
+    <dd>{{% md %}}Configuration block for the provider for the ECS auto scaling group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -723,7 +753,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the capacity provider.
+    <dd>{{% md %}}Name of the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -732,8 +762,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -745,7 +782,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the capacity provider.
+    <dd>{{% md %}}ARN that identifies the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalinggroupprovider_go">
@@ -754,7 +791,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument defining the provider for the ECS auto scaling group. Defined below.
+    <dd>{{% md %}}Configuration block for the provider for the ECS auto scaling group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -763,7 +800,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the capacity provider.
+    <dd>{{% md %}}Name of the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -772,8 +809,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -785,7 +829,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the capacity provider.
+    <dd>{{% md %}}ARN that identifies the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalinggroupprovider_nodejs">
@@ -794,7 +838,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument defining the provider for the ECS auto scaling group. Defined below.
+    <dd>{{% md %}}Configuration block for the provider for the ECS auto scaling group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -803,7 +847,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the capacity provider.
+    <dd>{{% md %}}Name of the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -812,8 +856,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -825,7 +876,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the capacity provider.
+    <dd>{{% md %}}ARN that identifies the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_scaling_group_provider_python">
@@ -834,7 +885,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument defining the provider for the ECS auto scaling group. Defined below.
+    <dd>{{% md %}}Configuration block for the provider for the ECS auto scaling group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -843,7 +894,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the capacity provider.
+    <dd>{{% md %}}Name of the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -852,8 +903,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -876,7 +934,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}- The Amazon Resource Name (ARN) of the associated auto scaling group.
+    <dd>{{% md %}}- ARN of the associated auto scaling group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedscaling_csharp">
@@ -885,7 +943,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}- Nested argument defining the parameters of the auto scaling. Defined below.
+    <dd>{{% md %}}- Configuration block defining the parameters of the auto scaling. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedterminationprotection_csharp">
@@ -907,7 +965,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}- The Amazon Resource Name (ARN) of the associated auto scaling group.
+    <dd>{{% md %}}- ARN of the associated auto scaling group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedscaling_go">
@@ -916,7 +974,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling</a></span>
     </dt>
-    <dd>{{% md %}}- Nested argument defining the parameters of the auto scaling. Defined below.
+    <dd>{{% md %}}- Configuration block defining the parameters of the auto scaling. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedterminationprotection_go">
@@ -938,7 +996,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}- The Amazon Resource Name (ARN) of the associated auto scaling group.
+    <dd>{{% md %}}- ARN of the associated auto scaling group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedscaling_nodejs">
@@ -947,7 +1005,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}- Nested argument defining the parameters of the auto scaling. Defined below.
+    <dd>{{% md %}}- Configuration block defining the parameters of the auto scaling. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedterminationprotection_nodejs">
@@ -969,7 +1027,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}- The Amazon Resource Name (ARN) of the associated auto scaling group.
+    <dd>{{% md %}}- ARN of the associated auto scaling group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_scaling_python">
@@ -978,7 +1036,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}- Nested argument defining the parameters of the auto scaling. Defined below.
+    <dd>{{% md %}}- Configuration block defining the parameters of the auto scaling. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_termination_protection_python">
@@ -1002,7 +1060,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
+    <dd>{{% md %}}Period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumscalingstepsize_csharp">
@@ -1011,7 +1069,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum step adjustment size. A number between 1 and 10,000.
+    <dd>{{% md %}}Maximum step adjustment size. A number between 1 and 10,000.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumscalingstepsize_csharp">
@@ -1020,7 +1078,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum step adjustment size. A number between 1 and 10,000.
+    <dd>{{% md %}}Minimum step adjustment size. A number between 1 and 10,000.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
@@ -1038,7 +1096,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The target utilization for the capacity provider. A number between 1 and 100.
+    <dd>{{% md %}}Target utilization for the capacity provider. A number between 1 and 100.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1051,7 +1109,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
+    <dd>{{% md %}}Period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumscalingstepsize_go">
@@ -1060,7 +1118,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum step adjustment size. A number between 1 and 10,000.
+    <dd>{{% md %}}Maximum step adjustment size. A number between 1 and 10,000.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumscalingstepsize_go">
@@ -1069,7 +1127,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum step adjustment size. A number between 1 and 10,000.
+    <dd>{{% md %}}Minimum step adjustment size. A number between 1 and 10,000.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
@@ -1087,7 +1145,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The target utilization for the capacity provider. A number between 1 and 100.
+    <dd>{{% md %}}Target utilization for the capacity provider. A number between 1 and 100.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1100,7 +1158,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
+    <dd>{{% md %}}Period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumscalingstepsize_nodejs">
@@ -1109,7 +1167,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum step adjustment size. A number between 1 and 10,000.
+    <dd>{{% md %}}Maximum step adjustment size. A number between 1 and 10,000.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumscalingstepsize_nodejs">
@@ -1118,7 +1176,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum step adjustment size. A number between 1 and 10,000.
+    <dd>{{% md %}}Minimum step adjustment size. A number between 1 and 10,000.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
@@ -1136,7 +1194,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The target utilization for the capacity provider. A number between 1 and 100.
+    <dd>{{% md %}}Target utilization for the capacity provider. A number between 1 and 100.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1149,7 +1207,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
+    <dd>{{% md %}}Period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_scaling_step_size_python">
@@ -1158,7 +1216,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum step adjustment size. A number between 1 and 10,000.
+    <dd>{{% md %}}Maximum step adjustment size. A number between 1 and 10,000.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_scaling_step_size_python">
@@ -1167,7 +1225,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum step adjustment size. A number between 1 and 10,000.
+    <dd>{{% md %}}Minimum step adjustment size. A number between 1 and 10,000.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
@@ -1185,7 +1243,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The target utilization for the capacity provider. A number between 1 and 100.
+    <dd>{{% md %}}Target utilization for the capacity provider. A number between 1 and 100.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

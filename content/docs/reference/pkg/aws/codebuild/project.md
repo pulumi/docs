@@ -644,8 +644,10 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[ProjectArtifactsArgs]</span> = None<span class="p">,</span>
             <span class="nx">badge_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">build_batch_config</span><span class="p">:</span> <span class="nx">Optional[ProjectBuildBatchConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">build_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
             <span class="nx">cache</span><span class="p">:</span> <span class="nx">Optional[ProjectCacheArgs]</span> = None<span class="p">,</span>
+            <span class="nx">concurrent_build_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[ProjectEnvironmentArgs]</span> = None<span class="p">,</span>
@@ -658,6 +660,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[ProjectSourceArgs]</span> = None<span class="p">,</span>
             <span class="nx">source_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
             <span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ProjectVpcConfigArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -838,7 +841,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_csharp">
@@ -859,6 +862,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="buildbatchconfig_csharp">
+<a href="#buildbatchconfig_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Batch<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the batch build options for the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="buildtimeout_csharp">
 <a href="#buildtimeout_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Timeout</a>
 </span>
@@ -875,6 +887,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="concurrentbuildlimit_csharp">
+<a href="#concurrentbuildlimit_csharp" style="color: inherit; text-decoration: inherit;">Concurrent<wbr>Build<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -955,7 +976,16 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcconfig_csharp">
@@ -995,7 +1025,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_go">
@@ -1016,6 +1046,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="buildbatchconfig_go">
+<a href="#buildbatchconfig_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Batch<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the batch build options for the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="buildtimeout_go">
 <a href="#buildtimeout_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Timeout</a>
 </span>
@@ -1032,6 +1071,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#projectcache">Project<wbr>Cache</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="concurrentbuildlimit_go">
+<a href="#concurrentbuildlimit_go" style="color: inherit; text-decoration: inherit;">Concurrent<wbr>Build<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -1112,7 +1160,16 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcconfig_go">
@@ -1152,7 +1209,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_nodejs">
@@ -1173,6 +1230,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="buildbatchconfig_nodejs">
+<a href="#buildbatchconfig_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Batch<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the batch build options for the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="buildtimeout_nodejs">
 <a href="#buildtimeout_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Timeout</a>
 </span>
@@ -1189,6 +1255,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="concurrentbuildlimit_nodejs">
+<a href="#concurrentbuildlimit_nodejs" style="color: inherit; text-decoration: inherit;">concurrent<wbr>Build<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -1269,7 +1344,16 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcconfig_nodejs">
@@ -1309,7 +1393,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_python">
@@ -1330,6 +1414,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="build_batch_config_python">
+<a href="#build_batch_config_python" style="color: inherit; text-decoration: inherit;">build_<wbr>batch_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the batch build options for the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="build_timeout_python">
 <a href="#build_timeout_python" style="color: inherit; text-decoration: inherit;">build_<wbr>timeout</a>
 </span>
@@ -1346,6 +1439,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="concurrent_build_limit_python">
+<a href="#concurrent_build_limit_python" style="color: inherit; text-decoration: inherit;">concurrent_<wbr>build_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -1426,7 +1528,16 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_config_python">
@@ -1586,8 +1697,10 @@ Get an existing Project resource's state with the given name, ID, and optional e
         <span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[ProjectArtifactsArgs]</span> = None<span class="p">,</span>
         <span class="nx">badge_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">badge_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">build_batch_config</span><span class="p">:</span> <span class="nx">Optional[ProjectBuildBatchConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">build_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">cache</span><span class="p">:</span> <span class="nx">Optional[ProjectCacheArgs]</span> = None<span class="p">,</span>
+        <span class="nx">concurrent_build_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[ProjectEnvironmentArgs]</span> = None<span class="p">,</span>
@@ -1600,6 +1713,7 @@ Get an existing Project resource's state with the given name, ID, and optional e
         <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[ProjectSourceArgs]</span> = None<span class="p">,</span>
         <span class="nx">source_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ProjectVpcConfigArgs]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
 {{% /choosable %}}
 
@@ -1749,6 +1863,15 @@ The following state arguments are supported:
     <dd>{{% md %}}URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_buildbatchconfig_csharp">
+<a href="#state_buildbatchconfig_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Batch<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the batch build options for the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_buildtimeout_csharp">
 <a href="#state_buildtimeout_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Timeout</a>
 </span>
@@ -1765,6 +1888,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_concurrentbuildlimit_csharp">
+<a href="#state_concurrentbuildlimit_csharp" style="color: inherit; text-decoration: inherit;">Concurrent<wbr>Build<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -1845,7 +1977,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_csharp">
@@ -1872,7 +2004,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcconfig_csharp">
@@ -1924,6 +2065,15 @@ The following state arguments are supported:
     <dd>{{% md %}}URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_buildbatchconfig_go">
+<a href="#state_buildbatchconfig_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Batch<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the batch build options for the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_buildtimeout_go">
 <a href="#state_buildtimeout_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Timeout</a>
 </span>
@@ -1940,6 +2090,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectcache">Project<wbr>Cache</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_concurrentbuildlimit_go">
+<a href="#state_concurrentbuildlimit_go" style="color: inherit; text-decoration: inherit;">Concurrent<wbr>Build<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -2020,7 +2179,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_go">
@@ -2047,7 +2206,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcconfig_go">
@@ -2099,6 +2267,15 @@ The following state arguments are supported:
     <dd>{{% md %}}URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_buildbatchconfig_nodejs">
+<a href="#state_buildbatchconfig_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Batch<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the batch build options for the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_buildtimeout_nodejs">
 <a href="#state_buildtimeout_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Timeout</a>
 </span>
@@ -2115,6 +2292,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_concurrentbuildlimit_nodejs">
+<a href="#state_concurrentbuildlimit_nodejs" style="color: inherit; text-decoration: inherit;">concurrent<wbr>Build<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
@@ -2195,7 +2381,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_nodejs">
@@ -2222,7 +2408,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcconfig_nodejs">
@@ -2274,6 +2469,15 @@ The following state arguments are supported:
     <dd>{{% md %}}URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_build_batch_config_python">
+<a href="#state_build_batch_config_python" style="color: inherit; text-decoration: inherit;">build_<wbr>batch_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the batch build options for the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_build_timeout_python">
 <a href="#state_build_timeout_python" style="color: inherit; text-decoration: inherit;">build_<wbr>timeout</a>
 </span>
@@ -2290,6 +2494,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_concurrent_build_limit_python">
+<a href="#state_concurrent_build_limit_python" style="color: inherit; text-decoration: inherit;">concurrent_<wbr>build_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
@@ -2370,7 +2583,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_python">
@@ -2397,7 +2610,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_config_python">
@@ -2758,6 +2980,258 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="servicerole_csharp">
+<a href="#servicerole_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="combineartifacts_csharp">
+<a href="#combineartifacts_csharp" style="color: inherit; text-decoration: inherit;">Combine<wbr>Artifacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the build artifacts for the batch build should be combined into a single artifact location.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="restrictions_csharp">
+<a href="#restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfigrestrictions">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Restrictions<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the restrictions for the batch build.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeoutinmins_csharp">
+<a href="#timeoutinmins_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Mins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum amount of time, in minutes, that the batch build must be completed in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="servicerole_go">
+<a href="#servicerole_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="combineartifacts_go">
+<a href="#combineartifacts_go" style="color: inherit; text-decoration: inherit;">Combine<wbr>Artifacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the build artifacts for the batch build should be combined into a single artifact location.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="restrictions_go">
+<a href="#restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfigrestrictions">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Restrictions</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the restrictions for the batch build.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeoutinmins_go">
+<a href="#timeoutinmins_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Mins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum amount of time, in minutes, that the batch build must be completed in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="servicerole_nodejs">
+<a href="#servicerole_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="combineartifacts_nodejs">
+<a href="#combineartifacts_nodejs" style="color: inherit; text-decoration: inherit;">combine<wbr>Artifacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the build artifacts for the batch build should be combined into a single artifact location.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="restrictions_nodejs">
+<a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfigrestrictions">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Restrictions<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the restrictions for the batch build.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeoutinmins_nodejs">
+<a href="#timeoutinmins_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>In<wbr>Mins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum amount of time, in minutes, that the batch build must be completed in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="service_role_python">
+<a href="#service_role_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="combine_artifacts_python">
+<a href="#combine_artifacts_python" style="color: inherit; text-decoration: inherit;">combine_<wbr>artifacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the build artifacts for the batch build should be combined into a single artifact location.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="restrictions_python">
+<a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfigrestrictions">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Restrictions<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the restrictions for the batch build.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeout_in_mins_python">
+<a href="#timeout_in_mins_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>mins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum amount of time, in minutes, that the batch build must be completed in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="projectbuildbatchconfigrestrictions">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Restrictions</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="computetypesalloweds_csharp">
+<a href="#computetypesalloweds_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Types<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}An array of strings that specify the compute types that are allowed for the batch build. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the AWS CodeBuild User Guide for these values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maximumbuildsallowed_csharp">
+<a href="#maximumbuildsallowed_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Builds<wbr>Allowed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of builds allowed.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="computetypesalloweds_go">
+<a href="#computetypesalloweds_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Types<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}An array of strings that specify the compute types that are allowed for the batch build. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the AWS CodeBuild User Guide for these values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maximumbuildsallowed_go">
+<a href="#maximumbuildsallowed_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Builds<wbr>Allowed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of builds allowed.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="computetypesalloweds_nodejs">
+<a href="#computetypesalloweds_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Types<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}An array of strings that specify the compute types that are allowed for the batch build. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the AWS CodeBuild User Guide for these values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maximumbuildsallowed_nodejs">
+<a href="#maximumbuildsallowed_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Builds<wbr>Allowed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of builds allowed.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="compute_types_alloweds_python">
+<a href="#compute_types_alloweds_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>types_<wbr>alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}An array of strings that specify the compute types that are allowed for the batch build. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the AWS CodeBuild User Guide for these values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maximum_builds_allowed_python">
+<a href="#maximum_builds_allowed_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>builds_<wbr>allowed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of builds allowed.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4125,13 +4599,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="buildstatusconfig_csharp">
+<a href="#buildstatusconfig_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Status<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectsecondarysourcebuildstatusconfig">Project<wbr>Secondary<wbr>Source<wbr>Build<wbr>Status<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="buildspec_csharp">
 <a href="#buildspec_csharp" style="color: inherit; text-decoration: inherit;">Buildspec</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
+    <dd>{{% md %}}Build specification to use for this build project's related builds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gitclonedepth_csharp">
@@ -4176,7 +4659,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
+    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when your source provider is `GITHUB`, `BITBUCKET`, or `GITHUB_ENTERPRISE`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4210,13 +4693,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="buildstatusconfig_go">
+<a href="#buildstatusconfig_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Status<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectsecondarysourcebuildstatusconfig">Project<wbr>Secondary<wbr>Source<wbr>Build<wbr>Status<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="buildspec_go">
 <a href="#buildspec_go" style="color: inherit; text-decoration: inherit;">Buildspec</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
+    <dd>{{% md %}}Build specification to use for this build project's related builds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gitclonedepth_go">
@@ -4261,7 +4753,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
+    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when your source provider is `GITHUB`, `BITBUCKET`, or `GITHUB_ENTERPRISE`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4295,13 +4787,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="buildstatusconfig_nodejs">
+<a href="#buildstatusconfig_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Status<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectsecondarysourcebuildstatusconfig">Project<wbr>Secondary<wbr>Source<wbr>Build<wbr>Status<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="buildspec_nodejs">
 <a href="#buildspec_nodejs" style="color: inherit; text-decoration: inherit;">buildspec</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
+    <dd>{{% md %}}Build specification to use for this build project's related builds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gitclonedepth_nodejs">
@@ -4346,7 +4847,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
+    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when your source provider is `GITHUB`, `BITBUCKET`, or `GITHUB_ENTERPRISE`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4380,13 +4881,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="build_status_config_python">
+<a href="#build_status_config_python" style="color: inherit; text-decoration: inherit;">build_<wbr>status_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectsecondarysourcebuildstatusconfig">Project<wbr>Secondary<wbr>Source<wbr>Build<wbr>Status<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="buildspec_python">
 <a href="#buildspec_python" style="color: inherit; text-decoration: inherit;">buildspec</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
+    <dd>{{% md %}}Build specification to use for this build project's related builds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="git_clone_depth_python">
@@ -4431,7 +4941,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
+    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when your source provider is `GITHUB`, `BITBUCKET`, or `GITHUB_ENTERPRISE`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4525,6 +5035,96 @@ The following state arguments are supported:
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
+<h4 id="projectsecondarysourcebuildstatusconfig">Project<wbr>Secondary<wbr>Source<wbr>Build<wbr>Status<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_csharp">
+<a href="#context_csharp" style="color: inherit; text-decoration: inherit;">Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targeturl_csharp">
+<a href="#targeturl_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_go">
+<a href="#context_go" style="color: inherit; text-decoration: inherit;">Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targeturl_go">
+<a href="#targeturl_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_nodejs">
+<a href="#context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targeturl_nodejs">
+<a href="#targeturl_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_python">
+<a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_url_python">
+<a href="#target_url_python" style="color: inherit; text-decoration: inherit;">target_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="projectsecondarysourcegitsubmodulesconfig">Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -4602,13 +5202,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="buildstatusconfig_csharp">
+<a href="#buildstatusconfig_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Status<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectsourcebuildstatusconfig">Project<wbr>Source<wbr>Build<wbr>Status<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="buildspec_csharp">
 <a href="#buildspec_csharp" style="color: inherit; text-decoration: inherit;">Buildspec</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
+    <dd>{{% md %}}Build specification to use for this build project's related builds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gitclonedepth_csharp">
@@ -4653,7 +5262,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
+    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when your source provider is `GITHUB`, `BITBUCKET`, or `GITHUB_ENTERPRISE`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4678,13 +5287,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="buildstatusconfig_go">
+<a href="#buildstatusconfig_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Status<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectsourcebuildstatusconfig">Project<wbr>Source<wbr>Build<wbr>Status<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="buildspec_go">
 <a href="#buildspec_go" style="color: inherit; text-decoration: inherit;">Buildspec</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
+    <dd>{{% md %}}Build specification to use for this build project's related builds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gitclonedepth_go">
@@ -4729,7 +5347,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
+    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when your source provider is `GITHUB`, `BITBUCKET`, or `GITHUB_ENTERPRISE`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4754,13 +5372,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="buildstatusconfig_nodejs">
+<a href="#buildstatusconfig_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Status<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectsourcebuildstatusconfig">Project<wbr>Source<wbr>Build<wbr>Status<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="buildspec_nodejs">
 <a href="#buildspec_nodejs" style="color: inherit; text-decoration: inherit;">buildspec</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
+    <dd>{{% md %}}Build specification to use for this build project's related builds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gitclonedepth_nodejs">
@@ -4805,7 +5432,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
+    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when your source provider is `GITHUB`, `BITBUCKET`, or `GITHUB_ENTERPRISE`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4830,13 +5457,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="build_status_config_python">
+<a href="#build_status_config_python" style="color: inherit; text-decoration: inherit;">build_<wbr>status_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectsourcebuildstatusconfig">Project<wbr>Source<wbr>Build<wbr>Status<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="buildspec_python">
 <a href="#buildspec_python" style="color: inherit; text-decoration: inherit;">buildspec</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
+    <dd>{{% md %}}Build specification to use for this build project's related builds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="git_clone_depth_python">
@@ -4881,7 +5517,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
+    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when your source provider is `GITHUB`, `BITBUCKET`, or `GITHUB_ENTERPRISE`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4973,6 +5609,96 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd></dl>
+{{% /choosable %}}
+
+<h4 id="projectsourcebuildstatusconfig">Project<wbr>Source<wbr>Build<wbr>Status<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_csharp">
+<a href="#context_csharp" style="color: inherit; text-decoration: inherit;">Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targeturl_csharp">
+<a href="#targeturl_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_go">
+<a href="#context_go" style="color: inherit; text-decoration: inherit;">Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targeturl_go">
+<a href="#targeturl_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_nodejs">
+<a href="#context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targeturl_nodejs">
+<a href="#targeturl_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_python">
+<a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_url_python">
+<a href="#target_url_python" style="color: inherit; text-decoration: inherit;">target_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="projectsourcegitsubmodulesconfig">Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</h4>

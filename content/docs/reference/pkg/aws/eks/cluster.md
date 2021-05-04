@@ -346,6 +346,7 @@ const exampleCluster = new aws.eks.Cluster("exampleCluster", {enabledClusterLogT
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
             <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ClusterVpcConfigArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -509,7 +510,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf. Ensure the resource configuration includes explicit dependencies on the IAM Role permissions by adding [`dependsOn`](https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson) if using the `aws.iam.RolePolicy` resource) or `aws.iam.RolePolicyAttachment` resource, otherwise EKS cannot delete EKS managed EC2 infrastructure such as Security Groups on EKS Cluster deletion.
+    <dd>{{% md %}}ARN of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcconfig_csharp">
@@ -518,7 +519,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustervpcconfig">Cluster<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Configuration detailed below.
+    <dd>{{% md %}}Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledclusterlogtypes_csharp">
@@ -527,7 +528,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
+    <dd>{{% md %}}List of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionconfig_csharp">
@@ -536,7 +537,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below. Please note that `encryption_config` can be added to the configuration but cannot be removed.
+    <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetesnetworkconfig_csharp">
@@ -545,7 +546,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterkubernetesnetworkconfig">Cluster<wbr>Kubernetes<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, the provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, this provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -554,7 +555,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the cluster.
+    <dd>{{% md %}}Name of the cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -564,6 +565,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
@@ -585,7 +595,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf. Ensure the resource configuration includes explicit dependencies on the IAM Role permissions by adding [`dependsOn`](https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson) if using the `aws.iam.RolePolicy` resource) or `aws.iam.RolePolicyAttachment` resource, otherwise EKS cannot delete EKS managed EC2 infrastructure such as Security Groups on EKS Cluster deletion.
+    <dd>{{% md %}}ARN of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcconfig_go">
@@ -594,7 +604,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustervpcconfig">Cluster<wbr>Vpc<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Configuration detailed below.
+    <dd>{{% md %}}Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledclusterlogtypes_go">
@@ -603,7 +613,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
+    <dd>{{% md %}}List of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionconfig_go">
@@ -612,7 +622,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below. Please note that `encryption_config` can be added to the configuration but cannot be removed.
+    <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetesnetworkconfig_go">
@@ -621,7 +631,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterkubernetesnetworkconfig">Cluster<wbr>Kubernetes<wbr>Network<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, the provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, this provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -630,7 +640,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the cluster.
+    <dd>{{% md %}}Name of the cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -640,6 +650,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
@@ -661,7 +680,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf. Ensure the resource configuration includes explicit dependencies on the IAM Role permissions by adding [`dependsOn`](https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson) if using the `aws.iam.RolePolicy` resource) or `aws.iam.RolePolicyAttachment` resource, otherwise EKS cannot delete EKS managed EC2 infrastructure such as Security Groups on EKS Cluster deletion.
+    <dd>{{% md %}}ARN of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcconfig_nodejs">
@@ -670,7 +689,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustervpcconfig">Cluster<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Configuration detailed below.
+    <dd>{{% md %}}Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledclusterlogtypes_nodejs">
@@ -679,7 +698,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
+    <dd>{{% md %}}List of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionconfig_nodejs">
@@ -688,7 +707,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below. Please note that `encryption_config` can be added to the configuration but cannot be removed.
+    <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetesnetworkconfig_nodejs">
@@ -697,7 +716,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterkubernetesnetworkconfig">Cluster<wbr>Kubernetes<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, the provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, this provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -706,7 +725,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the cluster.
+    <dd>{{% md %}}Name of the cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -716,6 +735,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
@@ -737,7 +765,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf. Ensure the resource configuration includes explicit dependencies on the IAM Role permissions by adding [`dependsOn`](https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson) if using the `aws.iam.RolePolicy` resource) or `aws.iam.RolePolicyAttachment` resource, otherwise EKS cannot delete EKS managed EC2 infrastructure such as Security Groups on EKS Cluster deletion.
+    <dd>{{% md %}}ARN of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpc_config_python">
@@ -746,7 +774,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustervpcconfig">Cluster<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Configuration detailed below.
+    <dd>{{% md %}}Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_cluster_log_types_python">
@@ -755,7 +783,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
+    <dd>{{% md %}}List of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_config_python">
@@ -764,7 +792,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below. Please note that `encryption_config` can be added to the configuration but cannot be removed.
+    <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetes_network_config_python">
@@ -773,7 +801,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterkubernetesnetworkconfig">Cluster<wbr>Kubernetes<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, the provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, this provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -782,7 +810,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the cluster.
+    <dd>{{% md %}}Name of the cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -792,6 +820,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
@@ -820,7 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the cluster.
+    <dd>{{% md %}}ARN of the cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificateauthority_csharp">
@@ -829,7 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustercertificateauthority">Cluster<wbr>Certificate<wbr>Authority</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing `certificate-authority-data` for your cluster.
+    <dd>{{% md %}}Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_csharp">
@@ -838,7 +875,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Unix epoch timestamp in seconds for when the cluster was created.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -846,7 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint for your Kubernetes API server.
+    <dd>{{% md %}}Endpoint for your Kubernetes API server.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -863,7 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentity">List&lt;Cluster<wbr>Identity&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.
+    <dd>{{% md %}}Attribute block containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. Detailed below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platformversion_csharp">
@@ -872,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The platform version for the cluster.
+    <dd>{{% md %}}Platform version for the cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
@@ -881,7 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
+    <dd>{{% md %}}Status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -894,7 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the cluster.
+    <dd>{{% md %}}ARN of the cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificateauthority_go">
@@ -903,7 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustercertificateauthority">Cluster<wbr>Certificate<wbr>Authority</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing `certificate-authority-data` for your cluster.
+    <dd>{{% md %}}Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_go">
@@ -912,7 +950,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Unix epoch timestamp in seconds for when the cluster was created.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -920,7 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint for your Kubernetes API server.
+    <dd>{{% md %}}Endpoint for your Kubernetes API server.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -937,7 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentity">[]Cluster<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.
+    <dd>{{% md %}}Attribute block containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. Detailed below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platformversion_go">
@@ -946,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The platform version for the cluster.
+    <dd>{{% md %}}Platform version for the cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
@@ -955,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
+    <dd>{{% md %}}Status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -968,7 +1007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the cluster.
+    <dd>{{% md %}}ARN of the cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificateauthority_nodejs">
@@ -977,7 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustercertificateauthority">Cluster<wbr>Certificate<wbr>Authority</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing `certificate-authority-data` for your cluster.
+    <dd>{{% md %}}Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_nodejs">
@@ -986,7 +1025,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Unix epoch timestamp in seconds for when the cluster was created.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -994,7 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint for your Kubernetes API server.
+    <dd>{{% md %}}Endpoint for your Kubernetes API server.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1011,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity[]</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.
+    <dd>{{% md %}}Attribute block containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. Detailed below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platformversion_nodejs">
@@ -1020,7 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The platform version for the cluster.
+    <dd>{{% md %}}Platform version for the cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
@@ -1029,7 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
+    <dd>{{% md %}}Status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1042,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the cluster.
+    <dd>{{% md %}}ARN of the cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificate_authority_python">
@@ -1051,7 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustercertificateauthority">Cluster<wbr>Certificate<wbr>Authority</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing `certificate-authority-data` for your cluster.
+    <dd>{{% md %}}Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_at_python">
@@ -1060,7 +1100,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Unix epoch timestamp in seconds for when the cluster was created.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1068,7 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The endpoint for your Kubernetes API server.
+    <dd>{{% md %}}Endpoint for your Kubernetes API server.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -1085,7 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentity">Sequence[Cluster<wbr>Identity]</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.
+    <dd>{{% md %}}Attribute block containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. Detailed below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platform_version_python">
@@ -1094,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The platform version for the cluster.
+    <dd>{{% md %}}Platform version for the cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
@@ -1103,7 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
+    <dd>{{% md %}}Status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1136,6 +1177,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
         <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ClusterVpcConfigArgs]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
@@ -1256,7 +1298,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the cluster.
+    <dd>{{% md %}}ARN of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificateauthority_csharp">
@@ -1265,7 +1307,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustercertificateauthority">Cluster<wbr>Certificate<wbr>Authority<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing `certificate-authority-data` for your cluster.
+    <dd>{{% md %}}Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_csharp">
@@ -1274,7 +1316,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Unix epoch timestamp in seconds for when the cluster was created.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabledclusterlogtypes_csharp">
 <a href="#state_enabledclusterlogtypes_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Cluster<wbr>Log<wbr>Types</a>
@@ -1282,7 +1325,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
+    <dd>{{% md %}}List of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionconfig_csharp">
@@ -1291,7 +1334,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below. Please note that `encryption_config` can be added to the configuration but cannot be removed.
+    <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_csharp">
@@ -1300,7 +1343,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint for your Kubernetes API server.
+    <dd>{{% md %}}Endpoint for your Kubernetes API server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identities_csharp">
@@ -1309,7 +1352,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentity">List&lt;Cluster<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.
+    <dd>{{% md %}}Attribute block containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesnetworkconfig_csharp">
@@ -1318,7 +1361,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterkubernetesnetworkconfig">Cluster<wbr>Kubernetes<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, the provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, this provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1327,7 +1370,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the cluster.
+    <dd>{{% md %}}Name of the cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformversion_csharp">
@@ -1336,7 +1379,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The platform version for the cluster.
+    <dd>{{% md %}}Platform version for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_csharp">
@@ -1345,7 +1388,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf. Ensure the resource configuration includes explicit dependencies on the IAM Role permissions by adding [`dependsOn`](https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson) if using the `aws.iam.RolePolicy` resource) or `aws.iam.RolePolicyAttachment` resource, otherwise EKS cannot delete EKS managed EC2 infrastructure such as Security Groups on EKS Cluster deletion.
+    <dd>{{% md %}}ARN of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
@@ -1354,7 +1397,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
+    <dd>{{% md %}}Status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -1364,6 +1407,15 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
@@ -1381,7 +1433,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustervpcconfig">Cluster<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Configuration detailed below.
+    <dd>{{% md %}}Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1394,7 +1446,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the cluster.
+    <dd>{{% md %}}ARN of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificateauthority_go">
@@ -1403,7 +1455,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustercertificateauthority">Cluster<wbr>Certificate<wbr>Authority</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing `certificate-authority-data` for your cluster.
+    <dd>{{% md %}}Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_go">
@@ -1412,7 +1464,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Unix epoch timestamp in seconds for when the cluster was created.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabledclusterlogtypes_go">
 <a href="#state_enabledclusterlogtypes_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Cluster<wbr>Log<wbr>Types</a>
@@ -1420,7 +1473,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
+    <dd>{{% md %}}List of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionconfig_go">
@@ -1429,7 +1482,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below. Please note that `encryption_config` can be added to the configuration but cannot be removed.
+    <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_go">
@@ -1438,7 +1491,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint for your Kubernetes API server.
+    <dd>{{% md %}}Endpoint for your Kubernetes API server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identities_go">
@@ -1447,7 +1500,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentity">[]Cluster<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.
+    <dd>{{% md %}}Attribute block containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesnetworkconfig_go">
@@ -1456,7 +1509,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterkubernetesnetworkconfig">Cluster<wbr>Kubernetes<wbr>Network<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, the provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, this provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1465,7 +1518,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the cluster.
+    <dd>{{% md %}}Name of the cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformversion_go">
@@ -1474,7 +1527,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The platform version for the cluster.
+    <dd>{{% md %}}Platform version for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_go">
@@ -1483,7 +1536,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf. Ensure the resource configuration includes explicit dependencies on the IAM Role permissions by adding [`dependsOn`](https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson) if using the `aws.iam.RolePolicy` resource) or `aws.iam.RolePolicyAttachment` resource, otherwise EKS cannot delete EKS managed EC2 infrastructure such as Security Groups on EKS Cluster deletion.
+    <dd>{{% md %}}ARN of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
@@ -1492,7 +1545,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
+    <dd>{{% md %}}Status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -1502,6 +1555,15 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
@@ -1519,7 +1581,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustervpcconfig">Cluster<wbr>Vpc<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Configuration detailed below.
+    <dd>{{% md %}}Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1532,7 +1594,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the cluster.
+    <dd>{{% md %}}ARN of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificateauthority_nodejs">
@@ -1541,7 +1603,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustercertificateauthority">Cluster<wbr>Certificate<wbr>Authority<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing `certificate-authority-data` for your cluster.
+    <dd>{{% md %}}Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_nodejs">
@@ -1550,7 +1612,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Unix epoch timestamp in seconds for when the cluster was created.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabledclusterlogtypes_nodejs">
 <a href="#state_enabledclusterlogtypes_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Cluster<wbr>Log<wbr>Types</a>
@@ -1558,7 +1621,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
+    <dd>{{% md %}}List of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionconfig_nodejs">
@@ -1567,7 +1630,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below. Please note that `encryption_config` can be added to the configuration but cannot be removed.
+    <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_nodejs">
@@ -1576,7 +1639,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint for your Kubernetes API server.
+    <dd>{{% md %}}Endpoint for your Kubernetes API server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identities_nodejs">
@@ -1585,7 +1648,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.
+    <dd>{{% md %}}Attribute block containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesnetworkconfig_nodejs">
@@ -1594,7 +1657,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterkubernetesnetworkconfig">Cluster<wbr>Kubernetes<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, the provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, this provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1603,7 +1666,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the cluster.
+    <dd>{{% md %}}Name of the cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformversion_nodejs">
@@ -1612,7 +1675,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The platform version for the cluster.
+    <dd>{{% md %}}Platform version for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_nodejs">
@@ -1621,7 +1684,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf. Ensure the resource configuration includes explicit dependencies on the IAM Role permissions by adding [`dependsOn`](https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson) if using the `aws.iam.RolePolicy` resource) or `aws.iam.RolePolicyAttachment` resource, otherwise EKS cannot delete EKS managed EC2 infrastructure such as Security Groups on EKS Cluster deletion.
+    <dd>{{% md %}}ARN of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
@@ -1630,7 +1693,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
+    <dd>{{% md %}}Status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -1640,6 +1703,15 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
@@ -1657,7 +1729,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustervpcconfig">Cluster<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Configuration detailed below.
+    <dd>{{% md %}}Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1670,7 +1742,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the cluster.
+    <dd>{{% md %}}ARN of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_authority_python">
@@ -1679,7 +1751,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustercertificateauthority">Cluster<wbr>Certificate<wbr>Authority<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing `certificate-authority-data` for your cluster.
+    <dd>{{% md %}}Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_at_python">
@@ -1688,7 +1760,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Unix epoch timestamp in seconds for when the cluster was created.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_cluster_log_types_python">
 <a href="#state_enabled_cluster_log_types_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>cluster_<wbr>log_<wbr>types</a>
@@ -1696,7 +1769,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
+    <dd>{{% md %}}List of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryption_config_python">
@@ -1705,7 +1778,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below. Please note that `encryption_config` can be added to the configuration but cannot be removed.
+    <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_python">
@@ -1714,7 +1787,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The endpoint for your Kubernetes API server.
+    <dd>{{% md %}}Endpoint for your Kubernetes API server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identities_python">
@@ -1723,7 +1796,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentity">Sequence[Cluster<wbr>Identity<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.
+    <dd>{{% md %}}Attribute block containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetes_network_config_python">
@@ -1732,7 +1805,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterkubernetesnetworkconfig">Cluster<wbr>Kubernetes<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, the provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, this provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -1741,7 +1814,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the cluster.
+    <dd>{{% md %}}Name of the cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_version_python">
@@ -1750,7 +1823,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The platform version for the cluster.
+    <dd>{{% md %}}Platform version for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_arn_python">
@@ -1759,7 +1832,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf. Ensure the resource configuration includes explicit dependencies on the IAM Role permissions by adding [`dependsOn`](https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson) if using the `aws.iam.RolePolicy` resource) or `aws.iam.RolePolicyAttachment` resource, otherwise EKS cannot delete EKS managed EC2 infrastructure such as Security Groups on EKS Cluster deletion.
+    <dd>{{% md %}}ARN of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
@@ -1768,7 +1841,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
+    <dd>{{% md %}}Status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -1778,6 +1851,15 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
@@ -1795,7 +1877,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustervpcconfig">Cluster<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Configuration detailed below.
+    <dd>{{% md %}}Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1819,7 +1901,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The base64 encoded certificate data required to communicate with your cluster. Add this to the `certificate-authority-data` section of the `kubeconfig` file for your cluster.
+    <dd>{{% md %}}Base64 encoded certificate data required to communicate with your cluster. Add this to the `certificate-authority-data` section of the `kubeconfig` file for your cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1832,7 +1914,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The base64 encoded certificate data required to communicate with your cluster. Add this to the `certificate-authority-data` section of the `kubeconfig` file for your cluster.
+    <dd>{{% md %}}Base64 encoded certificate data required to communicate with your cluster. Add this to the `certificate-authority-data` section of the `kubeconfig` file for your cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1845,7 +1927,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The base64 encoded certificate data required to communicate with your cluster. Add this to the `certificate-authority-data` section of the `kubeconfig` file for your cluster.
+    <dd>{{% md %}}Base64 encoded certificate data required to communicate with your cluster. Add this to the `certificate-authority-data` section of the `kubeconfig` file for your cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1858,7 +1940,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The base64 encoded certificate data required to communicate with your cluster. Add this to the `certificate-authority-data` section of the `kubeconfig` file for your cluster.
+    <dd>{{% md %}}Base64 encoded certificate data required to communicate with your cluster. Add this to the `certificate-authority-data` section of the `kubeconfig` file for your cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1882,7 +1964,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of strings with resources to be encrypted. Valid values: `secrets`
+    <dd>{{% md %}}List of strings with resources to be encrypted. Valid values: `secrets`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1904,7 +1986,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of strings with resources to be encrypted. Valid values: `secrets`
+    <dd>{{% md %}}List of strings with resources to be encrypted. Valid values: `secrets`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1926,7 +2008,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of strings with resources to be encrypted. Valid values: `secrets`
+    <dd>{{% md %}}List of strings with resources to be encrypted. Valid values: `secrets`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1948,7 +2030,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of strings with resources to be encrypted. Valid values: `secrets`
+    <dd>{{% md %}}List of strings with resources to be encrypted. Valid values: `secrets`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1963,7 +2045,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the Key Management Service (KMS) customer master key (CMK). The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK. For more information, see [Allowing Users in Other Accounts to Use a CMK in the AWS Key Management Service Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html).
+    <dd>{{% md %}}ARN of the Key Management Service (KMS) customer master key (CMK). The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK. For more information, see [Allowing Users in Other Accounts to Use a CMK in the AWS Key Management Service Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1976,7 +2058,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the Key Management Service (KMS) customer master key (CMK). The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK. For more information, see [Allowing Users in Other Accounts to Use a CMK in the AWS Key Management Service Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html).
+    <dd>{{% md %}}ARN of the Key Management Service (KMS) customer master key (CMK). The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK. For more information, see [Allowing Users in Other Accounts to Use a CMK in the AWS Key Management Service Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1989,7 +2071,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the Key Management Service (KMS) customer master key (CMK). The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK. For more information, see [Allowing Users in Other Accounts to Use a CMK in the AWS Key Management Service Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html).
+    <dd>{{% md %}}ARN of the Key Management Service (KMS) customer master key (CMK). The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK. For more information, see [Allowing Users in Other Accounts to Use a CMK in the AWS Key Management Service Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2002,7 +2084,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the Key Management Service (KMS) customer master key (CMK). The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK. For more information, see [Allowing Users in Other Accounts to Use a CMK in the AWS Key Management Service Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html).
+    <dd>{{% md %}}ARN of the Key Management Service (KMS) customer master key (CMK). The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK. For more information, see [Allowing Users in Other Accounts to Use a CMK in the AWS Key Management Service Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2017,7 +2099,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentityoidc">List&lt;Cluster<wbr>Identity<wbr>Oidc<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster.
+    <dd>{{% md %}}Nested block containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2030,7 +2112,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentityoidc">[]Cluster<wbr>Identity<wbr>Oidc</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster.
+    <dd>{{% md %}}Nested block containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2043,7 +2125,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentityoidc">Cluster<wbr>Identity<wbr>Oidc<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster.
+    <dd>{{% md %}}Nested block containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2056,7 +2138,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentityoidc">Sequence[Cluster<wbr>Identity<wbr>Oidc<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster.
+    <dd>{{% md %}}Nested block containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2188,7 +2270,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster security group that was created by Amazon EKS for the cluster.
+    <dd>{{% md %}}Cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control-plane-to-data-plane communication.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointprivateaccess_csharp">
@@ -2197,7 +2279,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not the Amazon EKS private API server endpoint is enabled. Default is `false`.
+    <dd>{{% md %}}Whether the Amazon EKS private API server endpoint is enabled. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointpublicaccess_csharp">
@@ -2206,7 +2288,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not the Amazon EKS public API server endpoint is enabled. Default is `true`.
+    <dd>{{% md %}}Whether the Amazon EKS public API server endpoint is enabled. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccesscidrs_csharp">
@@ -2233,7 +2315,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC associated with your cluster.
+    <dd>{{% md %}}ID of the VPC associated with your cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2255,7 +2337,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster security group that was created by Amazon EKS for the cluster.
+    <dd>{{% md %}}Cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control-plane-to-data-plane communication.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointprivateaccess_go">
@@ -2264,7 +2346,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not the Amazon EKS private API server endpoint is enabled. Default is `false`.
+    <dd>{{% md %}}Whether the Amazon EKS private API server endpoint is enabled. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointpublicaccess_go">
@@ -2273,7 +2355,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not the Amazon EKS public API server endpoint is enabled. Default is `true`.
+    <dd>{{% md %}}Whether the Amazon EKS public API server endpoint is enabled. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccesscidrs_go">
@@ -2300,7 +2382,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC associated with your cluster.
+    <dd>{{% md %}}ID of the VPC associated with your cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2322,7 +2404,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster security group that was created by Amazon EKS for the cluster.
+    <dd>{{% md %}}Cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control-plane-to-data-plane communication.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointprivateaccess_nodejs">
@@ -2331,7 +2413,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not the Amazon EKS private API server endpoint is enabled. Default is `false`.
+    <dd>{{% md %}}Whether the Amazon EKS private API server endpoint is enabled. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointpublicaccess_nodejs">
@@ -2340,7 +2422,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not the Amazon EKS public API server endpoint is enabled. Default is `true`.
+    <dd>{{% md %}}Whether the Amazon EKS public API server endpoint is enabled. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccesscidrs_nodejs">
@@ -2367,7 +2449,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC associated with your cluster.
+    <dd>{{% md %}}ID of the VPC associated with your cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2389,7 +2471,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The cluster security group that was created by Amazon EKS for the cluster.
+    <dd>{{% md %}}Cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control-plane-to-data-plane communication.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_private_access_python">
@@ -2398,7 +2480,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not the Amazon EKS private API server endpoint is enabled. Default is `false`.
+    <dd>{{% md %}}Whether the Amazon EKS private API server endpoint is enabled. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_public_access_python">
@@ -2407,7 +2489,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not the Amazon EKS public API server endpoint is enabled. Default is `true`.
+    <dd>{{% md %}}Whether the Amazon EKS public API server endpoint is enabled. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_access_cidrs_python">
@@ -2434,7 +2516,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The VPC associated with your cluster.
+    <dd>{{% md %}}ID of the VPC associated with your cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

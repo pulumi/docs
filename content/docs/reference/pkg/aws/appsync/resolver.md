@@ -502,24 +502,6 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The field name from the schema defined in the GraphQL API.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="requesttemplate_csharp">
-<a href="#requesttemplate_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="responsetemplate_csharp">
-<a href="#responsetemplate_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -563,6 +545,24 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The PipelineConfig.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requesttemplate_csharp">
+<a href="#requesttemplate_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="responsetemplate_csharp">
+<a href="#responsetemplate_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -585,24 +585,6 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field name from the schema defined in the GraphQL API.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="requesttemplate_go">
-<a href="#requesttemplate_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="responsetemplate_go">
-<a href="#responsetemplate_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
@@ -648,6 +630,24 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The PipelineConfig.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requesttemplate_go">
+<a href="#requesttemplate_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="responsetemplate_go">
+<a href="#responsetemplate_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -670,24 +670,6 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field name from the schema defined in the GraphQL API.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="requesttemplate_nodejs">
-<a href="#requesttemplate_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="responsetemplate_nodejs">
-<a href="#responsetemplate_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
@@ -733,6 +715,24 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The PipelineConfig.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requesttemplate_nodejs">
+<a href="#requesttemplate_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="responsetemplate_nodejs">
+<a href="#responsetemplate_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -755,24 +755,6 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field name from the schema defined in the GraphQL API.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="request_template_python">
-<a href="#request_template_python" style="color: inherit; text-decoration: inherit;">request_<wbr>template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="response_template_python">
-<a href="#response_template_python" style="color: inherit; text-decoration: inherit;">response_<wbr>template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
@@ -818,6 +800,24 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The PipelineConfig.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="request_template_python">
+<a href="#request_template_python" style="color: inherit; text-decoration: inherit;">request_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="response_template_python">
+<a href="#response_template_python" style="color: inherit; text-decoration: inherit;">response_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1119,7 +1119,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver.
+    <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsetemplate_csharp">
@@ -1128,7 +1128,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver.
+    <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
@@ -1213,7 +1213,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver.
+    <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsetemplate_go">
@@ -1222,7 +1222,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver.
+    <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
@@ -1307,7 +1307,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver.
+    <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsetemplate_nodejs">
@@ -1316,7 +1316,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver.
+    <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
@@ -1401,7 +1401,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver.
+    <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_response_template_python">
@@ -1410,7 +1410,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver.
+    <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">

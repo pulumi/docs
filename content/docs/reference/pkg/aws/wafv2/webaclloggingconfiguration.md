@@ -23,7 +23,7 @@ Be sure to give the data firehose a name that starts with the prefix `aws-waf-lo
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-
+### With Redacted Fields
 
 
 {{< example csharp >}}
@@ -144,6 +144,236 @@ const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
 
 
 
+### With Logging Filter
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.WafV2.WebAclLoggingConfiguration("example", new Aws.WafV2.WebAclLoggingConfigurationArgs
+        {
+            LogDestinationConfigs = 
+            {
+                aws_kinesis_firehose_delivery_stream.Example.Arn,
+            },
+            ResourceArn = aws_wafv2_web_acl.Example.Arn,
+            LoggingFilter = new Aws.WafV2.Inputs.WebAclLoggingConfigurationLoggingFilterArgs
+            {
+                DefaultBehavior = "KEEP",
+                Filters = 
+                {
+                    new Aws.WafV2.Inputs.WebAclLoggingConfigurationLoggingFilterFilterArgs
+                    {
+                        Behavior = "DROP",
+                        Conditions = 
+                        {
+                            new Aws.WafV2.Inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs
+                            {
+                                ActionCondition = new Aws.WafV2.Inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs
+                                {
+                                    Action = "COUNT",
+                                },
+                            },
+                            new Aws.WafV2.Inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs
+                            {
+                                LabelNameCondition = new Aws.WafV2.Inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionArgs
+                                {
+                                    LabelName = "awswaf:111122223333:rulegroup:testRules:LabelNameZ",
+                                },
+                            },
+                        },
+                        Requirement = "MEETS_ALL",
+                    },
+                    new Aws.WafV2.Inputs.WebAclLoggingConfigurationLoggingFilterFilterArgs
+                    {
+                        Behavior = "KEEP",
+                        Conditions = 
+                        {
+                            new Aws.WafV2.Inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs
+                            {
+                                ActionCondition = new Aws.WafV2.Inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs
+                                {
+                                    Action = "ALLOW",
+                                },
+                            },
+                        },
+                        Requirement = "MEETS_ANY",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/wafv2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := wafv2.NewWebAclLoggingConfiguration(ctx, "example", &wafv2.WebAclLoggingConfigurationArgs{
+			LogDestinationConfigs: pulumi.StringArray{
+				pulumi.Any(aws_kinesis_firehose_delivery_stream.Example.Arn),
+			},
+			ResourceArn: pulumi.Any(aws_wafv2_web_acl.Example.Arn),
+			LoggingFilter: &wafv2.WebAclLoggingConfigurationLoggingFilterArgs{
+				DefaultBehavior: pulumi.String("KEEP"),
+				Filters: wafv2.WebAclLoggingConfigurationLoggingFilterFilterArray{
+					&wafv2.WebAclLoggingConfigurationLoggingFilterFilterArgs{
+						Behavior: pulumi.String("DROP"),
+						Conditions: wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionArray{
+							&wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs{
+								ActionCondition: &wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs{
+									Action: pulumi.String("COUNT"),
+								},
+							},
+							&wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs{
+								LabelNameCondition: &wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionArgs{
+									LabelName: pulumi.String("awswaf:111122223333:rulegroup:testRules:LabelNameZ"),
+								},
+							},
+						},
+						Requirement: pulumi.String("MEETS_ALL"),
+					},
+					&wafv2.WebAclLoggingConfigurationLoggingFilterFilterArgs{
+						Behavior: pulumi.String("KEEP"),
+						Conditions: wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionArray{
+							&wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs{
+								ActionCondition: &wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs{
+									Action: pulumi.String("ALLOW"),
+								},
+							},
+						},
+						Requirement: pulumi.String("MEETS_ANY"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.wafv2.WebAclLoggingConfiguration("example",
+    log_destination_configs=[aws_kinesis_firehose_delivery_stream["example"]["arn"]],
+    resource_arn=aws_wafv2_web_acl["example"]["arn"],
+    logging_filter=aws.wafv2.WebAclLoggingConfigurationLoggingFilterArgs(
+        default_behavior="KEEP",
+        filters=[
+            aws.wafv2.WebAclLoggingConfigurationLoggingFilterFilterArgs(
+                behavior="DROP",
+                conditions=[
+                    aws.wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs(
+                        action_condition=aws.wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs(
+                            action="COUNT",
+                        ),
+                    ),
+                    aws.wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs(
+                        label_name_condition=aws.wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionArgs(
+                            label_name="awswaf:111122223333:rulegroup:testRules:LabelNameZ",
+                        ),
+                    ),
+                ],
+                requirement="MEETS_ALL",
+            ),
+            aws.wafv2.WebAclLoggingConfigurationLoggingFilterFilterArgs(
+                behavior="KEEP",
+                conditions=[aws.wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs(
+                    action_condition=aws.wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs(
+                        action="ALLOW",
+                    ),
+                )],
+                requirement="MEETS_ANY",
+            ),
+        ],
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
+    logDestinationConfigs: [aws_kinesis_firehose_delivery_stream.example.arn],
+    resourceArn: aws_wafv2_web_acl.example.arn,
+    loggingFilter: {
+        defaultBehavior: "KEEP",
+        filters: [
+            {
+                behavior: "DROP",
+                conditions: [
+                    {
+                        actionCondition: {
+                            action: "COUNT",
+                        },
+                    },
+                    {
+                        labelNameCondition: {
+                            labelName: "awswaf:111122223333:rulegroup:testRules:LabelNameZ",
+                        },
+                    },
+                ],
+                requirement: "MEETS_ALL",
+            },
+            {
+                behavior: "KEEP",
+                conditions: [{
+                    actionCondition: {
+                        action: "ALLOW",
+                    },
+                }],
+                requirement: "MEETS_ANY",
+            },
+        ],
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -163,6 +393,7 @@ const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
 <span class="k">def </span><span class="nx">WebAclLoggingConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                                <span class="nx">log_destination_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">logging_filter</span><span class="p">:</span> <span class="nx">Optional[WebAclLoggingConfigurationLoggingFilterArgs]</span> = None<span class="p">,</span>
                                <span class="nx">redacted_fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebAclLoggingConfigurationRedactedFieldArgs]]</span> = None<span class="p">,</span>
                                <span class="nx">resource_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -338,13 +569,22 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the web ACL that you want to associate with `log_destination_configs`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loggingfilter_csharp">
+<a href="#loggingfilter_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilter">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration block that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation. See Logging Filter below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redactedfields_csharp">
 <a href="#redactedfields_csharp" style="color: inherit; text-decoration: inherit;">Redacted<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">List&lt;Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
+    <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported. See Redacted Fields below for more details.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -369,13 +609,22 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the web ACL that you want to associate with `log_destination_configs`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loggingfilter_go">
+<a href="#loggingfilter_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilter">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration block that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation. See Logging Filter below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redactedfields_go">
 <a href="#redactedfields_go" style="color: inherit; text-decoration: inherit;">Redacted<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">[]Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field</a></span>
     </dt>
-    <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
+    <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported. See Redacted Fields below for more details.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -400,13 +649,22 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the web ACL that you want to associate with `log_destination_configs`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loggingfilter_nodejs">
+<a href="#loggingfilter_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilter">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration block that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation. See Logging Filter below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redactedfields_nodejs">
 <a href="#redactedfields_nodejs" style="color: inherit; text-decoration: inherit;">redacted<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
+    <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported. See Redacted Fields below for more details.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -431,13 +689,22 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the web ACL that you want to associate with `log_destination_configs`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="logging_filter_python">
+<a href="#logging_filter_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilter">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration block that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation. See Logging Filter below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redacted_fields_python">
 <a href="#redacted_fields_python" style="color: inherit; text-decoration: inherit;">redacted_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">Sequence[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
+    <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported. See Redacted Fields below for more details.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -513,6 +780,7 @@ Get an existing WebAclLoggingConfiguration resource's state with the given name,
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">log_destination_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_filter</span><span class="p">:</span> <span class="nx">Optional[WebAclLoggingConfigurationLoggingFilterArgs]</span> = None<span class="p">,</span>
         <span class="nx">redacted_fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebAclLoggingConfigurationRedactedFieldArgs]]</span> = None<span class="p">,</span>
         <span class="nx">resource_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> WebAclLoggingConfiguration</code></pre></div>
 {{% /choosable %}}
@@ -636,13 +904,22 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL. Currently, only 1 ARN is supported.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_loggingfilter_csharp">
+<a href="#state_loggingfilter_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilter">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration block that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation. See Logging Filter below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_redactedfields_csharp">
 <a href="#state_redactedfields_csharp" style="color: inherit; text-decoration: inherit;">Redacted<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">List&lt;Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
+    <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported. See Redacted Fields below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcearn_csharp">
@@ -667,13 +944,22 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL. Currently, only 1 ARN is supported.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_loggingfilter_go">
+<a href="#state_loggingfilter_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilter">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration block that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation. See Logging Filter below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_redactedfields_go">
 <a href="#state_redactedfields_go" style="color: inherit; text-decoration: inherit;">Redacted<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">[]Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field</a></span>
     </dt>
-    <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
+    <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported. See Redacted Fields below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcearn_go">
@@ -698,13 +984,22 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL. Currently, only 1 ARN is supported.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_loggingfilter_nodejs">
+<a href="#state_loggingfilter_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilter">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration block that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation. See Logging Filter below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_redactedfields_nodejs">
 <a href="#state_redactedfields_nodejs" style="color: inherit; text-decoration: inherit;">redacted<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
+    <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported. See Redacted Fields below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcearn_nodejs">
@@ -729,13 +1024,22 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL. Currently, only 1 ARN is supported.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_logging_filter_python">
+<a href="#state_logging_filter_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilter">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration block that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation. See Logging Filter below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_redacted_fields_python">
 <a href="#state_redacted_fields_python" style="color: inherit; text-decoration: inherit;">redacted_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">Sequence[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
+    <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported. See Redacted Fields below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_arn_python">
@@ -756,6 +1060,420 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="webaclloggingconfigurationloggingfilter">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="defaultbehavior_csharp">
+<a href="#defaultbehavior_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Default handling for logs that don't match any of the specified filtering conditions. Valid values: `KEEP` or `DROP`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filters_csharp">
+<a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilterfilter">List&lt;Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Filter(s) that you want to apply to the logs. See Filter below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="defaultbehavior_go">
+<a href="#defaultbehavior_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Default handling for logs that don't match any of the specified filtering conditions. Valid values: `KEEP` or `DROP`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filters_go">
+<a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilterfilter">[]Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter</a></span>
+    </dt>
+    <dd>{{% md %}}Filter(s) that you want to apply to the logs. See Filter below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="defaultbehavior_nodejs">
+<a href="#defaultbehavior_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Default handling for logs that don't match any of the specified filtering conditions. Valid values: `KEEP` or `DROP`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filters_nodejs">
+<a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilterfilter">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Filter(s) that you want to apply to the logs. See Filter below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="default_behavior_python">
+<a href="#default_behavior_python" style="color: inherit; text-decoration: inherit;">default_<wbr>behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Default handling for logs that don't match any of the specified filtering conditions. Valid values: `KEEP` or `DROP`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filters_python">
+<a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilterfilter">Sequence[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Filter(s) that you want to apply to the logs. See Filter below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="webaclloggingconfigurationloggingfilterfilter">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="behavior_csharp">
+<a href="#behavior_csharp" style="color: inherit; text-decoration: inherit;">Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}How to handle logs that satisfy the filter's conditions and requirement. Valid values: `KEEP` or `DROP`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="conditions_csharp">
+<a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilterfiltercondition">List&lt;Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter<wbr>Condition<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Match condition(s) for the filter. See Condition below for more details.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="requirement_csharp">
+<a href="#requirement_csharp" style="color: inherit; text-decoration: inherit;">Requirement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition. Valid values: `MEETS_ALL` or `MEETS_ANY`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="behavior_go">
+<a href="#behavior_go" style="color: inherit; text-decoration: inherit;">Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}How to handle logs that satisfy the filter's conditions and requirement. Valid values: `KEEP` or `DROP`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="conditions_go">
+<a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilterfiltercondition">[]Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}Match condition(s) for the filter. See Condition below for more details.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="requirement_go">
+<a href="#requirement_go" style="color: inherit; text-decoration: inherit;">Requirement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition. Valid values: `MEETS_ALL` or `MEETS_ANY`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="behavior_nodejs">
+<a href="#behavior_nodejs" style="color: inherit; text-decoration: inherit;">behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}How to handle logs that satisfy the filter's conditions and requirement. Valid values: `KEEP` or `DROP`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="conditions_nodejs">
+<a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilterfiltercondition">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter<wbr>Condition<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Match condition(s) for the filter. See Condition below for more details.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="requirement_nodejs">
+<a href="#requirement_nodejs" style="color: inherit; text-decoration: inherit;">requirement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition. Valid values: `MEETS_ALL` or `MEETS_ANY`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="behavior_python">
+<a href="#behavior_python" style="color: inherit; text-decoration: inherit;">behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}How to handle logs that satisfy the filter's conditions and requirement. Valid values: `KEEP` or `DROP`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="conditions_python">
+<a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilterfiltercondition">Sequence[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter<wbr>Condition<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Match condition(s) for the filter. See Condition below for more details.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="requirement_python">
+<a href="#requirement_python" style="color: inherit; text-decoration: inherit;">requirement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition. Valid values: `MEETS_ALL` or `MEETS_ANY`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="webaclloggingconfigurationloggingfilterfiltercondition">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter<wbr>Condition</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="actioncondition_csharp">
+<a href="#actioncondition_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilterfilterconditionactioncondition">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter<wbr>Condition<wbr>Action<wbr>Condition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A single action condition. See Action Condition below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="labelnamecondition_csharp">
+<a href="#labelnamecondition_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Name<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilterfilterconditionlabelnamecondition">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter<wbr>Condition<wbr>Label<wbr>Name<wbr>Condition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A single label name condition. See Label Name Condition below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="actioncondition_go">
+<a href="#actioncondition_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilterfilterconditionactioncondition">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter<wbr>Condition<wbr>Action<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}A single action condition. See Action Condition below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="labelnamecondition_go">
+<a href="#labelnamecondition_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Name<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilterfilterconditionlabelnamecondition">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter<wbr>Condition<wbr>Label<wbr>Name<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}A single label name condition. See Label Name Condition below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="actioncondition_nodejs">
+<a href="#actioncondition_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilterfilterconditionactioncondition">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter<wbr>Condition<wbr>Action<wbr>Condition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A single action condition. See Action Condition below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="labelnamecondition_nodejs">
+<a href="#labelnamecondition_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Name<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilterfilterconditionlabelnamecondition">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter<wbr>Condition<wbr>Label<wbr>Name<wbr>Condition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A single label name condition. See Label Name Condition below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_condition_python">
+<a href="#action_condition_python" style="color: inherit; text-decoration: inherit;">action_<wbr>condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilterfilterconditionactioncondition">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter<wbr>Condition<wbr>Action<wbr>Condition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A single action condition. See Action Condition below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="label_name_condition_python">
+<a href="#label_name_condition_python" style="color: inherit; text-decoration: inherit;">label_<wbr>name_<wbr>condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationloggingfilterfilterconditionlabelnamecondition">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter<wbr>Condition<wbr>Label<wbr>Name<wbr>Condition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A single label name condition. See Label Name Condition below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="webaclloggingconfigurationloggingfilterfilterconditionactioncondition">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter<wbr>Condition<wbr>Action<wbr>Condition</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action setting that a log record must contain in order to meet the condition. Valid values: `ALLOW`, `BLOCK`, `COUNT`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action setting that a log record must contain in order to meet the condition. Valid values: `ALLOW`, `BLOCK`, `COUNT`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action setting that a log record must contain in order to meet the condition. Valid values: `ALLOW`, `BLOCK`, `COUNT`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The action setting that a log record must contain in order to meet the condition. Valid values: `ALLOW`, `BLOCK`, `COUNT`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="webaclloggingconfigurationloggingfilterfilterconditionlabelnamecondition">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Filter<wbr>Condition<wbr>Label<wbr>Name<wbr>Condition</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labelname_csharp">
+<a href="#labelname_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The label name that a log record must contain in order to meet the condition. This must be a fully qualified label name. Fully qualified labels have a prefix, optional namespaces, and label name. The prefix identifies the rule group or web ACL context of the rule that added the label.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labelname_go">
+<a href="#labelname_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The label name that a log record must contain in order to meet the condition. This must be a fully qualified label name. Fully qualified labels have a prefix, optional namespaces, and label name. The prefix identifies the rule group or web ACL context of the rule that added the label.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labelname_nodejs">
+<a href="#labelname_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The label name that a log record must contain in order to meet the condition. This must be a fully qualified label name. Fully qualified labels have a prefix, optional namespaces, and label name. The prefix identifies the rule group or web ACL context of the rule that added the label.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="label_name_python">
+<a href="#label_name_python" style="color: inherit; text-decoration: inherit;">label_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The label name that a log record must contain in order to meet the condition. This must be a fully qualified label name. Fully qualified labels have a prefix, optional namespaces, and label name. The prefix identifies the rule group or web ACL context of the rule that added the label.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="webaclloggingconfigurationredactedfield">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field</h4>
 

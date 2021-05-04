@@ -450,6 +450,7 @@ const example = new aws.storagegateway.Gateway("example", {
             <span class="nx">smb_guest_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">smb_security_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
             <span class="nx">tape_drive_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Gateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -741,6 +742,15 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tapedrivetype_csharp">
 <a href="#tapedrivetype_csharp" style="color: inherit; text-decoration: inherit;">Tape<wbr>Drive<wbr>Type</a>
 </span>
@@ -887,6 +897,15 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tapedrivetype_go">
@@ -1037,6 +1056,15 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tapedrivetype_nodejs">
 <a href="#tapedrivetype_nodejs" style="color: inherit; text-decoration: inherit;">tape<wbr>Drive<wbr>Type</a>
 </span>
@@ -1183,6 +1211,15 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tape_drive_type_python">
@@ -1503,6 +1540,7 @@ Get an existing Gateway resource's state with the given name, ID, and optional e
         <span class="nx">smb_guest_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">smb_security_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">tape_drive_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Gateway</code></pre></div>
 {{% /choosable %}}
 
@@ -1805,6 +1843,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tapedrivetype_csharp">
 <a href="#state_tapedrivetype_csharp" style="color: inherit; text-decoration: inherit;">Tape<wbr>Drive<wbr>Type</a>
 </span>
@@ -2005,6 +2052,15 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tapedrivetype_go">
@@ -2209,6 +2265,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tapedrivetype_nodejs">
 <a href="#state_tapedrivetype_nodejs" style="color: inherit; text-decoration: inherit;">tape<wbr>Drive<wbr>Type</a>
 </span>
@@ -2409,6 +2474,15 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tape_drive_type_python">
@@ -2766,19 +2840,7 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
  $ pulumi import aws:storagegateway/gateway:Gateway example arn:aws:storagegateway:us-east-1:123456789012:gateway/sgw-12345678
 ```
 
- <<<<<<< HEAD Certain resource arguments, like `gateway_ip_address` do not have a Storage Gateway API method for reading the information after creation, either omit the argument from the provider configuration or use `ignoreChanges` to hide the difference. ======= Certain resource arguments, like `gateway_ip_address` do not have a Storage Gateway API method for reading the information after creation, either omit the argument from the provider configuration or use `ignore_changes` to hide the difference, e.g. terraform resource "aws_storagegateway_gateway" "example" {
-
-# ... other configuration ...
-
- gateway_ip_address = aws_instance.sgw.private_ip
-
-# There is no Storage Gateway API for reading gateway_ip_address
-
- lifecycle {
-
- ignore_changes = ["gateway_ip_address"]
-
- } } >>>>>>> v3.33.0
+ Certain resource arguments, like `gateway_ip_address` do not have a Storage Gateway API method for reading the information after creation, either omit the argument from the provider configuration or use `ignoreChanges` to hide the difference.
 
 
 

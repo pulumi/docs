@@ -144,6 +144,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
                         <span class="nx">instance_platform</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstancePlatform]]</span> = None<span class="p">,</span>
                         <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstanceType]]</span> = None<span class="p">,</span>
                         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                         <span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[Union[str, Tenancy]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">CapacityReservation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -387,8 +388,15 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenancy_csharp">
 <a href="#tenancy_csharp" style="color: inherit; text-decoration: inherit;">Tenancy</a>
@@ -490,8 +498,15 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenancy_go">
 <a href="#tenancy_go" style="color: inherit; text-decoration: inherit;">Tenancy</a>
@@ -593,8 +608,15 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenancy_nodejs">
 <a href="#tenancy_nodejs" style="color: inherit; text-decoration: inherit;">tenancy</a>
@@ -696,8 +718,15 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenancy_python">
 <a href="#tenancy_python" style="color: inherit; text-decoration: inherit;">tenancy</a>
@@ -864,6 +893,7 @@ Get an existing CapacityReservation resource's state with the given name, ID, an
         <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstanceType]]</span> = None<span class="p">,</span>
         <span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[Union[str, Tenancy]]</span> = None<span class="p">) -&gt;</span> CapacityReservation</code></pre></div>
 {{% /choosable %}}
 
@@ -1082,8 +1112,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenancy_csharp">
 <a href="#state_tenancy_csharp" style="color: inherit; text-decoration: inherit;">Tenancy</a>
@@ -1203,8 +1240,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenancy_go">
 <a href="#state_tenancy_go" style="color: inherit; text-decoration: inherit;">Tenancy</a>
@@ -1324,8 +1368,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenancy_nodejs">
 <a href="#state_tenancy_nodejs" style="color: inherit; text-decoration: inherit;">tenancy</a>
@@ -1445,8 +1496,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenancy_python">
 <a href="#state_tenancy_python" style="color: inherit; text-decoration: inherit;">tenancy</a>

@@ -122,7 +122,8 @@ const test = new aws.efs.AccessPoint("test", {fileSystemId: aws_efs_file_system.
                 <span class="nx">file_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">posix_user</span><span class="p">:</span> <span class="nx">Optional[AccessPointPosixUserArgs]</span> = None<span class="p">,</span>
                 <span class="nx">root_directory</span><span class="p">:</span> <span class="nx">Optional[AccessPointRootDirectoryArgs]</span> = None<span class="p">,</span>
-                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">AccessPoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessPointArgs</a></span><span class="p">,</span>
@@ -284,7 +285,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the file system for which the access point is intended.
+    <dd>{{% md %}}ID of the file system for which the access point is intended.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="posixuser_csharp">
@@ -293,7 +294,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointposixuser">Access<wbr>Point<wbr>Posix<wbr>User<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The operating system user and group applied to all file system requests made using the access point. See Posix User below.
+    <dd>{{% md %}}Operating system user and group applied to all file system requests made using the access point. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootdirectory_csharp">
@@ -302,7 +303,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointrootdirectory">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the directory on the Amazon EFS file system that the access point provides access to. See Root Directory below.
+    <dd>{{% md %}}Directory on the Amazon EFS file system that the access point provides access to. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -311,8 +312,15 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -324,7 +332,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the file system for which the access point is intended.
+    <dd>{{% md %}}ID of the file system for which the access point is intended.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="posixuser_go">
@@ -333,7 +341,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointposixuser">Access<wbr>Point<wbr>Posix<wbr>User</a></span>
     </dt>
-    <dd>{{% md %}}The operating system user and group applied to all file system requests made using the access point. See Posix User below.
+    <dd>{{% md %}}Operating system user and group applied to all file system requests made using the access point. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootdirectory_go">
@@ -342,7 +350,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointrootdirectory">Access<wbr>Point<wbr>Root<wbr>Directory</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the directory on the Amazon EFS file system that the access point provides access to. See Root Directory below.
+    <dd>{{% md %}}Directory on the Amazon EFS file system that the access point provides access to. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -351,8 +359,15 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -364,7 +379,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the file system for which the access point is intended.
+    <dd>{{% md %}}ID of the file system for which the access point is intended.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="posixuser_nodejs">
@@ -373,7 +388,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointposixuser">Access<wbr>Point<wbr>Posix<wbr>User<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The operating system user and group applied to all file system requests made using the access point. See Posix User below.
+    <dd>{{% md %}}Operating system user and group applied to all file system requests made using the access point. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootdirectory_nodejs">
@@ -382,7 +397,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointrootdirectory">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the directory on the Amazon EFS file system that the access point provides access to. See Root Directory below.
+    <dd>{{% md %}}Directory on the Amazon EFS file system that the access point provides access to. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -391,8 +406,15 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -404,7 +426,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the file system for which the access point is intended.
+    <dd>{{% md %}}ID of the file system for which the access point is intended.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="posix_user_python">
@@ -413,7 +435,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointposixuser">Access<wbr>Point<wbr>Posix<wbr>User<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The operating system user and group applied to all file system requests made using the access point. See Posix User below.
+    <dd>{{% md %}}Operating system user and group applied to all file system requests made using the access point. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="root_directory_python">
@@ -422,7 +444,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointrootdirectory">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the directory on the Amazon EFS file system that the access point provides access to. See Root Directory below.
+    <dd>{{% md %}}Directory on the Amazon EFS file system that the access point provides access to. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -431,8 +453,15 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -451,7 +480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name of the access point.
+    <dd>{{% md %}}ARN of the access point.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filesystemarn_csharp">
@@ -460,7 +489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name of the file system.
+    <dd>{{% md %}}ARN of the file system.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -489,7 +518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name of the access point.
+    <dd>{{% md %}}ARN of the access point.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filesystemarn_go">
@@ -498,7 +527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name of the file system.
+    <dd>{{% md %}}ARN of the file system.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -527,7 +556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name of the access point.
+    <dd>{{% md %}}ARN of the access point.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filesystemarn_nodejs">
@@ -536,7 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name of the file system.
+    <dd>{{% md %}}ARN of the file system.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -565,7 +594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name of the access point.
+    <dd>{{% md %}}ARN of the access point.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="file_system_arn_python">
@@ -574,7 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name of the file system.
+    <dd>{{% md %}}ARN of the file system.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -616,7 +645,8 @@ Get an existing AccessPoint resource's state with the given name, ID, and option
         <span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">posix_user</span><span class="p">:</span> <span class="nx">Optional[AccessPointPosixUserArgs]</span> = None<span class="p">,</span>
         <span class="nx">root_directory</span><span class="p">:</span> <span class="nx">Optional[AccessPointRootDirectoryArgs]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> AccessPoint</code></pre></div>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> AccessPoint</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -735,7 +765,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name of the access point.
+    <dd>{{% md %}}ARN of the access point.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filesystemarn_csharp">
@@ -744,7 +774,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name of the file system.
+    <dd>{{% md %}}ARN of the file system.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filesystemid_csharp">
@@ -753,7 +783,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the file system for which the access point is intended.
+    <dd>{{% md %}}ID of the file system for which the access point is intended.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownerid_csharp">
@@ -770,7 +800,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointposixuser">Access<wbr>Point<wbr>Posix<wbr>User<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The operating system user and group applied to all file system requests made using the access point. See Posix User below.
+    <dd>{{% md %}}Operating system user and group applied to all file system requests made using the access point. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootdirectory_csharp">
@@ -779,7 +809,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointrootdirectory">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the directory on the Amazon EFS file system that the access point provides access to. See Root Directory below.
+    <dd>{{% md %}}Directory on the Amazon EFS file system that the access point provides access to. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -788,8 +818,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -801,7 +838,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name of the access point.
+    <dd>{{% md %}}ARN of the access point.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filesystemarn_go">
@@ -810,7 +847,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name of the file system.
+    <dd>{{% md %}}ARN of the file system.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filesystemid_go">
@@ -819,7 +856,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the file system for which the access point is intended.
+    <dd>{{% md %}}ID of the file system for which the access point is intended.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownerid_go">
@@ -836,7 +873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointposixuser">Access<wbr>Point<wbr>Posix<wbr>User</a></span>
     </dt>
-    <dd>{{% md %}}The operating system user and group applied to all file system requests made using the access point. See Posix User below.
+    <dd>{{% md %}}Operating system user and group applied to all file system requests made using the access point. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootdirectory_go">
@@ -845,7 +882,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointrootdirectory">Access<wbr>Point<wbr>Root<wbr>Directory</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the directory on the Amazon EFS file system that the access point provides access to. See Root Directory below.
+    <dd>{{% md %}}Directory on the Amazon EFS file system that the access point provides access to. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -854,8 +891,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -867,7 +911,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name of the access point.
+    <dd>{{% md %}}ARN of the access point.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filesystemarn_nodejs">
@@ -876,7 +920,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name of the file system.
+    <dd>{{% md %}}ARN of the file system.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filesystemid_nodejs">
@@ -885,7 +929,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the file system for which the access point is intended.
+    <dd>{{% md %}}ID of the file system for which the access point is intended.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownerid_nodejs">
@@ -902,7 +946,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointposixuser">Access<wbr>Point<wbr>Posix<wbr>User<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The operating system user and group applied to all file system requests made using the access point. See Posix User below.
+    <dd>{{% md %}}Operating system user and group applied to all file system requests made using the access point. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootdirectory_nodejs">
@@ -911,7 +955,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointrootdirectory">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the directory on the Amazon EFS file system that the access point provides access to. See Root Directory below.
+    <dd>{{% md %}}Directory on the Amazon EFS file system that the access point provides access to. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -920,8 +964,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -933,7 +984,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name of the access point.
+    <dd>{{% md %}}ARN of the access point.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_file_system_arn_python">
@@ -942,7 +993,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name of the file system.
+    <dd>{{% md %}}ARN of the file system.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_file_system_id_python">
@@ -951,7 +1002,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the file system for which the access point is intended.
+    <dd>{{% md %}}ID of the file system for which the access point is intended.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_owner_id_python">
@@ -968,7 +1019,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointposixuser">Access<wbr>Point<wbr>Posix<wbr>User<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The operating system user and group applied to all file system requests made using the access point. See Posix User below.
+    <dd>{{% md %}}Operating system user and group applied to all file system requests made using the access point. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_root_directory_python">
@@ -977,7 +1028,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointrootdirectory">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the directory on the Amazon EFS file system that the access point provides access to. See Root Directory below.
+    <dd>{{% md %}}Directory on the Amazon EFS file system that the access point provides access to. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -986,8 +1037,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1010,7 +1068,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The POSIX group ID used for all file system operations using this access point.
+    <dd>{{% md %}}POSIX group ID used for all file system operations using this access point.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uid_csharp">
@@ -1019,7 +1077,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The POSIX user ID used for all file system operations using this access point.
+    <dd>{{% md %}}POSIX user ID used for all file system operations using this access point.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarygids_csharp">
@@ -1041,7 +1099,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The POSIX group ID used for all file system operations using this access point.
+    <dd>{{% md %}}POSIX group ID used for all file system operations using this access point.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uid_go">
@@ -1050,7 +1108,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The POSIX user ID used for all file system operations using this access point.
+    <dd>{{% md %}}POSIX user ID used for all file system operations using this access point.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarygids_go">
@@ -1072,7 +1130,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The POSIX group ID used for all file system operations using this access point.
+    <dd>{{% md %}}POSIX group ID used for all file system operations using this access point.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uid_nodejs">
@@ -1081,7 +1139,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The POSIX user ID used for all file system operations using this access point.
+    <dd>{{% md %}}POSIX user ID used for all file system operations using this access point.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarygids_nodejs">
@@ -1103,7 +1161,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The POSIX group ID used for all file system operations using this access point.
+    <dd>{{% md %}}POSIX group ID used for all file system operations using this access point.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uid_python">
@@ -1112,7 +1170,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The POSIX user ID used for all file system operations using this access point.
+    <dd>{{% md %}}POSIX user ID used for all file system operations using this access point.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondary_gids_python">
@@ -1136,7 +1194,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointrootdirectorycreationinfo">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.
+    <dd>{{% md %}}POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
@@ -1145,7 +1203,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the path on the EFS file system to expose as the root directory to NFS clients using the access point to access the EFS file system. A path can have up to four subdirectories. If the specified path does not exist, you are required to provide `creation_info`.
+    <dd>{{% md %}}Path on the EFS file system to expose as the root directory to NFS clients using the access point to access the EFS file system. A path can have up to four subdirectories. If the specified path does not exist, you are required to provide `creation_info`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1158,7 +1216,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointrootdirectorycreationinfo">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.
+    <dd>{{% md %}}POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
@@ -1167,7 +1225,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the path on the EFS file system to expose as the root directory to NFS clients using the access point to access the EFS file system. A path can have up to four subdirectories. If the specified path does not exist, you are required to provide `creation_info`.
+    <dd>{{% md %}}Path on the EFS file system to expose as the root directory to NFS clients using the access point to access the EFS file system. A path can have up to four subdirectories. If the specified path does not exist, you are required to provide `creation_info`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1180,7 +1238,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointrootdirectorycreationinfo">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.
+    <dd>{{% md %}}POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
@@ -1189,7 +1247,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the path on the EFS file system to expose as the root directory to NFS clients using the access point to access the EFS file system. A path can have up to four subdirectories. If the specified path does not exist, you are required to provide `creation_info`.
+    <dd>{{% md %}}Path on the EFS file system to expose as the root directory to NFS clients using the access point to access the EFS file system. A path can have up to four subdirectories. If the specified path does not exist, you are required to provide `creation_info`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1202,7 +1260,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointrootdirectorycreationinfo">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.
+    <dd>{{% md %}}POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
@@ -1211,7 +1269,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the path on the EFS file system to expose as the root directory to NFS clients using the access point to access the EFS file system. A path can have up to four subdirectories. If the specified path does not exist, you are required to provide `creation_info`.
+    <dd>{{% md %}}Path on the EFS file system to expose as the root directory to NFS clients using the access point to access the EFS file system. A path can have up to four subdirectories. If the specified path does not exist, you are required to provide `creation_info`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1226,7 +1284,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the POSIX group ID to apply to the `root_directory`.
+    <dd>{{% md %}}POSIX group ID to apply to the `root_directory`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="owneruid_csharp">
@@ -1235,7 +1293,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the POSIX user ID to apply to the `root_directory`.
+    <dd>{{% md %}}POSIX user ID to apply to the `root_directory`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_csharp">
@@ -1244,7 +1302,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file's mode bits.
+    <dd>{{% md %}}POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file's mode bits.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1257,7 +1315,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the POSIX group ID to apply to the `root_directory`.
+    <dd>{{% md %}}POSIX group ID to apply to the `root_directory`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="owneruid_go">
@@ -1266,7 +1324,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the POSIX user ID to apply to the `root_directory`.
+    <dd>{{% md %}}POSIX user ID to apply to the `root_directory`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_go">
@@ -1275,7 +1333,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file's mode bits.
+    <dd>{{% md %}}POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file's mode bits.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1288,7 +1346,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the POSIX group ID to apply to the `root_directory`.
+    <dd>{{% md %}}POSIX group ID to apply to the `root_directory`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="owneruid_nodejs">
@@ -1297,7 +1355,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the POSIX user ID to apply to the `root_directory`.
+    <dd>{{% md %}}POSIX user ID to apply to the `root_directory`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_nodejs">
@@ -1306,7 +1364,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file's mode bits.
+    <dd>{{% md %}}POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file's mode bits.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1319,7 +1377,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the POSIX group ID to apply to the `root_directory`.
+    <dd>{{% md %}}POSIX group ID to apply to the `root_directory`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="owner_uid_python">
@@ -1328,7 +1386,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the POSIX user ID to apply to the `root_directory`.
+    <dd>{{% md %}}POSIX user ID to apply to the `root_directory`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_python">
@@ -1337,7 +1395,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file's mode bits.
+    <dd>{{% md %}}POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file's mode bits.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

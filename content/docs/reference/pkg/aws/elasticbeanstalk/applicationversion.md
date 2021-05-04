@@ -196,7 +196,8 @@ const defaultApplicationVersion = new aws.elasticbeanstalk.ApplicationVersion("d
                        <span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                        <span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+                       <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                       <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ApplicationVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationVersionArgs</a></span><span class="p">,</span>
@@ -394,8 +395,7 @@ The ApplicationVersion resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}On delete, force an Application Version to be deleted when it may be in use
-by multiple Elastic Beanstalk Environments.
+    <dd>{{% md %}}On delete, force an Application Version to be deleted when it may be in use by multiple Elastic Beanstalk Environments.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -404,7 +404,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name for the this Application Version.
+    <dd>{{% md %}}Unique name for the this Application Version.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -413,8 +413,15 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -462,8 +469,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}On delete, force an Application Version to be deleted when it may be in use
-by multiple Elastic Beanstalk Environments.
+    <dd>{{% md %}}On delete, force an Application Version to be deleted when it may be in use by multiple Elastic Beanstalk Environments.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -472,7 +478,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name for the this Application Version.
+    <dd>{{% md %}}Unique name for the this Application Version.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -481,8 +487,15 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -530,8 +543,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}On delete, force an Application Version to be deleted when it may be in use
-by multiple Elastic Beanstalk Environments.
+    <dd>{{% md %}}On delete, force an Application Version to be deleted when it may be in use by multiple Elastic Beanstalk Environments.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -540,7 +552,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name for the this Application Version.
+    <dd>{{% md %}}Unique name for the this Application Version.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -549,8 +561,15 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -598,8 +617,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}On delete, force an Application Version to be deleted when it may be in use
-by multiple Elastic Beanstalk Environments.
+    <dd>{{% md %}}On delete, force an Application Version to be deleted when it may be in use by multiple Elastic Beanstalk Environments.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -608,7 +626,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique name for the this Application Version.
+    <dd>{{% md %}}Unique name for the this Application Version.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -617,8 +635,15 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -637,7 +662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN assigned by AWS for this Elastic Beanstalk Application.
+    <dd>{{% md %}}ARN assigned by AWS for this Elastic Beanstalk Application.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -658,7 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN assigned by AWS for this Elastic Beanstalk Application.
+    <dd>{{% md %}}ARN assigned by AWS for this Elastic Beanstalk Application.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -679,7 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN assigned by AWS for this Elastic Beanstalk Application.
+    <dd>{{% md %}}ARN assigned by AWS for this Elastic Beanstalk Application.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -700,7 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN assigned by AWS for this Elastic Beanstalk Application.
+    <dd>{{% md %}}ARN assigned by AWS for this Elastic Beanstalk Application.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -735,7 +760,8 @@ Get an existing ApplicationVersion resource's state with the given name, ID, and
         <span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> ApplicationVersion</code></pre></div>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> ApplicationVersion</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -863,7 +889,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN assigned by AWS for this Elastic Beanstalk Application.
+    <dd>{{% md %}}ARN assigned by AWS for this Elastic Beanstalk Application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_csharp">
@@ -890,8 +916,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}On delete, force an Application Version to be deleted when it may be in use
-by multiple Elastic Beanstalk Environments.
+    <dd>{{% md %}}On delete, force an Application Version to be deleted when it may be in use by multiple Elastic Beanstalk Environments.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_csharp">
@@ -909,7 +934,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name for the this Application Version.
+    <dd>{{% md %}}Unique name for the this Application Version.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -918,8 +943,15 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -940,7 +972,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN assigned by AWS for this Elastic Beanstalk Application.
+    <dd>{{% md %}}ARN assigned by AWS for this Elastic Beanstalk Application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_go">
@@ -967,8 +999,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}On delete, force an Application Version to be deleted when it may be in use
-by multiple Elastic Beanstalk Environments.
+    <dd>{{% md %}}On delete, force an Application Version to be deleted when it may be in use by multiple Elastic Beanstalk Environments.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_go">
@@ -986,7 +1017,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name for the this Application Version.
+    <dd>{{% md %}}Unique name for the this Application Version.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -995,8 +1026,15 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1017,7 +1055,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN assigned by AWS for this Elastic Beanstalk Application.
+    <dd>{{% md %}}ARN assigned by AWS for this Elastic Beanstalk Application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_nodejs">
@@ -1044,8 +1082,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}On delete, force an Application Version to be deleted when it may be in use
-by multiple Elastic Beanstalk Environments.
+    <dd>{{% md %}}On delete, force an Application Version to be deleted when it may be in use by multiple Elastic Beanstalk Environments.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_nodejs">
@@ -1063,7 +1100,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name for the this Application Version.
+    <dd>{{% md %}}Unique name for the this Application Version.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -1072,8 +1109,15 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1094,7 +1138,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN assigned by AWS for this Elastic Beanstalk Application.
+    <dd>{{% md %}}ARN assigned by AWS for this Elastic Beanstalk Application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_python">
@@ -1121,8 +1165,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}On delete, force an Application Version to be deleted when it may be in use
-by multiple Elastic Beanstalk Environments.
+    <dd>{{% md %}}On delete, force an Application Version to be deleted when it may be in use by multiple Elastic Beanstalk Environments.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_python">
@@ -1140,7 +1183,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique name for the this Application Version.
+    <dd>{{% md %}}Unique name for the this Application Version.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -1149,8 +1192,15 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

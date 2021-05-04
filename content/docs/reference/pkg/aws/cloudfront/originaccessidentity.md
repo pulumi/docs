@@ -116,7 +116,7 @@ const s3Policy = aws.iam.getPolicyDocument({
         resources: [`${aws_s3_bucket.example.arn}/*`],
         principals: [{
             type: "AWS",
-            identifiers: [aws_cloudfront_origin_access_identity.origin_access_identity.iam_arn],
+            identifiers: [aws_cloudfront_origin_access_identity.example.iam_arn],
         }],
     }],
 });
@@ -134,7 +134,7 @@ s3_policy = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentSta
     resources=[f"{aws_s3_bucket['example']['arn']}/*"],
     principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
         type="AWS",
-        identifiers=[aws_cloudfront_origin_access_identity["origin_access_identity"]["iam_arn"]],
+        identifiers=[aws_cloudfront_origin_access_identity["example"]["iam_arn"]],
     )],
 )])
 example = aws.s3.BucketPolicy("example",
@@ -170,7 +170,7 @@ class MyStack : Stack
                             Type = "AWS",
                             Identifiers = 
                             {
-                                aws_cloudfront_origin_access_identity.Origin_access_identity.Iam_arn,
+                                aws_cloudfront_origin_access_identity.Example.Iam_arn,
                             },
                         },
                     },
@@ -210,7 +210,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var originAccessIdentity = new Aws.CloudFront.OriginAccessIdentity("originAccessIdentity", new Aws.CloudFront.OriginAccessIdentityArgs
+        var example = new Aws.CloudFront.OriginAccessIdentity("example", new Aws.CloudFront.OriginAccessIdentityArgs
         {
             Comment = "Some comment",
         });
@@ -235,7 +235,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cloudfront.NewOriginAccessIdentity(ctx, "originAccessIdentity", &cloudfront.OriginAccessIdentityArgs{
+		_, err := cloudfront.NewOriginAccessIdentity(ctx, "example", &cloudfront.OriginAccessIdentityArgs{
 			Comment: pulumi.String("Some comment"),
 		})
 		if err != nil {
@@ -256,7 +256,7 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-origin_access_identity = aws.cloudfront.OriginAccessIdentity("originAccessIdentity", comment="Some comment")
+example = aws.cloudfront.OriginAccessIdentity("example", comment="Some comment")
 ```
 
 
@@ -270,7 +270,7 @@ origin_access_identity = aws.cloudfront.OriginAccessIdentity("originAccessIdenti
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_access_identity", {
+const example = new aws.cloudfront.OriginAccessIdentity("example", {
     comment: "Some comment",
 });
 ```

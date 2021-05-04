@@ -142,6 +142,7 @@ const example = new aws.ec2transitgateway.VpcAttachmentAccepter("example", {
 <span class="k">def </span><span class="nx">VpcAttachmentAccepter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                          <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                           <span class="nx">transit_gateway_attachment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">transit_gateway_default_route_table_association</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                           <span class="nx">transit_gateway_default_route_table_propagation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
@@ -315,8 +316,15 @@ The VpcAttachmentAccepter resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway VPC Attachment.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transitgatewaydefaultroutetableassociation_csharp">
 <a href="#transitgatewaydefaultroutetableassociation_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Default<wbr>Route<wbr>Table<wbr>Association</a>
@@ -355,8 +363,15 @@ The VpcAttachmentAccepter resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway VPC Attachment.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transitgatewaydefaultroutetableassociation_go">
 <a href="#transitgatewaydefaultroutetableassociation_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Default<wbr>Route<wbr>Table<wbr>Association</a>
@@ -395,8 +410,15 @@ The VpcAttachmentAccepter resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway VPC Attachment.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transitgatewaydefaultroutetableassociation_nodejs">
 <a href="#transitgatewaydefaultroutetableassociation_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Gateway<wbr>Default<wbr>Route<wbr>Table<wbr>Association</a>
@@ -435,8 +457,15 @@ The VpcAttachmentAccepter resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway VPC Attachment.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transit_gateway_default_route_table_association_python">
 <a href="#transit_gateway_default_route_table_association_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>gateway_<wbr>default_<wbr>route_<wbr>table_<wbr>association</a>
@@ -785,6 +814,7 @@ Get an existing VpcAttachmentAccepter resource's state with the given name, ID, 
         <span class="nx">ipv6_support</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">transit_gateway_attachment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">transit_gateway_default_route_table_association</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">transit_gateway_default_route_table_propagation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -945,8 +975,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway VPC Attachment.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayattachmentid_csharp">
 <a href="#state_transitgatewayattachmentid_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Attachment<wbr>Id</a>
@@ -1048,8 +1085,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway VPC Attachment.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayattachmentid_go">
 <a href="#state_transitgatewayattachmentid_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Attachment<wbr>Id</a>
@@ -1151,8 +1195,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway VPC Attachment.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayattachmentid_nodejs">
 <a href="#state_transitgatewayattachmentid_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Gateway<wbr>Attachment<wbr>Id</a>
@@ -1254,8 +1305,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway VPC Attachment.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transit_gateway_attachment_id_python">
 <a href="#state_transit_gateway_attachment_id_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>gateway_<wbr>attachment_<wbr>id</a>

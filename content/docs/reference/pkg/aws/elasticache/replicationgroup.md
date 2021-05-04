@@ -480,6 +480,7 @@ const secondary = new aws.elasticache.ReplicationGroup("secondary", {
                      <span class="nx">snapshot_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">subnet_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                     <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                      <span class="nx">transit_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ReplicationGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -723,7 +724,7 @@ The ReplicationGroup resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group.
+    <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g. `6.x`, otherwise, specify the full version desired, e.g. `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finalsnapshotidentifier_csharp">
@@ -759,9 +760,7 @@ The ReplicationGroup resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the weekly time range for when maintenance
-on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
-The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
+    <dd>{{% md %}}Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multiazenabled_csharp">
@@ -788,9 +787,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An Amazon Resource Name (ARN) of an
-SNS topic to send ElastiCache notifications to. Example:
-`arn:aws:sns:us-east-1:012345678999:my_sns_topic`
+    <dd>{{% md %}}An Amazon Resource Name (ARN) of an SNS topic to send ElastiCache notifications to. Example:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbercacheclusters_csharp">
@@ -853,8 +850,7 @@ SNS topic to send ElastiCache notifications to. Example:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of
-Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
+    <dd>{{% md %}}A list of Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotname_csharp">
@@ -872,11 +868,7 @@ Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Am
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of days for which ElastiCache will
-retain automatic cache cluster snapshots before deleting them. For example, if you set
-SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
-before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
-Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
+    <dd>{{% md %}}The number of days for which ElastiCache will retain automatic cache cluster snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off. Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotwindow_csharp">
@@ -885,8 +877,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
-begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
+    <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetgroupname_csharp">
@@ -904,8 +895,15 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Adding tags to this resource will add or overwrite any existing tags on the clusters in the replication group and not to the group itself.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transitencryptionenabled_csharp">
 <a href="#transitencryptionenabled_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Encryption<wbr>Enabled</a>
@@ -914,6 +912,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption in transit.
+`arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1007,7 +1006,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group.
+    <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g. `6.x`, otherwise, specify the full version desired, e.g. `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finalsnapshotidentifier_go">
@@ -1043,9 +1042,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the weekly time range for when maintenance
-on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
-The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
+    <dd>{{% md %}}Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multiazenabled_go">
@@ -1072,9 +1069,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An Amazon Resource Name (ARN) of an
-SNS topic to send ElastiCache notifications to. Example:
-`arn:aws:sns:us-east-1:012345678999:my_sns_topic`
+    <dd>{{% md %}}An Amazon Resource Name (ARN) of an SNS topic to send ElastiCache notifications to. Example:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbercacheclusters_go">
@@ -1137,8 +1132,7 @@ SNS topic to send ElastiCache notifications to. Example:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of
-Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
+    <dd>{{% md %}}A list of Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotname_go">
@@ -1156,11 +1150,7 @@ Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Am
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of days for which ElastiCache will
-retain automatic cache cluster snapshots before deleting them. For example, if you set
-SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
-before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
-Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
+    <dd>{{% md %}}The number of days for which ElastiCache will retain automatic cache cluster snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off. Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotwindow_go">
@@ -1169,8 +1159,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
-begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
+    <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetgroupname_go">
@@ -1188,8 +1177,15 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Adding tags to this resource will add or overwrite any existing tags on the clusters in the replication group and not to the group itself.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transitencryptionenabled_go">
 <a href="#transitencryptionenabled_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Encryption<wbr>Enabled</a>
@@ -1198,6 +1194,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption in transit.
+`arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1291,7 +1288,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group.
+    <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g. `6.x`, otherwise, specify the full version desired, e.g. `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finalsnapshotidentifier_nodejs">
@@ -1327,9 +1324,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the weekly time range for when maintenance
-on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
-The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
+    <dd>{{% md %}}Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multiazenabled_nodejs">
@@ -1356,9 +1351,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An Amazon Resource Name (ARN) of an
-SNS topic to send ElastiCache notifications to. Example:
-`arn:aws:sns:us-east-1:012345678999:my_sns_topic`
+    <dd>{{% md %}}An Amazon Resource Name (ARN) of an SNS topic to send ElastiCache notifications to. Example:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbercacheclusters_nodejs">
@@ -1421,8 +1414,7 @@ SNS topic to send ElastiCache notifications to. Example:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of
-Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
+    <dd>{{% md %}}A list of Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotname_nodejs">
@@ -1440,11 +1432,7 @@ Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Am
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of days for which ElastiCache will
-retain automatic cache cluster snapshots before deleting them. For example, if you set
-SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
-before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
-Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
+    <dd>{{% md %}}The number of days for which ElastiCache will retain automatic cache cluster snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off. Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotwindow_nodejs">
@@ -1453,8 +1441,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
-begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
+    <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetgroupname_nodejs">
@@ -1472,8 +1459,15 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Adding tags to this resource will add or overwrite any existing tags on the clusters in the replication group and not to the group itself.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transitencryptionenabled_nodejs">
 <a href="#transitencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Encryption<wbr>Enabled</a>
@@ -1482,6 +1476,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption in transit.
+`arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1575,7 +1570,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group.
+    <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g. `6.x`, otherwise, specify the full version desired, e.g. `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="final_snapshot_identifier_python">
@@ -1611,9 +1606,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the weekly time range for when maintenance
-on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
-The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
+    <dd>{{% md %}}Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multi_az_enabled_python">
@@ -1640,9 +1633,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An Amazon Resource Name (ARN) of an
-SNS topic to send ElastiCache notifications to. Example:
-`arn:aws:sns:us-east-1:012345678999:my_sns_topic`
+    <dd>{{% md %}}An Amazon Resource Name (ARN) of an SNS topic to send ElastiCache notifications to. Example:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_cache_clusters_python">
@@ -1705,8 +1696,7 @@ SNS topic to send ElastiCache notifications to. Example:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of
-Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
+    <dd>{{% md %}}A list of Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_name_python">
@@ -1724,11 +1714,7 @@ Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Am
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of days for which ElastiCache will
-retain automatic cache cluster snapshots before deleting them. For example, if you set
-SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
-before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
-Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
+    <dd>{{% md %}}The number of days for which ElastiCache will retain automatic cache cluster snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off. Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_window_python">
@@ -1737,8 +1723,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
-begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
+    <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_group_name_python">
@@ -1756,8 +1741,15 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Adding tags to this resource will add or overwrite any existing tags on the clusters in the replication group and not to the group itself.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transit_encryption_enabled_python">
 <a href="#transit_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>encryption_<wbr>enabled</a>
@@ -1766,6 +1758,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption in transit.
+`arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1804,6 +1797,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the replication group configuration endpoint when cluster mode is enabled.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="engineversionactual_csharp">
+<a href="#engineversionactual_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The running version of the cache engine.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1872,6 +1874,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The address of the replication group configuration endpoint when cluster mode is enabled.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="engineversionactual_go">
+<a href="#engineversionactual_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The running version of the cache engine.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -1936,6 +1947,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the replication group configuration endpoint when cluster mode is enabled.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="engineversionactual_nodejs">
+<a href="#engineversionactual_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The running version of the cache engine.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -2004,6 +2024,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The address of the replication group configuration endpoint when cluster mode is enabled.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="engine_version_actual_python">
+<a href="#engine_version_actual_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version_<wbr>actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The running version of the cache engine.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -2068,6 +2097,7 @@ Get an existing ReplicationGroup resource's state with the given name, ID, and o
         <span class="nx">configuration_endpoint_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">engine_version_actual</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">final_snapshot_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">global_replication_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2091,6 +2121,7 @@ Get an existing ReplicationGroup resource's state with the given name, ID, and o
         <span class="nx">snapshot_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">subnet_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">transit_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> ReplicationGroup</code></pre></div>
 {{% /choosable %}}
 
@@ -2309,7 +2340,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group.
+    <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g. `6.x`, otherwise, specify the full version desired, e.g. `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_engineversionactual_csharp">
+<a href="#state_engineversionactual_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The running version of the cache engine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_finalsnapshotidentifier_csharp">
@@ -2345,9 +2385,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the weekly time range for when maintenance
-on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
-The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
+    <dd>{{% md %}}Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memberclusters_csharp">
@@ -2383,9 +2421,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An Amazon Resource Name (ARN) of an
-SNS topic to send ElastiCache notifications to. Example:
-`arn:aws:sns:us-east-1:012345678999:my_sns_topic`
+    <dd>{{% md %}}An Amazon Resource Name (ARN) of an SNS topic to send ElastiCache notifications to. Example:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numbercacheclusters_csharp">
@@ -2475,8 +2511,7 @@ SNS topic to send ElastiCache notifications to. Example:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of
-Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
+    <dd>{{% md %}}A list of Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotname_csharp">
@@ -2494,11 +2529,7 @@ Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Am
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of days for which ElastiCache will
-retain automatic cache cluster snapshots before deleting them. For example, if you set
-SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
-before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
-Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
+    <dd>{{% md %}}The number of days for which ElastiCache will retain automatic cache cluster snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off. Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotwindow_csharp">
@@ -2507,8 +2538,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
-begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
+    <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetgroupname_csharp">
@@ -2526,8 +2556,15 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Adding tags to this resource will add or overwrite any existing tags on the clusters in the replication group and not to the group itself.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transitencryptionenabled_csharp">
 <a href="#state_transitencryptionenabled_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Encryption<wbr>Enabled</a>
@@ -2536,6 +2573,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption in transit.
+`arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2647,7 +2685,16 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group.
+    <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g. `6.x`, otherwise, specify the full version desired, e.g. `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_engineversionactual_go">
+<a href="#state_engineversionactual_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The running version of the cache engine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_finalsnapshotidentifier_go">
@@ -2683,9 +2730,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the weekly time range for when maintenance
-on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
-The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
+    <dd>{{% md %}}Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memberclusters_go">
@@ -2721,9 +2766,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An Amazon Resource Name (ARN) of an
-SNS topic to send ElastiCache notifications to. Example:
-`arn:aws:sns:us-east-1:012345678999:my_sns_topic`
+    <dd>{{% md %}}An Amazon Resource Name (ARN) of an SNS topic to send ElastiCache notifications to. Example:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numbercacheclusters_go">
@@ -2813,8 +2856,7 @@ SNS topic to send ElastiCache notifications to. Example:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of
-Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
+    <dd>{{% md %}}A list of Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotname_go">
@@ -2832,11 +2874,7 @@ Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Am
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of days for which ElastiCache will
-retain automatic cache cluster snapshots before deleting them. For example, if you set
-SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
-before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
-Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
+    <dd>{{% md %}}The number of days for which ElastiCache will retain automatic cache cluster snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off. Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotwindow_go">
@@ -2845,8 +2883,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
-begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
+    <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetgroupname_go">
@@ -2864,8 +2901,15 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Adding tags to this resource will add or overwrite any existing tags on the clusters in the replication group and not to the group itself.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transitencryptionenabled_go">
 <a href="#state_transitencryptionenabled_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Encryption<wbr>Enabled</a>
@@ -2874,6 +2918,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption in transit.
+`arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2985,7 +3030,16 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group.
+    <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g. `6.x`, otherwise, specify the full version desired, e.g. `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_engineversionactual_nodejs">
+<a href="#state_engineversionactual_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The running version of the cache engine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_finalsnapshotidentifier_nodejs">
@@ -3021,9 +3075,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the weekly time range for when maintenance
-on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
-The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
+    <dd>{{% md %}}Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memberclusters_nodejs">
@@ -3059,9 +3111,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An Amazon Resource Name (ARN) of an
-SNS topic to send ElastiCache notifications to. Example:
-`arn:aws:sns:us-east-1:012345678999:my_sns_topic`
+    <dd>{{% md %}}An Amazon Resource Name (ARN) of an SNS topic to send ElastiCache notifications to. Example:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numbercacheclusters_nodejs">
@@ -3151,8 +3201,7 @@ SNS topic to send ElastiCache notifications to. Example:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of
-Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
+    <dd>{{% md %}}A list of Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotname_nodejs">
@@ -3170,11 +3219,7 @@ Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Am
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of days for which ElastiCache will
-retain automatic cache cluster snapshots before deleting them. For example, if you set
-SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
-before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
-Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
+    <dd>{{% md %}}The number of days for which ElastiCache will retain automatic cache cluster snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off. Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotwindow_nodejs">
@@ -3183,8 +3228,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
-begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
+    <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetgroupname_nodejs">
@@ -3202,8 +3246,15 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Adding tags to this resource will add or overwrite any existing tags on the clusters in the replication group and not to the group itself.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transitencryptionenabled_nodejs">
 <a href="#state_transitencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Encryption<wbr>Enabled</a>
@@ -3212,6 +3263,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption in transit.
+`arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3323,7 +3375,16 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group.
+    <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g. `6.x`, otherwise, specify the full version desired, e.g. `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_engine_version_actual_python">
+<a href="#state_engine_version_actual_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version_<wbr>actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The running version of the cache engine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_final_snapshot_identifier_python">
@@ -3359,9 +3420,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the weekly time range for when maintenance
-on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
-The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
+    <dd>{{% md %}}Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_member_clusters_python">
@@ -3397,9 +3456,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An Amazon Resource Name (ARN) of an
-SNS topic to send ElastiCache notifications to. Example:
-`arn:aws:sns:us-east-1:012345678999:my_sns_topic`
+    <dd>{{% md %}}An Amazon Resource Name (ARN) of an SNS topic to send ElastiCache notifications to. Example:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_number_cache_clusters_python">
@@ -3489,8 +3546,7 @@ SNS topic to send ElastiCache notifications to. Example:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of
-Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
+    <dd>{{% md %}}A list of Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_name_python">
@@ -3508,11 +3564,7 @@ Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Am
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of days for which ElastiCache will
-retain automatic cache cluster snapshots before deleting them. For example, if you set
-SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
-before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
-Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
+    <dd>{{% md %}}The number of days for which ElastiCache will retain automatic cache cluster snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off. Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_window_python">
@@ -3521,8 +3573,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
-begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
+    <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_group_name_python">
@@ -3540,8 +3591,15 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Adding tags to this resource will add or overwrite any existing tags on the clusters in the replication group and not to the group itself.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transit_encryption_enabled_python">
 <a href="#state_transit_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>encryption_<wbr>enabled</a>
@@ -3550,6 +3608,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption in transit.
+`arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3573,7 +3632,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specify the number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications.
+    <dd>{{% md %}}Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicaspernodegroup_csharp">
@@ -3582,7 +3641,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specify the number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
+    <dd>{{% md %}}Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3595,7 +3654,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specify the number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications.
+    <dd>{{% md %}}Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicaspernodegroup_go">
@@ -3604,7 +3663,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specify the number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
+    <dd>{{% md %}}Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3617,7 +3676,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specify the number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications.
+    <dd>{{% md %}}Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicaspernodegroup_nodejs">
@@ -3626,7 +3685,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specify the number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
+    <dd>{{% md %}}Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3639,7 +3698,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specify the number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications.
+    <dd>{{% md %}}Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicas_per_node_group_python">
@@ -3648,7 +3707,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specify the number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
+    <dd>{{% md %}}Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
