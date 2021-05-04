@@ -323,13 +323,23 @@ The following output properties are available:
     <dd>{{% md %}}A `cors_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="cosmosdbkeyvaultkeyversionlessid_csharp">
+<a href="#cosmosdbkeyvaultkeyversionlessid_csharp" style="color: inherit; text-decoration: inherit;">Cosmosdb<wbr>Key<wbr>Vault<wbr>Key<wbr>Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The versionless Key Vault Key ID for CMK encryption of the backing database.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="cosmosdbthroughput_csharp">
 <a href="#cosmosdbthroughput_csharp" style="color: inherit; text-decoration: inherit;">Cosmosdb<wbr>Throughput</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provisioned throughput for the backing database.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -413,13 +423,23 @@ The following output properties are available:
     <dd>{{% md %}}A `cors_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="cosmosdbkeyvaultkeyversionlessid_go">
+<a href="#cosmosdbkeyvaultkeyversionlessid_go" style="color: inherit; text-decoration: inherit;">Cosmosdb<wbr>Key<wbr>Vault<wbr>Key<wbr>Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The versionless Key Vault Key ID for CMK encryption of the backing database.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="cosmosdbthroughput_go">
 <a href="#cosmosdbthroughput_go" style="color: inherit; text-decoration: inherit;">Cosmosdb<wbr>Throughput</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provisioned throughput for the backing database.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -503,13 +523,23 @@ The following output properties are available:
     <dd>{{% md %}}A `cors_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="cosmosdbkeyvaultkeyversionlessid_nodejs">
+<a href="#cosmosdbkeyvaultkeyversionlessid_nodejs" style="color: inherit; text-decoration: inherit;">cosmosdb<wbr>Key<wbr>Vault<wbr>Key<wbr>Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The versionless Key Vault Key ID for CMK encryption of the backing database.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="cosmosdbthroughput_nodejs">
 <a href="#cosmosdbthroughput_nodejs" style="color: inherit; text-decoration: inherit;">cosmosdb<wbr>Throughput</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provisioned throughput for the backing database.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -593,13 +623,23 @@ The following output properties are available:
     <dd>{{% md %}}A `cors_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="cosmosdb_key_vault_key_versionless_id_python">
+<a href="#cosmosdb_key_vault_key_versionless_id_python" style="color: inherit; text-decoration: inherit;">cosmosdb_<wbr>key_<wbr>vault_<wbr>key_<wbr>versionless_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The versionless Key Vault Key ID for CMK encryption of the backing database.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="cosmosdb_throughput_python">
 <a href="#cosmosdb_throughput_python" style="color: inherit; text-decoration: inherit;">cosmosdb_<wbr>throughput</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provisioned throughput for the backing database.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>

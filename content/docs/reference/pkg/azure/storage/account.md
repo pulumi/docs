@@ -403,6 +403,7 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
             <span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">network_rules</span><span class="p">:</span> <span class="nx">Optional[AccountNetworkRulesArgs]</span> = None<span class="p">,</span>
+            <span class="nx">nfsv3_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">queue_properties</span><span class="p">:</span> <span class="nx">Optional[AccountQueuePropertiesArgs]</span> = None<span class="p">,</span>
             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">static_website</span><span class="p">:</span> <span class="nx">Optional[AccountStaticWebsiteArgs]</span> = None<span class="p">,</span>
@@ -707,6 +708,15 @@ for more information. Defaults to `true`.
     <dd>{{% md %}}A `network_rules` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nfsv3enabled_csharp">
+<a href="#nfsv3enabled_csharp" style="color: inherit; text-decoration: inherit;">Nfsv3Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is NFSv3 protocol enabled? Changing this forces a new resource to be created. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="queueproperties_csharp">
 <a href="#queueproperties_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Properties</a>
 </span>
@@ -881,6 +891,15 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nfsv3enabled_go">
+<a href="#nfsv3enabled_go" style="color: inherit; text-decoration: inherit;">Nfsv3Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is NFSv3 protocol enabled? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queueproperties_go">
@@ -1059,6 +1078,15 @@ for more information. Defaults to `true`.
     <dd>{{% md %}}A `network_rules` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nfsv3enabled_nodejs">
+<a href="#nfsv3enabled_nodejs" style="color: inherit; text-decoration: inherit;">nfsv3Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is NFSv3 protocol enabled? Changing this forces a new resource to be created. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="queueproperties_nodejs">
 <a href="#queueproperties_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Properties</a>
 </span>
@@ -1233,6 +1261,15 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nfsv3_enabled_python">
+<a href="#nfsv3_enabled_python" style="color: inherit; text-decoration: inherit;">nfsv3_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is NFSv3 protocol enabled? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queue_properties_python">
@@ -2501,6 +2538,7 @@ Get an existing Account resource's state with the given name, ID, and optional e
         <span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_rules</span><span class="p">:</span> <span class="nx">Optional[AccountNetworkRulesArgs]</span> = None<span class="p">,</span>
+        <span class="nx">nfsv3_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">primary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">primary_blob_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">primary_blob_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2783,6 +2821,15 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_nfsv3enabled_csharp">
+<a href="#state_nfsv3enabled_csharp" style="color: inherit; text-decoration: inherit;">Nfsv3Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is NFSv3 protocol enabled? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryaccesskey_csharp">
@@ -3249,6 +3296,15 @@ for more information. Defaults to `true`.
     <dd>{{% md %}}A `network_rules` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_nfsv3enabled_go">
+<a href="#state_nfsv3enabled_go" style="color: inherit; text-decoration: inherit;">Nfsv3Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is NFSv3 protocol enabled? Changing this forces a new resource to be created. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_primaryaccesskey_go">
 <a href="#state_primaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
 </span>
@@ -3711,6 +3767,15 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_nfsv3enabled_nodejs">
+<a href="#state_nfsv3enabled_nodejs" style="color: inherit; text-decoration: inherit;">nfsv3Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is NFSv3 protocol enabled? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryaccesskey_nodejs">
@@ -4177,6 +4242,15 @@ for more information. Defaults to `true`.
     <dd>{{% md %}}A `network_rules` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_nfsv3_enabled_python">
+<a href="#state_nfsv3_enabled_python" style="color: inherit; text-decoration: inherit;">nfsv3_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is NFSv3 protocol enabled? Changing this forces a new resource to be created. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_primary_access_key_python">
 <a href="#state_primary_access_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>access_<wbr>key</a>
 </span>
@@ -4534,6 +4608,15 @@ for more information. Defaults to `true`.
     <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="defaultserviceversion_csharp">
+<a href="#defaultserviceversion_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The API Version which should be used by default for requests to the Data Plane API if an incoming request doesn't specify an API Version. Defaults to `2020-06-12`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="deleteretentionpolicy_csharp">
 <a href="#deleteretentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Retention<wbr>Policy</a>
 </span>
@@ -4541,6 +4624,24 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `delete_retention_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastaccesstimeenabled_csharp">
+<a href="#lastaccesstimeenabled_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Access<wbr>Time<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the last access time based tracking enabled? Default to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versioningenabled_csharp">
+<a href="#versioningenabled_csharp" style="color: inherit; text-decoration: inherit;">Versioning<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is versioning enabled? Default to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4565,6 +4666,15 @@ for more information. Defaults to `true`.
     <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="defaultserviceversion_go">
+<a href="#defaultserviceversion_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The API Version which should be used by default for requests to the Data Plane API if an incoming request doesn't specify an API Version. Defaults to `2020-06-12`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="deleteretentionpolicy_go">
 <a href="#deleteretentionpolicy_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Retention<wbr>Policy</a>
 </span>
@@ -4572,6 +4682,24 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `delete_retention_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastaccesstimeenabled_go">
+<a href="#lastaccesstimeenabled_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Access<wbr>Time<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the last access time based tracking enabled? Default to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versioningenabled_go">
+<a href="#versioningenabled_go" style="color: inherit; text-decoration: inherit;">Versioning<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is versioning enabled? Default to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4596,6 +4724,15 @@ for more information. Defaults to `true`.
     <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="defaultserviceversion_nodejs">
+<a href="#defaultserviceversion_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The API Version which should be used by default for requests to the Data Plane API if an incoming request doesn't specify an API Version. Defaults to `2020-06-12`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="deleteretentionpolicy_nodejs">
 <a href="#deleteretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Retention<wbr>Policy</a>
 </span>
@@ -4603,6 +4740,24 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `delete_retention_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastaccesstimeenabled_nodejs">
+<a href="#lastaccesstimeenabled_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Access<wbr>Time<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is the last access time based tracking enabled? Default to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versioningenabled_nodejs">
+<a href="#versioningenabled_nodejs" style="color: inherit; text-decoration: inherit;">versioning<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is versioning enabled? Default to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4627,6 +4782,15 @@ for more information. Defaults to `true`.
     <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="default_service_version_python">
+<a href="#default_service_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The API Version which should be used by default for requests to the Data Plane API if an incoming request doesn't specify an API Version. Defaults to `2020-06-12`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="delete_retention_policy_python">
 <a href="#delete_retention_policy_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>retention_<wbr>policy</a>
 </span>
@@ -4634,6 +4798,24 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `delete_retention_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_access_time_enabled_python">
+<a href="#last_access_time_enabled_python" style="color: inherit; text-decoration: inherit;">last_<wbr>access_<wbr>time_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the last access time based tracking enabled? Default to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versioning_enabled_python">
+<a href="#versioning_enabled_python" style="color: inherit; text-decoration: inherit;">versioning_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is versioning enabled? Default to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

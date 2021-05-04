@@ -254,6 +254,7 @@ const example = new azure.healthcare.Service("example", {
             <span class="nx">access_policy_object_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">authentication_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceAuthenticationConfigurationArgs]</span> = None<span class="p">,</span>
             <span class="nx">cors_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceCorsConfigurationArgs]</span> = None<span class="p">,</span>
+            <span class="nx">cosmosdb_key_vault_key_versionless_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">cosmosdb_throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
             <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -450,6 +451,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A `cors_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cosmosdbkeyvaultkeyversionlessid_csharp">
+<a href="#cosmosdbkeyvaultkeyversionlessid_csharp" style="color: inherit; text-decoration: inherit;">Cosmosdb<wbr>Key<wbr>Vault<wbr>Key<wbr>Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A versionless Key Vault Key ID for CMK encryption of the backing database. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cosmosdbthroughput_csharp">
 <a href="#cosmosdbthroughput_csharp" style="color: inherit; text-decoration: inherit;">Cosmosdb<wbr>Throughput</a>
 </span>
@@ -532,6 +542,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `cors_configuration` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cosmosdbkeyvaultkeyversionlessid_go">
+<a href="#cosmosdbkeyvaultkeyversionlessid_go" style="color: inherit; text-decoration: inherit;">Cosmosdb<wbr>Key<wbr>Vault<wbr>Key<wbr>Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A versionless Key Vault Key ID for CMK encryption of the backing database. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cosmosdbthroughput_go">
@@ -618,6 +637,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A `cors_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cosmosdbkeyvaultkeyversionlessid_nodejs">
+<a href="#cosmosdbkeyvaultkeyversionlessid_nodejs" style="color: inherit; text-decoration: inherit;">cosmosdb<wbr>Key<wbr>Vault<wbr>Key<wbr>Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A versionless Key Vault Key ID for CMK encryption of the backing database. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cosmosdbthroughput_nodejs">
 <a href="#cosmosdbthroughput_nodejs" style="color: inherit; text-decoration: inherit;">cosmosdb<wbr>Throughput</a>
 </span>
@@ -700,6 +728,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cors_configuration` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cosmosdb_key_vault_key_versionless_id_python">
+<a href="#cosmosdb_key_vault_key_versionless_id_python" style="color: inherit; text-decoration: inherit;">cosmosdb_<wbr>key_<wbr>vault_<wbr>key_<wbr>versionless_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A versionless Key Vault Key ID for CMK encryption of the backing database. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cosmosdb_throughput_python">
@@ -822,6 +859,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
         <span class="nx">access_policy_object_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">authentication_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceAuthenticationConfigurationArgs]</span> = None<span class="p">,</span>
         <span class="nx">cors_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceCorsConfigurationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">cosmosdb_key_vault_key_versionless_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">cosmosdb_throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -966,6 +1004,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `cors_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_cosmosdbkeyvaultkeyversionlessid_csharp">
+<a href="#state_cosmosdbkeyvaultkeyversionlessid_csharp" style="color: inherit; text-decoration: inherit;">Cosmosdb<wbr>Key<wbr>Vault<wbr>Key<wbr>Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A versionless Key Vault Key ID for CMK encryption of the backing database. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_cosmosdbthroughput_csharp">
 <a href="#state_cosmosdbthroughput_csharp" style="color: inherit; text-decoration: inherit;">Cosmosdb<wbr>Throughput</a>
 </span>
@@ -1048,6 +1095,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `cors_configuration` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_cosmosdbkeyvaultkeyversionlessid_go">
+<a href="#state_cosmosdbkeyvaultkeyversionlessid_go" style="color: inherit; text-decoration: inherit;">Cosmosdb<wbr>Key<wbr>Vault<wbr>Key<wbr>Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A versionless Key Vault Key ID for CMK encryption of the backing database. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cosmosdbthroughput_go">
@@ -1134,6 +1190,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `cors_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_cosmosdbkeyvaultkeyversionlessid_nodejs">
+<a href="#state_cosmosdbkeyvaultkeyversionlessid_nodejs" style="color: inherit; text-decoration: inherit;">cosmosdb<wbr>Key<wbr>Vault<wbr>Key<wbr>Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A versionless Key Vault Key ID for CMK encryption of the backing database. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_cosmosdbthroughput_nodejs">
 <a href="#state_cosmosdbthroughput_nodejs" style="color: inherit; text-decoration: inherit;">cosmosdb<wbr>Throughput</a>
 </span>
@@ -1216,6 +1281,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cors_configuration` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_cosmosdb_key_vault_key_versionless_id_python">
+<a href="#state_cosmosdb_key_vault_key_versionless_id_python" style="color: inherit; text-decoration: inherit;">cosmosdb_<wbr>key_<wbr>vault_<wbr>key_<wbr>versionless_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A versionless Key Vault Key ID for CMK encryption of the backing database. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cosmosdb_throughput_python">

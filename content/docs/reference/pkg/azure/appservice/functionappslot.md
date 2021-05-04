@@ -3931,6 +3931,14 @@ The following state arguments are supported:
     <dd>{{% md %}}A [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing ip restrictions as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="javaversion_csharp">
+<a href="#javaversion_csharp" style="color: inherit; text-decoration: inherit;">Java<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="linuxfxversion_csharp">
 <a href="#linuxfxversion_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Fx<wbr>Version</a>
 </span>
@@ -4065,6 +4073,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing ip restrictions as defined below.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="javaversion_go">
+<a href="#javaversion_go" style="color: inherit; text-decoration: inherit;">Java<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linuxfxversion_go">
 <a href="#linuxfxversion_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Fx<wbr>Version</a>
@@ -4201,6 +4217,14 @@ The following state arguments are supported:
     <dd>{{% md %}}A [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing ip restrictions as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="javaversion_nodejs">
+<a href="#javaversion_nodejs" style="color: inherit; text-decoration: inherit;">java<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="linuxfxversion_nodejs">
 <a href="#linuxfxversion_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Fx<wbr>Version</a>
 </span>
@@ -4335,6 +4359,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing ip restrictions as defined below.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="java_version_python">
+<a href="#java_version_python" style="color: inherit; text-decoration: inherit;">java_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linux_fx_version_python">
 <a href="#linux_fx_version_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>fx_<wbr>version</a>
@@ -4510,6 +4542,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Does this restriction `Allow` or `Deny` access for this IP range. Defaults to `Allow`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
 </span>
@@ -4566,6 +4607,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Does this restriction `Allow` or `Deny` access for this IP range. Defaults to `Allow`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
+    </dt>
+    <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
@@ -4626,6 +4676,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Does this restriction `Allow` or `Deny` access for this IP range. Defaults to `Allow`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
@@ -4684,6 +4743,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Does this restriction `Allow` or `Deny` access for this IP range. Defaults to `Allow`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
@@ -4727,6 +4795,168 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="functionappslotsiteconfigiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="xazurefdids_csharp">
+<a href="#xazurefdids_csharp" style="color: inherit; text-decoration: inherit;">XAzure<wbr>Fdids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed Azure FrontDoor IDs in UUID notation with a maximum of 8.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="xfdhealthprobe_csharp">
+<a href="#xfdhealthprobe_csharp" style="color: inherit; text-decoration: inherit;">XFd<wbr>Health<wbr>Probe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A list to allow the Azure FrontDoor health probe header. Only allowed value is "1".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="xforwardedfors_csharp">
+<a href="#xforwardedfors_csharp" style="color: inherit; text-decoration: inherit;">XForwarded<wbr>Fors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed 'X-Forwarded-For' IPs in CIDR notation with a maximum of 8
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="xforwardedhosts_csharp">
+<a href="#xforwardedhosts_csharp" style="color: inherit; text-decoration: inherit;">XForwarded<wbr>Hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed 'X-Forwarded-Host' domains with a maximum of 8.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="xazurefdids_go">
+<a href="#xazurefdids_go" style="color: inherit; text-decoration: inherit;">XAzure<wbr>Fdids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed Azure FrontDoor IDs in UUID notation with a maximum of 8.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="xfdhealthprobe_go">
+<a href="#xfdhealthprobe_go" style="color: inherit; text-decoration: inherit;">XFd<wbr>Health<wbr>Probe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A list to allow the Azure FrontDoor health probe header. Only allowed value is "1".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="xforwardedfors_go">
+<a href="#xforwardedfors_go" style="color: inherit; text-decoration: inherit;">XForwarded<wbr>Fors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed 'X-Forwarded-For' IPs in CIDR notation with a maximum of 8
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="xforwardedhosts_go">
+<a href="#xforwardedhosts_go" style="color: inherit; text-decoration: inherit;">XForwarded<wbr>Hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed 'X-Forwarded-Host' domains with a maximum of 8.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="xazurefdids_nodejs">
+<a href="#xazurefdids_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Azure<wbr>Fdids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed Azure FrontDoor IDs in UUID notation with a maximum of 8.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="xfdhealthprobe_nodejs">
+<a href="#xfdhealthprobe_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Fd<wbr>Health<wbr>Probe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A list to allow the Azure FrontDoor health probe header. Only allowed value is "1".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="xforwardedfors_nodejs">
+<a href="#xforwardedfors_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Forwarded<wbr>Fors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed 'X-Forwarded-For' IPs in CIDR notation with a maximum of 8
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="xforwardedhosts_nodejs">
+<a href="#xforwardedhosts_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Forwarded<wbr>Hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed 'X-Forwarded-Host' domains with a maximum of 8.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="x_azure_fdids_python">
+<a href="#x_azure_fdids_python" style="color: inherit; text-decoration: inherit;">x_<wbr>azure_<wbr>fdids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed Azure FrontDoor IDs in UUID notation with a maximum of 8.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="x_fd_health_probe_python">
+<a href="#x_fd_health_probe_python" style="color: inherit; text-decoration: inherit;">x_<wbr>fd_<wbr>health_<wbr>probe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A list to allow the Azure FrontDoor health probe header. Only allowed value is "1".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="x_forwarded_fors_python">
+<a href="#x_forwarded_fors_python" style="color: inherit; text-decoration: inherit;">x_<wbr>forwarded_<wbr>fors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed 'X-Forwarded-For' IPs in CIDR notation with a maximum of 8
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="x_forwarded_hosts_python">
+<a href="#x_forwarded_hosts_python" style="color: inherit; text-decoration: inherit;">x_<wbr>forwarded_<wbr>hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed 'X-Forwarded-Host' domains with a maximum of 8.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4744,6 +4974,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Does this restriction `Allow` or `Deny` access for this IP range. Defaults to `Allow`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigscmiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
 </span>
@@ -4800,6 +5039,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Does this restriction `Allow` or `Deny` access for this IP range. Defaults to `Allow`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigscmiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
+    </dt>
+    <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
@@ -4860,6 +5108,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Does this restriction `Allow` or `Deny` access for this IP range. Defaults to `Allow`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigscmiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
@@ -4918,6 +5175,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Does this restriction `Allow` or `Deny` access for this IP range. Defaults to `Allow`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigscmiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
@@ -4961,6 +5227,168 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="functionappslotsiteconfigscmiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="xazurefdids_csharp">
+<a href="#xazurefdids_csharp" style="color: inherit; text-decoration: inherit;">XAzure<wbr>Fdids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed Azure FrontDoor IDs in UUID notation with a maximum of 8.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="xfdhealthprobe_csharp">
+<a href="#xfdhealthprobe_csharp" style="color: inherit; text-decoration: inherit;">XFd<wbr>Health<wbr>Probe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A list to allow the Azure FrontDoor health probe header. Only allowed value is "1".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="xforwardedfors_csharp">
+<a href="#xforwardedfors_csharp" style="color: inherit; text-decoration: inherit;">XForwarded<wbr>Fors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed 'X-Forwarded-For' IPs in CIDR notation with a maximum of 8
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="xforwardedhosts_csharp">
+<a href="#xforwardedhosts_csharp" style="color: inherit; text-decoration: inherit;">XForwarded<wbr>Hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed 'X-Forwarded-Host' domains with a maximum of 8.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="xazurefdids_go">
+<a href="#xazurefdids_go" style="color: inherit; text-decoration: inherit;">XAzure<wbr>Fdids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed Azure FrontDoor IDs in UUID notation with a maximum of 8.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="xfdhealthprobe_go">
+<a href="#xfdhealthprobe_go" style="color: inherit; text-decoration: inherit;">XFd<wbr>Health<wbr>Probe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A list to allow the Azure FrontDoor health probe header. Only allowed value is "1".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="xforwardedfors_go">
+<a href="#xforwardedfors_go" style="color: inherit; text-decoration: inherit;">XForwarded<wbr>Fors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed 'X-Forwarded-For' IPs in CIDR notation with a maximum of 8
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="xforwardedhosts_go">
+<a href="#xforwardedhosts_go" style="color: inherit; text-decoration: inherit;">XForwarded<wbr>Hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed 'X-Forwarded-Host' domains with a maximum of 8.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="xazurefdids_nodejs">
+<a href="#xazurefdids_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Azure<wbr>Fdids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed Azure FrontDoor IDs in UUID notation with a maximum of 8.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="xfdhealthprobe_nodejs">
+<a href="#xfdhealthprobe_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Fd<wbr>Health<wbr>Probe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A list to allow the Azure FrontDoor health probe header. Only allowed value is "1".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="xforwardedfors_nodejs">
+<a href="#xforwardedfors_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Forwarded<wbr>Fors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed 'X-Forwarded-For' IPs in CIDR notation with a maximum of 8
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="xforwardedhosts_nodejs">
+<a href="#xforwardedhosts_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Forwarded<wbr>Hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed 'X-Forwarded-Host' domains with a maximum of 8.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="x_azure_fdids_python">
+<a href="#x_azure_fdids_python" style="color: inherit; text-decoration: inherit;">x_<wbr>azure_<wbr>fdids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed Azure FrontDoor IDs in UUID notation with a maximum of 8.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="x_fd_health_probe_python">
+<a href="#x_fd_health_probe_python" style="color: inherit; text-decoration: inherit;">x_<wbr>fd_<wbr>health_<wbr>probe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A list to allow the Azure FrontDoor health probe header. Only allowed value is "1".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="x_forwarded_fors_python">
+<a href="#x_forwarded_fors_python" style="color: inherit; text-decoration: inherit;">x_<wbr>forwarded_<wbr>fors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed 'X-Forwarded-For' IPs in CIDR notation with a maximum of 8
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="x_forwarded_hosts_python">
+<a href="#x_forwarded_hosts_python" style="color: inherit; text-decoration: inherit;">x_<wbr>forwarded_<wbr>hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of allowed 'X-Forwarded-Host' domains with a maximum of 8.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

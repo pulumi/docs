@@ -241,6 +241,7 @@ const example = new azure.cosmosdb.SqlContainer("example", {
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                  <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">autoscale_settings</span><span class="p">:</span> <span class="nx">Optional[SqlContainerAutoscaleSettingsArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">conflict_resolution_policy</span><span class="p">:</span> <span class="nx">Optional[SqlContainerConflictResolutionPolicyArgs]</span> = None<span class="p">,</span>
                  <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                  <span class="nx">indexing_policy</span><span class="p">:</span> <span class="nx">Optional[SqlContainerIndexingPolicyArgs]</span> = None<span class="p">,</span>
@@ -423,6 +424,15 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The name of the Cosmos DB SQL Database to create the container within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="partitionkeypath_csharp">
+<a href="#partitionkeypath_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -439,6 +449,15 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conflictresolutionpolicy_csharp">
+<a href="#conflictresolutionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerconflictresolutionpolicy">Sql<wbr>Container<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_csharp">
@@ -466,15 +485,6 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB SQL Container. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="partitionkeypath_csharp">
-<a href="#partitionkeypath_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitionkeyversion_csharp">
@@ -526,6 +536,15 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The name of the Cosmos DB SQL Database to create the container within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="partitionkeypath_go">
+<a href="#partitionkeypath_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -542,6 +561,15 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conflictresolutionpolicy_go">
+<a href="#conflictresolutionpolicy_go" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerconflictresolutionpolicy">Sql<wbr>Container<wbr>Conflict<wbr>Resolution<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_go">
@@ -569,15 +597,6 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB SQL Container. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="partitionkeypath_go">
-<a href="#partitionkeypath_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitionkeyversion_go">
@@ -629,6 +648,15 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The name of the Cosmos DB SQL Database to create the container within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="partitionkeypath_nodejs">
+<a href="#partitionkeypath_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -645,6 +673,15 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conflictresolutionpolicy_nodejs">
+<a href="#conflictresolutionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerconflictresolutionpolicy">Sql<wbr>Container<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_nodejs">
@@ -672,15 +709,6 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB SQL Container. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="partitionkeypath_nodejs">
-<a href="#partitionkeypath_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key<wbr>Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitionkeyversion_nodejs">
@@ -732,6 +760,15 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The name of the Cosmos DB SQL Database to create the container within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="partition_key_path_python">
+<a href="#partition_key_path_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -748,6 +785,15 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conflict_resolution_policy_python">
+<a href="#conflict_resolution_policy_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerconflictresolutionpolicy">Sql<wbr>Container<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_ttl_python">
@@ -775,15 +821,6 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB SQL Container. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="partition_key_path_python">
-<a href="#partition_key_path_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key_<wbr>path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partition_key_version_python">
@@ -887,6 +924,7 @@ Get an existing SqlContainer resource's state with the given name, ID, and optio
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">autoscale_settings</span><span class="p">:</span> <span class="nx">Optional[SqlContainerAutoscaleSettingsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">conflict_resolution_policy</span><span class="p">:</span> <span class="nx">Optional[SqlContainerConflictResolutionPolicyArgs]</span> = None<span class="p">,</span>
         <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">indexing_policy</span><span class="p">:</span> <span class="nx">Optional[SqlContainerIndexingPolicyArgs]</span> = None<span class="p">,</span>
@@ -1026,6 +1064,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_conflictresolutionpolicy_csharp">
+<a href="#state_conflictresolutionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerconflictresolutionpolicy">Sql<wbr>Container<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_databasename_csharp">
 <a href="#state_databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
 </span>
@@ -1127,6 +1174,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_conflictresolutionpolicy_go">
+<a href="#state_conflictresolutionpolicy_go" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerconflictresolutionpolicy">Sql<wbr>Container<wbr>Conflict<wbr>Resolution<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_go">
@@ -1232,6 +1288,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_conflictresolutionpolicy_nodejs">
+<a href="#state_conflictresolutionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerconflictresolutionpolicy">Sql<wbr>Container<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_databasename_nodejs">
 <a href="#state_databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
@@ -1333,6 +1398,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_conflict_resolution_policy_python">
+<a href="#state_conflict_resolution_policy_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerconflictresolutionpolicy">Sql<wbr>Container<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_name_python">
@@ -1477,6 +1551,132 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum throughput of the SQL container (RU/s). Must be between `4,000` and `1,000,000`. Must be set in increments of `1,000`. Conflicts with `throughput`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sqlcontainerconflictresolutionpolicy">Sql<wbr>Container<wbr>Conflict<wbr>Resolution<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the conflict resolution mode. Possible values include: `LastWriterWins`, `Custom`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conflictresolutionpath_csharp">
+<a href="#conflictresolutionpath_csharp" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The conflict resolution path in the case of `LastWriterWins` mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conflictresolutionprocedure_csharp">
+<a href="#conflictresolutionprocedure_csharp" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Procedure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The procedure to resolve conflicts in the case of `Custom` mode.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the conflict resolution mode. Possible values include: `LastWriterWins`, `Custom`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conflictresolutionpath_go">
+<a href="#conflictresolutionpath_go" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The conflict resolution path in the case of `LastWriterWins` mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conflictresolutionprocedure_go">
+<a href="#conflictresolutionprocedure_go" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Procedure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The procedure to resolve conflicts in the case of `Custom` mode.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the conflict resolution mode. Possible values include: `LastWriterWins`, `Custom`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conflictresolutionpath_nodejs">
+<a href="#conflictresolutionpath_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The conflict resolution path in the case of `LastWriterWins` mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conflictresolutionprocedure_nodejs">
+<a href="#conflictresolutionprocedure_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Procedure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The procedure to resolve conflicts in the case of `Custom` mode.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates the conflict resolution mode. Possible values include: `LastWriterWins`, `Custom`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conflict_resolution_path_python">
+<a href="#conflict_resolution_path_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The conflict resolution path in the case of `LastWriterWins` mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conflict_resolution_procedure_python">
+<a href="#conflict_resolution_procedure_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>procedure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The procedure to resolve conflicts in the case of `Custom` mode.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

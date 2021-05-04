@@ -1258,6 +1258,15 @@ The following output properties are available:
     <dd>{{% md %}}A `http_application_routing` block.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ingressapplicationgateways_csharp">
+<a href="#ingressapplicationgateways_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Application<wbr>Gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileingressapplicationgateway">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway` block.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="kubedashboards_csharp">
 <a href="#kubedashboards_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Dashboards</a>
 </span>
@@ -1296,6 +1305,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ingressapplicationgateways_go">
+<a href="#ingressapplicationgateways_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Application<wbr>Gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileingressapplicationgateway">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway` block.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kubedashboards_go">
@@ -1338,6 +1356,15 @@ The following output properties are available:
     <dd>{{% md %}}A `http_application_routing` block.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ingressapplicationgateways_nodejs">
+<a href="#ingressapplicationgateways_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Application<wbr>Gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileingressapplicationgateway">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway[]</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway` block.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="kubedashboards_nodejs">
 <a href="#kubedashboards_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Dashboards</a>
 </span>
@@ -1376,6 +1403,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing]</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ingress_application_gateways_python">
+<a href="#ingress_application_gateways_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>application_<wbr>gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileingressapplicationgateway">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway]</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway` block.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kube_dashboards_python">
@@ -1542,6 +1578,206 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Zone Name of the HTTP Application Routing.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getkubernetesclusteraddonprofileingressapplicationgateway">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effectivegatewayid_csharp">
+<a href="#effectivegatewayid_csharp" style="color: inherit; text-decoration: inherit;">Effective<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway associated with the ingress controller deployed to this Kubernetes Cluster.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control enabled?
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gatewayid_csharp">
+<a href="#gatewayid_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when gateway_id is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnetcidr_csharp">
+<a href="#subnetcidr_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subnet CIDR used to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when `subnet_cidr` is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet on which to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when `subnet_id` is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effectivegatewayid_go">
+<a href="#effectivegatewayid_go" style="color: inherit; text-decoration: inherit;">Effective<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway associated with the ingress controller deployed to this Kubernetes Cluster.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control enabled?
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gatewayid_go">
+<a href="#gatewayid_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when gateway_id is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnetcidr_go">
+<a href="#subnetcidr_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subnet CIDR used to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when `subnet_cidr` is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet on which to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when `subnet_id` is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effectivegatewayid_nodejs">
+<a href="#effectivegatewayid_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway associated with the ingress controller deployed to this Kubernetes Cluster.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control enabled?
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gatewayid_nodejs">
+<a href="#gatewayid_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when gateway_id is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnetcidr_nodejs">
+<a href="#subnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subnet CIDR used to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when `subnet_cidr` is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet on which to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when `subnet_id` is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effective_gateway_id_python">
+<a href="#effective_gateway_id_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>gateway_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway associated with the ingress controller deployed to this Kubernetes Cluster.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control enabled?
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gateway_id_python">
+<a href="#gateway_id_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when gateway_id is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnet_cidr_python">
+<a href="#subnet_cidr_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The subnet CIDR used to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when `subnet_cidr` is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet on which to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when `subnet_id` is specified when configuring the `ingress_application_gateway` addon.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

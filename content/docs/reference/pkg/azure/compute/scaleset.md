@@ -12,7 +12,7 @@ meta_desc: "Documentation for the azure.compute.ScaleSet resource with examples,
 
 Manages a virtual machine scale set.
 
-## Disclaimers
+## Disclaimers
 
 > **Note:** The `azure.compute.ScaleSet` resource has been superseded by the `azure.compute.LinuxVirtualMachineScaleSet`](linux_virtual_machine_scale_set.html) and `azure.compute.WindowsVirtualMachineScaleSet` resources. The existing `azure.compute.ScaleSet` resource will continue to be available throughout the 2.x releases however is in a feature-frozen state to maintain compatibility - new functionality will instead be added to the `azure.compute.LinuxVirtualMachineScaleSet` and `azure.compute.WindowsVirtualMachineScaleSet` resources.
 ## Example of storage_profile_image_reference with id

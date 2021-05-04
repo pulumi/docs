@@ -337,6 +337,7 @@ const exampleHadoopCluster = new azure.hdinsight.HadoopCluster("exampleHadoopClu
                   <span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterMetastoresArgs]</span> = None<span class="p">,</span>
                   <span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterMonitorArgs]</span> = None<span class="p">,</span>
                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterNetworkArgs]</span> = None<span class="p">,</span>
                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterRolesArgs]</span> = None<span class="p">,</span>
                   <span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterStorageAccountGen2Args]</span> = None<span class="p">,</span>
@@ -589,6 +590,15 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Specifies the name for this HDInsight Hadoop Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="network_csharp">
+<a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hadoopclusternetwork">Hadoop<wbr>Cluster<wbr>Network<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `network` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="storageaccountgen2_csharp">
 <a href="#storageaccountgen2_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Gen2</a>
 </span>
@@ -716,6 +726,15 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name for this HDInsight Hadoop Cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_go">
+<a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hadoopclusternetwork">Hadoop<wbr>Cluster<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}A `network` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountgen2_go">
@@ -847,6 +866,15 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Specifies the name for this HDInsight Hadoop Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="network_nodejs">
+<a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hadoopclusternetwork">Hadoop<wbr>Cluster<wbr>Network<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `network` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="storageaccountgen2_nodejs">
 <a href="#storageaccountgen2_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Gen2</a>
 </span>
@@ -974,6 +1002,15 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name for this HDInsight Hadoop Cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_python">
+<a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hadoopclusternetwork">Hadoop<wbr>Cluster<wbr>Network<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `network` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_gen2_python">
@@ -1163,6 +1200,7 @@ Get an existing HadoopCluster resource's state with the given name, ID, and opti
         <span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterMetastoresArgs]</span> = None<span class="p">,</span>
         <span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterMonitorArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterNetworkArgs]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterRolesArgs]</span> = None<span class="p">,</span>
         <span class="nx">ssh_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1355,6 +1393,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name for this HDInsight Hadoop Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_network_csharp">
+<a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hadoopclusternetwork">Hadoop<wbr>Cluster<wbr>Network<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `network` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1500,6 +1547,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name for this HDInsight Hadoop Cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_network_go">
+<a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hadoopclusternetwork">Hadoop<wbr>Cluster<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}A `network` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
@@ -1649,6 +1705,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name for this HDInsight Hadoop Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_network_nodejs">
+<a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hadoopclusternetwork">Hadoop<wbr>Cluster<wbr>Network<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `network` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1794,6 +1859,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name for this HDInsight Hadoop Cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_network_python">
+<a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hadoopclusternetwork">Hadoop<wbr>Cluster<wbr>Network<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `network` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
@@ -2756,6 +2830,96 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Operations Management Suite (OMS) workspace key.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="hadoopclusternetwork">Hadoop<wbr>Cluster<wbr>Network</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="connectiondirection_csharp">
+<a href="#connectiondirection_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The direction of the resource provider connection. Possible values include `Inbound` or `Outbound`. Defaults to `Inbound`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkenabled_csharp">
+<a href="#privatelinkenabled_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the private link enabled? Possible values include `True` or `False`. Defaults to `False`. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="connectiondirection_go">
+<a href="#connectiondirection_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The direction of the resource provider connection. Possible values include `Inbound` or `Outbound`. Defaults to `Inbound`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkenabled_go">
+<a href="#privatelinkenabled_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the private link enabled? Possible values include `True` or `False`. Defaults to `False`. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="connectiondirection_nodejs">
+<a href="#connectiondirection_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The direction of the resource provider connection. Possible values include `Inbound` or `Outbound`. Defaults to `Inbound`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkenabled_nodejs">
+<a href="#privatelinkenabled_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is the private link enabled? Possible values include `True` or `False`. Defaults to `False`. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="connection_direction_python">
+<a href="#connection_direction_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The direction of the resource provider connection. Possible values include `Inbound` or `Outbound`. Defaults to `Inbound`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_link_enabled_python">
+<a href="#private_link_enabled_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the private link enabled? Possible values include `True` or `False`. Defaults to `False`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -391,7 +391,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+    <dd>{{% md %}}The filter tag name used for tag based filtering for blob objects.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -431,7 +431,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+    <dd>{{% md %}}The filter tag name used for tag based filtering for blob objects.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -471,7 +471,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+    <dd>{{% md %}}The filter tag name used for tag based filtering for blob objects.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -511,7 +511,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+    <dd>{{% md %}}The filter tag name used for tag based filtering for blob objects.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -538,6 +538,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getpolicyruleactionsnapshot">List&lt;Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Snapshot&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="versions_csharp">
+<a href="#versions_csharp" style="color: inherit; text-decoration: inherit;">Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpolicyruleactionversion">List&lt;Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Version&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `version` block as documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -560,6 +569,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getpolicyruleactionsnapshot">[]Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Snapshot</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="versions_go">
+<a href="#versions_go" style="color: inherit; text-decoration: inherit;">Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpolicyruleactionversion">[]Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Version</a></span>
+    </dt>
+    <dd>{{% md %}}A `version` block as documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -582,6 +600,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getpolicyruleactionsnapshot">Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Snapshot[]</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="versions_nodejs">
+<a href="#versions_nodejs" style="color: inherit; text-decoration: inherit;">versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpolicyruleactionversion">Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Version[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `version` block as documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -604,6 +631,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getpolicyruleactionsnapshot">Sequence[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Snapshot]</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="versions_python">
+<a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpolicyruleactionversion">Sequence[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Version]</a></span>
+    </dt>
+    <dd>{{% md %}}A `version` block as documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -742,18 +778,54 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="changetiertoarchiveafterdayssincecreation_csharp">
+<a href="#changetiertoarchiveafterdayssincecreation_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to archive storage.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="changetiertocoolafterdayssincecreation_csharp">
+<a href="#changetiertocoolafterdayssincecreation_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to cool storage.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="deleteafterdayssincecreationgreaterthan_csharp">
 <a href="#deleteafterdayssincecreationgreaterthan_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The age in days after create to delete the snapshot.
+    <dd>{{% md %}}The age in days after creation to delete the blob snapshot.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="changetiertoarchiveafterdayssincecreation_go">
+<a href="#changetiertoarchiveafterdayssincecreation_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to archive storage.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="changetiertocoolafterdayssincecreation_go">
+<a href="#changetiertocoolafterdayssincecreation_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to cool storage.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deleteafterdayssincecreationgreaterthan_go">
 <a href="#deleteafterdayssincecreationgreaterthan_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</a>
@@ -761,12 +833,30 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The age in days after create to delete the snapshot.
+    <dd>{{% md %}}The age in days after creation to delete the blob snapshot.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="changetiertoarchiveafterdayssincecreation_nodejs">
+<a href="#changetiertoarchiveafterdayssincecreation_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to archive storage.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="changetiertocoolafterdayssincecreation_nodejs">
+<a href="#changetiertocoolafterdayssincecreation_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to cool storage.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deleteafterdayssincecreationgreaterthan_nodejs">
 <a href="#deleteafterdayssincecreationgreaterthan_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</a>
@@ -774,12 +864,30 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The age in days after create to delete the snapshot.
+    <dd>{{% md %}}The age in days after creation to delete the blob snapshot.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="change_tier_to_archive_after_days_since_creation_python">
+<a href="#change_tier_to_archive_after_days_since_creation_python" style="color: inherit; text-decoration: inherit;">change_<wbr>tier_<wbr>to_<wbr>archive_<wbr>after_<wbr>days_<wbr>since_<wbr>creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to archive storage.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="change_tier_to_cool_after_days_since_creation_python">
+<a href="#change_tier_to_cool_after_days_since_creation_python" style="color: inherit; text-decoration: inherit;">change_<wbr>tier_<wbr>to_<wbr>cool_<wbr>after_<wbr>days_<wbr>since_<wbr>creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to cool storage.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="delete_after_days_since_creation_greater_than_python">
 <a href="#delete_after_days_since_creation_greater_than_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after_<wbr>days_<wbr>since_<wbr>creation_<wbr>greater_<wbr>than</a>
@@ -787,7 +895,135 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The age in days after create to delete the snapshot.
+    <dd>{{% md %}}The age in days after creation to delete the blob snapshot.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getpolicyruleactionversion">Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Version</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="changetiertoarchiveafterdayssincecreation_csharp">
+<a href="#changetiertoarchiveafterdayssincecreation_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to archive storage.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="changetiertocoolafterdayssincecreation_csharp">
+<a href="#changetiertocoolafterdayssincecreation_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to cool storage.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="deleteafterdayssincecreation_csharp">
+<a href="#deleteafterdayssincecreation_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to delete the blob version.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="changetiertoarchiveafterdayssincecreation_go">
+<a href="#changetiertoarchiveafterdayssincecreation_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to archive storage.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="changetiertocoolafterdayssincecreation_go">
+<a href="#changetiertocoolafterdayssincecreation_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to cool storage.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="deleteafterdayssincecreation_go">
+<a href="#deleteafterdayssincecreation_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to delete the blob version.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="changetiertoarchiveafterdayssincecreation_nodejs">
+<a href="#changetiertoarchiveafterdayssincecreation_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to archive storage.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="changetiertocoolafterdayssincecreation_nodejs">
+<a href="#changetiertocoolafterdayssincecreation_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to cool storage.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="deleteafterdayssincecreation_nodejs">
+<a href="#deleteafterdayssincecreation_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to delete the blob version.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="change_tier_to_archive_after_days_since_creation_python">
+<a href="#change_tier_to_archive_after_days_since_creation_python" style="color: inherit; text-decoration: inherit;">change_<wbr>tier_<wbr>to_<wbr>archive_<wbr>after_<wbr>days_<wbr>since_<wbr>creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to archive storage.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="change_tier_to_cool_after_days_since_creation_python">
+<a href="#change_tier_to_cool_after_days_since_creation_python" style="color: inherit; text-decoration: inherit;">change_<wbr>tier_<wbr>to_<wbr>cool_<wbr>after_<wbr>days_<wbr>since_<wbr>creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to cool storage.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="delete_after_days_since_creation_python">
+<a href="#delete_after_days_since_creation_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after_<wbr>days_<wbr>since_<wbr>creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to delete the blob version.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -805,6 +1041,16 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of predefined values. Valid options are `blockBlob` and `appendBlob`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchblobindextags_csharp">
+<a href="#matchblobindextags_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Blob<wbr>Index<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpolicyrulefiltermatchblobindextag">List&lt;Get<wbr>Policy<wbr>Rule<wbr>Filter<wbr>Match<wbr>Blob<wbr>Index<wbr>Tag&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `match_blob_index_tag` block as defined below. The block defines the blob index tag based filtering for blob objects.
+---
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="prefixmatches_csharp">
@@ -829,6 +1075,16 @@ The following output properties are available:
     <dd>{{% md %}}An array of predefined values. Valid options are `blockBlob` and `appendBlob`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="matchblobindextags_go">
+<a href="#matchblobindextags_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Blob<wbr>Index<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpolicyrulefiltermatchblobindextag">[]Get<wbr>Policy<wbr>Rule<wbr>Filter<wbr>Match<wbr>Blob<wbr>Index<wbr>Tag</a></span>
+    </dt>
+    <dd>{{% md %}}A `match_blob_index_tag` block as defined below. The block defines the blob index tag based filtering for blob objects.
+---
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="prefixmatches_go">
 <a href="#prefixmatches_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Matches</a>
 </span>
@@ -849,6 +1105,16 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of predefined values. Valid options are `blockBlob` and `appendBlob`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchblobindextags_nodejs">
+<a href="#matchblobindextags_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Blob<wbr>Index<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpolicyrulefiltermatchblobindextag">Get<wbr>Policy<wbr>Rule<wbr>Filter<wbr>Match<wbr>Blob<wbr>Index<wbr>Tag[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `match_blob_index_tag` block as defined below. The block defines the blob index tag based filtering for blob objects.
+---
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="prefixmatches_nodejs">
@@ -873,6 +1139,16 @@ The following output properties are available:
     <dd>{{% md %}}An array of predefined values. Valid options are `blockBlob` and `appendBlob`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="match_blob_index_tags_python">
+<a href="#match_blob_index_tags_python" style="color: inherit; text-decoration: inherit;">match_<wbr>blob_<wbr>index_<wbr>tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpolicyrulefiltermatchblobindextag">Sequence[Get<wbr>Policy<wbr>Rule<wbr>Filter<wbr>Match<wbr>Blob<wbr>Index<wbr>Tag]</a></span>
+    </dt>
+    <dd>{{% md %}}A `match_blob_index_tag` block as defined below. The block defines the blob index tag based filtering for blob objects.
+---
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="prefix_matches_python">
 <a href="#prefix_matches_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>matches</a>
 </span>
@@ -880,6 +1156,134 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be matched.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getpolicyrulefiltermatchblobindextag">Get<wbr>Policy<wbr>Rule<wbr>Filter<wbr>Match<wbr>Blob<wbr>Index<wbr>Tag</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filter tag name used for tag based filtering for blob objects.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="operation_csharp">
+<a href="#operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The comparison operator which is used for object comparison and filtering. Possible value is `==`. Defaults to `==`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filter tag value used for tag based filtering for blob objects.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filter tag name used for tag based filtering for blob objects.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="operation_go">
+<a href="#operation_go" style="color: inherit; text-decoration: inherit;">Operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The comparison operator which is used for object comparison and filtering. Possible value is `==`. Defaults to `==`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filter tag value used for tag based filtering for blob objects.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filter tag name used for tag based filtering for blob objects.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="operation_nodejs">
+<a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The comparison operator which is used for object comparison and filtering. Possible value is `==`. Defaults to `==`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filter tag value used for tag based filtering for blob objects.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The filter tag name used for tag based filtering for blob objects.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="operation_python">
+<a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The comparison operator which is used for object comparison and filtering. Possible value is `==`. Defaults to `==`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The filter tag value used for tag based filtering for blob objects.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

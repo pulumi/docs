@@ -714,7 +714,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX.
+    <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX. Defaults to `Latest`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvaultcertificatevaultid_csharp">
@@ -779,7 +779,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX.
+    <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX. Defaults to `Latest`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvaultcertificatevaultid_go">
@@ -844,7 +844,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX.
+    <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX. Defaults to `Latest`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvaultcertificatevaultid_nodejs">
@@ -909,7 +909,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX.
+    <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX. Defaults to `Latest`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_key_vault_certificate_vault_id_python">

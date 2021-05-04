@@ -166,6 +166,7 @@ const acr = new azure.containerservice.Registry("acr", {
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
              <span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">georeplication_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">georeplications</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegistryGeoreplicationArgs]]</span> = None<span class="p">,</span>
              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[RegistryNetworkRuleSetArgs]</span> = None<span class="p">,</span>
@@ -348,8 +349,8 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the admin user is enabled. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="georeplicationlocations_csharp">
 <a href="#georeplicationlocations_csharp" style="color: inherit; text-decoration: inherit;">Georeplication<wbr>Locations</a>
 </span>
@@ -357,6 +358,15 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `georeplications`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="georeplications_csharp">
+<a href="#georeplications_csharp" style="color: inherit; text-decoration: inherit;">Georeplications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registrygeoreplication">List&lt;Registry<wbr>Georeplication<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `georeplications` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
@@ -469,8 +479,8 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the admin user is enabled. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="georeplicationlocations_go">
 <a href="#georeplicationlocations_go" style="color: inherit; text-decoration: inherit;">Georeplication<wbr>Locations</a>
 </span>
@@ -478,6 +488,15 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `georeplications`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="georeplications_go">
+<a href="#georeplications_go" style="color: inherit; text-decoration: inherit;">Georeplications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registrygeoreplication">[]Registry<wbr>Georeplication</a></span>
+    </dt>
+    <dd>{{% md %}}A `georeplications` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -590,8 +609,8 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the admin user is enabled. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="georeplicationlocations_nodejs">
 <a href="#georeplicationlocations_nodejs" style="color: inherit; text-decoration: inherit;">georeplication<wbr>Locations</a>
 </span>
@@ -599,6 +618,15 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `georeplications`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="georeplications_nodejs">
+<a href="#georeplications_nodejs" style="color: inherit; text-decoration: inherit;">georeplications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registrygeoreplication">Registry<wbr>Georeplication<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `georeplications` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -711,8 +739,8 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the admin user is enabled. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="georeplication_locations_python">
 <a href="#georeplication_locations_python" style="color: inherit; text-decoration: inherit;">georeplication_<wbr>locations</a>
 </span>
@@ -720,6 +748,15 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `georeplications`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="georeplications_python">
+<a href="#georeplications_python" style="color: inherit; text-decoration: inherit;">georeplications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registrygeoreplication">Sequence[Registry<wbr>Georeplication<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `georeplications` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -996,6 +1033,7 @@ Get an existing Registry resource's state with the given name, ID, and optional 
         <span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">admin_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">georeplication_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">georeplications</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegistryGeoreplicationArgs]]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">login_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1145,8 +1183,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_georeplicationlocations_csharp">
 <a href="#state_georeplicationlocations_csharp" style="color: inherit; text-decoration: inherit;">Georeplication<wbr>Locations</a>
 </span>
@@ -1154,6 +1192,15 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `georeplications`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_georeplications_csharp">
+<a href="#state_georeplications_csharp" style="color: inherit; text-decoration: inherit;">Georeplications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registrygeoreplication">List&lt;Registry<wbr>Georeplication<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `georeplications` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
@@ -1293,8 +1340,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_georeplicationlocations_go">
 <a href="#state_georeplicationlocations_go" style="color: inherit; text-decoration: inherit;">Georeplication<wbr>Locations</a>
 </span>
@@ -1302,6 +1349,15 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `georeplications`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_georeplications_go">
+<a href="#state_georeplications_go" style="color: inherit; text-decoration: inherit;">Georeplications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registrygeoreplication">[]Registry<wbr>Georeplication</a></span>
+    </dt>
+    <dd>{{% md %}}A `georeplications` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -1441,8 +1497,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_georeplicationlocations_nodejs">
 <a href="#state_georeplicationlocations_nodejs" style="color: inherit; text-decoration: inherit;">georeplication<wbr>Locations</a>
 </span>
@@ -1450,6 +1506,15 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `georeplications`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_georeplications_nodejs">
+<a href="#state_georeplications_nodejs" style="color: inherit; text-decoration: inherit;">georeplications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registrygeoreplication">Registry<wbr>Georeplication<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `georeplications` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
@@ -1589,8 +1654,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Username associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_georeplication_locations_python">
 <a href="#state_georeplication_locations_python" style="color: inherit; text-decoration: inherit;">georeplication_<wbr>locations</a>
 </span>
@@ -1598,6 +1663,15 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `georeplications`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_georeplications_python">
+<a href="#state_georeplications_python" style="color: inherit; text-decoration: inherit;">georeplications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registrygeoreplication">Sequence[Registry<wbr>Georeplication<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `georeplications` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
@@ -1717,6 +1791,96 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="registrygeoreplication">Registry<wbr>Georeplication</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A location where the container registry should be geo-replicated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to this replication location.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A location where the container registry should be geo-replicated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to this replication location.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A location where the container registry should be geo-replicated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to this replication location.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A location where the container registry should be geo-replicated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to this replication location.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="registrynetworkruleset">Registry<wbr>Network<wbr>Rule<wbr>Set</h4>
 

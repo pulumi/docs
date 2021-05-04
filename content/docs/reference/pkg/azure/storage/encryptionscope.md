@@ -181,6 +181,7 @@ const exampleEncryptionScope = new azure.storage.EncryptionScope("exampleEncrypt
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">EncryptionScope</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">infrastructure_encryption_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                     <span class="nx">key_vault_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -358,6 +359,15 @@ The EncryptionScope resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The ID of the Storage Account where this Storage Encryption Scope is created. Changing this forces a new Storage Encryption Scope to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="infrastructureencryptionrequired_csharp">
+<a href="#infrastructureencryptionrequired_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is a secondary layer of encryption with Platform Managed Keys for data applied?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyvaultkeyid_csharp">
 <a href="#keyvaultkeyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Key<wbr>Id</a>
 </span>
@@ -396,6 +406,15 @@ The EncryptionScope resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Account where this Storage Encryption Scope is created. Changing this forces a new Storage Encryption Scope to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="infrastructureencryptionrequired_go">
+<a href="#infrastructureencryptionrequired_go" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is a secondary layer of encryption with Platform Managed Keys for data applied?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultkeyid_go">
@@ -438,6 +457,15 @@ The EncryptionScope resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The ID of the Storage Account where this Storage Encryption Scope is created. Changing this forces a new Storage Encryption Scope to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="infrastructureencryptionrequired_nodejs">
+<a href="#infrastructureencryptionrequired_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Encryption<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is a secondary layer of encryption with Platform Managed Keys for data applied?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyvaultkeyid_nodejs">
 <a href="#keyvaultkeyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Key<wbr>Id</a>
 </span>
@@ -476,6 +504,15 @@ The EncryptionScope resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Account where this Storage Encryption Scope is created. Changing this forces a new Storage Encryption Scope to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="infrastructure_encryption_required_python">
+<a href="#infrastructure_encryption_required_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>encryption_<wbr>required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is a secondary layer of encryption with Platform Managed Keys for data applied?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_key_id_python">
@@ -568,6 +605,7 @@ Get an existing EncryptionScope resource's state with the given name, ID, and op
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">infrastructure_encryption_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">key_vault_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -684,6 +722,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_infrastructureencryptionrequired_csharp">
+<a href="#state_infrastructureencryptionrequired_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is a secondary layer of encryption with Platform Managed Keys for data applied?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keyvaultkeyid_csharp">
 <a href="#state_keyvaultkeyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Key<wbr>Id</a>
 </span>
@@ -723,6 +770,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_infrastructureencryptionrequired_go">
+<a href="#state_infrastructureencryptionrequired_go" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is a secondary layer of encryption with Platform Managed Keys for data applied?
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyvaultkeyid_go">
 <a href="#state_keyvaultkeyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Key<wbr>Id</a>
@@ -764,6 +820,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_infrastructureencryptionrequired_nodejs">
+<a href="#state_infrastructureencryptionrequired_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Encryption<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is a secondary layer of encryption with Platform Managed Keys for data applied?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keyvaultkeyid_nodejs">
 <a href="#state_keyvaultkeyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Key<wbr>Id</a>
 </span>
@@ -803,6 +868,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_infrastructure_encryption_required_python">
+<a href="#state_infrastructure_encryption_required_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>encryption_<wbr>required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is a secondary layer of encryption with Platform Managed Keys for data applied?
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_vault_key_id_python">
 <a href="#state_key_vault_key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>key_<wbr>id</a>
