@@ -96,6 +96,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="licensemanager/" title="licensemanager"><span class="symbol module"></span>licensemanager</a></li>
     <li><a href="lightsail/" title="lightsail"><span class="symbol module"></span>lightsail</a></li>
     <li><a href="macie/" title="macie"><span class="symbol module"></span>macie</a></li>
+    <li><a href="macie2/" title="macie2"><span class="symbol module"></span>macie2</a></li>
     <li><a href="mediaconvert/" title="mediaconvert"><span class="symbol module"></span>mediaconvert</a></li>
     <li><a href="mediapackage/" title="mediapackage"><span class="symbol module"></span>mediapackage</a></li>
     <li><a href="mediastore/" title="mediastore"><span class="symbol module"></span>mediastore</a></li>
@@ -180,6 +181,6 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.1.0</dd>
+	<dd>4.2.0</dd>
 </dl>
 
