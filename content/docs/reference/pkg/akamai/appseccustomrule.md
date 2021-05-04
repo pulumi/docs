@@ -28,7 +28,7 @@ The `akamai.AppSecCustomRule` resource allows you to create or modify a custom r
 <span class="k">def </span><span class="nx">AppSecCustomRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                      <span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-                     <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                     <span class="nx">custom_rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">AppSecCustomRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AppSecCustomRuleArgs</a></span><span class="p">,</span>
@@ -193,8 +193,8 @@ The AppSecCustomRule resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="rules_csharp">
-<a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
+        <span id="customrule_csharp">
+<a href="#customrule_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -215,8 +215,8 @@ The AppSecCustomRule resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="rules_go">
-<a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
+        <span id="customrule_go">
+<a href="#customrule_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -237,8 +237,8 @@ The AppSecCustomRule resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="rules_nodejs">
-<a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
+        <span id="customrule_nodejs">
+<a href="#customrule_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -259,8 +259,8 @@ The AppSecCustomRule resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="rules_python">
-<a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
+        <span id="custom_rule_python">
+<a href="#custom_rule_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -377,8 +377,8 @@ Get an existing AppSecCustomRule resource's state with the given name, ID, and o
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-        <span class="nx">custom_rule_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-        <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AppSecCustomRule</code></pre></div>
+        <span class="nx">custom_rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">custom_rule_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> AppSecCustomRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -500,6 +500,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_customrule_csharp">
+<a href="#state_customrule_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of a JSON file containing a custom rule definition ([format](https://developer.akamai.com/api/cloud_security/application_security/v1.html#postcustomrules)).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_customruleid_csharp">
 <a href="#state_customruleid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rule<wbr>Id</a>
 </span>
@@ -507,15 +516,6 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the custom rule.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_rules_csharp">
-<a href="#state_rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of a JSON file containing a custom rule definition ([format](https://developer.akamai.com/api/cloud_security/application_security/v1.html#postcustomrules)).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -531,6 +531,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_customrule_go">
+<a href="#state_customrule_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of a JSON file containing a custom rule definition ([format](https://developer.akamai.com/api/cloud_security/application_security/v1.html#postcustomrules)).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_customruleid_go">
 <a href="#state_customruleid_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rule<wbr>Id</a>
 </span>
@@ -538,15 +547,6 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the custom rule.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_rules_go">
-<a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of a JSON file containing a custom rule definition ([format](https://developer.akamai.com/api/cloud_security/application_security/v1.html#postcustomrules)).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -562,6 +562,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_customrule_nodejs">
+<a href="#state_customrule_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of a JSON file containing a custom rule definition ([format](https://developer.akamai.com/api/cloud_security/application_security/v1.html#postcustomrules)).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_customruleid_nodejs">
 <a href="#state_customruleid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Rule<wbr>Id</a>
 </span>
@@ -569,15 +578,6 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the custom rule.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_rules_nodejs">
-<a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of a JSON file containing a custom rule definition ([format](https://developer.akamai.com/api/cloud_security/application_security/v1.html#postcustomrules)).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -593,6 +593,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_custom_rule_python">
+<a href="#state_custom_rule_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of a JSON file containing a custom rule definition ([format](https://developer.akamai.com/api/cloud_security/application_security/v1.html#postcustomrules)).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_custom_rule_id_python">
 <a href="#state_custom_rule_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>rule_<wbr>id</a>
 </span>
@@ -600,15 +609,6 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the custom rule.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_rules_python">
-<a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of a JSON file containing a custom rule definition ([format](https://developer.akamai.com/api/cloud_security/application_security/v1.html#postcustomrules)).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

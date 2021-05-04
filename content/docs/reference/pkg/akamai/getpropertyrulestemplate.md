@@ -27,9 +27,9 @@ You can pass user-defined variables by supplying either:
 You can split each template out into a series of smaller template files. To add
 them to this data source, you need to include them in the currently loaded file,
 which corresponds to the value in the `template_file` argument.  For example, to
-include `example-file.json` from the `template` directory, use this syntax
-including the quotes: `"#include:example-file.json"`.  All files are resolved in
-relation to the directory that contains the starting template file.
+include `example-file.json` from the `property-snippets` directory, use this syntax
+including the quotes: `"#include:example-file.json"`.  Make sure the `property-snippets` folder contains only `.json` files.
+All files are resolved in relation to the directory that contains the starting template file.
 
 ## Inserting variables in a template
 

@@ -42,8 +42,7 @@ class MyStack : Stack
         {
             ConfigId = configuration.Apply(configuration => configuration.ConfigId),
             Version = configuration.Apply(configuration => configuration.LatestVersion),
-            Type = "website",
-            Json = File.ReadAllText($"{path.Module}/match_targets.json"),
+            MatchTargetSequence = File.ReadAllText($"{path.Module}/match_targets.json"),
         });
     }
 
@@ -71,8 +70,7 @@ configuration = akamai.get_app_sec_configuration(name="Akamai Tools")
 match_target_sequence = akamai.AppSecMatchTargetSequence("matchTargetSequence",
     config_id=configuration.config_id,
     version=configuration.latest_version,
-    type="website",
-    json=(lambda path: open(path).read())(f"{path['module']}/match_targets.json"))
+    match_target_sequence=(lambda path: open(path).read())(f"{path['module']}/match_targets.json"))
 ```
 
 
@@ -93,8 +91,7 @@ const configuration = akamai.getAppSecConfiguration({
 const matchTargetSequence = new akamai.AppSecMatchTargetSequence("matchTargetSequence", {
     configId: configuration.then(configuration => configuration.configId),
     version: configuration.then(configuration => configuration.latestVersion),
-    type: "website",
-    json: fs.readFileSync(`${path.module}/match_targets.json`),
+    matchTargetSequence: fs.readFileSync(`${path.module}/match_targets.json`),
 });
 ```
 
@@ -123,9 +120,7 @@ const matchTargetSequence = new akamai.AppSecMatchTargetSequence("matchTargetSeq
 <span class="k">def </span><span class="nx">AppSecMatchTargetSequence</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                               <span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-                              <span class="nx">json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                              <span class="nx">sequence_map</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-                              <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">match_target_sequence</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">AppSecMatchTargetSequence</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -291,14 +286,6 @@ The AppSecMatchTargetSequence resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
@@ -308,22 +295,14 @@ The AppSecMatchTargetSequence resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The version number of the security configuration to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="json_csharp">
-<a href="#json_csharp" style="color: inherit; text-decoration: inherit;">Json</a>
+        <span id="matchtargetsequence_csharp">
+<a href="#matchtargetsequence_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Target<wbr>Sequence</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a JSON file containing the sequence of all match targets defined for the specified security configuration version ([format](https://developer.akamai.com/api/cloud_security/application_security/v1.html#putsequence)).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sequencemap_csharp">
-<a href="#sequencemap_csharp" style="color: inherit; text-decoration: inherit;">Sequence<wbr>Map</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -338,14 +317,6 @@ The AppSecMatchTargetSequence resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
@@ -355,22 +326,14 @@ The AppSecMatchTargetSequence resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The version number of the security configuration to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="json_go">
-<a href="#json_go" style="color: inherit; text-decoration: inherit;">Json</a>
+        <span id="matchtargetsequence_go">
+<a href="#matchtargetsequence_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Target<wbr>Sequence</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a JSON file containing the sequence of all match targets defined for the specified security configuration version ([format](https://developer.akamai.com/api/cloud_security/application_security/v1.html#putsequence)).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sequencemap_go">
-<a href="#sequencemap_go" style="color: inherit; text-decoration: inherit;">Sequence<wbr>Map</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -385,14 +348,6 @@ The AppSecMatchTargetSequence resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
@@ -402,22 +357,14 @@ The AppSecMatchTargetSequence resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The version number of the security configuration to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="json_nodejs">
-<a href="#json_nodejs" style="color: inherit; text-decoration: inherit;">json</a>
+        <span id="matchtargetsequence_nodejs">
+<a href="#matchtargetsequence_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Target<wbr>Sequence</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a JSON file containing the sequence of all match targets defined for the specified security configuration version ([format](https://developer.akamai.com/api/cloud_security/application_security/v1.html#putsequence)).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sequencemap_nodejs">
-<a href="#sequencemap_nodejs" style="color: inherit; text-decoration: inherit;">sequence<wbr>Map</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -432,14 +379,6 @@ The AppSecMatchTargetSequence resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
@@ -449,22 +388,14 @@ The AppSecMatchTargetSequence resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The version number of the security configuration to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="json_python">
-<a href="#json_python" style="color: inherit; text-decoration: inherit;">json</a>
+        <span id="match_target_sequence_python">
+<a href="#match_target_sequence_python" style="color: inherit; text-decoration: inherit;">match_<wbr>target_<wbr>sequence</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a JSON file containing the sequence of all match targets defined for the specified security configuration version ([format](https://developer.akamai.com/api/cloud_security/application_security/v1.html#putsequence)).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sequence_map_python">
-<a href="#sequence_map_python" style="color: inherit; text-decoration: inherit;">sequence_<wbr>map</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -539,9 +470,7 @@ Get an existing AppSecMatchTargetSequence resource's state with the given name, 
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-        <span class="nx">json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">sequence_map</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">match_target_sequence</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> AppSecMatchTargetSequence</code></pre></div>
 {{% /choosable %}}
 
@@ -664,30 +593,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_json_csharp">
-<a href="#state_json_csharp" style="color: inherit; text-decoration: inherit;">Json</a>
+        <span id="state_matchtargetsequence_csharp">
+<a href="#state_matchtargetsequence_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Target<wbr>Sequence</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a JSON file containing the sequence of all match targets defined for the specified security configuration version ([format](https://developer.akamai.com/api/cloud_security/application_security/v1.html#putsequence)).
 {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_sequencemap_csharp">
-<a href="#state_sequencemap_csharp" style="color: inherit; text-decoration: inherit;">Sequence<wbr>Map</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_type_csharp">
-<a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -711,30 +624,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_json_go">
-<a href="#state_json_go" style="color: inherit; text-decoration: inherit;">Json</a>
+        <span id="state_matchtargetsequence_go">
+<a href="#state_matchtargetsequence_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Target<wbr>Sequence</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a JSON file containing the sequence of all match targets defined for the specified security configuration version ([format](https://developer.akamai.com/api/cloud_security/application_security/v1.html#putsequence)).
 {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_sequencemap_go">
-<a href="#state_sequencemap_go" style="color: inherit; text-decoration: inherit;">Sequence<wbr>Map</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_type_go">
-<a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -758,30 +655,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_json_nodejs">
-<a href="#state_json_nodejs" style="color: inherit; text-decoration: inherit;">json</a>
+        <span id="state_matchtargetsequence_nodejs">
+<a href="#state_matchtargetsequence_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Target<wbr>Sequence</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a JSON file containing the sequence of all match targets defined for the specified security configuration version ([format](https://developer.akamai.com/api/cloud_security/application_security/v1.html#putsequence)).
 {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_sequencemap_nodejs">
-<a href="#state_sequencemap_nodejs" style="color: inherit; text-decoration: inherit;">sequence<wbr>Map</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_type_nodejs">
-<a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -805,30 +686,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_json_python">
-<a href="#state_json_python" style="color: inherit; text-decoration: inherit;">json</a>
+        <span id="state_match_target_sequence_python">
+<a href="#state_match_target_sequence_python" style="color: inherit; text-decoration: inherit;">match_<wbr>target_<wbr>sequence</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a JSON file containing the sequence of all match targets defined for the specified security configuration version ([format](https://developer.akamai.com/api/cloud_security/application_security/v1.html#putsequence)).
 {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_sequence_map_python">
-<a href="#state_sequence_map_python" style="color: inherit; text-decoration: inherit;">sequence_<wbr>map</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_type_python">
-<a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
