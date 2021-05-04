@@ -296,25 +296,19 @@ const allowAll = new aws.ec2.SecurityGroupRule("allowAll", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecurityGroupRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -326,25 +320,19 @@ const allowAll = new aws.ec2.SecurityGroupRule("allowAll", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecurityGroupRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -356,33 +344,25 @@ const allowAll = new aws.ec2.SecurityGroupRule("allowAll", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecurityGroupRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -394,25 +374,19 @@ const allowAll = new aws.ec2.SecurityGroupRule("allowAll", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecurityGroupRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -481,7 +455,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -499,7 +473,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of IPv6 CIDR blocks.
+    <dd>{{% md %}}List of IPv6 CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixlistids_csharp">
@@ -517,7 +491,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesecuritygroupid_csharp">
@@ -526,7 +500,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
+    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `self`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -585,7 +559,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -603,7 +577,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of IPv6 CIDR blocks.
+    <dd>{{% md %}}List of IPv6 CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixlistids_go">
@@ -621,7 +595,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesecuritygroupid_go">
@@ -630,7 +604,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
+    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `self`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -689,7 +663,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -707,7 +681,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of IPv6 CIDR blocks.
+    <dd>{{% md %}}List of IPv6 CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixlistids_nodejs">
@@ -725,7 +699,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesecuritygroupid_nodejs">
@@ -734,7 +708,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
+    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `self`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -793,7 +767,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -811,7 +785,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of IPv6 CIDR blocks.
+    <dd>{{% md %}}List of IPv6 CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_list_ids_python">
@@ -829,7 +803,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_security_group_id_python">
@@ -838,7 +812,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
+    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `self`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1042,7 +1016,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -1069,7 +1043,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of IPv6 CIDR blocks.
+    <dd>{{% md %}}List of IPv6 CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefixlistids_csharp">
@@ -1105,7 +1079,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesecuritygroupid_csharp">
@@ -1114,7 +1088,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
+    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_toport_csharp">
@@ -1146,7 +1120,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -1173,7 +1147,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of IPv6 CIDR blocks.
+    <dd>{{% md %}}List of IPv6 CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefixlistids_go">
@@ -1209,7 +1183,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesecuritygroupid_go">
@@ -1218,7 +1192,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
+    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_toport_go">
@@ -1250,7 +1224,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
@@ -1277,7 +1251,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of IPv6 CIDR blocks.
+    <dd>{{% md %}}List of IPv6 CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefixlistids_nodejs">
@@ -1313,7 +1287,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesecuritygroupid_nodejs">
@@ -1322,7 +1296,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
+    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_toport_nodejs">
@@ -1354,7 +1328,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
@@ -1381,7 +1355,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of IPv6 CIDR blocks.
+    <dd>{{% md %}}List of IPv6 CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefix_list_ids_python">
@@ -1417,7 +1391,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_security_group_id_python">
@@ -1426,7 +1400,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
+    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_to_port_python">
