@@ -86,6 +86,8 @@ jobs:
         run: |
           pulumi gen-markdown ./content/docs/reference/cli
         working-directory: docs
+      - name: Update versions
+        run: node scripts/get-versions.js
       - name: Update latest version
         run: |
           echo -n "${{ env.PULUMI_VERSION }}" > ./static/latest-version
