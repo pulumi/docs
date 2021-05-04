@@ -14,12 +14,15 @@
 
 {{ $exclude := split (.Get "exclude") "," }}
 
+{{ $showChecksum  := .Get "showChecksum" }}
+
 <tr>
     <td><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#{{ $flatVersion }}-{{ $date }}">{{ $version }}</a></td>
     <td>{{ $date }}</td>
     <td>{{ template "dl" (dict "exclude" $exclude "version" $version "platform" "linux" "ext" "tar.gz" "display" "Linux") }}</td>
     <td>{{ template "dl" (dict "exclude" $exclude "version" $version "platform" "darwin" "ext" "tar.gz" "display" "macOS") }}</td>
     <td>{{ template "dl" (dict "exclude" $exclude "version" $version "platform" "windows" "ext" "zip" "display" "Windows") }}</td>
+    <td>{{ template "checksum" (dict "showChecksum" $showChecksum "version" $version) }}</td>
 </tr>
 
 {{ define "dl" }}
@@ -27,5 +30,13 @@
         <span class="text-sm text-gray-500">unavailable</span>
     {{ else }}
         <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ .version }}-{{ .platform }}-x64.{{ .ext }}">{{ .display }}</a>
+    {{ end }}
+{{ end }}
+
+{{ define "checksum" }}
+    {{ if .showChecksum }}
+        <a href="https://get.pulumi.com/releases/sdk/pulumi-{{ .version }}-checksums.txt">Checksums</a>
+    {{ else }}
+        <span class="text-sm text-gray-500">--</span>
     {{ end }}
 {{ end }}
