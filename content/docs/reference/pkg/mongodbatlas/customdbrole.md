@@ -241,6 +241,8 @@ class MyStack : Stack
     {
         var inheritedRoleOne = new Mongodbatlas.CustomDbRole("inheritedRoleOne", new Mongodbatlas.CustomDbRoleArgs
         {
+            ProjectId = "<PROJECT-ID>",
+            RoleName = "insertRole",
             Actions = 
             {
                 new Mongodbatlas.Inputs.CustomDbRoleActionArgs
@@ -256,11 +258,11 @@ class MyStack : Stack
                     },
                 },
             },
-            ProjectId = "<PROJECT-ID>",
-            RoleName = "insertRole",
         });
         var inheritedRoleTwo = new Mongodbatlas.CustomDbRole("inheritedRoleTwo", new Mongodbatlas.CustomDbRoleArgs
         {
+            ProjectId = inheritedRoleOne.ProjectId,
+            RoleName = "statusServerRole",
             Actions = 
             {
                 new Mongodbatlas.Inputs.CustomDbRoleActionArgs
@@ -275,11 +277,11 @@ class MyStack : Stack
                     },
                 },
             },
-            ProjectId = inheritedRoleOne.ProjectId,
-            RoleName = "statusServerRole",
         });
         var testRole = new Mongodbatlas.CustomDbRole("testRole", new Mongodbatlas.CustomDbRoleArgs
         {
+            ProjectId = inheritedRoleOne.ProjectId,
+            RoleName = "myCustomRole",
             Actions = 
             {
                 new Mongodbatlas.Inputs.CustomDbRoleActionArgs
@@ -311,17 +313,15 @@ class MyStack : Stack
             {
                 new Mongodbatlas.Inputs.CustomDbRoleInheritedRoleArgs
                 {
-                    DatabaseName = "admin",
                     RoleName = inheritedRoleOne.RoleName,
+                    DatabaseName = "admin",
                 },
                 new Mongodbatlas.Inputs.CustomDbRoleInheritedRoleArgs
                 {
-                    DatabaseName = "admin",
                     RoleName = inheritedRoleTwo.RoleName,
+                    DatabaseName = "admin",
                 },
             },
-            ProjectId = inheritedRoleOne.ProjectId,
-            RoleName = "myCustomRole",
         });
     }
 
@@ -345,6 +345,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		inheritedRoleOne, err := mongodbatlas.NewCustomDbRole(ctx, "inheritedRoleOne", &mongodbatlas.CustomDbRoleArgs{
+			ProjectId: pulumi.String("<PROJECT-ID>"),
+			RoleName:  pulumi.String("insertRole"),
 			Actions: mongodbatlas.CustomDbRoleActionArray{
 				&mongodbatlas.CustomDbRoleActionArgs{
 					Action: pulumi.String("INSERT"),
@@ -356,13 +358,13 @@ func main() {
 					},
 				},
 			},
-			ProjectId: pulumi.String("<PROJECT-ID>"),
-			RoleName:  pulumi.String("insertRole"),
 		})
 		if err != nil {
 			return err
 		}
 		inheritedRoleTwo, err := mongodbatlas.NewCustomDbRole(ctx, "inheritedRoleTwo", &mongodbatlas.CustomDbRoleArgs{
+			ProjectId: inheritedRoleOne.ProjectId,
+			RoleName:  pulumi.String("statusServerRole"),
 			Actions: mongodbatlas.CustomDbRoleActionArray{
 				&mongodbatlas.CustomDbRoleActionArgs{
 					Action: pulumi.String("SERVER_STATUS"),
@@ -373,13 +375,13 @@ func main() {
 					},
 				},
 			},
-			ProjectId: inheritedRoleOne.ProjectId,
-			RoleName:  pulumi.String("statusServerRole"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = mongodbatlas.NewCustomDbRole(ctx, "testRole", &mongodbatlas.CustomDbRoleArgs{
+			ProjectId: inheritedRoleOne.ProjectId,
+			RoleName:  pulumi.String("myCustomRole"),
 			Actions: mongodbatlas.CustomDbRoleActionArray{
 				&mongodbatlas.CustomDbRoleActionArgs{
 					Action: pulumi.String("UPDATE"),
@@ -402,16 +404,14 @@ func main() {
 			},
 			InheritedRoles: mongodbatlas.CustomDbRoleInheritedRoleArray{
 				&mongodbatlas.CustomDbRoleInheritedRoleArgs{
-					DatabaseName: pulumi.String("admin"),
 					RoleName:     inheritedRoleOne.RoleName,
+					DatabaseName: pulumi.String("admin"),
 				},
 				&mongodbatlas.CustomDbRoleInheritedRoleArgs{
-					DatabaseName: pulumi.String("admin"),
 					RoleName:     inheritedRoleTwo.RoleName,
+					DatabaseName: pulumi.String("admin"),
 				},
 			},
-			ProjectId: inheritedRoleOne.ProjectId,
-			RoleName:  pulumi.String("myCustomRole"),
 		})
 		if err != nil {
 			return err
@@ -432,25 +432,27 @@ import pulumi
 import pulumi_mongodbatlas as mongodbatlas
 
 inherited_role_one = mongodbatlas.CustomDbRole("inheritedRoleOne",
+    project_id="<PROJECT-ID>",
+    role_name="insertRole",
     actions=[mongodbatlas.CustomDbRoleActionArgs(
         action="INSERT",
         resources=[mongodbatlas.CustomDbRoleActionResourceArgs(
             collection_name="",
             database_name="anyDatabase",
         )],
-    )],
-    project_id="<PROJECT-ID>",
-    role_name="insertRole")
+    )])
 inherited_role_two = mongodbatlas.CustomDbRole("inheritedRoleTwo",
+    project_id=inherited_role_one.project_id,
+    role_name="statusServerRole",
     actions=[mongodbatlas.CustomDbRoleActionArgs(
         action="SERVER_STATUS",
         resources=[mongodbatlas.CustomDbRoleActionResourceArgs(
             cluster=True,
         )],
-    )],
-    project_id=inherited_role_one.project_id,
-    role_name="statusServerRole")
+    )])
 test_role = mongodbatlas.CustomDbRole("testRole",
+    project_id=inherited_role_one.project_id,
+    role_name="myCustomRole",
     actions=[
         mongodbatlas.CustomDbRoleActionArgs(
             action="UPDATE",
@@ -469,16 +471,14 @@ test_role = mongodbatlas.CustomDbRole("testRole",
     ],
     inherited_roles=[
         mongodbatlas.CustomDbRoleInheritedRoleArgs(
-            database_name="admin",
             role_name=inherited_role_one.role_name,
+            database_name="admin",
         ),
         mongodbatlas.CustomDbRoleInheritedRoleArgs(
-            database_name="admin",
             role_name=inherited_role_two.role_name,
+            database_name="admin",
         ),
-    ],
-    project_id=inherited_role_one.project_id,
-    role_name="myCustomRole")
+    ])
 ```
 
 
@@ -492,7 +492,9 @@ test_role = mongodbatlas.CustomDbRole("testRole",
 import * as pulumi from "@pulumi/pulumi";
 import * as mongodbatlas from "@pulumi/mongodbatlas";
 
-const inheritedRoleOne = new mongodbatlas.CustomDbRole("inherited_role_one", {
+const inheritedRoleOne = new mongodbatlas.CustomDbRole("inheritedRoleOne", {
+    projectId: "<PROJECT-ID>",
+    roleName: "insertRole",
     actions: [{
         action: "INSERT",
         resources: [{
@@ -500,20 +502,20 @@ const inheritedRoleOne = new mongodbatlas.CustomDbRole("inherited_role_one", {
             databaseName: "anyDatabase",
         }],
     }],
-    projectId: "<PROJECT-ID>",
-    roleName: "insertRole",
 });
-const inheritedRoleTwo = new mongodbatlas.CustomDbRole("inherited_role_two", {
+const inheritedRoleTwo = new mongodbatlas.CustomDbRole("inheritedRoleTwo", {
+    projectId: inheritedRoleOne.projectId,
+    roleName: "statusServerRole",
     actions: [{
         action: "SERVER_STATUS",
         resources: [{
             cluster: true,
         }],
     }],
-    projectId: inheritedRoleOne.projectId,
-    roleName: "statusServerRole",
 });
-const testRole = new mongodbatlas.CustomDbRole("test_role", {
+const testRole = new mongodbatlas.CustomDbRole("testRole", {
+    projectId: inheritedRoleOne.projectId,
+    roleName: "myCustomRole",
     actions: [
         {
             action: "UPDATE",
@@ -532,16 +534,14 @@ const testRole = new mongodbatlas.CustomDbRole("test_role", {
     ],
     inheritedRoles: [
         {
-            databaseName: "admin",
             roleName: inheritedRoleOne.roleName,
+            databaseName: "admin",
         },
         {
-            databaseName: "admin",
             roleName: inheritedRoleTwo.roleName,
+            databaseName: "admin",
         },
     ],
-    projectId: inheritedRoleOne.projectId,
-    roleName: "myCustomRole",
 });
 ```
 

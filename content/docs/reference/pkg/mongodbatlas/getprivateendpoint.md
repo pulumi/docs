@@ -18,65 +18,6 @@ meta_desc: "Documentation for the mongodbatlas.getPrivateEndpoint function with 
 > **NOTE:** Groups and projects are synonymous terms. You may find group_id in the official documentation.
 
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as mongodbatlas from "@pulumi/mongodbatlas";
-
-const testMongodbatlasPrivateEndpoint = new mongodbatlas.PrivateEndpoint("test", {
-    projectId: "<PROJECT-ID>",
-    providerName: "AWS",
-    region: "us-east-1",
-});
-const testPrivateEndpoint = pulumi.all([testMongodbatlasPrivateEndpoint.privateLinkId, testMongodbatlasPrivateEndpoint.projectId]).apply(([privateLinkId, projectId]) => mongodbatlas.getPrivateEndpoint({
-    privateLinkId: privateLinkId,
-    projectId: projectId,
-}, { async: true }));
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Using getPrivateEndpoint {#using}

@@ -49,9 +49,8 @@ class MyStack : Stack
             ProviderRegionName = "EU_WEST_2",
             ProviderInstanceSizeName = "M10",
             ProviderBackupEnabled = true,
-            ProviderDiskIops = 100,
-            ProviderEncryptEbsVolume = false,
         });
+        // enable cloud backup snapshots
         var testCloudProviderSnapshot = new Mongodbatlas.CloudProviderSnapshot("testCloudProviderSnapshot", new Mongodbatlas.CloudProviderSnapshotArgs
         {
             ProjectId = myCluster.ProjectId,
@@ -74,7 +73,7 @@ class MyStack : Stack
         {
             DependsOn = 
             {
-                "mongodbatlas_cloud_provider_snapshot.test",
+                testCloudProviderSnapshot,
             },
         });
     }
@@ -105,8 +104,6 @@ func main() {
 			ProviderRegionName:       pulumi.String("EU_WEST_2"),
 			ProviderInstanceSizeName: pulumi.String("M10"),
 			ProviderBackupEnabled:    pulumi.Bool(true),
-			ProviderDiskIops:         pulumi.Int(100),
-			ProviderEncryptEbsVolume: pulumi.Bool(false),
 		})
 		if err != nil {
 			return err
@@ -130,7 +127,7 @@ func main() {
 				Target_project_id:   pulumi.String("5cf5a45a9ccf6400e60981b6"),
 			},
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"mongodbatlas_cloud_provider_snapshot.test",
+			testCloudProviderSnapshot,
 		}))
 		if err != nil {
 			return err
@@ -156,9 +153,8 @@ my_cluster = mongodbatlas.Cluster("myCluster",
     provider_name="AWS",
     provider_region_name="EU_WEST_2",
     provider_instance_size_name="M10",
-    provider_backup_enabled=True,
-    provider_disk_iops=100,
-    provider_encrypt_ebs_volume=False)
+    provider_backup_enabled=True)
+# enable cloud backup snapshots
 test_cloud_provider_snapshot = mongodbatlas.CloudProviderSnapshot("testCloudProviderSnapshot",
     project_id=my_cluster.project_id,
     cluster_name=my_cluster.name,
@@ -173,7 +169,7 @@ test_cloud_provider_snapshot_restore_job = mongodbatlas.CloudProviderSnapshotRes
         target_cluster_name="MyCluster",
         target_project_id="5cf5a45a9ccf6400e60981b6",
     ),
-    opts=pulumi.ResourceOptions(depends_on=["mongodbatlas_cloud_provider_snapshot.test"]))
+    opts=pulumi.ResourceOptions(depends_on=[test_cloud_provider_snapshot]))
 ```
 
 
@@ -194,9 +190,8 @@ const myCluster = new mongodbatlas.Cluster("myCluster", {
     providerRegionName: "EU_WEST_2",
     providerInstanceSizeName: "M10",
     providerBackupEnabled: true,
-    providerDiskIops: 100,
-    providerEncryptEbsVolume: false,
 });
+// enable cloud backup snapshots
 const testCloudProviderSnapshot = new mongodbatlas.CloudProviderSnapshot("testCloudProviderSnapshot", {
     projectId: myCluster.projectId,
     clusterName: myCluster.name,
@@ -213,7 +208,7 @@ const testCloudProviderSnapshotRestoreJob = new mongodbatlas.CloudProviderSnapsh
         target_project_id: "5cf5a45a9ccf6400e60981b6",
     },
 }, {
-    dependsOn: ["mongodbatlas_cloud_provider_snapshot.test"],
+    dependsOn: [testCloudProviderSnapshot],
 });
 ```
 
@@ -244,9 +239,8 @@ class MyStack : Stack
             ProviderRegionName = "EU_WEST_2",
             ProviderInstanceSizeName = "M10",
             ProviderBackupEnabled = true,
-            ProviderDiskIops = 100,
-            ProviderEncryptEbsVolume = false,
         });
+        // enable cloud backup snapshots
         var testCloudProviderSnapshot = new Mongodbatlas.CloudProviderSnapshot("testCloudProviderSnapshot", new Mongodbatlas.CloudProviderSnapshotArgs
         {
             ProjectId = myCluster.ProjectId,
@@ -292,8 +286,6 @@ func main() {
 			ProviderRegionName:       pulumi.String("EU_WEST_2"),
 			ProviderInstanceSizeName: pulumi.String("M10"),
 			ProviderBackupEnabled:    pulumi.Bool(true),
-			ProviderDiskIops:         pulumi.Int(100),
-			ProviderEncryptEbsVolume: pulumi.Bool(false),
 		})
 		if err != nil {
 			return err
@@ -339,9 +331,8 @@ my_cluster = mongodbatlas.Cluster("myCluster",
     provider_name="AWS",
     provider_region_name="EU_WEST_2",
     provider_instance_size_name="M10",
-    provider_backup_enabled=True,
-    provider_disk_iops=100,
-    provider_encrypt_ebs_volume=False)
+    provider_backup_enabled=True)
+# enable cloud backup snapshots
 test_cloud_provider_snapshot = mongodbatlas.CloudProviderSnapshot("testCloudProviderSnapshot",
     project_id=my_cluster.project_id,
     cluster_name=my_cluster.name,
@@ -374,9 +365,8 @@ const myCluster = new mongodbatlas.Cluster("myCluster", {
     providerRegionName: "EU_WEST_2",
     providerInstanceSizeName: "M10",
     providerBackupEnabled: true,
-    providerDiskIops: 100,
-    providerEncryptEbsVolume: false,
 });
+// enable cloud backup snapshots
 const testCloudProviderSnapshot = new mongodbatlas.CloudProviderSnapshot("testCloudProviderSnapshot", {
     projectId: myCluster.projectId,
     clusterName: myCluster.name,

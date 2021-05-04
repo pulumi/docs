@@ -51,11 +51,10 @@ class MyStack : Stack
         {
             AwsKms = new Mongodbatlas.Inputs.EncryptionAtRestAwsKmsArgs
             {
-                Access_key_id = "AKIAIOSFODNN7EXAMPLE",
-                Customer_master_key_id = "030gce02-586d-48d2-a966-05ea954fde0g",
+                Customer_master_key_id = "5ce83906-6563-46b7-8045-11c20e3a5766",
                 Enabled = true,
                 Region = "US_EAST_1",
-                Secret_access_key = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+                Role_id = "60815e2fe01a49138a928ebb",
             },
             AzureKeyVault = new Mongodbatlas.Inputs.EncryptionAtRestAzureKeyVaultArgs
             {
@@ -102,11 +101,10 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := mongodbatlas.NewEncryptionAtRest(ctx, "test", &mongodbatlas.EncryptionAtRestArgs{
 			AwsKms: &mongodbatlas.EncryptionAtRestAwsKmsArgs{
-				Access_key_id:          pulumi.String("AKIAIOSFODNN7EXAMPLE"),
-				Customer_master_key_id: pulumi.String("030gce02-586d-48d2-a966-05ea954fde0g"),
+				Customer_master_key_id: pulumi.String("5ce83906-6563-46b7-8045-11c20e3a5766"),
 				Enabled:                pulumi.Bool(true),
 				Region:                 pulumi.String("US_EAST_1"),
-				Secret_access_key:      pulumi.String("wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"),
+				Role_id:                pulumi.String("60815e2fe01a49138a928ebb"),
 			},
 			AzureKeyVault: &mongodbatlas.EncryptionAtRestAzureKeyVaultArgs{
 				Azure_environment:   pulumi.String("AZURE"),
@@ -146,11 +144,10 @@ import pulumi_mongodbatlas as mongodbatlas
 
 test = mongodbatlas.EncryptionAtRest("test",
     aws_kms=mongodbatlas.EncryptionAtRestAwsKmsArgs(
-        access_key_id="AKIAIOSFODNN7EXAMPLE",
-        customer_master_key_id="030gce02-586d-48d2-a966-05ea954fde0g",
+        customer_master_key_id="5ce83906-6563-46b7-8045-11c20e3a5766",
         enabled=True,
         region="US_EAST_1",
-        secret_access_key="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+        role_id="60815e2fe01a49138a928ebb",
     ),
     azure_key_vault=mongodbatlas.EncryptionAtRestAzureKeyVaultArgs(
         azure_environment="AZURE",
@@ -184,11 +181,10 @@ import * as mongodbatlas from "@pulumi/mongodbatlas";
 
 const test = new mongodbatlas.EncryptionAtRest("test", {
     awsKms: {
-        access_key_id: "AKIAIOSFODNN7EXAMPLE",
-        customer_master_key_id: "030gce02-586d-48d2-a966-05ea954fde0g",
+        customer_master_key_id: "5ce83906-6563-46b7-8045-11c20e3a5766",
         enabled: true,
         region: "US_EAST_1",
-        secret_access_key: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+        role_id: "60815e2fe01a49138a928ebb",
     },
     azureKeyVault: {
         azure_environment: "AZURE",
@@ -914,8 +910,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IAM access key ID with permissions to access the customer master key specified by customerMasterKeyID.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customermasterkeyid_csharp">
 <a href="#customermasterkeyid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Master<wbr>Key<wbr>Id</a>
@@ -959,8 +954,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IAM secret access key with permissions to access the customer master key specified by customerMasterKeyID.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -972,8 +966,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IAM access key ID with permissions to access the customer master key specified by customerMasterKeyID.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customermasterkeyid_go">
 <a href="#customermasterkeyid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Master<wbr>Key<wbr>Id</a>
@@ -1017,8 +1010,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IAM secret access key with permissions to access the customer master key specified by customerMasterKeyID.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1030,8 +1022,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IAM access key ID with permissions to access the customer master key specified by customerMasterKeyID.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customermasterkeyid_nodejs">
 <a href="#customermasterkeyid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Master<wbr>Key<wbr>Id</a>
@@ -1075,8 +1066,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IAM secret access key with permissions to access the customer master key specified by customerMasterKeyID.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1088,8 +1078,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IAM access key ID with permissions to access the customer master key specified by customerMasterKeyID.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customer_master_key_id_python">
 <a href="#customer_master_key_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>master_<wbr>key_<wbr>id</a>
@@ -1133,8 +1122,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IAM secret access key with permissions to access the customer master key specified by customerMasterKeyID.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault</h4>

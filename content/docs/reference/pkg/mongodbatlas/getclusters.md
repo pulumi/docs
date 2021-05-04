@@ -64,9 +64,6 @@ class MyStack : Stack
             ProviderBackupEnabled = true,
             AutoScalingDiskGbEnabled = true,
             ProviderName = "AWS",
-            ProviderDiskIops = 300,
-            ProviderVolumeType = "STANDARD",
-            ProviderEncryptEbsVolume = true,
             ProviderInstanceSizeName = "M40",
         });
         var testClusters = testCluster.ProjectId.Apply(projectId => Mongodbatlas.GetClusters.InvokeAsync(new Mongodbatlas.GetClustersArgs
@@ -114,9 +111,6 @@ func main() {
 			ProviderBackupEnabled:    pulumi.Bool(true),
 			AutoScalingDiskGbEnabled: pulumi.Bool(true),
 			ProviderName:             pulumi.String("AWS"),
-			ProviderDiskIops:         pulumi.Int(300),
-			ProviderVolumeType:       pulumi.String("STANDARD"),
-			ProviderEncryptEbsVolume: pulumi.Bool(true),
 			ProviderInstanceSizeName: pulumi.String("M40"),
 		})
 		if err != nil {
@@ -153,9 +147,6 @@ test_cluster = mongodbatlas.Cluster("testCluster",
     provider_backup_enabled=True,
     auto_scaling_disk_gb_enabled=True,
     provider_name="AWS",
-    provider_disk_iops=300,
-    provider_volume_type="STANDARD",
-    provider_encrypt_ebs_volume=True,
     provider_instance_size_name="M40")
 test_clusters = test_cluster.project_id.apply(lambda project_id: mongodbatlas.get_clusters(project_id=project_id))
 ```
@@ -187,9 +178,6 @@ const testCluster = new mongodbatlas.Cluster("testCluster", {
     providerBackupEnabled: true,
     autoScalingDiskGbEnabled: true,
     providerName: "AWS",
-    providerDiskIops: 300,
-    providerVolumeType: "STANDARD",
-    providerEncryptEbsVolume: true,
     providerInstanceSizeName: "M40",
 });
 const testClusters = testCluster.projectId.apply(projectId => mongodbatlas.getClusters({
@@ -481,13 +469,22 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Legacy Option, Indicates whether Atlas continuous backups are enabled for the cluster.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="biconnector_csharp">
 <a href="#biconnector_csharp" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclustersresultbiconnector">Get<wbr>Clusters<wbr>Result<wbr>Bi<wbr>Connector</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details. **DEPRECATED** Use `bi_connector_config` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use bi_connector_config instead{{% /md %}}</p></dd><dt class="property-required"
+            title="Required">
+        <span id="biconnectorconfig_csharp">
+<a href="#biconnectorconfig_csharp" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustersresultbiconnectorconfig">Get<wbr>Clusters<wbr>Result<wbr>Bi<wbr>Connector<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -690,7 +687,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the Amazon EBS encryption is enabled. This feature encrypts the server’s root volume for both data at rest within the volume and data moving between the volume and the instance.
+    <dd>{{% md %}}**(DEPRECATED)** Indicates whether the Amazon EBS encryption is enabled. This feature encrypts the server’s root volume for both data at rest within the volume and data moving between the volume and the instance. By default this attribute is always enabled, per deprecation process showing the real value at `provider_encrypt_ebs_volume_flag` computed attribute.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providerinstancesizename_csharp">
@@ -827,13 +824,22 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Legacy Option, Indicates whether Atlas continuous backups are enabled for the cluster.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="biconnector_go">
 <a href="#biconnector_go" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclustersresultbiconnector">Get<wbr>Clusters<wbr>Result<wbr>Bi<wbr>Connector</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details. **DEPRECATED** Use `bi_connector_config` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use bi_connector_config instead{{% /md %}}</p></dd><dt class="property-required"
+            title="Required">
+        <span id="biconnectorconfig_go">
+<a href="#biconnectorconfig_go" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustersresultbiconnectorconfig">Get<wbr>Clusters<wbr>Result<wbr>Bi<wbr>Connector<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -1036,7 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the Amazon EBS encryption is enabled. This feature encrypts the server’s root volume for both data at rest within the volume and data moving between the volume and the instance.
+    <dd>{{% md %}}**(DEPRECATED)** Indicates whether the Amazon EBS encryption is enabled. This feature encrypts the server’s root volume for both data at rest within the volume and data moving between the volume and the instance. By default this attribute is always enabled, per deprecation process showing the real value at `provider_encrypt_ebs_volume_flag` computed attribute.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providerinstancesizename_go">
@@ -1173,13 +1179,22 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Legacy Option, Indicates whether Atlas continuous backups are enabled for the cluster.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="biconnector_nodejs">
 <a href="#biconnector_nodejs" style="color: inherit; text-decoration: inherit;">bi<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclustersresultbiconnector">Get<wbr>Clusters<wbr>Result<wbr>Bi<wbr>Connector</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details. **DEPRECATED** Use `bi_connector_config` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use bi_connector_config instead{{% /md %}}</p></dd><dt class="property-required"
+            title="Required">
+        <span id="biconnectorconfig_nodejs">
+<a href="#biconnectorconfig_nodejs" style="color: inherit; text-decoration: inherit;">bi<wbr>Connector<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustersresultbiconnectorconfig">Get<wbr>Clusters<wbr>Result<wbr>Bi<wbr>Connector<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -1382,7 +1397,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the Amazon EBS encryption is enabled. This feature encrypts the server’s root volume for both data at rest within the volume and data moving between the volume and the instance.
+    <dd>{{% md %}}**(DEPRECATED)** Indicates whether the Amazon EBS encryption is enabled. This feature encrypts the server’s root volume for both data at rest within the volume and data moving between the volume and the instance. By default this attribute is always enabled, per deprecation process showing the real value at `provider_encrypt_ebs_volume_flag` computed attribute.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providerinstancesizename_nodejs">
@@ -1519,13 +1534,22 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Legacy Option, Indicates whether Atlas continuous backups are enabled for the cluster.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="bi_connector_python">
 <a href="#bi_connector_python" style="color: inherit; text-decoration: inherit;">bi_<wbr>connector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclustersresultbiconnector">Get<wbr>Clusters<wbr>Result<wbr>Bi<wbr>Connector</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details. **DEPRECATED** Use `bi_connector_config` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use bi_connector_config instead{{% /md %}}</p></dd><dt class="property-required"
+            title="Required">
+        <span id="bi_connector_config_python">
+<a href="#bi_connector_config_python" style="color: inherit; text-decoration: inherit;">bi_<wbr>connector_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustersresultbiconnectorconfig">Get<wbr>Clusters<wbr>Result<wbr>Bi<wbr>Connector<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -1728,7 +1752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the Amazon EBS encryption is enabled. This feature encrypts the server’s root volume for both data at rest within the volume and data moving between the volume and the instance.
+    <dd>{{% md %}}**(DEPRECATED)** Indicates whether the Amazon EBS encryption is enabled. This feature encrypts the server’s root volume for both data at rest within the volume and data moving between the volume and the instance. By default this attribute is always enabled, per deprecation process showing the real value at `provider_encrypt_ebs_volume_flag` computed attribute.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provider_instance_size_name_python">
@@ -1897,6 +1921,98 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether or not BI Connector for Atlas is enabled on the cluster.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="read_preference_python">
+<a href="#read_preference_python" style="color: inherit; text-decoration: inherit;">read_<wbr>preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates the read preference to be used by BI Connector for Atlas on the cluster. Each BI Connector for Atlas read preference contains a distinct combination of [readPreference](https://docs.mongodb.com/manual/core/read-preference/) and [readPreferenceTags](https://docs.mongodb.com/manual/core/read-preference/#tag-sets) options. For details on BI Connector for Atlas read preferences, refer to the [BI Connector Read Preferences Table](https://docs.atlas.mongodb.com/tutorial/create-global-writes-cluster/#bic-read-preferences).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getclustersresultbiconnectorconfig">Get<wbr>Clusters<wbr>Result<wbr>Bi<wbr>Connector<wbr>Config</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether or not BI Connector for Atlas is enabled on the cluster.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="readpreference_csharp">
+<a href="#readpreference_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the read preference to be used by BI Connector for Atlas on the cluster. Each BI Connector for Atlas read preference contains a distinct combination of [readPreference](https://docs.mongodb.com/manual/core/read-preference/) and [readPreferenceTags](https://docs.mongodb.com/manual/core/read-preference/#tag-sets) options. For details on BI Connector for Atlas read preferences, refer to the [BI Connector Read Preferences Table](https://docs.atlas.mongodb.com/tutorial/create-global-writes-cluster/#bic-read-preferences).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether or not BI Connector for Atlas is enabled on the cluster.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="readpreference_go">
+<a href="#readpreference_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the read preference to be used by BI Connector for Atlas on the cluster. Each BI Connector for Atlas read preference contains a distinct combination of [readPreference](https://docs.mongodb.com/manual/core/read-preference/) and [readPreferenceTags](https://docs.mongodb.com/manual/core/read-preference/#tag-sets) options. For details on BI Connector for Atlas read preferences, refer to the [BI Connector Read Preferences Table](https://docs.atlas.mongodb.com/tutorial/create-global-writes-cluster/#bic-read-preferences).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether or not BI Connector for Atlas is enabled on the cluster.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="readpreference_nodejs">
+<a href="#readpreference_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the read preference to be used by BI Connector for Atlas on the cluster. Each BI Connector for Atlas read preference contains a distinct combination of [readPreference](https://docs.mongodb.com/manual/core/read-preference/) and [readPreferenceTags](https://docs.mongodb.com/manual/core/read-preference/#tag-sets) options. For details on BI Connector for Atlas read preferences, refer to the [BI Connector Read Preferences Table](https://docs.atlas.mongodb.com/tutorial/create-global-writes-cluster/#bic-read-preferences).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not BI Connector for Atlas is enabled on the cluster.
 {{% /md %}}</dd><dt class="property-required"

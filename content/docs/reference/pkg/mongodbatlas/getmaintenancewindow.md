@@ -14,35 +14,6 @@ meta_desc: "Documentation for the mongodbatlas.getMaintenanceWindow function wit
 
 > **NOTE:** Groups and projects are synonymous terms. You may find `groupId` in the official documentation.
 
-## Examples Usage
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as mongodbatlas from "@pulumi/mongodbatlas";
-
-const testMongodbatlasMaintenanceWindow = new mongodbatlas.MaintenanceWindow("test", {
-    dayOfWeek: 3,
-    hourOfDay: 4,
-    projectId: "<your-project-id>",
-});
-const testMaintenanceWindow = testMongodbatlasMaintenanceWindow.id.apply(id => mongodbatlas.getMaintenanceWindow({
-    projectId: id,
-}, { async: true }));
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as mongodbatlas from "@pulumi/mongodbatlas";
-
-const testMongodbatlasMaintenanceWindow = new mongodbatlas.MaintenanceWindow("test", {
-    projectId: "<your-project-id>",
-    startAsap: true,
-});
-const testMaintenanceWindow = testMongodbatlasMaintenanceWindow.id.apply(id => mongodbatlas.getMaintenanceWindow({
-    projectId: id,
-}, { async: true }));
-```
-
 
 
 

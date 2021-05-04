@@ -37,23 +37,23 @@ class MyStack : Stack
     {
         var testDatabaseUser = new Mongodbatlas.DatabaseUser("testDatabaseUser", new Mongodbatlas.DatabaseUserArgs
         {
-            DatabaseName = "admin",
+            Username = "test-acc-username",
             Password = "test-acc-password",
             ProjectId = "<PROJECT-ID>",
+            DatabaseName = "admin",
             Roles = 
             {
                 new Mongodbatlas.Inputs.DatabaseUserRoleArgs
                 {
-                    DatabaseName = "admin",
                     RoleName = "readWrite",
+                    DatabaseName = "admin",
                 },
                 new Mongodbatlas.Inputs.DatabaseUserRoleArgs
                 {
-                    DatabaseName = "admin",
                     RoleName = "atlasAdmin",
+                    DatabaseName = "admin",
                 },
             },
-            Username = "test-acc-username",
         });
         var testCustomDbRoles = Output.Create(Mongodbatlas.GetCustomDbRoles.InvokeAsync(new Mongodbatlas.GetCustomDbRolesArgs
         {
@@ -81,20 +81,20 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := mongodbatlas.NewDatabaseUser(ctx, "testDatabaseUser", &mongodbatlas.DatabaseUserArgs{
-			DatabaseName: pulumi.String("admin"),
+			Username:     pulumi.String("test-acc-username"),
 			Password:     pulumi.String("test-acc-password"),
 			ProjectId:    pulumi.String("<PROJECT-ID>"),
+			DatabaseName: pulumi.String("admin"),
 			Roles: mongodbatlas.DatabaseUserRoleArray{
 				&mongodbatlas.DatabaseUserRoleArgs{
-					DatabaseName: pulumi.String("admin"),
 					RoleName:     pulumi.String("readWrite"),
+					DatabaseName: pulumi.String("admin"),
 				},
 				&mongodbatlas.DatabaseUserRoleArgs{
-					DatabaseName: pulumi.String("admin"),
 					RoleName:     pulumi.String("atlasAdmin"),
+					DatabaseName: pulumi.String("admin"),
 				},
 			},
-			Username: pulumi.String("test-acc-username"),
 		})
 		if err != nil {
 			return err
@@ -121,20 +121,20 @@ import pulumi
 import pulumi_mongodbatlas as mongodbatlas
 
 test_database_user = mongodbatlas.DatabaseUser("testDatabaseUser",
-    database_name="admin",
+    username="test-acc-username",
     password="test-acc-password",
     project_id="<PROJECT-ID>",
+    database_name="admin",
     roles=[
         mongodbatlas.DatabaseUserRoleArgs(
-            database_name="admin",
             role_name="readWrite",
+            database_name="admin",
         ),
         mongodbatlas.DatabaseUserRoleArgs(
-            database_name="admin",
             role_name="atlasAdmin",
+            database_name="admin",
         ),
-    ],
-    username="test-acc-username")
+    ])
 test_custom_db_roles = mongodbatlas.get_custom_db_roles(project_id=mongodbatlas_custom_db_role["test"]["project_id"])
 ```
 
@@ -149,25 +149,25 @@ test_custom_db_roles = mongodbatlas.get_custom_db_roles(project_id=mongodbatlas_
 import * as pulumi from "@pulumi/pulumi";
 import * as mongodbatlas from "@pulumi/mongodbatlas";
 
-const testDatabaseUser = new mongodbatlas.DatabaseUser("test", {
-    databaseName: "admin",
+const testDatabaseUser = new mongodbatlas.DatabaseUser("testDatabaseUser", {
+    username: "test-acc-username",
     password: "test-acc-password",
     projectId: "<PROJECT-ID>",
+    databaseName: "admin",
     roles: [
         {
-            databaseName: "admin",
             roleName: "readWrite",
+            databaseName: "admin",
         },
         {
-            databaseName: "admin",
             roleName: "atlasAdmin",
+            databaseName: "admin",
         },
     ],
-    username: "test-acc-username",
 });
-const testCustomDbRoles = mongodbatlas_custom_db_role_test.projectId.apply(projectId => mongodbatlas.getCustomDbRoles({
-    projectId: projectId,
-}, { async: true }));
+const testCustomDbRoles = mongodbatlas.getCustomDbRoles({
+    projectId: mongodbatlas_custom_db_role.test.project_id,
+});
 ```
 
 

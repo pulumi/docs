@@ -50,23 +50,23 @@ class MyStack : Stack
         });
         var ptfeService = new Aws.Ec2.VpcEndpoint("ptfeService", new Aws.Ec2.VpcEndpointArgs
         {
-            SecurityGroupIds = 
-            {
-                "sg-3f238186",
-            },
+            VpcId = "vpc-7fc0a543",
             ServiceName = testPrivateEndpoint.EndpointServiceName,
+            VpcEndpointType = "Interface",
             SubnetIds = 
             {
                 "subnet-de0406d2",
             },
-            VpcEndpointType = "Interface",
-            VpcId = "vpc-7fc0a543",
+            SecurityGroupIds = 
+            {
+                "sg-3f238186",
+            },
         });
         var testPrivateEndpointInterfaceLink = new Mongodbatlas.PrivateEndpointInterfaceLink("testPrivateEndpointInterfaceLink", new Mongodbatlas.PrivateEndpointInterfaceLinkArgs
         {
-            InterfaceEndpointId = ptfeService.Id,
-            PrivateLinkId = testPrivateEndpoint.PrivateLinkId,
             ProjectId = testPrivateEndpoint.ProjectId,
+            PrivateLinkId = testPrivateEndpoint.PrivateLinkId,
+            InterfaceEndpointId = ptfeService.Id,
         });
     }
 
@@ -83,7 +83,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
 	"github.com/pulumi/pulumi-mongodbatlas/sdk/v2/go/mongodbatlas"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -99,23 +99,23 @@ func main() {
 			return err
 		}
 		ptfeService, err := ec2.NewVpcEndpoint(ctx, "ptfeService", &ec2.VpcEndpointArgs{
-			SecurityGroupIds: pulumi.StringArray{
-				pulumi.String("sg-3f238186"),
-			},
-			ServiceName: testPrivateEndpoint.EndpointServiceName,
+			VpcId:           pulumi.String("vpc-7fc0a543"),
+			ServiceName:     testPrivateEndpoint.EndpointServiceName,
+			VpcEndpointType: pulumi.String("Interface"),
 			SubnetIds: pulumi.StringArray{
 				pulumi.String("subnet-de0406d2"),
 			},
-			VpcEndpointType: pulumi.String("Interface"),
-			VpcId:           pulumi.String("vpc-7fc0a543"),
+			SecurityGroupIds: pulumi.StringArray{
+				pulumi.String("sg-3f238186"),
+			},
 		})
 		if err != nil {
 			return err
 		}
 		_, err = mongodbatlas.NewPrivateEndpointInterfaceLink(ctx, "testPrivateEndpointInterfaceLink", &mongodbatlas.PrivateEndpointInterfaceLinkArgs{
-			InterfaceEndpointId: ptfeService.ID(),
-			PrivateLinkId:       testPrivateEndpoint.PrivateLinkId,
 			ProjectId:           testPrivateEndpoint.ProjectId,
+			PrivateLinkId:       testPrivateEndpoint.PrivateLinkId,
+			InterfaceEndpointId: ptfeService.ID(),
 		})
 		if err != nil {
 			return err
@@ -141,15 +141,15 @@ test_private_endpoint = mongodbatlas.PrivateEndpoint("testPrivateEndpoint",
     provider_name="AWS",
     region="us-east-1")
 ptfe_service = aws.ec2.VpcEndpoint("ptfeService",
-    security_group_ids=["sg-3f238186"],
+    vpc_id="vpc-7fc0a543",
     service_name=test_private_endpoint.endpoint_service_name,
-    subnet_ids=["subnet-de0406d2"],
     vpc_endpoint_type="Interface",
-    vpc_id="vpc-7fc0a543")
+    subnet_ids=["subnet-de0406d2"],
+    security_group_ids=["sg-3f238186"])
 test_private_endpoint_interface_link = mongodbatlas.PrivateEndpointInterfaceLink("testPrivateEndpointInterfaceLink",
-    interface_endpoint_id=ptfe_service.id,
+    project_id=test_private_endpoint.project_id,
     private_link_id=test_private_endpoint.private_link_id,
-    project_id=test_private_endpoint.project_id)
+    interface_endpoint_id=ptfe_service.id)
 ```
 
 
@@ -164,22 +164,22 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 import * as mongodbatlas from "@pulumi/mongodbatlas";
 
-const testPrivateEndpoint = new mongodbatlas.PrivateEndpoint("test", {
+const testPrivateEndpoint = new mongodbatlas.PrivateEndpoint("testPrivateEndpoint", {
     projectId: "<PROJECT_ID>",
     providerName: "AWS",
     region: "us-east-1",
 });
-const ptfeService = new aws.ec2.VpcEndpoint("ptfe_service", {
-    securityGroupIds: ["sg-3f238186"],
-    serviceName: testPrivateEndpoint.endpointServiceName,
-    subnetIds: ["subnet-de0406d2"],
-    vpcEndpointType: "Interface",
+const ptfeService = new aws.ec2.VpcEndpoint("ptfeService", {
     vpcId: "vpc-7fc0a543",
+    serviceName: testPrivateEndpoint.endpointServiceName,
+    vpcEndpointType: "Interface",
+    subnetIds: ["subnet-de0406d2"],
+    securityGroupIds: ["sg-3f238186"],
 });
-const testPrivateEndpointInterfaceLink = new mongodbatlas.PrivateEndpointInterfaceLink("test", {
-    interfaceEndpointId: ptfeService.id,
-    privateLinkId: testPrivateEndpoint.privateLinkId,
+const testPrivateEndpointInterfaceLink = new mongodbatlas.PrivateEndpointInterfaceLink("testPrivateEndpointInterfaceLink", {
     projectId: testPrivateEndpoint.projectId,
+    privateLinkId: testPrivateEndpoint.privateLinkId,
+    interfaceEndpointId: ptfeService.id,
 });
 ```
 
