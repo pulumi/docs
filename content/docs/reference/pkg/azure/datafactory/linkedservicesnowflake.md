@@ -45,7 +45,7 @@ class MyStack : Stack
         {
             ResourceGroupName = exampleResourceGroup.Name,
             DataFactoryName = exampleFactory.Name,
-            ConnectionString = "Integrated Security=False;Data Source=test;Initial Catalog=test;User ID=test;Password=test",
+            ConnectionString = "jdbc:snowflake://account.region.snowflakecomputing.com/?user=user&db=db&warehouse=wh",
         });
     }
 
@@ -85,7 +85,7 @@ func main() {
 		_, err = datafactory.NewLinkedServiceSnowflake(ctx, "exampleLinkedServiceSnowflake", &datafactory.LinkedServiceSnowflakeArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			DataFactoryName:   exampleFactory.Name,
-			ConnectionString:  pulumi.String("Integrated Security=False;Data Source=test;Initial Catalog=test;User ID=test;Password=test"),
+			ConnectionString:  pulumi.String("jdbc:snowflake://account.region.snowflakecomputing.com/?user=user&db=db&warehouse=wh"),
 		})
 		if err != nil {
 			return err
@@ -112,7 +112,7 @@ example_factory = azure.datafactory.Factory("exampleFactory",
 example_linked_service_snowflake = azure.datafactory.LinkedServiceSnowflake("exampleLinkedServiceSnowflake",
     resource_group_name=example_resource_group.name,
     data_factory_name=example_factory.name,
-    connection_string="Integrated Security=False;Data Source=test;Initial Catalog=test;User ID=test;Password=test")
+    connection_string="jdbc:snowflake://account.region.snowflakecomputing.com/?user=user&db=db&warehouse=wh")
 ```
 
 
@@ -134,7 +134,7 @@ const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
 const exampleLinkedServiceSnowflake = new azure.datafactory.LinkedServiceSnowflake("exampleLinkedServiceSnowflake", {
     resourceGroupName: exampleResourceGroup.name,
     dataFactoryName: exampleFactory.name,
-    connectionString: "Integrated Security=False;Data Source=test;Initial Catalog=test;User ID=test;Password=test",
+    connectionString: "jdbc:snowflake://account.region.snowflakecomputing.com/?user=user&db=db&warehouse=wh",
 });
 ```
 

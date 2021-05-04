@@ -288,7 +288,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the public ip address configuration
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="networkinterfaces_csharp">
+<a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinescalesetnetworkinterface">List&lt;Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `network_interface` blocks as defined below.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -334,7 +344,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the public ip address configuration
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="networkinterfaces_go">
+<a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinescalesetnetworkinterface">[]Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `network_interface` blocks as defined below.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -380,7 +400,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the public ip address configuration
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="networkinterfaces_nodejs">
+<a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinescalesetnetworkinterface">Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `network_interface` blocks as defined below.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -426,7 +456,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the public ip address configuration
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="network_interfaces_python">
+<a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinescalesetnetworkinterface">Sequence[Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `network_interface` blocks as defined below.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -560,6 +600,882 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ID of the System Managed Service Principal assigned to the Virtual Machine Scale Set.
 {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity type of the Managed Identity assigned to the Virtual Machine Scale Set.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getvirtualmachinescalesetnetworkinterface">Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dnsservers_csharp">
+<a href="#dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The dns servers in use.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enableacceleratednetworking_csharp">
+<a href="#enableacceleratednetworking_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Accelerated<wbr>Networking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enableipforwarding_csharp">
+<a href="#enableipforwarding_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ip<wbr>Forwarding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipconfigurations_csharp">
+<a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinescalesetnetworkinterfaceipconfiguration">List&lt;Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An ip_configuration block as documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this Virtual Machine Scale Set.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networksecuritygroupid_csharp">
+<a href="#networksecuritygroupid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for the network security group.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="primary_csharp">
+<a href="#primary_csharp" style="color: inherit; text-decoration: inherit;">Primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If this ip_configuration is the primary one.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dnsservers_go">
+<a href="#dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The dns servers in use.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enableacceleratednetworking_go">
+<a href="#enableacceleratednetworking_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Accelerated<wbr>Networking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enableipforwarding_go">
+<a href="#enableipforwarding_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ip<wbr>Forwarding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipconfigurations_go">
+<a href="#ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinescalesetnetworkinterfaceipconfiguration">[]Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}An ip_configuration block as documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this Virtual Machine Scale Set.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networksecuritygroupid_go">
+<a href="#networksecuritygroupid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for the network security group.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="primary_go">
+<a href="#primary_go" style="color: inherit; text-decoration: inherit;">Primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If this ip_configuration is the primary one.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dnsservers_nodejs">
+<a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The dns servers in use.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enableacceleratednetworking_nodejs">
+<a href="#enableacceleratednetworking_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Accelerated<wbr>Networking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enableipforwarding_nodejs">
+<a href="#enableipforwarding_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ip<wbr>Forwarding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipconfigurations_nodejs">
+<a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinescalesetnetworkinterfaceipconfiguration">Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration[]</a></span>
+    </dt>
+    <dd>{{% md %}}An ip_configuration block as documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this Virtual Machine Scale Set.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networksecuritygroupid_nodejs">
+<a href="#networksecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for the network security group.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="primary_nodejs">
+<a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If this ip_configuration is the primary one.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dns_servers_python">
+<a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The dns servers in use.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enable_accelerated_networking_python">
+<a href="#enable_accelerated_networking_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>accelerated_<wbr>networking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enable_ip_forwarding_python">
+<a href="#enable_ip_forwarding_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ip_<wbr>forwarding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ip_configurations_python">
+<a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinescalesetnetworkinterfaceipconfiguration">Sequence[Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}An ip_configuration block as documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of this Virtual Machine Scale Set.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="network_security_group_id_python">
+<a href="#network_security_group_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identifier for the network security group.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="primary_python">
+<a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If this ip_configuration is the primary one.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getvirtualmachinescalesetnetworkinterfaceipconfiguration">Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="applicationgatewaybackendaddresspoolids_csharp">
+<a href="#applicationgatewaybackendaddresspoolids_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}An array of references to backend address pools of application gateways.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="applicationsecuritygroupids_csharp">
+<a href="#applicationsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Security<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The application security group IDs to use.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="loadbalancerbackendaddresspoolids_csharp">
+<a href="#loadbalancerbackendaddresspoolids_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}An array of references to backend address pools of load balancers.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="loadbalancerinboundnatrulesids_csharp">
+<a href="#loadbalancerinboundnatrulesids_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}An array of references to inbound NAT pools for load balancers.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this Virtual Machine Scale Set.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="primary_csharp">
+<a href="#primary_csharp" style="color: inherit; text-decoration: inherit;">Primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If this ip_configuration is the primary one.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The the identifier of the subnet.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddresses_csharp">
+<a href="#publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddress">List&lt;Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="applicationgatewaybackendaddresspoolids_go">
+<a href="#applicationgatewaybackendaddresspoolids_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}An array of references to backend address pools of application gateways.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="applicationsecuritygroupids_go">
+<a href="#applicationsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Security<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The application security group IDs to use.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="loadbalancerbackendaddresspoolids_go">
+<a href="#loadbalancerbackendaddresspoolids_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}An array of references to backend address pools of load balancers.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="loadbalancerinboundnatrulesids_go">
+<a href="#loadbalancerinboundnatrulesids_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}An array of references to inbound NAT pools for load balancers.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this Virtual Machine Scale Set.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="primary_go">
+<a href="#primary_go" style="color: inherit; text-decoration: inherit;">Primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If this ip_configuration is the primary one.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The the identifier of the subnet.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddresses_go">
+<a href="#publicipaddresses_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddress">[]Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="applicationgatewaybackendaddresspoolids_nodejs">
+<a href="#applicationgatewaybackendaddresspoolids_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}An array of references to backend address pools of application gateways.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="applicationsecuritygroupids_nodejs">
+<a href="#applicationsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Security<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The application security group IDs to use.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="loadbalancerbackendaddresspoolids_nodejs">
+<a href="#loadbalancerbackendaddresspoolids_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}An array of references to backend address pools of load balancers.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="loadbalancerinboundnatrulesids_nodejs">
+<a href="#loadbalancerinboundnatrulesids_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}An array of references to inbound NAT pools for load balancers.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this Virtual Machine Scale Set.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="primary_nodejs">
+<a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If this ip_configuration is the primary one.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The the identifier of the subnet.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddresses_nodejs">
+<a href="#publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddress">Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="application_gateway_backend_address_pool_ids_python">
+<a href="#application_gateway_backend_address_pool_ids_python" style="color: inherit; text-decoration: inherit;">application_<wbr>gateway_<wbr>backend_<wbr>address_<wbr>pool_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}An array of references to backend address pools of application gateways.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="application_security_group_ids_python">
+<a href="#application_security_group_ids_python" style="color: inherit; text-decoration: inherit;">application_<wbr>security_<wbr>group_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The application security group IDs to use.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="load_balancer_backend_address_pool_ids_python">
+<a href="#load_balancer_backend_address_pool_ids_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pool_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}An array of references to backend address pools of load balancers.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="load_balancer_inbound_nat_rules_ids_python">
+<a href="#load_balancer_inbound_nat_rules_ids_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>inbound_<wbr>nat_<wbr>rules_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}An array of references to inbound NAT pools for load balancers.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of this Virtual Machine Scale Set.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="primary_python">
+<a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If this ip_configuration is the primary one.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The the identifier of the subnet.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="public_ip_addresses_python">
+<a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddress">Sequence[Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddress">Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domainnamelabel_csharp">
+<a href="#domainnamelabel_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The domain name label for the dns settings.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="idletimeoutinminutes_csharp">
+<a href="#idletimeoutinminutes_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="iptags_csharp">
+<a href="#iptags_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddressiptag">List&lt;Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Ip<wbr>Tag&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this Virtual Machine Scale Set.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publicipprefixid_csharp">
+<a href="#publicipprefixid_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Prefix<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domainnamelabel_go">
+<a href="#domainnamelabel_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The domain name label for the dns settings.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="idletimeoutinminutes_go">
+<a href="#idletimeoutinminutes_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="iptags_go">
+<a href="#iptags_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddressiptag">[]Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Ip<wbr>Tag</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this Virtual Machine Scale Set.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publicipprefixid_go">
+<a href="#publicipprefixid_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Prefix<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domainnamelabel_nodejs">
+<a href="#domainnamelabel_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The domain name label for the dns settings.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="idletimeoutinminutes_nodejs">
+<a href="#idletimeoutinminutes_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="iptags_nodejs">
+<a href="#iptags_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddressiptag">Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Ip<wbr>Tag[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this Virtual Machine Scale Set.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publicipprefixid_nodejs">
+<a href="#publicipprefixid_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Prefix<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domain_name_label_python">
+<a href="#domain_name_label_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name_<wbr>label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The domain name label for the dns settings.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="idle_timeout_in_minutes_python">
+<a href="#idle_timeout_in_minutes_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout_<wbr>in_<wbr>minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ip_tags_python">
+<a href="#ip_tags_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddressiptag">Sequence[Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Ip<wbr>Tag]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of this Virtual Machine Scale Set.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="public_ip_prefix_id_python">
+<a href="#public_ip_prefix_id_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefix_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddressiptag">Get<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Ip<wbr>Tag</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="tag_csharp">
+<a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity type of the Managed Identity assigned to the Virtual Machine Scale Set.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="tag_go">
+<a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity type of the Managed Identity assigned to the Virtual Machine Scale Set.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="tag_nodejs">
+<a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity type of the Managed Identity assigned to the Virtual Machine Scale Set.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="tag_python">
+<a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>

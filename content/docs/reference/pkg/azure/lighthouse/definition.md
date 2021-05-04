@@ -1012,6 +1012,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The role definition identifier. This role will define the permissions that are granted to the principal. This cannot be an `Owner` role.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="delegatedroledefinitionids_csharp">
+<a href="#delegatedroledefinitionids_csharp" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Role<wbr>Definition<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The set of role definition ids which define all the permissions that the principal id can assign.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="principaldisplayname_csharp">
 <a href="#principaldisplayname_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Display<wbr>Name</a>
 </span>
@@ -1041,6 +1050,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role definition identifier. This role will define the permissions that are granted to the principal. This cannot be an `Owner` role.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delegatedroledefinitionids_go">
+<a href="#delegatedroledefinitionids_go" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Role<wbr>Definition<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The set of role definition ids which define all the permissions that the principal id can assign.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principaldisplayname_go">
@@ -1074,6 +1092,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The role definition identifier. This role will define the permissions that are granted to the principal. This cannot be an `Owner` role.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="delegatedroledefinitionids_nodejs">
+<a href="#delegatedroledefinitionids_nodejs" style="color: inherit; text-decoration: inherit;">delegated<wbr>Role<wbr>Definition<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The set of role definition ids which define all the permissions that the principal id can assign.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="principaldisplayname_nodejs">
 <a href="#principaldisplayname_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Display<wbr>Name</a>
 </span>
@@ -1103,6 +1130,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The role definition identifier. This role will define the permissions that are granted to the principal. This cannot be an `Owner` role.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delegated_role_definition_ids_python">
+<a href="#delegated_role_definition_ids_python" style="color: inherit; text-decoration: inherit;">delegated_<wbr>role_<wbr>definition_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The set of role definition ids which define all the permissions that the principal id can assign.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_display_name_python">

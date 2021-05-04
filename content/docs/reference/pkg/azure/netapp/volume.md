@@ -561,7 +561,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A `data_protection_replication` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportpolicyrules_csharp">
 <a href="#exportpolicyrules_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Policy<wbr>Rules</a>
@@ -690,7 +691,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A `data_protection_replication` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportpolicyrules_go">
 <a href="#exportpolicyrules_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Policy<wbr>Rules</a>
@@ -819,7 +821,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A `data_protection_replication` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportpolicyrules_nodejs">
 <a href="#exportpolicyrules_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Policy<wbr>Rules</a>
@@ -948,7 +951,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A `data_protection_replication` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="export_policy_rules_python">
 <a href="#export_policy_rules_python" style="color: inherit; text-decoration: inherit;">export_<wbr>policy_<wbr>rules</a>
@@ -1254,7 +1258,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A `data_protection_replication` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exportpolicyrules_csharp">
 <a href="#state_exportpolicyrules_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Policy<wbr>Rules</a>
@@ -1392,7 +1397,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A `data_protection_replication` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exportpolicyrules_go">
 <a href="#state_exportpolicyrules_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Policy<wbr>Rules</a>
@@ -1530,7 +1536,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A `data_protection_replication` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exportpolicyrules_nodejs">
 <a href="#state_exportpolicyrules_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Policy<wbr>Rules</a>
@@ -1668,7 +1675,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A `data_protection_replication` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_export_policy_rules_python">
 <a href="#state_export_policy_rules_python" style="color: inherit; text-decoration: inherit;">export_<wbr>policy_<wbr>rules</a>
@@ -1799,7 +1807,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary volume's location.
+    <dd>{{% md %}}Location of the primary volume.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotevolumeresourceid_csharp">
@@ -1808,7 +1816,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary volume's resource id.
+    <dd>{{% md %}}Resource ID of the primary volume.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationfrequency_csharp">
@@ -1839,7 +1847,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary volume's location.
+    <dd>{{% md %}}Location of the primary volume.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotevolumeresourceid_go">
@@ -1848,7 +1856,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary volume's resource id.
+    <dd>{{% md %}}Resource ID of the primary volume.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationfrequency_go">
@@ -1879,7 +1887,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary volume's location.
+    <dd>{{% md %}}Location of the primary volume.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotevolumeresourceid_nodejs">
@@ -1888,7 +1896,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary volume's resource id.
+    <dd>{{% md %}}Resource ID of the primary volume.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationfrequency_nodejs">
@@ -1919,7 +1927,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Primary volume's location.
+    <dd>{{% md %}}Location of the primary volume.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remote_volume_resource_id_python">
@@ -1928,7 +1936,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Primary volume's resource id.
+    <dd>{{% md %}}Resource ID of the primary volume.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replication_frequency_python">
@@ -2015,7 +2023,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Is root access permitted to this volume?
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unixreadonly_csharp">
 <a href="#unixreadonly_csharp" style="color: inherit; text-decoration: inherit;">Unix<wbr>Read<wbr>Only</a>
@@ -2099,7 +2108,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Is root access permitted to this volume?
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unixreadonly_go">
 <a href="#unixreadonly_go" style="color: inherit; text-decoration: inherit;">Unix<wbr>Read<wbr>Only</a>
@@ -2183,7 +2193,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Is root access permitted to this volume?
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unixreadonly_nodejs">
 <a href="#unixreadonly_nodejs" style="color: inherit; text-decoration: inherit;">unix<wbr>Read<wbr>Only</a>
@@ -2267,7 +2278,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Is root access permitted to this volume?
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unix_read_only_python">
 <a href="#unix_read_only_python" style="color: inherit; text-decoration: inherit;">unix_<wbr>read_<wbr>only</a>

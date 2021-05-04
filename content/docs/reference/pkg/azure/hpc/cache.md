@@ -12,9 +12,9 @@ meta_desc: "Documentation for the azure.hpc.Cache resource with examples, input 
 
 Manages a HPC Cache.
 
-> **Note**: During the first several months of the GA release, a request must be made to the Azure HPC Cache team to add your subscription to the access list before it can be used to create a cache instance. Fill out [this form](https://aka.ms/onboard-hpc-cache) to request access.
+> **Note:** During the first several months of the GA release, a request must be made to the Azure HPC Cache team to add your subscription to the access list before it can be used to create a cache instance. Fill out [this form](https://aka.ms/onboard-hpc-cache) to request access.
 
-> **NOTE:**: By request of the service team the provider no longer automatically registering the `Microsoft.StorageCache` Resource Provider for this resource. To register it you can run `az provider register --namespace 'Microsoft.StorageCache'`.
+> **Note:** By request of the service team the provider no longer automatically registering the `Microsoft.StorageCache` Resource Provider for this resource. To register it you can run `az provider register --namespace 'Microsoft.StorageCache'`.
 
 {{% examples %}}
 
@@ -214,6 +214,9 @@ const exampleCache = new azure.hpc.Cache("exampleCache", {
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
           <span class="nx">cache_size_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">default_access_policy</span><span class="p">:</span> <span class="nx">Optional[CacheDefaultAccessPolicyArgs]</span> = None<span class="p">,</span>
+          <span class="nx">directory_active_directory</span><span class="p">:</span> <span class="nx">Optional[CacheDirectoryActiveDirectoryArgs]</span> = None<span class="p">,</span>
+          <span class="nx">directory_flat_file</span><span class="p">:</span> <span class="nx">Optional[CacheDirectoryFlatFileArgs]</span> = None<span class="p">,</span>
+          <span class="nx">directory_ldap</span><span class="p">:</span> <span class="nx">Optional[CacheDirectoryLdapArgs]</span> = None<span class="p">,</span>
           <span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[CacheDnsArgs]</span> = None<span class="p">,</span>
           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -424,6 +427,33 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}A `default_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="directoryactivedirectory_csharp">
+<a href="#directoryactivedirectory_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Active<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryactivedirectory">Cache<wbr>Directory<wbr>Active<wbr>Directory<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_active_directory` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="directoryflatfile_csharp">
+<a href="#directoryflatfile_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Flat<wbr>File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryflatfile">Cache<wbr>Directory<wbr>Flat<wbr>File<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_flat_file` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="directoryldap_csharp">
+<a href="#directoryldap_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryldap">Cache<wbr>Directory<wbr>Ldap<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_ldap` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dns_csharp">
 <a href="#dns_csharp" style="color: inherit; text-decoration: inherit;">Dns</a>
 </span>
@@ -534,6 +564,33 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#cachedefaultaccesspolicy">Cache<wbr>Default<wbr>Access<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `default_access_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="directoryactivedirectory_go">
+<a href="#directoryactivedirectory_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Active<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryactivedirectory">Cache<wbr>Directory<wbr>Active<wbr>Directory</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_active_directory` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="directoryflatfile_go">
+<a href="#directoryflatfile_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Flat<wbr>File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryflatfile">Cache<wbr>Directory<wbr>Flat<wbr>File</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_flat_file` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="directoryldap_go">
+<a href="#directoryldap_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryldap">Cache<wbr>Directory<wbr>Ldap</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_ldap` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_go">
@@ -648,6 +705,33 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}A `default_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="directoryactivedirectory_nodejs">
+<a href="#directoryactivedirectory_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Active<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryactivedirectory">Cache<wbr>Directory<wbr>Active<wbr>Directory<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_active_directory` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="directoryflatfile_nodejs">
+<a href="#directoryflatfile_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Flat<wbr>File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryflatfile">Cache<wbr>Directory<wbr>Flat<wbr>File<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_flat_file` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="directoryldap_nodejs">
+<a href="#directoryldap_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryldap">Cache<wbr>Directory<wbr>Ldap<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_ldap` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dns_nodejs">
 <a href="#dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
@@ -758,6 +842,33 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#cachedefaultaccesspolicy">Cache<wbr>Default<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `default_access_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="directory_active_directory_python">
+<a href="#directory_active_directory_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>active_<wbr>directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryactivedirectory">Cache<wbr>Directory<wbr>Active<wbr>Directory<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_active_directory` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="directory_flat_file_python">
+<a href="#directory_flat_file_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>flat_<wbr>file</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryflatfile">Cache<wbr>Directory<wbr>Flat<wbr>File<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_flat_file` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="directory_ldap_python">
+<a href="#directory_ldap_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryldap">Cache<wbr>Directory<wbr>Ldap<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_ldap` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_python">
@@ -933,6 +1044,9 @@ Get an existing Cache resource's state with the given name, ID, and optional ext
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">cache_size_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">default_access_policy</span><span class="p">:</span> <span class="nx">Optional[CacheDefaultAccessPolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">directory_active_directory</span><span class="p">:</span> <span class="nx">Optional[CacheDirectoryActiveDirectoryArgs]</span> = None<span class="p">,</span>
+        <span class="nx">directory_flat_file</span><span class="p">:</span> <span class="nx">Optional[CacheDirectoryFlatFileArgs]</span> = None<span class="p">,</span>
+        <span class="nx">directory_ldap</span><span class="p">:</span> <span class="nx">Optional[CacheDirectoryLdapArgs]</span> = None<span class="p">,</span>
         <span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[CacheDnsArgs]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">mount_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -1074,6 +1188,33 @@ The following state arguments are supported:
     <dd>{{% md %}}A `default_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_directoryactivedirectory_csharp">
+<a href="#state_directoryactivedirectory_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Active<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryactivedirectory">Cache<wbr>Directory<wbr>Active<wbr>Directory<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_active_directory` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_directoryflatfile_csharp">
+<a href="#state_directoryflatfile_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Flat<wbr>File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryflatfile">Cache<wbr>Directory<wbr>Flat<wbr>File<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_flat_file` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_directoryldap_csharp">
+<a href="#state_directoryldap_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryldap">Cache<wbr>Directory<wbr>Ldap<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_ldap` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_dns_csharp">
 <a href="#state_dns_csharp" style="color: inherit; text-decoration: inherit;">Dns</a>
 </span>
@@ -1193,6 +1334,33 @@ The following state arguments are supported:
         <span class="property-type"><a href="#cachedefaultaccesspolicy">Cache<wbr>Default<wbr>Access<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `default_access_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_directoryactivedirectory_go">
+<a href="#state_directoryactivedirectory_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Active<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryactivedirectory">Cache<wbr>Directory<wbr>Active<wbr>Directory</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_active_directory` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_directoryflatfile_go">
+<a href="#state_directoryflatfile_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Flat<wbr>File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryflatfile">Cache<wbr>Directory<wbr>Flat<wbr>File</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_flat_file` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_directoryldap_go">
+<a href="#state_directoryldap_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryldap">Cache<wbr>Directory<wbr>Ldap</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_ldap` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_go">
@@ -1316,6 +1484,33 @@ The following state arguments are supported:
     <dd>{{% md %}}A `default_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_directoryactivedirectory_nodejs">
+<a href="#state_directoryactivedirectory_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Active<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryactivedirectory">Cache<wbr>Directory<wbr>Active<wbr>Directory<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_active_directory` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_directoryflatfile_nodejs">
+<a href="#state_directoryflatfile_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Flat<wbr>File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryflatfile">Cache<wbr>Directory<wbr>Flat<wbr>File<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_flat_file` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_directoryldap_nodejs">
+<a href="#state_directoryldap_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryldap">Cache<wbr>Directory<wbr>Ldap<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_ldap` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_dns_nodejs">
 <a href="#state_dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
@@ -1435,6 +1630,33 @@ The following state arguments are supported:
         <span class="property-type"><a href="#cachedefaultaccesspolicy">Cache<wbr>Default<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `default_access_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_directory_active_directory_python">
+<a href="#state_directory_active_directory_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>active_<wbr>directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryactivedirectory">Cache<wbr>Directory<wbr>Active<wbr>Directory<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_active_directory` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_directory_flat_file_python">
+<a href="#state_directory_flat_file_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>flat_<wbr>file</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryflatfile">Cache<wbr>Directory<wbr>Flat<wbr>File<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_flat_file` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_directory_ldap_python">
+<a href="#state_directory_ldap_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryldap">Cache<wbr>Directory<wbr>Ldap<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `directory_ldap` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_python">
@@ -1903,6 +2125,690 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether [SUID](https://docs.microsoft.com/en-us/azure/hpc-cache/access-policies#suid) is allowed? Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cachedirectoryactivedirectory">Cache<wbr>Directory<wbr>Active<wbr>Directory</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cachenetbiosname_csharp">
+<a href="#cachenetbiosname_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Netbios<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dnsprimaryip_csharp">
+<a href="#dnsprimaryip_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Primary<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary DNS IP address used to resolve the Active Directory domain controller's FQDN.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainname_csharp">
+<a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name of the Active Directory domain controller.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainnetbiosname_csharp">
+<a href="#domainnetbiosname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Netbios<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Active Directory domain's NetBIOS name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password of the Active Directory domain administrator.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username of the Active Directory domain administrator.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnssecondaryip_csharp">
+<a href="#dnssecondaryip_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Secondary<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The secondary DNS IP address used to resolve the Active Directory domain controller's FQDN.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cachenetbiosname_go">
+<a href="#cachenetbiosname_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Netbios<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dnsprimaryip_go">
+<a href="#dnsprimaryip_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Primary<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary DNS IP address used to resolve the Active Directory domain controller's FQDN.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainname_go">
+<a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name of the Active Directory domain controller.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainnetbiosname_go">
+<a href="#domainnetbiosname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Netbios<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Active Directory domain's NetBIOS name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password of the Active Directory domain administrator.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username of the Active Directory domain administrator.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnssecondaryip_go">
+<a href="#dnssecondaryip_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Secondary<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The secondary DNS IP address used to resolve the Active Directory domain controller's FQDN.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cachenetbiosname_nodejs">
+<a href="#cachenetbiosname_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Netbios<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dnsprimaryip_nodejs">
+<a href="#dnsprimaryip_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Primary<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary DNS IP address used to resolve the Active Directory domain controller's FQDN.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainname_nodejs">
+<a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name of the Active Directory domain controller.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainnetbiosname_nodejs">
+<a href="#domainnetbiosname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Netbios<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Active Directory domain's NetBIOS name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password of the Active Directory domain administrator.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username of the Active Directory domain administrator.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnssecondaryip_nodejs">
+<a href="#dnssecondaryip_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Secondary<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The secondary DNS IP address used to resolve the Active Directory domain controller's FQDN.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cache_netbios_name_python">
+<a href="#cache_netbios_name_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>netbios_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dns_primary_ip_python">
+<a href="#dns_primary_ip_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>primary_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The primary DNS IP address used to resolve the Active Directory domain controller's FQDN.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domain_name_python">
+<a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name of the Active Directory domain controller.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domain_netbios_name_python">
+<a href="#domain_netbios_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>netbios_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Active Directory domain's NetBIOS name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The password of the Active Directory domain administrator.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The username of the Active Directory domain administrator.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dns_secondary_ip_python">
+<a href="#dns_secondary_ip_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>secondary_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The secondary DNS IP address used to resolve the Active Directory domain controller's FQDN.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cachedirectoryflatfile">Cache<wbr>Directory<wbr>Flat<wbr>File</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="groupfileuri_csharp">
+<a href="#groupfileuri_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>File<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the file containing group information (`/etc/group` file format in Unix-like OS).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="passwordfileuri_csharp">
+<a href="#passwordfileuri_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>File<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the file containing user information (`/etc/passwd` file format in Unix-like OS).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="groupfileuri_go">
+<a href="#groupfileuri_go" style="color: inherit; text-decoration: inherit;">Group<wbr>File<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the file containing group information (`/etc/group` file format in Unix-like OS).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="passwordfileuri_go">
+<a href="#passwordfileuri_go" style="color: inherit; text-decoration: inherit;">Password<wbr>File<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the file containing user information (`/etc/passwd` file format in Unix-like OS).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="groupfileuri_nodejs">
+<a href="#groupfileuri_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>File<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the file containing group information (`/etc/group` file format in Unix-like OS).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="passwordfileuri_nodejs">
+<a href="#passwordfileuri_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>File<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the file containing user information (`/etc/passwd` file format in Unix-like OS).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="group_file_uri_python">
+<a href="#group_file_uri_python" style="color: inherit; text-decoration: inherit;">group_<wbr>file_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URI of the file containing group information (`/etc/group` file format in Unix-like OS).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="password_file_uri_python">
+<a href="#password_file_uri_python" style="color: inherit; text-decoration: inherit;">password_<wbr>file_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URI of the file containing user information (`/etc/passwd` file format in Unix-like OS).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cachedirectoryldap">Cache<wbr>Directory<wbr>Ldap</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="basedn_csharp">
+<a href="#basedn_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The base distinguished name (DN) for the LDAP domain.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="server_csharp">
+<a href="#server_csharp" style="color: inherit; text-decoration: inherit;">Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The FQDN or IP address of the LDAP server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bind_csharp">
+<a href="#bind_csharp" style="color: inherit; text-decoration: inherit;">Bind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryldapbind">Cache<wbr>Directory<wbr>Ldap<wbr>Bind<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `bind` block as defined above.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificatevalidationuri_csharp">
+<a href="#certificatevalidationuri_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Validation<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the CA certificate to validate the LDAP secure connection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="downloadcertificateautomatically_csharp">
+<a href="#downloadcertificateautomatically_csharp" style="color: inherit; text-decoration: inherit;">Download<wbr>Certificate<wbr>Automatically</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the certificate should be automatically downloaded. This can be set to `true` only when `certificate_validation_uri` is provided. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_csharp">
+<a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the LDAP connection should be encrypted? Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="basedn_go">
+<a href="#basedn_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The base distinguished name (DN) for the LDAP domain.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="server_go">
+<a href="#server_go" style="color: inherit; text-decoration: inherit;">Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The FQDN or IP address of the LDAP server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bind_go">
+<a href="#bind_go" style="color: inherit; text-decoration: inherit;">Bind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryldapbind">Cache<wbr>Directory<wbr>Ldap<wbr>Bind</a></span>
+    </dt>
+    <dd>{{% md %}}A `bind` block as defined above.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificatevalidationuri_go">
+<a href="#certificatevalidationuri_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Validation<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the CA certificate to validate the LDAP secure connection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="downloadcertificateautomatically_go">
+<a href="#downloadcertificateautomatically_go" style="color: inherit; text-decoration: inherit;">Download<wbr>Certificate<wbr>Automatically</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the certificate should be automatically downloaded. This can be set to `true` only when `certificate_validation_uri` is provided. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_go">
+<a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the LDAP connection should be encrypted? Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="basedn_nodejs">
+<a href="#basedn_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The base distinguished name (DN) for the LDAP domain.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="server_nodejs">
+<a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The FQDN or IP address of the LDAP server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bind_nodejs">
+<a href="#bind_nodejs" style="color: inherit; text-decoration: inherit;">bind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryldapbind">Cache<wbr>Directory<wbr>Ldap<wbr>Bind<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `bind` block as defined above.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificatevalidationuri_nodejs">
+<a href="#certificatevalidationuri_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Validation<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the CA certificate to validate the LDAP secure connection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="downloadcertificateautomatically_nodejs">
+<a href="#downloadcertificateautomatically_nodejs" style="color: inherit; text-decoration: inherit;">download<wbr>Certificate<wbr>Automatically</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the certificate should be automatically downloaded. This can be set to `true` only when `certificate_validation_uri` is provided. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_nodejs">
+<a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the LDAP connection should be encrypted? Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="base_dn_python">
+<a href="#base_dn_python" style="color: inherit; text-decoration: inherit;">base_<wbr>dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The base distinguished name (DN) for the LDAP domain.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="server_python">
+<a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The FQDN or IP address of the LDAP server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bind_python">
+<a href="#bind_python" style="color: inherit; text-decoration: inherit;">bind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectoryldapbind">Cache<wbr>Directory<wbr>Ldap<wbr>Bind<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `bind` block as defined above.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificate_validation_uri_python">
+<a href="#certificate_validation_uri_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>validation_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URI of the CA certificate to validate the LDAP secure connection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="download_certificate_automatically_python">
+<a href="#download_certificate_automatically_python" style="color: inherit; text-decoration: inherit;">download_<wbr>certificate_<wbr>automatically</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the certificate should be automatically downloaded. This can be set to `true` only when `certificate_validation_uri` is provided. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_python">
+<a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the LDAP connection should be encrypted? Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cachedirectoryldapbind">Cache<wbr>Directory<wbr>Ldap<wbr>Bind</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dn_csharp">
+<a href="#dn_csharp" style="color: inherit; text-decoration: inherit;">Dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Bind Distinguished Name (DN) identity to be used in the secure LDAP connection.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Bind password to be used in the secure LDAP connection.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dn_go">
+<a href="#dn_go" style="color: inherit; text-decoration: inherit;">Dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Bind Distinguished Name (DN) identity to be used in the secure LDAP connection.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Bind password to be used in the secure LDAP connection.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dn_nodejs">
+<a href="#dn_nodejs" style="color: inherit; text-decoration: inherit;">dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Bind Distinguished Name (DN) identity to be used in the secure LDAP connection.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Bind password to be used in the secure LDAP connection.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dn_python">
+<a href="#dn_python" style="color: inherit; text-decoration: inherit;">dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Bind Distinguished Name (DN) identity to be used in the secure LDAP connection.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Bind password to be used in the secure LDAP connection.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

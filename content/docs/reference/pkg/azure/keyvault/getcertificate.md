@@ -711,6 +711,15 @@ The following output properties are available:
     <dd>{{% md %}}A `key_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="lifetimeactions_csharp">
+<a href="#lifetimeactions_csharp" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `lifetime_action` block as defined below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="secretproperties_csharp">
 <a href="#secretproperties_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Properties</a>
 </span>
@@ -727,15 +736,6 @@ The following output properties are available:
         <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificateproperty">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `x509_certificate_properties` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lifetimeactions_csharp">
-<a href="#lifetimeactions_csharp" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>Actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A `lifetime_action` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -760,6 +760,15 @@ The following output properties are available:
     <dd>{{% md %}}A `key_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="lifetimeactions_go">
+<a href="#lifetimeactions_go" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">[]Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}A `lifetime_action` block as defined below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="secretproperties_go">
 <a href="#secretproperties_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Properties</a>
 </span>
@@ -776,15 +785,6 @@ The following output properties are available:
         <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificateproperty">[]Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}An `x509_certificate_properties` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lifetimeactions_go">
-<a href="#lifetimeactions_go" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>Actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">[]Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}A `lifetime_action` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -809,6 +809,15 @@ The following output properties are available:
     <dd>{{% md %}}A `key_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="lifetimeactions_nodejs">
+<a href="#lifetimeactions_nodejs" style="color: inherit; text-decoration: inherit;">lifetime<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `lifetime_action` block as defined below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="secretproperties_nodejs">
 <a href="#secretproperties_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Properties</a>
 </span>
@@ -825,15 +834,6 @@ The following output properties are available:
         <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificateproperty">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property[]</a></span>
     </dt>
     <dd>{{% md %}}An `x509_certificate_properties` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lifetimeactions_nodejs">
-<a href="#lifetimeactions_nodejs" style="color: inherit; text-decoration: inherit;">lifetime<wbr>Actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action[]</a></span>
-    </dt>
-    <dd>{{% md %}}A `lifetime_action` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -858,6 +858,15 @@ The following output properties are available:
     <dd>{{% md %}}A `key_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="lifetime_actions_python">
+<a href="#lifetime_actions_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action]</a></span>
+    </dt>
+    <dd>{{% md %}}A `lifetime_action` block as defined below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="secret_properties_python">
 <a href="#secret_properties_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>properties</a>
 </span>
@@ -874,15 +883,6 @@ The following output properties are available:
         <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificateproperty">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property]</a></span>
     </dt>
     <dd>{{% md %}}An `x509_certificate_properties` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lifetime_actions_python">
-<a href="#lifetime_actions_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action]</a></span>
-    </dt>
-    <dd>{{% md %}}A `lifetime_action` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -949,6 +949,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="curve_csharp">
+<a href="#curve_csharp" style="color: inherit; text-decoration: inherit;">Curve</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="exportable_csharp">
 <a href="#exportable_csharp" style="color: inherit; text-decoration: inherit;">Exportable</a>
 </span>
@@ -988,6 +996,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="curve_go">
+<a href="#curve_go" style="color: inherit; text-decoration: inherit;">Curve</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exportable_go">
 <a href="#exportable_go" style="color: inherit; text-decoration: inherit;">Exportable</a>
@@ -1029,6 +1045,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="curve_nodejs">
+<a href="#curve_nodejs" style="color: inherit; text-decoration: inherit;">curve</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="exportable_nodejs">
 <a href="#exportable_nodejs" style="color: inherit; text-decoration: inherit;">exportable</a>
 </span>
@@ -1068,6 +1092,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="curve_python">
+<a href="#curve_python" style="color: inherit; text-decoration: inherit;">curve</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exportable_python">
 <a href="#exportable_python" style="color: inherit; text-decoration: inherit;">exportable</a>

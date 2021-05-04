@@ -132,7 +132,6 @@ const example = pulumi.output(azure.batch.getPool({
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_pool(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPoolCertificate]]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[GetPoolNetworkConfiguration]</span> = None<span class="p">,</span>
              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[GetPoolStartTask]</span> = None<span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPoolResult</code></pre></div>
@@ -196,14 +195,6 @@ The following arguments are supported:
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="networkconfiguration_csharp">
-<a href="#networkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="starttask_csharp">
 <a href="#starttask_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Task</a>
 </span>
@@ -251,14 +242,6 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
 {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="networkconfiguration_go">
-<a href="#networkconfiguration_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttask_go">
 <a href="#starttask_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Task</a>
@@ -308,14 +291,6 @@ The following arguments are supported:
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="networkconfiguration_nodejs">
-<a href="#networkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="starttask_nodejs">
 <a href="#starttask_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Task</a>
 </span>
@@ -363,14 +338,6 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
 {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="network_configuration_python">
-<a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_task_python">
 <a href="#start_task_python" style="color: inherit; text-decoration: inherit;">start_<wbr>task</a>

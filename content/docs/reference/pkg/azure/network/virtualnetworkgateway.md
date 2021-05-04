@@ -2470,7 +2470,7 @@ through BGP peering. Valid values can be between `0` and `100`.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation. Changing this forces a new resource to be created.
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2483,7 +2483,7 @@ through BGP peering. Valid values can be between `0` and `100`.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation. Changing this forces a new resource to be created.
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2496,7 +2496,7 @@ through BGP peering. Valid values can be between `0` and `100`.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation. Changing this forces a new resource to be created.
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2509,7 +2509,7 @@ through BGP peering. Valid values can be between `0` and `100`.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation. Changing this forces a new resource to be created.
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -340,6 +340,7 @@ const copy = new azure.compute.ManagedDisk("copy", {
 <span class="k">def </span><span class="nx">ManagedDisk</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                 <span class="nx">create_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">disk_access_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">disk_iops_read_write</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                 <span class="nx">disk_mbps_read_write</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -348,6 +349,7 @@ const copy = new azure.compute.ManagedDisk("copy", {
                 <span class="nx">image_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">source_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -538,6 +540,15 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The type of storage to use for the managed disk. Possible values are `Standard_LRS`, `Premium_LRS`, `StandardSSD_LRS` or `UltraSSD_LRS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="diskaccessid_csharp">
+<a href="#diskaccessid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Access<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the disk access resource for using private endpoints on disks.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="diskencryptionsetid_csharp">
 <a href="#diskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
 </span>
@@ -608,6 +619,15 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Managed Disk. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkaccesspolicy_csharp">
+<a href="#networkaccesspolicy_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Access<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Policy for accessing the disk via network. Allowed values are `AllowAll`, `AllowPrivate`, and `DenyAll`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
@@ -695,6 +715,15 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The type of storage to use for the managed disk. Possible values are `Standard_LRS`, `Premium_LRS`, `StandardSSD_LRS` or `UltraSSD_LRS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="diskaccessid_go">
+<a href="#diskaccessid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Access<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the disk access resource for using private endpoints on disks.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="diskencryptionsetid_go">
 <a href="#diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
 </span>
@@ -765,6 +794,15 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Managed Disk. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkaccesspolicy_go">
+<a href="#networkaccesspolicy_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Access<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Policy for accessing the disk via network. Allowed values are `AllowAll`, `AllowPrivate`, and `DenyAll`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
@@ -852,6 +890,15 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The type of storage to use for the managed disk. Possible values are `Standard_LRS`, `Premium_LRS`, `StandardSSD_LRS` or `UltraSSD_LRS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="diskaccessid_nodejs">
+<a href="#diskaccessid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Access<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the disk access resource for using private endpoints on disks.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="diskencryptionsetid_nodejs">
 <a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
 </span>
@@ -922,6 +969,15 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Managed Disk. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkaccesspolicy_nodejs">
+<a href="#networkaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Access<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Policy for accessing the disk via network. Allowed values are `AllowAll`, `AllowPrivate`, and `DenyAll`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
@@ -1009,6 +1065,15 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The type of storage to use for the managed disk. Possible values are `Standard_LRS`, `Premium_LRS`, `StandardSSD_LRS` or `UltraSSD_LRS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disk_access_id_python">
+<a href="#disk_access_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>access_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the disk access resource for using private endpoints on disks.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="disk_encryption_set_id_python">
 <a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
 </span>
@@ -1079,6 +1144,15 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Managed Disk. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_access_policy_python">
+<a href="#network_access_policy_python" style="color: inherit; text-decoration: inherit;">network_<wbr>access_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Policy for accessing the disk via network. Allowed values are `AllowAll`, `AllowPrivate`, and `DenyAll`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
@@ -1208,6 +1282,7 @@ Get an existing ManagedDisk resource's state with the given name, ID, and option
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">create_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">disk_access_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">disk_iops_read_write</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">disk_mbps_read_write</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -1216,6 +1291,7 @@ Get an existing ManagedDisk resource's state with the given name, ID, and option
         <span class="nx">image_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">source_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1345,6 +1421,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The method to use when creating the managed disk. Changing this forces a new resource to be created. Possible values include `Import` (Import a VHD file in to the managed disk (VHD specified with `source_uri`), `Empty` (Create an empty managed disk), `Copy` (Copy an existing managed disk or snapshot, specified with `source_resource_id`), `FromImage` (Copy a Platform Image, specified with `image_reference_id`), `Restore` (Set by Azure Backup or Site Recovery on a restored disk, specified with `source_resource_id`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_diskaccessid_csharp">
+<a href="#state_diskaccessid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Access<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the disk access resource for using private endpoints on disks.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_diskencryptionsetid_csharp">
 <a href="#state_diskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
 </span>
@@ -1415,6 +1500,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Managed Disk. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_networkaccesspolicy_csharp">
+<a href="#state_networkaccesspolicy_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Access<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Policy for accessing the disk via network. Allowed values are `AllowAll`, `AllowPrivate`, and `DenyAll`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ostype_csharp">
@@ -1502,6 +1596,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The method to use when creating the managed disk. Changing this forces a new resource to be created. Possible values include `Import` (Import a VHD file in to the managed disk (VHD specified with `source_uri`), `Empty` (Create an empty managed disk), `Copy` (Copy an existing managed disk or snapshot, specified with `source_resource_id`), `FromImage` (Copy a Platform Image, specified with `image_reference_id`), `Restore` (Set by Azure Backup or Site Recovery on a restored disk, specified with `source_resource_id`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_diskaccessid_go">
+<a href="#state_diskaccessid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Access<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the disk access resource for using private endpoints on disks.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_diskencryptionsetid_go">
 <a href="#state_diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
 </span>
@@ -1572,6 +1675,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Managed Disk. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_networkaccesspolicy_go">
+<a href="#state_networkaccesspolicy_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Access<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Policy for accessing the disk via network. Allowed values are `AllowAll`, `AllowPrivate`, and `DenyAll`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ostype_go">
@@ -1659,6 +1771,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The method to use when creating the managed disk. Changing this forces a new resource to be created. Possible values include `Import` (Import a VHD file in to the managed disk (VHD specified with `source_uri`), `Empty` (Create an empty managed disk), `Copy` (Copy an existing managed disk or snapshot, specified with `source_resource_id`), `FromImage` (Copy a Platform Image, specified with `image_reference_id`), `Restore` (Set by Azure Backup or Site Recovery on a restored disk, specified with `source_resource_id`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_diskaccessid_nodejs">
+<a href="#state_diskaccessid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Access<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the disk access resource for using private endpoints on disks.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_diskencryptionsetid_nodejs">
 <a href="#state_diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
 </span>
@@ -1729,6 +1850,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Managed Disk. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_networkaccesspolicy_nodejs">
+<a href="#state_networkaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Access<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Policy for accessing the disk via network. Allowed values are `AllowAll`, `AllowPrivate`, and `DenyAll`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ostype_nodejs">
@@ -1816,6 +1946,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The method to use when creating the managed disk. Changing this forces a new resource to be created. Possible values include `Import` (Import a VHD file in to the managed disk (VHD specified with `source_uri`), `Empty` (Create an empty managed disk), `Copy` (Copy an existing managed disk or snapshot, specified with `source_resource_id`), `FromImage` (Copy a Platform Image, specified with `image_reference_id`), `Restore` (Set by Azure Backup or Site Recovery on a restored disk, specified with `source_resource_id`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_disk_access_id_python">
+<a href="#state_disk_access_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>access_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the disk access resource for using private endpoints on disks.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_disk_encryption_set_id_python">
 <a href="#state_disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
 </span>
@@ -1886,6 +2025,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Managed Disk. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_network_access_policy_python">
+<a href="#state_network_access_policy_python" style="color: inherit; text-decoration: inherit;">network_<wbr>access_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Policy for accessing the disk via network. Allowed values are `AllowAll`, `AllowPrivate`, and `DenyAll`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_os_type_python">

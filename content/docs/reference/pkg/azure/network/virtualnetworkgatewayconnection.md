@@ -2868,7 +2868,7 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm. Valid
-options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
+options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, or `GCMAES256`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrity_csharp">
@@ -2878,7 +2878,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm. Valid
-options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
+options are `GCMAES128`, `GCMAES256`, `MD5`, `SHA1`, `SHA256`, or `SHA384`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecencryption_csharp">
@@ -2908,7 +2908,7 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DH group used in IKE phase 2 for new child SA.
-Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS2048`, `PFS24`,
+Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS14`, `PFS2`, `PFS2048`, `PFS24`, `PFSMM`,
 or `None`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2954,7 +2954,7 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm. Valid
-options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
+options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, or `GCMAES256`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrity_go">
@@ -2964,7 +2964,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm. Valid
-options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
+options are `GCMAES128`, `GCMAES256`, `MD5`, `SHA1`, `SHA256`, or `SHA384`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecencryption_go">
@@ -2994,7 +2994,7 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DH group used in IKE phase 2 for new child SA.
-Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS2048`, `PFS24`,
+Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS14`, `PFS2`, `PFS2048`, `PFS24`, `PFSMM`,
 or `None`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3040,7 +3040,7 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm. Valid
-options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
+options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, or `GCMAES256`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrity_nodejs">
@@ -3050,7 +3050,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm. Valid
-options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
+options are `GCMAES128`, `GCMAES256`, `MD5`, `SHA1`, `SHA256`, or `SHA384`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecencryption_nodejs">
@@ -3080,7 +3080,7 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DH group used in IKE phase 2 for new child SA.
-Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS2048`, `PFS24`,
+Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS14`, `PFS2`, `PFS2048`, `PFS24`, `PFSMM`,
 or `None`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3126,7 +3126,7 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm. Valid
-options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
+options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, or `GCMAES256`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ike_integrity_python">
@@ -3136,7 +3136,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm. Valid
-options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
+options are `GCMAES128`, `GCMAES256`, `MD5`, `SHA1`, `SHA256`, or `SHA384`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsec_encryption_python">
@@ -3166,7 +3166,7 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DH group used in IKE phase 2 for new child SA.
-Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS2048`, `PFS24`,
+Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS14`, `PFS2`, `PFS2048`, `PFS24`, `PFSMM`,
 or `None`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
