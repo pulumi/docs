@@ -19,7 +19,7 @@ features:
     description: |
         The Pulumi Open Source Free Tier provides the Pro Tier of the Pulumi Service at no cost
         to qualifying projects that want a Pulumi managed service with features such as dashboards,
-        CI/CD integrations, role based access controls, and APIs and Webhooks. Projects get
+        CI/CD integrations, role based access controls, and Webhooks. Projects get
         25 team members and unlimited project stacks.
 
 requirements:
