@@ -11,25 +11,26 @@ The current stable version of Pulumi is **{{< latest-version >}}**.
 <table>
     <thead>
         <tr>
-            <th scope="col" width="25%">Version</th>
-            <th scope="col" width="25%">Date</th>
-            <th scope="col" colspan="3" width="50%">Downloads</th>
+            <th scope="col" width="20%">Version</th>
+            <th scope="col" width="20%">Date</th>
+            <th scope="col" colspan="3" width="40%">Downloads</th>
+            <th scope="col" width="20%">---</th>
         </tr>
     </thead>
     <tbody>
-        {{< changelog-table-row version="3.1.0" date="2021-04-22" >}}
-        {{< changelog-table-row version="3.0.0" date="2021-04-19" >}}
-        {{< changelog-table-row version="2.25.2" date="2021-04-17" >}}
-	{{< changelog-table-row version="3.0.0-rc.1" date="2021-04-08" >}}
-        {{< changelog-table-row version="2.25.1" date="2021-04-15" >}}
-        {{< changelog-table-row version="2.25.0" date="2021-04-14" >}}
-        {{< changelog-table-row version="3.0.0-beta.2" date="2021-04-08" >}}
-        {{< changelog-table-row version="3.0.0-beta.1" date="2021-04-01" >}}
-        {{< changelog-table-row version="2.24.1" date="2021-04-02" >}}
-        {{< changelog-table-row version="2.24.0" date="2021-04-01" >}}
-        {{< changelog-table-row version="2.23.2" date="2021-03-25" >}}
-        {{< changelog-table-row version="2.23.1" date="2021-03-18" >}}
-        {{< changelog-table-row version="2.23.0" date="2021-03-17" >}}
+        {{< changelog-table-row version="3.1.0" date="2021-04-22" showChecksum="true" >}}
+        {{< changelog-table-row version="3.0.0" date="2021-04-19" showChecksum="true" >}}
+        {{< changelog-table-row version="2.25.2" date="2021-04-17" showChecksum="true" >}}
+	    {{< changelog-table-row version="3.0.0-rc.1" date="2021-04-08" showChecksum="true" >}}
+        {{< changelog-table-row version="2.25.1" date="2021-04-15" showChecksum="true" >}}
+        {{< changelog-table-row version="2.25.0" date="2021-04-14" showChecksum="true" >}}
+        {{< changelog-table-row version="3.0.0-beta.2" date="2021-04-08" showChecksum="true" >}}
+        {{< changelog-table-row version="3.0.0-beta.1" date="2021-04-01" showChecksum="true" >}}
+        {{< changelog-table-row version="2.24.1" date="2021-04-02" showChecksum="true" >}}
+        {{< changelog-table-row version="2.24.0" date="2021-04-01" showChecksum="true" >}}
+        {{< changelog-table-row version="2.23.2" date="2021-03-25" showChecksum="true" >}}
+        {{< changelog-table-row version="2.23.1" date="2021-03-18" showChecksum="true" >}}
+        {{< changelog-table-row version="2.23.0" date="2021-03-17" showChecksum="true" >}}
         {{< changelog-table-row version="2.22.0" date="2021-03-03" >}}
         {{< changelog-table-row version="2.21.2" date="2021-02-22" >}}
         {{< changelog-table-row version="2.21.1" date="2021-02-18" >}}
