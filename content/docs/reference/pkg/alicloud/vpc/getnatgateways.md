@@ -1288,7 +1288,7 @@ The following output properties are available:
 <a href="#iplists_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnatgatewaysgatewayiplist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Get<wbr>Nat<wbr>Gateways<wbr>Gateway<wbr>Ip<wbr>List&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The ip address of the bind eip.
 {{% /md %}}</dd><dt class="property-required"
@@ -1490,7 +1490,7 @@ The following output properties are available:
 <a href="#iplists_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnatgatewaysgatewayiplist">[]Get<wbr>Nat<wbr>Gateways<wbr>Gateway<wbr>Ip<wbr>List</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The ip address of the bind eip.
 {{% /md %}}</dd><dt class="property-required"
@@ -1692,7 +1692,7 @@ The following output properties are available:
 <a href="#iplists_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnatgatewaysgatewayiplist">Get<wbr>Nat<wbr>Gateways<wbr>Gateway<wbr>Ip<wbr>List[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ip address of the bind eip.
 {{% /md %}}</dd><dt class="property-required"
@@ -1894,7 +1894,7 @@ The following output properties are available:
 <a href="#ip_lists_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnatgatewaysgatewayiplist">Sequence[Get<wbr>Nat<wbr>Gateways<wbr>Gateway<wbr>Ip<wbr>List]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The ip address of the bind eip.
 {{% /md %}}</dd><dt class="property-required"
@@ -2015,90 +2015,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ID of the vSwitch to which the NAT gateway belongs.
 {{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="getnatgatewaysgatewayiplist">Get<wbr>Nat<wbr>Gateways<wbr>Gateway<wbr>Ip<wbr>List</h4>
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="ipaddress_csharp">
-<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="snatentryenabled_csharp">
-<a href="#snatentryenabled_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="ipaddress_go">
-<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="snatentryenabled_go">
-<a href="#snatentryenabled_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="ipaddress_nodejs">
-<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="snatentryenabled_nodejs">
-<a href="#snatentryenabled_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Entry<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="ip_address_python">
-<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="snat_entry_enabled_python">
-<a href="#snat_entry_enabled_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>entry_<wbr>enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
