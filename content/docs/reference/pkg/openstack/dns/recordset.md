@@ -171,6 +171,7 @@ const rsExampleCom = new openstack.dns.RecordSet("rs_example_com", {
 <span class="k">def </span><span class="nx">RecordSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">disable_status_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">records</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
               <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -352,6 +353,17 @@ Changing this creates a new DNS  record set.
     <dd>{{% md %}}A description of the  record set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablestatuscheck_csharp">
+<a href="#disablestatuscheck_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Status<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable wait for recordset to reach ACTIVE
+status. This argumen is disabled by default. If it is set to true, the recordset
+will be considered as created/updated/deleted if OpenStack request returned success.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -434,6 +446,17 @@ Changing this creates a new DNS  record set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the  record set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablestatuscheck_go">
+<a href="#disablestatuscheck_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Status<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable wait for recordset to reach ACTIVE
+status. This argumen is disabled by default. If it is set to true, the recordset
+will be considered as created/updated/deleted if OpenStack request returned success.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -520,6 +543,17 @@ Changing this creates a new DNS  record set.
     <dd>{{% md %}}A description of the  record set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablestatuscheck_nodejs">
+<a href="#disablestatuscheck_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Status<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Disable wait for recordset to reach ACTIVE
+status. This argumen is disabled by default. If it is set to true, the recordset
+will be considered as created/updated/deleted if OpenStack request returned success.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -602,6 +636,17 @@ Changing this creates a new DNS  record set.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the  record set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_status_check_python">
+<a href="#disable_status_check_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>status_<wbr>check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable wait for recordset to reach ACTIVE
+status. This argumen is disabled by default. If it is set to true, the recordset
+will be considered as created/updated/deleted if OpenStack request returned success.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -738,6 +783,7 @@ Get an existing RecordSet resource's state with the given name, ID, and optional
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">disable_status_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">records</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -866,6 +912,17 @@ The following state arguments are supported:
     <dd>{{% md %}}A description of the  record set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_disablestatuscheck_csharp">
+<a href="#state_disablestatuscheck_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Status<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable wait for recordset to reach ACTIVE
+status. This argumen is disabled by default. If it is set to true, the recordset
+will be considered as created/updated/deleted if OpenStack request returned success.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -948,6 +1005,17 @@ Changing this creates a new DNS  record set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the  record set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_disablestatuscheck_go">
+<a href="#state_disablestatuscheck_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Status<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable wait for recordset to reach ACTIVE
+status. This argumen is disabled by default. If it is set to true, the recordset
+will be considered as created/updated/deleted if OpenStack request returned success.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1034,6 +1102,17 @@ Changing this creates a new DNS  record set.
     <dd>{{% md %}}A description of the  record set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_disablestatuscheck_nodejs">
+<a href="#state_disablestatuscheck_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Status<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Disable wait for recordset to reach ACTIVE
+status. This argumen is disabled by default. If it is set to true, the recordset
+will be considered as created/updated/deleted if OpenStack request returned success.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1116,6 +1195,17 @@ Changing this creates a new DNS  record set.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the  record set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_disable_status_check_python">
+<a href="#state_disable_status_check_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>status_<wbr>check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable wait for recordset to reach ACTIVE
+status. This argumen is disabled by default. If it is set to true, the recordset
+will be considered as created/updated/deleted if OpenStack request returned success.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">

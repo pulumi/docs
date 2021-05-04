@@ -16,6 +16,7 @@ Explore the resources and functions of the openstack.blockstorage module.
     <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
     <li><a href="volumeattach" title="VolumeAttach"><span class="symbol resource"></span>VolumeAttach</a></li>
     <li><a href="volumeattachv2" title="VolumeAttachV2"><span class="symbol resource"></span>VolumeAttachV2</a></li>
+    <li><a href="volumetypeaccessv3" title="VolumeTypeAccessV3"><span class="symbol resource"></span>VolumeTypeAccessV3</a></li>
     <li><a href="volumetypev3" title="VolumeTypeV3"><span class="symbol resource"></span>VolumeTypeV3</a></li>
     <li><a href="volumev1" title="VolumeV1"><span class="symbol resource"></span>VolumeV1</a></li>
     <li><a href="volumev2" title="VolumeV2"><span class="symbol resource"></span>VolumeV2</a></li>
@@ -39,6 +40,6 @@ Explore the resources and functions of the openstack.blockstorage module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.1.0</dd>
 </dl>
 
