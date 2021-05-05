@@ -35,9 +35,9 @@ class MyStack : Stack
     {
         var job = new AzureNative.DataBox.Job("job", new AzureNative.DataBox.JobArgs
         {
-            Details = 
+            Details = new AzureNative.DataBox.Inputs.DataBoxJobDetailsArgs
             {
-                { "contactDetails", new AzureNative.DataBox.Inputs.ContactDetailsArgs
+                ContactDetails = new AzureNative.DataBox.Inputs.ContactDetailsArgs
                 {
                     ContactName = "Public SDK Test",
                     EmailList = 
@@ -46,8 +46,8 @@ class MyStack : Stack
                     },
                     Phone = "1234567890",
                     PhoneExtension = "1234",
-                } },
-                { "dataImportDetails", 
+                },
+                DataImportDetails = 
                 {
                     new AzureNative.DataBox.Inputs.DataImportDetailsArgs
                     {
@@ -57,9 +57,9 @@ class MyStack : Stack
                             { "storageAccountId", "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount" },
                         },
                     },
-                } },
-                { "jobDetailsType", "DataBox" },
-                { "shippingAddress", new AzureNative.DataBox.Inputs.ShippingAddressArgs
+                },
+                JobDetailsType = "DataBox",
+                ShippingAddress = new AzureNative.DataBox.Inputs.ShippingAddressArgs
                 {
                     AddressType = "Commercial",
                     City = "San Francisco",
@@ -69,7 +69,7 @@ class MyStack : Stack
                     StateOrProvince = "CA",
                     StreetAddress1 = "16 TOWNSEND ST",
                     StreetAddress2 = "Unit 1",
-                } },
+                },
             },
             JobName = "SdkJob952",
             Location = "westus",
@@ -105,21 +105,21 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 job = azure_native.databox.Job("job",
-    details={
-        "contactDetails": azure_native.databox.ContactDetailsArgs(
+    details=azure_native.databox.DataBoxJobDetailsArgs(
+        contact_details=azure_native.databox.ContactDetailsArgs(
             contact_name="Public SDK Test",
             email_list=["testing@microsoft.com"],
             phone="1234567890",
             phone_extension="1234",
         ),
-        "dataImportDetails": [azure_native.databox.DataImportDetailsArgs(
+        data_import_details=[azure_native.databox.DataImportDetailsArgs(
             account_details={
                 "dataAccountType": "StorageAccount",
                 "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount",
             },
         )],
-        "jobDetailsType": "DataBox",
-        "shippingAddress": azure_native.databox.ShippingAddressArgs(
+        job_details_type="DataBox",
+        shipping_address=azure_native.databox.ShippingAddressArgs(
             address_type="Commercial",
             city="San Francisco",
             company_name="Microsoft",
@@ -129,7 +129,7 @@ job = azure_native.databox.Job("job",
             street_address1="16 TOWNSEND ST",
             street_address2="Unit 1",
         ),
-    },
+    ),
     job_name="SdkJob952",
     location="westus",
     resource_group_name="SdkRg5154",
@@ -209,9 +209,9 @@ class MyStack : Stack
     {
         var job = new AzureNative.DataBox.Job("job", new AzureNative.DataBox.JobArgs
         {
-            Details = 
+            Details = new AzureNative.DataBox.Inputs.DataBoxJobDetailsArgs
             {
-                { "contactDetails", new AzureNative.DataBox.Inputs.ContactDetailsArgs
+                ContactDetails = new AzureNative.DataBox.Inputs.ContactDetailsArgs
                 {
                     ContactName = "Public SDK Test",
                     EmailList = 
@@ -220,8 +220,8 @@ class MyStack : Stack
                     },
                     Phone = "1234567890",
                     PhoneExtension = "1234",
-                } },
-                { "dataImportDetails", 
+                },
+                DataImportDetails = 
                 {
                     new AzureNative.DataBox.Inputs.DataImportDetailsArgs
                     {
@@ -232,10 +232,10 @@ class MyStack : Stack
                             { "storageAccountId", "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2" },
                         },
                     },
-                } },
-                { "devicePassword", "<devicePassword>" },
-                { "jobDetailsType", "DataBox" },
-                { "shippingAddress", new AzureNative.DataBox.Inputs.ShippingAddressArgs
+                },
+                DevicePassword = "<devicePassword>",
+                JobDetailsType = "DataBox",
+                ShippingAddress = new AzureNative.DataBox.Inputs.ShippingAddressArgs
                 {
                     AddressType = "Commercial",
                     City = "San Francisco",
@@ -245,7 +245,7 @@ class MyStack : Stack
                     StateOrProvince = "CA",
                     StreetAddress1 = "16 TOWNSEND ST",
                     StreetAddress2 = "Unit 1",
-                } },
+                },
             },
             JobName = "SdkJob9640",
             Location = "westus",
@@ -281,23 +281,23 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 job = azure_native.databox.Job("job",
-    details={
-        "contactDetails": azure_native.databox.ContactDetailsArgs(
+    details=azure_native.databox.DataBoxJobDetailsArgs(
+        contact_details=azure_native.databox.ContactDetailsArgs(
             contact_name="Public SDK Test",
             email_list=["testing@microsoft.com"],
             phone="1234567890",
             phone_extension="1234",
         ),
-        "dataImportDetails": [azure_native.databox.DataImportDetailsArgs(
+        data_import_details=[azure_native.databox.DataImportDetailsArgs(
             account_details={
                 "dataAccountType": "StorageAccount",
                 "sharePassword": "<sharePassword>",
                 "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2",
             },
         )],
-        "devicePassword": "<devicePassword>",
-        "jobDetailsType": "DataBox",
-        "shippingAddress": azure_native.databox.ShippingAddressArgs(
+        device_password="<devicePassword>",
+        job_details_type="DataBox",
+        shipping_address=azure_native.databox.ShippingAddressArgs(
             address_type="Commercial",
             city="San Francisco",
             company_name="Microsoft",
@@ -307,7 +307,7 @@ job = azure_native.databox.Job("job",
             street_address1="16 TOWNSEND ST",
             street_address2="Unit 1",
         ),
-    },
+    ),
     job_name="SdkJob9640",
     location="westus",
     resource_group_name="SdkRg7478",
@@ -389,9 +389,9 @@ class MyStack : Stack
     {
         var job = new AzureNative.DataBox.Job("job", new AzureNative.DataBox.JobArgs
         {
-            Details = 
+            Details = new AzureNative.DataBox.Inputs.DataBoxJobDetailsArgs
             {
-                { "contactDetails", new AzureNative.DataBox.Inputs.ContactDetailsArgs
+                ContactDetails = new AzureNative.DataBox.Inputs.ContactDetailsArgs
                 {
                     ContactName = "Public SDK Test",
                     EmailList = 
@@ -400,8 +400,8 @@ class MyStack : Stack
                     },
                     Phone = "1234567890",
                     PhoneExtension = "1234",
-                } },
-                { "dataImportDetails", 
+                },
+                DataImportDetails = 
                 {
                     new AzureNative.DataBox.Inputs.DataImportDetailsArgs
                     {
@@ -411,16 +411,16 @@ class MyStack : Stack
                             { "storageAccountId", "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount" },
                         },
                     },
-                } },
-                { "jobDetailsType", "DataBox" },
-                { "preferences", new AzureNative.DataBox.Inputs.PreferencesArgs
+                },
+                JobDetailsType = "DataBox",
+                Preferences = new AzureNative.DataBox.Inputs.PreferencesArgs
                 {
                     EncryptionPreferences = new AzureNative.DataBox.Inputs.EncryptionPreferencesArgs
                     {
                         DoubleEncryption = "Enabled",
                     },
-                } },
-                { "shippingAddress", new AzureNative.DataBox.Inputs.ShippingAddressArgs
+                },
+                ShippingAddress = new AzureNative.DataBox.Inputs.ShippingAddressArgs
                 {
                     AddressType = "Commercial",
                     City = "San Francisco",
@@ -430,7 +430,7 @@ class MyStack : Stack
                     StateOrProvince = "CA",
                     StreetAddress1 = "16 TOWNSEND ST",
                     StreetAddress2 = "Unit 1",
-                } },
+                },
             },
             JobName = "SdkJob6599",
             Location = "westus",
@@ -466,26 +466,26 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 job = azure_native.databox.Job("job",
-    details={
-        "contactDetails": azure_native.databox.ContactDetailsArgs(
+    details=azure_native.databox.DataBoxJobDetailsArgs(
+        contact_details=azure_native.databox.ContactDetailsArgs(
             contact_name="Public SDK Test",
             email_list=["testing@microsoft.com"],
             phone="1234567890",
             phone_extension="1234",
         ),
-        "dataImportDetails": [azure_native.databox.DataImportDetailsArgs(
+        data_import_details=[azure_native.databox.DataImportDetailsArgs(
             account_details={
                 "dataAccountType": "StorageAccount",
                 "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount",
             },
         )],
-        "jobDetailsType": "DataBox",
-        "preferences": azure_native.databox.PreferencesArgs(
+        job_details_type="DataBox",
+        preferences=azure_native.databox.PreferencesArgs(
             encryption_preferences=azure_native.databox.EncryptionPreferencesArgs(
                 double_encryption="Enabled",
             ),
         ),
-        "shippingAddress": azure_native.databox.ShippingAddressArgs(
+        shipping_address=azure_native.databox.ShippingAddressArgs(
             address_type="Commercial",
             city="San Francisco",
             company_name="Microsoft",
@@ -495,7 +495,7 @@ job = azure_native.databox.Job("job",
             street_address1="16 TOWNSEND ST",
             street_address2="Unit 1",
         ),
-    },
+    ),
     job_name="SdkJob6599",
     location="westus",
     resource_group_name="SdkRg608",
@@ -580,9 +580,9 @@ class MyStack : Stack
     {
         var job = new AzureNative.DataBox.Job("job", new AzureNative.DataBox.JobArgs
         {
-            Details = 
+            Details = new AzureNative.DataBox.Inputs.DataBoxJobDetailsArgs
             {
-                { "contactDetails", new AzureNative.DataBox.Inputs.ContactDetailsArgs
+                ContactDetails = new AzureNative.DataBox.Inputs.ContactDetailsArgs
                 {
                     ContactName = "Public SDK Test",
                     EmailList = 
@@ -591,8 +591,8 @@ class MyStack : Stack
                     },
                     Phone = "1234567890",
                     PhoneExtension = "1234",
-                } },
-                { "dataExportDetails", 
+                },
+                DataExportDetails = 
                 {
                     new AzureNative.DataBox.Inputs.DataExportDetailsArgs
                     {
@@ -615,9 +615,9 @@ class MyStack : Stack
                             TransferConfigurationType = "TransferAll",
                         },
                     },
-                } },
-                { "jobDetailsType", "DataBox" },
-                { "shippingAddress", new AzureNative.DataBox.Inputs.ShippingAddressArgs
+                },
+                JobDetailsType = "DataBox",
+                ShippingAddress = new AzureNative.DataBox.Inputs.ShippingAddressArgs
                 {
                     AddressType = "Commercial",
                     City = "San Francisco",
@@ -627,7 +627,7 @@ class MyStack : Stack
                     StateOrProvince = "CA",
                     StreetAddress1 = "16 TOWNSEND ST",
                     StreetAddress2 = "Unit 1",
-                } },
+                },
             },
             JobName = "SdkJob6429",
             Location = "westus",
@@ -663,14 +663,14 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 job = azure_native.databox.Job("job",
-    details={
-        "contactDetails": azure_native.databox.ContactDetailsArgs(
+    details=azure_native.databox.DataBoxJobDetailsArgs(
+        contact_details=azure_native.databox.ContactDetailsArgs(
             contact_name="Public SDK Test",
             email_list=["testing@microsoft.com"],
             phone="1234567890",
             phone_extension="1234",
         ),
-        "dataExportDetails": [azure_native.databox.DataExportDetailsArgs(
+        data_export_details=[azure_native.databox.DataExportDetailsArgs(
             account_details={
                 "dataAccountType": "StorageAccount",
                 "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.Storage/storageAccounts/aaaaaa2",
@@ -686,8 +686,8 @@ job = azure_native.databox.Job("job",
                 transfer_configuration_type="TransferAll",
             ),
         )],
-        "jobDetailsType": "DataBox",
-        "shippingAddress": azure_native.databox.ShippingAddressArgs(
+        job_details_type="DataBox",
+        shipping_address=azure_native.databox.ShippingAddressArgs(
             address_type="Commercial",
             city="San Francisco",
             company_name="Microsoft",
@@ -697,7 +697,7 @@ job = azure_native.databox.Job("job",
             street_address1="16 TOWNSEND ST",
             street_address2="Unit 1",
         ),
-    },
+    ),
     job_name="SdkJob6429",
     location="westus",
     resource_group_name="SdkRg8091",
@@ -787,9 +787,9 @@ class MyStack : Stack
     {
         var job = new AzureNative.DataBox.Job("job", new AzureNative.DataBox.JobArgs
         {
-            Details = 
+            Details = new AzureNative.DataBox.Inputs.DataBoxJobDetailsArgs
             {
-                { "contactDetails", new AzureNative.DataBox.Inputs.ContactDetailsArgs
+                ContactDetails = new AzureNative.DataBox.Inputs.ContactDetailsArgs
                 {
                     ContactName = "Public SDK Test",
                     EmailList = 
@@ -798,8 +798,8 @@ class MyStack : Stack
                     },
                     Phone = "1234567890",
                     PhoneExtension = "1234",
-                } },
-                { "dataImportDetails", 
+                },
+                DataImportDetails = 
                 {
                     new AzureNative.DataBox.Inputs.DataImportDetailsArgs
                     {
@@ -809,9 +809,9 @@ class MyStack : Stack
                             { "storageAccountId", "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2" },
                         },
                     },
-                } },
-                { "jobDetailsType", "DataBox" },
-                { "shippingAddress", new AzureNative.DataBox.Inputs.ShippingAddressArgs
+                },
+                JobDetailsType = "DataBox",
+                ShippingAddress = new AzureNative.DataBox.Inputs.ShippingAddressArgs
                 {
                     AddressType = "Commercial",
                     City = "San Francisco",
@@ -821,7 +821,7 @@ class MyStack : Stack
                     StateOrProvince = "CA",
                     StreetAddress1 = "16 TOWNSEND ST",
                     StreetAddress2 = "Unit 1",
-                } },
+                },
             },
             Identity = new AzureNative.DataBox.Inputs.ResourceIdentityArgs
             {
@@ -865,21 +865,21 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 job = azure_native.databox.Job("job",
-    details={
-        "contactDetails": azure_native.databox.ContactDetailsArgs(
+    details=azure_native.databox.DataBoxJobDetailsArgs(
+        contact_details=azure_native.databox.ContactDetailsArgs(
             contact_name="Public SDK Test",
             email_list=["testing@microsoft.com"],
             phone="1234567890",
             phone_extension="1234",
         ),
-        "dataImportDetails": [azure_native.databox.DataImportDetailsArgs(
+        data_import_details=[azure_native.databox.DataImportDetailsArgs(
             account_details={
                 "dataAccountType": "StorageAccount",
                 "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2",
             },
         )],
-        "jobDetailsType": "DataBox",
-        "shippingAddress": azure_native.databox.ShippingAddressArgs(
+        job_details_type="DataBox",
+        shipping_address=azure_native.databox.ShippingAddressArgs(
             address_type="Commercial",
             city="San Francisco",
             company_name="Microsoft",
@@ -889,7 +889,7 @@ job = azure_native.databox.Job("job",
             street_address1="16 TOWNSEND ST",
             street_address2="Unit 1",
         ),
-    },
+    ),
     identity=azure_native.databox.ResourceIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
@@ -1016,25 +1016,19 @@ const job = new azure_native.databox.Job("job", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1046,25 +1040,19 @@ const job = new azure_native.databox.Job("job", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1076,33 +1064,25 @@ const job = new azure_native.databox.Job("job", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1114,25 +1094,19 @@ const job = new azure_native.databox.Job("job", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

@@ -21,6 +21,7 @@ Explore the resources and functions of the azure-native.securityinsights module.
     <li><a href="incidentcomment" title="IncidentComment"><span class="symbol resource"></span>IncidentComment</a></li>
     <li><a href="incidentrelation" title="IncidentRelation"><span class="symbol resource"></span>IncidentRelation</a></li>
     <li><a href="productsetting" title="ProductSetting"><span class="symbol resource"></span>ProductSetting</a></li>
+    <li><a href="sentinelonboardingstate" title="SentinelOnboardingState"><span class="symbol resource"></span>SentinelOnboardingState</a></li>
     <li><a href="threatintelligenceindicator" title="ThreatIntelligenceIndicator"><span class="symbol resource"></span>ThreatIntelligenceIndicator</a></li>
     <li><a href="watchlist" title="Watchlist"><span class="symbol resource"></span>Watchlist</a></li>
     <li><a href="watchlistitem" title="WatchlistItem"><span class="symbol resource"></span>WatchlistItem</a></li>
@@ -40,6 +41,7 @@ Explore the resources and functions of the azure-native.securityinsights module.
     <li><a href="getincidentcomment" title="GetIncidentComment"><span class="symbol function"></span>GetIncidentComment</a></li>
     <li><a href="getincidentrelation" title="GetIncidentRelation"><span class="symbol function"></span>GetIncidentRelation</a></li>
     <li><a href="getproductsetting" title="GetProductSetting"><span class="symbol function"></span>GetProductSetting</a></li>
+    <li><a href="getsentinelonboardingstate" title="GetSentinelOnboardingState"><span class="symbol function"></span>GetSentinelOnboardingState</a></li>
     <li><a href="getthreatintelligenceindicator" title="GetThreatIntelligenceIndicator"><span class="symbol function"></span>GetThreatIntelligenceIndicator</a></li>
     <li><a href="getwatchlist" title="GetWatchlist"><span class="symbol function"></span>GetWatchlist</a></li>
     <li><a href="getwatchlistitem" title="GetWatchlistItem"><span class="symbol function"></span>GetWatchlistItem</a></li>
@@ -52,6 +54,6 @@ Explore the resources and functions of the azure-native.securityinsights module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.3.0</dd>
+	<dd>1.4.0</dd>
 </dl>
 

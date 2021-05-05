@@ -36,19 +36,19 @@ class MyStack : Stack
         var alertRule = new AzureNative.Insights.AlertRule("alertRule", new AzureNative.Insights.AlertRuleArgs
         {
             Actions = {},
-            Condition = 
+            Condition = new AzureNative.Insights.Inputs.ThresholdRuleConditionArgs
             {
-                { "dataSource", 
+                DataSource = 
                 {
                     { "metricName", "Requests" },
                     { "odataType", "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource" },
                     { "resourceUri", "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest" },
-                } },
-                { "odataType", "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition" },
-                { "operator", "GreaterThan" },
-                { "threshold", 3 },
-                { "timeAggregation", "Total" },
-                { "windowSize", "PT5M" },
+                },
+                OdataType = "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
+                Operator = "GreaterThan",
+                Threshold = 3,
+                TimeAggregation = "Total",
+                WindowSize = "PT5M",
             },
             Description = "Pura Vida",
             IsEnabled = true,
@@ -84,18 +84,18 @@ import pulumi_azure_native as azure_native
 
 alert_rule = azure_native.insights.AlertRule("alertRule",
     actions=[],
-    condition={
-        "dataSource": {
+    condition=azure_native.insights.ThresholdRuleConditionArgs(
+        data_source={
             "metricName": "Requests",
             "odataType": "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
             "resourceUri": "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest",
         },
-        "odataType": "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
-        "operator": "GreaterThan",
-        "threshold": 3,
-        "timeAggregation": "Total",
-        "windowSize": "PT5M",
-    },
+        odata_type="Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
+        operator="GreaterThan",
+        threshold=3,
+        time_aggregation="Total",
+        window_size="PT5M",
+    ),
     description="Pura Vida",
     is_enabled=True,
     location="West US",
@@ -199,25 +199,19 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AlertRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -229,25 +223,19 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AlertRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -259,33 +247,25 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AlertRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -297,25 +277,19 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AlertRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

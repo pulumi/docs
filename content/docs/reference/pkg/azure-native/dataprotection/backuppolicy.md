@@ -45,21 +45,21 @@ class MyStack : Stack
                 ObjectType = "BackupPolicy",
                 PolicyRules = 
                 {
-                    
+                    new AzureNative.DataProtection.Inputs.AzureBackupRuleArgs
                     {
-                        { "backupParameters", new AzureNative.DataProtection.Inputs.AzureBackupParamsArgs
+                        BackupParameters = new AzureNative.DataProtection.Inputs.AzureBackupParamsArgs
                         {
                             BackupType = "Full",
                             ObjectType = "AzureBackupParams",
-                        } },
-                        { "dataStore", new AzureNative.DataProtection.Inputs.DataStoreInfoBaseArgs
+                        },
+                        DataStore = new AzureNative.DataProtection.Inputs.DataStoreInfoBaseArgs
                         {
                             DataStoreType = "VaultStore",
                             ObjectType = "DataStoreInfoBase",
-                        } },
-                        { "name", "BackupWeekly" },
-                        { "objectType", "AzureBackupRule" },
-                        { "trigger", 
+                        },
+                        Name = "BackupWeekly",
+                        ObjectType = "AzureBackupRule",
+                        Trigger = 
                         {
                             { "objectType", "ScheduleBasedTriggerContext" },
                             { "schedule", new AzureNative.DataProtection.Inputs.BackupScheduleArgs
@@ -105,12 +105,12 @@ class MyStack : Stack
                                     TaggingPriority = 20,
                                 },
                             } },
-                        } },
+                        },
                     },
-                    
+                    new AzureNative.DataProtection.Inputs.AzureRetentionRuleArgs
                     {
-                        { "isDefault", true },
-                        { "lifecycles", 
+                        IsDefault = true,
+                        Lifecycles = 
                         {
                             new AzureNative.DataProtection.Inputs.SourceLifeCycleArgs
                             {
@@ -125,14 +125,14 @@ class MyStack : Stack
                                     ObjectType = "DataStoreInfoBase",
                                 },
                             },
-                        } },
-                        { "name", "Default" },
-                        { "objectType", "AzureRetentionRule" },
+                        },
+                        Name = "Default",
+                        ObjectType = "AzureRetentionRule",
                     },
-                    
+                    new AzureNative.DataProtection.Inputs.AzureRetentionRuleArgs
                     {
-                        { "isDefault", false },
-                        { "lifecycles", 
+                        IsDefault = false,
+                        Lifecycles = 
                         {
                             new AzureNative.DataProtection.Inputs.SourceLifeCycleArgs
                             {
@@ -147,9 +147,9 @@ class MyStack : Stack
                                     ObjectType = "DataStoreInfoBase",
                                 },
                             },
-                        } },
-                        { "name", "Weekly" },
-                        { "objectType", "AzureRetentionRule" },
+                        },
+                        Name = "Weekly",
+                        ObjectType = "AzureRetentionRule",
                     },
                 },
             },
@@ -186,18 +186,18 @@ backup_policy = azure_native.dataprotection.BackupPolicy("backupPolicy",
         datasource_types=["OssDB"],
         object_type="BackupPolicy",
         policy_rules=[
-            {
-                "backupParameters": azure_native.dataprotection.AzureBackupParamsArgs(
+            azure_native.dataprotection.AzureBackupRuleArgs(
+                backup_parameters=azure_native.dataprotection.AzureBackupParamsArgs(
                     backup_type="Full",
                     object_type="AzureBackupParams",
                 ),
-                "dataStore": azure_native.dataprotection.DataStoreInfoBaseArgs(
+                data_store=azure_native.dataprotection.DataStoreInfoBaseArgs(
                     data_store_type="VaultStore",
                     object_type="DataStoreInfoBase",
                 ),
-                "name": "BackupWeekly",
-                "objectType": "AzureBackupRule",
-                "trigger": {
+                name="BackupWeekly",
+                object_type="AzureBackupRule",
+                trigger={
                     "objectType": "ScheduleBasedTriggerContext",
                     "schedule": azure_native.dataprotection.BackupScheduleArgs(
                         repeating_time_intervals=["R/2019-11-20T08:00:00-08:00/P1W"],
@@ -224,10 +224,10 @@ backup_policy = azure_native.dataprotection.BackupPolicy("backupPolicy",
                         ),
                     ],
                 },
-            },
-            {
-                "isDefault": True,
-                "lifecycles": [azure_native.dataprotection.SourceLifeCycleArgs(
+            ),
+            azure_native.dataprotection.AzureRetentionRuleArgs(
+                is_default=True,
+                lifecycles=[azure_native.dataprotection.SourceLifeCycleArgs(
                     delete_after=azure_native.dataprotection.AbsoluteDeleteOptionArgs(
                         duration="P1W",
                         object_type="AbsoluteDeleteOption",
@@ -237,12 +237,12 @@ backup_policy = azure_native.dataprotection.BackupPolicy("backupPolicy",
                         object_type="DataStoreInfoBase",
                     ),
                 )],
-                "name": "Default",
-                "objectType": "AzureRetentionRule",
-            },
-            {
-                "isDefault": False,
-                "lifecycles": [azure_native.dataprotection.SourceLifeCycleArgs(
+                name="Default",
+                object_type="AzureRetentionRule",
+            ),
+            azure_native.dataprotection.AzureRetentionRuleArgs(
+                is_default=False,
+                lifecycles=[azure_native.dataprotection.SourceLifeCycleArgs(
                     delete_after=azure_native.dataprotection.AbsoluteDeleteOptionArgs(
                         duration="P12W",
                         object_type="AbsoluteDeleteOption",
@@ -252,9 +252,9 @@ backup_policy = azure_native.dataprotection.BackupPolicy("backupPolicy",
                         object_type="DataStoreInfoBase",
                     ),
                 )],
-                "name": "Weekly",
-                "objectType": "AzureRetentionRule",
-            },
+                name="Weekly",
+                object_type="AzureRetentionRule",
+            ),
         ],
     ),
     resource_group_name="000pikumar",
@@ -406,25 +406,19 @@ const backupPolicy = new azure_native.dataprotection.BackupPolicy("backupPolicy"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">BackupPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -436,25 +430,19 @@ const backupPolicy = new azure_native.dataprotection.BackupPolicy("backupPolicy"
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">BackupPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -466,33 +454,25 @@ const backupPolicy = new azure_native.dataprotection.BackupPolicy("backupPolicy"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">BackupPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -504,25 +484,19 @@ const backupPolicy = new azure_native.dataprotection.BackupPolicy("backupPolicy"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">BackupPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

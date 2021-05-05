@@ -35,7 +35,7 @@ class MyStack : Stack
     {
         var syncMember = new AzureNative.Sql.SyncMember("syncMember", new AzureNative.Sql.SyncMemberArgs
         {
-            DatabaseName = "syncgroupcrud-7421",
+            DatabaseName = "syncgroupcrud-4328",
             DatabaseType = "AzureSqlDatabase",
             ResourceGroupName = "syncgroupcrud-65440",
             ServerName = "syncgroupcrud-8475",
@@ -70,7 +70,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := sql.NewSyncMember(ctx, "syncMember", &sql.SyncMemberArgs{
-			DatabaseName:                      pulumi.String("syncgroupcrud-7421"),
+			DatabaseName:                      pulumi.String("syncgroupcrud-4328"),
 			DatabaseType:                      pulumi.String("AzureSqlDatabase"),
 			ResourceGroupName:                 pulumi.String("syncgroupcrud-65440"),
 			ServerName:                        pulumi.String("syncgroupcrud-8475"),
@@ -102,7 +102,7 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 sync_member = azure_native.sql.SyncMember("syncMember",
-    database_name="syncgroupcrud-7421",
+    database_name="syncgroupcrud-4328",
     database_type="AzureSqlDatabase",
     resource_group_name="syncgroupcrud-65440",
     server_name="syncgroupcrud-8475",
@@ -127,7 +127,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_native from "@pulumi/azure-native";
 
 const syncMember = new azure_native.sql.SyncMember("syncMember", {
-    databaseName: "syncgroupcrud-7421",
+    databaseName: "syncgroupcrud-4328",
     databaseType: "AzureSqlDatabase",
     resourceGroupName: "syncgroupcrud-65440",
     serverName: "syncgroupcrud-8475",
@@ -327,25 +327,19 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SyncMemberArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -357,25 +351,19 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SyncMemberArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -387,33 +375,25 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SyncMemberArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -425,25 +405,19 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SyncMemberArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

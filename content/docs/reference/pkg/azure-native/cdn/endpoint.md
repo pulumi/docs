@@ -53,56 +53,56 @@ class MyStack : Stack
                     {
                         Actions = 
                         {
-                            
+                            new AzureNative.Cdn.Inputs.DeliveryRuleCacheExpirationActionArgs
                             {
-                                { "name", "CacheExpiration" },
-                                { "parameters", 
+                                Name = "CacheExpiration",
+                                Parameters = new AzureNative.Cdn.Inputs.CacheExpirationActionParametersArgs
                                 {
-                                    { "cacheBehavior", "Override" },
-                                    { "cacheDuration", "10:10:09" },
-                                    { "cacheType", "All" },
-                                    { "odataType", "#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters" },
-                                } },
+                                    CacheBehavior = "Override",
+                                    CacheDuration = "10:10:09",
+                                    CacheType = "All",
+                                    OdataType = "#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters",
+                                },
                             },
-                            
+                            new AzureNative.Cdn.Inputs.DeliveryRuleResponseHeaderActionArgs
                             {
-                                { "name", "ModifyResponseHeader" },
-                                { "parameters", 
+                                Name = "ModifyResponseHeader",
+                                Parameters = new AzureNative.Cdn.Inputs.HeaderActionParametersArgs
                                 {
-                                    { "headerAction", "Overwrite" },
-                                    { "headerName", "Access-Control-Allow-Origin" },
-                                    { "odataType", "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters" },
-                                    { "value", "*" },
-                                } },
+                                    HeaderAction = "Overwrite",
+                                    HeaderName = "Access-Control-Allow-Origin",
+                                    OdataType = "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
+                                    Value = "*",
+                                },
                             },
-                            
+                            new AzureNative.Cdn.Inputs.DeliveryRuleRequestHeaderActionArgs
                             {
-                                { "name", "ModifyRequestHeader" },
-                                { "parameters", 
+                                Name = "ModifyRequestHeader",
+                                Parameters = new AzureNative.Cdn.Inputs.HeaderActionParametersArgs
                                 {
-                                    { "headerAction", "Overwrite" },
-                                    { "headerName", "Accept-Encoding" },
-                                    { "odataType", "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters" },
-                                    { "value", "gzip" },
-                                } },
+                                    HeaderAction = "Overwrite",
+                                    HeaderName = "Accept-Encoding",
+                                    OdataType = "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
+                                    Value = "gzip",
+                                },
                             },
                         },
                         Conditions = 
                         {
-                            
+                            new AzureNative.Cdn.Inputs.DeliveryRuleRemoteAddressConditionArgs
                             {
-                                { "name", "RemoteAddress" },
-                                { "parameters", 
+                                Name = "RemoteAddress",
+                                Parameters = new AzureNative.Cdn.Inputs.RemoteAddressMatchConditionParametersArgs
                                 {
-                                    { "matchValues", 
+                                    MatchValues = 
                                     {
                                         "192.168.1.0/24",
                                         "10.0.0.0/24",
-                                    } },
-                                    { "negateCondition", true },
-                                    { "odataType", "#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters" },
-                                    { "operator", "IPMatch" },
-                                } },
+                                    },
+                                    NegateCondition = true,
+                                    OdataType = "#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters",
+                                    Operator = "IPMatch",
+                                },
                             },
                         },
                         Name = "rule1",
@@ -216,46 +216,46 @@ endpoint = azure_native.cdn.Endpoint("endpoint",
         description="Test description for a policy.",
         rules=[azure_native.cdn.DeliveryRuleArgs(
             actions=[
-                {
-                    "name": "CacheExpiration",
-                    "parameters": {
-                        "cacheBehavior": "Override",
-                        "cacheDuration": "10:10:09",
-                        "cacheType": "All",
-                        "odataType": "#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters",
-                    },
-                },
-                {
-                    "name": "ModifyResponseHeader",
-                    "parameters": {
-                        "headerAction": "Overwrite",
-                        "headerName": "Access-Control-Allow-Origin",
-                        "odataType": "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
-                        "value": "*",
-                    },
-                },
-                {
-                    "name": "ModifyRequestHeader",
-                    "parameters": {
-                        "headerAction": "Overwrite",
-                        "headerName": "Accept-Encoding",
-                        "odataType": "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
-                        "value": "gzip",
-                    },
-                },
+                azure_native.cdn.DeliveryRuleCacheExpirationActionArgs(
+                    name="CacheExpiration",
+                    parameters=azure_native.cdn.CacheExpirationActionParametersArgs(
+                        cache_behavior="Override",
+                        cache_duration="10:10:09",
+                        cache_type="All",
+                        odata_type="#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters",
+                    ),
+                ),
+                azure_native.cdn.DeliveryRuleResponseHeaderActionArgs(
+                    name="ModifyResponseHeader",
+                    parameters=azure_native.cdn.HeaderActionParametersArgs(
+                        header_action="Overwrite",
+                        header_name="Access-Control-Allow-Origin",
+                        odata_type="#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
+                        value="*",
+                    ),
+                ),
+                azure_native.cdn.DeliveryRuleRequestHeaderActionArgs(
+                    name="ModifyRequestHeader",
+                    parameters=azure_native.cdn.HeaderActionParametersArgs(
+                        header_action="Overwrite",
+                        header_name="Accept-Encoding",
+                        odata_type="#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
+                        value="gzip",
+                    ),
+                ),
             ],
-            conditions=[{
-                "name": "RemoteAddress",
-                "parameters": {
-                    "matchValues": [
+            conditions=[azure_native.cdn.DeliveryRuleRemoteAddressConditionArgs(
+                name="RemoteAddress",
+                parameters=azure_native.cdn.RemoteAddressMatchConditionParametersArgs(
+                    match_values=[
                         "192.168.1.0/24",
                         "10.0.0.0/24",
                     ],
-                    "negateCondition": True,
-                    "odataType": "#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters",
-                    "operator": "IPMatch",
-                },
-            }],
+                    negate_condition=True,
+                    odata_type="#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters",
+                    operator="IPMatch",
+                ),
+            )],
             name="rule1",
             order=1,
         )],
@@ -513,25 +513,19 @@ const endpoint = new azure_native.cdn.Endpoint("endpoint", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EndpointArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -543,25 +537,19 @@ const endpoint = new azure_native.cdn.Endpoint("endpoint", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EndpointArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -573,33 +561,25 @@ const endpoint = new azure_native.cdn.Endpoint("endpoint", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EndpointArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -611,25 +591,19 @@ const endpoint = new azure_native.cdn.Endpoint("endpoint", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EndpointArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

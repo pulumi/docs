@@ -41,10 +41,10 @@ class MyStack : Stack
             {
                 new AzureNative.Media.Inputs.TransformOutputArgs
                 {
-                    Preset = 
+                    Preset = new AzureNative.Media.Inputs.BuiltInStandardEncoderPresetArgs
                     {
-                        { "odataType", "#Microsoft.Media.BuiltInStandardEncoderPreset" },
-                        { "presetName", "AdaptiveStreaming" },
+                        OdataType = "#Microsoft.Media.BuiltInStandardEncoderPreset",
+                        PresetName = "AdaptiveStreaming",
                     },
                 },
             },
@@ -63,7 +63,40 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := media.NewTransform(ctx, "transform", &media.TransformArgs{
+			AccountName: pulumi.String("contosomedia"),
+			Description: pulumi.String("Example Transform to illustrate create and update."),
+			Outputs: media.TransformOutputArray{
+				&media.TransformOutputArgs{
+					Preset: media.BuiltInStandardEncoderPreset{
+						OdataType:  "#Microsoft.Media.BuiltInStandardEncoderPreset",
+						PresetName: "AdaptiveStreaming",
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("contosoresources"),
+			TransformName:     pulumi.String("createdTransform"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -79,10 +112,10 @@ transform = azure_native.media.Transform("transform",
     account_name="contosomedia",
     description="Example Transform to illustrate create and update.",
     outputs=[azure_native.media.TransformOutputArgs(
-        preset={
-            "odataType": "#Microsoft.Media.BuiltInStandardEncoderPreset",
-            "presetName": "AdaptiveStreaming",
-        },
+        preset=azure_native.media.BuiltInStandardEncoderPresetArgs(
+            odata_type="#Microsoft.Media.BuiltInStandardEncoderPreset",
+            preset_name="AdaptiveStreaming",
+        ),
     )],
     resource_group_name="contosoresources",
     transform_name="createdTransform")
@@ -166,25 +199,19 @@ const transform = new azure_native.media.Transform("transform", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TransformArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -196,25 +223,19 @@ const transform = new azure_native.media.Transform("transform", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TransformArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -226,33 +247,25 @@ const transform = new azure_native.media.Transform("transform", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TransformArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -264,25 +277,19 @@ const transform = new azure_native.media.Transform("transform", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TransformArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

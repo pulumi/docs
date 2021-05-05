@@ -37,9 +37,9 @@ class MyStack : Stack
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNative.MachineLearningServices.Inputs.AKSArgs
             {
-                { "computeType", "AKS" },
+                ComputeType = "AKS",
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -56,7 +56,35 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: machinelearningservices.AKS{
+				ComputeType: "AKS",
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -71,9 +99,9 @@ import pulumi_azure_native as azure_native
 machine_learning_compute = azure_native.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "AKS",
-    },
+    properties=azure_native.machinelearningservices.AKSArgs(
+        compute_type="AKS",
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -125,28 +153,28 @@ class MyStack : Stack
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNative.MachineLearningServices.Inputs.AmlComputeArgs
             {
-                { "computeType", "AmlCompute" },
-                { "properties", 
+                ComputeType = "AmlCompute",
+                Properties = new AzureNative.MachineLearningServices.Inputs.AmlComputePropertiesArgs
                 {
-                    { "enableNodePublicIp", true },
-                    { "isolatedNetwork", false },
-                    { "osType", "Windows" },
-                    { "remoteLoginPortPublicAccess", "NotSpecified" },
-                    { "scaleSettings", new AzureNative.MachineLearningServices.Inputs.ScaleSettingsArgs
+                    EnableNodePublicIp = true,
+                    IsolatedNetwork = false,
+                    OsType = "Windows",
+                    RemoteLoginPortPublicAccess = "NotSpecified",
+                    ScaleSettings = new AzureNative.MachineLearningServices.Inputs.ScaleSettingsArgs
                     {
                         MaxNodeCount = 1,
                         MinNodeCount = 0,
                         NodeIdleTimeBeforeScaleDown = "PT5M",
-                    } },
-                    { "virtualMachineImage", new AzureNative.MachineLearningServices.Inputs.VirtualMachineImageArgs
+                    },
+                    VirtualMachineImage = new AzureNative.MachineLearningServices.Inputs.VirtualMachineImageArgs
                     {
                         Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myImageGallery/images/myImageDefinition/versions/0.0.1",
-                    } },
-                    { "vmPriority", "Dedicated" },
-                    { "vmSize", "STANDARD_NC6" },
-                } },
+                    },
+                    VmPriority = "Dedicated",
+                    VmSize = "STANDARD_NC6",
+                },
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -163,7 +191,51 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: machinelearningservices.AmlCompute{
+				ComputeType: "AmlCompute",
+				Properties: machinelearningservices.AmlComputeProperties{
+					EnableNodePublicIp:          true,
+					IsolatedNetwork:             false,
+					OsType:                      "Windows",
+					RemoteLoginPortPublicAccess: "NotSpecified",
+					ScaleSettings: machinelearningservices.ScaleSettings{
+						MaxNodeCount:                1,
+						MinNodeCount:                0,
+						NodeIdleTimeBeforeScaleDown: "PT5M",
+					},
+					VirtualMachineImage: machinelearningservices.VirtualMachineImage{
+						Id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myImageGallery/images/myImageDefinition/versions/0.0.1",
+					},
+					VmPriority: "Dedicated",
+					VmSize:     "STANDARD_NC6",
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -178,25 +250,25 @@ import pulumi_azure_native as azure_native
 machine_learning_compute = azure_native.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "AmlCompute",
-        "properties": {
-            "enableNodePublicIp": True,
-            "isolatedNetwork": False,
-            "osType": "Windows",
-            "remoteLoginPortPublicAccess": "NotSpecified",
-            "scaleSettings": azure_native.machinelearningservices.ScaleSettingsArgs(
+    properties=azure_native.machinelearningservices.AmlComputeArgs(
+        compute_type="AmlCompute",
+        properties=azure_native.machinelearningservices.AmlComputePropertiesArgs(
+            enable_node_public_ip=True,
+            isolated_network=False,
+            os_type="Windows",
+            remote_login_port_public_access="NotSpecified",
+            scale_settings=azure_native.machinelearningservices.ScaleSettingsArgs(
                 max_node_count=1,
                 min_node_count=0,
                 node_idle_time_before_scale_down="PT5M",
             ),
-            "virtualMachineImage": azure_native.machinelearningservices.VirtualMachineImageArgs(
+            virtual_machine_image=azure_native.machinelearningservices.VirtualMachineImageArgs(
                 id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myImageGallery/images/myImageDefinition/versions/0.0.1",
             ),
-            "vmPriority": "Dedicated",
-            "vmSize": "STANDARD_NC6",
-        },
-    },
+            vm_priority="Dedicated",
+            vm_size="STANDARD_NC6",
+        ),
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -264,9 +336,9 @@ class MyStack : Stack
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNative.MachineLearningServices.Inputs.DataFactoryArgs
             {
-                { "computeType", "DataFactory" },
+                ComputeType = "DataFactory",
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -283,7 +355,35 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: machinelearningservices.DataFactory{
+				ComputeType: "DataFactory",
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -298,9 +398,9 @@ import pulumi_azure_native as azure_native
 machine_learning_compute = azure_native.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "DataFactory",
-    },
+    properties=azure_native.machinelearningservices.DataFactoryArgs(
+        compute_type="DataFactory",
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -352,28 +452,28 @@ class MyStack : Stack
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNative.MachineLearningServices.Inputs.ComputeInstanceArgs
             {
-                { "computeType", "ComputeInstance" },
-                { "properties", 
+                ComputeType = "ComputeInstance",
+                Properties = new AzureNative.MachineLearningServices.Inputs.ComputeInstancePropertiesArgs
                 {
-                    { "applicationSharingPolicy", "Personal" },
-                    { "computeInstanceAuthorizationType", "personal" },
-                    { "personalComputeInstanceSettings", new AzureNative.MachineLearningServices.Inputs.PersonalComputeInstanceSettingsArgs
+                    ApplicationSharingPolicy = "Personal",
+                    ComputeInstanceAuthorizationType = "personal",
+                    PersonalComputeInstanceSettings = new AzureNative.MachineLearningServices.Inputs.PersonalComputeInstanceSettingsArgs
                     {
                         AssignedUser = new AzureNative.MachineLearningServices.Inputs.AssignedUserArgs
                         {
                             ObjectId = "00000000-0000-0000-0000-000000000000",
                             TenantId = "00000000-0000-0000-0000-000000000000",
                         },
-                    } },
-                    { "sshSettings", new AzureNative.MachineLearningServices.Inputs.ComputeInstanceSshSettingsArgs
+                    },
+                    SshSettings = new AzureNative.MachineLearningServices.Inputs.ComputeInstanceSshSettingsArgs
                     {
                         SshPublicAccess = "Disabled",
-                    } },
-                    { "subnet", "test-subnet-resource-id" },
-                    { "vmSize", "STANDARD_NC6" },
-                } },
+                    },
+                    Subnet = "test-subnet-resource-id",
+                    VmSize = "STANDARD_NC6",
+                },
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -390,7 +490,50 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: machinelearningservices.ComputeInstance{
+				ComputeType: "ComputeInstance",
+				Properties: machinelearningservices.ComputeInstanceProperties{
+					ApplicationSharingPolicy:         "Personal",
+					ComputeInstanceAuthorizationType: "personal",
+					PersonalComputeInstanceSettings: machinelearningservices.PersonalComputeInstanceSettings{
+						AssignedUser: machinelearningservices.AssignedUser{
+							ObjectId: "00000000-0000-0000-0000-000000000000",
+							TenantId: "00000000-0000-0000-0000-000000000000",
+						},
+					},
+					SshSettings: machinelearningservices.ComputeInstanceSshSettings{
+						SshPublicAccess: "Disabled",
+					},
+					Subnet: "test-subnet-resource-id",
+					VmSize: "STANDARD_NC6",
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -405,24 +548,24 @@ import pulumi_azure_native as azure_native
 machine_learning_compute = azure_native.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "ComputeInstance",
-        "properties": {
-            "applicationSharingPolicy": "Personal",
-            "computeInstanceAuthorizationType": "personal",
-            "personalComputeInstanceSettings": azure_native.machinelearningservices.PersonalComputeInstanceSettingsArgs(
+    properties=azure_native.machinelearningservices.ComputeInstanceArgs(
+        compute_type="ComputeInstance",
+        properties=azure_native.machinelearningservices.ComputeInstancePropertiesArgs(
+            application_sharing_policy="Personal",
+            compute_instance_authorization_type="personal",
+            personal_compute_instance_settings=azure_native.machinelearningservices.PersonalComputeInstanceSettingsArgs(
                 assigned_user=azure_native.machinelearningservices.AssignedUserArgs(
                     object_id="00000000-0000-0000-0000-000000000000",
                     tenant_id="00000000-0000-0000-0000-000000000000",
                 ),
             ),
-            "sshSettings": azure_native.machinelearningservices.ComputeInstanceSshSettingsArgs(
+            ssh_settings=azure_native.machinelearningservices.ComputeInstanceSshSettingsArgs(
                 ssh_public_access="Disabled",
             ),
-            "subnet": "test-subnet-resource-id",
-            "vmSize": "STANDARD_NC6",
-        },
-    },
+            subnet="test-subnet-resource-id",
+            vm_size="STANDARD_NC6",
+        ),
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -489,13 +632,13 @@ class MyStack : Stack
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNative.MachineLearningServices.Inputs.ComputeInstanceArgs
             {
-                { "computeType", "ComputeInstance" },
-                { "properties", 
+                ComputeType = "ComputeInstance",
+                Properties = new AzureNative.MachineLearningServices.Inputs.ComputeInstancePropertiesArgs
                 {
-                    { "vmSize", "STANDARD_NC6" },
-                } },
+                    VmSize = "STANDARD_NC6",
+                },
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -512,7 +655,38 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: machinelearningservices.ComputeInstance{
+				ComputeType: "ComputeInstance",
+				Properties: machinelearningservices.ComputeInstanceProperties{
+					VmSize: "STANDARD_NC6",
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -527,12 +701,12 @@ import pulumi_azure_native as azure_native
 machine_learning_compute = azure_native.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "ComputeInstance",
-        "properties": {
-            "vmSize": "STANDARD_NC6",
-        },
-    },
+    properties=azure_native.machinelearningservices.ComputeInstanceArgs(
+        compute_type="ComputeInstance",
+        properties=azure_native.machinelearningservices.ComputeInstancePropertiesArgs(
+            vm_size="STANDARD_NC6",
+        ),
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -587,15 +761,15 @@ class MyStack : Stack
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNative.MachineLearningServices.Inputs.AKSArgs
             {
-                { "computeType", "AKS" },
-                { "description", "some compute" },
-                { "properties", 
+                ComputeType = "AKS",
+                Description = "some compute",
+                Properties = new AzureNative.MachineLearningServices.Inputs.AKSPropertiesArgs
                 {
-                    { "agentCount", 4 },
-                } },
-                { "resourceId", "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2" },
+                    AgentCount = 4,
+                },
+                ResourceId = "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2",
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -612,7 +786,40 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: machinelearningservices.AKS{
+				ComputeType: "AKS",
+				Description: "some compute",
+				Properties: machinelearningservices.AKSProperties{
+					AgentCount: 4,
+				},
+				ResourceId: "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2",
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -627,14 +834,14 @@ import pulumi_azure_native as azure_native
 machine_learning_compute = azure_native.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "AKS",
-        "description": "some compute",
-        "properties": {
-            "agentCount": 4,
-        },
-        "resourceId": "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2",
-    },
+    properties=azure_native.machinelearningservices.AKSArgs(
+        compute_type="AKS",
+        description="some compute",
+        properties=azure_native.machinelearningservices.AKSPropertiesArgs(
+            agent_count=4,
+        ),
+        resource_id="/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2",
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -691,19 +898,19 @@ class MyStack : Stack
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNative.MachineLearningServices.Inputs.AmlComputeArgs
             {
-                { "computeType", "AmlCompute" },
-                { "description", "some compute" },
-                { "properties", 
+                ComputeType = "AmlCompute",
+                Description = "some compute",
+                Properties = new AzureNative.MachineLearningServices.Inputs.AmlComputePropertiesArgs
                 {
-                    { "scaleSettings", new AzureNative.MachineLearningServices.Inputs.ScaleSettingsArgs
+                    ScaleSettings = new AzureNative.MachineLearningServices.Inputs.ScaleSettingsArgs
                     {
                         MaxNodeCount = 4,
                         MinNodeCount = 4,
                         NodeIdleTimeBeforeScaleDown = "PT5M",
-                    } },
-                } },
+                    },
+                },
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -720,7 +927,43 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: machinelearningservices.AmlCompute{
+				ComputeType: "AmlCompute",
+				Description: "some compute",
+				Properties: machinelearningservices.AmlComputeProperties{
+					ScaleSettings: machinelearningservices.ScaleSettings{
+						MaxNodeCount:                4,
+						MinNodeCount:                4,
+						NodeIdleTimeBeforeScaleDown: "PT5M",
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -735,17 +978,17 @@ import pulumi_azure_native as azure_native
 machine_learning_compute = azure_native.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "AmlCompute",
-        "description": "some compute",
-        "properties": {
-            "scaleSettings": azure_native.machinelearningservices.ScaleSettingsArgs(
+    properties=azure_native.machinelearningservices.AmlComputeArgs(
+        compute_type="AmlCompute",
+        description="some compute",
+        properties=azure_native.machinelearningservices.AmlComputePropertiesArgs(
+            scale_settings=azure_native.machinelearningservices.ScaleSettingsArgs(
                 max_node_count=4,
                 min_node_count=4,
                 node_idle_time_before_scale_down="PT5M",
             ),
-        },
-    },
+        ),
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -836,25 +1079,19 @@ const machineLearningCompute = new azure_native.machinelearningservices.MachineL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MachineLearningComputeArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -866,25 +1103,19 @@ const machineLearningCompute = new azure_native.machinelearningservices.MachineL
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MachineLearningComputeArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -896,33 +1127,25 @@ const machineLearningCompute = new azure_native.machinelearningservices.MachineL
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MachineLearningComputeArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -934,25 +1157,19 @@ const machineLearningCompute = new azure_native.machinelearningservices.MachineL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MachineLearningComputeArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

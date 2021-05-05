@@ -37,9 +37,9 @@ class MyStack : Stack
         {
             ActionRuleName = "DailySuppression",
             Location = "Global",
-            Properties = 
+            Properties = new AzureNative.AlertsManagement.Inputs.SuppressionArgs
             {
-                { "conditions", new AzureNative.AlertsManagement.Inputs.ConditionsArgs
+                Conditions = new AzureNative.AlertsManagement.Inputs.ConditionsArgs
                 {
                     MonitorCondition = new AzureNative.AlertsManagement.Inputs.ConditionArgs
                     {
@@ -75,18 +75,18 @@ class MyStack : Stack
                             "Microsoft.Compute/VirtualMachines",
                         },
                     },
-                } },
-                { "description", "Action rule on resource group for daily suppression" },
-                { "scope", new AzureNative.AlertsManagement.Inputs.ScopeArgs
+                },
+                Description = "Action rule on resource group for daily suppression",
+                Scope = new AzureNative.AlertsManagement.Inputs.ScopeArgs
                 {
                     ScopeType = "ResourceGroup",
                     Values = 
                     {
                         "/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg",
                     },
-                } },
-                { "status", "Enabled" },
-                { "suppressionConfig", new AzureNative.AlertsManagement.Inputs.SuppressionConfigArgs
+                },
+                Status = "Enabled",
+                SuppressionConfig = new AzureNative.AlertsManagement.Inputs.SuppressionConfigArgs
                 {
                     RecurrenceType = "Daily",
                     Schedule = new AzureNative.AlertsManagement.Inputs.SuppressionScheduleArgs
@@ -96,8 +96,8 @@ class MyStack : Stack
                         StartDate = "12/09/2018",
                         StartTime = "06:00:00",
                     },
-                } },
-                { "type", "Suppression" },
+                },
+                Type = "Suppression",
             },
             ResourceGroupName = "alertscorrelationrg",
             Tags = ,
@@ -114,7 +114,80 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	alertsmanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/alertsmanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := alertsmanagement.NewActionRuleByName(ctx, "actionRuleByName", &alertsmanagement.ActionRuleByNameArgs{
+			ActionRuleName: pulumi.String("DailySuppression"),
+			Location:       pulumi.String("Global"),
+			Properties: alertsmanagement.Suppression{
+				Conditions: alertsmanagement.Conditions{
+					MonitorCondition: alertsmanagement.Condition{
+						Operator: "Equals",
+						Values: []string{
+							"Fired",
+						},
+					},
+					MonitorService: alertsmanagement.Condition{
+						Operator: "Equals",
+						Values: []string{
+							"Platform",
+							"Application Insights",
+						},
+					},
+					Severity: alertsmanagement.Condition{
+						Operator: "Equals",
+						Values: []string{
+							"Sev0",
+							"Sev2",
+						},
+					},
+					TargetResourceType: alertsmanagement.Condition{
+						Operator: "NotEquals",
+						Values: []string{
+							"Microsoft.Compute/VirtualMachines",
+						},
+					},
+				},
+				Description: "Action rule on resource group for daily suppression",
+				Scope: alertsmanagement.Scope{
+					ScopeType: "ResourceGroup",
+					Values: []string{
+						"/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg",
+					},
+				},
+				Status: "Enabled",
+				SuppressionConfig: alertsmanagement.SuppressionConfig{
+					RecurrenceType: "Daily",
+					Schedule: alertsmanagement.SuppressionSchedule{
+						EndDate:   "12/18/2018",
+						EndTime:   "14:00:00",
+						StartDate: "12/09/2018",
+						StartTime: "06:00:00",
+					},
+				},
+				Type: "Suppression",
+			},
+			ResourceGroupName: pulumi.String("alertscorrelationrg"),
+			Tags:              nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -129,8 +202,8 @@ import pulumi_azure_native as azure_native
 action_rule_by_name = azure_native.alertsmanagement.ActionRuleByName("actionRuleByName",
     action_rule_name="DailySuppression",
     location="Global",
-    properties={
-        "conditions": azure_native.alertsmanagement.ConditionsArgs(
+    properties=azure_native.alertsmanagement.SuppressionArgs(
+        conditions=azure_native.alertsmanagement.ConditionsArgs(
             monitor_condition=azure_native.alertsmanagement.ConditionArgs(
                 operator="Equals",
                 values=["Fired"],
@@ -154,13 +227,13 @@ action_rule_by_name = azure_native.alertsmanagement.ActionRuleByName("actionRule
                 values=["Microsoft.Compute/VirtualMachines"],
             ),
         ),
-        "description": "Action rule on resource group for daily suppression",
-        "scope": azure_native.alertsmanagement.ScopeArgs(
+        description="Action rule on resource group for daily suppression",
+        scope=azure_native.alertsmanagement.ScopeArgs(
             scope_type="ResourceGroup",
             values=["/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg"],
         ),
-        "status": "Enabled",
-        "suppressionConfig": azure_native.alertsmanagement.SuppressionConfigArgs(
+        status="Enabled",
+        suppression_config=azure_native.alertsmanagement.SuppressionConfigArgs(
             recurrence_type="Daily",
             schedule=azure_native.alertsmanagement.SuppressionScheduleArgs(
                 end_date="12/18/2018",
@@ -169,8 +242,8 @@ action_rule_by_name = azure_native.alertsmanagement.ActionRuleByName("actionRule
                 start_time="06:00:00",
             ),
         ),
-        "type": "Suppression",
-    },
+        type="Suppression",
+    ),
     resource_group_name="alertscorrelationrg",
     tags={})
 
@@ -289,25 +362,19 @@ const actionRuleByName = new azure_native.alertsmanagement.ActionRuleByName("act
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ActionRuleByNameArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -319,25 +386,19 @@ const actionRuleByName = new azure_native.alertsmanagement.ActionRuleByName("act
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ActionRuleByNameArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -349,33 +410,25 @@ const actionRuleByName = new azure_native.alertsmanagement.ActionRuleByName("act
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ActionRuleByNameArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -387,25 +440,19 @@ const actionRuleByName = new azure_native.alertsmanagement.ActionRuleByName("act
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ActionRuleByNameArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

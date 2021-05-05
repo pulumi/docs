@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.resources.getTemplateSpecVersion 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Template Spec Version object.
-API Version: 2021-03-01-preview.
+API Version: 2021-05-01.
 
 
 

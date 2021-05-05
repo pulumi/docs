@@ -43,15 +43,15 @@ class MyStack : Stack
                 {
                     Action = new AzureNative.Network.Inputs.RulesEngineActionArgs
                     {
-                        RouteConfigurationOverride = 
+                        RouteConfigurationOverride = new AzureNative.Network.Inputs.RedirectConfigurationArgs
                         {
-                            { "customFragment", "fragment" },
-                            { "customHost", "www.bing.com" },
-                            { "customPath", "/api" },
-                            { "customQueryString", "a=b" },
-                            { "odataType", "#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration" },
-                            { "redirectProtocol", "HttpsOnly" },
-                            { "redirectType", "Moved" },
+                            CustomFragment = "fragment",
+                            CustomHost = "www.bing.com",
+                            CustomPath = "/api",
+                            CustomQueryString = "a=b",
+                            OdataType = "#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration",
+                            RedirectProtocol = "HttpsOnly",
+                            RedirectType = "Moved",
                         },
                     },
                     MatchConditions = 
@@ -107,21 +107,21 @@ class MyStack : Stack
                 {
                     Action = new AzureNative.Network.Inputs.RulesEngineActionArgs
                     {
-                        RouteConfigurationOverride = 
+                        RouteConfigurationOverride = new AzureNative.Network.Inputs.ForwardingConfigurationArgs
                         {
-                            { "backendPool", new AzureNative.Network.Inputs.SubResourceArgs
+                            BackendPool = new AzureNative.Network.Inputs.SubResourceArgs
                             {
                                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
-                            } },
-                            { "cacheConfiguration", new AzureNative.Network.Inputs.CacheConfigurationArgs
+                            },
+                            CacheConfiguration = new AzureNative.Network.Inputs.CacheConfigurationArgs
                             {
                                 CacheDuration = "P1DT12H20M30S",
                                 DynamicCompression = "Disabled",
                                 QueryParameterStripDirective = "StripOnly",
                                 QueryParameters = "a=b,p=q",
-                            } },
-                            { "forwardingProtocol", "HttpsOnly" },
-                            { "odataType", "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration" },
+                            },
+                            ForwardingProtocol = "HttpsOnly",
+                            OdataType = "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
                         },
                     },
                     MatchConditions = 
@@ -160,7 +160,116 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewRulesEngine(ctx, "rulesEngine", &network.RulesEngineArgs{
+			FrontDoorName:     pulumi.String("frontDoor1"),
+			ResourceGroupName: pulumi.String("rg1"),
+			Rules: network.RulesEngineRuleArray{
+				&network.RulesEngineRuleArgs{
+					Action: &network.RulesEngineActionArgs{
+						RouteConfigurationOverride: network.RedirectConfiguration{
+							CustomFragment:    "fragment",
+							CustomHost:        "www.bing.com",
+							CustomPath:        "/api",
+							CustomQueryString: "a=b",
+							OdataType:         "#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration",
+							RedirectProtocol:  "HttpsOnly",
+							RedirectType:      "Moved",
+						},
+					},
+					MatchConditions: network.RulesEngineMatchConditionArray{
+						&network.RulesEngineMatchConditionArgs{
+							RulesEngineMatchValue: pulumi.StringArray{
+								pulumi.String("CH"),
+							},
+							RulesEngineMatchVariable: pulumi.String("RemoteAddr"),
+							RulesEngineOperator:      pulumi.String("GeoMatch"),
+						},
+					},
+					MatchProcessingBehavior: pulumi.String("Stop"),
+					Name:                    pulumi.String("Rule1"),
+					Priority:                pulumi.Int(1),
+				},
+				&network.RulesEngineRuleArgs{
+					Action: &network.RulesEngineActionArgs{
+						ResponseHeaderActions: network.HeaderActionArray{
+							&network.HeaderActionArgs{
+								HeaderActionType: pulumi.String("Overwrite"),
+								HeaderName:       pulumi.String("Cache-Control"),
+								Value:            pulumi.String("public, max-age=31536000"),
+							},
+						},
+					},
+					MatchConditions: network.RulesEngineMatchConditionArray{
+						&network.RulesEngineMatchConditionArgs{
+							RulesEngineMatchValue: pulumi.StringArray{
+								pulumi.String("jpg"),
+							},
+							RulesEngineMatchVariable: pulumi.String("RequestFilenameExtension"),
+							RulesEngineOperator:      pulumi.String("Equal"),
+							Transforms: pulumi.StringArray{
+								pulumi.String("Lowercase"),
+							},
+						},
+					},
+					Name:     pulumi.String("Rule2"),
+					Priority: pulumi.Int(2),
+				},
+				&network.RulesEngineRuleArgs{
+					Action: &network.RulesEngineActionArgs{
+						RouteConfigurationOverride: network.ForwardingConfiguration{
+							BackendPool: network.SubResource{
+								Id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
+							},
+							CacheConfiguration: network.CacheConfiguration{
+								CacheDuration:                "P1DT12H20M30S",
+								DynamicCompression:           "Disabled",
+								QueryParameterStripDirective: "StripOnly",
+								QueryParameters:              "a=b,p=q",
+							},
+							ForwardingProtocol: "HttpsOnly",
+							OdataType:          "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
+						},
+					},
+					MatchConditions: network.RulesEngineMatchConditionArray{
+						&network.RulesEngineMatchConditionArgs{
+							NegateCondition: pulumi.Bool(false),
+							RulesEngineMatchValue: pulumi.StringArray{
+								pulumi.String("allowoverride"),
+							},
+							RulesEngineMatchVariable: pulumi.String("RequestHeader"),
+							RulesEngineOperator:      pulumi.String("Equal"),
+							Selector:                 pulumi.String("Rules-Engine-Route-Forward"),
+							Transforms: pulumi.StringArray{
+								pulumi.String("Lowercase"),
+							},
+						},
+					},
+					Name:     pulumi.String("Rule3"),
+					Priority: pulumi.Int(3),
+				},
+			},
+			RulesEngineName: pulumi.String("rulesEngine1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -178,15 +287,15 @@ rules_engine = azure_native.network.RulesEngine("rulesEngine",
     rules=[
         azure_native.network.RulesEngineRuleArgs(
             action=azure_native.network.RulesEngineActionArgs(
-                route_configuration_override={
-                    "customFragment": "fragment",
-                    "customHost": "www.bing.com",
-                    "customPath": "/api",
-                    "customQueryString": "a=b",
-                    "odataType": "#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration",
-                    "redirectProtocol": "HttpsOnly",
-                    "redirectType": "Moved",
-                },
+                route_configuration_override=azure_native.network.RedirectConfigurationArgs(
+                    custom_fragment="fragment",
+                    custom_host="www.bing.com",
+                    custom_path="/api",
+                    custom_query_string="a=b",
+                    odata_type="#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration",
+                    redirect_protocol="HttpsOnly",
+                    redirect_type="Moved",
+                ),
             ),
             match_conditions=[azure_native.network.RulesEngineMatchConditionArgs(
                 rules_engine_match_value=["CH"],
@@ -216,19 +325,19 @@ rules_engine = azure_native.network.RulesEngine("rulesEngine",
         ),
         azure_native.network.RulesEngineRuleArgs(
             action=azure_native.network.RulesEngineActionArgs(
-                route_configuration_override={
-                    "backendPool": azure_native.network.SubResourceArgs(
+                route_configuration_override=azure_native.network.ForwardingConfigurationArgs(
+                    backend_pool=azure_native.network.SubResourceArgs(
                         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
                     ),
-                    "cacheConfiguration": azure_native.network.CacheConfigurationArgs(
+                    cache_configuration=azure_native.network.CacheConfigurationArgs(
                         cache_duration="P1DT12H20M30S",
                         dynamic_compression="Disabled",
                         query_parameter_strip_directive="StripOnly",
                         query_parameters="a=b,p=q",
                     ),
-                    "forwardingProtocol": "HttpsOnly",
-                    "odataType": "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
-                },
+                    forwarding_protocol="HttpsOnly",
+                    odata_type="#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
+                ),
             ),
             match_conditions=[azure_native.network.RulesEngineMatchConditionArgs(
                 negate_condition=False,
@@ -382,25 +491,19 @@ const rulesEngine = new azure_native.network.RulesEngine("rulesEngine", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RulesEngineArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -412,25 +515,19 @@ const rulesEngine = new azure_native.network.RulesEngine("rulesEngine", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RulesEngineArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -442,33 +539,25 @@ const rulesEngine = new azure_native.network.RulesEngine("rulesEngine", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RulesEngineArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -480,25 +569,19 @@ const rulesEngine = new azure_native.network.RulesEngine("rulesEngine", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RulesEngineArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

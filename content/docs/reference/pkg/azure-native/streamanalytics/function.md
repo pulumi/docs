@@ -39,10 +39,10 @@ class MyStack : Stack
             JobName = "sj8653",
             Properties = new AzureNative.StreamAnalytics.Inputs.ScalarFunctionPropertiesArgs
             {
-                Binding = 
+                Binding = new AzureNative.StreamAnalytics.Inputs.JavaScriptFunctionBindingArgs
                 {
-                    { "script", "function (x, y) { return x + y; }" },
-                    { "type", "Microsoft.StreamAnalytics/JavascriptUdf" },
+                    Script = "function (x, y) { return x + y; }",
+                    Type = "Microsoft.StreamAnalytics/JavascriptUdf",
                 },
                 Inputs = 
                 {
@@ -71,7 +71,46 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewFunction(ctx, "function", &streamanalytics.FunctionArgs{
+			FunctionName: pulumi.String("function8197"),
+			JobName:      pulumi.String("sj8653"),
+			Properties: &streamanalytics.ScalarFunctionPropertiesArgs{
+				Binding: streamanalytics.JavaScriptFunctionBinding{
+					Script: "function (x, y) { return x + y; }",
+					Type:   "Microsoft.StreamAnalytics/JavascriptUdf",
+				},
+				Inputs: streamanalytics.FunctionInputArray{
+					&streamanalytics.FunctionInputArgs{
+						DataType: pulumi.String("Any"),
+					},
+				},
+				Output: &streamanalytics.FunctionOutputArgs{
+					DataType: pulumi.String("Any"),
+				},
+				Type: pulumi.String("Scalar"),
+			},
+			ResourceGroupName: pulumi.String("sjrg1637"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -87,10 +126,10 @@ function = azure_native.streamanalytics.Function("function",
     function_name="function8197",
     job_name="sj8653",
     properties=azure_native.streamanalytics.ScalarFunctionPropertiesArgs(
-        binding={
-            "script": "function (x, y) { return x + y; }",
-            "type": "Microsoft.StreamAnalytics/JavascriptUdf",
-        },
+        binding=azure_native.streamanalytics.JavaScriptFunctionBindingArgs(
+            script="function (x, y) { return x + y; }",
+            type="Microsoft.StreamAnalytics/JavascriptUdf",
+        ),
         inputs=[azure_native.streamanalytics.FunctionInputArgs(
             data_type="Any",
         )],
@@ -160,12 +199,12 @@ class MyStack : Stack
             JobName = "sj9093",
             Properties = new AzureNative.StreamAnalytics.Inputs.ScalarFunctionPropertiesArgs
             {
-                Binding = 
+                Binding = new AzureNative.StreamAnalytics.Inputs.AzureMachineLearningWebServiceFunctionBindingArgs
                 {
-                    { "apiKey", "someApiKey==" },
-                    { "batchSize", 1000 },
-                    { "endpoint", "someAzureMLEndpointURL" },
-                    { "inputs", new AzureNative.StreamAnalytics.Inputs.AzureMachineLearningWebServiceInputsArgs
+                    ApiKey = "someApiKey==",
+                    BatchSize = 1000,
+                    Endpoint = "someAzureMLEndpointURL",
+                    Inputs = new AzureNative.StreamAnalytics.Inputs.AzureMachineLearningWebServiceInputsArgs
                     {
                         ColumnNames = 
                         {
@@ -177,16 +216,16 @@ class MyStack : Stack
                             },
                         },
                         Name = "input1",
-                    } },
-                    { "outputs", 
+                    },
+                    Outputs = 
                     {
                         new AzureNative.StreamAnalytics.Inputs.AzureMachineLearningWebServiceOutputColumnArgs
                         {
                             DataType = "string",
                             Name = "Sentiment",
                         },
-                    } },
-                    { "type", "Microsoft.MachineLearning/WebService" },
+                    },
+                    Type = "Microsoft.MachineLearning/WebService",
                 },
                 Inputs = 
                 {
@@ -215,7 +254,64 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewFunction(ctx, "function", &streamanalytics.FunctionArgs{
+			FunctionName: pulumi.String("function588"),
+			JobName:      pulumi.String("sj9093"),
+			Properties: &streamanalytics.ScalarFunctionPropertiesArgs{
+				Binding: streamanalytics.AzureMachineLearningWebServiceFunctionBinding{
+					ApiKey:    "someApiKey==",
+					BatchSize: 1000,
+					Endpoint:  "someAzureMLEndpointURL",
+					Inputs: streamanalytics.AzureMachineLearningWebServiceInputs{
+						ColumnNames: []streamanalytics.AzureMachineLearningWebServiceInputColumn{
+							streamanalytics.AzureMachineLearningWebServiceInputColumn{
+								DataType: "string",
+								MapTo:    0,
+								Name:     "tweet",
+							},
+						},
+						Name: "input1",
+					},
+					Outputs: []streamanalytics.AzureMachineLearningWebServiceOutputColumn{
+						streamanalytics.AzureMachineLearningWebServiceOutputColumn{
+							DataType: "string",
+							Name:     "Sentiment",
+						},
+					},
+					Type: "Microsoft.MachineLearning/WebService",
+				},
+				Inputs: streamanalytics.FunctionInputArray{
+					&streamanalytics.FunctionInputArgs{
+						DataType: pulumi.String("nvarchar(max)"),
+					},
+				},
+				Output: &streamanalytics.FunctionOutputArgs{
+					DataType: pulumi.String("nvarchar(max)"),
+				},
+				Type: pulumi.String("Scalar"),
+			},
+			ResourceGroupName: pulumi.String("sjrg7"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -231,11 +327,11 @@ function = azure_native.streamanalytics.Function("function",
     function_name="function588",
     job_name="sj9093",
     properties=azure_native.streamanalytics.ScalarFunctionPropertiesArgs(
-        binding={
-            "apiKey": "someApiKey==",
-            "batchSize": 1000,
-            "endpoint": "someAzureMLEndpointURL",
-            "inputs": azure_native.streamanalytics.AzureMachineLearningWebServiceInputsArgs(
+        binding=azure_native.streamanalytics.AzureMachineLearningWebServiceFunctionBindingArgs(
+            api_key="someApiKey==",
+            batch_size=1000,
+            endpoint="someAzureMLEndpointURL",
+            inputs=azure_native.streamanalytics.AzureMachineLearningWebServiceInputsArgs(
                 column_names=[azure_native.streamanalytics.AzureMachineLearningWebServiceInputColumnArgs(
                     data_type="string",
                     map_to=0,
@@ -243,12 +339,12 @@ function = azure_native.streamanalytics.Function("function",
                 )],
                 name="input1",
             ),
-            "outputs": [azure_native.streamanalytics.AzureMachineLearningWebServiceOutputColumnArgs(
+            outputs=[azure_native.streamanalytics.AzureMachineLearningWebServiceOutputColumnArgs(
                 data_type="string",
                 name="Sentiment",
             )],
-            "type": "Microsoft.MachineLearning/WebService",
-        },
+            type="Microsoft.MachineLearning/WebService",
+        ),
         inputs=[azure_native.streamanalytics.FunctionInputArgs(
             data_type="nvarchar(max)",
         )],
@@ -358,25 +454,19 @@ const _function = new azure_native.streamanalytics.Function("function", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FunctionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -388,25 +478,19 @@ const _function = new azure_native.streamanalytics.Function("function", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FunctionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -418,33 +502,25 @@ const _function = new azure_native.streamanalytics.Function("function", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FunctionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -456,25 +532,19 @@ const _function = new azure_native.streamanalytics.Function("function", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FunctionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
