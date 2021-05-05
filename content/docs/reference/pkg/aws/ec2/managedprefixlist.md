@@ -192,7 +192,8 @@ const example = new aws.ec2.ManagedPrefixList("example", {
                       <span class="nx">entries</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedPrefixListEntryArgs]]</span> = None<span class="p">,</span>
                       <span class="nx">max_entries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                       <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                      <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+                      <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                      <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ManagedPrefixList</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedPrefixListArgs</a></span><span class="p">,</span>
@@ -354,8 +355,7 @@ The ManagedPrefixList resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The address family (`IPv4` or `IPv6`) of
-this prefix list.
+    <dd>{{% md %}}Address family (`IPv4` or `IPv6`) of this prefix list.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxentries_csharp">
@@ -364,8 +364,7 @@ this prefix list.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of entries that
-this prefix list can contain.
+    <dd>{{% md %}}Maximum number of entries that this prefix list can contain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entries_csharp">
@@ -374,9 +373,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedprefixlistentry">List&lt;Managed<wbr>Prefix<wbr>List<wbr>Entry<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each prefix list entry.
-Each entry block supports fields documented below. Different entries may have
-overlapping CIDR blocks, but a particular CIDR should not be duplicated.
+    <dd>{{% md %}}Configuration block for prefix list entry. Detailed below. Different entries may have overlapping CIDR blocks, but a particular CIDR should not be duplicated.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -385,7 +382,7 @@ overlapping CIDR blocks, but a particular CIDR should not be duplicated.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of this resource. The name must not start with `com.amazonaws`.
+    <dd>{{% md %}}Name of this resource. The name must not start with `com.amazonaws`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -394,8 +391,15 @@ overlapping CIDR blocks, but a particular CIDR should not be duplicated.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to this resource.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -407,8 +411,7 @@ overlapping CIDR blocks, but a particular CIDR should not be duplicated.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The address family (`IPv4` or `IPv6`) of
-this prefix list.
+    <dd>{{% md %}}Address family (`IPv4` or `IPv6`) of this prefix list.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxentries_go">
@@ -417,8 +420,7 @@ this prefix list.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of entries that
-this prefix list can contain.
+    <dd>{{% md %}}Maximum number of entries that this prefix list can contain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entries_go">
@@ -427,9 +429,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedprefixlistentry">[]Managed<wbr>Prefix<wbr>List<wbr>Entry</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each prefix list entry.
-Each entry block supports fields documented below. Different entries may have
-overlapping CIDR blocks, but a particular CIDR should not be duplicated.
+    <dd>{{% md %}}Configuration block for prefix list entry. Detailed below. Different entries may have overlapping CIDR blocks, but a particular CIDR should not be duplicated.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -438,7 +438,7 @@ overlapping CIDR blocks, but a particular CIDR should not be duplicated.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of this resource. The name must not start with `com.amazonaws`.
+    <dd>{{% md %}}Name of this resource. The name must not start with `com.amazonaws`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -447,8 +447,15 @@ overlapping CIDR blocks, but a particular CIDR should not be duplicated.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to this resource.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -460,8 +467,7 @@ overlapping CIDR blocks, but a particular CIDR should not be duplicated.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The address family (`IPv4` or `IPv6`) of
-this prefix list.
+    <dd>{{% md %}}Address family (`IPv4` or `IPv6`) of this prefix list.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxentries_nodejs">
@@ -470,8 +476,7 @@ this prefix list.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum number of entries that
-this prefix list can contain.
+    <dd>{{% md %}}Maximum number of entries that this prefix list can contain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entries_nodejs">
@@ -480,9 +485,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedprefixlistentry">Managed<wbr>Prefix<wbr>List<wbr>Entry<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each prefix list entry.
-Each entry block supports fields documented below. Different entries may have
-overlapping CIDR blocks, but a particular CIDR should not be duplicated.
+    <dd>{{% md %}}Configuration block for prefix list entry. Detailed below. Different entries may have overlapping CIDR blocks, but a particular CIDR should not be duplicated.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -491,7 +494,7 @@ overlapping CIDR blocks, but a particular CIDR should not be duplicated.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of this resource. The name must not start with `com.amazonaws`.
+    <dd>{{% md %}}Name of this resource. The name must not start with `com.amazonaws`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -500,8 +503,15 @@ overlapping CIDR blocks, but a particular CIDR should not be duplicated.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to this resource.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -513,8 +523,7 @@ overlapping CIDR blocks, but a particular CIDR should not be duplicated.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The address family (`IPv4` or `IPv6`) of
-this prefix list.
+    <dd>{{% md %}}Address family (`IPv4` or `IPv6`) of this prefix list.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_entries_python">
@@ -523,8 +532,7 @@ this prefix list.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of entries that
-this prefix list can contain.
+    <dd>{{% md %}}Maximum number of entries that this prefix list can contain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entries_python">
@@ -533,9 +541,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedprefixlistentry">Sequence[Managed<wbr>Prefix<wbr>List<wbr>Entry<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each prefix list entry.
-Each entry block supports fields documented below. Different entries may have
-overlapping CIDR blocks, but a particular CIDR should not be duplicated.
+    <dd>{{% md %}}Configuration block for prefix list entry. Detailed below. Different entries may have overlapping CIDR blocks, but a particular CIDR should not be duplicated.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -544,7 +550,7 @@ overlapping CIDR blocks, but a particular CIDR should not be duplicated.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of this resource. The name must not start with `com.amazonaws`.
+    <dd>{{% md %}}Name of this resource. The name must not start with `com.amazonaws`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -553,8 +559,15 @@ overlapping CIDR blocks, but a particular CIDR should not be duplicated.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to this resource.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -573,7 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the prefix list.
+    <dd>{{% md %}}ARN of the prefix list.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -590,7 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the AWS account that owns this prefix list.
+    <dd>{{% md %}}ID of the AWS account that owns this prefix list.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_csharp">
@@ -599,7 +612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The latest version of this prefix list.
+    <dd>{{% md %}}Latest version of this prefix list.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -612,7 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the prefix list.
+    <dd>{{% md %}}ARN of the prefix list.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -629,7 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the AWS account that owns this prefix list.
+    <dd>{{% md %}}ID of the AWS account that owns this prefix list.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
@@ -638,7 +651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The latest version of this prefix list.
+    <dd>{{% md %}}Latest version of this prefix list.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -651,7 +664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the prefix list.
+    <dd>{{% md %}}ARN of the prefix list.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -668,7 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the AWS account that owns this prefix list.
+    <dd>{{% md %}}ID of the AWS account that owns this prefix list.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_nodejs">
@@ -677,7 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The latest version of this prefix list.
+    <dd>{{% md %}}Latest version of this prefix list.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -690,7 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the prefix list.
+    <dd>{{% md %}}ARN of the prefix list.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -707,7 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the AWS account that owns this prefix list.
+    <dd>{{% md %}}ID of the AWS account that owns this prefix list.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_python">
@@ -716,7 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The latest version of this prefix list.
+    <dd>{{% md %}}Latest version of this prefix list.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -743,6 +756,7 @@ Get an existing ManagedPrefixList resource's state with the given name, ID, and 
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> ManagedPrefixList</code></pre></div>
 {{% /choosable %}}
 
@@ -862,8 +876,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The address family (`IPv4` or `IPv6`) of
-this prefix list.
+    <dd>{{% md %}}Address family (`IPv4` or `IPv6`) of this prefix list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
@@ -872,7 +885,7 @@ this prefix list.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the prefix list.
+    <dd>{{% md %}}ARN of the prefix list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entries_csharp">
@@ -881,9 +894,7 @@ this prefix list.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedprefixlistentry">List&lt;Managed<wbr>Prefix<wbr>List<wbr>Entry<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each prefix list entry.
-Each entry block supports fields documented below. Different entries may have
-overlapping CIDR blocks, but a particular CIDR should not be duplicated.
+    <dd>{{% md %}}Configuration block for prefix list entry. Detailed below. Different entries may have overlapping CIDR blocks, but a particular CIDR should not be duplicated.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxentries_csharp">
@@ -892,8 +903,7 @@ overlapping CIDR blocks, but a particular CIDR should not be duplicated.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of entries that
-this prefix list can contain.
+    <dd>{{% md %}}Maximum number of entries that this prefix list can contain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -902,7 +912,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of this resource. The name must not start with `com.amazonaws`.
+    <dd>{{% md %}}Name of this resource. The name must not start with `com.amazonaws`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownerid_csharp">
@@ -911,7 +921,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the AWS account that owns this prefix list.
+    <dd>{{% md %}}ID of the AWS account that owns this prefix list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -920,8 +930,15 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to this resource.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -929,7 +946,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The latest version of this prefix list.
+    <dd>{{% md %}}Latest version of this prefix list.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -942,8 +959,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The address family (`IPv4` or `IPv6`) of
-this prefix list.
+    <dd>{{% md %}}Address family (`IPv4` or `IPv6`) of this prefix list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
@@ -952,7 +968,7 @@ this prefix list.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the prefix list.
+    <dd>{{% md %}}ARN of the prefix list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entries_go">
@@ -961,9 +977,7 @@ this prefix list.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedprefixlistentry">[]Managed<wbr>Prefix<wbr>List<wbr>Entry</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each prefix list entry.
-Each entry block supports fields documented below. Different entries may have
-overlapping CIDR blocks, but a particular CIDR should not be duplicated.
+    <dd>{{% md %}}Configuration block for prefix list entry. Detailed below. Different entries may have overlapping CIDR blocks, but a particular CIDR should not be duplicated.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxentries_go">
@@ -972,8 +986,7 @@ overlapping CIDR blocks, but a particular CIDR should not be duplicated.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of entries that
-this prefix list can contain.
+    <dd>{{% md %}}Maximum number of entries that this prefix list can contain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -982,7 +995,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of this resource. The name must not start with `com.amazonaws`.
+    <dd>{{% md %}}Name of this resource. The name must not start with `com.amazonaws`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownerid_go">
@@ -991,7 +1004,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the AWS account that owns this prefix list.
+    <dd>{{% md %}}ID of the AWS account that owns this prefix list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -1000,8 +1013,15 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to this resource.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1009,7 +1029,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The latest version of this prefix list.
+    <dd>{{% md %}}Latest version of this prefix list.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1022,8 +1042,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The address family (`IPv4` or `IPv6`) of
-this prefix list.
+    <dd>{{% md %}}Address family (`IPv4` or `IPv6`) of this prefix list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
@@ -1032,7 +1051,7 @@ this prefix list.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the prefix list.
+    <dd>{{% md %}}ARN of the prefix list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entries_nodejs">
@@ -1041,9 +1060,7 @@ this prefix list.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedprefixlistentry">Managed<wbr>Prefix<wbr>List<wbr>Entry<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each prefix list entry.
-Each entry block supports fields documented below. Different entries may have
-overlapping CIDR blocks, but a particular CIDR should not be duplicated.
+    <dd>{{% md %}}Configuration block for prefix list entry. Detailed below. Different entries may have overlapping CIDR blocks, but a particular CIDR should not be duplicated.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxentries_nodejs">
@@ -1052,8 +1069,7 @@ overlapping CIDR blocks, but a particular CIDR should not be duplicated.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum number of entries that
-this prefix list can contain.
+    <dd>{{% md %}}Maximum number of entries that this prefix list can contain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1062,7 +1078,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of this resource. The name must not start with `com.amazonaws`.
+    <dd>{{% md %}}Name of this resource. The name must not start with `com.amazonaws`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownerid_nodejs">
@@ -1071,7 +1087,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the AWS account that owns this prefix list.
+    <dd>{{% md %}}ID of the AWS account that owns this prefix list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -1080,8 +1096,15 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to this resource.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1089,7 +1112,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The latest version of this prefix list.
+    <dd>{{% md %}}Latest version of this prefix list.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1102,8 +1125,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The address family (`IPv4` or `IPv6`) of
-this prefix list.
+    <dd>{{% md %}}Address family (`IPv4` or `IPv6`) of this prefix list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
@@ -1112,7 +1134,7 @@ this prefix list.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the prefix list.
+    <dd>{{% md %}}ARN of the prefix list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entries_python">
@@ -1121,9 +1143,7 @@ this prefix list.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedprefixlistentry">Sequence[Managed<wbr>Prefix<wbr>List<wbr>Entry<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each prefix list entry.
-Each entry block supports fields documented below. Different entries may have
-overlapping CIDR blocks, but a particular CIDR should not be duplicated.
+    <dd>{{% md %}}Configuration block for prefix list entry. Detailed below. Different entries may have overlapping CIDR blocks, but a particular CIDR should not be duplicated.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_entries_python">
@@ -1132,8 +1152,7 @@ overlapping CIDR blocks, but a particular CIDR should not be duplicated.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of entries that
-this prefix list can contain.
+    <dd>{{% md %}}Maximum number of entries that this prefix list can contain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -1142,7 +1161,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of this resource. The name must not start with `com.amazonaws`.
+    <dd>{{% md %}}Name of this resource. The name must not start with `com.amazonaws`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_owner_id_python">
@@ -1151,7 +1170,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the AWS account that owns this prefix list.
+    <dd>{{% md %}}ID of the AWS account that owns this prefix list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -1160,8 +1179,15 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to this resource.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1169,7 +1195,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The latest version of this prefix list.
+    <dd>{{% md %}}Latest version of this prefix list.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1193,7 +1219,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of this entry.
+    <dd>{{% md %}}CIDR block of this entry.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -1202,7 +1228,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of this entry.
+    <dd>{{% md %}}Description of this entry. Due to API limitations, updating only the description of an existing entry requires temporarily removing and re-adding the entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1215,7 +1241,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of this entry.
+    <dd>{{% md %}}CIDR block of this entry.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -1224,7 +1250,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of this entry.
+    <dd>{{% md %}}Description of this entry. Due to API limitations, updating only the description of an existing entry requires temporarily removing and re-adding the entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1237,7 +1263,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of this entry.
+    <dd>{{% md %}}CIDR block of this entry.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -1246,7 +1272,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of this entry.
+    <dd>{{% md %}}Description of this entry. Due to API limitations, updating only the description of an existing entry requires temporarily removing and re-adding the entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1259,7 +1285,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of this entry.
+    <dd>{{% md %}}CIDR block of this entry.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -1268,7 +1294,7 @@ this prefix list can contain.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of this entry.
+    <dd>{{% md %}}Description of this entry. Due to API limitations, updating only the description of an existing entry requires temporarily removing and re-adding the entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

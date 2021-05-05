@@ -377,7 +377,7 @@ The Permissions resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals include IAM users and IAM roles.
+    <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals include IAM roles, users, groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogid_csharp">
@@ -462,7 +462,7 @@ The Permissions resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals include IAM users and IAM roles.
+    <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals include IAM roles, users, groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogid_go">
@@ -547,7 +547,7 @@ The Permissions resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals include IAM users and IAM roles.
+    <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals include IAM roles, users, groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogid_nodejs">
@@ -632,7 +632,7 @@ The Permissions resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals include IAM users and IAM roles.
+    <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals include IAM roles, users, groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalog_id_python">
@@ -951,7 +951,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals include IAM users and IAM roles.
+    <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals include IAM roles, users, groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_table_csharp">
@@ -1036,7 +1036,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals include IAM users and IAM roles.
+    <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals include IAM roles, users, groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_table_go">
@@ -1121,7 +1121,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals include IAM users and IAM roles.
+    <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals include IAM roles, users, groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_table_nodejs">
@@ -1206,7 +1206,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals include IAM users and IAM roles.
+    <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals include IAM roles, users, groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_table_python">

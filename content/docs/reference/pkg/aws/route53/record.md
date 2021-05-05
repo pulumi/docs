@@ -475,7 +475,7 @@ class MyStack : Stack
         {
             AllowOverwrite = true,
             Name = "test.example.com",
-            Ttl = 30,
+            Ttl = 172800,
             Type = "NS",
             ZoneId = exampleZone.ZoneId,
             Records = 
@@ -514,7 +514,7 @@ func main() {
 		_, err = route53.NewRecord(ctx, "exampleRecord", &route53.RecordArgs{
 			AllowOverwrite: pulumi.Bool(true),
 			Name:           pulumi.String("test.example.com"),
-			Ttl:            pulumi.Int(30),
+			Ttl:            pulumi.Int(172800),
 			Type:           pulumi.String("NS"),
 			ZoneId:         exampleZone.ZoneId,
 			Records: pulumi.StringArray{
@@ -554,7 +554,7 @@ example_zone = aws.route53.Zone("exampleZone")
 example_record = aws.route53.Record("exampleRecord",
     allow_overwrite=True,
     name="test.example.com",
-    ttl=30,
+    ttl=172800,
     type="NS",
     zone_id=example_zone.zone_id,
     records=[
@@ -580,7 +580,7 @@ const exampleZone = new aws.route53.Zone("exampleZone", {});
 const exampleRecord = new aws.route53.Record("exampleRecord", {
     allowOverwrite: true,
     name: "test.example.com",
-    ttl: 30,
+    ttl: 172800,
     type: "NS",
     zoneId: exampleZone.zoneId,
     records: [

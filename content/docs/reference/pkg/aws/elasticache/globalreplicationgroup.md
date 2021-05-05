@@ -473,16 +473,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
-            title="">
+<dl class="resources-properties"><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="actualengineversion_csharp">
 <a href="#actualengineversion_csharp" style="color: inherit; text-decoration: inherit;">Actual<wbr>Engine<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**DEPRECATED** use `engine_version_actual` instead) The full version number of the cache engine running on the members of this global replication group.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use engine_version_actual instead{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -538,6 +538,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this global replication group.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="engineversionactual_csharp">
+<a href="#engineversionactual_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="globalreplicationgroupid_csharp">
 <a href="#globalreplicationgroupid_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Replication<wbr>Group<wbr>Id</a>
 </span>
@@ -566,16 +575,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
-            title="">
+<dl class="resources-properties"><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="actualengineversion_go">
 <a href="#actualengineversion_go" style="color: inherit; text-decoration: inherit;">Actual<wbr>Engine<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**DEPRECATED** use `engine_version_actual` instead) The full version number of the cache engine running on the members of this global replication group.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use engine_version_actual instead{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -631,6 +640,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this global replication group.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="engineversionactual_go">
+<a href="#engineversionactual_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="globalreplicationgroupid_go">
 <a href="#globalreplicationgroupid_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Replication<wbr>Group<wbr>Id</a>
 </span>
@@ -659,16 +677,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
-            title="">
+<dl class="resources-properties"><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="actualengineversion_nodejs">
 <a href="#actualengineversion_nodejs" style="color: inherit; text-decoration: inherit;">actual<wbr>Engine<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**DEPRECATED** use `engine_version_actual` instead) The full version number of the cache engine running on the members of this global replication group.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use engine_version_actual instead{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -724,6 +742,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this global replication group.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="engineversionactual_nodejs">
+<a href="#engineversionactual_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="globalreplicationgroupid_nodejs">
 <a href="#globalreplicationgroupid_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Replication<wbr>Group<wbr>Id</a>
 </span>
@@ -752,16 +779,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
-            title="">
+<dl class="resources-properties"><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="actual_engine_version_python">
 <a href="#actual_engine_version_python" style="color: inherit; text-decoration: inherit;">actual_<wbr>engine_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**DEPRECATED** use `engine_version_actual` instead) The full version number of the cache engine running on the members of this global replication group.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use engine_version_actual instead{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -817,6 +844,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this global replication group.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="engine_version_actual_python">
+<a href="#engine_version_actual_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version_<wbr>actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="global_replication_group_id_python">
 <a href="#global_replication_group_id_python" style="color: inherit; text-decoration: inherit;">global_<wbr>replication_<wbr>group_<wbr>id</a>
 </span>
@@ -867,6 +903,7 @@ Get an existing GlobalReplicationGroup resource's state with the given name, ID,
         <span class="nx">cache_node_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">engine_version_actual</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">global_replication_group_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">global_replication_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">global_replication_group_id_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -982,16 +1019,16 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_actualengineversion_csharp">
 <a href="#state_actualengineversion_csharp" style="color: inherit; text-decoration: inherit;">Actual<wbr>Engine<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(**DEPRECATED** use `engine_version_actual` instead) The full version number of the cache engine running on the members of this global replication group.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use engine_version_actual instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1047,6 +1084,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this global replication group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_engineversionactual_csharp">
+<a href="#state_engineversionactual_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_globalreplicationgroupdescription_csharp">
 <a href="#state_globalreplicationgroupdescription_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Replication<wbr>Group<wbr>Description</a>
 </span>
@@ -1094,16 +1140,16 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_actualengineversion_go">
 <a href="#state_actualengineversion_go" style="color: inherit; text-decoration: inherit;">Actual<wbr>Engine<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(**DEPRECATED** use `engine_version_actual` instead) The full version number of the cache engine running on the members of this global replication group.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use engine_version_actual instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1159,6 +1205,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this global replication group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_engineversionactual_go">
+<a href="#state_engineversionactual_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_globalreplicationgroupdescription_go">
 <a href="#state_globalreplicationgroupdescription_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Replication<wbr>Group<wbr>Description</a>
 </span>
@@ -1206,16 +1261,16 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_actualengineversion_nodejs">
 <a href="#state_actualengineversion_nodejs" style="color: inherit; text-decoration: inherit;">actual<wbr>Engine<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(**DEPRECATED** use `engine_version_actual` instead) The full version number of the cache engine running on the members of this global replication group.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use engine_version_actual instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1271,6 +1326,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this global replication group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_engineversionactual_nodejs">
+<a href="#state_engineversionactual_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_globalreplicationgroupdescription_nodejs">
 <a href="#state_globalreplicationgroupdescription_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Replication<wbr>Group<wbr>Description</a>
 </span>
@@ -1318,16 +1382,16 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_actual_engine_version_python">
 <a href="#state_actual_engine_version_python" style="color: inherit; text-decoration: inherit;">actual_<wbr>engine_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(**DEPRECATED** use `engine_version_actual` instead) The full version number of the cache engine running on the members of this global replication group.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use engine_version_actual instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1381,6 +1445,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this global replication group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_engine_version_actual_python">
+<a href="#state_engine_version_actual_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version_<wbr>actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_global_replication_group_description_python">

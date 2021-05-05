@@ -210,7 +210,9 @@ const test = new aws.ses.ConfigurationSet("test", {
 <span class="k">def </span><span class="nx">ConfigurationSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                      <span class="nx">delivery_options</span><span class="p">:</span> <span class="nx">Optional[ConfigurationSetDeliveryOptionsArgs]</span> = None<span class="p">,</span>
-                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">reputation_metrics_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">sending_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ConfigurationSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ConfigurationSetArgs]</a></span> = None<span class="p">,</span>
@@ -382,6 +384,24 @@ The ConfigurationSet resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the configuration set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reputationmetricsenabled_csharp">
+<a href="#reputationmetricsenabled_csharp" style="color: inherit; text-decoration: inherit;">Reputation<wbr>Metrics<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not Amazon SES publishes reputation metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch. The default value is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sendingenabled_csharp">
+<a href="#sendingenabled_csharp" style="color: inherit; text-decoration: inherit;">Sending<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether email sending is enabled or disabled for the configuration set. The default value is `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -404,6 +424,24 @@ The ConfigurationSet resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the configuration set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reputationmetricsenabled_go">
+<a href="#reputationmetricsenabled_go" style="color: inherit; text-decoration: inherit;">Reputation<wbr>Metrics<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not Amazon SES publishes reputation metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch. The default value is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sendingenabled_go">
+<a href="#sendingenabled_go" style="color: inherit; text-decoration: inherit;">Sending<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether email sending is enabled or disabled for the configuration set. The default value is `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -426,6 +464,24 @@ The ConfigurationSet resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the configuration set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reputationmetricsenabled_nodejs">
+<a href="#reputationmetricsenabled_nodejs" style="color: inherit; text-decoration: inherit;">reputation<wbr>Metrics<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not Amazon SES publishes reputation metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch. The default value is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sendingenabled_nodejs">
+<a href="#sendingenabled_nodejs" style="color: inherit; text-decoration: inherit;">sending<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether email sending is enabled or disabled for the configuration set. The default value is `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -448,6 +504,24 @@ The ConfigurationSet resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the configuration set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reputation_metrics_enabled_python">
+<a href="#reputation_metrics_enabled_python" style="color: inherit; text-decoration: inherit;">reputation_<wbr>metrics_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not Amazon SES publishes reputation metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch. The default value is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sending_enabled_python">
+<a href="#sending_enabled_python" style="color: inherit; text-decoration: inherit;">sending_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether email sending is enabled or disabled for the configuration set. The default value is `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -476,7 +550,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="lastfreshstart_csharp">
+<a href="#lastfreshstart_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Fresh<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The date and time at which the reputation metrics for the configuration set were last reset. Resetting these metrics is known as a fresh start.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -497,7 +580,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="lastfreshstart_go">
+<a href="#lastfreshstart_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Fresh<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The date and time at which the reputation metrics for the configuration set were last reset. Resetting these metrics is known as a fresh start.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -518,7 +610,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="lastfreshstart_nodejs">
+<a href="#lastfreshstart_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Fresh<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The date and time at which the reputation metrics for the configuration set were last reset. Resetting these metrics is known as a fresh start.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -539,7 +640,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="last_fresh_start_python">
+<a href="#last_fresh_start_python" style="color: inherit; text-decoration: inherit;">last_<wbr>fresh_<wbr>start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The date and time at which the reputation metrics for the configuration set were last reset. Resetting these metrics is known as a fresh start.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -560,7 +670,10 @@ Get an existing ConfigurationSet resource's state with the given name, ID, and o
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">delivery_options</span><span class="p">:</span> <span class="nx">Optional[ConfigurationSetDeliveryOptionsArgs]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ConfigurationSet</code></pre></div>
+        <span class="nx">last_fresh_start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">reputation_metrics_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">sending_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> ConfigurationSet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -691,6 +804,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_lastfreshstart_csharp">
+<a href="#state_lastfreshstart_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Fresh<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The date and time at which the reputation metrics for the configuration set were last reset. Resetting these metrics is known as a fresh start.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -698,6 +820,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the configuration set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_reputationmetricsenabled_csharp">
+<a href="#state_reputationmetricsenabled_csharp" style="color: inherit; text-decoration: inherit;">Reputation<wbr>Metrics<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not Amazon SES publishes reputation metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch. The default value is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sendingenabled_csharp">
+<a href="#state_sendingenabled_csharp" style="color: inherit; text-decoration: inherit;">Sending<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether email sending is enabled or disabled for the configuration set. The default value is `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -722,6 +862,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_lastfreshstart_go">
+<a href="#state_lastfreshstart_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Fresh<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The date and time at which the reputation metrics for the configuration set were last reset. Resetting these metrics is known as a fresh start.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -729,6 +878,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the configuration set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_reputationmetricsenabled_go">
+<a href="#state_reputationmetricsenabled_go" style="color: inherit; text-decoration: inherit;">Reputation<wbr>Metrics<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not Amazon SES publishes reputation metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch. The default value is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sendingenabled_go">
+<a href="#state_sendingenabled_go" style="color: inherit; text-decoration: inherit;">Sending<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether email sending is enabled or disabled for the configuration set. The default value is `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -753,6 +920,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_lastfreshstart_nodejs">
+<a href="#state_lastfreshstart_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Fresh<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The date and time at which the reputation metrics for the configuration set were last reset. Resetting these metrics is known as a fresh start.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -760,6 +936,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the configuration set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_reputationmetricsenabled_nodejs">
+<a href="#state_reputationmetricsenabled_nodejs" style="color: inherit; text-decoration: inherit;">reputation<wbr>Metrics<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not Amazon SES publishes reputation metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch. The default value is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sendingenabled_nodejs">
+<a href="#state_sendingenabled_nodejs" style="color: inherit; text-decoration: inherit;">sending<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether email sending is enabled or disabled for the configuration set. The default value is `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -784,6 +978,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_last_fresh_start_python">
+<a href="#state_last_fresh_start_python" style="color: inherit; text-decoration: inherit;">last_<wbr>fresh_<wbr>start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The date and time at which the reputation metrics for the configuration set were last reset. Resetting these metrics is known as a fresh start.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -791,6 +994,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the configuration set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_reputation_metrics_enabled_python">
+<a href="#state_reputation_metrics_enabled_python" style="color: inherit; text-decoration: inherit;">reputation_<wbr>metrics_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not Amazon SES publishes reputation metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch. The default value is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sending_enabled_python">
+<a href="#state_sending_enabled_python" style="color: inherit; text-decoration: inherit;">sending_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether email sending is enabled or disabled for the configuration set. The default value is `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

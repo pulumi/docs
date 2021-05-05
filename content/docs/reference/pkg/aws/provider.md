@@ -1368,6 +1368,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="appconfig_csharp">
+<a href="#appconfig_csharp" style="color: inherit; text-decoration: inherit;">Appconfig</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="applicationautoscaling_csharp">
 <a href="#applicationautoscaling_csharp" style="color: inherit; text-decoration: inherit;">Applicationautoscaling</a>
 </span>
@@ -2590,6 +2598,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="apigateway_go">
 <a href="#apigateway_go" style="color: inherit; text-decoration: inherit;">Apigateway</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="appconfig_go">
+<a href="#appconfig_go" style="color: inherit; text-decoration: inherit;">Appconfig</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3824,6 +3840,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="appconfig_nodejs">
+<a href="#appconfig_nodejs" style="color: inherit; text-decoration: inherit;">appconfig</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="applicationautoscaling_nodejs">
 <a href="#applicationautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">applicationautoscaling</a>
 </span>
@@ -5046,6 +5070,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="apigateway_python">
 <a href="#apigateway_python" style="color: inherit; text-decoration: inherit;">apigateway</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="appconfig_python">
+<a href="#appconfig_python" style="color: inherit; text-decoration: inherit;">appconfig</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

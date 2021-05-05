@@ -2413,6 +2413,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encoding_csharp">
+<a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The encoding to use for the email within the Amazon SNS notification. Default value is `UTF-8`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2435,6 +2444,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encoding_go">
+<a href="#encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The encoding to use for the email within the Amazon SNS notification. Default value is `UTF-8`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2457,6 +2475,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encoding_nodejs">
+<a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The encoding to use for the email within the Amazon SNS notification. Default value is `UTF-8`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2479,6 +2506,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encoding_python">
+<a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The encoding to use for the email within the Amazon SNS notification. Default value is `UTF-8`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
