@@ -69,8 +69,4 @@
     &:focus {
         @apply bg-blue-600 border-blue-600;
     }
-
-    @media (min-width: 2000px) {
-        @apply text-2xl;
-    }
 }
