@@ -41,14 +41,14 @@ class MyStack : Stack
             RuleGroupName = "ruleGroup1",
             Rules = 
             {
-                
+                new AzureNative.Network.Inputs.FirewallPolicyFilterRuleArgs
                 {
-                    { "action", new AzureNative.Network.Inputs.FirewallPolicyFilterRuleActionArgs
+                    Action = new AzureNative.Network.Inputs.FirewallPolicyFilterRuleActionArgs
                     {
                         Type = "Deny",
-                    } },
-                    { "name", "Example-Filter-Rule" },
-                    { "ruleConditions", 
+                    },
+                    Name = "Example-Filter-Rule",
+                    RuleConditions = 
                     {
                         
                         {
@@ -71,8 +71,8 @@ class MyStack : Stack
                                 "10.1.25.0/24",
                             } },
                         },
-                    } },
-                    { "ruleType", "FirewallPolicyFilterRule" },
+                    },
+                    RuleType = "FirewallPolicyFilterRule",
                 },
             },
         });
@@ -105,12 +105,12 @@ firewall_policy_rule_group = azure_native.network.FirewallPolicyRuleGroup("firew
     priority=110,
     resource_group_name="rg1",
     rule_group_name="ruleGroup1",
-    rules=[{
-        "action": azure_native.network.FirewallPolicyFilterRuleActionArgs(
+    rules=[azure_native.network.FirewallPolicyFilterRuleArgs(
+        action=azure_native.network.FirewallPolicyFilterRuleActionArgs(
             type="Deny",
         ),
-        "name": "Example-Filter-Rule",
-        "ruleConditions": [{
+        name="Example-Filter-Rule",
+        rule_conditions=[{
             "destinationAddresses": ["*"],
             "destinationPorts": ["*"],
             "ipProtocols": ["TCP"],
@@ -118,8 +118,8 @@ firewall_policy_rule_group = azure_native.network.FirewallPolicyRuleGroup("firew
             "ruleConditionType": "NetworkRuleCondition",
             "sourceAddresses": ["10.1.25.0/24"],
         }],
-        "ruleType": "FirewallPolicyFilterRule",
-    }])
+        rule_type="FirewallPolicyFilterRule",
+    )])
 
 ```
 
@@ -185,14 +185,14 @@ class MyStack : Stack
             RuleGroupName = "ruleGroup1",
             Rules = 
             {
-                
+                new AzureNative.Network.Inputs.FirewallPolicyFilterRuleArgs
                 {
-                    { "action", 
+                    Action = new AzureNative.Network.Inputs.FirewallPolicyFilterRuleActionArgs
                     {
-                        { "type", "Deny" },
-                    } },
-                    { "name", "Example-Filter-Rule" },
-                    { "ruleConditions", 
+                        Type = "Deny",
+                    },
+                    Name = "Example-Filter-Rule",
+                    RuleConditions = 
                     {
                         
                         {
@@ -215,8 +215,8 @@ class MyStack : Stack
                                 "/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1",
                             } },
                         },
-                    } },
-                    { "ruleType", "FirewallPolicyFilterRule" },
+                    },
+                    RuleType = "FirewallPolicyFilterRule",
                 },
             },
         });
@@ -249,12 +249,12 @@ firewall_policy_rule_group = azure_native.network.FirewallPolicyRuleGroup("firew
     priority=110,
     resource_group_name="rg1",
     rule_group_name="ruleGroup1",
-    rules=[{
-        "action": {
-            "type": "Deny",
-        },
-        "name": "Example-Filter-Rule",
-        "ruleConditions": [{
+    rules=[azure_native.network.FirewallPolicyFilterRuleArgs(
+        action=azure_native.network.FirewallPolicyFilterRuleActionArgs(
+            type="Deny",
+        ),
+        name="Example-Filter-Rule",
+        rule_conditions=[{
             "destinationIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
             "destinationPorts": ["*"],
             "ipProtocols": ["TCP"],
@@ -262,8 +262,8 @@ firewall_policy_rule_group = azure_native.network.FirewallPolicyRuleGroup("firew
             "ruleConditionType": "NetworkRuleCondition",
             "sourceIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1"],
         }],
-        "ruleType": "FirewallPolicyFilterRule",
-    }])
+        rule_type="FirewallPolicyFilterRule",
+    )])
 
 ```
 
@@ -355,25 +355,19 @@ const firewallPolicyRuleGroup = new azure_native.network.FirewallPolicyRuleGroup
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -385,25 +379,19 @@ const firewallPolicyRuleGroup = new azure_native.network.FirewallPolicyRuleGroup
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -415,33 +403,25 @@ const firewallPolicyRuleGroup = new azure_native.network.FirewallPolicyRuleGroup
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -453,25 +433,19 @@ const firewallPolicyRuleGroup = new azure_native.network.FirewallPolicyRuleGroup
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

@@ -36,12 +36,12 @@ class MyStack : Stack
         var digitalTwinsEndpoint = new AzureNative.DigitalTwins.DigitalTwinsEndpoint("digitalTwinsEndpoint", new AzureNative.DigitalTwins.DigitalTwinsEndpointArgs
         {
             EndpointName = "myServiceBus",
-            Properties = 
+            Properties = new AzureNative.DigitalTwins.Inputs.ServiceBusArgs
             {
-                { "authenticationType", "KeyBased" },
-                { "endpointType", "ServiceBus" },
-                { "primaryConnectionString", "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc" },
-                { "secondaryConnectionString", "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc" },
+                AuthenticationType = "KeyBased",
+                EndpointType = "ServiceBus",
+                PrimaryConnectionString = "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+                SecondaryConnectionString = "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
             },
             ResourceGroupName = "resRg",
             ResourceName = "myDigitalTwinsService",
@@ -58,7 +58,37 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	digitaltwins "github.com/pulumi/pulumi-azure-native/sdk/go/azure/digitaltwins"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := digitaltwins.NewDigitalTwinsEndpoint(ctx, "digitalTwinsEndpoint", &digitaltwins.DigitalTwinsEndpointArgs{
+			EndpointName: pulumi.String("myServiceBus"),
+			Properties: digitaltwins.ServiceBus{
+				AuthenticationType:        "KeyBased",
+				EndpointType:              "ServiceBus",
+				PrimaryConnectionString:   "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+				SecondaryConnectionString: "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+			},
+			ResourceGroupName: pulumi.String("resRg"),
+			ResourceName:      pulumi.String("myDigitalTwinsService"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -72,12 +102,12 @@ import pulumi_azure_native as azure_native
 
 digital_twins_endpoint = azure_native.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint",
     endpoint_name="myServiceBus",
-    properties={
-        "authenticationType": "KeyBased",
-        "endpointType": "ServiceBus",
-        "primaryConnectionString": "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
-        "secondaryConnectionString": "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
-    },
+    properties=azure_native.digitaltwins.ServiceBusArgs(
+        authentication_type="KeyBased",
+        endpoint_type="ServiceBus",
+        primary_connection_string="Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+        secondary_connection_string="Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+    ),
     resource_group_name="resRg",
     resource_name="myDigitalTwinsService")
 
@@ -130,12 +160,12 @@ class MyStack : Stack
         var digitalTwinsEndpoint = new AzureNative.DigitalTwins.DigitalTwinsEndpoint("digitalTwinsEndpoint", new AzureNative.DigitalTwins.DigitalTwinsEndpointArgs
         {
             EndpointName = "myServiceBus",
-            Properties = 
+            Properties = new AzureNative.DigitalTwins.Inputs.ServiceBusArgs
             {
-                { "authenticationType", "IdentityBased" },
-                { "endpointType", "ServiceBus" },
-                { "endpointUri", "sb://mysb.servicebus.windows.net/" },
-                { "entityPath", "mysbtopic" },
+                AuthenticationType = "IdentityBased",
+                EndpointType = "ServiceBus",
+                EndpointUri = "sb://mysb.servicebus.windows.net/",
+                EntityPath = "mysbtopic",
             },
             ResourceGroupName = "resRg",
             ResourceName = "myDigitalTwinsService",
@@ -152,7 +182,37 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	digitaltwins "github.com/pulumi/pulumi-azure-native/sdk/go/azure/digitaltwins"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := digitaltwins.NewDigitalTwinsEndpoint(ctx, "digitalTwinsEndpoint", &digitaltwins.DigitalTwinsEndpointArgs{
+			EndpointName: pulumi.String("myServiceBus"),
+			Properties: digitaltwins.ServiceBus{
+				AuthenticationType: "IdentityBased",
+				EndpointType:       "ServiceBus",
+				EndpointUri:        "sb://mysb.servicebus.windows.net/",
+				EntityPath:         "mysbtopic",
+			},
+			ResourceGroupName: pulumi.String("resRg"),
+			ResourceName:      pulumi.String("myDigitalTwinsService"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -166,12 +226,12 @@ import pulumi_azure_native as azure_native
 
 digital_twins_endpoint = azure_native.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint",
     endpoint_name="myServiceBus",
-    properties={
-        "authenticationType": "IdentityBased",
-        "endpointType": "ServiceBus",
-        "endpointUri": "sb://mysb.servicebus.windows.net/",
-        "entityPath": "mysbtopic",
-    },
+    properties=azure_native.digitaltwins.ServiceBusArgs(
+        authentication_type="IdentityBased",
+        endpoint_type="ServiceBus",
+        endpoint_uri="sb://mysb.servicebus.windows.net/",
+        entity_path="mysbtopic",
+    ),
     resource_group_name="resRg",
     resource_name="myDigitalTwinsService")
 
@@ -252,25 +312,19 @@ const digitalTwinsEndpoint = new azure_native.digitaltwins.DigitalTwinsEndpoint(
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DigitalTwinsEndpointArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -282,25 +336,19 @@ const digitalTwinsEndpoint = new azure_native.digitaltwins.DigitalTwinsEndpoint(
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DigitalTwinsEndpointArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -312,33 +360,25 @@ const digitalTwinsEndpoint = new azure_native.digitaltwins.DigitalTwinsEndpoint(
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DigitalTwinsEndpointArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -350,25 +390,19 @@ const digitalTwinsEndpoint = new azure_native.digitaltwins.DigitalTwinsEndpoint(
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DigitalTwinsEndpointArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

@@ -37,11 +37,11 @@ class MyStack : Stack
         {
             Actions = 
             {
-                
+                new AzureNative.Security.Inputs.AutomationActionLogicAppArgs
                 {
-                    { "actionType", "LogicApp" },
-                    { "logicAppResourceId", "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1" },
-                    { "uri", "https://exampleTriggerUri1.com" },
+                    ActionType = "LogicApp",
+                    LogicAppResourceId = "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+                    Uri = "https://exampleTriggerUri1.com",
                 },
             },
             AutomationName = "exampleAutomation",
@@ -92,11 +92,11 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 automation = azure_native.security.Automation("automation",
-    actions=[{
-        "actionType": "LogicApp",
-        "logicAppResourceId": "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
-        "uri": "https://exampleTriggerUri1.com",
-    }],
+    actions=[azure_native.security.AutomationActionLogicAppArgs(
+        action_type="LogicApp",
+        logic_app_resource_id="/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+        uri="https://exampleTriggerUri1.com",
+    )],
     automation_name="exampleAutomation",
     description="An example of a security automation that triggers one LogicApp resource (myTest1) on any security assessment",
     etag="etag value (must be supplied for update)",
@@ -172,11 +172,11 @@ class MyStack : Stack
         {
             Actions = 
             {
-                
+                new AzureNative.Security.Inputs.AutomationActionLogicAppArgs
                 {
-                    { "actionType", "LogicApp" },
-                    { "logicAppResourceId", "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1" },
-                    { "uri", "https://exampleTriggerUri1.com" },
+                    ActionType = "LogicApp",
+                    LogicAppResourceId = "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+                    Uri = "https://exampleTriggerUri1.com",
                 },
             },
             AutomationName = "exampleAutomation",
@@ -243,11 +243,11 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 automation = azure_native.security.Automation("automation",
-    actions=[{
-        "actionType": "LogicApp",
-        "logicAppResourceId": "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
-        "uri": "https://exampleTriggerUri1.com",
-    }],
+    actions=[azure_native.security.AutomationActionLogicAppArgs(
+        action_type="LogicApp",
+        logic_app_resource_id="/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+        uri="https://exampleTriggerUri1.com",
+    )],
     automation_name="exampleAutomation",
     description="An example of a security automation that triggers one LogicApp resource (myTest1) on any high severity security assessment",
     etag="etag value (must be supplied for update)",
@@ -339,11 +339,11 @@ class MyStack : Stack
         {
             Actions = 
             {
-                
+                new AzureNative.Security.Inputs.AutomationActionLogicAppArgs
                 {
-                    { "actionType", "LogicApp" },
-                    { "logicAppResourceId", "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1" },
-                    { "uri", "https://exampleTriggerUri1.com" },
+                    ActionType = "LogicApp",
+                    LogicAppResourceId = "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+                    Uri = "https://exampleTriggerUri1.com",
                 },
             },
             AutomationName = "exampleAutomation",
@@ -410,11 +410,11 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 automation = azure_native.security.Automation("automation",
-    actions=[{
-        "actionType": "LogicApp",
-        "logicAppResourceId": "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
-        "uri": "https://exampleTriggerUri1.com",
-    }],
+    actions=[azure_native.security.AutomationActionLogicAppArgs(
+        action_type="LogicApp",
+        logic_app_resource_id="/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+        uri="https://exampleTriggerUri1.com",
+    )],
     automation_name="exampleAutomation",
     description="An example of a security automation that triggers one LogicApp resource (myTest1) on any security assessment of type customAssessment",
     etag="etag value (must be supplied for update)",
@@ -540,25 +540,19 @@ const automation = new azure_native.security.Automation("automation", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AutomationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -570,25 +564,19 @@ const automation = new azure_native.security.Automation("automation", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AutomationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -600,33 +588,25 @@ const automation = new azure_native.security.Automation("automation", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AutomationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -638,25 +618,19 @@ const automation = new azure_native.security.Automation("automation", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AutomationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -2494,7 +2468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:security:Automation exampleAutomation /subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/exampleResourceGroup/providers/Microsoft.Security/SecurityAutomations/exampleAutomation 
+$ pulumi import azure-native:security:Automation exampleAutomation /subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/exampleResourceGroup/providers/Microsoft.Security/automations/exampleAutomation 
 ```
 
 

@@ -37,31 +37,31 @@ class MyStack : Stack
         {
             InputName = "input7225",
             JobName = "sj9597",
-            Properties = 
+            Properties = new AzureNative.StreamAnalytics.Inputs.ReferenceInputPropertiesArgs
             {
-                { "datasource", 
+                Datasource = new AzureNative.StreamAnalytics.Inputs.BlobReferenceInputDataSourceArgs
                 {
-                    { "container", "state" },
-                    { "dateFormat", "yyyy/MM/dd" },
-                    { "pathPattern", "{date}/{time}" },
-                    { "storageAccounts", 
+                    Container = "state",
+                    DateFormat = "yyyy/MM/dd",
+                    PathPattern = "{date}/{time}",
+                    StorageAccounts = 
                     {
                         new AzureNative.StreamAnalytics.Inputs.StorageAccountArgs
                         {
                             AccountKey = "someAccountKey==",
                             AccountName = "someAccountName",
                         },
-                    } },
-                    { "timeFormat", "HH" },
-                    { "type", "Microsoft.Storage/Blob" },
-                } },
-                { "serialization", 
+                    },
+                    TimeFormat = "HH",
+                    Type = "Microsoft.Storage/Blob",
+                },
+                Serialization = 
                 {
                     { "encoding", "UTF8" },
                     { "fieldDelimiter", "," },
                     { "type", "Csv" },
-                } },
-                { "type", "Reference" },
+                },
+                Type = "Reference",
             },
             ResourceGroupName = "sjrg8440",
         });
@@ -92,25 +92,25 @@ import pulumi_azure_native as azure_native
 input = azure_native.streamanalytics.Input("input",
     input_name="input7225",
     job_name="sj9597",
-    properties={
-        "datasource": {
-            "container": "state",
-            "dateFormat": "yyyy/MM/dd",
-            "pathPattern": "{date}/{time}",
-            "storageAccounts": [azure_native.streamanalytics.StorageAccountArgs(
+    properties=azure_native.streamanalytics.ReferenceInputPropertiesArgs(
+        datasource=azure_native.streamanalytics.BlobReferenceInputDataSourceArgs(
+            container="state",
+            date_format="yyyy/MM/dd",
+            path_pattern="{date}/{time}",
+            storage_accounts=[azure_native.streamanalytics.StorageAccountArgs(
                 account_key="someAccountKey==",
                 account_name="someAccountName",
             )],
-            "timeFormat": "HH",
-            "type": "Microsoft.Storage/Blob",
-        },
-        "serialization": {
+            time_format="HH",
+            type="Microsoft.Storage/Blob",
+        ),
+        serialization={
             "encoding": "UTF8",
             "fieldDelimiter": ",",
             "type": "Csv",
         },
-        "type": "Reference",
-    },
+        type="Reference",
+    ),
     resource_group_name="sjrg8440")
 
 ```
@@ -176,9 +176,9 @@ class MyStack : Stack
         {
             InputName = "input7425",
             JobName = "sj197",
-            Properties = 
+            Properties = new AzureNative.StreamAnalytics.Inputs.StreamInputPropertiesArgs
             {
-                { "datasource", 
+                Datasource = 
                 {
                     { "consumerGroupName", "sdkconsumergroup" },
                     { "eventHubName", "sdkeventhub" },
@@ -186,13 +186,13 @@ class MyStack : Stack
                     { "sharedAccessPolicyKey", "someSharedAccessPolicyKey==" },
                     { "sharedAccessPolicyName", "RootManageSharedAccessKey" },
                     { "type", "Microsoft.ServiceBus/EventHub" },
-                } },
-                { "serialization", 
+                },
+                Serialization = 
                 {
                     { "encoding", "UTF8" },
                     { "type", "Json" },
-                } },
-                { "type", "Stream" },
+                },
+                Type = "Stream",
             },
             ResourceGroupName = "sjrg3139",
         });
@@ -223,8 +223,8 @@ import pulumi_azure_native as azure_native
 input = azure_native.streamanalytics.Input("input",
     input_name="input7425",
     job_name="sj197",
-    properties={
-        "datasource": {
+    properties=azure_native.streamanalytics.StreamInputPropertiesArgs(
+        datasource={
             "consumerGroupName": "sdkconsumergroup",
             "eventHubName": "sdkeventhub",
             "serviceBusNamespace": "sdktest",
@@ -232,12 +232,12 @@ input = azure_native.streamanalytics.Input("input",
             "sharedAccessPolicyName": "RootManageSharedAccessKey",
             "type": "Microsoft.ServiceBus/EventHub",
         },
-        "serialization": {
+        serialization={
             "encoding": "UTF8",
             "type": "Json",
         },
-        "type": "Stream",
-    },
+        type="Stream",
+    ),
     resource_group_name="sjrg3139")
 
 ```
@@ -299,9 +299,9 @@ class MyStack : Stack
         {
             InputName = "input7970",
             JobName = "sj9742",
-            Properties = 
+            Properties = new AzureNative.StreamAnalytics.Inputs.StreamInputPropertiesArgs
             {
-                { "datasource", 
+                Datasource = 
                 {
                     { "consumerGroupName", "sdkconsumergroup" },
                     { "endpoint", "messages/events" },
@@ -309,12 +309,12 @@ class MyStack : Stack
                     { "sharedAccessPolicyKey", "sharedAccessPolicyKey=" },
                     { "sharedAccessPolicyName", "owner" },
                     { "type", "Microsoft.Devices/IotHubs" },
-                } },
-                { "serialization", 
+                },
+                Serialization = 
                 {
                     { "type", "Avro" },
-                } },
-                { "type", "Stream" },
+                },
+                Type = "Stream",
             },
             ResourceGroupName = "sjrg3467",
         });
@@ -345,8 +345,8 @@ import pulumi_azure_native as azure_native
 input = azure_native.streamanalytics.Input("input",
     input_name="input7970",
     job_name="sj9742",
-    properties={
-        "datasource": {
+    properties=azure_native.streamanalytics.StreamInputPropertiesArgs(
+        datasource={
             "consumerGroupName": "sdkconsumergroup",
             "endpoint": "messages/events",
             "iotHubNamespace": "iothub",
@@ -354,11 +354,11 @@ input = azure_native.streamanalytics.Input("input",
             "sharedAccessPolicyName": "owner",
             "type": "Microsoft.Devices/IotHubs",
         },
-        "serialization": {
+        serialization={
             "type": "Avro",
         },
-        "type": "Stream",
-    },
+        type="Stream",
+    ),
     resource_group_name="sjrg3467")
 
 ```
@@ -419,9 +419,9 @@ class MyStack : Stack
         {
             InputName = "input8899",
             JobName = "sj6695",
-            Properties = 
+            Properties = new AzureNative.StreamAnalytics.Inputs.StreamInputPropertiesArgs
             {
-                { "datasource", 
+                Datasource = 
                 {
                     { "container", "state" },
                     { "dateFormat", "yyyy/MM/dd" },
@@ -437,14 +437,14 @@ class MyStack : Stack
                     } },
                     { "timeFormat", "HH" },
                     { "type", "Microsoft.Storage/Blob" },
-                } },
-                { "serialization", 
+                },
+                Serialization = 
                 {
                     { "encoding", "UTF8" },
                     { "fieldDelimiter", "," },
                     { "type", "Csv" },
-                } },
-                { "type", "Stream" },
+                },
+                Type = "Stream",
             },
             ResourceGroupName = "sjrg8161",
         });
@@ -475,8 +475,8 @@ import pulumi_azure_native as azure_native
 input = azure_native.streamanalytics.Input("input",
     input_name="input8899",
     job_name="sj6695",
-    properties={
-        "datasource": {
+    properties=azure_native.streamanalytics.StreamInputPropertiesArgs(
+        datasource={
             "container": "state",
             "dateFormat": "yyyy/MM/dd",
             "pathPattern": "{date}/{time}",
@@ -488,13 +488,13 @@ input = azure_native.streamanalytics.Input("input",
             "timeFormat": "HH",
             "type": "Microsoft.Storage/Blob",
         },
-        "serialization": {
+        serialization={
             "encoding": "UTF8",
             "fieldDelimiter": ",",
             "type": "Csv",
         },
-        "type": "Stream",
-    },
+        type="Stream",
+    ),
     resource_group_name="sjrg8161")
 
 ```
@@ -589,25 +589,19 @@ const input = new azure_native.streamanalytics.Input("input", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InputArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -619,25 +613,19 @@ const input = new azure_native.streamanalytics.Input("input", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InputArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -649,33 +637,25 @@ const input = new azure_native.streamanalytics.Input("input", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InputArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -687,25 +667,19 @@ const input = new azure_native.streamanalytics.Input("input", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InputArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

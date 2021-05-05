@@ -37,22 +37,22 @@ class MyStack : Stack
         {
             GroupName = "DmsSdkRg",
             ProjectName = "DmsSdkProject",
-            Properties = 
+            Properties = new AzureNative.DataMigration.Inputs.ConnectToTargetSqlDbTaskPropertiesArgs
             {
-                { "input", 
+                Input = new AzureNative.DataMigration.Inputs.ConnectToTargetSqlDbTaskInputArgs
                 {
-                    { "targetConnectionInfo", 
+                    TargetConnectionInfo = new AzureNative.DataMigration.Inputs.SqlConnectionInfoArgs
                     {
-                        { "authentication", "SqlAuthentication" },
-                        { "dataSource", "ssma-test-server.database.windows.net" },
-                        { "encryptConnection", true },
-                        { "password", "testpassword" },
-                        { "trustServerCertificate", true },
-                        { "type", "SqlConnectionInfo" },
-                        { "userName", "testuser" },
-                    } },
-                } },
-                { "taskType", "ConnectToTarget.SqlDb" },
+                        Authentication = "SqlAuthentication",
+                        DataSource = "ssma-test-server.database.windows.net",
+                        EncryptConnection = true,
+                        Password = "testpassword",
+                        TrustServerCertificate = true,
+                        Type = "SqlConnectionInfo",
+                        UserName = "testuser",
+                    },
+                },
+                TaskType = "ConnectToTarget.SqlDb",
             },
             ServiceName = "DmsSdkService",
             TaskName = "DmsSdkTask",
@@ -69,7 +69,46 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	datamigration "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datamigration"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datamigration.NewTask(ctx, "task", &datamigration.TaskArgs{
+			GroupName:   pulumi.String("DmsSdkRg"),
+			ProjectName: pulumi.String("DmsSdkProject"),
+			Properties: datamigration.ConnectToTargetSqlDbTaskProperties{
+				Input: datamigration.ConnectToTargetSqlDbTaskInput{
+					TargetConnectionInfo: datamigration.SqlConnectionInfo{
+						Authentication:         "SqlAuthentication",
+						DataSource:             "ssma-test-server.database.windows.net",
+						EncryptConnection:      true,
+						Password:               "testpassword",
+						TrustServerCertificate: true,
+						Type:                   "SqlConnectionInfo",
+						UserName:               "testuser",
+					},
+				},
+				TaskType: "ConnectToTarget.SqlDb",
+			},
+			ServiceName: pulumi.String("DmsSdkService"),
+			TaskName:    pulumi.String("DmsSdkTask"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -84,20 +123,20 @@ import pulumi_azure_native as azure_native
 task = azure_native.datamigration.Task("task",
     group_name="DmsSdkRg",
     project_name="DmsSdkProject",
-    properties={
-        "input": {
-            "targetConnectionInfo": {
-                "authentication": "SqlAuthentication",
-                "dataSource": "ssma-test-server.database.windows.net",
-                "encryptConnection": True,
-                "password": "testpassword",
-                "trustServerCertificate": True,
-                "type": "SqlConnectionInfo",
-                "userName": "testuser",
-            },
-        },
-        "taskType": "ConnectToTarget.SqlDb",
-    },
+    properties=azure_native.datamigration.ConnectToTargetSqlDbTaskPropertiesArgs(
+        input=azure_native.datamigration.ConnectToTargetSqlDbTaskInputArgs(
+            target_connection_info=azure_native.datamigration.SqlConnectionInfoArgs(
+                authentication="SqlAuthentication",
+                data_source="ssma-test-server.database.windows.net",
+                encrypt_connection=True,
+                password="testpassword",
+                trust_server_certificate=True,
+                type="SqlConnectionInfo",
+                user_name="testuser",
+            ),
+        ),
+        task_type="ConnectToTarget.SqlDb",
+    ),
     service_name="DmsSdkService",
     task_name="DmsSdkTask")
 
@@ -189,25 +228,19 @@ const task = new azure_native.datamigration.Task("task", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TaskArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -219,25 +252,19 @@ const task = new azure_native.datamigration.Task("task", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TaskArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -249,33 +276,25 @@ const task = new azure_native.datamigration.Task("task", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TaskArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -287,25 +306,19 @@ const task = new azure_native.datamigration.Task("task", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TaskArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

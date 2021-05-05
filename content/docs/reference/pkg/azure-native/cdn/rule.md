@@ -37,33 +37,33 @@ class MyStack : Stack
         {
             Actions = 
             {
-                
+                new AzureNative.Cdn.Inputs.DeliveryRuleResponseHeaderActionArgs
                 {
-                    { "name", "ModifyResponseHeader" },
-                    { "parameters", 
+                    Name = "ModifyResponseHeader",
+                    Parameters = new AzureNative.Cdn.Inputs.HeaderActionParametersArgs
                     {
-                        { "headerAction", "Overwrite" },
-                        { "headerName", "X-CDN" },
-                        { "odataType", "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters" },
-                        { "value", "MSFT" },
-                    } },
+                        HeaderAction = "Overwrite",
+                        HeaderName = "X-CDN",
+                        OdataType = "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
+                        Value = "MSFT",
+                    },
                 },
             },
             Conditions = 
             {
-                
+                new AzureNative.Cdn.Inputs.DeliveryRuleRequestMethodConditionArgs
                 {
-                    { "name", "RequestMethod" },
-                    { "parameters", 
+                    Name = "RequestMethod",
+                    Parameters = new AzureNative.Cdn.Inputs.RequestMethodMatchConditionParametersArgs
                     {
-                        { "matchValues", 
+                        MatchValues = 
                         {
                             "GET",
-                        } },
-                        { "negateCondition", false },
-                        { "odataType", "#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestMethodConditionParameters" },
-                        { "operator", "Equal" },
-                    } },
+                        },
+                        NegateCondition = false,
+                        OdataType = "#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestMethodConditionParameters",
+                        Operator = "Equal",
+                    },
                 },
             },
             Order = 1,
@@ -97,24 +97,24 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 rule = azure_native.cdn.Rule("rule",
-    actions=[{
-        "name": "ModifyResponseHeader",
-        "parameters": {
-            "headerAction": "Overwrite",
-            "headerName": "X-CDN",
-            "odataType": "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
-            "value": "MSFT",
-        },
-    }],
-    conditions=[{
-        "name": "RequestMethod",
-        "parameters": {
-            "matchValues": ["GET"],
-            "negateCondition": False,
-            "odataType": "#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestMethodConditionParameters",
-            "operator": "Equal",
-        },
-    }],
+    actions=[azure_native.cdn.DeliveryRuleResponseHeaderActionArgs(
+        name="ModifyResponseHeader",
+        parameters=azure_native.cdn.HeaderActionParametersArgs(
+            header_action="Overwrite",
+            header_name="X-CDN",
+            odata_type="#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
+            value="MSFT",
+        ),
+    )],
+    conditions=[azure_native.cdn.DeliveryRuleRequestMethodConditionArgs(
+        name="RequestMethod",
+        parameters=azure_native.cdn.RequestMethodMatchConditionParametersArgs(
+            match_values=["GET"],
+            negate_condition=False,
+            odata_type="#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestMethodConditionParameters",
+            operator="Equal",
+        ),
+    )],
     order=1,
     profile_name="profile1",
     resource_group_name="RG",
@@ -216,25 +216,19 @@ const rule = new azure_native.cdn.Rule("rule", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -246,25 +240,19 @@ const rule = new azure_native.cdn.Rule("rule", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -276,33 +264,25 @@ const rule = new azure_native.cdn.Rule("rule", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -314,25 +294,19 @@ const rule = new azure_native.cdn.Rule("rule", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

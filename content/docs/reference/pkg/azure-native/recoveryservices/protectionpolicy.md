@@ -36,10 +36,10 @@ class MyStack : Stack
         var protectionPolicy = new AzureNative.RecoveryServices.ProtectionPolicy("protectionPolicy", new AzureNative.RecoveryServices.ProtectionPolicyArgs
         {
             PolicyName = "testPolicy1",
-            Properties = 
+            Properties = new AzureNative.RecoveryServices.Inputs.AzureIaaSVMProtectionPolicyArgs
             {
-                { "backupManagementType", "AzureIaasVM" },
-                { "retentionPolicy", 
+                BackupManagementType = "AzureIaasVM",
+                RetentionPolicy = 
                 {
                     { "monthlySchedule", new AzureNative.RecoveryServices.Inputs.MonthlyRetentionScheduleArgs
                     {
@@ -116,8 +116,8 @@ class MyStack : Stack
                             "2018-01-24T10:00:00Z",
                         },
                     } },
-                } },
-                { "schedulePolicy", 
+                },
+                SchedulePolicy = 
                 {
                     { "schedulePolicyType", "SimpleSchedulePolicy" },
                     { "scheduleRunDays", 
@@ -131,8 +131,8 @@ class MyStack : Stack
                     {
                         "2018-01-24T10:00:00Z",
                     } },
-                } },
-                { "timeZone", "Pacific Standard Time" },
+                },
+                TimeZone = "Pacific Standard Time",
             },
             ResourceGroupName = "SwaggerTestRg",
             VaultName = "NetSDKTestRsVault",
@@ -163,9 +163,9 @@ import pulumi_azure_native as azure_native
 
 protection_policy = azure_native.recoveryservices.ProtectionPolicy("protectionPolicy",
     policy_name="testPolicy1",
-    properties={
-        "backupManagementType": "AzureIaasVM",
-        "retentionPolicy": {
+    properties=azure_native.recoveryservices.AzureIaaSVMProtectionPolicyArgs(
+        backup_management_type="AzureIaasVM",
+        retention_policy={
             "monthlySchedule": azure_native.recoveryservices.MonthlyRetentionScheduleArgs(
                 retention_duration=azure_native.recoveryservices.RetentionDurationArgs(
                     count=2,
@@ -217,7 +217,7 @@ protection_policy = azure_native.recoveryservices.ProtectionPolicy("protectionPo
                 retention_times=["2018-01-24T10:00:00Z"],
             ),
         },
-        "schedulePolicy": {
+        schedule_policy={
             "schedulePolicyType": "SimpleSchedulePolicy",
             "scheduleRunDays": [
                 "Monday",
@@ -227,8 +227,8 @@ protection_policy = azure_native.recoveryservices.ProtectionPolicy("protectionPo
             "scheduleRunFrequency": "Weekly",
             "scheduleRunTimes": ["2018-01-24T10:00:00Z"],
         },
-        "timeZone": "Pacific Standard Time",
-    },
+        time_zone="Pacific Standard Time",
+    ),
     resource_group_name="SwaggerTestRg",
     vault_name="NetSDKTestRsVault")
 
@@ -341,15 +341,15 @@ class MyStack : Stack
         var protectionPolicy = new AzureNative.RecoveryServices.ProtectionPolicy("protectionPolicy", new AzureNative.RecoveryServices.ProtectionPolicyArgs
         {
             PolicyName = "testPolicy1",
-            Properties = 
+            Properties = new AzureNative.RecoveryServices.Inputs.AzureVmWorkloadProtectionPolicyArgs
             {
-                { "backupManagementType", "AzureWorkload" },
-                { "settings", new AzureNative.RecoveryServices.Inputs.SettingsArgs
+                BackupManagementType = "AzureWorkload",
+                Settings = new AzureNative.RecoveryServices.Inputs.SettingsArgs
                 {
                     Issqlcompression = false,
                     TimeZone = "Pacific Standard Time",
-                } },
-                { "subProtectionPolicy", 
+                },
+                SubProtectionPolicy = 
                 {
                     new AzureNative.RecoveryServices.Inputs.SubProtectionPolicyArgs
                     {
@@ -488,8 +488,8 @@ class MyStack : Stack
                             { "schedulePolicyType", "LogSchedulePolicy" },
                         },
                     },
-                } },
-                { "workLoadType", "SQLDataBase" },
+                },
+                WorkLoadType = "SQLDataBase",
             },
             ResourceGroupName = "SwaggerTestRg",
             VaultName = "NetSDKTestRsVault",
@@ -520,13 +520,13 @@ import pulumi_azure_native as azure_native
 
 protection_policy = azure_native.recoveryservices.ProtectionPolicy("protectionPolicy",
     policy_name="testPolicy1",
-    properties={
-        "backupManagementType": "AzureWorkload",
-        "settings": azure_native.recoveryservices.SettingsArgs(
+    properties=azure_native.recoveryservices.AzureVmWorkloadProtectionPolicyArgs(
+        backup_management_type="AzureWorkload",
+        settings=azure_native.recoveryservices.SettingsArgs(
             issqlcompression=False,
             time_zone="Pacific Standard Time",
         ),
-        "subProtectionPolicy": [
+        sub_protection_policy=[
             azure_native.recoveryservices.SubProtectionPolicyArgs(
                 policy_type="Full",
                 retention_policy={
@@ -613,8 +613,8 @@ protection_policy = azure_native.recoveryservices.ProtectionPolicy("protectionPo
                 },
             ),
         ],
-        "workLoadType": "SQLDataBase",
-    },
+        work_load_type="SQLDataBase",
+    ),
     resource_group_name="SwaggerTestRg",
     vault_name="NetSDKTestRsVault")
 
@@ -756,10 +756,10 @@ class MyStack : Stack
         var protectionPolicy = new AzureNative.RecoveryServices.ProtectionPolicy("protectionPolicy", new AzureNative.RecoveryServices.ProtectionPolicyArgs
         {
             PolicyName = "testPolicy1",
-            Properties = 
+            Properties = new AzureNative.RecoveryServices.Inputs.AzureIaaSVMProtectionPolicyArgs
             {
-                { "backupManagementType", "AzureIaasVM" },
-                { "retentionPolicy", 
+                BackupManagementType = "AzureIaasVM",
+                RetentionPolicy = 
                 {
                     { "dailySchedule", new AzureNative.RecoveryServices.Inputs.DailyRetentionScheduleArgs
                     {
@@ -774,8 +774,8 @@ class MyStack : Stack
                         },
                     } },
                     { "retentionPolicyType", "LongTermRetentionPolicy" },
-                } },
-                { "schedulePolicy", 
+                },
+                SchedulePolicy = 
                 {
                     { "schedulePolicyType", "SimpleSchedulePolicy" },
                     { "scheduleRunFrequency", "Daily" },
@@ -783,8 +783,8 @@ class MyStack : Stack
                     {
                         "2018-01-24T02:00:00Z",
                     } },
-                } },
-                { "timeZone", "Pacific Standard Time" },
+                },
+                TimeZone = "Pacific Standard Time",
             },
             ResourceGroupName = "SwaggerTestRg",
             VaultName = "NetSDKTestRsVault",
@@ -815,9 +815,9 @@ import pulumi_azure_native as azure_native
 
 protection_policy = azure_native.recoveryservices.ProtectionPolicy("protectionPolicy",
     policy_name="testPolicy1",
-    properties={
-        "backupManagementType": "AzureIaasVM",
-        "retentionPolicy": {
+    properties=azure_native.recoveryservices.AzureIaaSVMProtectionPolicyArgs(
+        backup_management_type="AzureIaasVM",
+        retention_policy={
             "dailySchedule": azure_native.recoveryservices.DailyRetentionScheduleArgs(
                 retention_duration=azure_native.recoveryservices.RetentionDurationArgs(
                     count=1,
@@ -827,13 +827,13 @@ protection_policy = azure_native.recoveryservices.ProtectionPolicy("protectionPo
             ),
             "retentionPolicyType": "LongTermRetentionPolicy",
         },
-        "schedulePolicy": {
+        schedule_policy={
             "schedulePolicyType": "SimpleSchedulePolicy",
             "scheduleRunFrequency": "Daily",
             "scheduleRunTimes": ["2018-01-24T02:00:00Z"],
         },
-        "timeZone": "Pacific Standard Time",
-    },
+        time_zone="Pacific Standard Time",
+    ),
     resource_group_name="SwaggerTestRg",
     vault_name="NetSDKTestRsVault")
 
@@ -930,25 +930,19 @@ const protectionPolicy = new azure_native.recoveryservices.ProtectionPolicy("pro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProtectionPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -960,25 +954,19 @@ const protectionPolicy = new azure_native.recoveryservices.ProtectionPolicy("pro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProtectionPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -990,33 +978,25 @@ const protectionPolicy = new azure_native.recoveryservices.ProtectionPolicy("pro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProtectionPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1028,25 +1008,19 @@ const protectionPolicy = new azure_native.recoveryservices.ProtectionPolicy("pro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProtectionPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

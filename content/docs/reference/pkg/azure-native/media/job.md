@@ -41,10 +41,10 @@ class MyStack : Stack
                 { "Key 2", "Value 2" },
                 { "key1", "value1" },
             },
-            Input = 
+            Input = new AzureNative.Media.Inputs.JobInputAssetArgs
             {
-                { "assetName", "job1-InputAsset" },
-                { "odataType", "#Microsoft.Media.JobInputAsset" },
+                AssetName = "job1-InputAsset",
+                OdataType = "#Microsoft.Media.JobInputAsset",
             },
             JobName = "job1",
             Outputs = 
@@ -70,7 +70,46 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := media.NewJob(ctx, "job", &media.JobArgs{
+			AccountName: pulumi.String("contosomedia"),
+			CorrelationData: pulumi.StringMap{
+				"Key 2": pulumi.String("Value 2"),
+				"key1":  pulumi.String("value1"),
+			},
+			Input: media.JobInputAsset{
+				AssetName: "job1-InputAsset",
+				OdataType: "#Microsoft.Media.JobInputAsset",
+			},
+			JobName: pulumi.String("job1"),
+			Outputs: media.JobOutputAssetArray{
+				&media.JobOutputAssetArgs{
+					AssetName: pulumi.String("job1-OutputAsset"),
+					OdataType: pulumi.String("#Microsoft.Media.JobOutputAsset"),
+				},
+			},
+			ResourceGroupName: pulumi.String("contosoresources"),
+			TransformName:     pulumi.String("exampleTransform"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -88,10 +127,10 @@ job = azure_native.media.Job("job",
         "Key 2": "Value 2",
         "key1": "value1",
     },
-    input={
-        "assetName": "job1-InputAsset",
-        "odataType": "#Microsoft.Media.JobInputAsset",
-    },
+    input=azure_native.media.JobInputAssetArgs(
+        asset_name="job1-InputAsset",
+        odata_type="#Microsoft.Media.JobInputAsset",
+    ),
     job_name="job1",
     outputs=[azure_native.media.JobOutputAssetArgs(
         asset_name="job1-OutputAsset",
@@ -189,25 +228,19 @@ const job = new azure_native.media.Job("job", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -219,25 +252,19 @@ const job = new azure_native.media.Job("job", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -249,33 +276,25 @@ const job = new azure_native.media.Job("job", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -287,25 +306,19 @@ const job = new azure_native.media.Job("job", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

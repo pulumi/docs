@@ -36,11 +36,11 @@ class MyStack : Stack
         var server = new AzureNative.DBforMariaDB.Server("server", new AzureNative.DBforMariaDB.ServerArgs
         {
             Location = "brazilsouth",
-            Properties = 
+            Properties = new AzureNative.DBforMariaDB.Inputs.ServerPropertiesForRestoreArgs
             {
-                { "createMode", "PointInTimeRestore" },
-                { "restorePointInTime", "2017-12-14T00:00:37.467Z" },
-                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver" },
+                CreateMode = "PointInTimeRestore",
+                RestorePointInTime = "2017-12-14T00:00:37.467Z",
+                SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver",
             },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
@@ -68,7 +68,45 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	dbformariadb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbformariadb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbformariadb.NewServer(ctx, "server", &dbformariadb.ServerArgs{
+			Location: pulumi.String("brazilsouth"),
+			Properties: dbformariadb.ServerPropertiesForRestore{
+				CreateMode:         "PointInTimeRestore",
+				RestorePointInTime: "2017-12-14T00:00:37.467Z",
+				SourceServerId:     "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver",
+			},
+			ResourceGroupName: pulumi.String("TargetResourceGroup"),
+			ServerName:        pulumi.String("targetserver"),
+			Sku: &dbformariadb.SkuArgs{
+				Capacity: pulumi.Int(2),
+				Family:   pulumi.String("Gen5"),
+				Name:     pulumi.String("GP_Gen5_2"),
+				Tier:     pulumi.String("GeneralPurpose"),
+			},
+			Tags: pulumi.StringMap{
+				"ElasticServer": pulumi.String("1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -82,11 +120,11 @@ import pulumi_azure_native as azure_native
 
 server = azure_native.dbformariadb.Server("server",
     location="brazilsouth",
-    properties={
-        "createMode": "PointInTimeRestore",
-        "restorePointInTime": "2017-12-14T00:00:37.467Z",
-        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver",
-    },
+    properties=azure_native.dbformariadb.ServerPropertiesForRestoreArgs(
+        create_mode="PointInTimeRestore",
+        restore_point_in_time="2017-12-14T00:00:37.467Z",
+        source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver",
+    ),
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
     sku=azure_native.dbformariadb.SkuArgs(
@@ -156,19 +194,19 @@ class MyStack : Stack
         var server = new AzureNative.DBforMariaDB.Server("server", new AzureNative.DBforMariaDB.ServerArgs
         {
             Location = "westus",
-            Properties = 
+            Properties = new AzureNative.DBforMariaDB.Inputs.ServerPropertiesForDefaultCreateArgs
             {
-                { "administratorLogin", "cloudsa" },
-                { "administratorLoginPassword", "<administratorLoginPassword>" },
-                { "createMode", "Default" },
-                { "minimalTlsVersion", "TLS1_2" },
-                { "sslEnforcement", "Enabled" },
-                { "storageProfile", new AzureNative.DBforMariaDB.Inputs.StorageProfileArgs
+                AdministratorLogin = "cloudsa",
+                AdministratorLoginPassword = "<administratorLoginPassword>",
+                CreateMode = "Default",
+                MinimalTlsVersion = "TLS1_2",
+                SslEnforcement = "Enabled",
+                StorageProfile = new AzureNative.DBforMariaDB.Inputs.StorageProfileArgs
                 {
                     BackupRetentionDays = 7,
                     GeoRedundantBackup = "Enabled",
                     StorageMB = 128000,
-                } },
+                },
             },
             ResourceGroupName = "testrg",
             ServerName = "mariadbtestsvc4",
@@ -196,7 +234,52 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	dbformariadb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbformariadb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbformariadb.NewServer(ctx, "server", &dbformariadb.ServerArgs{
+			Location: pulumi.String("westus"),
+			Properties: dbformariadb.ServerPropertiesForDefaultCreate{
+				AdministratorLogin:         "cloudsa",
+				AdministratorLoginPassword: "<administratorLoginPassword>",
+				CreateMode:                 "Default",
+				MinimalTlsVersion:          "TLS1_2",
+				SslEnforcement:             "Enabled",
+				StorageProfile: dbformariadb.StorageProfile{
+					BackupRetentionDays: 7,
+					GeoRedundantBackup:  "Enabled",
+					StorageMB:           128000,
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg"),
+			ServerName:        pulumi.String("mariadbtestsvc4"),
+			Sku: &dbformariadb.SkuArgs{
+				Capacity: pulumi.Int(2),
+				Family:   pulumi.String("Gen5"),
+				Name:     pulumi.String("GP_Gen5_2"),
+				Tier:     pulumi.String("GeneralPurpose"),
+			},
+			Tags: pulumi.StringMap{
+				"ElasticServer": pulumi.String("1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -210,18 +293,18 @@ import pulumi_azure_native as azure_native
 
 server = azure_native.dbformariadb.Server("server",
     location="westus",
-    properties={
-        "administratorLogin": "cloudsa",
-        "administratorLoginPassword": "<administratorLoginPassword>",
-        "createMode": "Default",
-        "minimalTlsVersion": "TLS1_2",
-        "sslEnforcement": "Enabled",
-        "storageProfile": azure_native.dbformariadb.StorageProfileArgs(
+    properties=azure_native.dbformariadb.ServerPropertiesForDefaultCreateArgs(
+        administrator_login="cloudsa",
+        administrator_login_password="<administratorLoginPassword>",
+        create_mode="Default",
+        minimal_tls_version="TLS1_2",
+        ssl_enforcement="Enabled",
+        storage_profile=azure_native.dbformariadb.StorageProfileArgs(
             backup_retention_days=7,
             geo_redundant_backup="Enabled",
             storage_mb=128000,
         ),
-    },
+    ),
     resource_group_name="testrg",
     server_name="mariadbtestsvc4",
     sku=azure_native.dbformariadb.SkuArgs(
@@ -298,10 +381,10 @@ class MyStack : Stack
         var server = new AzureNative.DBforMariaDB.Server("server", new AzureNative.DBforMariaDB.ServerArgs
         {
             Location = "westus",
-            Properties = 
+            Properties = new AzureNative.DBforMariaDB.Inputs.ServerPropertiesForReplicaArgs
             {
-                { "createMode", "Replica" },
-                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMariaDB/servers/masterserver" },
+                CreateMode = "Replica",
+                SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMariaDB/servers/masterserver",
             },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
@@ -318,7 +401,35 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	dbformariadb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbformariadb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbformariadb.NewServer(ctx, "server", &dbformariadb.ServerArgs{
+			Location: pulumi.String("westus"),
+			Properties: dbformariadb.ServerPropertiesForReplica{
+				CreateMode:     "Replica",
+				SourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMariaDB/servers/masterserver",
+			},
+			ResourceGroupName: pulumi.String("TargetResourceGroup"),
+			ServerName:        pulumi.String("targetserver"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -332,10 +443,10 @@ import pulumi_azure_native as azure_native
 
 server = azure_native.dbformariadb.Server("server",
     location="westus",
-    properties={
-        "createMode": "Replica",
-        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMariaDB/servers/masterserver",
-    },
+    properties=azure_native.dbformariadb.ServerPropertiesForReplicaArgs(
+        create_mode="Replica",
+        source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMariaDB/servers/masterserver",
+    ),
     resource_group_name="TargetResourceGroup",
     server_name="targetserver")
 
@@ -386,10 +497,10 @@ class MyStack : Stack
         var server = new AzureNative.DBforMariaDB.Server("server", new AzureNative.DBforMariaDB.ServerArgs
         {
             Location = "westus",
-            Properties = 
+            Properties = new AzureNative.DBforMariaDB.Inputs.ServerPropertiesForGeoRestoreArgs
             {
-                { "createMode", "GeoRestore" },
-                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver" },
+                CreateMode = "GeoRestore",
+                SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver",
             },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
@@ -417,7 +528,44 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	dbformariadb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbformariadb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbformariadb.NewServer(ctx, "server", &dbformariadb.ServerArgs{
+			Location: pulumi.String("westus"),
+			Properties: dbformariadb.ServerPropertiesForGeoRestore{
+				CreateMode:     "GeoRestore",
+				SourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver",
+			},
+			ResourceGroupName: pulumi.String("TargetResourceGroup"),
+			ServerName:        pulumi.String("targetserver"),
+			Sku: &dbformariadb.SkuArgs{
+				Capacity: pulumi.Int(2),
+				Family:   pulumi.String("Gen5"),
+				Name:     pulumi.String("GP_Gen5_2"),
+				Tier:     pulumi.String("GeneralPurpose"),
+			},
+			Tags: pulumi.StringMap{
+				"ElasticServer": pulumi.String("1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -431,10 +579,10 @@ import pulumi_azure_native as azure_native
 
 server = azure_native.dbformariadb.Server("server",
     location="westus",
-    properties={
-        "createMode": "GeoRestore",
-        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver",
-    },
+    properties=azure_native.dbformariadb.ServerPropertiesForGeoRestoreArgs(
+        create_mode="GeoRestore",
+        source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver",
+    ),
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
     sku=azure_native.dbformariadb.SkuArgs(
@@ -533,25 +681,19 @@ const server = new azure_native.dbformariadb.Server("server", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -563,25 +705,19 @@ const server = new azure_native.dbformariadb.Server("server", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -593,33 +729,25 @@ const server = new azure_native.dbformariadb.Server("server", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -631,25 +759,19 @@ const server = new azure_native.dbformariadb.Server("server", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

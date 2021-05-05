@@ -56,16 +56,16 @@ class MyStack : Stack
             {
                 new AzureNative.Media.Inputs.MediaGraphRtspSourceArgs
                 {
-                    Endpoint = 
+                    Endpoint = new AzureNative.Media.Inputs.MediaGraphClearEndpointArgs
                     {
-                        { "credentials", new AzureNative.Media.Inputs.MediaGraphUsernamePasswordCredentialsArgs
+                        Credentials = new AzureNative.Media.Inputs.MediaGraphUsernamePasswordCredentialsArgs
                         {
                             OdataType = "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
                             Password = "examplepassword",
                             Username = "exampleusername",
-                        } },
-                        { "odataType", "#Microsoft.Media.MediaGraphClearEndpoint" },
-                        { "url", "rtsp://contoso.com:554/stream1" },
+                        },
+                        OdataType = "#Microsoft.Media.MediaGraphClearEndpoint",
+                        Url = "rtsp://contoso.com:554/stream1",
                     },
                     Name = "rtspSource",
                     OdataType = "#Microsoft.Media.MediaGraphRtspSource",
@@ -85,7 +85,58 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := media.NewMediaGraph(ctx, "mediaGraph", &media.MediaGraphArgs{
+			AccountName:       pulumi.String("contosomedia"),
+			Description:       pulumi.String("updated description"),
+			MediaGraphName:    pulumi.String("SampleMediaGraph"),
+			ResourceGroupName: pulumi.String("contoso"),
+			Sinks: media.MediaGraphAssetSinkArray{
+				&media.MediaGraphAssetSinkArgs{
+					AssetName: pulumi.String("SampleAsset"),
+					Inputs: pulumi.StringArray{
+						pulumi.String("rtspSource"),
+					},
+					Name:      pulumi.String("AssetSink"),
+					OdataType: pulumi.String("#Microsoft.Media.MediaGraphAssetSink"),
+				},
+			},
+			Sources: media.MediaGraphRtspSourceArray{
+				&media.MediaGraphRtspSourceArgs{
+					Endpoint: media.MediaGraphClearEndpoint{
+						Credentials: media.MediaGraphUsernamePasswordCredentials{
+							OdataType: "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+							Password:  "examplepassword",
+							Username:  "exampleusername",
+						},
+						OdataType: "#Microsoft.Media.MediaGraphClearEndpoint",
+						Url:       "rtsp://contoso.com:554/stream1",
+					},
+					Name:      pulumi.String("rtspSource"),
+					OdataType: pulumi.String("#Microsoft.Media.MediaGraphRtspSource"),
+					Transport: pulumi.String("Http"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -109,15 +160,15 @@ media_graph = azure_native.media.MediaGraph("mediaGraph",
         odata_type="#Microsoft.Media.MediaGraphAssetSink",
     )],
     sources=[azure_native.media.MediaGraphRtspSourceArgs(
-        endpoint={
-            "credentials": azure_native.media.MediaGraphUsernamePasswordCredentialsArgs(
+        endpoint=azure_native.media.MediaGraphClearEndpointArgs(
+            credentials=azure_native.media.MediaGraphUsernamePasswordCredentialsArgs(
                 odata_type="#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
                 password="examplepassword",
                 username="exampleusername",
             ),
-            "odataType": "#Microsoft.Media.MediaGraphClearEndpoint",
-            "url": "rtsp://contoso.com:554/stream1",
-        },
+            odata_type="#Microsoft.Media.MediaGraphClearEndpoint",
+            url="rtsp://contoso.com:554/stream1",
+        ),
         name="rtspSource",
         odata_type="#Microsoft.Media.MediaGraphRtspSource",
         transport="Http",
@@ -207,16 +258,16 @@ class MyStack : Stack
             {
                 new AzureNative.Media.Inputs.MediaGraphRtspSourceArgs
                 {
-                    Endpoint = 
+                    Endpoint = new AzureNative.Media.Inputs.MediaGraphTlsEndpointArgs
                     {
-                        { "credentials", new AzureNative.Media.Inputs.MediaGraphUsernamePasswordCredentialsArgs
+                        Credentials = new AzureNative.Media.Inputs.MediaGraphUsernamePasswordCredentialsArgs
                         {
                             OdataType = "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
                             Password = "examplepassword",
                             Username = "exampleusername",
-                        } },
-                        { "odataType", "#Microsoft.Media.MediaGraphTlsEndpoint" },
-                        { "trustedCertificates", new AzureNative.Media.Inputs.MediaGraphPemCertificateListArgs
+                        },
+                        OdataType = "#Microsoft.Media.MediaGraphTlsEndpoint",
+                        TrustedCertificates = new AzureNative.Media.Inputs.MediaGraphPemCertificateListArgs
                         {
                             Certificates = 
                             {
@@ -243,13 +294,13 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
 -----END CERTIFICATE-----",
                             },
                             OdataType = "#Microsoft.Media.MediaGraphPemCertificateList",
-                        } },
-                        { "url", "rtsps://contoso.com:443/stream1" },
-                        { "validationOptions", new AzureNative.Media.Inputs.MediaGraphTlsValidationOptionsArgs
+                        },
+                        Url = "rtsps://contoso.com:443/stream1",
+                        ValidationOptions = new AzureNative.Media.Inputs.MediaGraphTlsValidationOptionsArgs
                         {
                             IgnoreHostname = true,
                             IgnoreSignature = false,
-                        } },
+                        },
                     },
                     Name = "rtspSource",
                     OdataType = "#Microsoft.Media.MediaGraphRtspSource",
@@ -269,7 +320,68 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := media.NewMediaGraph(ctx, "mediaGraph", &media.MediaGraphArgs{
+			AccountName:       pulumi.String("contosomedia"),
+			Description:       pulumi.String("updated description"),
+			MediaGraphName:    pulumi.String("SampleMediaGraph"),
+			ResourceGroupName: pulumi.String("contoso"),
+			Sinks: media.MediaGraphAssetSinkArray{
+				&media.MediaGraphAssetSinkArgs{
+					AssetName: pulumi.String("SampleAsset"),
+					Inputs: pulumi.StringArray{
+						pulumi.String("rtspSource"),
+					},
+					Name:      pulumi.String("AssetSink"),
+					OdataType: pulumi.String("#Microsoft.Media.MediaGraphAssetSink"),
+				},
+			},
+			Sources: media.MediaGraphRtspSourceArray{
+				&media.MediaGraphRtspSourceArgs{
+					Endpoint: media.MediaGraphTlsEndpoint{
+						Credentials: media.MediaGraphUsernamePasswordCredentials{
+							OdataType: "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+							Password:  "examplepassword",
+							Username:  "exampleusername",
+						},
+						OdataType: "#Microsoft.Media.MediaGraphTlsEndpoint",
+						TrustedCertificates: media.MediaGraphPemCertificateList{
+							Certificates: []string{
+								"-----BEGIN CERTIFICATE-----\nMIIDhTCCAm2gAwIBAgIUajvPKmoO+8qaO89/ZGATl7ZYnTswDQYJKoZIhvcNAQEL\nBQAwUTESMBAGA1UECgwJTWljcm9zb2Z0MRQwEgYDVQQLDAtBenVyZSBNZWRpYTEl\nMCMGA1UEAwwcKFVudHJ1c3RlZCkgVGVzdCBDZXJ0aWZpY2F0ZTAgFw0yMDAyMDYy\nMTI5MTlaGA8zMDE5MDYwOTIxMjkxOVowUTESMBAGA1UECgwJTWljcm9zb2Z0MRQw\nEgYDVQQLDAtBenVyZSBNZWRpYTElMCMGA1UEAwwcKFVudHJ1c3RlZCkgVGVzdCBD\nZXJ0aWZpY2F0ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK2lg5ff\n7xXPaBZXHl/zrTukdiBtu7BNIOchHba51eloruPRzpvQx7Pedk3CVTut7LYinijf\nuol0EwkQ2FLt2i2jOqiva9nXR95ujIZHcKsEeMC4RSNSP4++k6SpP8FgyYVdv5ru\nf8GC+HyYQ4j0TqpR/cJs53l/LGRSldaFZ6fcDde1jeyca4VivAbAH1/WDIOvmjzo\n9XIGxZ10VSS5l5+DIgdkJZ+mDMLJIuVZ0YVF16ZGEB3beq1trk5lItvmSjQLTllH\nqMFm9UGY8jKZSo/BY8ewHEtnGSAFQK0TVuRx1HhUWwu6C9jk+2zmRS2090BNpQWa\nJMKFJrSPzFDPRX8CAwEAAaNTMFEwHQYDVR0OBBYEFIumbhu0lYk0EFDThEg0yyIn\n/wZZMB8GA1UdIwQYMBaAFIumbhu0lYk0EFDThEg0yyIn/wZZMA8GA1UdEwEB/wQF\nMAMBAf8wDQYJKoZIhvcNAQELBQADggEBADUNw+/NGNVtigq9tMJKqlk39MTpDn1s\nZ1BVIAuAWSQjlevYZJeDIPUiWNWFhRe+xN7oOLnn2+NIXEKKeMSyuPoZYbN0mBkB\n99oS3XVipSANpmDvIepNdCrOnjfqDFIifRF1Dqjtb6i1hb6v/qYKVPLQvcrgGur7\nPKKkAu9p4YRZ3RBdwwaUuMgojrj/l6DGbeJY6IRVnVMY39rryMnZjA5xUlhCu55n\noB3t/jsJLwnQN+JbAjLAeuqgOWtgARsEFzvpt+VvDsaj0YLOJPhyJwTvHgaa/slB\nnECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=\n-----END CERTIFICATE-----",
+							},
+							OdataType: "#Microsoft.Media.MediaGraphPemCertificateList",
+						},
+						Url: "rtsps://contoso.com:443/stream1",
+						ValidationOptions: media.MediaGraphTlsValidationOptions{
+							IgnoreHostname:  true,
+							IgnoreSignature: false,
+						},
+					},
+					Name:      pulumi.String("rtspSource"),
+					OdataType: pulumi.String("#Microsoft.Media.MediaGraphRtspSource"),
+					Transport: pulumi.String("Http"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -293,14 +405,14 @@ media_graph = azure_native.media.MediaGraph("mediaGraph",
         odata_type="#Microsoft.Media.MediaGraphAssetSink",
     )],
     sources=[azure_native.media.MediaGraphRtspSourceArgs(
-        endpoint={
-            "credentials": azure_native.media.MediaGraphUsernamePasswordCredentialsArgs(
+        endpoint=azure_native.media.MediaGraphTlsEndpointArgs(
+            credentials=azure_native.media.MediaGraphUsernamePasswordCredentialsArgs(
                 odata_type="#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
                 password="examplepassword",
                 username="exampleusername",
             ),
-            "odataType": "#Microsoft.Media.MediaGraphTlsEndpoint",
-            "trustedCertificates": azure_native.media.MediaGraphPemCertificateListArgs(
+            odata_type="#Microsoft.Media.MediaGraphTlsEndpoint",
+            trusted_certificates=azure_native.media.MediaGraphPemCertificateListArgs(
                 certificates=["""-----BEGIN CERTIFICATE-----
 MIIDhTCCAm2gAwIBAgIUajvPKmoO+8qaO89/ZGATl7ZYnTswDQYJKoZIhvcNAQEL
 BQAwUTESMBAGA1UECgwJTWljcm9zb2Z0MRQwEgYDVQQLDAtBenVyZSBNZWRpYTEl
@@ -324,12 +436,12 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
 -----END CERTIFICATE-----"""],
                 odata_type="#Microsoft.Media.MediaGraphPemCertificateList",
             ),
-            "url": "rtsps://contoso.com:443/stream1",
-            "validationOptions": azure_native.media.MediaGraphTlsValidationOptionsArgs(
+            url="rtsps://contoso.com:443/stream1",
+            validation_options=azure_native.media.MediaGraphTlsValidationOptionsArgs(
                 ignore_hostname=True,
                 ignore_signature=False,
             ),
-        },
+        ),
         name="rtspSource",
         odata_type="#Microsoft.Media.MediaGraphRtspSource",
         transport="Http",
@@ -457,25 +569,19 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MediaGraphArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -487,25 +593,19 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MediaGraphArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -517,33 +617,25 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MediaGraphArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -555,25 +647,19 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MediaGraphArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

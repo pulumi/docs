@@ -63,7 +63,8 @@ $ pulumi import azure-native:web:WebAppSlot myresource1 /subscriptions/{subscrip
                <span class="nx">site_config</span><span class="p">:</span> <span class="nx">Optional[SiteConfigArgs]</span> = None<span class="p">,</span>
                <span class="nx">slot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">storage_account_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+               <span class="nx">virtual_network_subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">WebAppSlot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppSlotArgs</a></span><span class="p">,</span>
@@ -86,25 +87,19 @@ $ pulumi import azure-native:web:WebAppSlot myresource1 /subscriptions/{subscrip
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">WebAppSlotArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -116,25 +111,19 @@ $ pulumi import azure-native:web:WebAppSlot myresource1 /subscriptions/{subscrip
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">WebAppSlotArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -146,33 +135,25 @@ $ pulumi import azure-native:web:WebAppSlot myresource1 /subscriptions/{subscrip
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">WebAppSlotArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -184,25 +165,19 @@ $ pulumi import azure-native:web:WebAppSlot myresource1 /subscriptions/{subscrip
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">WebAppSlotArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -454,7 +429,16 @@ http requests{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="virtualnetworksubnetid_csharp">
+<a href="#virtualnetworksubnetid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET Integration.
+This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -695,7 +679,16 @@ http requests{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="virtualnetworksubnetid_go">
+<a href="#virtualnetworksubnetid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET Integration.
+This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -936,7 +929,16 @@ http requests{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="virtualnetworksubnetid_nodejs">
+<a href="#virtualnetworksubnetid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET Integration.
+This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1177,7 +1179,16 @@ http requests{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="virtual_network_subnet_id_python">
+<a href="#virtual_network_subnet_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET Integration.
+This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -8473,6 +8484,14 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
     <dd>{{% md %}}Number of preWarmed instances.
 This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="publicnetworkaccess_csharp">
+<a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Property to allow or block all public traffic.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publishingusername_csharp">
 <a href="#publishingusername_csharp" style="color: inherit; text-decoration: inherit;">Publishing<wbr>Username</a>
 </span>
@@ -8985,6 +9004,14 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
     </dt>
     <dd>{{% md %}}Number of preWarmed instances.
 This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicnetworkaccess_go">
+<a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Property to allow or block all public traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishingusername_go">
 <a href="#publishingusername_go" style="color: inherit; text-decoration: inherit;">Publishing<wbr>Username</a>
@@ -9499,6 +9526,14 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
     <dd>{{% md %}}Number of preWarmed instances.
 This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="publicnetworkaccess_nodejs">
+<a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Property to allow or block all public traffic.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publishingusername_nodejs">
 <a href="#publishingusername_nodejs" style="color: inherit; text-decoration: inherit;">publishing<wbr>Username</a>
 </span>
@@ -10011,6 +10046,14 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
     </dt>
     <dd>{{% md %}}Number of preWarmed instances.
 This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="public_network_access_python">
+<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Property to allow or block all public traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishing_username_python">
 <a href="#publishing_username_python" style="color: inherit; text-decoration: inherit;">publishing_<wbr>username</a>
@@ -10535,6 +10578,14 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
     <dd>{{% md %}}Number of preWarmed instances.
 This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="publicnetworkaccess_csharp">
+<a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Property to allow or block all public traffic.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publishingusername_csharp">
 <a href="#publishingusername_csharp" style="color: inherit; text-decoration: inherit;">Publishing<wbr>Username</a>
 </span>
@@ -11055,6 +11106,14 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
     </dt>
     <dd>{{% md %}}Number of preWarmed instances.
 This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicnetworkaccess_go">
+<a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Property to allow or block all public traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishingusername_go">
 <a href="#publishingusername_go" style="color: inherit; text-decoration: inherit;">Publishing<wbr>Username</a>
@@ -11577,6 +11636,14 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
     <dd>{{% md %}}Number of preWarmed instances.
 This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="publicnetworkaccess_nodejs">
+<a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Property to allow or block all public traffic.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publishingusername_nodejs">
 <a href="#publishingusername_nodejs" style="color: inherit; text-decoration: inherit;">publishing<wbr>Username</a>
 </span>
@@ -12097,6 +12164,14 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
     </dt>
     <dd>{{% md %}}Number of preWarmed instances.
 This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="public_network_access_python">
+<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Property to allow or block all public traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishing_username_python">
 <a href="#publishing_username_python" style="color: inherit; text-decoration: inherit;">publishing_<wbr>username</a>

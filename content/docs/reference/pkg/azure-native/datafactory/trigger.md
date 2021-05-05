@@ -36,9 +36,9 @@ class MyStack : Stack
         var trigger = new AzureNative.DataFactory.Trigger("trigger", new AzureNative.DataFactory.TriggerArgs
         {
             FactoryName = "exampleFactoryName",
-            Properties = 
+            Properties = new AzureNative.DataFactory.Inputs.ScheduleTriggerArgs
             {
-                { "pipelines", 
+                Pipelines = 
                 {
                     new AzureNative.DataFactory.Inputs.TriggerPipelineReferenceArgs
                     {
@@ -55,16 +55,16 @@ class MyStack : Stack
                             Type = "PipelineReference",
                         },
                     },
-                } },
-                { "recurrence", new AzureNative.DataFactory.Inputs.ScheduleTriggerRecurrenceArgs
+                },
+                Recurrence = new AzureNative.DataFactory.Inputs.ScheduleTriggerRecurrenceArgs
                 {
                     EndTime = "2018-06-16T00:55:13.8441801Z",
                     Frequency = "Minute",
                     Interval = 4,
                     StartTime = "2018-06-16T00:39:13.8441801Z",
                     TimeZone = "UTC",
-                } },
-                { "type", "ScheduleTrigger" },
+                },
+                Type = "ScheduleTrigger",
             },
             ResourceGroupName = "exampleResourceGroup",
             TriggerName = "exampleTrigger",
@@ -81,7 +81,54 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	datafactory "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datafactory"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datafactory.NewTrigger(ctx, "trigger", &datafactory.TriggerArgs{
+			FactoryName: pulumi.String("exampleFactoryName"),
+			Properties: datafactory.ScheduleTrigger{
+				Pipelines: []datafactory.TriggerPipelineReference{
+					datafactory.TriggerPipelineReference{
+						Parameters: map[string]interface{}{
+							"OutputBlobNameList": []string{
+								"exampleoutput.csv",
+							},
+						},
+						PipelineReference: datafactory.PipelineReference{
+							ReferenceName: "examplePipeline",
+							Type:          "PipelineReference",
+						},
+					},
+				},
+				Recurrence: datafactory.ScheduleTriggerRecurrence{
+					EndTime:   "2018-06-16T00:55:13.8441801Z",
+					Frequency: "Minute",
+					Interval:  4,
+					StartTime: "2018-06-16T00:39:13.8441801Z",
+					TimeZone:  "UTC",
+				},
+				Type: "ScheduleTrigger",
+			},
+			ResourceGroupName: pulumi.String("exampleResourceGroup"),
+			TriggerName:       pulumi.String("exampleTrigger"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -95,8 +142,8 @@ import pulumi_azure_native as azure_native
 
 trigger = azure_native.datafactory.Trigger("trigger",
     factory_name="exampleFactoryName",
-    properties={
-        "pipelines": [azure_native.datafactory.TriggerPipelineReferenceArgs(
+    properties=azure_native.datafactory.ScheduleTriggerArgs(
+        pipelines=[azure_native.datafactory.TriggerPipelineReferenceArgs(
             parameters={
                 "OutputBlobNameList": ["exampleoutput.csv"],
             },
@@ -105,15 +152,15 @@ trigger = azure_native.datafactory.Trigger("trigger",
                 type="PipelineReference",
             ),
         )],
-        "recurrence": azure_native.datafactory.ScheduleTriggerRecurrenceArgs(
+        recurrence=azure_native.datafactory.ScheduleTriggerRecurrenceArgs(
             end_time="2018-06-16T00:55:13.8441801Z",
             frequency="Minute",
             interval=4,
             start_time="2018-06-16T00:39:13.8441801Z",
             time_zone="UTC",
         ),
-        "type": "ScheduleTrigger",
-    },
+        type="ScheduleTrigger",
+    ),
     resource_group_name="exampleResourceGroup",
     trigger_name="exampleTrigger")
 
@@ -179,10 +226,10 @@ class MyStack : Stack
         var trigger = new AzureNative.DataFactory.Trigger("trigger", new AzureNative.DataFactory.TriggerArgs
         {
             FactoryName = "exampleFactoryName",
-            Properties = 
+            Properties = new AzureNative.DataFactory.Inputs.ScheduleTriggerArgs
             {
-                { "description", "Example description" },
-                { "pipelines", 
+                Description = "Example description",
+                Pipelines = 
                 {
                     new AzureNative.DataFactory.Inputs.TriggerPipelineReferenceArgs
                     {
@@ -199,16 +246,16 @@ class MyStack : Stack
                             Type = "PipelineReference",
                         },
                     },
-                } },
-                { "recurrence", new AzureNative.DataFactory.Inputs.ScheduleTriggerRecurrenceArgs
+                },
+                Recurrence = new AzureNative.DataFactory.Inputs.ScheduleTriggerRecurrenceArgs
                 {
                     EndTime = "2018-06-16T00:55:14.905167Z",
                     Frequency = "Minute",
                     Interval = 4,
                     StartTime = "2018-06-16T00:39:14.905167Z",
                     TimeZone = "UTC",
-                } },
-                { "type", "ScheduleTrigger" },
+                },
+                Type = "ScheduleTrigger",
             },
             ResourceGroupName = "exampleResourceGroup",
             TriggerName = "exampleTrigger",
@@ -225,7 +272,55 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	datafactory "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datafactory"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datafactory.NewTrigger(ctx, "trigger", &datafactory.TriggerArgs{
+			FactoryName: pulumi.String("exampleFactoryName"),
+			Properties: datafactory.ScheduleTrigger{
+				Description: "Example description",
+				Pipelines: []datafactory.TriggerPipelineReference{
+					datafactory.TriggerPipelineReference{
+						Parameters: map[string]interface{}{
+							"OutputBlobNameList": []string{
+								"exampleoutput.csv",
+							},
+						},
+						PipelineReference: datafactory.PipelineReference{
+							ReferenceName: "examplePipeline",
+							Type:          "PipelineReference",
+						},
+					},
+				},
+				Recurrence: datafactory.ScheduleTriggerRecurrence{
+					EndTime:   "2018-06-16T00:55:14.905167Z",
+					Frequency: "Minute",
+					Interval:  4,
+					StartTime: "2018-06-16T00:39:14.905167Z",
+					TimeZone:  "UTC",
+				},
+				Type: "ScheduleTrigger",
+			},
+			ResourceGroupName: pulumi.String("exampleResourceGroup"),
+			TriggerName:       pulumi.String("exampleTrigger"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -239,9 +334,9 @@ import pulumi_azure_native as azure_native
 
 trigger = azure_native.datafactory.Trigger("trigger",
     factory_name="exampleFactoryName",
-    properties={
-        "description": "Example description",
-        "pipelines": [azure_native.datafactory.TriggerPipelineReferenceArgs(
+    properties=azure_native.datafactory.ScheduleTriggerArgs(
+        description="Example description",
+        pipelines=[azure_native.datafactory.TriggerPipelineReferenceArgs(
             parameters={
                 "OutputBlobNameList": ["exampleoutput.csv"],
             },
@@ -250,15 +345,15 @@ trigger = azure_native.datafactory.Trigger("trigger",
                 type="PipelineReference",
             ),
         )],
-        "recurrence": azure_native.datafactory.ScheduleTriggerRecurrenceArgs(
+        recurrence=azure_native.datafactory.ScheduleTriggerRecurrenceArgs(
             end_time="2018-06-16T00:55:14.905167Z",
             frequency="Minute",
             interval=4,
             start_time="2018-06-16T00:39:14.905167Z",
             time_zone="UTC",
         ),
-        "type": "ScheduleTrigger",
-    },
+        type="ScheduleTrigger",
+    ),
     resource_group_name="exampleResourceGroup",
     trigger_name="exampleTrigger")
 
@@ -353,25 +448,19 @@ const trigger = new azure_native.datafactory.Trigger("trigger", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TriggerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -383,25 +472,19 @@ const trigger = new azure_native.datafactory.Trigger("trigger", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TriggerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -413,33 +496,25 @@ const trigger = new azure_native.datafactory.Trigger("trigger", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TriggerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -451,25 +526,19 @@ const trigger = new azure_native.datafactory.Trigger("trigger", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TriggerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

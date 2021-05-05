@@ -37,25 +37,25 @@ class MyStack : Stack
         {
             Customize = 
             {
-                
+                new AzureNative.VirtualMachineImages.Inputs.ImageTemplateShellCustomizerArgs
                 {
-                    { "name", "Shell Customizer Example" },
-                    { "scriptUri", "https://example.com/path/to/script.sh" },
-                    { "type", "Shell" },
+                    Name = "Shell Customizer Example",
+                    ScriptUri = "https://example.com/path/to/script.sh",
+                    Type = "Shell",
                 },
             },
             Distribute = 
             {
-                
+                new AzureNative.VirtualMachineImages.Inputs.ImageTemplateManagedImageDistributorArgs
                 {
-                    { "artifactTags", 
+                    ArtifactTags = 
                     {
                         { "tagName", "value" },
-                    } },
-                    { "imageId", "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1" },
-                    { "location", "1_location" },
-                    { "runOutputName", "image_it_pir_1" },
-                    { "type", "ManagedImage" },
+                    },
+                    ImageId = "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1",
+                    Location = "1_location",
+                    RunOutputName = "image_it_pir_1",
+                    Type = "ManagedImage",
                 },
             },
             Identity = new AzureNative.VirtualMachineImages.Inputs.ImageTemplateIdentityArgs
@@ -69,10 +69,10 @@ class MyStack : Stack
             ImageTemplateName = "myImageTemplate",
             Location = "westus",
             ResourceGroupName = "myResourceGroup",
-            Source = 
+            Source = new AzureNative.VirtualMachineImages.Inputs.ImageTemplateManagedImageSourceArgs
             {
-                { "imageId", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image" },
-                { "type", "ManagedImage" },
+                ImageId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image",
+                Type = "ManagedImage",
             },
             Tags = 
             {
@@ -114,20 +114,20 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 virtual_machine_image_template = azure_native.virtualmachineimages.VirtualMachineImageTemplate("virtualMachineImageTemplate",
-    customize=[{
-        "name": "Shell Customizer Example",
-        "scriptUri": "https://example.com/path/to/script.sh",
-        "type": "Shell",
-    }],
-    distribute=[{
-        "artifactTags": {
+    customize=[azure_native.virtualmachineimages.ImageTemplateShellCustomizerArgs(
+        name="Shell Customizer Example",
+        script_uri="https://example.com/path/to/script.sh",
+        type="Shell",
+    )],
+    distribute=[azure_native.virtualmachineimages.ImageTemplateManagedImageDistributorArgs(
+        artifact_tags={
             "tagName": "value",
         },
-        "imageId": "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1",
-        "location": "1_location",
-        "runOutputName": "image_it_pir_1",
-        "type": "ManagedImage",
-    }],
+        image_id="/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1",
+        location="1_location",
+        run_output_name="image_it_pir_1",
+        type="ManagedImage",
+    )],
     identity=azure_native.virtualmachineimages.ImageTemplateIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
@@ -137,10 +137,10 @@ virtual_machine_image_template = azure_native.virtualmachineimages.VirtualMachin
     image_template_name="myImageTemplate",
     location="westus",
     resource_group_name="myResourceGroup",
-    source={
-        "imageId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image",
-        "type": "ManagedImage",
-    },
+    source=azure_native.virtualmachineimages.ImageTemplateManagedImageSourceArgs(
+        image_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image",
+        type="ManagedImage",
+    ),
     tags={
         "imagetemplate_tag1": "IT_T1",
         "imagetemplate_tag2": "IT_T2",
@@ -232,110 +232,110 @@ class MyStack : Stack
         {
             Customize = 
             {
-                
+                new AzureNative.VirtualMachineImages.Inputs.ImageTemplatePowerShellCustomizerArgs
                 {
-                    { "inline", 
+                    Inline = 
                     {
                         "Powershell command-1",
                         "Powershell command-2",
                         "Powershell command-3",
-                    } },
-                    { "name", "PowerShell (inline) Customizer Example" },
-                    { "type", "PowerShell" },
+                    },
+                    Name = "PowerShell (inline) Customizer Example",
+                    Type = "PowerShell",
                 },
-                
+                new AzureNative.VirtualMachineImages.Inputs.ImageTemplatePowerShellCustomizerArgs
                 {
-                    { "inline", 
+                    Inline = 
                     {
                         "Powershell command-1",
                         "Powershell command-2",
                         "Powershell command-3",
-                    } },
-                    { "name", "PowerShell (inline) Customizer Elevated user Example" },
-                    { "runElevated", true },
-                    { "type", "PowerShell" },
+                    },
+                    Name = "PowerShell (inline) Customizer Elevated user Example",
+                    RunElevated = true,
+                    Type = "PowerShell",
                 },
-                
+                new AzureNative.VirtualMachineImages.Inputs.ImageTemplatePowerShellCustomizerArgs
                 {
-                    { "inline", 
+                    Inline = 
                     {
                         "Powershell command-1",
                         "Powershell command-2",
                         "Powershell command-3",
-                    } },
-                    { "name", "PowerShell (inline) Customizer Elevated Local System user Example" },
-                    { "runAsSystem", true },
-                    { "runElevated", true },
-                    { "type", "PowerShell" },
+                    },
+                    Name = "PowerShell (inline) Customizer Elevated Local System user Example",
+                    RunAsSystem = true,
+                    RunElevated = true,
+                    Type = "PowerShell",
                 },
-                
+                new AzureNative.VirtualMachineImages.Inputs.ImageTemplatePowerShellCustomizerArgs
                 {
-                    { "name", "PowerShell (script) Customizer Example" },
-                    { "scriptUri", "https://example.com/path/to/script.ps1" },
-                    { "type", "PowerShell" },
-                    { "validExitCodes", 
+                    Name = "PowerShell (script) Customizer Example",
+                    ScriptUri = "https://example.com/path/to/script.ps1",
+                    Type = "PowerShell",
+                    ValidExitCodes = 
                     {
                         0,
                         1,
-                    } },
+                    },
                 },
-                
+                new AzureNative.VirtualMachineImages.Inputs.ImageTemplatePowerShellCustomizerArgs
                 {
-                    { "name", "PowerShell (script) Customizer Elevated Local System user Example" },
-                    { "runElevated", true },
-                    { "scriptUri", "https://example.com/path/to/script.ps1" },
-                    { "type", "PowerShell" },
-                    { "validExitCodes", 
+                    Name = "PowerShell (script) Customizer Elevated Local System user Example",
+                    RunElevated = true,
+                    ScriptUri = "https://example.com/path/to/script.ps1",
+                    Type = "PowerShell",
+                    ValidExitCodes = 
                     {
                         0,
                         1,
-                    } },
+                    },
                 },
-                
+                new AzureNative.VirtualMachineImages.Inputs.ImageTemplatePowerShellCustomizerArgs
                 {
-                    { "name", "PowerShell (script) Customizer Elevated Local System user Example" },
-                    { "runAsSystem", true },
-                    { "runElevated", true },
-                    { "scriptUri", "https://example.com/path/to/script.ps1" },
-                    { "type", "PowerShell" },
-                    { "validExitCodes", 
+                    Name = "PowerShell (script) Customizer Elevated Local System user Example",
+                    RunAsSystem = true,
+                    RunElevated = true,
+                    ScriptUri = "https://example.com/path/to/script.ps1",
+                    Type = "PowerShell",
+                    ValidExitCodes = 
                     {
                         0,
                         1,
-                    } },
+                    },
                 },
-                
+                new AzureNative.VirtualMachineImages.Inputs.ImageTemplateRestartCustomizerArgs
                 {
-                    { "name", "Restart Customizer Example" },
-                    { "restartCheckCommand", "powershell -command \"& {Write-Output 'restarted.'}\"" },
-                    { "restartCommand", "shutdown /f /r /t 0 /c \"packer restart\"" },
-                    { "restartTimeout", "10m" },
-                    { "type", "WindowsRestart" },
+                    Name = "Restart Customizer Example",
+                    RestartCheckCommand = "powershell -command \"& {Write-Output 'restarted.'}\"",
+                    RestartCommand = "shutdown /f /r /t 0 /c \"packer restart\"",
+                    RestartTimeout = "10m",
+                    Type = "WindowsRestart",
                 },
-                
+                new AzureNative.VirtualMachineImages.Inputs.ImageTemplateWindowsUpdateCustomizerArgs
                 {
-                    { "filters", 
+                    Filters = 
                     {
                         "$_.BrowseOnly",
-                    } },
-                    { "name", "Windows Update Customizer Example" },
-                    { "searchCriteria", "BrowseOnly=0 and IsInstalled=0" },
-                    { "type", "WindowsUpdate" },
-                    { "updateLimit", 100 },
+                    },
+                    Name = "Windows Update Customizer Example",
+                    SearchCriteria = "BrowseOnly=0 and IsInstalled=0",
+                    Type = "WindowsUpdate",
+                    UpdateLimit = 100,
                 },
             },
             Distribute = 
             {
-                
+                new AzureNative.VirtualMachineImages.Inputs.ImageTemplateManagedImageDistributorArgs
                 {
-                    { "artifactTags", 
+                    ArtifactTags = 
                     {
                         { "tagName", "value" },
-                    } },
-                    { "imageId", "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1" },
-                    { "location", "1_location" },
-                    { "runOutputName", "image_it_pir_1" },
-                    { "type", "ManagedImage" },
+                    },
+                    ImageId = "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1",
+                    Location = "1_location",
+                    RunOutputName = "image_it_pir_1",
+                    Type = "ManagedImage",
                 },
             },
             Identity = new AzureNative.VirtualMachineImages.Inputs.ImageTemplateIdentityArgs
@@ -349,10 +349,10 @@ class MyStack : Stack
             ImageTemplateName = "myImageTemplate",
             Location = "westus",
             ResourceGroupName = "myResourceGroup",
-            Source = 
+            Source = new AzureNative.VirtualMachineImages.Inputs.ImageTemplateManagedImageSourceArgs
             {
-                { "imageId", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image" },
-                { "type", "ManagedImage" },
+                ImageId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image",
+                Type = "ManagedImage",
             },
             Tags = 
             {
@@ -395,90 +395,90 @@ import pulumi_azure_native as azure_native
 
 virtual_machine_image_template = azure_native.virtualmachineimages.VirtualMachineImageTemplate("virtualMachineImageTemplate",
     customize=[
-        {
-            "inline": [
+        azure_native.virtualmachineimages.ImageTemplatePowerShellCustomizerArgs(
+            inline=[
                 "Powershell command-1",
                 "Powershell command-2",
                 "Powershell command-3",
             ],
-            "name": "PowerShell (inline) Customizer Example",
-            "type": "PowerShell",
-        },
-        {
-            "inline": [
+            name="PowerShell (inline) Customizer Example",
+            type="PowerShell",
+        ),
+        azure_native.virtualmachineimages.ImageTemplatePowerShellCustomizerArgs(
+            inline=[
                 "Powershell command-1",
                 "Powershell command-2",
                 "Powershell command-3",
             ],
-            "name": "PowerShell (inline) Customizer Elevated user Example",
-            "runElevated": True,
-            "type": "PowerShell",
-        },
-        {
-            "inline": [
+            name="PowerShell (inline) Customizer Elevated user Example",
+            run_elevated=True,
+            type="PowerShell",
+        ),
+        azure_native.virtualmachineimages.ImageTemplatePowerShellCustomizerArgs(
+            inline=[
                 "Powershell command-1",
                 "Powershell command-2",
                 "Powershell command-3",
             ],
-            "name": "PowerShell (inline) Customizer Elevated Local System user Example",
-            "runAsSystem": True,
-            "runElevated": True,
-            "type": "PowerShell",
-        },
-        {
-            "name": "PowerShell (script) Customizer Example",
-            "scriptUri": "https://example.com/path/to/script.ps1",
-            "type": "PowerShell",
-            "validExitCodes": [
+            name="PowerShell (inline) Customizer Elevated Local System user Example",
+            run_as_system=True,
+            run_elevated=True,
+            type="PowerShell",
+        ),
+        azure_native.virtualmachineimages.ImageTemplatePowerShellCustomizerArgs(
+            name="PowerShell (script) Customizer Example",
+            script_uri="https://example.com/path/to/script.ps1",
+            type="PowerShell",
+            valid_exit_codes=[
                 0,
                 1,
             ],
-        },
-        {
-            "name": "PowerShell (script) Customizer Elevated Local System user Example",
-            "runElevated": True,
-            "scriptUri": "https://example.com/path/to/script.ps1",
-            "type": "PowerShell",
-            "validExitCodes": [
+        ),
+        azure_native.virtualmachineimages.ImageTemplatePowerShellCustomizerArgs(
+            name="PowerShell (script) Customizer Elevated Local System user Example",
+            run_elevated=True,
+            script_uri="https://example.com/path/to/script.ps1",
+            type="PowerShell",
+            valid_exit_codes=[
                 0,
                 1,
             ],
-        },
-        {
-            "name": "PowerShell (script) Customizer Elevated Local System user Example",
-            "runAsSystem": True,
-            "runElevated": True,
-            "scriptUri": "https://example.com/path/to/script.ps1",
-            "type": "PowerShell",
-            "validExitCodes": [
+        ),
+        azure_native.virtualmachineimages.ImageTemplatePowerShellCustomizerArgs(
+            name="PowerShell (script) Customizer Elevated Local System user Example",
+            run_as_system=True,
+            run_elevated=True,
+            script_uri="https://example.com/path/to/script.ps1",
+            type="PowerShell",
+            valid_exit_codes=[
                 0,
                 1,
             ],
-        },
-        {
-            "name": "Restart Customizer Example",
-            "restartCheckCommand": "powershell -command \"& {Write-Output 'restarted.'}\"",
-            "restartCommand": "shutdown /f /r /t 0 /c \"packer restart\"",
-            "restartTimeout": "10m",
-            "type": "WindowsRestart",
-        },
-        {
-            "filters": ["$_.BrowseOnly"],
-            "name": "Windows Update Customizer Example",
-            "searchCriteria": "BrowseOnly=0 and IsInstalled=0",
-            "type": "WindowsUpdate",
-            "updateLimit": 100,
-        },
+        ),
+        azure_native.virtualmachineimages.ImageTemplateRestartCustomizerArgs(
+            name="Restart Customizer Example",
+            restart_check_command="powershell -command \"& {Write-Output 'restarted.'}\"",
+            restart_command="shutdown /f /r /t 0 /c \"packer restart\"",
+            restart_timeout="10m",
+            type="WindowsRestart",
+        ),
+        azure_native.virtualmachineimages.ImageTemplateWindowsUpdateCustomizerArgs(
+            filters=["$_.BrowseOnly"],
+            name="Windows Update Customizer Example",
+            search_criteria="BrowseOnly=0 and IsInstalled=0",
+            type="WindowsUpdate",
+            update_limit=100,
+        ),
     ],
-    distribute=[{
-        "artifactTags": {
+    distribute=[azure_native.virtualmachineimages.ImageTemplateManagedImageDistributorArgs(
+        artifact_tags={
             "tagName": "value",
         },
-        "imageId": "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1",
-        "location": "1_location",
-        "runOutputName": "image_it_pir_1",
-        "type": "ManagedImage",
-    }],
+        image_id="/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1",
+        location="1_location",
+        run_output_name="image_it_pir_1",
+        type="ManagedImage",
+    )],
     identity=azure_native.virtualmachineimages.ImageTemplateIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
@@ -488,10 +488,10 @@ virtual_machine_image_template = azure_native.virtualmachineimages.VirtualMachin
     image_template_name="myImageTemplate",
     location="westus",
     resource_group_name="myResourceGroup",
-    source={
-        "imageId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image",
-        "type": "ManagedImage",
-    },
+    source=azure_native.virtualmachineimages.ImageTemplateManagedImageSourceArgs(
+        image_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image",
+        type="ManagedImage",
+    ),
     tags={
         "imagetemplate_tag1": "IT_T1",
         "imagetemplate_tag2": "IT_T2",
@@ -687,25 +687,19 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VirtualMachineImageTemplateArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -717,25 +711,19 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VirtualMachineImageTemplateArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -747,33 +735,25 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VirtualMachineImageTemplateArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -785,25 +765,19 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VirtualMachineImageTemplateArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
