@@ -1,0 +1,13 @@
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" height="1000" width="1000"
+viewbox="0 -50 1000 1000">
+  <defs>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="20" result="blur"/>
+      <feOffset in="blur" dx="0" dy="0.5" result="offsetBlur"/>
+      <feFlood flood-color="white" flood-opacity="1" result="offsetColor"/>
+      <feComposite in="offsetColor" in2="offsetBlur" operator="in" result="offsetBlur"/>
+    </filter>
+  </defs>
+  <polygon filter="url(#shadow)" points="80,0 200,0 140,150 170,150 50,400 100,200 50,200" />
+  <polygon points="80,0 200,0 140,150 170,150 50,400 100,200 50,200" style="fill:#fce5aa" />
+</svg>
