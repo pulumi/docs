@@ -21,6 +21,6 @@ Explore the resources and functions of the kubernetes.kustomize module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
+	<dd>3.1.1</dd>
 </dl>
 
