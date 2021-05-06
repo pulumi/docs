@@ -57,10 +57,13 @@ main:
     datetime: ""
     # Description of the webinar.
     description: |
-        In this workshop, we’ll examine how Pulumi interacts with Kubernetes, and show real-world examples of managing Amazon EKS clusters. We’ll focus on building a user-friendly Kubernetes platform, installing software that makes Kubernetes easy to use for application developers.
 
-        Attendees will be guided through the process of provisioning an Amazon EKS cluster and installing platform friendly software such as cert-manager and external-dns.
+        In this workshop, we’ll examine how Pulumi works with Kubernetes, and show real-world examples of managing Amazon EKS clusters.
 
+        We'll guide you through your first deployment to Kubernetes with Pulumi, before showing you the power of Pulumi's reusable components to turbo-charge your platform deployment.
+
+        Finally, we’ll examine Pulumi’s automation API and leverage it’s powerful capabilities to expose your application deployment platform into your users' hands without asking them to write a single line of code!
+ 
         **Target Audience**
 
         Active Pulumi users, and users considering or actively building a Kubernetes platform
