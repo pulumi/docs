@@ -183,4 +183,15 @@ meta_desc: A list of different environment variables the Pulumi CLI supports.
         </p>
         <pre><code class="text-xs">PULUMI_CONSOLE_DOMAIN="yourhost.domain.com"</code></pre>
     </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_AUTOMATION_API_SKIP_VERSION_CHECK
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Skips the minimum CLI version check used by Automation API to ensure compatibility. We do not recommend using this variable as it may result in unexpected behavior or confusing error messages from Automation API.
+        </p>
+        <pre><code class="text-xs">PULUMI_AUTOMATION_API_SKIP_VERSION_CHECK=true</code></pre>
+    </dd>
 </dl>
