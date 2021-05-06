@@ -11,7 +11,7 @@ aliases:
 
 <div class="note note-info" role="alert">
     <p>
-        Audit Logs are only available with the <strong>Pulumi Enterprise Edition</strong>.
+        Audit Logs are only available in <strong>Pulumi Enterprise</strong>.
     </p>
 </div>
 

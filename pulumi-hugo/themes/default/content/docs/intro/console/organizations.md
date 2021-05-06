@@ -110,9 +110,8 @@ to learn more.
 
 ## SAML Single Sign-on (SSO)
 
-The Pulumi Enterprise edition provides more options for identity and access, including
-support for
-any SAML 2.0-based identity provider.
+Pulumi Enterprise provides more options for identity and access, including
+support for any SAML 2.0-based identity provider.
 
 [Learn more]({{< relref "/docs/guides/saml" >}}) about configuring a SAML-based
 organization on Pulumi. Or refer to one

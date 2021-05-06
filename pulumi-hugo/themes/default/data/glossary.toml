@@ -125,7 +125,7 @@ link = "/docs/intro/concepts/function-serialization"
 
 [[entries]]
 term = "SAML"
-description = "Security Assertion Markup Language. You may use a SAML 2.0-compatible identity provider in order to sign in to the Pulumi Console via single sign-on. The SAML SSO feature is only available on the Pulumi Enterprise Edition."
+description = "Security Assertion Markup Language. You may use a SAML 2.0-compatible identity provider in order to sign in to the Pulumi Console via single sign-on. The SAML SSO feature is only available in Pulumi Enterprise."
 link = "https://en.wikipedia.org/wiki/SAML_2.0"
 
 [[entries]]

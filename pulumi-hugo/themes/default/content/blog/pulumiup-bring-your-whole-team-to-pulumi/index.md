@@ -18,7 +18,7 @@ Pulumi's Cloud Engineering Platform helps teams of all sizes deliver and manage 
 Most teams larger than a few people define their team members, and the groups they’re a part of, using an Identity Provider (IdP) like [Okta](https://www.okta.com/products/single-sign-on/), Microsoft’s [Azure Active Directory](https://azure.microsoft.com/en-us/services/active-directory/), or [Google Cloud Identity & Access Management](https://cloud.google.com/iam/). Defining groups allows you to set policies based on logical groupings of teammates, such as giving different capabilities to individual developers versus infrastructure administrators. Pulumi works seamlessly with these IdPs (and many more) by providing [Single Sign-On with SAML]({{< ref "/docs/guides/saml" >}}) and [user and group synchronization via SCIM 2.0]({{< ref "/docs/guides/scim" >}}). When you use both SAML SSO and SCIM, you can manage the users who should have access to Pulumi and the [Pulumi teams]({{< ref "/docs/intro/console/teams" >}}) they belong to entirely from your IdP. Managing users and teams this way helps keep your organization more secure by ensuring a single point of control over the users who have access to manage and update your infrastructure. It also saves you time by centralizing all of your identity and access management workflows in your identity provider.
 
 {{% notes type="info" %}}
-SAML SSO and SCIM support are available in the Pulumi Enterprise offering. See [pricing]({{<relref "/pricing">}}) for more details.
+SAML SSO and SCIM support are only available in **Pulumi Enterprise**. See [pricing]({{<relref "/pricing">}}) for more details.
 {{% /notes %}}
 
 ## SAML SSO

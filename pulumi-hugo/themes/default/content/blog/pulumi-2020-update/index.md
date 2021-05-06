@@ -57,7 +57,7 @@ In addition to the major areas above, we've continued to ship many other improve
 
 * [Many quality-of-life improvements in the Pulumi SaaS Console]({{< relref "/blog/pulumi-service-improvements_02-2020" >}}), including stack tagging, grouping, and sorting; deep linking into CI/CD systems; infrastructure configuration pretty-printing; reverse stack membership lookups; performance improvements; and more.
 
-* [Full audit logs for Pulumi Enterprise Edition]({{< relref "/blog/auditing-your-organizations-infrastructure-as-code-activity" >}}) enable you to go back in time and figure out who, when, and why something about your organization, project, or stack changed.
+* [Full audit logs for Pulumi Enterprise]({{< relref "/blog/auditing-your-organizations-infrastructure-as-code-activity" >}}) enable you to go back in time and figure out who, when, and why something about your organization, project, or stack changed.
 
 * [Pulumi runtime mocking for infrastructure testing](https://github.com/pulumi/pulumi/pull/3738), developed in partnership with several of our customers leading the charge on "test-driven infrastructure." Look for more end-to-end docs and guidance soon!
 

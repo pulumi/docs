@@ -4,7 +4,7 @@ meta_desc: "This is a guide on how to audit your organization's infrastructure a
 ---
 
 {{< notes type="info" >}}
-Audit Logs are only available with Pulumi Enterprise Edition.
+Audit Logs are only available in Pulumi Enterprise.
 {{< /notes >}}
 
 ## Overview
