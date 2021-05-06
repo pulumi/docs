@@ -33,7 +33,7 @@ Once you’ve validated the behavior of your policies, an organization administr
 
     The Policy Pack version is specified in the `package.json` file for TypeScript/JavaScript (Node.js) packs and in the `PulumiPolicy.yaml` file for Python packs. A version can only be used one time and once published the version can never be used by that Policy Pack again.
 
-<!-- markdownlint-disable ul -->
+    <!-- markdownlint-disable ul -->
 1. You can enable this Policy Pack to your organization’s default Policy Group by running:
 
     ```sh
