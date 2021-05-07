@@ -614,25 +614,19 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EventTargetArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -644,25 +638,19 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EventTargetArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -674,33 +662,25 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EventTargetArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -712,25 +692,19 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EventTargetArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -780,7 +754,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+    <dd>{{% md %}}Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecstarget_csharp">
@@ -919,7 +893,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+    <dd>{{% md %}}Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecstarget_go">
@@ -1058,7 +1032,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+    <dd>{{% md %}}Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecstarget_nodejs">
@@ -1197,7 +1171,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+    <dd>{{% md %}}Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecs_target_python">
@@ -1522,7 +1496,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+    <dd>{{% md %}}Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecstarget_csharp">
@@ -1661,7 +1635,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+    <dd>{{% md %}}Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecstarget_go">
@@ -1800,7 +1774,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+    <dd>{{% md %}}Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecstarget_nodejs">
@@ -1939,7 +1913,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+    <dd>{{% md %}}Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecs_target_python">

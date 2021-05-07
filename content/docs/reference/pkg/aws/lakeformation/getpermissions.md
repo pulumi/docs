@@ -1199,6 +1199,15 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcard_csharp">
+<a href="#wildcard_csharp" style="color: inherit; text-decoration: inherit;">Wildcard</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1248,6 +1257,15 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcard_go">
+<a href="#wildcard_go" style="color: inherit; text-decoration: inherit;">Wildcard</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1297,6 +1315,15 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcard_nodejs">
+<a href="#wildcard_nodejs" style="color: inherit; text-decoration: inherit;">wildcard</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1346,6 +1373,15 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcard_python">
+<a href="#wildcard_python" style="color: inherit; text-decoration: inherit;">wildcard</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -216,7 +216,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of Transfer Server
+    <dd>{{% md %}}Amazon Resource Name (ARN) of Transfer Server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="certificate_csharp">
+<a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of any certificate.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_csharp">
@@ -225,7 +234,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`)
+    <dd>{{% md %}}The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`).
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="endpointtype_csharp">
+<a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of endpoint that the server is connected to.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -264,6 +282,24 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="protocols_csharp">
+<a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The file transfer protocol or protocols over which your file transfer protocol client can connect to your server's endpoint.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="securitypolicyname_csharp">
+<a href="#securitypolicyname_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the security policy that is attached to the server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="serverid_csharp">
 <a href="#serverid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
 </span>
@@ -291,7 +327,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of Transfer Server
+    <dd>{{% md %}}Amazon Resource Name (ARN) of Transfer Server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="certificate_go">
+<a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of any certificate.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_go">
@@ -300,7 +345,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`)
+    <dd>{{% md %}}The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`).
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="endpointtype_go">
+<a href="#endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of endpoint that the server is connected to.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -339,6 +393,24 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="protocols_go">
+<a href="#protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The file transfer protocol or protocols over which your file transfer protocol client can connect to your server's endpoint.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="securitypolicyname_go">
+<a href="#securitypolicyname_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the security policy that is attached to the server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="serverid_go">
 <a href="#serverid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
 </span>
@@ -366,7 +438,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of Transfer Server
+    <dd>{{% md %}}Amazon Resource Name (ARN) of Transfer Server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="certificate_nodejs">
+<a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of any certificate.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_nodejs">
@@ -375,7 +456,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`)
+    <dd>{{% md %}}The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`).
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="endpointtype_nodejs">
+<a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of endpoint that the server is connected to.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -414,6 +504,24 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="protocols_nodejs">
+<a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The file transfer protocol or protocols over which your file transfer protocol client can connect to your server's endpoint.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="securitypolicyname_nodejs">
+<a href="#securitypolicyname_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the security policy that is attached to the server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="serverid_nodejs">
 <a href="#serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
 </span>
@@ -441,7 +549,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of Transfer Server
+    <dd>{{% md %}}Amazon Resource Name (ARN) of Transfer Server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="certificate_python">
+<a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of any certificate.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_python">
@@ -450,7 +567,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`)
+    <dd>{{% md %}}The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`).
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="endpoint_type_python">
+<a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of endpoint that the server is connected to.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -487,6 +613,24 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="protocols_python">
+<a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The file transfer protocol or protocols over which your file transfer protocol client can connect to your server's endpoint.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="security_policy_name_python">
+<a href="#security_policy_name_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the security policy that is attached to the server.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="server_id_python">

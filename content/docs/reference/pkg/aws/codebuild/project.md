@@ -651,6 +651,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[ProjectEnvironmentArgs]</span> = None<span class="p">,</span>
+            <span class="nx">file_system_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProjectFileSystemLocationArgs]]</span> = None<span class="p">,</span>
             <span class="nx">logs_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLogsConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">queued_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -684,25 +685,19 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProjectArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -714,25 +709,19 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProjectArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -744,33 +733,25 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProjectArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -782,25 +763,19 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProjectArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -914,6 +889,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filesystemlocations_csharp">
+<a href="#filesystemlocations_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfilesystemlocation">List&lt;Project<wbr>File<wbr>System<wbr>Location<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A set of file system locations to to mount inside the build. File system locations are documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logsconfig_csharp">
@@ -1100,6 +1084,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="filesystemlocations_go">
+<a href="#filesystemlocations_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfilesystemlocation">[]Project<wbr>File<wbr>System<wbr>Location</a></span>
+    </dt>
+    <dd>{{% md %}}A set of file system locations to to mount inside the build. File system locations are documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="logsconfig_go">
 <a href="#logsconfig_go" style="color: inherit; text-decoration: inherit;">Logs<wbr>Config</a>
 </span>
@@ -1284,6 +1277,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="filesystemlocations_nodejs">
+<a href="#filesystemlocations_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfilesystemlocation">Project<wbr>File<wbr>System<wbr>Location<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A set of file system locations to to mount inside the build. File system locations are documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="logsconfig_nodejs">
 <a href="#logsconfig_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>Config</a>
 </span>
@@ -1466,6 +1468,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="file_system_locations_python">
+<a href="#file_system_locations_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfilesystemlocation">Sequence[Project<wbr>File<wbr>System<wbr>Location<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A set of file system locations to to mount inside the build. File system locations are documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logs_config_python">
@@ -1704,6 +1715,7 @@ Get an existing Project resource's state with the given name, ID, and optional e
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[ProjectEnvironmentArgs]</span> = None<span class="p">,</span>
+        <span class="nx">file_system_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProjectFileSystemLocationArgs]]</span> = None<span class="p">,</span>
         <span class="nx">logs_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLogsConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">queued_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -1926,6 +1938,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_filesystemlocations_csharp">
+<a href="#state_filesystemlocations_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfilesystemlocation">List&lt;Project<wbr>File<wbr>System<wbr>Location<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A set of file system locations to to mount inside the build. File system locations are documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_logsconfig_csharp">
 <a href="#state_logsconfig_csharp" style="color: inherit; text-decoration: inherit;">Logs<wbr>Config</a>
 </span>
@@ -2126,6 +2147,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_filesystemlocations_go">
+<a href="#state_filesystemlocations_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfilesystemlocation">[]Project<wbr>File<wbr>System<wbr>Location</a></span>
+    </dt>
+    <dd>{{% md %}}A set of file system locations to to mount inside the build. File system locations are documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logsconfig_go">
@@ -2330,6 +2360,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_filesystemlocations_nodejs">
+<a href="#state_filesystemlocations_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfilesystemlocation">Project<wbr>File<wbr>System<wbr>Location<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A set of file system locations to to mount inside the build. File system locations are documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_logsconfig_nodejs">
 <a href="#state_logsconfig_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>Config</a>
 </span>
@@ -2530,6 +2569,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_file_system_locations_python">
+<a href="#state_file_system_locations_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfilesystemlocation">Sequence[Project<wbr>File<wbr>System<wbr>Location<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A set of file system locations to to mount inside the build. File system locations are documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logs_config_python">
@@ -3880,6 +3928,204 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service that created the credentials to access a private Docker registry. Valid value: `SECRETS_MANAGER` (AWS Secrets Manager).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="projectfilesystemlocation">Project<wbr>File<wbr>System<wbr>Location</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identifier_csharp">
+<a href="#identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name used to access a file system created by Amazon EFS. CodeBuild creates an environment variable by appending the identifier in all capital letters to CODEBUILD\_. For example, if you specify my-efs for identifier, a new environment variable is create named CODEBUILD_MY-EFS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string that specifies the location of the file system created by Amazon EFS. Its format is `efs-dns-name:/directory-path`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mountoptions_csharp">
+<a href="#mountoptions_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mount options for a file system created by AWS EFS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mountpoint_csharp">
+<a href="#mountpoint_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location in the container where you mount the file system.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identifier_go">
+<a href="#identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name used to access a file system created by Amazon EFS. CodeBuild creates an environment variable by appending the identifier in all capital letters to CODEBUILD\_. For example, if you specify my-efs for identifier, a new environment variable is create named CODEBUILD_MY-EFS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string that specifies the location of the file system created by Amazon EFS. Its format is `efs-dns-name:/directory-path`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mountoptions_go">
+<a href="#mountoptions_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mount options for a file system created by AWS EFS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mountpoint_go">
+<a href="#mountpoint_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location in the container where you mount the file system.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identifier_nodejs">
+<a href="#identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name used to access a file system created by Amazon EFS. CodeBuild creates an environment variable by appending the identifier in all capital letters to CODEBUILD\_. For example, if you specify my-efs for identifier, a new environment variable is create named CODEBUILD_MY-EFS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string that specifies the location of the file system created by Amazon EFS. Its format is `efs-dns-name:/directory-path`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mountoptions_nodejs">
+<a href="#mountoptions_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mount options for a file system created by AWS EFS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mountpoint_nodejs">
+<a href="#mountpoint_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location in the container where you mount the file system.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identifier_python">
+<a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name used to access a file system created by Amazon EFS. CodeBuild creates an environment variable by appending the identifier in all capital letters to CODEBUILD\_. For example, if you specify my-efs for identifier, a new environment variable is create named CODEBUILD_MY-EFS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A string that specifies the location of the file system created by Amazon EFS. Its format is `efs-dns-name:/directory-path`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The mount options for a file system created by AWS EFS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mount_point_python">
+<a href="#mount_point_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location in the container where you mount the file system.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
