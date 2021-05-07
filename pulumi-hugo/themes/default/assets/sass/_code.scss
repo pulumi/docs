@@ -4,6 +4,12 @@ code {
     @apply bg-gray-100 rounded py-1 px-2 text-sm break-words;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    code {
+        font-size: 0.9em;
+    }
+}
+
 pre, .code-max-h {
     @apply rounded my-4;
 }
