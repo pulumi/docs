@@ -42,7 +42,7 @@ Select one of the following options to deploy a simple application in your cloud
 
 Or, watch how to do it in this video walkthrough:
 
-<div class="rounded-xl shadow-2xl w-3/4 mx-auto" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
+<div class="rounded-md shadow border border-gray-300 w-3/4" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
     <iframe
         src="//www.youtube.com/embed/6f8KF6UGN7g?rel=0"
         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
