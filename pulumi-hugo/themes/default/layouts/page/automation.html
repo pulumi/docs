@@ -1,0 +1,196 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" "Automation API") }}
+{{ end }}
+
+{{ define "main" }}
+    <section id="overview" class="container mx-auto text-center my-16">
+        <div class="lg:flex">
+            <div class="lg:w-1/2 px-16">
+                <h3>What if infrastructure as code was just a library?</h3>
+                <p>
+                    Build custom cloud tools, frameworks, self-serve portals, and more,
+                    right from your favorite programming language.
+                </p>
+                <div class="lg:flex lg:items-center lg:justify-center my-16">
+                    <div class="my-8 mx-1">
+                        <a class="btn-primary" href="{{ relref . "/docs/guides/automation-api" }}">Try Automation API</a>
+                    </div>
+                    <div class="my-8 mx-1">
+                        <a class="btn-secondary" href="{{ relref . "/contact.md" }}">Get a Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:w-1/2">
+                <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                    <iframe src="//www.youtube.com/embed/kFHb8f2fk9k?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen="" title="Introduction to Pulumi: Modern Infrastructure as Code"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <img class="w-full max-w-4xl mx-auto my-16" src="/images/docs/reference/automation-api.png" alt="Pulumi Automation API architecture">
+    </section>
+
+    <section id="automation-features" class="relative mt-12">
+        <div class="shape-background product-features-section">
+            <div class="shape-container">
+                <div class="circle-left"></div>
+                <div class="circle-right"></div>
+            </div>
+        </div>
+
+        <div class="container mx-auto text-center">
+            <h2>Scenarios</h2>
+
+            <div class="flex flex-wrap mt-16 items-center justify-center">
+
+                    <div class="w-full lg:w-1/2 p-2 my-8">
+                        <div class="card text-center py-16 px-8 relative bg-white">
+                            {{ partial "color-icon.html" (dict "icon" "clouds" "icon_color" "yellow") }}
+                            <h4>Deliver Your Cloud SaaS Product</h4>
+                            <p class="mt-6 mb-16">
+                                Ship innovative new products that uses the cloud in new ways, deeply embedded
+                                within a larger system. Eliminate clumsy interfaces between application and
+                                infrastructure code with rich programmable libraries for any cloud resource.
+                            </p>
+
+                            <div class="w-full flex flex-wrap justify-center items-center">
+                                <div class="w-full md:w-1/3 my-2 md:my-0 px-6 sm:px-32 md:px-4">
+                                    <a href="{{ relref . "/case-studies/snowflake" }}" class="link">
+                                        {{ partial "customer-logo.html" (dict "logo" "snowflake") }}
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-cta-btn">
+                                <a href="{{ relref . "/case-studies/snowflake" }}" class="btn-primary hidden md:inline-block">Learn How Snowflake Did It</a>
+                                <a href="{{ relref . "/case-studies/snowflake" }}" class="btn-primary md:hidden">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-1/2 p-2 my-8">
+                        <div class="card text-center py-16 px-8 relative bg-white">
+                            {{ partial "color-icon.html" (dict "icon" "rocketship" "icon_color" "salmon") }}
+                            <h4>Build Self-Serve Portals</h4>
+                            <p class="mt-6 mb-16">
+                                Build internal platforms that provision and manage cloud resources
+                                behind the scenes with the full power of modern infrastructure as code.
+                                Empower developers to be self-serve, knowing that standard patterns
+                                and practices are behind used consistently across the team.
+                            </p>
+
+                            <div class="w-full flex flex-wrap justify-center items-center">
+                                <div class="w-full md:w-1/3 my-2 md:my-0 px-6 sm:px-32 md:px-4">
+                                    <a href="{{ relref . "/case-studies/snowflake" }}" class="link">
+                                        {{ partial "customer-logo.html" (dict "logo" "mercedes-benz") }}
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-cta-btn">
+                                <a href="{{ relref . "/case-studies/mercedes-benz" }}" class="btn-primary hidden md:inline-block">Learn How Mercedes-Benz Did It</a>
+                                <a href="{{ relref . "/case-studies/mercedes-benz" }}" class="btn-primary md:hidden">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-1/2 p-2 my-8">
+                        <div class="card text-center py-16 px-8 relative bg-white">
+                            {{ partial "color-icon.html" (dict "icon" "rocketship" "icon_color" "salmon") }}
+                            <h4>Create Custom Tools and Frameworks</h4>
+                            <p class="mt-6 mb-16">
+                                Package up common patterns and practices to create higher-level cloud
+                                tools and frameworks for developers. Create purpose-built CLIs that abstract
+                                away complexity so you can delight your users in their journey to the cloud.
+                            </p>
+
+                            <div class="w-full flex flex-wrap justify-center items-center">
+                                <div class="w-full md:w-1/3 my-2 md:my-0 px-6 sm:px-32 md:px-4">
+                                    {{ partial "customer-logo.html" (dict "logo" "webiny") }}
+                                </div>
+                            </div>
+                            <div class="card-cta-btn">
+                                <a href="{{ relref . "/docs/guides/automation-api" }}" class="btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="px-4">
+        <div class="container mx-auto">
+            <div class="md:flex mx-auto max-w-5xl mb-8">
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "clouds" "icon_color" "blue") }}
+                        <h5>Your Cloud</h5>
+                        <p>
+                            Program the full surface area of thousands of cloud resource types in public clouds
+                            including AWS, Azure, Google Cloud, Kubernetes, and many others.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "code" "icon_color" "yellow") }}
+                        <h5>Your Language</h5>
+                        <p>
+                            Embed infrastructure as code capabilities into standard programs and libraries,
+                            including Node.js (JavaScript, TypeScript), Python, Go, and .NET (C#, F#).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="md:w-1/3 p-4">
+                    <div class="text-center p-6 h-full">
+                        {{ partial "color-icon.html" (dict "icon" "rocketship" "icon_color" "salmon") }}
+                        <h5>Your Way</h5>
+                        <p>
+                            Deliver powerful new cloud capabilities any way you want &mdash; behind a UI,
+                            REST API, internal PaaS, custom library of your own &mdash; the sky's the limit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="case-study" class="container mx-auto mb-24">
+        <div class="text-center">
+            <div class="w-full lg:w-1/2 lg:mx-auto p-6">
+                <div class="flex flex-col card p-6 bg-white relative">
+                    <p class="text-left mt-0 italic text-black">
+                        Pulumi improved our time-to-market by removing cloud infrastructure as a roadblock.
+                        Our developers rely on Pulumi to build modern cloud applications, including the
+                        underlying infrastructure, using programming languages they understand. This has
+                        resulted in faster software delivery, closer collaboration and higher-quality
+                        deployments. Every developer is now empowered to move faster and spend more time on
+                        developing things that matter to our customers.
+                    </p>
+                    <div class="flex flex-grow items-end">
+                        <div class="w-2/3 text-left">
+                            <p class="text-black mb-0">Keith Redmond</p>
+                            <p class="mt-0">VP of SaaS Engineering</p>
+                        </div>
+                        <div class="w-1/3 my-4">
+                            {{ partial "customer-logo.html" (dict "logo" "fenergo") }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto my-12 md:my-24 p-6 lg:p-0">
+        <div class="w-full bg-violet-600 rounded shadow p-16 pt-24 text-center">
+            <h2 class="text-white">Get started today</h2>
+            <p class="text-white">
+                Pulumi is open source and free to get started. Deploy your first stack today.
+            </p>
+            <div class="mt-16">
+                <a class="btn-secondary" href="{{ relref . "/docs/guides/automation-api/getting-started-automation-api" }}">Get Started</a>
+            </div>
+        </div>
+    </section>
+{{ end }}
