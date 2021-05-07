@@ -14,8 +14,10 @@ organization.
 
 ## Organization Membership
 
-> This only applies to newer organizations on the per-member subscription plan.
-> Organizations billed per stack have slightly different rules regarding membership.
+{{% notes "info" %}}
+This only applies to organizations on the per-member subscription plan.
+Organizations billed per stack have slightly different rules regarding membership.
+{{% /notes %}}
 
 To become a member of a Pulumi organization, you must be invited by an existing Pulumi
 organization administrator, or you must submit a request to the administrator for approval.

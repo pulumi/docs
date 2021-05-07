@@ -10,7 +10,10 @@ aliases:
 - /docs/intro/console/extensions/ci-cd-integration-assistant/
 ---
 
-The CI/CD integration assistant helps you integrate Pulumi into CI/CD systems for automatically deploying stacks.
+{{% notes "info" %}}
+The CI/CD integration assistant helps you integrate Pulumi into CI/CD systems for automatically deploying stacks and is only available
+on [Organizations]({{< relref "/docs/intro/console/organizations" >}}), not personal accounts.
+{{% /notes %}}
 
 <!--more-->
 
@@ -57,8 +60,10 @@ Services such as Atlassian Bitbucket, GitHub, GitLab offer both a version contro
 
 This might be a convenient option if your team wishes to keep everything related to your Pulumi project on a single service.
 
-> If your identity isn't tied to a VCS service, like SAML or Email, you will still be able to get a customized CI/CD
-> workflow for your stack.
+{{% notes "info" %}}
+If your identity isn't tied to a VCS service (for example, if you're using SAML or email), you will still be able to get a customized CI/CD
+workflow for your stack.
+{{% /notes %}}
 
 After you choose an identity, the wizard will provide you with a quick link
 to create a new repository in the target service as well as the instructions for
@@ -100,7 +105,9 @@ the correct stack configuration.
 
 ![Add Workflow](/images/docs/reference/console/add-workflow.png)
 
-> Be sure to commit the new workflow file to a separate branch and not directly to your primary branch. This will create a new pull request for you.
+{{% notes "info" %}}
+Be sure to commit the new workflow file to a separate branch and not directly to your primary branch. This will create a new pull request for you.
+{{% /notes %}}
 
 The workflow configuration provided by the wizard is configured to run a `pulumi preview` for pull request builds.
 Pull request builds help you catch problems _before_ the changes are merged -- a very important consideration for infrastructure
@@ -113,7 +120,9 @@ that will run the `pulumi preview` command. Select the **Next** button to valida
 
 Congratulations on configuring a version control system and an automated pipeline for your stack! 🎉
 
-> If your pull request build failed, use the [CI/CD troubleshooting guide]({{< relref "/docs/guides/continuous-delivery/troubleshooting-guide" >}}) to diagnose the issue.
+{{% notes "info" %}}
+If your pull request build failed, use the [CI/CD troubleshooting guide]({{< relref "/docs/guides/continuous-delivery/troubleshooting-guide" >}}) to diagnose the issue.
+{{% /notes %}}
 
 ## Skip the line and get the workflow directly
 
@@ -121,7 +130,9 @@ If you want to access the workflow for a specific CI/CD service and configure VC
 you can do that by simply selecting a service from the drop-down to get started. You will
 still get a workflow template that is customized to your stack.
 
-> This option is more suitable for teams that want to use different services for their VCS repo and CI/CD needs. For example, you want
-> to be able to use Azure Pipelines with a GitHub repository and just want the workflow template for Azure Pipelines.
+{{% notes "info" %}}
+This option is more suitable for teams that want to use different services for their VCS repo and CI/CD needs. For example, you want
+to be able to use Azure Pipelines with a GitHub repository and just want the workflow template for Azure Pipelines.
+{{% /notes %}}
 
 ![Get Workflow](/images/docs/reference/console/get-workflow.png)

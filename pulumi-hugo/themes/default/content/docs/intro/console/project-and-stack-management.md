@@ -7,7 +7,9 @@ menu:
     weight: 4
 ---
 
-> While you can create projects within the individual organization created for your account, instructions in this document apply to members of an organization with sufficient [stack permissions]({{< relref "stack-permissions" >}}).
+{{% notes "info" %}}
+While you can create projects within an individual account, instructions in this document apply to members of an organization with sufficient [stack permissions]({{< relref "/docs/intro/console/stack-permissions" >}}).
+{{% /notes %}}
 
 The Pulumi Console automatically manages deployment state and gives you a comprehensive view of your projects and stacks. In your browser, navigate to [app.pulumi.com](https://app.pulumi.com). Once signed in, you can:
 

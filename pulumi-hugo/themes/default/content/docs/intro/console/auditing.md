@@ -8,12 +8,10 @@ menu:
 aliases:
 - /docs/intro/console/collaboration/auditing/
 ---
-
-<div class="note note-info" role="alert">
-    <p>
-        Audit Logs are only available in <strong>Pulumi Enterprise</strong>.
-    </p>
-</div>
+{{% notes "info" %}}
+Audit Logs are only available to organizations using Pulumi Enterprise.
+To learn more about our plans, visit our [pricing page]({{< relref "/pricing" >}}).
+{{% /notes %}}
 
 ## Overview
 
