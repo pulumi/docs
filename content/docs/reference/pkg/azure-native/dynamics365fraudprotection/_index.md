@@ -26,6 +26,6 @@ Explore the resources and functions of the azure-native.dynamics365fraudprotecti
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.4.0</dd>
+	<dd>1.5.0</dd>
 </dl>
 
