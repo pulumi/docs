@@ -46,14 +46,19 @@ Creates a new bucket.
            <span class="nx">metageneration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[_storage_v1.BucketOwnerArgs]</span> = None<span class="p">,</span>
+           <span class="nx">predefined_acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">predefined_default_object_acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">project_number</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">projection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">provisional_user_project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[_storage_v1.BucketRetentionPolicyArgs]</span> = None<span class="p">,</span>
            <span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">time_created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">user_project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[_storage_v1.BucketVersioningArgs]</span> = None<span class="p">,</span>
            <span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[_storage_v1.BucketWebsiteArgs]</span> = None<span class="p">,</span>
            <span class="nx">zone_affinity</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
@@ -79,25 +84,19 @@ Creates a new bucket.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">BucketArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -109,25 +108,19 @@ Creates a new bucket.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">BucketArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -139,33 +132,25 @@ Creates a new bucket.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">BucketArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -177,25 +162,19 @@ Creates a new bucket.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">BucketArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -372,6 +351,22 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The owner of the bucket. This is always the project team's owner group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="predefinedacl_csharp">
+<a href="#predefinedacl_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefineddefaultobjectacl_csharp">
+<a href="#predefineddefaultobjectacl_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Default<wbr>Object<wbr>Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="projectnumber_csharp">
 <a href="#projectnumber_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
 </span>
@@ -379,6 +374,22 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project number of the project the bucket belongs to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projection_csharp">
+<a href="#projection_csharp" style="color: inherit; text-decoration: inherit;">Projection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisionaluserproject_csharp">
+<a href="#provisionaluserproject_csharp" style="color: inherit; text-decoration: inherit;">Provisional<wbr>User<wbr>Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_csharp">
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
@@ -427,6 +438,14 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The modification time of the bucket in RFC 3339 format.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userproject_csharp">
+<a href="#userproject_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioning_csharp">
 <a href="#versioning_csharp" style="color: inherit; text-decoration: inherit;">Versioning</a>
@@ -616,6 +635,22 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The owner of the bucket. This is always the project team's owner group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="predefinedacl_go">
+<a href="#predefinedacl_go" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefineddefaultobjectacl_go">
+<a href="#predefineddefaultobjectacl_go" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Default<wbr>Object<wbr>Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="projectnumber_go">
 <a href="#projectnumber_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
 </span>
@@ -623,6 +658,22 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project number of the project the bucket belongs to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projection_go">
+<a href="#projection_go" style="color: inherit; text-decoration: inherit;">Projection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisionaluserproject_go">
+<a href="#provisionaluserproject_go" style="color: inherit; text-decoration: inherit;">Provisional<wbr>User<wbr>Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_go">
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
@@ -671,6 +722,14 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The modification time of the bucket in RFC 3339 format.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userproject_go">
+<a href="#userproject_go" style="color: inherit; text-decoration: inherit;">User<wbr>Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioning_go">
 <a href="#versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
@@ -860,6 +919,22 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The owner of the bucket. This is always the project team's owner group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="predefinedacl_nodejs">
+<a href="#predefinedacl_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefineddefaultobjectacl_nodejs">
+<a href="#predefineddefaultobjectacl_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Default<wbr>Object<wbr>Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="projectnumber_nodejs">
 <a href="#projectnumber_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Number</a>
 </span>
@@ -867,6 +942,22 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project number of the project the bucket belongs to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projection_nodejs">
+<a href="#projection_nodejs" style="color: inherit; text-decoration: inherit;">projection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisionaluserproject_nodejs">
+<a href="#provisionaluserproject_nodejs" style="color: inherit; text-decoration: inherit;">provisional<wbr>User<wbr>Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_nodejs">
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
@@ -915,6 +1006,14 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The modification time of the bucket in RFC 3339 format.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userproject_nodejs">
+<a href="#userproject_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioning_nodejs">
 <a href="#versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
@@ -1104,6 +1203,22 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The owner of the bucket. This is always the project team's owner group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="predefined_acl_python">
+<a href="#predefined_acl_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefined_default_object_acl_python">
+<a href="#predefined_default_object_acl_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>default_<wbr>object_<wbr>acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_number_python">
 <a href="#project_number_python" style="color: inherit; text-decoration: inherit;">project_<wbr>number</a>
 </span>
@@ -1111,6 +1226,22 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project number of the project the bucket belongs to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projection_python">
+<a href="#projection_python" style="color: inherit; text-decoration: inherit;">projection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisional_user_project_python">
+<a href="#provisional_user_project_python" style="color: inherit; text-decoration: inherit;">provisional_<wbr>user_<wbr>project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_policy_python">
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
@@ -1159,6 +1290,14 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The modification time of the bucket in RFC 3339 format.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_project_python">
+<a href="#user_project_python" style="color: inherit; text-decoration: inherit;">user_<wbr>project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioning_python">
 <a href="#versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>

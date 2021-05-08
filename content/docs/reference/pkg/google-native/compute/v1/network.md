@@ -39,6 +39,7 @@ Creates a network in the specified project using the data included in the reques
             <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">peerings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_v1.NetworkPeeringArgs]]</span> = None<span class="p">,</span>
             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">routing_config</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.NetworkRoutingConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">subnetworks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
@@ -64,25 +65,19 @@ Creates a network in the specified project using the data included in the reques
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -94,25 +89,19 @@ Creates a network in the specified project using the data included in the reques
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -124,33 +113,25 @@ Creates a network in the specified project using the data included in the reques
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -162,25 +143,19 @@ Creates a network in the specified project using the data included in the reques
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -298,6 +273,14 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
         <span class="property-type"><a href="#networkpeering">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Inputs.<wbr>Network<wbr>Peering<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A list of network peerings for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestid_csharp">
+<a href="#requestid_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingconfig_csharp">
 <a href="#routingconfig_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Config</a>
@@ -429,6 +412,14 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
     </dt>
     <dd>{{% md %}}[Output Only] A list of network peerings for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestid_go">
+<a href="#requestid_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="routingconfig_go">
 <a href="#routingconfig_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Config</a>
 </span>
@@ -559,6 +550,14 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
     </dt>
     <dd>{{% md %}}[Output Only] A list of network peerings for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestid_nodejs">
+<a href="#requestid_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="routingconfig_nodejs">
 <a href="#routingconfig_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Config</a>
 </span>
@@ -688,6 +687,14 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
         <span class="property-type"><a href="#networkpeering">Network<wbr>Peering<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A list of network peerings for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="request_id_python">
+<a href="#request_id_python" style="color: inherit; text-decoration: inherit;">request_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_config_python">
 <a href="#routing_config_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>config</a>

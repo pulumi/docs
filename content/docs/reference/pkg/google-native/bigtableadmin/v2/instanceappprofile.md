@@ -27,9 +27,11 @@ Creates an app profile within an instance.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">InstanceAppProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                       <span class="nx">app_profile_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">app_profiles_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">ignore_warnings</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">instances_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">multi_cluster_routing_use_any</span><span class="p">:</span> <span class="nx">Optional[_bigtableadmin_v2.MultiClusterRoutingUseAnyArgs]</span> = None<span class="p">,</span>
                        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -57,25 +59,19 @@ Creates an app profile within an instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceAppProfileArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -87,25 +83,19 @@ Creates an app profile within an instance.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceAppProfileArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -117,33 +107,25 @@ Creates an app profile within an instance.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceAppProfileArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -155,25 +137,19 @@ Creates an app profile within an instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceAppProfileArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -189,6 +165,14 @@ The InstanceAppProfile resource accepts the following [input]({{< relref "/docs/
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="appprofileid_csharp">
+<a href="#appprofileid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Profile<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="appprofilesid_csharp">
 <a href="#appprofilesid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Profiles<wbr>Id</a>
@@ -230,6 +214,14 @@ The InstanceAppProfile resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}Strongly validated etag for optimistic concurrency control. Preserve the value returned from `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a modification in the mean time. The `update_mask` of the request need not include `etag` for this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ignorewarnings_csharp">
+<a href="#ignorewarnings_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Warnings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="multiclusterroutinguseany_csharp">
 <a href="#multiclusterroutinguseany_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Cluster<wbr>Routing<wbr>Use<wbr>Any</a>
 </span>
@@ -257,6 +249,14 @@ The InstanceAppProfile resource accepts the following [input]({{< relref "/docs/
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="appprofileid_go">
+<a href="#appprofileid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Profile<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="appprofilesid_go">
 <a href="#appprofilesid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Profiles<wbr>Id</a>
@@ -298,6 +298,14 @@ The InstanceAppProfile resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}Strongly validated etag for optimistic concurrency control. Preserve the value returned from `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a modification in the mean time. The `update_mask` of the request need not include `etag` for this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ignorewarnings_go">
+<a href="#ignorewarnings_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Warnings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="multiclusterroutinguseany_go">
 <a href="#multiclusterroutinguseany_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Cluster<wbr>Routing<wbr>Use<wbr>Any</a>
 </span>
@@ -325,6 +333,14 @@ The InstanceAppProfile resource accepts the following [input]({{< relref "/docs/
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="appprofileid_nodejs">
+<a href="#appprofileid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Profile<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="appprofilesid_nodejs">
 <a href="#appprofilesid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Profiles<wbr>Id</a>
@@ -366,6 +382,14 @@ The InstanceAppProfile resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}Strongly validated etag for optimistic concurrency control. Preserve the value returned from `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a modification in the mean time. The `update_mask` of the request need not include `etag` for this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ignorewarnings_nodejs">
+<a href="#ignorewarnings_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Warnings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="multiclusterroutinguseany_nodejs">
 <a href="#multiclusterroutinguseany_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Cluster<wbr>Routing<wbr>Use<wbr>Any</a>
 </span>
@@ -393,6 +417,14 @@ The InstanceAppProfile resource accepts the following [input]({{< relref "/docs/
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="app_profile_id_python">
+<a href="#app_profile_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>profile_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="app_profiles_id_python">
 <a href="#app_profiles_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>profiles_<wbr>id</a>
@@ -433,6 +465,14 @@ The InstanceAppProfile resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Strongly validated etag for optimistic concurrency control. Preserve the value returned from `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a modification in the mean time. The `update_mask` of the request need not include `etag` for this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ignore_warnings_python">
+<a href="#ignore_warnings_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>warnings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multi_cluster_routing_use_any_python">
 <a href="#multi_cluster_routing_use_any_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>cluster_<wbr>routing_<wbr>use_<wbr>any</a>

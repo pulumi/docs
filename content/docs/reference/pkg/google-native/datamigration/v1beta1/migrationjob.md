@@ -33,9 +33,11 @@ Creates a new migration job in a given project and location.
                  <span class="nx">dump_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                  <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">migration_job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">migration_jobs_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">reverse_ssh_connectivity</span><span class="p">:</span> <span class="nx">Optional[_datamigration_v1beta1.ReverseSshConnectivityArgs]</span> = None<span class="p">,</span>
                  <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">source_database</span><span class="p">:</span> <span class="nx">Optional[_datamigration_v1beta1.DatabaseTypeArgs]</span> = None<span class="p">,</span>
@@ -65,25 +67,19 @@ Creates a new migration job in a given project and location.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MigrationJobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -95,25 +91,19 @@ Creates a new migration job in a given project and location.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MigrationJobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -125,33 +115,25 @@ Creates a new migration job in a given project and location.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MigrationJobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -163,25 +145,19 @@ Creates a new migration job in a given project and location.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MigrationJobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -200,6 +176,14 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="locationsid_csharp">
 <a href="#locationsid_csharp" style="color: inherit; text-decoration: inherit;">Locations<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="migrationjobid_csharp">
+<a href="#migrationjobid_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -270,6 +254,14 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/instances/{instance}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestid_csharp">
+<a href="#requestid_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="reversesshconnectivity_csharp">
 <a href="#reversesshconnectivity_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Ssh<wbr>Connectivity</a>
 </span>
@@ -332,6 +324,14 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="locationsid_go">
 <a href="#locationsid_go" style="color: inherit; text-decoration: inherit;">Locations<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="migrationjobid_go">
+<a href="#migrationjobid_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -402,6 +402,14 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/instances/{instance}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestid_go">
+<a href="#requestid_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="reversesshconnectivity_go">
 <a href="#reversesshconnectivity_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Ssh<wbr>Connectivity</a>
 </span>
@@ -464,6 +472,14 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="locationsid_nodejs">
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="migrationjobid_nodejs">
+<a href="#migrationjobid_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -534,6 +550,14 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/instances/{instance}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestid_nodejs">
+<a href="#requestid_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="reversesshconnectivity_nodejs">
 <a href="#reversesshconnectivity_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Ssh<wbr>Connectivity</a>
 </span>
@@ -596,6 +620,14 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="locations_id_python">
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="migration_job_id_python">
+<a href="#migration_job_id_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>job_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -665,6 +697,14 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/instances/{instance}.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="request_id_python">
+<a href="#request_id_python" style="color: inherit; text-decoration: inherit;">request_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reverse_ssh_connectivity_python">
 <a href="#reverse_ssh_connectivity_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>ssh_<wbr>connectivity</a>

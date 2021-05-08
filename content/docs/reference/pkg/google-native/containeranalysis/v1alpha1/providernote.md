@@ -37,8 +37,10 @@ Creates a new `Note`.
                  <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">long_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">note_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">notes_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">package</span><span class="p">:</span> <span class="nx">Optional[_containeranalysis_v1alpha1.PackageArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">providers_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">related_url</span><span class="p">:</span> <span class="nx">Optional[Sequence[_containeranalysis_v1alpha1.RelatedUrlArgs]]</span> = None<span class="p">,</span>
                  <span class="nx">short_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -67,25 +69,19 @@ Creates a new `Note`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderNoteArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -97,25 +93,19 @@ Creates a new `Note`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderNoteArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -127,33 +117,25 @@ Creates a new `Note`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderNoteArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -165,25 +147,19 @@ Creates a new `Note`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderNoteArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -296,6 +272,14 @@ The ProviderNote resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The name of the note in the form "projects/{provider_project_id}/notes/{NOTE_ID}"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="noteid_csharp">
+<a href="#noteid_csharp" style="color: inherit; text-decoration: inherit;">Note<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="package_csharp">
 <a href="#package_csharp" style="color: inherit; text-decoration: inherit;">Package</a>
 </span>
@@ -303,6 +287,14 @@ The ProviderNote resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#package">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Package<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A note describing a package hosted by various package managers.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parent_csharp">
+<a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relatedurl_csharp">
 <a href="#relatedurl_csharp" style="color: inherit; text-decoration: inherit;">Related<wbr>Url</a>
@@ -444,6 +436,14 @@ The ProviderNote resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The name of the note in the form "projects/{provider_project_id}/notes/{NOTE_ID}"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="noteid_go">
+<a href="#noteid_go" style="color: inherit; text-decoration: inherit;">Note<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="package_go">
 <a href="#package_go" style="color: inherit; text-decoration: inherit;">Package</a>
 </span>
@@ -451,6 +451,14 @@ The ProviderNote resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#package">Package</a></span>
     </dt>
     <dd>{{% md %}}A note describing a package hosted by various package managers.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parent_go">
+<a href="#parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relatedurl_go">
 <a href="#relatedurl_go" style="color: inherit; text-decoration: inherit;">Related<wbr>Url</a>
@@ -592,6 +600,14 @@ The ProviderNote resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The name of the note in the form "projects/{provider_project_id}/notes/{NOTE_ID}"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="noteid_nodejs">
+<a href="#noteid_nodejs" style="color: inherit; text-decoration: inherit;">note<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="package_nodejs">
 <a href="#package_nodejs" style="color: inherit; text-decoration: inherit;">package</a>
 </span>
@@ -599,6 +615,14 @@ The ProviderNote resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#package">Package<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A note describing a package hosted by various package managers.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parent_nodejs">
+<a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relatedurl_nodejs">
 <a href="#relatedurl_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Url</a>
@@ -740,6 +764,14 @@ The ProviderNote resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The name of the note in the form "projects/{provider_project_id}/notes/{NOTE_ID}"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="note_id_python">
+<a href="#note_id_python" style="color: inherit; text-decoration: inherit;">note_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="package_python">
 <a href="#package_python" style="color: inherit; text-decoration: inherit;">package</a>
 </span>
@@ -747,6 +779,14 @@ The ProviderNote resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#package">Package<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A note describing a package hosted by various package managers.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parent_python">
+<a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="related_url_python">
 <a href="#related_url_python" style="color: inherit; text-decoration: inherit;">related_<wbr>url</a>

@@ -33,6 +33,7 @@ Create a ServiceLevelObjective for the given Service.
                                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                  <span class="nx">rolling_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                  <span class="nx">service_level_indicator</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.ServiceLevelIndicatorArgs]</span> = None<span class="p">,</span>
+                                 <span class="nx">service_level_objective_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                  <span class="nx">service_level_objectives_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                  <span class="nx">services_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                  <span class="nx">v3_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -59,25 +60,19 @@ Create a ServiceLevelObjective for the given Service.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceServiceLevelObjectiveArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -89,25 +84,19 @@ Create a ServiceLevelObjective for the given Service.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceServiceLevelObjectiveArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -119,33 +108,25 @@ Create a ServiceLevelObjective for the given Service.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceServiceLevelObjectiveArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -157,25 +138,19 @@ Create a ServiceLevelObjective for the given Service.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceServiceLevelObjectiveArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -270,7 +245,15 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelindicator">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V3.<wbr>Inputs.<wbr>Service<wbr>Level<wbr>Indicator<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The definition of good service, used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The definition of good service, used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicelevelobjectiveid_csharp">
+<a href="#servicelevelobjectiveid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -354,7 +337,15 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelindicator">Service<wbr>Level<wbr>Indicator</a></span>
     </dt>
-    <dd>{{% md %}}The definition of good service, used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The definition of good service, used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicelevelobjectiveid_go">
+<a href="#servicelevelobjectiveid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -438,7 +429,15 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelindicator">Service<wbr>Level<wbr>Indicator<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The definition of good service, used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The definition of good service, used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicelevelobjectiveid_nodejs">
+<a href="#servicelevelobjectiveid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -522,7 +521,15 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelindicator">Service<wbr>Level<wbr>Indicator<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The definition of good service, used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The definition of good service, used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_level_objective_id_python">
+<a href="#service_level_objective_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>level_<wbr>objective_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

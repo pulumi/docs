@@ -42,6 +42,10 @@ Stores a new object and metadata.
                  <span class="nx">event_based_hold</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">if_generation_match</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">if_generation_not_match</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">if_metageneration_match</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">if_metageneration_not_match</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">kms_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">md5_hash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -51,6 +55,9 @@ Stores a new object and metadata.
                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[_storage_v1.ObjectOwnerArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">predefined_acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">projection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">provisional_user_project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">retention_expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -60,7 +67,8 @@ Stores a new object and metadata.
                  <span class="nx">time_created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">time_deleted</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">time_storage_class_updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                 <span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">user_project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">BucketObject</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BucketObjectArgs</a></span><span class="p">,</span>
@@ -83,25 +91,19 @@ Stores a new object and metadata.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">BucketObjectArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -113,25 +115,19 @@ Stores a new object and metadata.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">BucketObjectArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -143,33 +139,25 @@ Stores a new object and metadata.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">BucketObjectArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -181,25 +169,19 @@ Stores a new object and metadata.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">BucketObjectArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -344,6 +326,38 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The ID of the object, including the bucket name, object name, and generation number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ifgenerationmatch_csharp">
+<a href="#ifgenerationmatch_csharp" style="color: inherit; text-decoration: inherit;">If<wbr>Generation<wbr>Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ifgenerationnotmatch_csharp">
+<a href="#ifgenerationnotmatch_csharp" style="color: inherit; text-decoration: inherit;">If<wbr>Generation<wbr>Not<wbr>Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ifmetagenerationmatch_csharp">
+<a href="#ifmetagenerationmatch_csharp" style="color: inherit; text-decoration: inherit;">If<wbr>Metageneration<wbr>Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ifmetagenerationnotmatch_csharp">
+<a href="#ifmetagenerationnotmatch_csharp" style="color: inherit; text-decoration: inherit;">If<wbr>Metageneration<wbr>Not<wbr>Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
@@ -407,6 +421,30 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#objectowner">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Owner<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The owner of the object. This will always be the uploader of the object.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefinedacl_csharp">
+<a href="#predefinedacl_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projection_csharp">
+<a href="#projection_csharp" style="color: inherit; text-decoration: inherit;">Projection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisionaluserproject_csharp">
+<a href="#provisionaluserproject_csharp" style="color: inherit; text-decoration: inherit;">Provisional<wbr>User<wbr>Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionexpirationtime_csharp">
 <a href="#retentionexpirationtime_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Expiration<wbr>Time</a>
@@ -486,7 +524,15 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The modification time of the object metadata in RFC 3339 format.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The modification time of the object metadata in RFC 3339 format.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userproject_csharp">
+<a href="#userproject_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -620,6 +666,38 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The ID of the object, including the bucket name, object name, and generation number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ifgenerationmatch_go">
+<a href="#ifgenerationmatch_go" style="color: inherit; text-decoration: inherit;">If<wbr>Generation<wbr>Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ifgenerationnotmatch_go">
+<a href="#ifgenerationnotmatch_go" style="color: inherit; text-decoration: inherit;">If<wbr>Generation<wbr>Not<wbr>Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ifmetagenerationmatch_go">
+<a href="#ifmetagenerationmatch_go" style="color: inherit; text-decoration: inherit;">If<wbr>Metageneration<wbr>Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ifmetagenerationnotmatch_go">
+<a href="#ifmetagenerationnotmatch_go" style="color: inherit; text-decoration: inherit;">If<wbr>Metageneration<wbr>Not<wbr>Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
@@ -683,6 +761,30 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#objectowner">Object<wbr>Owner</a></span>
     </dt>
     <dd>{{% md %}}The owner of the object. This will always be the uploader of the object.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefinedacl_go">
+<a href="#predefinedacl_go" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projection_go">
+<a href="#projection_go" style="color: inherit; text-decoration: inherit;">Projection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisionaluserproject_go">
+<a href="#provisionaluserproject_go" style="color: inherit; text-decoration: inherit;">Provisional<wbr>User<wbr>Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionexpirationtime_go">
 <a href="#retentionexpirationtime_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Expiration<wbr>Time</a>
@@ -762,7 +864,15 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The modification time of the object metadata in RFC 3339 format.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The modification time of the object metadata in RFC 3339 format.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userproject_go">
+<a href="#userproject_go" style="color: inherit; text-decoration: inherit;">User<wbr>Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -896,6 +1006,38 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The ID of the object, including the bucket name, object name, and generation number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ifgenerationmatch_nodejs">
+<a href="#ifgenerationmatch_nodejs" style="color: inherit; text-decoration: inherit;">if<wbr>Generation<wbr>Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ifgenerationnotmatch_nodejs">
+<a href="#ifgenerationnotmatch_nodejs" style="color: inherit; text-decoration: inherit;">if<wbr>Generation<wbr>Not<wbr>Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ifmetagenerationmatch_nodejs">
+<a href="#ifmetagenerationmatch_nodejs" style="color: inherit; text-decoration: inherit;">if<wbr>Metageneration<wbr>Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ifmetagenerationnotmatch_nodejs">
+<a href="#ifmetagenerationnotmatch_nodejs" style="color: inherit; text-decoration: inherit;">if<wbr>Metageneration<wbr>Not<wbr>Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
@@ -959,6 +1101,30 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#objectowner">Object<wbr>Owner<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The owner of the object. This will always be the uploader of the object.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefinedacl_nodejs">
+<a href="#predefinedacl_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projection_nodejs">
+<a href="#projection_nodejs" style="color: inherit; text-decoration: inherit;">projection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisionaluserproject_nodejs">
+<a href="#provisionaluserproject_nodejs" style="color: inherit; text-decoration: inherit;">provisional<wbr>User<wbr>Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionexpirationtime_nodejs">
 <a href="#retentionexpirationtime_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Expiration<wbr>Time</a>
@@ -1038,7 +1204,15 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The modification time of the object metadata in RFC 3339 format.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The modification time of the object metadata in RFC 3339 format.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userproject_nodejs">
+<a href="#userproject_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1172,6 +1346,38 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The ID of the object, including the bucket name, object name, and generation number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="if_generation_match_python">
+<a href="#if_generation_match_python" style="color: inherit; text-decoration: inherit;">if_<wbr>generation_<wbr>match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="if_generation_not_match_python">
+<a href="#if_generation_not_match_python" style="color: inherit; text-decoration: inherit;">if_<wbr>generation_<wbr>not_<wbr>match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="if_metageneration_match_python">
+<a href="#if_metageneration_match_python" style="color: inherit; text-decoration: inherit;">if_<wbr>metageneration_<wbr>match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="if_metageneration_not_match_python">
+<a href="#if_metageneration_not_match_python" style="color: inherit; text-decoration: inherit;">if_<wbr>metageneration_<wbr>not_<wbr>match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
@@ -1235,6 +1441,30 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#objectowner">Object<wbr>Owner<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The owner of the object. This will always be the uploader of the object.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefined_acl_python">
+<a href="#predefined_acl_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projection_python">
+<a href="#projection_python" style="color: inherit; text-decoration: inherit;">projection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisional_user_project_python">
+<a href="#provisional_user_project_python" style="color: inherit; text-decoration: inherit;">provisional_<wbr>user_<wbr>project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_expiration_time_python">
 <a href="#retention_expiration_time_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>expiration_<wbr>time</a>
@@ -1314,7 +1544,15 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The modification time of the object metadata in RFC 3339 format.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The modification time of the object metadata in RFC 3339 format.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_project_python">
+<a href="#user_project_python" style="color: inherit; text-decoration: inherit;">user_<wbr>project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

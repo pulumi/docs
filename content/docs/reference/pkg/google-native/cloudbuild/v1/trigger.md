@@ -31,11 +31,13 @@ Creates a new `BuildTrigger`. This API is experimental.
             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">filename</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">github</span><span class="p">:</span> <span class="nx">Optional[_cloudbuild_v1.GitHubEventsConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">ignored_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">included_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">pubsub_config</span><span class="p">:</span> <span class="nx">Optional[_cloudbuild_v1.PubsubConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">substitutions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">trigger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -62,25 +64,19 @@ Creates a new `BuildTrigger`. This API is experimental.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TriggerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -92,25 +88,19 @@ Creates a new `BuildTrigger`. This API is experimental.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TriggerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -122,33 +112,25 @@ Creates a new `BuildTrigger`. This API is experimental.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TriggerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -160,25 +142,19 @@ Creates a new `BuildTrigger`. This API is experimental.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TriggerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -243,6 +219,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Path, from the source root, to the build configuration file (i.e. cloudbuild.yaml).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. A Common Expression Language string.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="github_csharp">
 <a href="#github_csharp" style="color: inherit; text-decoration: inherit;">Github</a>
 </span>
@@ -274,6 +258,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-assigned name of the trigger. Must be unique within the project. Trigger names must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pubsubconfig_csharp">
+<a href="#pubsubconfig_csharp" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pubsubconfig">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Inputs.<wbr>Pubsub<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substitutions_csharp">
 <a href="#substitutions_csharp" style="color: inherit; text-decoration: inherit;">Substitutions</a>
@@ -351,6 +343,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Path, from the source root, to the build configuration file (i.e. cloudbuild.yaml).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. A Common Expression Language string.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="github_go">
 <a href="#github_go" style="color: inherit; text-decoration: inherit;">Github</a>
 </span>
@@ -382,6 +382,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-assigned name of the trigger. Must be unique within the project. Trigger names must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pubsubconfig_go">
+<a href="#pubsubconfig_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pubsubconfig">Pubsub<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substitutions_go">
 <a href="#substitutions_go" style="color: inherit; text-decoration: inherit;">Substitutions</a>
@@ -459,6 +467,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Path, from the source root, to the build configuration file (i.e. cloudbuild.yaml).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. A Common Expression Language string.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="github_nodejs">
 <a href="#github_nodejs" style="color: inherit; text-decoration: inherit;">github</a>
 </span>
@@ -490,6 +506,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-assigned name of the trigger. Must be unique within the project. Trigger names must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pubsubconfig_nodejs">
+<a href="#pubsubconfig_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pubsubconfig">Pubsub<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substitutions_nodejs">
 <a href="#substitutions_nodejs" style="color: inherit; text-decoration: inherit;">substitutions</a>
@@ -567,6 +591,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Path, from the source root, to the build configuration file (i.e. cloudbuild.yaml).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. A Common Expression Language string.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="github_python">
 <a href="#github_python" style="color: inherit; text-decoration: inherit;">github</a>
 </span>
@@ -598,6 +630,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-assigned name of the trigger. Must be unique within the project. Trigger names must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pubsub_config_python">
+<a href="#pubsub_config_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pubsubconfig">Pubsub<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substitutions_python">
 <a href="#substitutions_python" style="color: inherit; text-decoration: inherit;">substitutions</a>
@@ -4509,6 +4549,266 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*/locations/*/keyRings/*/cryptoKeys/*{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="pubsubconfig">Pubsub<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccountemail_csharp">
+<a href="#serviceaccountemail_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service account that will make the push request.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="topic_csharp">
+<a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccountemail_go">
+<a href="#serviceaccountemail_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service account that will make the push request.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="topic_go">
+<a href="#topic_go" style="color: inherit; text-decoration: inherit;">Topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccountemail_nodejs">
+<a href="#serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service account that will make the push request.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="topic_nodejs">
+<a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="service_account_email_python">
+<a href="#service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Service account that will make the push request.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="topic_python">
+<a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="pubsubconfigresponse">Pubsub<wbr>Config<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="serviceaccountemail_csharp">
+<a href="#serviceaccountemail_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service account that will make the push request.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subscription_csharp">
+<a href="#subscription_csharp" style="color: inherit; text-decoration: inherit;">Subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the subscription. Format is `projects/{project}/subscriptions/{subscription}`.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="topic_csharp">
+<a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="serviceaccountemail_go">
+<a href="#serviceaccountemail_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service account that will make the push request.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subscription_go">
+<a href="#subscription_go" style="color: inherit; text-decoration: inherit;">Subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the subscription. Format is `projects/{project}/subscriptions/{subscription}`.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="topic_go">
+<a href="#topic_go" style="color: inherit; text-decoration: inherit;">Topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="serviceaccountemail_nodejs">
+<a href="#serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service account that will make the push request.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subscription_nodejs">
+<a href="#subscription_nodejs" style="color: inherit; text-decoration: inherit;">subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the subscription. Format is `projects/{project}/subscriptions/{subscription}`.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="topic_nodejs">
+<a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="service_account_email_python">
+<a href="#service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Service account that will make the push request.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subscription_python">
+<a href="#subscription_python" style="color: inherit; text-decoration: inherit;">subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the subscription. Format is `projects/{project}/subscriptions/{subscription}`.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="topic_python">
+<a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pullrequestfilter">Pull<wbr>Request<wbr>Filter</h4>

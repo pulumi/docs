@@ -54,10 +54,12 @@ Creates an InterconnectAttachment in the specified project using the data includ
                            <span class="nx">private_interconnect_info</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.InterconnectAttachmentPrivateInfoArgs]</span> = None<span class="p">,</span>
                            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">validate_only</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -81,25 +83,19 @@ Creates an InterconnectAttachment in the specified project using the data includ
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InterconnectAttachmentArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -111,25 +107,19 @@ Creates an InterconnectAttachment in the specified project using the data includ
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InterconnectAttachmentArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -141,33 +131,25 @@ Creates an InterconnectAttachment in the specified project using the data includ
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InterconnectAttachmentArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -179,25 +161,19 @@ Creates an InterconnectAttachment in the specified project using the data includ
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InterconnectAttachmentArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -453,6 +429,14 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
     </dt>
     <dd>{{% md %}}[Output Only] Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached to is of type DEDICATED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestid_csharp">
+<a href="#requestid_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="router_csharp">
 <a href="#router_csharp" style="color: inherit; text-decoration: inherit;">Router</a>
 </span>
@@ -493,6 +477,14 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 - DEDICATED: an attachment to a Dedicated Interconnect. 
 - PARTNER: an attachment to a Partner Interconnect, created by the customer. 
 - PARTNER_PROVIDER: an attachment to a Partner Interconnect, created by the partner.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="validateonly_csharp">
+<a href="#validateonly_csharp" style="color: inherit; text-decoration: inherit;">Validate<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlantag8021q_csharp">
 <a href="#vlantag8021q_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Tag8021q</a>
@@ -745,6 +737,14 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
     </dt>
     <dd>{{% md %}}[Output Only] Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached to is of type DEDICATED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestid_go">
+<a href="#requestid_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="router_go">
 <a href="#router_go" style="color: inherit; text-decoration: inherit;">Router</a>
 </span>
@@ -785,6 +785,14 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 - DEDICATED: an attachment to a Dedicated Interconnect. 
 - PARTNER: an attachment to a Partner Interconnect, created by the customer. 
 - PARTNER_PROVIDER: an attachment to a Partner Interconnect, created by the partner.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="validateonly_go">
+<a href="#validateonly_go" style="color: inherit; text-decoration: inherit;">Validate<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlantag8021q_go">
 <a href="#vlantag8021q_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Tag8021q</a>
@@ -1037,6 +1045,14 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
     </dt>
     <dd>{{% md %}}[Output Only] Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached to is of type DEDICATED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestid_nodejs">
+<a href="#requestid_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="router_nodejs">
 <a href="#router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
 </span>
@@ -1077,6 +1093,14 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 - DEDICATED: an attachment to a Dedicated Interconnect. 
 - PARTNER: an attachment to a Partner Interconnect, created by the customer. 
 - PARTNER_PROVIDER: an attachment to a Partner Interconnect, created by the partner.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="validateonly_nodejs">
+<a href="#validateonly_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlantag8021q_nodejs">
 <a href="#vlantag8021q_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Tag8021q</a>
@@ -1329,6 +1353,14 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
     </dt>
     <dd>{{% md %}}[Output Only] Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached to is of type DEDICATED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="request_id_python">
+<a href="#request_id_python" style="color: inherit; text-decoration: inherit;">request_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="router_python">
 <a href="#router_python" style="color: inherit; text-decoration: inherit;">router</a>
 </span>
@@ -1369,6 +1401,14 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 - DEDICATED: an attachment to a Dedicated Interconnect. 
 - PARTNER: an attachment to a Partner Interconnect, created by the customer. 
 - PARTNER_PROVIDER: an attachment to a Partner Interconnect, created by the partner.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="validate_only_python">
+<a href="#validate_only_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlan_tag8021q_python">
 <a href="#vlan_tag8021q_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>tag8021q</a>

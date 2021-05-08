@@ -27,6 +27,7 @@ Creates a new ManagedZone.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ManagedZone</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">client_operation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -67,25 +68,19 @@ Creates a new ManagedZone.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ManagedZoneArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -97,25 +92,19 @@ Creates a new ManagedZone.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ManagedZoneArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -127,33 +116,25 @@ Creates a new ManagedZone.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ManagedZoneArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -165,25 +146,19 @@ Creates a new ManagedZone.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ManagedZoneArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -210,6 +185,14 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientoperationid_csharp">
+<a href="#clientoperationid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Operation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -364,6 +347,14 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="clientoperationid_go">
+<a href="#clientoperationid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Operation<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="creationtime_go">
 <a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
 </span>
@@ -512,6 +503,14 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="clientoperationid_nodejs">
+<a href="#clientoperationid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Operation<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="creationtime_nodejs">
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
 </span>
@@ -654,6 +653,14 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_operation_id_python">
+<a href="#client_operation_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>operation_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2291,6 +2298,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="gkeclusters_csharp">
+<a href="#gkeclusters_csharp" style="color: inherit; text-decoration: inherit;">Gke<wbr>Clusters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfiggkecluster">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>DNS.<wbr>V1Beta2.<wbr>Inputs.<wbr>Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>GKECluster<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Google Kubernetes Engine clusters that can see this zone.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
@@ -2310,6 +2325,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="gkeclusters_go">
+<a href="#gkeclusters_go" style="color: inherit; text-decoration: inherit;">Gke<wbr>Clusters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfiggkecluster">[]Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>GKECluster</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Google Kubernetes Engine clusters that can see this zone.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -2331,6 +2354,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="gkeclusters_nodejs">
+<a href="#gkeclusters_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Clusters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfiggkecluster">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>GKECluster<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Google Kubernetes Engine clusters that can see this zone.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
@@ -2351,6 +2382,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="gke_clusters_python">
+<a href="#gke_clusters_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>clusters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfiggkecluster">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>GKECluster<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Google Kubernetes Engine clusters that can see this zone.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
@@ -2366,6 +2405,170 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of VPC networks that can see this zone.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="managedzoneprivatevisibilityconfiggkecluster">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>GKECluster</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="gkeclustername_csharp">
+<a href="#gkeclustername_csharp" style="color: inherit; text-decoration: inherit;">Gke<wbr>Cluster<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like: projects/*/locations/*/clusters/*. This is referenced from GKE projects.locations.clusters.get API: https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/get{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="gkeclustername_go">
+<a href="#gkeclustername_go" style="color: inherit; text-decoration: inherit;">Gke<wbr>Cluster<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like: projects/*/locations/*/clusters/*. This is referenced from GKE projects.locations.clusters.get API: https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/get{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="gkeclustername_nodejs">
+<a href="#gkeclustername_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like: projects/*/locations/*/clusters/*. This is referenced from GKE projects.locations.clusters.get API: https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/get{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="gke_cluster_name_python">
+<a href="#gke_cluster_name_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>cluster_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like: projects/*/locations/*/clusters/*. This is referenced from GKE projects.locations.clusters.get API: https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/get{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="managedzoneprivatevisibilityconfiggkeclusterresponse">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>GKECluster<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="gkeclustername_csharp">
+<a href="#gkeclustername_csharp" style="color: inherit; text-decoration: inherit;">Gke<wbr>Cluster<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like: projects/*/locations/*/clusters/*. This is referenced from GKE projects.locations.clusters.get API: https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/get{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="gkeclustername_go">
+<a href="#gkeclustername_go" style="color: inherit; text-decoration: inherit;">Gke<wbr>Cluster<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like: projects/*/locations/*/clusters/*. This is referenced from GKE projects.locations.clusters.get API: https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/get{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="gkeclustername_nodejs">
+<a href="#gkeclustername_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like: projects/*/locations/*/clusters/*. This is referenced from GKE projects.locations.clusters.get API: https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/get{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="gke_cluster_name_python">
+<a href="#gke_cluster_name_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>cluster_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like: projects/*/locations/*/clusters/*. This is referenced from GKE projects.locations.clusters.get API: https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/get{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedzoneprivatevisibilityconfignetwork">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network</h4>
@@ -2537,6 +2740,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="gkeclusters_csharp">
+<a href="#gkeclusters_csharp" style="color: inherit; text-decoration: inherit;">Gke<wbr>Clusters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfiggkeclusterresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>DNS.<wbr>V1Beta2.<wbr>Inputs.<wbr>Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>GKECluster<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Google Kubernetes Engine clusters that can see this zone.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
@@ -2556,6 +2767,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="gkeclusters_go">
+<a href="#gkeclusters_go" style="color: inherit; text-decoration: inherit;">Gke<wbr>Clusters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfiggkeclusterresponse">[]Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>GKECluster<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Google Kubernetes Engine clusters that can see this zone.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -2577,6 +2796,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="gkeclusters_nodejs">
+<a href="#gkeclusters_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Clusters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfiggkeclusterresponse">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>GKECluster<wbr>Response<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Google Kubernetes Engine clusters that can see this zone.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
@@ -2596,6 +2823,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="gke_clusters_python">
+<a href="#gke_clusters_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>clusters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfiggkeclusterresponse">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>GKECluster<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Google Kubernetes Engine clusters that can see this zone.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>

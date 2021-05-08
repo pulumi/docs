@@ -57,6 +57,7 @@ Creates an instance resource in the specified project using the data included in
              <span class="nx">post_key_revocation_action_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">private_ipv6_google_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">reservation_affinity</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.ReservationAffinityArgs]</span> = None<span class="p">,</span>
              <span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
              <span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -67,6 +68,7 @@ Creates an instance resource in the specified project using the data included in
              <span class="nx">shielded_instance_integrity_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.ShieldedInstanceIntegrityPolicyArgs]</span> = None<span class="p">,</span>
              <span class="nx">shielded_vm_config</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.ShieldedVmConfigArgs]</span> = None<span class="p">,</span>
              <span class="nx">shielded_vm_integrity_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.ShieldedVmIntegrityPolicyArgs]</span> = None<span class="p">,</span>
+             <span class="nx">source_instance_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">source_machine_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">source_machine_image_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
              <span class="nx">start_restricted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -96,25 +98,19 @@ Creates an instance resource in the specified project using the data included in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -126,25 +122,19 @@ Creates an instance resource in the specified project using the data included in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -156,33 +146,25 @@ Creates an instance resource in the specified project using the data included in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -194,25 +176,19 @@ Creates an instance resource in the specified project using the data included in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -491,6 +467,14 @@ For a full list of restrictions, read the Specifications for custom machine type
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK as default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestid_csharp">
+<a href="#requestid_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="reservationaffinity_csharp">
 <a href="#reservationaffinity_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
 </span>
@@ -572,6 +556,14 @@ Service accounts generate access tokens that can be accessed through the metadat
         <span class="property-type"><a href="#shieldedvmintegritypolicy">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Shielded<wbr>Vm<wbr>Integrity<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deprecating, please use shielded_instance_integrity_policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceinstancetemplate_csharp">
+<a href="#sourceinstancetemplate_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcemachineimage_csharp">
 <a href="#sourcemachineimage_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Machine<wbr>Image</a>
@@ -887,6 +879,14 @@ For a full list of restrictions, read the Specifications for custom machine type
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK as default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestid_go">
+<a href="#requestid_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="reservationaffinity_go">
 <a href="#reservationaffinity_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
 </span>
@@ -968,6 +968,14 @@ Service accounts generate access tokens that can be accessed through the metadat
         <span class="property-type"><a href="#shieldedvmintegritypolicy">Shielded<wbr>Vm<wbr>Integrity<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Deprecating, please use shielded_instance_integrity_policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceinstancetemplate_go">
+<a href="#sourceinstancetemplate_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcemachineimage_go">
 <a href="#sourcemachineimage_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Machine<wbr>Image</a>
@@ -1283,6 +1291,14 @@ For a full list of restrictions, read the Specifications for custom machine type
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK as default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestid_nodejs">
+<a href="#requestid_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="reservationaffinity_nodejs">
 <a href="#reservationaffinity_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Affinity</a>
 </span>
@@ -1364,6 +1380,14 @@ Service accounts generate access tokens that can be accessed through the metadat
         <span class="property-type"><a href="#shieldedvmintegritypolicy">Shielded<wbr>Vm<wbr>Integrity<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deprecating, please use shielded_instance_integrity_policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceinstancetemplate_nodejs">
+<a href="#sourceinstancetemplate_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcemachineimage_nodejs">
 <a href="#sourcemachineimage_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Machine<wbr>Image</a>
@@ -1679,6 +1703,14 @@ For a full list of restrictions, read the Specifications for custom machine type
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK as default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="request_id_python">
+<a href="#request_id_python" style="color: inherit; text-decoration: inherit;">request_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="reservation_affinity_python">
 <a href="#reservation_affinity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>affinity</a>
 </span>
@@ -1760,6 +1792,14 @@ Service accounts generate access tokens that can be accessed through the metadat
         <span class="property-type"><a href="#shieldedvmintegritypolicy">Shielded<wbr>Vm<wbr>Integrity<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deprecating, please use shielded_instance_integrity_policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="source_instance_template_python">
+<a href="#source_instance_template_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_machine_image_python">
 <a href="#source_machine_image_python" style="color: inherit; text-decoration: inherit;">source_<wbr>machine_<wbr>image</a>

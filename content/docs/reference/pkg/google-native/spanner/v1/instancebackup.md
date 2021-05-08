@@ -27,8 +27,11 @@ Starts creating a new Cloud Spanner Backup. The returned backup long-running ope
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">InstanceBackup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">backups_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">encryption_config_encryption_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">encryption_config_kms_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">expire_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">instances_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -56,25 +59,19 @@ Starts creating a new Cloud Spanner Backup. The returned backup long-running ope
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceBackupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -86,25 +83,19 @@ Starts creating a new Cloud Spanner Backup. The returned backup long-running ope
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceBackupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -116,33 +107,25 @@ Starts creating a new Cloud Spanner Backup. The returned backup long-running ope
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceBackupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -154,25 +137,19 @@ Starts creating a new Cloud Spanner Backup. The returned backup long-running ope
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceBackupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -189,8 +166,24 @@ The InstanceBackup resource accepts the following [input]({{< relref "/docs/intr
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="backupid_csharp">
+<a href="#backupid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="backupsid_csharp">
 <a href="#backupsid_csharp" style="color: inherit; text-decoration: inherit;">Backups<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="encryptionconfigencryptiontype_csharp">
+<a href="#encryptionconfigencryptiontype_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config<wbr>Encryption<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -221,6 +214,14 @@ The InstanceBackup resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Required for the CreateBackup operation. Name of the database from which this backup was created. This needs to be in the same instance as the backup. Values are of the form `projects//instances//databases/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptionconfigkmskeyname_csharp">
+<a href="#encryptionconfigkmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config<wbr>Kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="expiretime_csharp">
 <a href="#expiretime_csharp" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
 </span>
@@ -249,8 +250,24 @@ The InstanceBackup resource accepts the following [input]({{< relref "/docs/intr
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="backupid_go">
+<a href="#backupid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="backupsid_go">
 <a href="#backupsid_go" style="color: inherit; text-decoration: inherit;">Backups<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="encryptionconfigencryptiontype_go">
+<a href="#encryptionconfigencryptiontype_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config<wbr>Encryption<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -281,6 +298,14 @@ The InstanceBackup resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Required for the CreateBackup operation. Name of the database from which this backup was created. This needs to be in the same instance as the backup. Values are of the form `projects//instances//databases/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptionconfigkmskeyname_go">
+<a href="#encryptionconfigkmskeyname_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config<wbr>Kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="expiretime_go">
 <a href="#expiretime_go" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
 </span>
@@ -309,8 +334,24 @@ The InstanceBackup resource accepts the following [input]({{< relref "/docs/intr
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="backupid_nodejs">
+<a href="#backupid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="backupsid_nodejs">
 <a href="#backupsid_nodejs" style="color: inherit; text-decoration: inherit;">backups<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="encryptionconfigencryptiontype_nodejs">
+<a href="#encryptionconfigencryptiontype_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config<wbr>Encryption<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -341,6 +382,14 @@ The InstanceBackup resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Required for the CreateBackup operation. Name of the database from which this backup was created. This needs to be in the same instance as the backup. Values are of the form `projects//instances//databases/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptionconfigkmskeyname_nodejs">
+<a href="#encryptionconfigkmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config<wbr>Kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="expiretime_nodejs">
 <a href="#expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
 </span>
@@ -369,8 +418,24 @@ The InstanceBackup resource accepts the following [input]({{< relref "/docs/intr
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="backup_id_python">
+<a href="#backup_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="backups_id_python">
 <a href="#backups_id_python" style="color: inherit; text-decoration: inherit;">backups_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="encryption_config_encryption_type_python">
+<a href="#encryption_config_encryption_type_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config_<wbr>encryption_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -400,6 +465,14 @@ The InstanceBackup resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required for the CreateBackup operation. Name of the database from which this backup was created. This needs to be in the same instance as the backup. Values are of the form `projects//instances//databases/`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryption_config_kms_key_name_python">
+<a href="#encryption_config_kms_key_name_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config_<wbr>kms_<wbr>key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expire_time_python">
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>

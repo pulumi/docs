@@ -27,6 +27,7 @@ Creates a new data transfer configuration.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TransferConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">authorization_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">data_refresh_window_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                    <span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">destination_dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -39,7 +40,9 @@ Creates a new data transfer configuration.
                    <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">schedule_options</span><span class="p">:</span> <span class="nx">Optional[_bigquerydatatransfer_v1.ScheduleOptionsArgs]</span> = None<span class="p">,</span>
-                   <span class="nx">transfer_configs_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                   <span class="nx">service_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">transfer_configs_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">version_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TransferConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TransferConfigArgs</a></span><span class="p">,</span>
@@ -62,25 +65,19 @@ Creates a new data transfer configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TransferConfigArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -92,25 +89,19 @@ Creates a new data transfer configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TransferConfigArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -122,33 +113,25 @@ Creates a new data transfer configuration.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TransferConfigArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -160,25 +143,19 @@ Creates a new data transfer configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TransferConfigArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -205,6 +182,14 @@ The TransferConfig resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="transferconfigsid_csharp">
 <a href="#transferconfigsid_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Configs<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authorizationcode_csharp">
+<a href="#authorizationcode_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -297,7 +282,23 @@ The TransferConfig resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduleoptions">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query<wbr>Data<wbr>Transfer.<wbr>V1.<wbr>Inputs.<wbr>Schedule<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options customizing the data transfer schedule.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Options customizing the data transfer schedule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccountname_csharp">
+<a href="#serviceaccountname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versioninfo_csharp">
+<a href="#versioninfo_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -313,6 +314,14 @@ The TransferConfig resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="transferconfigsid_go">
 <a href="#transferconfigsid_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Configs<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authorizationcode_go">
+<a href="#authorizationcode_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -405,7 +414,23 @@ The TransferConfig resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduleoptions">Schedule<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Options customizing the data transfer schedule.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Options customizing the data transfer schedule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccountname_go">
+<a href="#serviceaccountname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versioninfo_go">
+<a href="#versioninfo_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -421,6 +446,14 @@ The TransferConfig resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="transferconfigsid_nodejs">
 <a href="#transferconfigsid_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Configs<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authorizationcode_nodejs">
+<a href="#authorizationcode_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -513,7 +546,23 @@ The TransferConfig resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduleoptions">Schedule<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options customizing the data transfer schedule.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Options customizing the data transfer schedule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccountname_nodejs">
+<a href="#serviceaccountname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versioninfo_nodejs">
+<a href="#versioninfo_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -529,6 +578,14 @@ The TransferConfig resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="transfer_configs_id_python">
 <a href="#transfer_configs_id_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>configs_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authorization_code_python">
+<a href="#authorization_code_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -621,7 +678,23 @@ The TransferConfig resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduleoptions">Schedule<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options customizing the data transfer schedule.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Options customizing the data transfer schedule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_account_name_python">
+<a href="#service_account_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_info_python">
+<a href="#version_info_python" style="color: inherit; text-decoration: inherit;">version_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

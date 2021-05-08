@@ -27,10 +27,14 @@ Creates a Serverless VPC Access connector, returns an operation.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Connector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">connector_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">connectors_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">ip_cidr_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">max_instances</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
               <span class="nx">max_throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+              <span class="nx">min_instances</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
               <span class="nx">min_throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -58,25 +62,19 @@ Creates a Serverless VPC Access connector, returns an operation.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectorArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -88,25 +86,19 @@ Creates a Serverless VPC Access connector, returns an operation.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectorArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -118,33 +110,25 @@ Creates a Serverless VPC Access connector, returns an operation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectorArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -156,25 +140,19 @@ Creates a Serverless VPC Access connector, returns an operation.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectorArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -190,6 +168,14 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="connectorid_csharp">
+<a href="#connectorid_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="connectorsid_csharp">
 <a href="#connectorsid_csharp" style="color: inherit; text-decoration: inherit;">Connectors<wbr>Id</a>
@@ -223,6 +209,22 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="machinetype_csharp">
+<a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Machine type of VM Instance underlying connector. Default is e2-micro{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxinstances_csharp">
+<a href="#maxinstances_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum value of instances in autoscaling group underlying the connector.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxthroughput_csharp">
 <a href="#maxthroughput_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Throughput</a>
 </span>
@@ -230,6 +232,14 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum throughput of the connector in Mbps. Default is 200, max is 1000.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mininstances_csharp">
+<a href="#mininstances_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum value of instances in autoscaling group underlying the connector.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minthroughput_csharp">
 <a href="#minthroughput_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Throughput</a>
@@ -267,6 +277,14 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="connectorid_go">
+<a href="#connectorid_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="connectorsid_go">
 <a href="#connectorsid_go" style="color: inherit; text-decoration: inherit;">Connectors<wbr>Id</a>
 </span>
@@ -299,6 +317,22 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="machinetype_go">
+<a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Machine type of VM Instance underlying connector. Default is e2-micro{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxinstances_go">
+<a href="#maxinstances_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum value of instances in autoscaling group underlying the connector.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxthroughput_go">
 <a href="#maxthroughput_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Throughput</a>
 </span>
@@ -306,6 +340,14 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum throughput of the connector in Mbps. Default is 200, max is 1000.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mininstances_go">
+<a href="#mininstances_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum value of instances in autoscaling group underlying the connector.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minthroughput_go">
 <a href="#minthroughput_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Throughput</a>
@@ -343,6 +385,14 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="connectorid_nodejs">
+<a href="#connectorid_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="connectorsid_nodejs">
 <a href="#connectorsid_nodejs" style="color: inherit; text-decoration: inherit;">connectors<wbr>Id</a>
 </span>
@@ -375,6 +425,22 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="machinetype_nodejs">
+<a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Machine type of VM Instance underlying connector. Default is e2-micro{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxinstances_nodejs">
+<a href="#maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Maximum value of instances in autoscaling group underlying the connector.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxthroughput_nodejs">
 <a href="#maxthroughput_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Throughput</a>
 </span>
@@ -382,6 +448,14 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum throughput of the connector in Mbps. Default is 200, max is 1000.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mininstances_nodejs">
+<a href="#mininstances_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Minimum value of instances in autoscaling group underlying the connector.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minthroughput_nodejs">
 <a href="#minthroughput_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Throughput</a>
@@ -419,6 +493,14 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="connector_id_python">
+<a href="#connector_id_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="connectors_id_python">
 <a href="#connectors_id_python" style="color: inherit; text-decoration: inherit;">connectors_<wbr>id</a>
 </span>
@@ -451,6 +533,22 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="machine_type_python">
+<a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Machine type of VM Instance underlying connector. Default is e2-micro{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_instances_python">
+<a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum value of instances in autoscaling group underlying the connector.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_throughput_python">
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
 </span>
@@ -458,6 +556,14 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum throughput of the connector in Mbps. Default is 200, max is 1000.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_instances_python">
+<a href="#min_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum value of instances in autoscaling group underlying the connector.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_throughput_python">
 <a href="#min_throughput_python" style="color: inherit; text-decoration: inherit;">min_<wbr>throughput</a>
