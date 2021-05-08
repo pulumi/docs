@@ -41,6 +41,7 @@ class MyStack : Stack
         {
             IdentityPoolName = "identity pool",
             AllowUnauthenticatedIdentities = false,
+            AllowClassicFlow = false,
             CognitoIdentityProviders = 
             {
                 new Aws.Cognito.Inputs.IdentityPoolCognitoIdentityProviderArgs
@@ -96,6 +97,7 @@ default = aws.iam.SamlProvider("default", saml_metadata_document=(lambda path: o
 main = aws.cognito.IdentityPool("main",
     identity_pool_name="identity pool",
     allow_unauthenticated_identities=False,
+    allow_classic_flow=False,
     cognito_identity_providers=[
         aws.cognito.IdentityPoolCognitoIdentityProviderArgs(
             client_id="6lhlkkfbfb4q5kpp90urffae",
@@ -132,6 +134,7 @@ const _default = new aws.iam.SamlProvider("default", {samlMetadataDocument: fs.r
 const main = new aws.cognito.IdentityPool("main", {
     identityPoolName: "identity pool",
     allowUnauthenticatedIdentities: false,
+    allowClassicFlow: false,
     cognitoIdentityProviders: [
         {
             clientId: "6lhlkkfbfb4q5kpp90urffae",
@@ -177,6 +180,7 @@ const main = new aws.cognito.IdentityPool("main", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">IdentityPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">allow_classic_flow</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">allow_unauthenticated_identities</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">cognito_identity_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[IdentityPoolCognitoIdentityProviderArgs]]</span> = None<span class="p">,</span>
                  <span class="nx">developer_provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -208,25 +212,19 @@ const main = new aws.cognito.IdentityPool("main", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IdentityPoolArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -238,25 +236,19 @@ const main = new aws.cognito.IdentityPool("main", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IdentityPoolArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -268,33 +260,25 @@ const main = new aws.cognito.IdentityPool("main", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IdentityPoolArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -306,25 +290,19 @@ const main = new aws.cognito.IdentityPool("main", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IdentityPoolArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -348,6 +326,15 @@ The IdentityPool resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cognito Identity Pool name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowclassicflow_csharp">
+<a href="#allowclassicflow_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Classic<wbr>Flow</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the classic / basic authentication flow. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowunauthenticatedidentities_csharp">
@@ -436,6 +423,15 @@ backend and the Cognito service to communicate about the developer provider.
     <dd>{{% md %}}The Cognito Identity Pool name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allowclassicflow_go">
+<a href="#allowclassicflow_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Classic<wbr>Flow</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the classic / basic authentication flow. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="allowunauthenticatedidentities_go">
 <a href="#allowunauthenticatedidentities_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Unauthenticated<wbr>Identities</a>
 </span>
@@ -522,6 +518,15 @@ backend and the Cognito service to communicate about the developer provider.
     <dd>{{% md %}}The Cognito Identity Pool name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allowclassicflow_nodejs">
+<a href="#allowclassicflow_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Classic<wbr>Flow</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the classic / basic authentication flow. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="allowunauthenticatedidentities_nodejs">
 <a href="#allowunauthenticatedidentities_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Unauthenticated<wbr>Identities</a>
 </span>
@@ -606,6 +611,15 @@ backend and the Cognito service to communicate about the developer provider.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cognito Identity Pool name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_classic_flow_python">
+<a href="#allow_classic_flow_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>classic_<wbr>flow</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the classic / basic authentication flow. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_unauthenticated_identities_python">
@@ -789,6 +803,7 @@ Get an existing IdentityPool resource's state with the given name, ID, and optio
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">allow_classic_flow</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">allow_unauthenticated_identities</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">cognito_identity_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[IdentityPoolCognitoIdentityProviderArgs]]</span> = None<span class="p">,</span>
@@ -911,6 +926,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_allowclassicflow_csharp">
+<a href="#state_allowclassicflow_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Classic<wbr>Flow</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the classic / basic authentication flow. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_allowunauthenticatedidentities_csharp">
 <a href="#state_allowunauthenticatedidentities_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Unauthenticated<wbr>Identities</a>
 </span>
@@ -1005,6 +1029,15 @@ backend and the Cognito service to communicate about the developer provider.
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_allowclassicflow_go">
+<a href="#state_allowclassicflow_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Classic<wbr>Flow</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the classic / basic authentication flow. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowunauthenticatedidentities_go">
 <a href="#state_allowunauthenticatedidentities_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Unauthenticated<wbr>Identities</a>
@@ -1101,6 +1134,15 @@ backend and the Cognito service to communicate about the developer provider.
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_allowclassicflow_nodejs">
+<a href="#state_allowclassicflow_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Classic<wbr>Flow</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the classic / basic authentication flow. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_allowunauthenticatedidentities_nodejs">
 <a href="#state_allowunauthenticatedidentities_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Unauthenticated<wbr>Identities</a>
 </span>
@@ -1195,6 +1237,15 @@ backend and the Cognito service to communicate about the developer provider.
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_allow_classic_flow_python">
+<a href="#state_allow_classic_flow_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>classic_<wbr>flow</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the classic / basic authentication flow. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_unauthenticated_identities_python">
 <a href="#state_allow_unauthenticated_identities_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>unauthenticated_<wbr>identities</a>
