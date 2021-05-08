@@ -175,15 +175,15 @@ import pulumi_azure_native as azure_native
 
 report_by_billing_account = azure_native.costmanagement.ReportByBillingAccount("reportByBillingAccount",
     billing_account_id="123456",
-    definition=azure_native.costmanagement.ReportDefinitionArgs(
-        dataset=azure_native.costmanagement.ReportDatasetArgs(
-            aggregation={
+    definition={
+        "dataset": {
+            "aggregation": {
                 "costSum": azure_native.costmanagement.ReportAggregationArgs(
                     function="Sum",
                     name="PreTaxCost",
                 ),
             },
-            configuration=azure_native.costmanagement.ReportDatasetConfigurationArgs(
+            "configuration": azure_native.costmanagement.ReportDatasetConfigurationArgs(
                 columns=[
                     "Date",
                     "MeterId",
@@ -192,10 +192,10 @@ report_by_billing_account = azure_native.costmanagement.ReportByBillingAccount("
                     "PreTaxCost",
                 ],
             ),
-            filter={
+            "filter": {
                 "and": [
-                    azure_native.costmanagement.ReportFilterArgs(
-                        or_=[
+                    {
+                        "or": [
                             azure_native.costmanagement.ReportFilterArgs(
                                 dimension=azure_native.costmanagement.ReportComparisonExpressionArgs(
                                     name="ResourceLocation",
@@ -217,7 +217,7 @@ report_by_billing_account = azure_native.costmanagement.ReportByBillingAccount("
                                 ),
                             ),
                         ],
-                    ),
+                    },
                     azure_native.costmanagement.ReportFilterArgs(
                         dimension=azure_native.costmanagement.ReportComparisonExpressionArgs(
                             name="ResourceGroup",
@@ -227,8 +227,8 @@ report_by_billing_account = azure_native.costmanagement.ReportByBillingAccount("
                     ),
                 ],
             },
-            granularity="Daily",
-            grouping=[
+            "granularity": "Daily",
+            "grouping": [
                 azure_native.costmanagement.ReportGroupingArgs(
                     name="SubscriptionName",
                     type="Dimension",
@@ -238,10 +238,10 @@ report_by_billing_account = azure_native.costmanagement.ReportByBillingAccount("
                     type="Tag",
                 ),
             ],
-        ),
-        timeframe="MonthToDate",
-        type="Usage",
-    ),
+        },
+        "timeframe": "MonthToDate",
+        "type": "Usage",
+    },
     delivery_info=azure_native.costmanagement.ReportDeliveryInfoArgs(
         destination=azure_native.costmanagement.ReportDeliveryDestinationArgs(
             container="reports",

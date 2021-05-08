@@ -18,6 +18,7 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="aadiam/" title="aadiam"><span class="symbol module"></span>aadiam</a></li>
     <li><a href="addons/" title="addons"><span class="symbol module"></span>addons</a></li>
     <li><a href="advisor/" title="advisor"><span class="symbol module"></span>advisor</a></li>
+    <li><a href="agfoodplatform/" title="agfoodplatform"><span class="symbol module"></span>agfoodplatform</a></li>
     <li><a href="alertsmanagement/" title="alertsmanagement"><span class="symbol module"></span>alertsmanagement</a></li>
     <li><a href="analysisservices/" title="analysisservices"><span class="symbol module"></span>analysisservices</a></li>
     <li><a href="apimanagement/" title="apimanagement"><span class="symbol module"></span>apimanagement</a></li>
@@ -194,6 +195,6 @@ A native Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.4.0</dd>
+	<dd>1.5.0</dd>
 </dl>
 
