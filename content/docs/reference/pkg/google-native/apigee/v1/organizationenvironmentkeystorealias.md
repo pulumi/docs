@@ -27,13 +27,18 @@ Creates an alias from a key/certificate pair. The structure of the request is co
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">OrganizationEnvironmentKeystoreAlias</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                         <span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                          <span class="nx">aliases_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                          <span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                          <span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                          <span class="nx">environments_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                          <span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Mapping[str, str]]]</span> = None<span class="p">,</span>
+                                         <span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                         <span class="nx">ignore_expiry_validation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                         <span class="nx">ignore_newline_validation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                          <span class="nx">keystores_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                         <span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                                         <span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                         <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">OrganizationEnvironmentKeystoreAlias</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationEnvironmentKeystoreAliasArgs</a></span><span class="p">,</span>
@@ -56,25 +61,19 @@ Creates an alias from a key/certificate pair. The structure of the request is co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OrganizationEnvironmentKeystoreAliasArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -86,25 +85,19 @@ Creates an alias from a key/certificate pair. The structure of the request is co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OrganizationEnvironmentKeystoreAliasArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -116,33 +109,25 @@ Creates an alias from a key/certificate pair. The structure of the request is co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OrganizationEnvironmentKeystoreAliasArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -154,25 +139,19 @@ Creates an alias from a key/certificate pair. The structure of the request is co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OrganizationEnvironmentKeystoreAliasArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -205,6 +184,14 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="format_csharp">
+<a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="keystoresid_csharp">
 <a href="#keystoresid_csharp" style="color: inherit; text-decoration: inherit;">Keystores<wbr>Id</a>
 </span>
@@ -215,6 +202,14 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
             title="Required">
         <span id="organizationsid_csharp">
 <a href="#organizationsid_csharp" style="color: inherit; text-decoration: inherit;">Organizations<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alias_csharp">
+<a href="#alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -243,7 +238,31 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}Application specific response metadata. Must be set in the first response for streaming APIs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Application specific response metadata. Must be set in the first response for streaming APIs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ignoreexpiryvalidation_csharp">
+<a href="#ignoreexpiryvalidation_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Expiry<wbr>Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ignorenewlinevalidation_csharp">
+<a href="#ignorenewlinevalidation_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Newline<wbr>Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -265,6 +284,14 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="format_go">
+<a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="keystoresid_go">
 <a href="#keystoresid_go" style="color: inherit; text-decoration: inherit;">Keystores<wbr>Id</a>
 </span>
@@ -275,6 +302,14 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
             title="Required">
         <span id="organizationsid_go">
 <a href="#organizationsid_go" style="color: inherit; text-decoration: inherit;">Organizations<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alias_go">
+<a href="#alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -303,7 +338,31 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
         <span class="property-indicator"></span>
         <span class="property-type">[]map[string]string</span>
     </dt>
-    <dd>{{% md %}}Application specific response metadata. Must be set in the first response for streaming APIs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Application specific response metadata. Must be set in the first response for streaming APIs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ignoreexpiryvalidation_go">
+<a href="#ignoreexpiryvalidation_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Expiry<wbr>Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ignorenewlinevalidation_go">
+<a href="#ignorenewlinevalidation_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Newline<wbr>Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -325,6 +384,14 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="format_nodejs">
+<a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="keystoresid_nodejs">
 <a href="#keystoresid_nodejs" style="color: inherit; text-decoration: inherit;">keystores<wbr>Id</a>
 </span>
@@ -335,6 +402,14 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
             title="Required">
         <span id="organizationsid_nodejs">
 <a href="#organizationsid_nodejs" style="color: inherit; text-decoration: inherit;">organizations<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alias_nodejs">
+<a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -363,7 +438,31 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}[]</span>
     </dt>
-    <dd>{{% md %}}Application specific response metadata. Must be set in the first response for streaming APIs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Application specific response metadata. Must be set in the first response for streaming APIs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ignoreexpiryvalidation_nodejs">
+<a href="#ignoreexpiryvalidation_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Expiry<wbr>Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ignorenewlinevalidation_nodejs">
+<a href="#ignorenewlinevalidation_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Newline<wbr>Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -385,6 +484,14 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="format_python">
+<a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="keystores_id_python">
 <a href="#keystores_id_python" style="color: inherit; text-decoration: inherit;">keystores_<wbr>id</a>
 </span>
@@ -395,6 +502,14 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
             title="Required">
         <span id="organizations_id_python">
 <a href="#organizations_id_python" style="color: inherit; text-decoration: inherit;">organizations_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alias_python">
+<a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -423,7 +538,31 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
-    <dd>{{% md %}}Application specific response metadata. Must be set in the first response for streaming APIs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Application specific response metadata. Must be set in the first response for streaming APIs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ignore_expiry_validation_python">
+<a href="#ignore_expiry_validation_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>expiry_<wbr>validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ignore_newline_validation_python">
+<a href="#ignore_newline_validation_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>newline_<wbr>validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -435,14 +574,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="alias_csharp">
-<a href="#alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID for this alias. Values must match the regular expression `[^/]{1,255}`.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certsinfo_csharp">
 <a href="#certsinfo_csharp" style="color: inherit; text-decoration: inherit;">Certs<wbr>Info</a>
@@ -472,14 +603,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="alias_go">
-<a href="#alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID for this alias. Values must match the regular expression `[^/]{1,255}`.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="certsinfo_go">
 <a href="#certsinfo_go" style="color: inherit; text-decoration: inherit;">Certs<wbr>Info</a>
 </span>
@@ -508,14 +631,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="alias_nodejs">
-<a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID for this alias. Values must match the regular expression `[^/]{1,255}`.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="certsinfo_nodejs">
 <a href="#certsinfo_nodejs" style="color: inherit; text-decoration: inherit;">certs<wbr>Info</a>
 </span>
@@ -543,14 +658,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="alias_python">
-<a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource ID for this alias. Values must match the regular expression `[^/]{1,255}`.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certs_info_python">
 <a href="#certs_info_python" style="color: inherit; text-decoration: inherit;">certs_<wbr>info</a>

@@ -36,6 +36,7 @@ Creates a machine image in the specified project using the data that is included
                  <span class="nx">machine_image_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">source_disk_encryption_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.SourceDiskEncryptionKeyArgs]]</span> = None<span class="p">,</span>
@@ -66,25 +67,19 @@ Creates a machine image in the specified project using the data that is included
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MachineImageArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -96,25 +91,19 @@ Creates a machine image in the specified project using the data that is included
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MachineImageArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -126,33 +115,25 @@ Creates a machine image in the specified project using the data that is included
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MachineImageArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -164,25 +145,19 @@ Creates a machine image in the specified project using the data that is included
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MachineImageArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -213,7 +188,17 @@ The MachineImage resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sourceinstance_csharp">
+<a href="#sourceinstance_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source instance used to create the machine image. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
+- https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance 
+- projects/project/zones/zone/instances/instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -277,6 +262,14 @@ If you do not provide an encryption key when creating the machine image, then th
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestid_csharp">
+<a href="#requestid_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="satisfiespzs_csharp">
 <a href="#satisfiespzs_csharp" style="color: inherit; text-decoration: inherit;">Satisfies<wbr>Pzs</a>
 </span>
@@ -300,16 +293,6 @@ If you do not provide an encryption key when creating the machine image, then th
         <span class="property-type"><a href="#sourcediskencryptionkey">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Input Only] The customer-supplied encryption key of the disks attached to the source instance. Required if the source disk is protected by a customer-supplied encryption key.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourceinstance_csharp">
-<a href="#sourceinstance_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The source instance used to create the machine image. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
-- https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance 
-- projects/project/zones/zone/instances/instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceinstanceproperties_csharp">
 <a href="#sourceinstanceproperties_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Properties</a>
@@ -361,7 +344,17 @@ If you do not provide an encryption key when creating the machine image, then th
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sourceinstance_go">
+<a href="#sourceinstance_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source instance used to create the machine image. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
+- https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance 
+- projects/project/zones/zone/instances/instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -425,6 +418,14 @@ If you do not provide an encryption key when creating the machine image, then th
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestid_go">
+<a href="#requestid_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="satisfiespzs_go">
 <a href="#satisfiespzs_go" style="color: inherit; text-decoration: inherit;">Satisfies<wbr>Pzs</a>
 </span>
@@ -448,16 +449,6 @@ If you do not provide an encryption key when creating the machine image, then th
         <span class="property-type"><a href="#sourcediskencryptionkey">[]Source<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}[Input Only] The customer-supplied encryption key of the disks attached to the source instance. Required if the source disk is protected by a customer-supplied encryption key.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourceinstance_go">
-<a href="#sourceinstance_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The source instance used to create the machine image. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
-- https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance 
-- projects/project/zones/zone/instances/instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceinstanceproperties_go">
 <a href="#sourceinstanceproperties_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Properties</a>
@@ -509,7 +500,17 @@ If you do not provide an encryption key when creating the machine image, then th
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sourceinstance_nodejs">
+<a href="#sourceinstance_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source instance used to create the machine image. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
+- https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance 
+- projects/project/zones/zone/instances/instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -573,6 +574,14 @@ If you do not provide an encryption key when creating the machine image, then th
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestid_nodejs">
+<a href="#requestid_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="satisfiespzs_nodejs">
 <a href="#satisfiespzs_nodejs" style="color: inherit; text-decoration: inherit;">satisfies<wbr>Pzs</a>
 </span>
@@ -596,16 +605,6 @@ If you do not provide an encryption key when creating the machine image, then th
         <span class="property-type"><a href="#sourcediskencryptionkey">Source<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Input Only] The customer-supplied encryption key of the disks attached to the source instance. Required if the source disk is protected by a customer-supplied encryption key.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourceinstance_nodejs">
-<a href="#sourceinstance_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The source instance used to create the machine image. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
-- https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance 
-- projects/project/zones/zone/instances/instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceinstanceproperties_nodejs">
 <a href="#sourceinstanceproperties_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance<wbr>Properties</a>
@@ -657,7 +656,17 @@ If you do not provide an encryption key when creating the machine image, then th
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="source_instance_python">
+<a href="#source_instance_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The source instance used to create the machine image. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
+- https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance 
+- projects/project/zones/zone/instances/instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -721,6 +730,14 @@ If you do not provide an encryption key when creating the machine image, then th
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="request_id_python">
+<a href="#request_id_python" style="color: inherit; text-decoration: inherit;">request_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="satisfies_pzs_python">
 <a href="#satisfies_pzs_python" style="color: inherit; text-decoration: inherit;">satisfies_<wbr>pzs</a>
 </span>
@@ -744,16 +761,6 @@ If you do not provide an encryption key when creating the machine image, then th
         <span class="property-type"><a href="#sourcediskencryptionkey">Source<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Input Only] The customer-supplied encryption key of the disks attached to the source instance. Required if the source disk is protected by a customer-supplied encryption key.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="source_instance_python">
-<a href="#source_instance_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The source instance used to create the machine image. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
-- https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance 
-- projects/project/zones/zone/instances/instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_instance_properties_python">
 <a href="#source_instance_properties_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance_<wbr>properties</a>
