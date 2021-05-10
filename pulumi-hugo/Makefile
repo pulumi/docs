@@ -3,7 +3,7 @@ clean:
 	./scripts/clean.sh
 
 .PHONY: ensure
-ensure: clean
+ensure:
 	./scripts/ensure.sh
 
 .PHONY: lint

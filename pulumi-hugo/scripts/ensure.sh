@@ -16,7 +16,7 @@ if [[ -z "$(which go)" || -z "$(go version | grep ${REQUIRED_GO})"  ]]; then
     exit 1
 fi
 
-if [[ -z "$(which hugo)" || -z "$(hugo version | grep ${REQUIRED_HUGO})"  ]]; then
+if [[ -z "$(which hugo)" ]]; then
     echo "This project uses Hugo version ${REQUIRED_HUGO}."
     echo "See the README for the complete list of prerequisities and "
     echo "https://gohugo.io/getting-started/quick-start for help installing Hugo."
