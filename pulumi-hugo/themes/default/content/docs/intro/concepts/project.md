@@ -33,9 +33,9 @@ The following are other examples of `Pulumi.yaml` files that define project conf
     name: my-project
     description: A minimal JavaScript Pulumi program.
     runtime:
-    name: nodejs
-    options:
-        typescript: false
+        name: nodejs
+        options:
+            typescript: false
     ```
 
 * A `Pulumi.yaml` file for a `go` program that will only use a pre-built executable by the name `mybinary`.
