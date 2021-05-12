@@ -184,7 +184,7 @@ export class Convert {
         }
     }
 
-    // Ensure the supporting libaries scripts we expect have been loaded and their globals are usable.
+    // Ensure the supporting libraries we expect have been loaded and their globals are usable.
     private validateGlobals() {
         const missingGlobals = [
             typeof CodeMirror,
@@ -494,8 +494,8 @@ export class Convert {
                         <p>
                             There could be a problem with the code you submitted, or it might use a
                             feature { this.conversionTool.name } doesn't yet support. See below for details.
-                            Please also check the <a href={issueURL}>known issues</a> or 
-                            report a <a href={issueURL}>new issue</a> if you believe this 
+                            Please also check the <a href={issueURL}>known issues</a> or
+                            report a <a href={issueURL}>new issue</a> if you believe this
                             might be a bug or missing feature in { this.conversionTool.name }.
 
                             For help converting this or another { this.sourceLanguageName } project to Pulumi,
@@ -511,7 +511,7 @@ export class Convert {
                             The code you submitted was valid, but { this.conversionTool.name } was unable to
                             convert it completely, so a partial conversion has been provided for you. See below
                             for details. Please also check the <a href={issueURL}>known issues</a> or
-                            report a <a href={issueURL}>new issue</a> if you believe this 
+                            report a <a href={issueURL}>new issue</a> if you believe this
                             might be a bug or missing feature in { this.conversionTool.name }.
 
                             For help converting this or another { this.sourceLanguageName } project to Pulumi,

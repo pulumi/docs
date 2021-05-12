@@ -66,6 +66,10 @@ body:not(.section-docs):not(.section-blog):not(.section-authors):not(.section-ta
         }
     }
 
+    .btn-primary, .btn-secondary {
+        @apply whitespace-normal;
+    }
+
     .btn-primary {
         @include gradient-button;
     }

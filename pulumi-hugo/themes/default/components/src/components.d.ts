@@ -11,6 +11,7 @@ import {
   ChooserKey,
   ChooserMode,
   ChooserType,
+  OSKey,
 } from './components/chooser/chooser';
 import {
   ChooserKey as ChooserKey1,
@@ -69,6 +70,9 @@ export namespace Components {
     'class'?: string;
     'formId': string;
     'goToWebinarKey'?: string;
+  }
+  interface PulumiInstall {
+    'os'?: OSKey;
   }
   interface PulumiRoot {}
   interface PulumiSlotMachine {
@@ -173,6 +177,12 @@ declare global {
     new (): HTMLPulumiHubspotFormElement;
   };
 
+  interface HTMLPulumiInstallElement extends Components.PulumiInstall, HTMLStencilElement {}
+  var HTMLPulumiInstallElement: {
+    prototype: HTMLPulumiInstallElement;
+    new (): HTMLPulumiInstallElement;
+  };
+
   interface HTMLPulumiRootElement extends Components.PulumiRoot, HTMLStencilElement {}
   var HTMLPulumiRootElement: {
     prototype: HTMLPulumiRootElement;
@@ -226,6 +236,7 @@ declare global {
     'pulumi-examples': HTMLPulumiExamplesElement;
     'pulumi-greenhouse-jobs-list': HTMLPulumiGreenhouseJobsListElement;
     'pulumi-hubspot-form': HTMLPulumiHubspotFormElement;
+    'pulumi-install': HTMLPulumiInstallElement;
     'pulumi-root': HTMLPulumiRootElement;
     'pulumi-slot-machine': HTMLPulumiSlotMachineElement;
     'pulumi-swipeable': HTMLPulumiSwipeableElement;
@@ -284,6 +295,9 @@ declare namespace LocalJSX {
     'formId'?: string;
     'goToWebinarKey'?: string;
   }
+  interface PulumiInstall {
+    'os'?: OSKey;
+  }
   interface PulumiRoot {
     'onRendered'?: (event: CustomEvent<any>) => void;
   }
@@ -326,6 +340,7 @@ declare namespace LocalJSX {
     'pulumi-examples': PulumiExamples;
     'pulumi-greenhouse-jobs-list': PulumiGreenhouseJobsList;
     'pulumi-hubspot-form': PulumiHubspotForm;
+    'pulumi-install': PulumiInstall;
     'pulumi-root': PulumiRoot;
     'pulumi-slot-machine': PulumiSlotMachine;
     'pulumi-swipeable': PulumiSwipeable;
@@ -353,6 +368,7 @@ declare module "@stencil/core" {
       'pulumi-examples': LocalJSX.PulumiExamples & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
       'pulumi-greenhouse-jobs-list': LocalJSX.PulumiGreenhouseJobsList & JSXBase.HTMLAttributes<HTMLPulumiGreenhouseJobsListElement>;
       'pulumi-hubspot-form': LocalJSX.PulumiHubspotForm & JSXBase.HTMLAttributes<HTMLPulumiHubspotFormElement>;
+      'pulumi-install': LocalJSX.PulumiInstall & JSXBase.HTMLAttributes<HTMLPulumiInstallElement>;
       'pulumi-root': LocalJSX.PulumiRoot & JSXBase.HTMLAttributes<HTMLPulumiRootElement>;
       'pulumi-slot-machine': LocalJSX.PulumiSlotMachine & JSXBase.HTMLAttributes<HTMLPulumiSlotMachineElement>;
       'pulumi-swipeable': LocalJSX.PulumiSwipeable & JSXBase.HTMLAttributes<HTMLPulumiSwipeableElement>;

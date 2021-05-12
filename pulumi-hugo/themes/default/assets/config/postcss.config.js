@@ -85,6 +85,7 @@ module.exports = {
                 /^pulumi-convert/,
                 /^pulumi-greenhouse-jobs-list/,
                 /^pulumi-audio/,
+                /^pulumi-install/,
             ],
 
             // We need to extract the Tailwind screen size selectors (e.g. sm, md, lg)

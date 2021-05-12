@@ -116,7 +116,7 @@ function normalizeText(lang, text) {
 }
 
 function addCopyButton(e) {
-    var tooltipText = "Click to copy";
+    var tooltipText = "Copy";
     var buttonHtml =
         '<div class="copy-button-container">' +
         '    <pulumi-tooltip>' +

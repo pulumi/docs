@@ -375,4 +375,23 @@
             bottom: 50%;
         }
     }
+
+    &.get-started-install-section {
+        .circle-right {
+            @apply rounded-full absolute bg-yellow-600;
+            width: 10rem;
+            height: 10rem;
+            right: -11rem;
+        }
+    }
+
+    &.get-started-step-2-section {
+        .circle-left {
+            @apply rounded-full absolute bg-salmon-600;
+            width: 25rem;
+            height: 25rem;
+            left: -12rem;
+            bottom: 15rem;
+        }
+    }
 }
