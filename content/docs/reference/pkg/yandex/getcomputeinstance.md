@@ -403,7 +403,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN of the instance.
+    <dd>{{% md %}}DNS record FQDN.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -590,7 +590,7 @@ within the instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN of the instance.
+    <dd>{{% md %}}DNS record FQDN.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -777,7 +777,7 @@ within the instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN of the instance.
+    <dd>{{% md %}}DNS record FQDN.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -964,7 +964,7 @@ within the instance.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}FQDN of the instance.
+    <dd>{{% md %}}DNS record FQDN.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -1556,6 +1556,15 @@ within the instance.
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="dnsrecords_csharp">
+<a href="#dnsrecords_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcomputeinstancenetworkinterfacednsrecord">List&lt;Get<wbr>Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Dns<wbr>Record&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv4 DNS records. The structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="index_csharp">
 <a href="#index_csharp" style="color: inherit; text-decoration: inherit;">Index</a>
 </span>
@@ -1599,6 +1608,15 @@ within the instance.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ipv6dnsrecords_csharp">
+<a href="#ipv6dnsrecords_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Dns<wbr>Records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcomputeinstancenetworkinterfaceipv6dnsrecord">List&lt;Get<wbr>Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Ipv6Dns<wbr>Record&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv6 DNS records. The structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="macaddress_csharp">
 <a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
 </span>
@@ -1615,6 +1633,15 @@ within the instance.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Assigned for the instance's public address that is used to access the internet over NAT.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="natdnsrecords_csharp">
+<a href="#natdnsrecords_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Dns<wbr>Records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcomputeinstancenetworkinterfacenatdnsrecord">List&lt;Get<wbr>Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Nat<wbr>Dns<wbr>Record&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv4 NAT DNS records. The structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="natipaddress_csharp">
@@ -1656,6 +1683,15 @@ within the instance.
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dnsrecords_go">
+<a href="#dnsrecords_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcomputeinstancenetworkinterfacednsrecord">[]Get<wbr>Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Dns<wbr>Record</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv4 DNS records. The structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="index_go">
 <a href="#index_go" style="color: inherit; text-decoration: inherit;">Index</a>
@@ -1700,6 +1736,15 @@ within the instance.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ipv6dnsrecords_go">
+<a href="#ipv6dnsrecords_go" style="color: inherit; text-decoration: inherit;">Ipv6Dns<wbr>Records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcomputeinstancenetworkinterfaceipv6dnsrecord">[]Get<wbr>Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Ipv6Dns<wbr>Record</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv6 DNS records. The structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="macaddress_go">
 <a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
 </span>
@@ -1716,6 +1761,15 @@ within the instance.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Assigned for the instance's public address that is used to access the internet over NAT.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="natdnsrecords_go">
+<a href="#natdnsrecords_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Dns<wbr>Records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcomputeinstancenetworkinterfacenatdnsrecord">[]Get<wbr>Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Nat<wbr>Dns<wbr>Record</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv4 NAT DNS records. The structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="natipaddress_go">
@@ -1757,6 +1811,15 @@ within the instance.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dnsrecords_nodejs">
+<a href="#dnsrecords_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcomputeinstancenetworkinterfacednsrecord">Get<wbr>Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Dns<wbr>Record[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv4 DNS records. The structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="index_nodejs">
 <a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
@@ -1801,6 +1864,15 @@ within the instance.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ipv6dnsrecords_nodejs">
+<a href="#ipv6dnsrecords_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Dns<wbr>Records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcomputeinstancenetworkinterfaceipv6dnsrecord">Get<wbr>Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Ipv6Dns<wbr>Record[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv6 DNS records. The structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="macaddress_nodejs">
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
 </span>
@@ -1817,6 +1889,15 @@ within the instance.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Assigned for the instance's public address that is used to access the internet over NAT.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="natdnsrecords_nodejs">
+<a href="#natdnsrecords_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Dns<wbr>Records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcomputeinstancenetworkinterfacenatdnsrecord">Get<wbr>Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Nat<wbr>Dns<wbr>Record[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv4 NAT DNS records. The structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="natipaddress_nodejs">
@@ -1858,6 +1939,15 @@ within the instance.
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dns_records_python">
+<a href="#dns_records_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcomputeinstancenetworkinterfacednsrecord">Sequence[Get<wbr>Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Dns<wbr>Record]</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv4 DNS records. The structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="index_python">
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
@@ -1902,6 +1992,15 @@ within the instance.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ipv6_dns_records_python">
+<a href="#ipv6_dns_records_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>dns_<wbr>records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcomputeinstancenetworkinterfaceipv6dnsrecord">Sequence[Get<wbr>Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Ipv6Dns<wbr>Record]</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv6 DNS records. The structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="mac_address_python">
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
 </span>
@@ -1918,6 +2017,15 @@ within the instance.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Assigned for the instance's public address that is used to access the internet over NAT.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nat_dns_records_python">
+<a href="#nat_dns_records_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>dns_<wbr>records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcomputeinstancenetworkinterfacenatdnsrecord">Sequence[Get<wbr>Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Nat<wbr>Dns<wbr>Record]</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv4 NAT DNS records. The structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nat_ip_address_python">
@@ -1954,6 +2062,498 @@ within the instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the subnet to attach this interface to. The subnet must reside in the same zone where this instance was created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getcomputeinstancenetworkinterfacednsrecord">Get<wbr>Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Dns<wbr>Record</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dnszoneid_csharp">
+<a href="#dnszoneid_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone is used).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdn_csharp">
+<a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ptr_csharp">
+<a href="#ptr_csharp" style="color: inherit; text-decoration: inherit;">Ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a TR DNS record.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ttl_csharp">
+<a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dnszoneid_go">
+<a href="#dnszoneid_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone is used).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdn_go">
+<a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ptr_go">
+<a href="#ptr_go" style="color: inherit; text-decoration: inherit;">Ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a TR DNS record.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ttl_go">
+<a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dnszoneid_nodejs">
+<a href="#dnszoneid_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone is used).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdn_nodejs">
+<a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ptr_nodejs">
+<a href="#ptr_nodejs" style="color: inherit; text-decoration: inherit;">ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a TR DNS record.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ttl_nodejs">
+<a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dns_zone_id_python">
+<a href="#dns_zone_id_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zone_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone is used).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdn_python">
+<a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ptr_python">
+<a href="#ptr_python" style="color: inherit; text-decoration: inherit;">ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a TR DNS record.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ttl_python">
+<a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getcomputeinstancenetworkinterfaceipv6dnsrecord">Get<wbr>Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Ipv6Dns<wbr>Record</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dnszoneid_csharp">
+<a href="#dnszoneid_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone is used).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdn_csharp">
+<a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ptr_csharp">
+<a href="#ptr_csharp" style="color: inherit; text-decoration: inherit;">Ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a TR DNS record.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ttl_csharp">
+<a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dnszoneid_go">
+<a href="#dnszoneid_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone is used).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdn_go">
+<a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ptr_go">
+<a href="#ptr_go" style="color: inherit; text-decoration: inherit;">Ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a TR DNS record.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ttl_go">
+<a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dnszoneid_nodejs">
+<a href="#dnszoneid_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone is used).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdn_nodejs">
+<a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ptr_nodejs">
+<a href="#ptr_nodejs" style="color: inherit; text-decoration: inherit;">ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a TR DNS record.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ttl_nodejs">
+<a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dns_zone_id_python">
+<a href="#dns_zone_id_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zone_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone is used).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdn_python">
+<a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ptr_python">
+<a href="#ptr_python" style="color: inherit; text-decoration: inherit;">ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a TR DNS record.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ttl_python">
+<a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getcomputeinstancenetworkinterfacenatdnsrecord">Get<wbr>Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Nat<wbr>Dns<wbr>Record</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dnszoneid_csharp">
+<a href="#dnszoneid_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone is used).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdn_csharp">
+<a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ptr_csharp">
+<a href="#ptr_csharp" style="color: inherit; text-decoration: inherit;">Ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a TR DNS record.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ttl_csharp">
+<a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dnszoneid_go">
+<a href="#dnszoneid_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone is used).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdn_go">
+<a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ptr_go">
+<a href="#ptr_go" style="color: inherit; text-decoration: inherit;">Ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a TR DNS record.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ttl_go">
+<a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dnszoneid_nodejs">
+<a href="#dnszoneid_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone is used).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdn_nodejs">
+<a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ptr_nodejs">
+<a href="#ptr_nodejs" style="color: inherit; text-decoration: inherit;">ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a TR DNS record.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ttl_nodejs">
+<a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dns_zone_id_python">
+<a href="#dns_zone_id_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zone_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone is used).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdn_python">
+<a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ptr_python">
+<a href="#ptr_python" style="color: inherit; text-decoration: inherit;">ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a TR DNS record.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ttl_python">
+<a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

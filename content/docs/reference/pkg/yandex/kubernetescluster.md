@@ -263,6 +263,7 @@ const zonalClusterResourceName = new yandex.KubernetesCluster("zonal_cluster_res
 <span class="k">def </span><span class="nx">KubernetesCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                       <span class="nx">cluster_ipv4_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">cluster_ipv6_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">kms_provider</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterKmsProviderArgs]</span> = None<span class="p">,</span>
@@ -275,7 +276,8 @@ const zonalClusterResourceName = new yandex.KubernetesCluster("zonal_cluster_res
                       <span class="nx">node_service_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">service_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                      <span class="nx">service_ipv4_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                      <span class="nx">service_ipv4_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">service_ipv6_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">KubernetesCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KubernetesClusterArgs</a></span><span class="p">,</span>
@@ -298,25 +300,19 @@ const zonalClusterResourceName = new yandex.KubernetesCluster("zonal_cluster_res
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -328,25 +324,19 @@ const zonalClusterResourceName = new yandex.KubernetesCluster("zonal_cluster_res
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -358,33 +348,25 @@ const zonalClusterResourceName = new yandex.KubernetesCluster("zonal_cluster_res
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -396,25 +378,19 @@ const zonalClusterResourceName = new yandex.KubernetesCluster("zonal_cluster_res
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -479,6 +455,15 @@ cluster will be located and on the folder where selected network resides.
     <dd>{{% md %}}CIDR block. IP range for allocating pod addresses.
 It should not overlap with any subnet in the network the Kubernetes cluster located in. Static routes will be
 set up for this CIDR blocks in node subnets.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clusteripv6range_csharp">
+<a href="#clusteripv6range_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identical to cluster_ipv4_range but for IPv6 protocol.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -563,6 +548,15 @@ If it is not provided, the default provider folder is used.
     <dd>{{% md %}}CIDR block. IP range Kubernetes service Kubernetes cluster
 IP addresses will be allocated from. It should not overlap with any subnet in the network
 the Kubernetes cluster located in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceipv6range_csharp">
+<a href="#serviceipv6range_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identical to service_ipv4_range but for IPv6 protocol.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -617,6 +611,15 @@ cluster will be located and on the folder where selected network resides.
     <dd>{{% md %}}CIDR block. IP range for allocating pod addresses.
 It should not overlap with any subnet in the network the Kubernetes cluster located in. Static routes will be
 set up for this CIDR blocks in node subnets.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clusteripv6range_go">
+<a href="#clusteripv6range_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identical to cluster_ipv4_range but for IPv6 protocol.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -701,6 +704,15 @@ If it is not provided, the default provider folder is used.
     <dd>{{% md %}}CIDR block. IP range Kubernetes service Kubernetes cluster
 IP addresses will be allocated from. It should not overlap with any subnet in the network
 the Kubernetes cluster located in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceipv6range_go">
+<a href="#serviceipv6range_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identical to service_ipv4_range but for IPv6 protocol.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -755,6 +767,15 @@ cluster will be located and on the folder where selected network resides.
     <dd>{{% md %}}CIDR block. IP range for allocating pod addresses.
 It should not overlap with any subnet in the network the Kubernetes cluster located in. Static routes will be
 set up for this CIDR blocks in node subnets.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clusteripv6range_nodejs">
+<a href="#clusteripv6range_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identical to cluster_ipv4_range but for IPv6 protocol.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -839,6 +860,15 @@ If it is not provided, the default provider folder is used.
     <dd>{{% md %}}CIDR block. IP range Kubernetes service Kubernetes cluster
 IP addresses will be allocated from. It should not overlap with any subnet in the network
 the Kubernetes cluster located in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceipv6range_nodejs">
+<a href="#serviceipv6range_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identical to service_ipv4_range but for IPv6 protocol.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -893,6 +923,15 @@ cluster will be located and on the folder where selected network resides.
     <dd>{{% md %}}CIDR block. IP range for allocating pod addresses.
 It should not overlap with any subnet in the network the Kubernetes cluster located in. Static routes will be
 set up for this CIDR blocks in node subnets.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cluster_ipv6_range_python">
+<a href="#cluster_ipv6_range_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ipv6_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identical to cluster_ipv4_range but for IPv6 protocol.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -977,6 +1016,15 @@ If it is not provided, the default provider folder is used.
     <dd>{{% md %}}CIDR block. IP range Kubernetes service Kubernetes cluster
 IP addresses will be allocated from. It should not overlap with any subnet in the network
 the Kubernetes cluster located in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_ipv6_range_python">
+<a href="#service_ipv6_range_python" style="color: inherit; text-decoration: inherit;">service_<wbr>ipv6_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identical to service_ipv4_range but for IPv6 protocol.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1015,6 +1063,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="loggroupid_csharp">
+<a href="#loggroupid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1055,6 +1112,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="loggroupid_go">
+<a href="#loggroupid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -1093,6 +1159,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="loggroupid_nodejs">
+<a href="#loggroupid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1133,6 +1208,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="log_group_id_python">
+<a href="#log_group_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -1160,12 +1244,14 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">cluster_ipv4_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_ipv6_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">health</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">kms_provider</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterKmsProviderArgs]</span> = None<span class="p">,</span>
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">log_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">master</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterMasterArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1175,6 +1261,7 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
         <span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">service_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">service_ipv4_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_ipv6_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KubernetesCluster</code></pre></div>
 {{% /choosable %}}
 
@@ -1299,6 +1386,15 @@ It should not overlap with any subnet in the network the Kubernetes cluster loca
 set up for this CIDR blocks in node subnets.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_clusteripv6range_csharp">
+<a href="#state_clusteripv6range_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identical to cluster_ipv4_range but for IPv6 protocol.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_createdat_csharp">
 <a href="#state_createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
 </span>
@@ -1352,6 +1448,15 @@ If it is not provided, the default provider folder is used.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_loggroupid_csharp">
+<a href="#state_loggroupid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_master_csharp">
@@ -1440,6 +1545,15 @@ IP addresses will be allocated from. It should not overlap with any subnet in th
 the Kubernetes cluster located in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_serviceipv6range_csharp">
+<a href="#state_serviceipv6range_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identical to service_ipv4_range but for IPv6 protocol.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -1462,6 +1576,15 @@ the Kubernetes cluster located in.
     <dd>{{% md %}}CIDR block. IP range for allocating pod addresses.
 It should not overlap with any subnet in the network the Kubernetes cluster located in. Static routes will be
 set up for this CIDR blocks in node subnets.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_clusteripv6range_go">
+<a href="#state_clusteripv6range_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identical to cluster_ipv4_range but for IPv6 protocol.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_go">
@@ -1517,6 +1640,15 @@ If it is not provided, the default provider folder is used.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_loggroupid_go">
+<a href="#state_loggroupid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_master_go">
@@ -1605,6 +1737,15 @@ IP addresses will be allocated from. It should not overlap with any subnet in th
 the Kubernetes cluster located in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_serviceipv6range_go">
+<a href="#state_serviceipv6range_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identical to service_ipv4_range but for IPv6 protocol.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -1627,6 +1768,15 @@ the Kubernetes cluster located in.
     <dd>{{% md %}}CIDR block. IP range for allocating pod addresses.
 It should not overlap with any subnet in the network the Kubernetes cluster located in. Static routes will be
 set up for this CIDR blocks in node subnets.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_clusteripv6range_nodejs">
+<a href="#state_clusteripv6range_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identical to cluster_ipv4_range but for IPv6 protocol.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_nodejs">
@@ -1682,6 +1832,15 @@ If it is not provided, the default provider folder is used.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_loggroupid_nodejs">
+<a href="#state_loggroupid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_master_nodejs">
@@ -1770,6 +1929,15 @@ IP addresses will be allocated from. It should not overlap with any subnet in th
 the Kubernetes cluster located in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_serviceipv6range_nodejs">
+<a href="#state_serviceipv6range_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identical to service_ipv4_range but for IPv6 protocol.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -1792,6 +1960,15 @@ the Kubernetes cluster located in.
     <dd>{{% md %}}CIDR block. IP range for allocating pod addresses.
 It should not overlap with any subnet in the network the Kubernetes cluster located in. Static routes will be
 set up for this CIDR blocks in node subnets.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_cluster_ipv6_range_python">
+<a href="#state_cluster_ipv6_range_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ipv6_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identical to cluster_ipv4_range but for IPv6 protocol.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_at_python">
@@ -1847,6 +2024,15 @@ If it is not provided, the default provider folder is used.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_log_group_id_python">
+<a href="#state_log_group_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_master_python">
@@ -1933,6 +2119,15 @@ cluster will be located and on the folder where selected network resides.
     <dd>{{% md %}}CIDR block. IP range Kubernetes service Kubernetes cluster
 IP addresses will be allocated from. It should not overlap with any subnet in the network
 the Kubernetes cluster located in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_service_ipv6_range_python">
+<a href="#state_service_ipv6_range_python" style="color: inherit; text-decoration: inherit;">service_<wbr>ipv6_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identical to service_ipv4_range but for IPv6 protocol.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">

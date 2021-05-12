@@ -260,6 +260,15 @@ The following output properties are available:
     <dd>{{% md %}}IP range for allocating pod addresses.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="clusteripv6range_csharp">
+<a href="#clusteripv6range_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identical to cluster_ipv4_range but for the IPv6 protocol.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
 </span>
@@ -320,6 +329,15 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="loggroupid_csharp">
+<a href="#loggroupid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="master_csharp">
@@ -402,7 +420,16 @@ cluster will be located and on the folder where selected network resides.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP range Kubernetes services Kubernetes cluster IP addresses will be allocated from
+    <dd>{{% md %}}IP range Kubernetes services Kubernetes cluster IP addresses will be allocated from.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="serviceipv6range_csharp">
+<a href="#serviceipv6range_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identical to service_ipv4_range but for the IPv6 protocol.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
@@ -433,6 +460,15 @@ cluster will be located and on the folder where selected network resides.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP range for allocating pod addresses.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="clusteripv6range_go">
+<a href="#clusteripv6range_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identical to cluster_ipv4_range but for the IPv6 protocol.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_go">
@@ -495,6 +531,15 @@ cluster will be located and on the folder where selected network resides.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="loggroupid_go">
+<a href="#loggroupid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="master_go">
@@ -577,7 +622,16 @@ cluster will be located and on the folder where selected network resides.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP range Kubernetes services Kubernetes cluster IP addresses will be allocated from
+    <dd>{{% md %}}IP range Kubernetes services Kubernetes cluster IP addresses will be allocated from.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="serviceipv6range_go">
+<a href="#serviceipv6range_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identical to service_ipv4_range but for the IPv6 protocol.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
@@ -608,6 +662,15 @@ cluster will be located and on the folder where selected network resides.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP range for allocating pod addresses.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="clusteripv6range_nodejs">
+<a href="#clusteripv6range_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identical to cluster_ipv4_range but for the IPv6 protocol.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_nodejs">
@@ -670,6 +733,15 @@ cluster will be located and on the folder where selected network resides.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="loggroupid_nodejs">
+<a href="#loggroupid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="master_nodejs">
@@ -752,7 +824,16 @@ cluster will be located and on the folder where selected network resides.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP range Kubernetes services Kubernetes cluster IP addresses will be allocated from
+    <dd>{{% md %}}IP range Kubernetes services Kubernetes cluster IP addresses will be allocated from.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="serviceipv6range_nodejs">
+<a href="#serviceipv6range_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identical to service_ipv4_range but for the IPv6 protocol.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
@@ -783,6 +864,15 @@ cluster will be located and on the folder where selected network resides.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP range for allocating pod addresses.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="cluster_ipv6_range_python">
+<a href="#cluster_ipv6_range_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ipv6_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identical to cluster_ipv4_range but for the IPv6 protocol.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_at_python">
@@ -845,6 +935,15 @@ cluster will be located and on the folder where selected network resides.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="log_group_id_python">
+<a href="#log_group_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="master_python">
@@ -927,7 +1026,16 @@ cluster will be located and on the folder where selected network resides.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IP range Kubernetes services Kubernetes cluster IP addresses will be allocated from
+    <dd>{{% md %}}IP range Kubernetes services Kubernetes cluster IP addresses will be allocated from.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="service_ipv6_range_python">
+<a href="#service_ipv6_range_python" style="color: inherit; text-decoration: inherit;">service_<wbr>ipv6_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identical to service_ipv4_range but for the IPv6 protocol.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
