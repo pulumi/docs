@@ -41,6 +41,7 @@ Explore the resources and functions of the alicloud.vpc module.
     <li><a href="getforwardentries" title="GetForwardEntries"><span class="symbol function"></span>GetForwardEntries</a></li>
     <li><a href="gethavips" title="GetHavips"><span class="symbol function"></span>GetHavips</a></li>
     <li><a href="getnatgateways" title="GetNatGateways"><span class="symbol function"></span>GetNatGateways</a></li>
+    <li><a href="getnetworkacls" title="GetNetworkAcls"><span class="symbol function"></span>GetNetworkAcls</a></li>
     <li><a href="getnetworks" title="GetNetworks"><span class="symbol function"></span>GetNetworks</a></li>
     <li><a href="getrouteentries" title="GetRouteEntries"><span class="symbol function"></span>GetRouteEntries</a></li>
     <li><a href="getroutetables" title="GetRouteTables"><span class="symbol function"></span>GetRouteTables</a></li>
@@ -49,6 +50,7 @@ Explore the resources and functions of the alicloud.vpc module.
     <li><a href="getsslvpnclientcerts" title="GetSslVpnClientCerts"><span class="symbol function"></span>GetSslVpnClientCerts</a></li>
     <li><a href="getsslvpnservers" title="GetSslVpnServers"><span class="symbol function"></span>GetSslVpnServers</a></li>
     <li><a href="getswitches" title="GetSwitches"><span class="symbol function"></span>GetSwitches</a></li>
+    <li><a href="getvpcflowlogs" title="GetVpcFlowLogs"><span class="symbol function"></span>GetVpcFlowLogs</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -60,6 +62,6 @@ Explore the resources and functions of the alicloud.vpc module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.0.1</dd>
+	<dd>3.1.0</dd>
 </dl>
 
