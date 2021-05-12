@@ -60,7 +60,7 @@ const generic = pulumi.output(gcp.compute.getInstanceTemplate({
 }, { async: true }));
 // using a filter
 const generic_regex = pulumi.output(gcp.compute.getInstanceTemplate({
-    filter: "name eq generic-tpl-.*",
+    filter: "name != generic-tpl-20200107",
     mostRecent: true,
 }, { async: true }));
 ```
@@ -382,8 +382,8 @@ created from this template.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to instances
-created from this template,
+    <dd>{{% md %}}(Optional) A set of ket/value label pairs to assign to disk created from
+this template
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machinetype_csharp">
@@ -650,8 +650,8 @@ created from this template.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to instances
-created from this template,
+    <dd>{{% md %}}(Optional) A set of ket/value label pairs to assign to disk created from
+this template
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machinetype_go">
@@ -918,8 +918,8 @@ created from this template.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to instances
-created from this template,
+    <dd>{{% md %}}(Optional) A set of ket/value label pairs to assign to disk created from
+this template
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machinetype_nodejs">
@@ -1186,8 +1186,8 @@ created from this template.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to instances
-created from this template,
+    <dd>{{% md %}}(Optional) A set of ket/value label pairs to assign to disk created from
+this template
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machine_type_python">
@@ -1521,8 +1521,8 @@ than SCSI. Local SSDs can use either NVME or SCSI.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to instances
-created from this template,
+    <dd>{{% md %}}(Optional) A set of ket/value label pairs to assign to disk created from
+this template
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_csharp">
@@ -1671,8 +1671,8 @@ than SCSI. Local SSDs can use either NVME or SCSI.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to instances
-created from this template,
+    <dd>{{% md %}}(Optional) A set of ket/value label pairs to assign to disk created from
+this template
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_go">
@@ -1821,8 +1821,8 @@ than SCSI. Local SSDs can use either NVME or SCSI.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to instances
-created from this template,
+    <dd>{{% md %}}(Optional) A set of ket/value label pairs to assign to disk created from
+this template
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_nodejs">
@@ -1971,8 +1971,8 @@ than SCSI. Local SSDs can use either NVME or SCSI.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to instances
-created from this template,
+    <dd>{{% md %}}(Optional) A set of ket/value label pairs to assign to disk created from
+this template
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_python">
