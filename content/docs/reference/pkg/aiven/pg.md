@@ -58,25 +58,19 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PgArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -88,25 +82,19 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PgArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -118,33 +106,25 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PgArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -156,25 +136,19 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PgArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -4133,6 +4107,17 @@ executing command for each active session.
     <dd>{{% md %}}Enables tracking of function call counts and time used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trackiotiming_csharp">
+<a href="#trackiotiming_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Io<wbr>Timing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enables timing of database I/O calls. This parameter is off by default, 
+because it will repeatedly query the operating system for the current time, which may cause significant
+overhead on some platforms.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="walsendertimeout_csharp">
 <a href="#walsendertimeout_csharp" style="color: inherit; text-decoration: inherit;">Wal<wbr>Sender<wbr>Timeout</a>
 </span>
@@ -4519,6 +4504,17 @@ executing command for each active session.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables tracking of function call counts and time used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trackiotiming_go">
+<a href="#trackiotiming_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Io<wbr>Timing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enables timing of database I/O calls. This parameter is off by default, 
+because it will repeatedly query the operating system for the current time, which may cause significant
+overhead on some platforms.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="walsendertimeout_go">
@@ -4909,6 +4905,17 @@ executing command for each active session.
     <dd>{{% md %}}Enables tracking of function call counts and time used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trackiotiming_nodejs">
+<a href="#trackiotiming_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Io<wbr>Timing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enables timing of database I/O calls. This parameter is off by default, 
+because it will repeatedly query the operating system for the current time, which may cause significant
+overhead on some platforms.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="walsendertimeout_nodejs">
 <a href="#walsendertimeout_nodejs" style="color: inherit; text-decoration: inherit;">wal<wbr>Sender<wbr>Timeout</a>
 </span>
@@ -5295,6 +5302,17 @@ executing command for each active session.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables tracking of function call counts and time used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="track_io_timing_python">
+<a href="#track_io_timing_python" style="color: inherit; text-decoration: inherit;">track_<wbr>io_<wbr>timing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Enables timing of database I/O calls. This parameter is off by default, 
+because it will repeatedly query the operating system for the current time, which may cause significant
+overhead on some platforms.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wal_sender_timeout_python">

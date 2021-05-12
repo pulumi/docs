@@ -12666,6 +12666,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="binlogretentionperiod_csharp">
+<a href="#binlogretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Binlog<wbr>Retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_csharp">
 <a href="#ipfilters_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
 </span>
@@ -12776,6 +12784,14 @@ The following output properties are available:
             title="Optional">
         <span id="backupminute_go">
 <a href="#backupminute_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Minute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="binlogretentionperiod_go">
+<a href="#binlogretentionperiod_go" style="color: inherit; text-decoration: inherit;">Binlog<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -12898,6 +12914,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="binlogretentionperiod_nodejs">
+<a href="#binlogretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">binlog<wbr>Retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_nodejs">
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
 </span>
@@ -13008,6 +13032,14 @@ The following output properties are available:
             title="Optional">
         <span id="backup_minute_python">
 <a href="#backup_minute_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>minute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="binlog_retention_period_python">
+<a href="#binlog_retention_period_python" style="color: inherit; text-decoration: inherit;">binlog_<wbr>retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -14110,6 +14142,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mysqlx_csharp">
+<a href="#mysqlx_csharp" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="prometheus_csharp">
 <a href="#prometheus_csharp" style="color: inherit; text-decoration: inherit;">Prometheus</a>
 </span>
@@ -14124,6 +14164,14 @@ The following output properties are available:
             title="Optional">
         <span id="mysql_go">
 <a href="#mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_go">
+<a href="#mysqlx_go" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -14150,6 +14198,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mysqlx_nodejs">
+<a href="#mysqlx_nodejs" style="color: inherit; text-decoration: inherit;">mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="prometheus_nodejs">
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
@@ -14164,6 +14220,14 @@ The following output properties are available:
             title="Optional">
         <span id="mysql_python">
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_python">
+<a href="#mysqlx_python" style="color: inherit; text-decoration: inherit;">mysqlx</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -14192,6 +14256,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_csharp">
+<a href="#mysqlx_csharp" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -14200,6 +14272,14 @@ The following output properties are available:
             title="Optional">
         <span id="mysql_go">
 <a href="#mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_go">
+<a href="#mysqlx_go" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -14216,6 +14296,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_nodejs">
+<a href="#mysqlx_nodejs" style="color: inherit; text-decoration: inherit;">mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -14224,6 +14312,14 @@ The following output properties are available:
             title="Optional">
         <span id="mysql_python">
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_python">
+<a href="#mysqlx_python" style="color: inherit; text-decoration: inherit;">mysqlx</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -14240,6 +14336,14 @@ The following output properties are available:
             title="Optional">
         <span id="mysql_csharp">
 <a href="#mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_csharp">
+<a href="#mysqlx_csharp" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -14266,6 +14370,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mysqlx_go">
+<a href="#mysqlx_go" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="prometheus_go">
 <a href="#prometheus_go" style="color: inherit; text-decoration: inherit;">Prometheus</a>
 </span>
@@ -14286,6 +14398,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mysqlx_nodejs">
+<a href="#mysqlx_nodejs" style="color: inherit; text-decoration: inherit;">mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="prometheus_nodejs">
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
@@ -14300,6 +14420,14 @@ The following output properties are available:
             title="Optional">
         <span id="mysql_python">
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_python">
+<a href="#mysqlx_python" style="color: inherit; text-decoration: inherit;">mysqlx</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -15894,6 +16022,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trackiotiming_csharp">
+<a href="#trackiotiming_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Io<wbr>Timing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="walsendertimeout_csharp">
 <a href="#walsendertimeout_csharp" style="color: inherit; text-decoration: inherit;">Wal<wbr>Sender<wbr>Timeout</a>
 </span>
@@ -16204,6 +16340,14 @@ The following output properties are available:
             title="Optional">
         <span id="trackfunctions_go">
 <a href="#trackfunctions_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Functions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trackiotiming_go">
+<a href="#trackiotiming_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Io<wbr>Timing</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -16526,6 +16670,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trackiotiming_nodejs">
+<a href="#trackiotiming_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Io<wbr>Timing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="walsendertimeout_nodejs">
 <a href="#walsendertimeout_nodejs" style="color: inherit; text-decoration: inherit;">wal<wbr>Sender<wbr>Timeout</a>
 </span>
@@ -16836,6 +16988,14 @@ The following output properties are available:
             title="Optional">
         <span id="track_functions_python">
 <a href="#track_functions_python" style="color: inherit; text-decoration: inherit;">track_<wbr>functions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="track_io_timing_python">
+<a href="#track_io_timing_python" style="color: inherit; text-decoration: inherit;">track_<wbr>io_<wbr>timing</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
