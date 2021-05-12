@@ -150,6 +150,7 @@ const foo = new rancher2.CloudCredential("foo", {
                     <span class="nx">azure_credential_config</span><span class="p">:</span> <span class="nx">Optional[CloudCredentialAzureCredentialConfigArgs]</span> = None<span class="p">,</span>
                     <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">digitalocean_credential_config</span><span class="p">:</span> <span class="nx">Optional[CloudCredentialDigitaloceanCredentialConfigArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">google_credential_config</span><span class="p">:</span> <span class="nx">Optional[CloudCredentialGoogleCredentialConfigArgs]</span> = None<span class="p">,</span>
                     <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
                     <span class="nx">linode_credential_config</span><span class="p">:</span> <span class="nx">Optional[CloudCredentialLinodeCredentialConfigArgs]</span> = None<span class="p">,</span>
                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -177,25 +178,19 @@ const foo = new rancher2.CloudCredential("foo", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CloudCredentialArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -207,25 +202,19 @@ const foo = new rancher2.CloudCredential("foo", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CloudCredentialArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -237,33 +226,25 @@ const foo = new rancher2.CloudCredential("foo", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CloudCredentialArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -275,25 +256,19 @@ const foo = new rancher2.CloudCredential("foo", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CloudCredentialArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -353,6 +328,15 @@ The CloudCredential resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DigitalOcean config for the Cloud Credential (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="googlecredentialconfig_csharp">
+<a href="#googlecredentialconfig_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Credential<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudcredentialgooglecredentialconfig">Cloud<wbr>Credential<wbr>Google<wbr>Credential<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Google config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
@@ -449,6 +433,15 @@ The CloudCredential resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}DigitalOcean config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="googlecredentialconfig_go">
+<a href="#googlecredentialconfig_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Credential<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudcredentialgooglecredentialconfig">Cloud<wbr>Credential<wbr>Google<wbr>Credential<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Google config for the Cloud Credential (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
@@ -543,6 +536,15 @@ The CloudCredential resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}DigitalOcean config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="googlecredentialconfig_nodejs">
+<a href="#googlecredentialconfig_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Credential<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudcredentialgooglecredentialconfig">Cloud<wbr>Credential<wbr>Google<wbr>Credential<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Google config for the Cloud Credential (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
@@ -635,6 +637,15 @@ The CloudCredential resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DigitalOcean config for the Cloud Credential (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="google_credential_config_python">
+<a href="#google_credential_config_python" style="color: inherit; text-decoration: inherit;">google_<wbr>credential_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudcredentialgooglecredentialconfig">Cloud<wbr>Credential<wbr>Google<wbr>Credential<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Google config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
@@ -796,6 +807,7 @@ Get an existing CloudCredential resource's state with the given name, ID, and op
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">digitalocean_credential_config</span><span class="p">:</span> <span class="nx">Optional[CloudCredentialDigitaloceanCredentialConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">google_credential_config</span><span class="p">:</span> <span class="nx">Optional[CloudCredentialGoogleCredentialConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
         <span class="nx">linode_credential_config</span><span class="p">:</span> <span class="nx">Optional[CloudCredentialLinodeCredentialConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -967,6 +979,15 @@ The following state arguments are supported:
     <dd>{{% md %}}(Computed) The driver of the Cloud Credential (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_googlecredentialconfig_csharp">
+<a href="#state_googlecredentialconfig_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Credential<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudcredentialgooglecredentialconfig">Cloud<wbr>Credential<wbr>Google<wbr>Credential<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Google config for the Cloud Credential (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
@@ -1068,6 +1089,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the Cloud Credential (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_googlecredentialconfig_go">
+<a href="#state_googlecredentialconfig_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Credential<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudcredentialgooglecredentialconfig">Cloud<wbr>Credential<wbr>Google<wbr>Credential<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Google config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
@@ -1173,6 +1203,15 @@ The following state arguments are supported:
     <dd>{{% md %}}(Computed) The driver of the Cloud Credential (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_googlecredentialconfig_nodejs">
+<a href="#state_googlecredentialconfig_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Credential<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudcredentialgooglecredentialconfig">Cloud<wbr>Credential<wbr>Google<wbr>Credential<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Google config for the Cloud Credential (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
@@ -1274,6 +1313,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the Cloud Credential (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_google_credential_config_python">
+<a href="#state_google_credential_config_python" style="color: inherit; text-decoration: inherit;">google_<wbr>credential_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudcredentialgooglecredentialconfig">Cloud<wbr>Credential<wbr>Google<wbr>Credential<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Google config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
@@ -1598,6 +1646,60 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DigitalOcean access token (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cloudcredentialgooglecredentialconfig">Cloud<wbr>Credential<wbr>Google<wbr>Credential<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authencodedjson_csharp">
+<a href="#authencodedjson_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Encoded<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Google auth encoded json (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authencodedjson_go">
+<a href="#authencodedjson_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Encoded<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Google auth encoded json (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authencodedjson_nodejs">
+<a href="#authencodedjson_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Encoded<wbr>Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Google auth encoded json (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="auth_encoded_json_python">
+<a href="#auth_encoded_json_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>encoded_<wbr>json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Google auth encoded json (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
