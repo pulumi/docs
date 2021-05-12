@@ -9,7 +9,7 @@ aws_dev_day: true
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -22,7 +22,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -49,6 +49,7 @@ hero:
 main:
     # Webinar title.
     title: "AWS DevDay: Building a Kubernetes platform in Amazon EKS with Pulumi"
+    youtube_url: "https://www.youtube.com/embed/1GU4D-nvtXU"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2021-05-04T09:00:00-07:00
     # Duration of the webinar.
@@ -63,7 +64,7 @@ main:
         We'll guide you through your first deployment to Kubernetes with Pulumi, before showing you the power of Pulumi's reusable components to turbo-charge your platform deployment.
 
         Finally, we’ll examine Pulumi’s automation API and leverage it’s powerful capabilities to expose your application deployment platform into your users' hands without asking them to write a single line of code!
- 
+
         **Target Audience**
 
         Active Pulumi users, and users considering or actively building a Kubernetes platform

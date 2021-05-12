@@ -1,13 +1,16 @@
 ---
 # Name of the webinar.
 title: "AWS - Howdy Partner"
-meta_desc: "Watch Pulumi VP of Engineering Lee Zen build serverless applications in real time, using both Python and TypeScript."
+meta_desc: "Join Pulumi VP of Engineering Lee Zen as he shows off some of the newest features in Pulumi 3.0 and how those features make building on AWS easier than ever."
+
+aliases:
+    - /resources/aws-howdy-partner-twitch-2020-06-01
 
 # A featured webinar will display first in the list.
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: true
+pre_recorded: false
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -32,7 +35,7 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "https://www.twitch.tv/videos/639379105"
+url_slug: "https://www.twitch.tv/aws"
 
 # The content of the hero section.
 hero:
@@ -49,7 +52,7 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-06-01T14:00:00-07:00
+    sortable_date: 2021-06-01T14:00:00-07:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.

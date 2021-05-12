@@ -1,6 +1,6 @@
 ---
 # Name of the webinar.
-title: "Build a Self-Service Infrastructure Platform with Python"
+title: "How to Build a Self-Service Cloud with Python"
 meta_desc: "In this workshop, you’ll build a Python & Flask web application that lets you and your developers deploy applications at the click of a button."
 
 # A featured webinar will display first in the list.
@@ -39,22 +39,22 @@ url_slug: "getting-started-with-automation-api"
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Automation API: Build a Self-Service Infrastructure Platform with Python + Flask"
+    title: "How to Build a Self-Service Cloud with Python"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Automation API: Build a Self-Service Infrastructure Platform with Python + Flask"
+    title: "How to Build a Self-Service Cloud with Python"
     # URL for embedding a URL for ungated webinars.
     youtube_url: "https://www.youtube.com/embed/24qnvC-dvvw"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2021-04-21T09:00:00-07:00
+    sortable_date: 2021-05-20T09:00:00-07:00
     # Duration of the webinar.
     duration: "2 hours"
     # Datetime of the webinar.
-    datetime: "APR 21, 2020"
+    datetime: "MAY 20, 2020"
     # Description of the webinar.
     description: |
         Pulumi’s Automation API opens new horizons for infrastructure provisioning. In this workshop, you’ll examine the powerful new capabilities of Pulumi’s latest feature by building a Python & Flask web application that lets developers deploy applications at the click of a button.
@@ -72,5 +72,5 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: aa358101-39e9-4ace-a764-e9e7dc522c3f
+    hubspot_form_id: 39b7f824-0903-485a-87b4-aa06ecb2b140
 ---
