@@ -21,6 +21,6 @@ Explore the resources and functions of the kubernetes.helm/v3 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>3.1.1</dd>
+	<dd>3.1.2</dd>
 </dl>
 

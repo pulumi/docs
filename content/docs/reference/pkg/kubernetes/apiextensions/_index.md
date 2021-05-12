@@ -27,6 +27,6 @@ meta_desc: ""
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>3.1.1</dd>
+	<dd>3.1.2</dd>
 </dl>
 
