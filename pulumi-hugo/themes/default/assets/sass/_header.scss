@@ -73,7 +73,7 @@
         }
 
         .header-btn-primary {
-            @extend .btn-primary;
+            @include gradient-button;
             @apply py-3 px-6;
 
             @screen xl {
