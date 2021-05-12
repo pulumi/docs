@@ -6,7 +6,7 @@ jobs:
     steps:
       - if: env.GITHUB_TOKEN != null
         env:
-          GITHUB_TOKEN: ${{ secrets.NOPE }}
+          GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
           MERGE_COMMIT_MESSAGE: pull-request-title
           MERGE_FORKS: "false"
           MERGE_LABELS: automation/merge
