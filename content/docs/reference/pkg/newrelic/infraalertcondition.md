@@ -47,6 +47,7 @@ class MyStack : Stack
         var highDiskUsage = new NewRelic.InfraAlertCondition("highDiskUsage", new NewRelic.InfraAlertConditionArgs
         {
             PolicyId = foo.Id,
+            Description = "Warning if disk usage goes above 80% and critical alert if goes above 90%",
             Type = "infra_metric",
             Event = "StorageSample",
             Select = "diskUsedPercent",
@@ -68,6 +69,7 @@ class MyStack : Stack
         var highDbConnCount = new NewRelic.InfraAlertCondition("highDbConnCount", new NewRelic.InfraAlertConditionArgs
         {
             PolicyId = foo.Id,
+            Description = "Critical alert when the number of database connections goes above 90",
             Type = "infra_metric",
             Event = "DatastoreSample",
             Select = "provider.databaseConnections.Average",
@@ -84,6 +86,7 @@ class MyStack : Stack
         var processNotRunning = new NewRelic.InfraAlertCondition("processNotRunning", new NewRelic.InfraAlertConditionArgs
         {
             PolicyId = foo.Id,
+            Description = "Critical alert when ruby isn't running",
             Type = "infra_process_running",
             Comparison = "equal",
             Where = "hostname = 'web01'",
@@ -97,6 +100,7 @@ class MyStack : Stack
         var hostNotReporting = new NewRelic.InfraAlertCondition("hostNotReporting", new NewRelic.InfraAlertConditionArgs
         {
             PolicyId = foo.Id,
+            Description = "Critical alert when the host is not reporting",
             Type = "infra_host_not_reporting",
             Where = "(hostname LIKE '%frontend%')",
             Critical = new NewRelic.Inputs.InfraAlertConditionCriticalArgs
@@ -132,12 +136,13 @@ func main() {
 			return err
 		}
 		_, err = newrelic.NewInfraAlertCondition(ctx, "highDiskUsage", &newrelic.InfraAlertConditionArgs{
-			PolicyId:   foo.ID(),
-			Type:       pulumi.String("infra_metric"),
-			Event:      pulumi.String("StorageSample"),
-			Select:     pulumi.String("diskUsedPercent"),
-			Comparison: pulumi.String("above"),
-			Where:      pulumi.String(fmt.Sprintf("%v%v%v%v%v", "(hostname LIKE '", "%", "frontend", "%", "')")),
+			PolicyId:    foo.ID(),
+			Description: pulumi.String(fmt.Sprintf("%v%v%v%v", "Warning if disk usage goes above 80", "%", " and critical alert if goes above 90", "%")),
+			Type:        pulumi.String("infra_metric"),
+			Event:       pulumi.String("StorageSample"),
+			Select:      pulumi.String("diskUsedPercent"),
+			Comparison:  pulumi.String("above"),
+			Where:       pulumi.String(fmt.Sprintf("%v%v%v%v%v", "(hostname LIKE '", "%", "frontend", "%", "')")),
 			Critical: &newrelic.InfraAlertConditionCriticalArgs{
 				Duration:     pulumi.Int(25),
 				Value:        pulumi.Float64(90),
@@ -154,6 +159,7 @@ func main() {
 		}
 		_, err = newrelic.NewInfraAlertCondition(ctx, "highDbConnCount", &newrelic.InfraAlertConditionArgs{
 			PolicyId:            foo.ID(),
+			Description:         pulumi.String("Critical alert when the number of database connections goes above 90"),
 			Type:                pulumi.String("infra_metric"),
 			Event:               pulumi.String("DatastoreSample"),
 			Select:              pulumi.String("provider.databaseConnections.Average"),
@@ -171,6 +177,7 @@ func main() {
 		}
 		_, err = newrelic.NewInfraAlertCondition(ctx, "processNotRunning", &newrelic.InfraAlertConditionArgs{
 			PolicyId:     foo.ID(),
+			Description:  pulumi.String("Critical alert when ruby isn't running"),
 			Type:         pulumi.String("infra_process_running"),
 			Comparison:   pulumi.String("equal"),
 			Where:        pulumi.String("hostname = 'web01'"),
@@ -184,9 +191,10 @@ func main() {
 			return err
 		}
 		_, err = newrelic.NewInfraAlertCondition(ctx, "hostNotReporting", &newrelic.InfraAlertConditionArgs{
-			PolicyId: foo.ID(),
-			Type:     pulumi.String("infra_host_not_reporting"),
-			Where:    pulumi.String(fmt.Sprintf("%v%v%v%v%v", "(hostname LIKE '", "%", "frontend", "%", "')")),
+			PolicyId:    foo.ID(),
+			Description: pulumi.String("Critical alert when the host is not reporting"),
+			Type:        pulumi.String("infra_host_not_reporting"),
+			Where:       pulumi.String(fmt.Sprintf("%v%v%v%v%v", "(hostname LIKE '", "%", "frontend", "%", "')")),
 			Critical: &newrelic.InfraAlertConditionCriticalArgs{
 				Duration: pulumi.Int(5),
 			},
@@ -212,6 +220,7 @@ import pulumi_newrelic as newrelic
 foo = newrelic.AlertPolicy("foo")
 high_disk_usage = newrelic.InfraAlertCondition("highDiskUsage",
     policy_id=foo.id,
+    description="Warning if disk usage goes above 80% and critical alert if goes above 90%",
     type="infra_metric",
     event="StorageSample",
     select="diskUsedPercent",
@@ -229,6 +238,7 @@ high_disk_usage = newrelic.InfraAlertCondition("highDiskUsage",
     ))
 high_db_conn_count = newrelic.InfraAlertCondition("highDbConnCount",
     policy_id=foo.id,
+    description="Critical alert when the number of database connections goes above 90",
     type="infra_metric",
     event="DatastoreSample",
     select="provider.databaseConnections.Average",
@@ -242,6 +252,7 @@ high_db_conn_count = newrelic.InfraAlertCondition("highDbConnCount",
     ))
 process_not_running = newrelic.InfraAlertCondition("processNotRunning",
     policy_id=foo.id,
+    description="Critical alert when ruby isn't running",
     type="infra_process_running",
     comparison="equal",
     where="hostname = 'web01'",
@@ -252,6 +263,7 @@ process_not_running = newrelic.InfraAlertCondition("processNotRunning",
     ))
 host_not_reporting = newrelic.InfraAlertCondition("hostNotReporting",
     policy_id=foo.id,
+    description="Critical alert when the host is not reporting",
     type="infra_host_not_reporting",
     where="(hostname LIKE '%frontend%')",
     critical=newrelic.InfraAlertConditionCriticalArgs(
@@ -273,6 +285,7 @@ import * as newrelic from "@pulumi/newrelic";
 const foo = new newrelic.AlertPolicy("foo", {});
 const highDiskUsage = new newrelic.InfraAlertCondition("highDiskUsage", {
     policyId: foo.id,
+    description: `Warning if disk usage goes above 80% and critical alert if goes above 90%`,
     type: "infra_metric",
     event: "StorageSample",
     select: "diskUsedPercent",
@@ -291,6 +304,7 @@ const highDiskUsage = new newrelic.InfraAlertCondition("highDiskUsage", {
 });
 const highDbConnCount = new newrelic.InfraAlertCondition("highDbConnCount", {
     policyId: foo.id,
+    description: "Critical alert when the number of database connections goes above 90",
     type: "infra_metric",
     event: "DatastoreSample",
     select: "provider.databaseConnections.Average",
@@ -305,6 +319,7 @@ const highDbConnCount = new newrelic.InfraAlertCondition("highDbConnCount", {
 });
 const processNotRunning = new newrelic.InfraAlertCondition("processNotRunning", {
     policyId: foo.id,
+    description: "Critical alert when ruby isn't running",
     type: "infra_process_running",
     comparison: "equal",
     where: "hostname = 'web01'",
@@ -316,6 +331,7 @@ const processNotRunning = new newrelic.InfraAlertCondition("processNotRunning", 
 });
 const hostNotReporting = new newrelic.InfraAlertCondition("hostNotReporting", {
     policyId: foo.id,
+    description: "Critical alert when the host is not reporting",
     type: "infra_host_not_reporting",
     where: `(hostname LIKE '%frontend%')`,
     critical: {
@@ -385,25 +401,19 @@ const hostNotReporting = new newrelic.InfraAlertCondition("hostNotReporting", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InfraAlertConditionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -415,25 +425,19 @@ const hostNotReporting = new newrelic.InfraAlertCondition("hostNotReporting", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InfraAlertConditionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -445,33 +449,25 @@ const hostNotReporting = new newrelic.InfraAlertCondition("hostNotReporting", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InfraAlertConditionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -483,25 +479,19 @@ const hostNotReporting = new newrelic.InfraAlertCondition("hostNotReporting", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InfraAlertConditionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

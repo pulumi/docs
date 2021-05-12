@@ -53,25 +53,19 @@ meta_desc: "Documentation for the newrelic.OneDashboard resource with examples, 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OneDashboardArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -83,25 +77,19 @@ meta_desc: "Documentation for the newrelic.OneDashboard resource with examples, 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OneDashboardArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -113,33 +101,25 @@ meta_desc: "Documentation for the newrelic.OneDashboard resource with examples, 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OneDashboardArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -151,25 +131,19 @@ meta_desc: "Documentation for the newrelic.OneDashboard resource with examples, 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OneDashboardArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1010,6 +984,15 @@ The following state arguments are supported:
     <dd>{{% md %}}(Optional) A nested block that describes a Histogram widget.  See Nested widget blocks below for details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="widgetjsons_csharp">
+<a href="#widgetjsons_csharp" style="color: inherit; text-decoration: inherit;">Widget<wbr>Jsons</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetjson">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Json<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) A nested block that describes a JSON widget.  See Nested widget blocks below for details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="widgetlines_csharp">
 <a href="#widgetlines_csharp" style="color: inherit; text-decoration: inherit;">Widget<wbr>Lines</a>
 </span>
@@ -1138,6 +1121,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#onedashboardpagewidgethistogram">[]One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Histogram</a></span>
     </dt>
     <dd>{{% md %}}(Optional) A nested block that describes a Histogram widget.  See Nested widget blocks below for details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="widgetjsons_go">
+<a href="#widgetjsons_go" style="color: inherit; text-decoration: inherit;">Widget<wbr>Jsons</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetjson">[]One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Json</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) A nested block that describes a JSON widget.  See Nested widget blocks below for details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="widgetlines_go">
@@ -1270,6 +1262,15 @@ The following state arguments are supported:
     <dd>{{% md %}}(Optional) A nested block that describes a Histogram widget.  See Nested widget blocks below for details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="widgetjsons_nodejs">
+<a href="#widgetjsons_nodejs" style="color: inherit; text-decoration: inherit;">widget<wbr>Jsons</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetjson">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Json<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) A nested block that describes a JSON widget.  See Nested widget blocks below for details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="widgetlines_nodejs">
 <a href="#widgetlines_nodejs" style="color: inherit; text-decoration: inherit;">widget<wbr>Lines</a>
 </span>
@@ -1398,6 +1399,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#onedashboardpagewidgethistogram">Sequence[One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Histogram<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) A nested block that describes a Histogram widget.  See Nested widget blocks below for details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="widget_jsons_python">
+<a href="#widget_jsons_python" style="color: inherit; text-decoration: inherit;">widget_<wbr>jsons</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetjson">Sequence[One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Json<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) A nested block that describes a JSON widget.  See Nested widget blocks below for details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="widget_lines_python">
@@ -4016,6 +4026,366 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="onedashboardpagewidgethistogramnrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Histogram<wbr>Nrql<wbr>Query</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="query_csharp">
+<a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Required) Valid NRQL query string. See [Writing NRQL Queries](https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql) for help.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accountid_csharp">
+<a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Determines the New Relic account where the dashboard will be created. Defaults to the account associated with the API key used.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="query_go">
+<a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Required) Valid NRQL query string. See [Writing NRQL Queries](https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql) for help.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accountid_go">
+<a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Determines the New Relic account where the dashboard will be created. Defaults to the account associated with the API key used.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="query_nodejs">
+<a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Required) Valid NRQL query string. See [Writing NRQL Queries](https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql) for help.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accountid_nodejs">
+<a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Determines the New Relic account where the dashboard will be created. Defaults to the account associated with the API key used.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="query_python">
+<a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Required) Valid NRQL query string. See [Writing NRQL Queries](https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql) for help.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="account_id_python">
+<a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Determines the New Relic account where the dashboard will be created. Defaults to the account associated with the API key used.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="onedashboardpagewidgetjson">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Json</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="column_csharp">
+<a href="#column_csharp" style="color: inherit; text-decoration: inherit;">Column</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(Required) Column position of widget from top left, starting at `1`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nrqlqueries_csharp">
+<a href="#nrqlqueries_csharp" style="color: inherit; text-decoration: inherit;">Nrql<wbr>Queries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetjsonnrqlquery">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Json<wbr>Nrql<wbr>Query<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
+* `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="row_csharp">
+<a href="#row_csharp" style="color: inherit; text-decoration: inherit;">Row</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(Required) Row position of widget from top left, starting at `1`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_csharp">
+<a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Required) A title for the widget.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="height_csharp">
+<a href="#height_csharp" style="color: inherit; text-decoration: inherit;">Height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Height of the widget.  Valid values are `1` to `12` inclusive.  Defaults to `3`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="width_csharp">
+<a href="#width_csharp" style="color: inherit; text-decoration: inherit;">Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Width of the widget.  Valid values are `1` to `12` inclusive.  Defaults to `4`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="column_go">
+<a href="#column_go" style="color: inherit; text-decoration: inherit;">Column</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(Required) Column position of widget from top left, starting at `1`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nrqlqueries_go">
+<a href="#nrqlqueries_go" style="color: inherit; text-decoration: inherit;">Nrql<wbr>Queries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetjsonnrqlquery">[]One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Json<wbr>Nrql<wbr>Query</a></span>
+    </dt>
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
+* `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="row_go">
+<a href="#row_go" style="color: inherit; text-decoration: inherit;">Row</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(Required) Row position of widget from top left, starting at `1`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_go">
+<a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Required) A title for the widget.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="height_go">
+<a href="#height_go" style="color: inherit; text-decoration: inherit;">Height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Height of the widget.  Valid values are `1` to `12` inclusive.  Defaults to `3`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="width_go">
+<a href="#width_go" style="color: inherit; text-decoration: inherit;">Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Width of the widget.  Valid values are `1` to `12` inclusive.  Defaults to `4`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="column_nodejs">
+<a href="#column_nodejs" style="color: inherit; text-decoration: inherit;">column</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}(Required) Column position of widget from top left, starting at `1`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nrqlqueries_nodejs">
+<a href="#nrqlqueries_nodejs" style="color: inherit; text-decoration: inherit;">nrql<wbr>Queries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetjsonnrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Json<wbr>Nrql<wbr>Query<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
+* `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="row_nodejs">
+<a href="#row_nodejs" style="color: inherit; text-decoration: inherit;">row</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}(Required) Row position of widget from top left, starting at `1`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_nodejs">
+<a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Required) A title for the widget.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="height_nodejs">
+<a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Height of the widget.  Valid values are `1` to `12` inclusive.  Defaults to `3`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="width_nodejs">
+<a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Width of the widget.  Valid values are `1` to `12` inclusive.  Defaults to `4`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="column_python">
+<a href="#column_python" style="color: inherit; text-decoration: inherit;">column</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(Required) Column position of widget from top left, starting at `1`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nrql_queries_python">
+<a href="#nrql_queries_python" style="color: inherit; text-decoration: inherit;">nrql_<wbr>queries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetjsonnrqlquery">Sequence[One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Json<wbr>Nrql<wbr>Query<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
+* `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="row_python">
+<a href="#row_python" style="color: inherit; text-decoration: inherit;">row</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(Required) Row position of widget from top left, starting at `1`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_python">
+<a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Required) A title for the widget.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="height_python">
+<a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Height of the widget.  Valid values are `1` to `12` inclusive.  Defaults to `3`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="width_python">
+<a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Width of the widget.  Valid values are `1` to `12` inclusive.  Defaults to `4`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="onedashboardpagewidgetjsonnrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Json<wbr>Nrql<wbr>Query</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
