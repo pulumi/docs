@@ -128,7 +128,7 @@ The native Azure provider SDKs provide convenience helpers to hydrate an Azure S
 * [Typescript](https://github.com/pulumi/examples/tree/master/azure-ts-call-azure-sdk)
 * [Go](https://github.com/pulumi/examples/tree/master/azure-go-call-azure-sdk)
 * [C#](https://github.com/pulumi/examples/tree/master/azure-cs-call-azure-api)
-* [Python](https://github.com/pulumi/examples/tree/master/azure-py-call-azure-api)
+* [Python](https://github.com/pulumi/examples/tree/master/azure-py-call-azure-sdk)
 
 ## Versioning
 
