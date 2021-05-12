@@ -173,7 +173,7 @@ class MyStack : Stack
             {
                 StartTime = "08:00",
             },
-            Size = 1,
+            InitialSize = 1,
             NodeTemplate = soletenant_tmpl.Id,
             AutoscalingPolicy = new Gcp.Compute.Inputs.NodeGroupAutoscalingPolicyArgs
             {
@@ -217,7 +217,7 @@ func main() {
 			MaintenanceWindow: &compute.NodeGroupMaintenanceWindowArgs{
 				StartTime: pulumi.String("08:00"),
 			},
-			Size:         pulumi.Int(1),
+			InitialSize:  pulumi.Int(1),
 			NodeTemplate: soletenant_tmpl.ID(),
 			AutoscalingPolicy: &compute.NodeGroupAutoscalingPolicyArgs{
 				Mode:     pulumi.String("ONLY_SCALE_OUT"),
@@ -253,7 +253,7 @@ nodes = gcp.compute.NodeGroup("nodes",
     maintenance_window=gcp.compute.NodeGroupMaintenanceWindowArgs(
         start_time="08:00",
     ),
-    size=1,
+    initial_size=1,
     node_template=soletenant_tmpl.id,
     autoscaling_policy=gcp.compute.NodeGroupAutoscalingPolicyArgs(
         mode="ONLY_SCALE_OUT",
@@ -284,7 +284,7 @@ const nodes = new gcp.compute.NodeGroup("nodes", {
     maintenanceWindow: {
         startTime: "08:00",
     },
-    size: 1,
+    initialSize: 1,
     nodeTemplate: soletenant_tmpl.id,
     autoscalingPolicy: {
         mode: "ONLY_SCALE_OUT",
@@ -320,6 +320,7 @@ const nodes = new gcp.compute.NodeGroup("nodes", {
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
               <span class="nx">autoscaling_policy</span><span class="p">:</span> <span class="nx">Optional[NodeGroupAutoscalingPolicyArgs]</span> = None<span class="p">,</span>
               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">initial_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
               <span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[NodeGroupMaintenanceWindowArgs]</span> = None<span class="p">,</span>
               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -349,25 +350,19 @@ const nodes = new gcp.compute.NodeGroup("nodes", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NodeGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -379,25 +374,19 @@ const nodes = new gcp.compute.NodeGroup("nodes", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NodeGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -409,33 +398,25 @@ const nodes = new gcp.compute.NodeGroup("nodes", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NodeGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -447,25 +428,19 @@ const nodes = new gcp.compute.NodeGroup("nodes", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NodeGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -489,15 +464,6 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the node template to which this node group belongs.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="size_csharp">
-<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The total number of nodes in the node group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalingpolicy_csharp">
@@ -518,6 +484,15 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional textual description of the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="initialsize_csharp">
+<a href="#initialsize_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The initial number of nodes in the node group. One of `initial_size` or `size` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancepolicy_csharp">
@@ -558,6 +533,15 @@ Structure is documented below.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The total number of nodes in the node group. One of `initial_size` or `size` must be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
 </span>
@@ -578,15 +562,6 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the node template to which this node group belongs.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="size_go">
-<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The total number of nodes in the node group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalingpolicy_go">
@@ -607,6 +582,15 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional textual description of the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="initialsize_go">
+<a href="#initialsize_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The initial number of nodes in the node group. One of `initial_size` or `size` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancepolicy_go">
@@ -647,6 +631,15 @@ Structure is documented below.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The total number of nodes in the node group. One of `initial_size` or `size` must be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
 </span>
@@ -667,15 +660,6 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the node template to which this node group belongs.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="size_nodejs">
-<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The total number of nodes in the node group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalingpolicy_nodejs">
@@ -696,6 +680,15 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional textual description of the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="initialsize_nodejs">
+<a href="#initialsize_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The initial number of nodes in the node group. One of `initial_size` or `size` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancepolicy_nodejs">
@@ -736,6 +729,15 @@ Structure is documented below.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The total number of nodes in the node group. One of `initial_size` or `size` must be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
@@ -756,15 +758,6 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the node template to which this node group belongs.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="size_python">
-<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The total number of nodes in the node group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaling_policy_python">
@@ -785,6 +778,15 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional textual description of the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="initial_size_python">
+<a href="#initial_size_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The initial number of nodes in the node group. One of `initial_size` or `size` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_policy_python">
@@ -823,6 +825,15 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The total number of nodes in the node group. One of `initial_size` or `size` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_python">
@@ -981,6 +992,7 @@ Get an existing NodeGroup resource's state with the given name, ID, and optional
         <span class="nx">autoscaling_policy</span><span class="p">:</span> <span class="nx">Optional[NodeGroupAutoscalingPolicyArgs]</span> = None<span class="p">,</span>
         <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">initial_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[NodeGroupMaintenanceWindowArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1130,6 +1142,15 @@ Structure is documented below.
     <dd>{{% md %}}An optional textual description of the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_initialsize_csharp">
+<a href="#state_initialsize_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The initial number of nodes in the node group. One of `initial_size` or `size` must be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_maintenancepolicy_csharp">
 <a href="#state_maintenancepolicy_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Policy</a>
 </span>
@@ -1192,7 +1213,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The total number of nodes in the node group.
+    <dd>{{% md %}}The total number of nodes in the node group. One of `initial_size` or `size` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_csharp">
@@ -1235,6 +1256,15 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional textual description of the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_initialsize_go">
+<a href="#state_initialsize_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The initial number of nodes in the node group. One of `initial_size` or `size` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancepolicy_go">
@@ -1299,7 +1329,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The total number of nodes in the node group.
+    <dd>{{% md %}}The total number of nodes in the node group. One of `initial_size` or `size` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_go">
@@ -1342,6 +1372,15 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional textual description of the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_initialsize_nodejs">
+<a href="#state_initialsize_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The initial number of nodes in the node group. One of `initial_size` or `size` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancepolicy_nodejs">
@@ -1406,7 +1445,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The total number of nodes in the node group.
+    <dd>{{% md %}}The total number of nodes in the node group. One of `initial_size` or `size` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_nodejs">
@@ -1449,6 +1488,15 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional textual description of the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_initial_size_python">
+<a href="#state_initial_size_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The initial number of nodes in the node group. One of `initial_size` or `size` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenance_policy_python">
@@ -1513,7 +1561,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The total number of nodes in the node group.
+    <dd>{{% md %}}The total number of nodes in the node group. One of `initial_size` or `size` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_python">

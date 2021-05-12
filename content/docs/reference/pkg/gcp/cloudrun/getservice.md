@@ -1585,6 +1585,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="volumes_csharp">
+<a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespecvolume">List&lt;Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Volume&gt;</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1628,6 +1636,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="volumes_go">
+<a href="#volumes_go" style="color: inherit; text-decoration: inherit;">Volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespecvolume">[]Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Volume</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1673,6 +1689,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="volumes_nodejs">
+<a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespecvolume">Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Volume[]</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1716,6 +1740,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="volumes_python">
+<a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespecvolume">Sequence[Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Volume]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1780,6 +1812,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicetemplatespeccontainerresource">List&lt;Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resource&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="volumemounts_csharp">
+<a href="#volumemounts_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespeccontainervolumemount">List&lt;Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1851,6 +1891,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="volumemounts_go">
+<a href="#volumemounts_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespeccontainervolumemount">[]Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="workingdir_go">
 <a href="#workingdir_go" style="color: inherit; text-decoration: inherit;">Working<wbr>Dir</a>
 </span>
@@ -1916,6 +1964,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicetemplatespeccontainerresource">Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resource[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="volumemounts_nodejs">
+<a href="#volumemounts_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Mounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespeccontainervolumemount">Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1987,6 +2043,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="volume_mounts_python">
+<a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespeccontainervolumemount">Sequence[Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="working_dir_python">
 <a href="#working_dir_python" style="color: inherit; text-decoration: inherit;">working_<wbr>dir</a>
 </span>
@@ -2018,6 +2082,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="valuefroms_csharp">
+<a href="#valuefroms_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Froms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespeccontainerenvvaluefrom">List&lt;Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From&gt;</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2038,6 +2110,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="valuefroms_go">
+<a href="#valuefroms_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Froms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespeccontainerenvvaluefrom">[]Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2060,6 +2140,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="valuefroms_nodejs">
+<a href="#valuefroms_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Froms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespeccontainerenvvaluefrom">Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From[]</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2080,6 +2168,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_froms_python">
+<a href="#value_froms_python" style="color: inherit; text-decoration: inherit;">value_<wbr>froms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespeccontainerenvvaluefrom">Sequence[Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2480,6 +2576,146 @@ The following output properties are available:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="getservicetemplatespeccontainerenvvaluefrom">Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretkeyreves_csharp">
+<a href="#secretkeyreves_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key<wbr>Reves</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespeccontainerenvvaluefromsecretkeyref">List&lt;Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Secret<wbr>Key<wbr>Ref&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretkeyreves_go">
+<a href="#secretkeyreves_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key<wbr>Reves</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespeccontainerenvvaluefromsecretkeyref">[]Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Secret<wbr>Key<wbr>Ref</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretkeyreves_nodejs">
+<a href="#secretkeyreves_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key<wbr>Reves</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespeccontainerenvvaluefromsecretkeyref">Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Secret<wbr>Key<wbr>Ref[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secret_key_reves_python">
+<a href="#secret_key_reves_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key_<wbr>reves</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespeccontainerenvvaluefromsecretkeyref">Sequence[Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Secret<wbr>Key<wbr>Ref]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getservicetemplatespeccontainerenvvaluefromsecretkeyref">Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Secret<wbr>Key<wbr>Ref</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud Run Service.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud Run Service.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud Run Service.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud Run Service.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="getservicetemplatespeccontainerport">Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port</h4>
 
 
@@ -2680,6 +2916,350 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getservicetemplatespeccontainervolumemount">Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mountpath_csharp">
+<a href="#mountpath_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud Run Service.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mountpath_go">
+<a href="#mountpath_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud Run Service.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mountpath_nodejs">
+<a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud Run Service.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mount_path_python">
+<a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud Run Service.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getservicetemplatespecvolume">Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Volume</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud Run Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secrets_csharp">
+<a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespecvolumesecret">List&lt;Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud Run Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secrets_go">
+<a href="#secrets_go" style="color: inherit; text-decoration: inherit;">Secrets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespecvolumesecret">[]Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud Run Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secrets_nodejs">
+<a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespecvolumesecret">Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud Run Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secrets_python">
+<a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespecvolumesecret">Sequence[Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getservicetemplatespecvolumesecret">Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="items_csharp">
+<a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespecvolumesecretitem">List&lt;Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Item&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretname_csharp">
+<a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="items_go">
+<a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespecvolumesecretitem">[]Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretname_go">
+<a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="items_nodejs">
+<a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespecvolumesecretitem">Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Item[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretname_nodejs">
+<a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="items_python">
+<a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicetemplatespecvolumesecretitem">Sequence[Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Item]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secret_name_python">
+<a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getservicetemplatespecvolumesecretitem">Get<wbr>Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Item</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
