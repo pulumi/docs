@@ -11,58 +11,6 @@ meta_desc: "Documentation for the datadog.LogsArchive resource with examples, in
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Datadog Logs Archive API resource, which is used to create and manage Datadog logs archives.
-## Schema
-
-### Required
-
-- **name** (String, Required) Your archive name.
-- **query** (String, Required) The archive query/filter. Logs matching this query are included in the archive.
-
-### Optional
-
-- **azure** (Map of String, Optional, Deprecated) Definition of an azure archive.
-- **azure_archive** (Block List, Max: 1) Definition of an azure archive. (see below for nested schema)
-- **gcs** (Map of String, Optional, Deprecated) Definition of a GCS archive.
-- **gcs_archive** (Block List, Max: 1) Definition of a GCS archive. (see below for nested schema)
-- **id** (String, Optional) The ID of this resource.
-- **include_tags** (Boolean, Optional) To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs are sent to the archive.
-- **rehydration_tags** (List of String, Optional) An array of tags to add to rehydrated logs from an archive.
-- **s3** (Map of String, Optional, Deprecated) Definition of an s3 archive.
-- **s3_archive** (Block List, Max: 1) Definition of an s3 archive. (see below for nested schema)
-
-<a id="nestedblock--azure_archive"></a>
-### Nested Schema for `azure_archive`
-
-Required:
-
-- **client_id** (String, Required) Your client id.
-- **container** (String, Required) The container where the archive will be stored.
-- **storage_account** (String, Required) The associated storage account.
-- **tenant_id** (String, Required) Your tenant id.
-
-Optional:
-
-- **path** (String, Optional) The path where the archive will be stored.
-
-<a id="nestedblock--gcs_archive"></a>
-### Nested Schema for `gcs_archive`
-
-Required:
-
-- **bucket** (String, Required) Name of your GCS bucket.
-- **client_email** (String, Required) Your client email.
-- **path** (String, Required) Path where the archive will be stored.
-- **project_id** (String, Required) Your project id.
-
-<a id="nestedblock--s3_archive"></a>
-### Nested Schema for `s3_archive`
-
-Required:
-
-- **account_id** (String, Required) Your AWS account id.
-- **bucket** (String, Required) Name of your s3 bucket.
-- **path** (String, Required) Path where the archive will be stored.
-- **role_name** (String, Required) Your AWS role name
 
 {{% examples %}}
 
@@ -235,25 +183,19 @@ const myS3Archive = new datadog.LogsArchive("my_s3_archive", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LogsArchiveArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -265,25 +207,19 @@ const myS3Archive = new datadog.LogsArchive("my_s3_archive", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LogsArchiveArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -295,33 +231,25 @@ const myS3Archive = new datadog.LogsArchive("my_s3_archive", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LogsArchiveArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -333,25 +261,19 @@ const myS3Archive = new datadog.LogsArchive("my_s3_archive", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LogsArchiveArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -392,7 +314,7 @@ The LogsArchive resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchiveazure">Logs<wbr>Archive<wbr>Azure<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of an azure archive.
+    <dd>{{% md %}}Definition of an azure archive. **Deprecated.** Define `azure_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="azurearchive_csharp">
@@ -410,7 +332,7 @@ The LogsArchive resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchivegcs">Logs<wbr>Archive<wbr>Gcs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of a GCS archive.
+    <dd>{{% md %}}Definition of a GCS archive. **Deprecated.** Define `gcs_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="gcsarchive_csharp">
@@ -428,8 +350,7 @@ The LogsArchive resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs
-are sent to the archive.
+    <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs are sent to the archive.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rehydrationtags_csharp">
@@ -447,7 +368,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchives3">Logs<wbr>Archive<wbr>S3Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of an s3 archive.
+    <dd>{{% md %}}Definition of an s3 archive. **Deprecated.** Define `s3_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="s3archive_csharp">
@@ -487,7 +408,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchiveazure">Logs<wbr>Archive<wbr>Azure</a></span>
     </dt>
-    <dd>{{% md %}}Definition of an azure archive.
+    <dd>{{% md %}}Definition of an azure archive. **Deprecated.** Define `azure_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="azurearchive_go">
@@ -505,7 +426,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchivegcs">Logs<wbr>Archive<wbr>Gcs</a></span>
     </dt>
-    <dd>{{% md %}}Definition of a GCS archive.
+    <dd>{{% md %}}Definition of a GCS archive. **Deprecated.** Define `gcs_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="gcsarchive_go">
@@ -523,8 +444,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs
-are sent to the archive.
+    <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs are sent to the archive.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rehydrationtags_go">
@@ -542,7 +462,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchives3">Logs<wbr>Archive<wbr>S3</a></span>
     </dt>
-    <dd>{{% md %}}Definition of an s3 archive.
+    <dd>{{% md %}}Definition of an s3 archive. **Deprecated.** Define `s3_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="s3archive_go">
@@ -582,7 +502,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchiveazure">Logs<wbr>Archive<wbr>Azure<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of an azure archive.
+    <dd>{{% md %}}Definition of an azure archive. **Deprecated.** Define `azure_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="azurearchive_nodejs">
@@ -600,7 +520,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchivegcs">Logs<wbr>Archive<wbr>Gcs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of a GCS archive.
+    <dd>{{% md %}}Definition of a GCS archive. **Deprecated.** Define `gcs_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="gcsarchive_nodejs">
@@ -618,8 +538,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs
-are sent to the archive.
+    <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs are sent to the archive.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rehydrationtags_nodejs">
@@ -637,7 +556,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchives3">Logs<wbr>Archive<wbr>S3Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of an s3 archive.
+    <dd>{{% md %}}Definition of an s3 archive. **Deprecated.** Define `s3_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="s3archive_nodejs">
@@ -677,7 +596,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchiveazure">Logs<wbr>Archive<wbr>Azure<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of an azure archive.
+    <dd>{{% md %}}Definition of an azure archive. **Deprecated.** Define `azure_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="azure_archive_python">
@@ -695,7 +614,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchivegcs">Logs<wbr>Archive<wbr>Gcs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of a GCS archive.
+    <dd>{{% md %}}Definition of a GCS archive. **Deprecated.** Define `gcs_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="gcs_archive_python">
@@ -713,8 +632,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs
-are sent to the archive.
+    <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs are sent to the archive.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rehydration_tags_python">
@@ -732,7 +650,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchives3">Logs<wbr>Archive<wbr>S3Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of an s3 archive.
+    <dd>{{% md %}}Definition of an s3 archive. **Deprecated.** Define `s3_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="s3_archive_python">
@@ -944,7 +862,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchiveazure">Logs<wbr>Archive<wbr>Azure<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of an azure archive.
+    <dd>{{% md %}}Definition of an azure archive. **Deprecated.** Define `azure_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurearchive_csharp">
@@ -962,7 +880,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchivegcs">Logs<wbr>Archive<wbr>Gcs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of a GCS archive.
+    <dd>{{% md %}}Definition of a GCS archive. **Deprecated.** Define `gcs_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcsarchive_csharp">
@@ -980,8 +898,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs
-are sent to the archive.
+    <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs are sent to the archive.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1017,7 +934,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchives3">Logs<wbr>Archive<wbr>S3Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of an s3 archive.
+    <dd>{{% md %}}Definition of an s3 archive. **Deprecated.** Define `s3_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3archive_csharp">
@@ -1039,7 +956,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchiveazure">Logs<wbr>Archive<wbr>Azure</a></span>
     </dt>
-    <dd>{{% md %}}Definition of an azure archive.
+    <dd>{{% md %}}Definition of an azure archive. **Deprecated.** Define `azure_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurearchive_go">
@@ -1057,7 +974,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchivegcs">Logs<wbr>Archive<wbr>Gcs</a></span>
     </dt>
-    <dd>{{% md %}}Definition of a GCS archive.
+    <dd>{{% md %}}Definition of a GCS archive. **Deprecated.** Define `gcs_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcsarchive_go">
@@ -1075,8 +992,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs
-are sent to the archive.
+    <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs are sent to the archive.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1112,7 +1028,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchives3">Logs<wbr>Archive<wbr>S3</a></span>
     </dt>
-    <dd>{{% md %}}Definition of an s3 archive.
+    <dd>{{% md %}}Definition of an s3 archive. **Deprecated.** Define `s3_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3archive_go">
@@ -1134,7 +1050,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchiveazure">Logs<wbr>Archive<wbr>Azure<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of an azure archive.
+    <dd>{{% md %}}Definition of an azure archive. **Deprecated.** Define `azure_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurearchive_nodejs">
@@ -1152,7 +1068,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchivegcs">Logs<wbr>Archive<wbr>Gcs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of a GCS archive.
+    <dd>{{% md %}}Definition of a GCS archive. **Deprecated.** Define `gcs_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcsarchive_nodejs">
@@ -1170,8 +1086,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs
-are sent to the archive.
+    <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs are sent to the archive.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1207,7 +1122,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchives3">Logs<wbr>Archive<wbr>S3Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of an s3 archive.
+    <dd>{{% md %}}Definition of an s3 archive. **Deprecated.** Define `s3_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3archive_nodejs">
@@ -1229,7 +1144,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchiveazure">Logs<wbr>Archive<wbr>Azure<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of an azure archive.
+    <dd>{{% md %}}Definition of an azure archive. **Deprecated.** Define `azure_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_azure_archive_python">
@@ -1247,7 +1162,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchivegcs">Logs<wbr>Archive<wbr>Gcs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of a GCS archive.
+    <dd>{{% md %}}Definition of a GCS archive. **Deprecated.** Define `gcs_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcs_archive_python">
@@ -1265,8 +1180,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs
-are sent to the archive.
+    <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs are sent to the archive.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -1302,7 +1216,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsarchives3">Logs<wbr>Archive<wbr>S3Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of an s3 archive.
+    <dd>{{% md %}}Definition of an s3 archive. **Deprecated.** Define `s3_archive` list with one element instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3_archive_python">
@@ -1513,7 +1427,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Your client id.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_csharp">
 <a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
@@ -1521,7 +1436,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The container where the archive will be stored.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccount_csharp">
 <a href="#storageaccount_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
@@ -1529,7 +1445,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The associated storage account.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1537,7 +1454,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Your tenant id.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1545,7 +1463,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The path where the archive will be stored.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1557,7 +1476,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Your client id.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_go">
 <a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
@@ -1565,7 +1485,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The container where the archive will be stored.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccount_go">
 <a href="#storageaccount_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
@@ -1573,7 +1494,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The associated storage account.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1581,7 +1503,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Your tenant id.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1589,7 +1512,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The path where the archive will be stored.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1601,7 +1525,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Your client id.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_nodejs">
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
@@ -1609,7 +1534,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The container where the archive will be stored.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccount_nodejs">
 <a href="#storageaccount_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account</a>
@@ -1617,7 +1543,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The associated storage account.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1625,7 +1552,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Your tenant id.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1633,7 +1561,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The path where the archive will be stored.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1645,7 +1574,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Your client id.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_python">
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
@@ -1653,7 +1583,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The container where the archive will be stored.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_account_python">
 <a href="#storage_account_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account</a>
@@ -1661,7 +1592,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The associated storage account.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1669,7 +1601,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Your tenant id.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1677,7 +1610,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The path where the archive will be stored.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logsarchivegcs">Logs<wbr>Archive<wbr>Gcs</h4>
@@ -1837,7 +1771,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of your GCS bucket.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientemail_csharp">
 <a href="#clientemail_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Email</a>
@@ -1845,7 +1780,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Your client email.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1853,7 +1789,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Path where the archive will be stored.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1861,7 +1798,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Your project id.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1873,7 +1811,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of your GCS bucket.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientemail_go">
 <a href="#clientemail_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Email</a>
@@ -1881,7 +1820,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Your client email.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1889,7 +1829,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Path where the archive will be stored.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1897,7 +1838,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Your project id.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1909,7 +1851,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of your GCS bucket.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientemail_nodejs">
 <a href="#clientemail_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Email</a>
@@ -1917,7 +1860,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Your client email.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1925,7 +1869,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Path where the archive will be stored.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1933,7 +1878,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Your project id.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1945,7 +1891,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of your GCS bucket.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_email_python">
 <a href="#client_email_python" style="color: inherit; text-decoration: inherit;">client_<wbr>email</a>
@@ -1953,7 +1900,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Your client email.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1961,7 +1909,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Path where the archive will be stored.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1969,7 +1918,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Your project id.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logsarchives3">Logs<wbr>Archive<wbr>S3</h4>
@@ -2129,7 +2079,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Your AWS account id.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -2137,7 +2088,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of your s3 bucket.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2145,7 +2097,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Path where the archive will be stored.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolename_csharp">
 <a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -2153,7 +2106,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Your AWS role name
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2165,7 +2119,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Your AWS account id.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -2173,7 +2128,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of your s3 bucket.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2181,7 +2137,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Path where the archive will be stored.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolename_go">
 <a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -2189,7 +2146,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Your AWS role name
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2201,7 +2159,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Your AWS account id.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -2209,7 +2168,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of your s3 bucket.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2217,7 +2177,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Path where the archive will be stored.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolename_nodejs">
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
@@ -2225,7 +2186,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Your AWS role name
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2237,7 +2199,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Your AWS account id.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -2245,7 +2208,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of your s3 bucket.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2253,7 +2217,8 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Path where the archive will be stored.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_name_python">
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
@@ -2261,12 +2226,11 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Your AWS role name
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
-
-Import is supported using the following syntax
 
 ```sh
  $ pulumi import datadog:index/logsArchive:LogsArchive my_s3_archive 1Aabc2_dfQPLnXy3HlfK4hi

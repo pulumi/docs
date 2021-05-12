@@ -71,7 +71,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A map of available Synthetics location IDs to names for Synthetics tests.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -92,7 +93,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A map of available Synthetics location IDs to names for Synthetics tests.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -113,7 +115,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A map of available Synthetics location IDs to names for Synthetics tests.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -134,7 +137,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A map of available Synthetics location IDs to names for Synthetics tests.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

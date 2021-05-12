@@ -217,25 +217,19 @@ const sandbox = new datadog.aws.Integration("sandbox", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IntegrationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -247,25 +241,19 @@ const sandbox = new datadog.aws.Integration("sandbox", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IntegrationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -277,33 +265,25 @@ const sandbox = new datadog.aws.Integration("sandbox", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IntegrationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -315,25 +295,19 @@ const sandbox = new datadog.aws.Integration("sandbox", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IntegrationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -374,9 +348,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be
-found at the [available namespace rules API
-endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
+    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedregions_csharp">
@@ -394,10 +366,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of EC2 tags (in the form key:value) defines a filter that Datadog use when collecting metrics from EC2. Wildcards,
-such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the
-defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by
-adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
+    <dd>{{% md %}}Array of EC2 tags (in the form `key:value`) defines a filter that Datadog uses when collecting metrics from EC2. Wildcards, such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosttags_csharp">
@@ -406,7 +375,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.
+    <dd>{{% md %}}Array of tags (in the form `key:value`) to add to all hosts and metrics reporting through this integration.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -437,9 +406,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be
-found at the [available namespace rules API
-endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
+    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedregions_go">
@@ -457,10 +424,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of EC2 tags (in the form key:value) defines a filter that Datadog use when collecting metrics from EC2. Wildcards,
-such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the
-defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by
-adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
+    <dd>{{% md %}}Array of EC2 tags (in the form `key:value`) defines a filter that Datadog uses when collecting metrics from EC2. Wildcards, such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosttags_go">
@@ -469,7 +433,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.
+    <dd>{{% md %}}Array of tags (in the form `key:value`) to add to all hosts and metrics reporting through this integration.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -500,9 +464,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be
-found at the [available namespace rules API
-endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
+    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedregions_nodejs">
@@ -520,10 +482,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of EC2 tags (in the form key:value) defines a filter that Datadog use when collecting metrics from EC2. Wildcards,
-such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the
-defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by
-adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
+    <dd>{{% md %}}Array of EC2 tags (in the form `key:value`) defines a filter that Datadog uses when collecting metrics from EC2. Wildcards, such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosttags_nodejs">
@@ -532,7 +491,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.
+    <dd>{{% md %}}Array of tags (in the form `key:value`) to add to all hosts and metrics reporting through this integration.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -563,9 +522,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be
-found at the [available namespace rules API
-endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
+    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excluded_regions_python">
@@ -583,10 +540,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of EC2 tags (in the form key:value) defines a filter that Datadog use when collecting metrics from EC2. Wildcards,
-such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the
-defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by
-adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
+    <dd>{{% md %}}Array of EC2 tags (in the form `key:value`) defines a filter that Datadog uses when collecting metrics from EC2. Wildcards, such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_tags_python">
@@ -595,7 +549,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.
+    <dd>{{% md %}}Array of tags (in the form `key:value`) to add to all hosts and metrics reporting through this integration.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -844,9 +798,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be
-found at the [available namespace rules API
-endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
+    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excludedregions_csharp">
@@ -874,10 +826,7 @@ Terraform.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of EC2 tags (in the form key:value) defines a filter that Datadog use when collecting metrics from EC2. Wildcards,
-such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the
-defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by
-adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
+    <dd>{{% md %}}Array of EC2 tags (in the form `key:value`) defines a filter that Datadog uses when collecting metrics from EC2. Wildcards, such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosttags_csharp">
@@ -886,7 +835,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.
+    <dd>{{% md %}}Array of tags (in the form `key:value`) to add to all hosts and metrics reporting through this integration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_csharp">
@@ -917,9 +866,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be
-found at the [available namespace rules API
-endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
+    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excludedregions_go">
@@ -947,10 +894,7 @@ Terraform.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of EC2 tags (in the form key:value) defines a filter that Datadog use when collecting metrics from EC2. Wildcards,
-such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the
-defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by
-adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
+    <dd>{{% md %}}Array of EC2 tags (in the form `key:value`) defines a filter that Datadog uses when collecting metrics from EC2. Wildcards, such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosttags_go">
@@ -959,7 +903,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.
+    <dd>{{% md %}}Array of tags (in the form `key:value`) to add to all hosts and metrics reporting through this integration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_go">
@@ -990,9 +934,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be
-found at the [available namespace rules API
-endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
+    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excludedregions_nodejs">
@@ -1020,10 +962,7 @@ Terraform.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of EC2 tags (in the form key:value) defines a filter that Datadog use when collecting metrics from EC2. Wildcards,
-such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the
-defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by
-adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
+    <dd>{{% md %}}Array of EC2 tags (in the form `key:value`) defines a filter that Datadog uses when collecting metrics from EC2. Wildcards, such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosttags_nodejs">
@@ -1032,7 +971,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.
+    <dd>{{% md %}}Array of tags (in the form `key:value`) to add to all hosts and metrics reporting through this integration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_nodejs">
@@ -1063,9 +1002,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be
-found at the [available namespace rules API
-endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
+    <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the [available namespace rules API endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excluded_regions_python">
@@ -1093,10 +1030,7 @@ Terraform.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of EC2 tags (in the form key:value) defines a filter that Datadog use when collecting metrics from EC2. Wildcards,
-such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the
-defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by
-adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
+    <dd>{{% md %}}Array of EC2 tags (in the form `key:value`) defines a filter that Datadog uses when collecting metrics from EC2. Wildcards, such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_tags_python">
@@ -1105,7 +1039,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.
+    <dd>{{% md %}}Array of tags (in the form `key:value`) to add to all hosts and metrics reporting through this integration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_name_python">
@@ -1125,7 +1059,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
 ## Import
 
 
-Amazon Web Services integrations can be imported using their `account ID` and `role name` separated with a colon (`:`), while the `external_id` should be passed by setting an environment variable called `EXTERNAL_ID`
+# Amazon Web Services integrations can be imported using their account ID and role name separated with a colon (:), while the external_id should be passed by setting an environment variable called EXTERNAL_ID
 
 ```sh
  $ pulumi import datadog:aws/integration:Integration EXTERNAL_ID=${external_id} datadog_integration_aws.test ${account_id}:${role_name}

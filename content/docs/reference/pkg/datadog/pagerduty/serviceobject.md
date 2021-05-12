@@ -170,25 +170,19 @@ const testingBar = new datadog.pagerduty.ServiceObject("testing_bar", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceObjectArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -200,25 +194,19 @@ const testingBar = new datadog.pagerduty.ServiceObject("testing_bar", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceObjectArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -230,33 +218,25 @@ const testingBar = new datadog.pagerduty.ServiceObject("testing_bar", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceObjectArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -268,25 +248,19 @@ const testingBar = new datadog.pagerduty.ServiceObject("testing_bar", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceObjectArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -309,12 +283,7 @@ The ServiceObject resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your Service name associated service key in PagerDuty. Note: Since the Datadog API never returns service keys, it is
-impossible to detect
-[drifts](https://www.hashicorp.com/blog/detecting-and-managing-drift-with-terraform?_ga=2.15990198.1091155358.1609189257-888022054.1605547463).
-The best way to solve a drift is to manually mark the Service Object resource with [terraform
-taint](https://www.terraform.io/docs/commands/taint.html?_ga=2.15990198.1091155358.1609189257-888022054.1605547463) to
-have it destroyed and recreated.
+    <dd>{{% md %}}Your Service name associated service key in PagerDuty. Note: Since the Datadog API never returns service keys, it is impossible to detect drifts.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
@@ -336,12 +305,7 @@ have it destroyed and recreated.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your Service name associated service key in PagerDuty. Note: Since the Datadog API never returns service keys, it is
-impossible to detect
-[drifts](https://www.hashicorp.com/blog/detecting-and-managing-drift-with-terraform?_ga=2.15990198.1091155358.1609189257-888022054.1605547463).
-The best way to solve a drift is to manually mark the Service Object resource with [terraform
-taint](https://www.terraform.io/docs/commands/taint.html?_ga=2.15990198.1091155358.1609189257-888022054.1605547463) to
-have it destroyed and recreated.
+    <dd>{{% md %}}Your Service name associated service key in PagerDuty. Note: Since the Datadog API never returns service keys, it is impossible to detect drifts.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
@@ -363,12 +327,7 @@ have it destroyed and recreated.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your Service name associated service key in PagerDuty. Note: Since the Datadog API never returns service keys, it is
-impossible to detect
-[drifts](https://www.hashicorp.com/blog/detecting-and-managing-drift-with-terraform?_ga=2.15990198.1091155358.1609189257-888022054.1605547463).
-The best way to solve a drift is to manually mark the Service Object resource with [terraform
-taint](https://www.terraform.io/docs/commands/taint.html?_ga=2.15990198.1091155358.1609189257-888022054.1605547463) to
-have it destroyed and recreated.
+    <dd>{{% md %}}Your Service name associated service key in PagerDuty. Note: Since the Datadog API never returns service keys, it is impossible to detect drifts.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
@@ -390,12 +349,7 @@ have it destroyed and recreated.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Your Service name associated service key in PagerDuty. Note: Since the Datadog API never returns service keys, it is
-impossible to detect
-[drifts](https://www.hashicorp.com/blog/detecting-and-managing-drift-with-terraform?_ga=2.15990198.1091155358.1609189257-888022054.1605547463).
-The best way to solve a drift is to manually mark the Service Object resource with [terraform
-taint](https://www.terraform.io/docs/commands/taint.html?_ga=2.15990198.1091155358.1609189257-888022054.1605547463) to
-have it destroyed and recreated.
+    <dd>{{% md %}}Your Service name associated service key in PagerDuty. Note: Since the Datadog API never returns service keys, it is impossible to detect drifts.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
@@ -599,12 +553,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your Service name associated service key in PagerDuty. Note: Since the Datadog API never returns service keys, it is
-impossible to detect
-[drifts](https://www.hashicorp.com/blog/detecting-and-managing-drift-with-terraform?_ga=2.15990198.1091155358.1609189257-888022054.1605547463).
-The best way to solve a drift is to manually mark the Service Object resource with [terraform
-taint](https://www.terraform.io/docs/commands/taint.html?_ga=2.15990198.1091155358.1609189257-888022054.1605547463) to
-have it destroyed and recreated.
+    <dd>{{% md %}}Your Service name associated service key in PagerDuty. Note: Since the Datadog API never returns service keys, it is impossible to detect drifts.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
@@ -626,12 +575,7 @@ have it destroyed and recreated.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your Service name associated service key in PagerDuty. Note: Since the Datadog API never returns service keys, it is
-impossible to detect
-[drifts](https://www.hashicorp.com/blog/detecting-and-managing-drift-with-terraform?_ga=2.15990198.1091155358.1609189257-888022054.1605547463).
-The best way to solve a drift is to manually mark the Service Object resource with [terraform
-taint](https://www.terraform.io/docs/commands/taint.html?_ga=2.15990198.1091155358.1609189257-888022054.1605547463) to
-have it destroyed and recreated.
+    <dd>{{% md %}}Your Service name associated service key in PagerDuty. Note: Since the Datadog API never returns service keys, it is impossible to detect drifts.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_go">
@@ -653,12 +597,7 @@ have it destroyed and recreated.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your Service name associated service key in PagerDuty. Note: Since the Datadog API never returns service keys, it is
-impossible to detect
-[drifts](https://www.hashicorp.com/blog/detecting-and-managing-drift-with-terraform?_ga=2.15990198.1091155358.1609189257-888022054.1605547463).
-The best way to solve a drift is to manually mark the Service Object resource with [terraform
-taint](https://www.terraform.io/docs/commands/taint.html?_ga=2.15990198.1091155358.1609189257-888022054.1605547463) to
-have it destroyed and recreated.
+    <dd>{{% md %}}Your Service name associated service key in PagerDuty. Note: Since the Datadog API never returns service keys, it is impossible to detect drifts.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_nodejs">
@@ -680,12 +619,7 @@ have it destroyed and recreated.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Your Service name associated service key in PagerDuty. Note: Since the Datadog API never returns service keys, it is
-impossible to detect
-[drifts](https://www.hashicorp.com/blog/detecting-and-managing-drift-with-terraform?_ga=2.15990198.1091155358.1609189257-888022054.1605547463).
-The best way to solve a drift is to manually mark the Service Object resource with [terraform
-taint](https://www.terraform.io/docs/commands/taint.html?_ga=2.15990198.1091155358.1609189257-888022054.1605547463) to
-have it destroyed and recreated.
+    <dd>{{% md %}}Your Service name associated service key in PagerDuty. Note: Since the Datadog API never returns service keys, it is impossible to detect drifts.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_name_python">
