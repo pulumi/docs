@@ -1736,6 +1736,8 @@ class MyStack : Stack
                         MaxSize = 3,
                     },
                 },
+                PrivateAccess = true,
+                PublicAccess = false,
             },
         });
     }
@@ -1793,6 +1795,8 @@ func main() {
 						MaxSize:      pulumi.Int(3),
 					},
 				},
+				PrivateAccess: pulumi.Bool(true),
+				PublicAccess:  pulumi.Bool(false),
 			},
 		})
 		if err != nil {
@@ -1843,6 +1847,8 @@ foo_cluster = rancher2.Cluster("fooCluster",
                 max_size=3,
             ),
         ],
+        private_access=True,
+        public_access=False,
     ))
 ```
 
@@ -1888,6 +1894,8 @@ const fooCluster = new rancher2.Cluster("fooCluster", {
                 maxSize: 3,
             },
         ],
+        privateAccess: true,
+        publicAccess: false,
     },
 });
 ```
@@ -1950,6 +1958,8 @@ class MyStack : Stack
                         },
                     },
                 },
+                PrivateAccess = true,
+                PublicAccess = true,
             },
         });
     }
@@ -2006,6 +2016,8 @@ func main() {
 						},
 					},
 				},
+				PrivateAccess: pulumi.Bool(true),
+				PublicAccess:  pulumi.Bool(true),
 			},
 		})
 		if err != nil {
@@ -2051,6 +2063,8 @@ foo_cluster = rancher2.Cluster("fooCluster",
                 version=1,
             )],
         )],
+        private_access=True,
+        public_access=True,
     ))
 ```
 
@@ -2091,6 +2105,8 @@ const fooCluster = new rancher2.Cluster("fooCluster", {
                 version: 1,
             }],
         }],
+        privateAccess: true,
+        publicAccess: true,
     },
 });
 ```
@@ -2139,10 +2155,12 @@ const fooCluster = new rancher2.Cluster("fooCluster", {
             <span class="nx">enable_cluster_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">enable_network_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">gke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterGkeConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">gke_config_v2</span><span class="p">:</span> <span class="nx">Optional[ClusterGkeConfigV2Args]</span> = None<span class="p">,</span>
             <span class="nx">k3s_config</span><span class="p">:</span> <span class="nx">Optional[ClusterK3sConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">oke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterOkeConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">rke2_config</span><span class="p">:</span> <span class="nx">Optional[ClusterRke2ConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">rke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterRkeConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">scheduled_cluster_scan</span><span class="p">:</span> <span class="nx">Optional[ClusterScheduledClusterScanArgs]</span> = None<span class="p">,</span>
             <span class="nx">windows_prefered_cluster</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
@@ -2168,25 +2186,19 @@ const fooCluster = new rancher2.Cluster("fooCluster", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -2198,25 +2210,19 @@ const fooCluster = new rancher2.Cluster("fooCluster", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -2228,33 +2234,25 @@ const fooCluster = new rancher2.Cluster("fooCluster", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -2266,25 +2264,19 @@ const fooCluster = new rancher2.Cluster("fooCluster", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -2307,7 +2299,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
@@ -2433,7 +2425,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eksconfigv2_csharp">
@@ -2442,7 +2434,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS V2 configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableclusteralerting_csharp">
@@ -2478,7 +2470,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustergkeconfig">Cluster<wbr>Gke<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config_v2`, `oke_config`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gkeconfigv2_csharp">
+<a href="#gkeconfigv2_csharp" style="color: inherit; text-decoration: inherit;">Gke<wbr>Config<wbr>V2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2">Cluster<wbr>Gke<wbr>Config<wbr>V2Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Google GKE V2 configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `oke_config`, `k3s_config` and `rke_config`. For Rancher v2.5.8 or above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="k3sconfig_csharp">
@@ -2487,7 +2488,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterk3sconfig">Cluster<wbr>K3s<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
@@ -2514,7 +2515,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterokeconfig">Cluster<wbr>Oke<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Oracle OKE configuration for `oke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `gke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Oracle OKE configuration for `oke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rke2config_csharp">
+<a href="#rke2config_csharp" style="color: inherit; text-decoration: inherit;">Rke2Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrke2config">Cluster<wbr>Rke2Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The RKE2 configuration for `rke2` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config`, `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rkeconfig_csharp">
@@ -2523,7 +2533,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfig">Cluster<wbr>Rke<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `k3s_config` (list maxitems:1)
+    <dd>{{% md %}}The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` and `k3s_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduledclusterscan_csharp">
@@ -2554,7 +2564,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
@@ -2680,7 +2690,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eksconfigv2_go">
@@ -2689,7 +2699,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS V2 configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableclusteralerting_go">
@@ -2725,7 +2735,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustergkeconfig">Cluster<wbr>Gke<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config_v2`, `oke_config`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gkeconfigv2_go">
+<a href="#gkeconfigv2_go" style="color: inherit; text-decoration: inherit;">Gke<wbr>Config<wbr>V2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2">Cluster<wbr>Gke<wbr>Config<wbr>V2</a></span>
+    </dt>
+    <dd>{{% md %}}The Google GKE V2 configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `oke_config`, `k3s_config` and `rke_config`. For Rancher v2.5.8 or above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="k3sconfig_go">
@@ -2734,7 +2753,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterk3sconfig">Cluster<wbr>K3s<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
@@ -2761,7 +2780,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterokeconfig">Cluster<wbr>Oke<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Oracle OKE configuration for `oke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `gke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Oracle OKE configuration for `oke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rke2config_go">
+<a href="#rke2config_go" style="color: inherit; text-decoration: inherit;">Rke2Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrke2config">Cluster<wbr>Rke2Config</a></span>
+    </dt>
+    <dd>{{% md %}}The RKE2 configuration for `rke2` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config`, `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rkeconfig_go">
@@ -2770,7 +2798,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfig">Cluster<wbr>Rke<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `k3s_config` (list maxitems:1)
+    <dd>{{% md %}}The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` and `k3s_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduledclusterscan_go">
@@ -2801,7 +2829,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
@@ -2927,7 +2955,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eksconfigv2_nodejs">
@@ -2936,7 +2964,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS V2 configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableclusteralerting_nodejs">
@@ -2972,7 +3000,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustergkeconfig">Cluster<wbr>Gke<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config_v2`, `oke_config`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gkeconfigv2_nodejs">
+<a href="#gkeconfigv2_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Config<wbr>V2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2">Cluster<wbr>Gke<wbr>Config<wbr>V2Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Google GKE V2 configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `oke_config`, `k3s_config` and `rke_config`. For Rancher v2.5.8 or above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="k3sconfig_nodejs">
@@ -2981,7 +3018,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterk3sconfig">Cluster<wbr>K3s<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
@@ -3008,7 +3045,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterokeconfig">Cluster<wbr>Oke<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Oracle OKE configuration for `oke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `gke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Oracle OKE configuration for `oke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rke2config_nodejs">
+<a href="#rke2config_nodejs" style="color: inherit; text-decoration: inherit;">rke2Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrke2config">Cluster<wbr>Rke2Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The RKE2 configuration for `rke2` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config`, `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rkeconfig_nodejs">
@@ -3017,7 +3063,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfig">Cluster<wbr>Rke<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `k3s_config` (list maxitems:1)
+    <dd>{{% md %}}The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` and `k3s_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduledclusterscan_nodejs">
@@ -3048,7 +3094,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
@@ -3174,7 +3220,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eks_config_v2_python">
@@ -3183,7 +3229,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS V2 configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_cluster_alerting_python">
@@ -3219,7 +3265,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustergkeconfig">Cluster<wbr>Gke<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config_v2`, `oke_config`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gke_config_v2_python">
+<a href="#gke_config_v2_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>config_<wbr>v2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2">Cluster<wbr>Gke<wbr>Config<wbr>V2Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Google GKE V2 configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `oke_config`, `k3s_config` and `rke_config`. For Rancher v2.5.8 or above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="k3s_config_python">
@@ -3228,7 +3283,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterk3sconfig">Cluster<wbr>K3s<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
@@ -3255,7 +3310,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterokeconfig">Cluster<wbr>Oke<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Oracle OKE configuration for `oke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `gke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Oracle OKE configuration for `oke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rke2_config_python">
+<a href="#rke2_config_python" style="color: inherit; text-decoration: inherit;">rke2_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrke2config">Cluster<wbr>Rke2Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The RKE2 configuration for `rke2` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config`, `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rke_config_python">
@@ -3264,7 +3328,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfig">Cluster<wbr>Rke<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `k3s_config` (list maxitems:1)
+    <dd>{{% md %}}The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` and `k3s_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduled_cluster_scan_python">
@@ -3633,12 +3697,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
         <span class="nx">enable_cluster_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">enable_network_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">gke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterGkeConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">gke_config_v2</span><span class="p">:</span> <span class="nx">Optional[ClusterGkeConfigV2Args]</span> = None<span class="p">,</span>
         <span class="nx">istio_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">k3s_config</span><span class="p">:</span> <span class="nx">Optional[ClusterK3sConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">oke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterOkeConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">rke2_config</span><span class="p">:</span> <span class="nx">Optional[ClusterRke2ConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">rke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterRkeConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">scheduled_cluster_scan</span><span class="p">:</span> <span class="nx">Optional[ClusterScheduledClusterScanArgs]</span> = None<span class="p">,</span>
         <span class="nx">system_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -3761,7 +3827,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_csharp">
@@ -3914,7 +3980,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eksconfigv2_csharp">
@@ -3923,7 +3989,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS V2 configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableclusteralerting_csharp">
@@ -3968,7 +4034,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustergkeconfig">Cluster<wbr>Gke<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config_v2`, `oke_config`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_gkeconfigv2_csharp">
+<a href="#state_gkeconfigv2_csharp" style="color: inherit; text-decoration: inherit;">Gke<wbr>Config<wbr>V2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2">Cluster<wbr>Gke<wbr>Config<wbr>V2Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Google GKE V2 configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `oke_config`, `k3s_config` and `rke_config`. For Rancher v2.5.8 or above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_istioenabled_csharp">
@@ -3986,7 +4061,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterk3sconfig">Cluster<wbr>K3s<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubeconfig_csharp">
@@ -4022,7 +4097,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterokeconfig">Cluster<wbr>Oke<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Oracle OKE configuration for `oke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `gke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Oracle OKE configuration for `oke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_rke2config_csharp">
+<a href="#state_rke2config_csharp" style="color: inherit; text-decoration: inherit;">Rke2Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrke2config">Cluster<wbr>Rke2Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The RKE2 configuration for `rke2` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config`, `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rkeconfig_csharp">
@@ -4031,7 +4115,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfig">Cluster<wbr>Rke<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `k3s_config` (list maxitems:1)
+    <dd>{{% md %}}The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` and `k3s_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduledclusterscan_csharp">
@@ -4071,7 +4155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_go">
@@ -4224,7 +4308,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eksconfigv2_go">
@@ -4233,7 +4317,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS V2 configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableclusteralerting_go">
@@ -4278,7 +4362,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustergkeconfig">Cluster<wbr>Gke<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config_v2`, `oke_config`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_gkeconfigv2_go">
+<a href="#state_gkeconfigv2_go" style="color: inherit; text-decoration: inherit;">Gke<wbr>Config<wbr>V2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2">Cluster<wbr>Gke<wbr>Config<wbr>V2</a></span>
+    </dt>
+    <dd>{{% md %}}The Google GKE V2 configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `oke_config`, `k3s_config` and `rke_config`. For Rancher v2.5.8 or above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_istioenabled_go">
@@ -4296,7 +4389,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterk3sconfig">Cluster<wbr>K3s<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubeconfig_go">
@@ -4332,7 +4425,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterokeconfig">Cluster<wbr>Oke<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Oracle OKE configuration for `oke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `gke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Oracle OKE configuration for `oke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_rke2config_go">
+<a href="#state_rke2config_go" style="color: inherit; text-decoration: inherit;">Rke2Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrke2config">Cluster<wbr>Rke2Config</a></span>
+    </dt>
+    <dd>{{% md %}}The RKE2 configuration for `rke2` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config`, `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rkeconfig_go">
@@ -4341,7 +4443,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfig">Cluster<wbr>Rke<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `k3s_config` (list maxitems:1)
+    <dd>{{% md %}}The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` and `k3s_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduledclusterscan_go">
@@ -4381,7 +4483,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_nodejs">
@@ -4534,7 +4636,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eksconfigv2_nodejs">
@@ -4543,7 +4645,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS V2 configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableclusteralerting_nodejs">
@@ -4588,7 +4690,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustergkeconfig">Cluster<wbr>Gke<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config_v2`, `oke_config`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_gkeconfigv2_nodejs">
+<a href="#state_gkeconfigv2_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Config<wbr>V2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2">Cluster<wbr>Gke<wbr>Config<wbr>V2Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Google GKE V2 configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `oke_config`, `k3s_config` and `rke_config`. For Rancher v2.5.8 or above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_istioenabled_nodejs">
@@ -4606,7 +4717,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterk3sconfig">Cluster<wbr>K3s<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubeconfig_nodejs">
@@ -4642,7 +4753,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterokeconfig">Cluster<wbr>Oke<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Oracle OKE configuration for `oke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `gke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Oracle OKE configuration for `oke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_rke2config_nodejs">
+<a href="#state_rke2config_nodejs" style="color: inherit; text-decoration: inherit;">rke2Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrke2config">Cluster<wbr>Rke2Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The RKE2 configuration for `rke2` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config`, `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rkeconfig_nodejs">
@@ -4651,7 +4771,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfig">Cluster<wbr>Rke<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `k3s_config` (list maxitems:1)
+    <dd>{{% md %}}The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` and `k3s_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduledclusterscan_nodejs">
@@ -4691,7 +4811,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_python">
@@ -4844,7 +4964,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eks_config_v2_python">
@@ -4853,7 +4973,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS V2 configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `gke_config_v2`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_cluster_alerting_python">
@@ -4898,7 +5018,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustergkeconfig">Cluster<wbr>Gke<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config_v2`, `oke_config`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_gke_config_v2_python">
+<a href="#state_gke_config_v2_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>config_<wbr>v2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2">Cluster<wbr>Gke<wbr>Config<wbr>V2Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Google GKE V2 configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `oke_config`, `k3s_config` and `rke_config`. For Rancher v2.5.8 or above (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_istio_enabled_python">
@@ -4916,7 +5045,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterk3sconfig">Cluster<wbr>K3s<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kube_config_python">
@@ -4952,7 +5081,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterokeconfig">Cluster<wbr>Oke<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Oracle OKE configuration for `oke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_import`, `gke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Oracle OKE configuration for `oke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_rke2_config_python">
+<a href="#state_rke2_config_python" style="color: inherit; text-decoration: inherit;">rke2_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrke2config">Cluster<wbr>Rke2Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The RKE2 configuration for `rke2` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config`, `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rke_config_python">
@@ -4961,7 +5099,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfig">Cluster<wbr>Rke<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` and `k3s_config` (list maxitems:1)
+    <dd>{{% md %}}The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `eks_config_v2`, `gke_config`, `gke_config_v2`, `oke_config` and `k3s_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduled_cluster_scan_python">
@@ -8023,7 +8161,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Set to `true` to import EKS cluster. Default: `false` (bool)
+    <dd>{{% md %}}Is GKE cluster imported? Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskey_csharp">
@@ -8077,7 +8215,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster has private access. Default: `false` (bool)
+    <dd>{{% md %}}The EKS cluster has private access (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_csharp">
@@ -8086,7 +8224,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster has public access. Default: `true` (bool)
+    <dd>{{% md %}}The EKS cluster has public access (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccesssources_csharp">
@@ -8113,7 +8251,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable EKS cluster secret encryption. Default: `false` (bool)
+    <dd>{{% md %}}Enable EKS cluster secret encryption (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroups_csharp">
@@ -8171,7 +8309,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Set to `true` to import EKS cluster. Default: `false` (bool)
+    <dd>{{% md %}}Is GKE cluster imported? Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskey_go">
@@ -8225,7 +8363,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster has private access. Default: `false` (bool)
+    <dd>{{% md %}}The EKS cluster has private access (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_go">
@@ -8234,7 +8372,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster has public access. Default: `true` (bool)
+    <dd>{{% md %}}The EKS cluster has public access (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccesssources_go">
@@ -8261,7 +8399,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable EKS cluster secret encryption. Default: `false` (bool)
+    <dd>{{% md %}}Enable EKS cluster secret encryption (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroups_go">
@@ -8319,7 +8457,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Set to `true` to import EKS cluster. Default: `false` (bool)
+    <dd>{{% md %}}Is GKE cluster imported? Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskey_nodejs">
@@ -8373,7 +8511,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster has private access. Default: `false` (bool)
+    <dd>{{% md %}}The EKS cluster has private access (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_nodejs">
@@ -8382,7 +8520,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster has public access. Default: `true` (bool)
+    <dd>{{% md %}}The EKS cluster has public access (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccesssources_nodejs">
@@ -8409,7 +8547,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable EKS cluster secret encryption. Default: `false` (bool)
+    <dd>{{% md %}}Enable EKS cluster secret encryption (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroups_nodejs">
@@ -8467,7 +8605,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Set to `true` to import EKS cluster. Default: `false` (bool)
+    <dd>{{% md %}}Is GKE cluster imported? Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_python">
@@ -8521,7 +8659,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster has private access. Default: `false` (bool)
+    <dd>{{% md %}}The EKS cluster has private access (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_access_python">
@@ -8530,7 +8668,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster has public access. Default: `true` (bool)
+    <dd>{{% md %}}The EKS cluster has public access (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_access_sources_python">
@@ -8557,7 +8695,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable EKS cluster secret encryption. Default: `false` (bool)
+    <dd>{{% md %}}Enable EKS cluster secret encryption (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_groups_python">
@@ -9418,7 +9556,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the disk attached to each node (string)
+    <dd>{{% md %}}The GKE node config disk type (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagetype_csharp">
@@ -9427,7 +9565,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image to use for the worker nodes (string)
+    <dd>{{% md %}}The GKE node config image type (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ippolicyclusteripv4cidrblock_csharp">
@@ -9490,7 +9628,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Locations for GKE cluster (list)
+    <dd>{{% md %}}The GKE cluster locations (List)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="machinetype_csharp">
@@ -9499,7 +9637,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Machine type for GKE cluster (string)
+    <dd>{{% md %}}The GKE node config machine type (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maintenancewindow_csharp">
@@ -9508,7 +9646,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maintenance window for GKE cluster (string)
+    <dd>{{% md %}}The GKE cluster maintenance window (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masteripv4cidrblock_csharp">
@@ -9517,7 +9655,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP range in CIDR notation to use for the hosted master network (string)
+    <dd>{{% md %}}The GKE cluster private master ip v4 cidr block (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterversion_csharp">
@@ -9535,7 +9673,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network for GKE cluster (string)
+    <dd>{{% md %}}The GKE cluster network. Required for create new cluster (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodepool_csharp">
@@ -9562,7 +9700,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The set of Google API scopes to be made available on all of the node VMs under the default service account (list)
+    <dd>{{% md %}}The GKE node config oauth scopes (List)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
@@ -9607,7 +9745,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the disk attached to each node. Default `100` (int)
+    <dd>{{% md %}}The GKE node config disk size Gb (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablealphafeature_csharp">
@@ -9706,7 +9844,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the master's internal IP address is used as the cluster endpoint. Default `false` (bool)
+    <dd>{{% md %}}Enable GKE cluster private endpoint. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableprivatenodes_csharp">
@@ -9778,7 +9916,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of local SSD disks to be attached to the node. Default `0` (int)
+    <dd>{{% md %}}The GKE node config local ssd count (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterauthorizednetworkcidrblocks_csharp">
@@ -9796,7 +9934,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= minNodeCount. There has to enough quota to scale up the cluster. Default `0` (int)
+    <dd>{{% md %}}The GKE node pool config max node count (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodecount_csharp">
@@ -9805,7 +9943,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimmum number of nodes in the NodePool. Must be >= 1 and <= maxNodeCount. Default `0` (int)
+    <dd>{{% md %}}The GKE node pool config min node count (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_csharp">
@@ -9823,7 +9961,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the nodes are created as preemptible VM instances. Default `false` (bool)
+    <dd>{{% md %}}Enable GKE node config preemptible. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
@@ -9850,7 +9988,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of Kubernetes taints to be applied to each node (list)
+    <dd>{{% md %}}The GKE node config taints (List)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useipaliases_csharp">
@@ -9859,7 +9997,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether alias IPs will be used for pod IPs in the cluster. Default `false` (bool)
+    <dd>{{% md %}}Use GKE ip aliases? Default: `true` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_csharp">
@@ -9868,7 +10006,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GKE cluster zone. Conflicts with `region` (string)
+    <dd>{{% md %}}The GKE cluster zone. Required if `region` not set (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -9899,7 +10037,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the disk attached to each node (string)
+    <dd>{{% md %}}The GKE node config disk type (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagetype_go">
@@ -9908,7 +10046,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image to use for the worker nodes (string)
+    <dd>{{% md %}}The GKE node config image type (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ippolicyclusteripv4cidrblock_go">
@@ -9971,7 +10109,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Locations for GKE cluster (list)
+    <dd>{{% md %}}The GKE cluster locations (List)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="machinetype_go">
@@ -9980,7 +10118,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Machine type for GKE cluster (string)
+    <dd>{{% md %}}The GKE node config machine type (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maintenancewindow_go">
@@ -9989,7 +10127,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maintenance window for GKE cluster (string)
+    <dd>{{% md %}}The GKE cluster maintenance window (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masteripv4cidrblock_go">
@@ -9998,7 +10136,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP range in CIDR notation to use for the hosted master network (string)
+    <dd>{{% md %}}The GKE cluster private master ip v4 cidr block (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterversion_go">
@@ -10016,7 +10154,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network for GKE cluster (string)
+    <dd>{{% md %}}The GKE cluster network. Required for create new cluster (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodepool_go">
@@ -10043,7 +10181,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The set of Google API scopes to be made available on all of the node VMs under the default service account (list)
+    <dd>{{% md %}}The GKE node config oauth scopes (List)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
@@ -10088,7 +10226,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the disk attached to each node. Default `100` (int)
+    <dd>{{% md %}}The GKE node config disk size Gb (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablealphafeature_go">
@@ -10187,7 +10325,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the master's internal IP address is used as the cluster endpoint. Default `false` (bool)
+    <dd>{{% md %}}Enable GKE cluster private endpoint. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableprivatenodes_go">
@@ -10259,7 +10397,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of local SSD disks to be attached to the node. Default `0` (int)
+    <dd>{{% md %}}The GKE node config local ssd count (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterauthorizednetworkcidrblocks_go">
@@ -10277,7 +10415,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= minNodeCount. There has to enough quota to scale up the cluster. Default `0` (int)
+    <dd>{{% md %}}The GKE node pool config max node count (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodecount_go">
@@ -10286,7 +10424,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimmum number of nodes in the NodePool. Must be >= 1 and <= maxNodeCount. Default `0` (int)
+    <dd>{{% md %}}The GKE node pool config min node count (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_go">
@@ -10304,7 +10442,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the nodes are created as preemptible VM instances. Default `false` (bool)
+    <dd>{{% md %}}Enable GKE node config preemptible. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
@@ -10331,7 +10469,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of Kubernetes taints to be applied to each node (list)
+    <dd>{{% md %}}The GKE node config taints (List)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useipaliases_go">
@@ -10340,7 +10478,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether alias IPs will be used for pod IPs in the cluster. Default `false` (bool)
+    <dd>{{% md %}}Use GKE ip aliases? Default: `true` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_go">
@@ -10349,7 +10487,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GKE cluster zone. Conflicts with `region` (string)
+    <dd>{{% md %}}The GKE cluster zone. Required if `region` not set (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -10380,7 +10518,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the disk attached to each node (string)
+    <dd>{{% md %}}The GKE node config disk type (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagetype_nodejs">
@@ -10389,7 +10527,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image to use for the worker nodes (string)
+    <dd>{{% md %}}The GKE node config image type (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ippolicyclusteripv4cidrblock_nodejs">
@@ -10452,7 +10590,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Locations for GKE cluster (list)
+    <dd>{{% md %}}The GKE cluster locations (List)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="machinetype_nodejs">
@@ -10461,7 +10599,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Machine type for GKE cluster (string)
+    <dd>{{% md %}}The GKE node config machine type (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maintenancewindow_nodejs">
@@ -10470,7 +10608,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maintenance window for GKE cluster (string)
+    <dd>{{% md %}}The GKE cluster maintenance window (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masteripv4cidrblock_nodejs">
@@ -10479,7 +10617,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP range in CIDR notation to use for the hosted master network (string)
+    <dd>{{% md %}}The GKE cluster private master ip v4 cidr block (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterversion_nodejs">
@@ -10497,7 +10635,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network for GKE cluster (string)
+    <dd>{{% md %}}The GKE cluster network. Required for create new cluster (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodepool_nodejs">
@@ -10524,7 +10662,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The set of Google API scopes to be made available on all of the node VMs under the default service account (list)
+    <dd>{{% md %}}The GKE node config oauth scopes (List)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
@@ -10569,7 +10707,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Size of the disk attached to each node. Default `100` (int)
+    <dd>{{% md %}}The GKE node config disk size Gb (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablealphafeature_nodejs">
@@ -10668,7 +10806,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the master's internal IP address is used as the cluster endpoint. Default `false` (bool)
+    <dd>{{% md %}}Enable GKE cluster private endpoint. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableprivatenodes_nodejs">
@@ -10740,7 +10878,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of local SSD disks to be attached to the node. Default `0` (int)
+    <dd>{{% md %}}The GKE node config local ssd count (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterauthorizednetworkcidrblocks_nodejs">
@@ -10758,7 +10896,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= minNodeCount. There has to enough quota to scale up the cluster. Default `0` (int)
+    <dd>{{% md %}}The GKE node pool config max node count (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodecount_nodejs">
@@ -10767,7 +10905,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimmum number of nodes in the NodePool. Must be >= 1 and <= maxNodeCount. Default `0` (int)
+    <dd>{{% md %}}The GKE node pool config min node count (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_nodejs">
@@ -10785,7 +10923,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the nodes are created as preemptible VM instances. Default `false` (bool)
+    <dd>{{% md %}}Enable GKE node config preemptible. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
@@ -10812,7 +10950,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of Kubernetes taints to be applied to each node (list)
+    <dd>{{% md %}}The GKE node config taints (List)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useipaliases_nodejs">
@@ -10821,7 +10959,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether alias IPs will be used for pod IPs in the cluster. Default `false` (bool)
+    <dd>{{% md %}}Use GKE ip aliases? Default: `true` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_nodejs">
@@ -10830,7 +10968,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GKE cluster zone. Conflicts with `region` (string)
+    <dd>{{% md %}}The GKE cluster zone. Required if `region` not set (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -10861,7 +10999,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the disk attached to each node (string)
+    <dd>{{% md %}}The GKE node config disk type (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_type_python">
@@ -10870,7 +11008,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The image to use for the worker nodes (string)
+    <dd>{{% md %}}The GKE node config image type (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_policy_cluster_ipv4_cidr_block_python">
@@ -10933,7 +11071,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Locations for GKE cluster (list)
+    <dd>{{% md %}}The GKE cluster locations (List)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="machine_type_python">
@@ -10942,7 +11080,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Machine type for GKE cluster (string)
+    <dd>{{% md %}}The GKE node config machine type (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maintenance_window_python">
@@ -10951,7 +11089,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Maintenance window for GKE cluster (string)
+    <dd>{{% md %}}The GKE cluster maintenance window (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="master_ipv4_cidr_block_python">
@@ -10960,7 +11098,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP range in CIDR notation to use for the hosted master network (string)
+    <dd>{{% md %}}The GKE cluster private master ip v4 cidr block (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="master_version_python">
@@ -10978,7 +11116,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Network for GKE cluster (string)
+    <dd>{{% md %}}The GKE cluster network. Required for create new cluster (string)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_pool_python">
@@ -11005,7 +11143,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The set of Google API scopes to be made available on all of the node VMs under the default service account (list)
+    <dd>{{% md %}}The GKE node config oauth scopes (List)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
@@ -11050,7 +11188,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the disk attached to each node. Default `100` (int)
+    <dd>{{% md %}}The GKE node config disk size Gb (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_alpha_feature_python">
@@ -11149,7 +11287,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the master's internal IP address is used as the cluster endpoint. Default `false` (bool)
+    <dd>{{% md %}}Enable GKE cluster private endpoint. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_private_nodes_python">
@@ -11221,7 +11359,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of local SSD disks to be attached to the node. Default `0` (int)
+    <dd>{{% md %}}The GKE node config local ssd count (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="master_authorized_network_cidr_blocks_python">
@@ -11239,7 +11377,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= minNodeCount. There has to enough quota to scale up the cluster. Default `0` (int)
+    <dd>{{% md %}}The GKE node pool config max node count (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_node_count_python">
@@ -11248,7 +11386,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimmum number of nodes in the NodePool. Must be >= 1 and <= maxNodeCount. Default `0` (int)
+    <dd>{{% md %}}The GKE node pool config min node count (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_count_python">
@@ -11266,7 +11404,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the nodes are created as preemptible VM instances. Default `false` (bool)
+    <dd>{{% md %}}Enable GKE node config preemptible. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
@@ -11293,7 +11431,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of Kubernetes taints to be applied to each node (list)
+    <dd>{{% md %}}The GKE node config taints (List)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_ip_aliases_python">
@@ -11302,7 +11440,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether alias IPs will be used for pod IPs in the cluster. Default `false` (bool)
+    <dd>{{% md %}}Use GKE ip aliases? Default: `true` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_python">
@@ -11311,7 +11449,2545 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}GKE cluster zone. Conflicts with `region` (string)
+    <dd>{{% md %}}The GKE cluster zone. Required if `region` not set (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clustergkeconfigv2">Cluster<wbr>Gke<wbr>Config<wbr>V2</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="googlecredentialsecret_csharp">
+<a href="#googlecredentialsecret_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Credential<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Google credential secret (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Project ID to apply answer (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clusteraddons_csharp">
+<a href="#clusteraddons_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Addons</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2clusteraddons">Cluster<wbr>Gke<wbr>Config<wbr>V2Cluster<wbr>Addons<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster addons (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clusteripv4cidrblock_csharp">
+<a href="#clusteripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster ip v4 allocation cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this cluster (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablekubernetesalpha_csharp">
+<a href="#enablekubernetesalpha_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Kubernetes<wbr>Alpha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Kubernetes alpha. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="imported_csharp">
+<a href="#imported_csharp" style="color: inherit; text-decoration: inherit;">Imported</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is GKE cluster imported? Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipallocationpolicy_csharp">
+<a href="#ipallocationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2ipallocationpolicy">Cluster<wbr>Gke<wbr>Config<wbr>V2Ip<wbr>Allocation<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE ip allocation policy (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubernetesversion_csharp">
+<a href="#kubernetesversion_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes version that will be used for your master *and* OKE worker nodes (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Labels for cluster registration token object (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="locations_csharp">
+<a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster locations (List)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loggingservice_csharp">
+<a href="#loggingservice_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster logging service (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maintenancewindow_csharp">
+<a href="#maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster maintenance window (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="masterauthorizednetworksconfig_csharp">
+<a href="#masterauthorizednetworksconfig_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Authorized<wbr>Networks<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2masterauthorizednetworksconfig">Cluster<wbr>Gke<wbr>Config<wbr>V2Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster master authorized networks config (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoringservice_csharp">
+<a href="#monitoringservice_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster monitoring service (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_csharp">
+<a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster network. Required for create new cluster (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkpolicyenabled_csharp">
+<a href="#networkpolicyenabled_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Policy<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is GKE cluster network policy enabled? Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nodepools_csharp">
+<a href="#nodepools_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepool">List&lt;Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster node pools. Required for create new cluster (List)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateclusterconfig_csharp">
+<a href="#privateclusterconfig_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Cluster<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2privateclusterconfig">Cluster<wbr>Gke<wbr>Config<wbr>V2Private<wbr>Cluster<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE private cluster config (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability domain within the region to host the cluster. See [here](https://docs.cloud.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm) for a list of region names. (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetwork_csharp">
+<a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster subnetwork. Required for create new cluster (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster zone. Required if `region` not set (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="googlecredentialsecret_go">
+<a href="#googlecredentialsecret_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Credential<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Google credential secret (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Project ID to apply answer (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clusteraddons_go">
+<a href="#clusteraddons_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Addons</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2clusteraddons">Cluster<wbr>Gke<wbr>Config<wbr>V2Cluster<wbr>Addons</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster addons (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clusteripv4cidrblock_go">
+<a href="#clusteripv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster ip v4 allocation cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this cluster (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablekubernetesalpha_go">
+<a href="#enablekubernetesalpha_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Kubernetes<wbr>Alpha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Kubernetes alpha. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="imported_go">
+<a href="#imported_go" style="color: inherit; text-decoration: inherit;">Imported</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is GKE cluster imported? Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipallocationpolicy_go">
+<a href="#ipallocationpolicy_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2ipallocationpolicy">Cluster<wbr>Gke<wbr>Config<wbr>V2Ip<wbr>Allocation<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE ip allocation policy (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubernetesversion_go">
+<a href="#kubernetesversion_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes version that will be used for your master *and* OKE worker nodes (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Labels for cluster registration token object (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="locations_go">
+<a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster locations (List)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loggingservice_go">
+<a href="#loggingservice_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster logging service (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maintenancewindow_go">
+<a href="#maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster maintenance window (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="masterauthorizednetworksconfig_go">
+<a href="#masterauthorizednetworksconfig_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Authorized<wbr>Networks<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2masterauthorizednetworksconfig">Cluster<wbr>Gke<wbr>Config<wbr>V2Master<wbr>Authorized<wbr>Networks<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster master authorized networks config (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoringservice_go">
+<a href="#monitoringservice_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster monitoring service (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_go">
+<a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster network. Required for create new cluster (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkpolicyenabled_go">
+<a href="#networkpolicyenabled_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Policy<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is GKE cluster network policy enabled? Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nodepools_go">
+<a href="#nodepools_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepool">[]Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster node pools. Required for create new cluster (List)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateclusterconfig_go">
+<a href="#privateclusterconfig_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Cluster<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2privateclusterconfig">Cluster<wbr>Gke<wbr>Config<wbr>V2Private<wbr>Cluster<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE private cluster config (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability domain within the region to host the cluster. See [here](https://docs.cloud.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm) for a list of region names. (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetwork_go">
+<a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster subnetwork. Required for create new cluster (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster zone. Required if `region` not set (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="googlecredentialsecret_nodejs">
+<a href="#googlecredentialsecret_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Credential<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Google credential secret (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Project ID to apply answer (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clusteraddons_nodejs">
+<a href="#clusteraddons_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Addons</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2clusteraddons">Cluster<wbr>Gke<wbr>Config<wbr>V2Cluster<wbr>Addons<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster addons (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clusteripv4cidrblock_nodejs">
+<a href="#clusteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster ip v4 allocation cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this cluster (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablekubernetesalpha_nodejs">
+<a href="#enablekubernetesalpha_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Kubernetes<wbr>Alpha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable Kubernetes alpha. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="imported_nodejs">
+<a href="#imported_nodejs" style="color: inherit; text-decoration: inherit;">imported</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is GKE cluster imported? Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipallocationpolicy_nodejs">
+<a href="#ipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2ipallocationpolicy">Cluster<wbr>Gke<wbr>Config<wbr>V2Ip<wbr>Allocation<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE ip allocation policy (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubernetesversion_nodejs">
+<a href="#kubernetesversion_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes version that will be used for your master *and* OKE worker nodes (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Labels for cluster registration token object (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="locations_nodejs">
+<a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster locations (List)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loggingservice_nodejs">
+<a href="#loggingservice_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster logging service (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maintenancewindow_nodejs">
+<a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster maintenance window (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="masterauthorizednetworksconfig_nodejs">
+<a href="#masterauthorizednetworksconfig_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Authorized<wbr>Networks<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2masterauthorizednetworksconfig">Cluster<wbr>Gke<wbr>Config<wbr>V2Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster master authorized networks config (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoringservice_nodejs">
+<a href="#monitoringservice_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster monitoring service (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_nodejs">
+<a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster network. Required for create new cluster (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkpolicyenabled_nodejs">
+<a href="#networkpolicyenabled_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Policy<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is GKE cluster network policy enabled? Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nodepools_nodejs">
+<a href="#nodepools_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepool">Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster node pools. Required for create new cluster (List)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateclusterconfig_nodejs">
+<a href="#privateclusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cluster<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2privateclusterconfig">Cluster<wbr>Gke<wbr>Config<wbr>V2Private<wbr>Cluster<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE private cluster config (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability domain within the region to host the cluster. See [here](https://docs.cloud.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm) for a list of region names. (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetwork_nodejs">
+<a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster subnetwork. Required for create new cluster (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster zone. Required if `region` not set (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="google_credential_secret_python">
+<a href="#google_credential_secret_python" style="color: inherit; text-decoration: inherit;">google_<wbr>credential_<wbr>secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Google credential secret (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Project ID to apply answer (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cluster_addons_python">
+<a href="#cluster_addons_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>addons</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2clusteraddons">Cluster<wbr>Gke<wbr>Config<wbr>V2Cluster<wbr>Addons<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster addons (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cluster_ipv4_cidr_block_python">
+<a href="#cluster_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster ip v4 allocation cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this cluster (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_kubernetes_alpha_python">
+<a href="#enable_kubernetes_alpha_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>kubernetes_<wbr>alpha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Kubernetes alpha. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="imported_python">
+<a href="#imported_python" style="color: inherit; text-decoration: inherit;">imported</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is GKE cluster imported? Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ip_allocation_policy_python">
+<a href="#ip_allocation_policy_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2ipallocationpolicy">Cluster<wbr>Gke<wbr>Config<wbr>V2Ip<wbr>Allocation<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE ip allocation policy (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubernetes_version_python">
+<a href="#kubernetes_version_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes version that will be used for your master *and* OKE worker nodes (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Labels for cluster registration token object (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="locations_python">
+<a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster locations (List)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logging_service_python">
+<a href="#logging_service_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster logging service (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maintenance_window_python">
+<a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster maintenance window (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="master_authorized_networks_config_python">
+<a href="#master_authorized_networks_config_python" style="color: inherit; text-decoration: inherit;">master_<wbr>authorized_<wbr>networks_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2masterauthorizednetworksconfig">Cluster<wbr>Gke<wbr>Config<wbr>V2Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster master authorized networks config (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoring_service_python">
+<a href="#monitoring_service_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster monitoring service (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_python">
+<a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster network. Required for create new cluster (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_policy_enabled_python">
+<a href="#network_policy_enabled_python" style="color: inherit; text-decoration: inherit;">network_<wbr>policy_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is GKE cluster network policy enabled? Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="node_pools_python">
+<a href="#node_pools_python" style="color: inherit; text-decoration: inherit;">node_<wbr>pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepool">Sequence[Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster node pools. Required for create new cluster (List)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_cluster_config_python">
+<a href="#private_cluster_config_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cluster_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2privateclusterconfig">Cluster<wbr>Gke<wbr>Config<wbr>V2Private<wbr>Cluster<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE private cluster config (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The availability domain within the region to host the cluster. See [here](https://docs.cloud.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm) for a list of region names. (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetwork_python">
+<a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster subnetwork. Required for create new cluster (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster zone. Required if `region` not set (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clustergkeconfigv2clusteraddons">Cluster<wbr>Gke<wbr>Config<wbr>V2Cluster<wbr>Addons</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="horizontalpodautoscaling_csharp">
+<a href="#horizontalpodautoscaling_csharp" style="color: inherit; text-decoration: inherit;">Horizontal<wbr>Pod<wbr>Autoscaling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE horizontal pod autoscaling. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httploadbalancing_csharp">
+<a href="#httploadbalancing_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Load<wbr>Balancing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE HTTP load balancing. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkpolicyconfig_csharp">
+<a href="#networkpolicyconfig_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Policy<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE network policy config. Default: `false` (bool)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="horizontalpodautoscaling_go">
+<a href="#horizontalpodautoscaling_go" style="color: inherit; text-decoration: inherit;">Horizontal<wbr>Pod<wbr>Autoscaling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE horizontal pod autoscaling. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httploadbalancing_go">
+<a href="#httploadbalancing_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Load<wbr>Balancing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE HTTP load balancing. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkpolicyconfig_go">
+<a href="#networkpolicyconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Policy<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE network policy config. Default: `false` (bool)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="horizontalpodautoscaling_nodejs">
+<a href="#horizontalpodautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">horizontal<wbr>Pod<wbr>Autoscaling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE horizontal pod autoscaling. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httploadbalancing_nodejs">
+<a href="#httploadbalancing_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Load<wbr>Balancing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE HTTP load balancing. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkpolicyconfig_nodejs">
+<a href="#networkpolicyconfig_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Policy<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE network policy config. Default: `false` (bool)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="horizontal_pod_autoscaling_python">
+<a href="#horizontal_pod_autoscaling_python" style="color: inherit; text-decoration: inherit;">horizontal_<wbr>pod_<wbr>autoscaling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE horizontal pod autoscaling. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="http_load_balancing_python">
+<a href="#http_load_balancing_python" style="color: inherit; text-decoration: inherit;">http_<wbr>load_<wbr>balancing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE HTTP load balancing. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_policy_config_python">
+<a href="#network_policy_config_python" style="color: inherit; text-decoration: inherit;">network_<wbr>policy_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE network policy config. Default: `false` (bool)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clustergkeconfigv2ipallocationpolicy">Cluster<wbr>Gke<wbr>Config<wbr>V2Ip<wbr>Allocation<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clusteripv4cidrblock_csharp">
+<a href="#clusteripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster ip v4 allocation cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clustersecondaryrangename_csharp">
+<a href="#clustersecondaryrangename_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Secondary<wbr>Range<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster ip v4 allocation secondary range name(string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createsubnetwork_csharp">
+<a href="#createsubnetwork_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Subnetwork</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Create GKE subnetwork? Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nodeipv4cidrblock_csharp">
+<a href="#nodeipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE node ip v4 allocation cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicesipv4cidrblock_csharp">
+<a href="#servicesipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE services ip v4 allocation cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicessecondaryrangename_csharp">
+<a href="#servicessecondaryrangename_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Secondary<wbr>Range<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE services ip v4 allocation secondary range name (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetworkname_csharp">
+<a href="#subnetworkname_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster subnetwork name (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="useipaliases_csharp">
+<a href="#useipaliases_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Ip<wbr>Aliases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Use GKE ip aliases? Default: `true` (bool)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clusteripv4cidrblock_go">
+<a href="#clusteripv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster ip v4 allocation cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clustersecondaryrangename_go">
+<a href="#clustersecondaryrangename_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Secondary<wbr>Range<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster ip v4 allocation secondary range name(string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createsubnetwork_go">
+<a href="#createsubnetwork_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Subnetwork</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Create GKE subnetwork? Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nodeipv4cidrblock_go">
+<a href="#nodeipv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE node ip v4 allocation cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicesipv4cidrblock_go">
+<a href="#servicesipv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE services ip v4 allocation cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicessecondaryrangename_go">
+<a href="#servicessecondaryrangename_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Secondary<wbr>Range<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE services ip v4 allocation secondary range name (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetworkname_go">
+<a href="#subnetworkname_go" style="color: inherit; text-decoration: inherit;">Subnetwork<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster subnetwork name (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="useipaliases_go">
+<a href="#useipaliases_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ip<wbr>Aliases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Use GKE ip aliases? Default: `true` (bool)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clusteripv4cidrblock_nodejs">
+<a href="#clusteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster ip v4 allocation cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clustersecondaryrangename_nodejs">
+<a href="#clustersecondaryrangename_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Secondary<wbr>Range<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster ip v4 allocation secondary range name(string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createsubnetwork_nodejs">
+<a href="#createsubnetwork_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Subnetwork</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Create GKE subnetwork? Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nodeipv4cidrblock_nodejs">
+<a href="#nodeipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE node ip v4 allocation cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicesipv4cidrblock_nodejs">
+<a href="#servicesipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE services ip v4 allocation cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicessecondaryrangename_nodejs">
+<a href="#servicessecondaryrangename_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Secondary<wbr>Range<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE services ip v4 allocation secondary range name (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetworkname_nodejs">
+<a href="#subnetworkname_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster subnetwork name (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="useipaliases_nodejs">
+<a href="#useipaliases_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ip<wbr>Aliases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Use GKE ip aliases? Default: `true` (bool)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cluster_ipv4_cidr_block_python">
+<a href="#cluster_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster ip v4 allocation cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cluster_secondary_range_name_python">
+<a href="#cluster_secondary_range_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>secondary_<wbr>range_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster ip v4 allocation secondary range name(string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="create_subnetwork_python">
+<a href="#create_subnetwork_python" style="color: inherit; text-decoration: inherit;">create_<wbr>subnetwork</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Create GKE subnetwork? Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="node_ipv4_cidr_block_python">
+<a href="#node_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">node_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE node ip v4 allocation cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="services_ipv4_cidr_block_python">
+<a href="#services_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">services_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE services ip v4 allocation cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="services_secondary_range_name_python">
+<a href="#services_secondary_range_name_python" style="color: inherit; text-decoration: inherit;">services_<wbr>secondary_<wbr>range_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE services ip v4 allocation secondary range name (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetwork_name_python">
+<a href="#subnetwork_name_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster subnetwork name (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="use_ip_aliases_python">
+<a href="#use_ip_aliases_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ip_<wbr>aliases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Use GKE ip aliases? Default: `true` (bool)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clustergkeconfigv2masterauthorizednetworksconfig">Cluster<wbr>Gke<wbr>Config<wbr>V2Master<wbr>Authorized<wbr>Networks<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cidrblocks_csharp">
+<a href="#cidrblocks_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Blocks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2masterauthorizednetworksconfigcidrblock">List&lt;Cluster<wbr>Gke<wbr>Config<wbr>V2Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE master authorized network config cidr blocks (List)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable scheduled cluster scan. Default: `false` (bool)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cidrblocks_go">
+<a href="#cidrblocks_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Blocks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2masterauthorizednetworksconfigcidrblock">[]Cluster<wbr>Gke<wbr>Config<wbr>V2Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE master authorized network config cidr blocks (List)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable scheduled cluster scan. Default: `false` (bool)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cidrblocks_nodejs">
+<a href="#cidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Blocks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2masterauthorizednetworksconfigcidrblock">Cluster<wbr>Gke<wbr>Config<wbr>V2Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE master authorized network config cidr blocks (List)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable scheduled cluster scan. Default: `false` (bool)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cidr_blocks_python">
+<a href="#cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2masterauthorizednetworksconfigcidrblock">Sequence[Cluster<wbr>Gke<wbr>Config<wbr>V2Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE master authorized network config cidr blocks (List)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable scheduled cluster scan. Default: `false` (bool)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clustergkeconfigv2masterauthorizednetworksconfigcidrblock">Cluster<wbr>Gke<wbr>Config<wbr>V2Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cidrblock_csharp">
+<a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE master authorized network config cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE master authorized network config cidr block dispaly name (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cidrblock_go">
+<a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE master authorized network config cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE master authorized network config cidr block dispaly name (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cidrblock_nodejs">
+<a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE master authorized network config cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE master authorized network config cidr block dispaly name (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cidr_block_python">
+<a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE master authorized network config cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE master authorized network config cidr block dispaly name (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clustergkeconfigv2nodepool">Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="initialnodecount_csharp">
+<a href="#initialnodecount_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Node<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config initial node count (int)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}rancher-monitoring chart version (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="autoscaling_csharp">
+<a href="#autoscaling_csharp" style="color: inherit; text-decoration: inherit;">Autoscaling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepoolautoscaling">Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Autoscaling<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config autoscaling (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="config_csharp">
+<a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepoolconfig">Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool node config (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="management_csharp">
+<a href="#management_csharp" style="color: inherit; text-decoration: inherit;">Management</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepoolmanagement">Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Management<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config management (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxpodsconstraint_csharp">
+<a href="#maxpodsconstraint_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Pods<wbr>Constraint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config max pods constraint. Required for create new cluster if `ip_allocation_policy.use_ip_aliases = true` (int)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="initialnodecount_go">
+<a href="#initialnodecount_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Node<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config initial node count (int)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}rancher-monitoring chart version (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="autoscaling_go">
+<a href="#autoscaling_go" style="color: inherit; text-decoration: inherit;">Autoscaling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepoolautoscaling">Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Autoscaling</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config autoscaling (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="config_go">
+<a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepoolconfig">Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool node config (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="management_go">
+<a href="#management_go" style="color: inherit; text-decoration: inherit;">Management</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepoolmanagement">Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Management</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config management (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxpodsconstraint_go">
+<a href="#maxpodsconstraint_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Pods<wbr>Constraint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config max pods constraint. Required for create new cluster if `ip_allocation_policy.use_ip_aliases = true` (int)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="initialnodecount_nodejs">
+<a href="#initialnodecount_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Node<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config initial node count (int)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}rancher-monitoring chart version (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="autoscaling_nodejs">
+<a href="#autoscaling_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepoolautoscaling">Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Autoscaling<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config autoscaling (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="config_nodejs">
+<a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepoolconfig">Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool node config (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="management_nodejs">
+<a href="#management_nodejs" style="color: inherit; text-decoration: inherit;">management</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepoolmanagement">Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Management<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config management (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxpodsconstraint_nodejs">
+<a href="#maxpodsconstraint_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pods<wbr>Constraint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config max pods constraint. Required for create new cluster if `ip_allocation_policy.use_ip_aliases = true` (int)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="initial_node_count_python">
+<a href="#initial_node_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>node_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config initial node count (int)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}rancher-monitoring chart version (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="autoscaling_python">
+<a href="#autoscaling_python" style="color: inherit; text-decoration: inherit;">autoscaling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepoolautoscaling">Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Autoscaling<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config autoscaling (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="config_python">
+<a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepoolconfig">Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool node config (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="management_python">
+<a href="#management_python" style="color: inherit; text-decoration: inherit;">management</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepoolmanagement">Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Management<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config management (List maxitems:1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_pods_constraint_python">
+<a href="#max_pods_constraint_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods_<wbr>constraint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config max pods constraint. Required for create new cluster if `ip_allocation_policy.use_ip_aliases = true` (int)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clustergkeconfigv2nodepoolautoscaling">Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Autoscaling</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable scheduled cluster scan. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxnodecount_csharp">
+<a href="#maxnodecount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Node<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config max node count (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minnodecount_csharp">
+<a href="#minnodecount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config min node count (int)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable scheduled cluster scan. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxnodecount_go">
+<a href="#maxnodecount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Node<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config max node count (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minnodecount_go">
+<a href="#minnodecount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config min node count (int)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable scheduled cluster scan. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxnodecount_nodejs">
+<a href="#maxnodecount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Node<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config max node count (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minnodecount_nodejs">
+<a href="#minnodecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config min node count (int)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable scheduled cluster scan. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_node_count_python">
+<a href="#max_node_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config max node count (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_node_count_python">
+<a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The GKE node pool config min node count (int)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clustergkeconfigv2nodepoolconfig">Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disksizegb_csharp">
+<a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config disk size Gb (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disktype_csharp">
+<a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config disk type (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="imagetype_csharp">
+<a href="#imagetype_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config image type (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Labels for cluster registration token object (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="localssdcount_csharp">
+<a href="#localssdcount_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Ssd<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config local ssd count (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="machinetype_csharp">
+<a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config machine type (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauthscopes_csharp">
+<a href="#oauthscopes_csharp" style="color: inherit; text-decoration: inherit;">Oauth<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config oauth scopes (List)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="preemptible_csharp">
+<a href="#preemptible_csharp" style="color: inherit; text-decoration: inherit;">Preemptible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE node config preemptible. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="taints_csharp">
+<a href="#taints_csharp" style="color: inherit; text-decoration: inherit;">Taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepoolconfigtaint">List&lt;Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Config<wbr>Taint<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE node config taints (List)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disksizegb_go">
+<a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config disk size Gb (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disktype_go">
+<a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config disk type (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="imagetype_go">
+<a href="#imagetype_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config image type (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Labels for cluster registration token object (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="localssdcount_go">
+<a href="#localssdcount_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Ssd<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config local ssd count (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="machinetype_go">
+<a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config machine type (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauthscopes_go">
+<a href="#oauthscopes_go" style="color: inherit; text-decoration: inherit;">Oauth<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config oauth scopes (List)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="preemptible_go">
+<a href="#preemptible_go" style="color: inherit; text-decoration: inherit;">Preemptible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE node config preemptible. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="taints_go">
+<a href="#taints_go" style="color: inherit; text-decoration: inherit;">Taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepoolconfigtaint">[]Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Config<wbr>Taint</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE node config taints (List)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disksizegb_nodejs">
+<a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config disk size Gb (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disktype_nodejs">
+<a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config disk type (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="imagetype_nodejs">
+<a href="#imagetype_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config image type (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Labels for cluster registration token object (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="localssdcount_nodejs">
+<a href="#localssdcount_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ssd<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config local ssd count (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="machinetype_nodejs">
+<a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config machine type (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauthscopes_nodejs">
+<a href="#oauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config oauth scopes (List)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="preemptible_nodejs">
+<a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE node config preemptible. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="taints_nodejs">
+<a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepoolconfigtaint">Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Config<wbr>Taint<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE node config taints (List)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disk_size_gb_python">
+<a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config disk size Gb (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disk_type_python">
+<a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config disk type (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="image_type_python">
+<a href="#image_type_python" style="color: inherit; text-decoration: inherit;">image_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config image type (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Labels for cluster registration token object (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="local_ssd_count_python">
+<a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config local ssd count (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="machine_type_python">
+<a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config machine type (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauth_scopes_python">
+<a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The GKE node config oauth scopes (List)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="preemptible_python">
+<a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE node config preemptible. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="taints_python">
+<a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustergkeconfigv2nodepoolconfigtaint">Sequence[Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Config<wbr>Taint<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The GKE node config taints (List)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clustergkeconfigv2nodepoolconfigtaint">Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Config<wbr>Taint</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effect_csharp">
+<a href="#effect_csharp" style="color: inherit; text-decoration: inherit;">Effect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE taint effect (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE taint key (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE taint value (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effect_go">
+<a href="#effect_go" style="color: inherit; text-decoration: inherit;">Effect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE taint effect (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE taint key (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE taint value (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effect_nodejs">
+<a href="#effect_nodejs" style="color: inherit; text-decoration: inherit;">effect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE taint effect (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE taint key (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE taint value (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effect_python">
+<a href="#effect_python" style="color: inherit; text-decoration: inherit;">effect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE taint effect (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE taint key (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE taint value (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clustergkeconfigv2nodepoolmanagement">Cluster<wbr>Gke<wbr>Config<wbr>V2Node<wbr>Pool<wbr>Management</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="autorepair_csharp">
+<a href="#autorepair_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Repair</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE node pool config management auto repair. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="autoupgrade_csharp">
+<a href="#autoupgrade_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE node pool config management auto upgrade. Default: `false` (bool)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="autorepair_go">
+<a href="#autorepair_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Repair</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE node pool config management auto repair. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="autoupgrade_go">
+<a href="#autoupgrade_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE node pool config management auto upgrade. Default: `false` (bool)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="autorepair_nodejs">
+<a href="#autorepair_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Repair</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE node pool config management auto repair. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="autoupgrade_nodejs">
+<a href="#autoupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE node pool config management auto upgrade. Default: `false` (bool)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="auto_repair_python">
+<a href="#auto_repair_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>repair</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE node pool config management auto repair. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="auto_upgrade_python">
+<a href="#auto_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE node pool config management auto upgrade. Default: `false` (bool)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clustergkeconfigv2privateclusterconfig">Cluster<wbr>Gke<wbr>Config<wbr>V2Private<wbr>Cluster<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="masteripv4cidrblock_csharp">
+<a href="#masteripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster private master ip v4 cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableprivateendpoint_csharp">
+<a href="#enableprivateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE cluster private endpoint. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableprivatenodes_csharp">
+<a href="#enableprivatenodes_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Private<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether worker nodes will be deployed into a new, private, subnet. Default `false` (bool)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="masteripv4cidrblock_go">
+<a href="#masteripv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster private master ip v4 cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableprivateendpoint_go">
+<a href="#enableprivateendpoint_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE cluster private endpoint. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableprivatenodes_go">
+<a href="#enableprivatenodes_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Private<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether worker nodes will be deployed into a new, private, subnet. Default `false` (bool)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="masteripv4cidrblock_nodejs">
+<a href="#masteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster private master ip v4 cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableprivateendpoint_nodejs">
+<a href="#enableprivateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE cluster private endpoint. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableprivatenodes_nodejs">
+<a href="#enableprivatenodes_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Private<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether worker nodes will be deployed into a new, private, subnet. Default `false` (bool)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="master_ipv4_cidr_block_python">
+<a href="#master_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">master_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE cluster private master ip v4 cidr block (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_private_endpoint_python">
+<a href="#enable_private_endpoint_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>private_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable GKE cluster private endpoint. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_private_nodes_python">
+<a href="#enable_private_nodes_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>private_<wbr>nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether worker nodes will be deployed into a new, private, subnet. Default `false` (bool)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -11698,6 +14374,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies number of OCPUs for nodes (requires flexible shape specified with `node_shape`) (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="limitnodecount_csharp">
+<a href="#limitnodecount_csharp" style="color: inherit; text-decoration: inherit;">Limit<wbr>Node<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of worker nodes. Can limit `quantity_per_subnet`. Default `0` (no limit) (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="loadbalancersubnetname1_csharp">
 <a href="#loadbalancersubnetname1_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Subnet<wbr>Name1</a>
 </span>
@@ -11943,6 +14628,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies number of OCPUs for nodes (requires flexible shape specified with `node_shape`) (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="limitnodecount_go">
+<a href="#limitnodecount_go" style="color: inherit; text-decoration: inherit;">Limit<wbr>Node<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of worker nodes. Can limit `quantity_per_subnet`. Default `0` (no limit) (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancersubnetname1_go">
@@ -12192,6 +14886,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies number of OCPUs for nodes (requires flexible shape specified with `node_shape`) (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="limitnodecount_nodejs">
+<a href="#limitnodecount_nodejs" style="color: inherit; text-decoration: inherit;">limit<wbr>Node<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of worker nodes. Can limit `quantity_per_subnet`. Default `0` (no limit) (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="loadbalancersubnetname1_nodejs">
 <a href="#loadbalancersubnetname1_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Subnet<wbr>Name1</a>
 </span>
@@ -12439,6 +15142,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies number of OCPUs for nodes (requires flexible shape specified with `node_shape`) (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="limit_node_count_python">
+<a href="#limit_node_count_python" style="color: inherit; text-decoration: inherit;">limit_<wbr>node_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of worker nodes. Can limit `quantity_per_subnet`. Default `0` (no limit) (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="load_balancer_subnet_name1_python">
 <a href="#load_balancer_subnet_name1_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>subnet_<wbr>name1</a>
 </span>
@@ -12554,6 +15266,258 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Additional CIDR from which to allow ingress to worker nodes (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clusterrke2config">Cluster<wbr>Rke2Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="upgradestrategy_csharp">
+<a href="#upgradestrategy_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrke2configupgradestrategy">Cluster<wbr>Rke2Config<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}K3S upgrade strategy (List maxitems: 1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}rancher-monitoring chart version (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="upgradestrategy_go">
+<a href="#upgradestrategy_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrke2configupgradestrategy">Cluster<wbr>Rke2Config<wbr>Upgrade<wbr>Strategy</a></span>
+    </dt>
+    <dd>{{% md %}}K3S upgrade strategy (List maxitems: 1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}rancher-monitoring chart version (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="upgradestrategy_nodejs">
+<a href="#upgradestrategy_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrke2configupgradestrategy">Cluster<wbr>Rke2Config<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}K3S upgrade strategy (List maxitems: 1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}rancher-monitoring chart version (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="upgrade_strategy_python">
+<a href="#upgrade_strategy_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrke2configupgradestrategy">Cluster<wbr>Rke2Config<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}K3S upgrade strategy (List maxitems: 1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}rancher-monitoring chart version (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clusterrke2configupgradestrategy">Cluster<wbr>Rke2Config<wbr>Upgrade<wbr>Strategy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="drainservernodes_csharp">
+<a href="#drainservernodes_csharp" style="color: inherit; text-decoration: inherit;">Drain<wbr>Server<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Drain server nodes. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="drainworkernodes_csharp">
+<a href="#drainworkernodes_csharp" style="color: inherit; text-decoration: inherit;">Drain<wbr>Worker<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Drain worker nodes. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serverconcurrency_csharp">
+<a href="#serverconcurrency_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Server concurrency. Default: `1` (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workerconcurrency_csharp">
+<a href="#workerconcurrency_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Worker concurrency. Default: `1` (int)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="drainservernodes_go">
+<a href="#drainservernodes_go" style="color: inherit; text-decoration: inherit;">Drain<wbr>Server<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Drain server nodes. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="drainworkernodes_go">
+<a href="#drainworkernodes_go" style="color: inherit; text-decoration: inherit;">Drain<wbr>Worker<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Drain worker nodes. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serverconcurrency_go">
+<a href="#serverconcurrency_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Server concurrency. Default: `1` (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workerconcurrency_go">
+<a href="#workerconcurrency_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Worker concurrency. Default: `1` (int)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="drainservernodes_nodejs">
+<a href="#drainservernodes_nodejs" style="color: inherit; text-decoration: inherit;">drain<wbr>Server<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Drain server nodes. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="drainworkernodes_nodejs">
+<a href="#drainworkernodes_nodejs" style="color: inherit; text-decoration: inherit;">drain<wbr>Worker<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Drain worker nodes. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serverconcurrency_nodejs">
+<a href="#serverconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Server concurrency. Default: `1` (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workerconcurrency_nodejs">
+<a href="#workerconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Worker concurrency. Default: `1` (int)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="drain_server_nodes_python">
+<a href="#drain_server_nodes_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>server_<wbr>nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Drain server nodes. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="drain_worker_nodes_python">
+<a href="#drain_worker_nodes_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>worker_<wbr>nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Drain worker nodes. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="server_concurrency_python">
+<a href="#server_concurrency_python" style="color: inherit; text-decoration: inherit;">server_<wbr>concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Server concurrency. Default: `1` (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="worker_concurrency_python">
+<a href="#worker_concurrency_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Worker concurrency. Default: `1` (int)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -12676,7 +15640,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfignetwork">Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network for GKE cluster (string)
+    <dd>{{% md %}}The GKE cluster network. Required for create new cluster (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodes_csharp">
@@ -12878,7 +15842,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfignetwork">Cluster<wbr>Rke<wbr>Config<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}Network for GKE cluster (string)
+    <dd>{{% md %}}The GKE cluster network. Required for create new cluster (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodes_go">
@@ -13080,7 +16044,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfignetwork">Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network for GKE cluster (string)
+    <dd>{{% md %}}The GKE cluster network. Required for create new cluster (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodes_nodejs">
@@ -13282,7 +16246,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfignetwork">Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network for GKE cluster (string)
+    <dd>{{% md %}}The GKE cluster network. Required for create new cluster (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodes_python">
@@ -14197,7 +17161,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GKE cluster zone. Conflicts with `region` (string)
+    <dd>{{% md %}}The GKE cluster zone. Required if `region` not set (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -14291,7 +17255,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GKE cluster zone. Conflicts with `region` (string)
+    <dd>{{% md %}}The GKE cluster zone. Required if `region` not set (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -14385,7 +17349,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GKE cluster zone. Conflicts with `region` (string)
+    <dd>{{% md %}}The GKE cluster zone. Required if `region` not set (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -14479,7 +17443,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}GKE cluster zone. Conflicts with `region` (string)
+    <dd>{{% md %}}The GKE cluster zone. Required if `region` not set (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -17086,7 +20050,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfigcloudprovidervspherecloudprovidernetwork">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network for GKE cluster (string)
+    <dd>{{% md %}}The GKE cluster network. Required for create new cluster (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -17135,7 +20099,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfigcloudprovidervspherecloudprovidernetwork">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}Network for GKE cluster (string)
+    <dd>{{% md %}}The GKE cluster network. Required for create new cluster (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -17184,7 +20148,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfigcloudprovidervspherecloudprovidernetwork">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network for GKE cluster (string)
+    <dd>{{% md %}}The GKE cluster network. Required for create new cluster (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -17233,7 +20197,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterrkeconfigcloudprovidervspherecloudprovidernetwork">Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network for GKE cluster (string)
+    <dd>{{% md %}}The GKE cluster network. Required for create new cluster (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -18754,6 +21718,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="defaultbackend_csharp">
+<a href="#defaultbackend_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Backend</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable ingress default backend. Default: `true` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dnspolicy_csharp">
 <a href="#dnspolicy_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Policy</a>
 </span>
@@ -18770,6 +21743,33 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Extra arguments for scheduler service (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpport_csharp">
+<a href="#httpport_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}HTTP port for RKE Ingress (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpsport_csharp">
+<a href="#httpsport_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}HTTPS port for RKE Ingress (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkmode_csharp">
+<a href="#networkmode_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Network mode for RKE Ingress (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeselector_csharp">
@@ -18797,11 +21797,29 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RKE monitoring provider (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatestrategy_csharp">
+<a href="#updatestrategy_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigingressupdatestrategy">Cluster<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring update strategy (list Maxitems: 1)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultbackend_go">
+<a href="#defaultbackend_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Backend</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable ingress default backend. Default: `true` (bool)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnspolicy_go">
 <a href="#dnspolicy_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Policy</a>
@@ -18819,6 +21837,33 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Extra arguments for scheduler service (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpport_go">
+<a href="#httpport_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}HTTP port for RKE Ingress (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpsport_go">
+<a href="#httpsport_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}HTTPS port for RKE Ingress (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkmode_go">
+<a href="#networkmode_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Network mode for RKE Ingress (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeselector_go">
@@ -18846,11 +21891,29 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RKE monitoring provider (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatestrategy_go">
+<a href="#updatestrategy_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigingressupdatestrategy">Cluster<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy</a></span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring update strategy (list Maxitems: 1)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultbackend_nodejs">
+<a href="#defaultbackend_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Backend</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable ingress default backend. Default: `true` (bool)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnspolicy_nodejs">
 <a href="#dnspolicy_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Policy</a>
@@ -18868,6 +21931,33 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Extra arguments for scheduler service (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpport_nodejs">
+<a href="#httpport_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}HTTP port for RKE Ingress (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpsport_nodejs">
+<a href="#httpsport_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}HTTPS port for RKE Ingress (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkmode_nodejs">
+<a href="#networkmode_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Network mode for RKE Ingress (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeselector_nodejs">
@@ -18895,11 +21985,29 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RKE monitoring provider (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatestrategy_nodejs">
+<a href="#updatestrategy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigingressupdatestrategy">Cluster<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring update strategy (list Maxitems: 1)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="default_backend_python">
+<a href="#default_backend_python" style="color: inherit; text-decoration: inherit;">default_<wbr>backend</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable ingress default backend. Default: `true` (bool)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_policy_python">
 <a href="#dns_policy_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>policy</a>
@@ -18917,6 +22025,33 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Extra arguments for scheduler service (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="http_port_python">
+<a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}HTTP port for RKE Ingress (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="https_port_python">
+<a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}HTTPS port for RKE Ingress (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_mode_python">
+<a href="#network_mode_python" style="color: inherit; text-decoration: inherit;">network_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Network mode for RKE Ingress (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_selector_python">
@@ -18944,6 +22079,159 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RKE monitoring provider (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="update_strategy_python">
+<a href="#update_strategy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigingressupdatestrategy">Cluster<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}RKE monitoring update strategy (list Maxitems: 1)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clusterrkeconfigingressupdatestrategy">Cluster<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="rollingupdate_csharp">
+<a href="#rollingupdate_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Update</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigingressupdatestrategyrollingupdate">Cluster<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update (list Maxitems: 1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="strategy_csharp">
+<a href="#strategy_csharp" style="color: inherit; text-decoration: inherit;">Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment update strategy (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="rollingupdate_go">
+<a href="#rollingupdate_go" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Update</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigingressupdatestrategyrollingupdate">Cluster<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update (list Maxitems: 1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="strategy_go">
+<a href="#strategy_go" style="color: inherit; text-decoration: inherit;">Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment update strategy (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="rollingupdate_nodejs">
+<a href="#rollingupdate_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Update</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigingressupdatestrategyrollingupdate">Cluster<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update (list Maxitems: 1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="strategy_nodejs">
+<a href="#strategy_nodejs" style="color: inherit; text-decoration: inherit;">strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment update strategy (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="rolling_update_python">
+<a href="#rolling_update_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>update</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterrkeconfigingressupdatestrategyrollingupdate">Cluster<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update (list Maxitems: 1)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="strategy_python">
+<a href="#strategy_python" style="color: inherit; text-decoration: inherit;">strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment update strategy (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clusterrkeconfigingressupdatestrategyrollingupdate">Cluster<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxunavailable_csharp">
+<a href="#maxunavailable_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Unavailable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update max unavailable. Default: `1` (int)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxunavailable_go">
+<a href="#maxunavailable_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Unavailable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update max unavailable. Default: `1` (int)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxunavailable_nodejs">
+<a href="#maxunavailable_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update max unavailable. Default: `1` (int)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_unavailable_python">
+<a href="#max_unavailable_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Monitoring deployment rolling update max unavailable. Default: `1` (int)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -20758,7 +24046,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}TLS key for etcd service (string)
+    <dd>{{% md %}}The GKE taint key (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
@@ -20897,7 +24185,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}TLS key for etcd service (string)
+    <dd>{{% md %}}The GKE taint key (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
@@ -21036,7 +24324,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}TLS key for etcd service (string)
+    <dd>{{% md %}}The GKE taint key (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
@@ -21175,7 +24463,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}TLS key for etcd service (string)
+    <dd>{{% md %}}The GKE taint key (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
