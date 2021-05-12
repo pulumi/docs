@@ -44,22 +44,25 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        // The following example shows how to generate a unique name for an AWS EC2
+        // instance that changes each time a new AMI id is selected.
         var serverRandomId = new Random.RandomId("serverRandomId", new Random.RandomIdArgs
         {
-            ByteLength = 8,
             Keepers = 
             {
                 { "ami_id", @var.Ami_id },
             },
+            ByteLength = 8,
         });
         var serverInstance = new Aws.Ec2.Instance("serverInstance", new Aws.Ec2.InstanceArgs
         {
-            Ami = serverRandomId.Keepers.Apply(keepers => keepers.AmiId),
             Tags = 
             {
                 { "Name", serverRandomId.Hex.Apply(hex => $"web-server {hex}") },
             },
+            Ami = serverRandomId.Keepers.Apply(keepers => keepers.AmiId),
         });
+        // ... (other aws_instance arguments) ...
     }
 
 }
@@ -83,16 +86,19 @@ import pulumi
 import pulumi_aws as aws
 import pulumi_random as random
 
+# The following example shows how to generate a unique name for an AWS EC2
+# instance that changes each time a new AMI id is selected.
 server_random_id = random.RandomId("serverRandomId",
-    byte_length=8,
     keepers={
         "ami_id": var["ami_id"],
-    })
+    },
+    byte_length=8)
 server_instance = aws.ec2.Instance("serverInstance",
-    ami=server_random_id.keepers["amiId"],
     tags={
         "Name": server_random_id.hex.apply(lambda hex: f"web-server {hex}"),
-    })
+    },
+    ami=server_random_id.keepers["amiId"])
+# ... (other aws_instance arguments) ...
 ```
 
 
@@ -107,19 +113,21 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 import * as random from "@pulumi/random";
 
-const serverRandomId = new random.RandomId("server", {
-    byteLength: 8,
+// The following example shows how to generate a unique name for an AWS EC2
+// instance that changes each time a new AMI id is selected.
+const serverRandomId = new random.RandomId("serverRandomId", {
     keepers: {
-        // Generate a new id each time we switch to a new AMI id
-        ami_id: var_ami_id,
+        ami_id: _var.ami_id,
     },
+    byteLength: 8,
 });
-const serverInstance = new aws.ec2.Instance("server", {
-    ami: serverRandomId.keepers.apply(keepers => keepers.amiId),
+const serverInstance = new aws.ec2.Instance("serverInstance", {
     tags: {
         Name: pulumi.interpolate`web-server ${serverRandomId.hex}`,
     },
+    ami: serverRandomId.keepers.amiId,
 });
+// ... (other aws_instance arguments) ...
 ```
 
 
@@ -171,25 +179,19 @@ const serverInstance = new aws.ec2.Instance("server", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RandomIdArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -201,25 +203,19 @@ const serverInstance = new aws.ec2.Instance("server", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RandomIdArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -231,33 +227,25 @@ const serverInstance = new aws.ec2.Instance("server", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RandomIdArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -269,25 +257,19 @@ const serverInstance = new aws.ec2.Instance("server", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RandomIdArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -310,8 +292,7 @@ The RandomId resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of random bytes to produce. The
-minimum value is 1, which produces eight bits of randomness.
+    <dd>{{% md %}}The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keepers_csharp">
@@ -320,9 +301,7 @@ minimum value is 1, which produces eight bits of randomness.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.
+    <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
@@ -331,9 +310,7 @@ the main provider documentation for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arbitrary string to prefix the output value with. This
-string is supplied as-is, meaning it is not guaranteed to be URL-safe or
-base64 encoded.
+    <dd>{{% md %}}Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -346,8 +323,7 @@ base64 encoded.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of random bytes to produce. The
-minimum value is 1, which produces eight bits of randomness.
+    <dd>{{% md %}}The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keepers_go">
@@ -356,9 +332,7 @@ minimum value is 1, which produces eight bits of randomness.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.
+    <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
@@ -367,9 +341,7 @@ the main provider documentation for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arbitrary string to prefix the output value with. This
-string is supplied as-is, meaning it is not guaranteed to be URL-safe or
-base64 encoded.
+    <dd>{{% md %}}Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -382,8 +354,7 @@ base64 encoded.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of random bytes to produce. The
-minimum value is 1, which produces eight bits of randomness.
+    <dd>{{% md %}}The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keepers_nodejs">
@@ -392,9 +363,7 @@ minimum value is 1, which produces eight bits of randomness.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.
+    <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
@@ -403,9 +372,7 @@ the main provider documentation for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arbitrary string to prefix the output value with. This
-string is supplied as-is, meaning it is not guaranteed to be URL-safe or
-base64 encoded.
+    <dd>{{% md %}}Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -418,8 +385,7 @@ base64 encoded.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of random bytes to produce. The
-minimum value is 1, which produces eight bits of randomness.
+    <dd>{{% md %}}The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keepers_python">
@@ -428,9 +394,7 @@ minimum value is 1, which produces eight bits of randomness.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.
+    <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
@@ -439,9 +403,7 @@ the main provider documentation for more information.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Arbitrary string to prefix the output value with. This
-string is supplied as-is, meaning it is not guaranteed to be URL-safe or
-base64 encoded.
+    <dd>{{% md %}}Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -489,6 +451,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The generated id presented in base64 without additional transformations or prefix.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -545,6 +516,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}The generated id presented in base64 without additional transformations or prefix.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -585,6 +565,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The generated id presented in base64 without additional transformations or prefix.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -641,6 +630,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
+    <dd>{{% md %}}The generated id presented in base64 without additional transformations or prefix.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -665,6 +663,7 @@ Get an existing RandomId resource's state with the given name, ID, and optional 
         <span class="nx">byte_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">dec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">hex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">keepers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
         <span class="nx">prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RandomId</code></pre></div>
 {{% /choosable %}}
@@ -803,8 +802,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of random bytes to produce. The
-minimum value is 1, which produces eight bits of randomness.
+    <dd>{{% md %}}The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dec_csharp">
@@ -825,15 +823,22 @@ minimum value is 1, which produces eight bits of randomness.
     <dd>{{% md %}}The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_id_csharp">
+<a href="#state_id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The generated id presented in base64 without additional transformations or prefix.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keepers_csharp">
 <a href="#state_keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.
+    <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefix_csharp">
@@ -842,9 +847,7 @@ the main provider documentation for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arbitrary string to prefix the output value with. This
-string is supplied as-is, meaning it is not guaranteed to be URL-safe or
-base64 encoded.
+    <dd>{{% md %}}Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -875,8 +878,7 @@ base64 encoded.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of random bytes to produce. The
-minimum value is 1, which produces eight bits of randomness.
+    <dd>{{% md %}}The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dec_go">
@@ -897,15 +899,22 @@ minimum value is 1, which produces eight bits of randomness.
     <dd>{{% md %}}The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_id_go">
+<a href="#state_id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The generated id presented in base64 without additional transformations or prefix.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keepers_go">
 <a href="#state_keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.
+    <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefix_go">
@@ -914,9 +923,7 @@ the main provider documentation for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arbitrary string to prefix the output value with. This
-string is supplied as-is, meaning it is not guaranteed to be URL-safe or
-base64 encoded.
+    <dd>{{% md %}}Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -947,8 +954,7 @@ base64 encoded.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of random bytes to produce. The
-minimum value is 1, which produces eight bits of randomness.
+    <dd>{{% md %}}The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dec_nodejs">
@@ -969,15 +975,22 @@ minimum value is 1, which produces eight bits of randomness.
     <dd>{{% md %}}The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_id_nodejs">
+<a href="#state_id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The generated id presented in base64 without additional transformations or prefix.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keepers_nodejs">
 <a href="#state_keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.
+    <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefix_nodejs">
@@ -986,9 +999,7 @@ the main provider documentation for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arbitrary string to prefix the output value with. This
-string is supplied as-is, meaning it is not guaranteed to be URL-safe or
-base64 encoded.
+    <dd>{{% md %}}Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1019,8 +1030,7 @@ base64 encoded.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of random bytes to produce. The
-minimum value is 1, which produces eight bits of randomness.
+    <dd>{{% md %}}The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dec_python">
@@ -1041,15 +1051,22 @@ minimum value is 1, which produces eight bits of randomness.
     <dd>{{% md %}}The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_id_python">
+<a href="#state_id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The generated id presented in base64 without additional transformations or prefix.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keepers_python">
 <a href="#state_keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated. See
-the main provider documentation for more information.
+    <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefix_python">
@@ -1058,9 +1075,7 @@ the main provider documentation for more information.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Arbitrary string to prefix the output value with. This
-string is supplied as-is, meaning it is not guaranteed to be URL-safe or
-base64 encoded.
+    <dd>{{% md %}}Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1071,13 +1086,13 @@ base64 encoded.
 ## Import
 
 
-Random Ids can be imported using the `b64_url` with an optional `prefix`. This can be used to replace a config value with a value interpolated from the random provider without experiencing diffs. Example with no prefix
+# Random IDs can be imported using the b64_url with an optional prefix. This # can be used to replace a config value with a value interpolated from the # random provider without experiencing diffs. # Example with no prefix
 
 ```sh
  $ pulumi import random:index/randomId:RandomId server p-9hUg
 ```
 
- Example with prefix (prefix is separated by a `,`)
+# Example with prefix (prefix is separated by a ,)
 
 ```sh
  $ pulumi import random:index/randomId:RandomId server my-prefix-,p-9hUg
