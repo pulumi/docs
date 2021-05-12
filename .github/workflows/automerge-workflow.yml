@@ -4,7 +4,8 @@ jobs:
     name: Automerge Workflow
     runs-on: ubuntu-18.04
     steps:
-      - env:
+      - if: env.GITHUB_TOKEN != null
+        env:
           GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
           MERGE_COMMIT_MESSAGE: pull-request-title
           MERGE_FORKS: "false"
