@@ -221,25 +221,19 @@ const mysql1 = new aiven.MySql("mysql1", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MySqlArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -251,25 +245,19 @@ const mysql1 = new aiven.MySql("mysql1", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MySqlArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -281,33 +269,25 @@ const mysql1 = new aiven.MySql("mysql1", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MySqlArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -319,25 +299,19 @@ const mysql1 = new aiven.MySql("mysql1", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MySqlArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -2522,6 +2496,17 @@ New backup is only started if previous backup has already completed.
 New backup is only started if previous backup has already completed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="binlogretentionperiod_csharp">
+<a href="#binlogretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Binlog<wbr>Retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minimum amount of time in seconds to keep binlog entries 
+before deletion. This may be extended for services that require binlog entries for longer than the
+default for example if using the MySQL Debezium Kafka connector.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_csharp">
 <a href="#ipfilters_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
 </span>
@@ -2658,6 +2643,17 @@ New backup is only started if previous backup has already completed.
     </dt>
     <dd>{{% md %}}The minute of an hour when backup for the service is started. 
 New backup is only started if previous backup has already completed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="binlogretentionperiod_go">
+<a href="#binlogretentionperiod_go" style="color: inherit; text-decoration: inherit;">Binlog<wbr>Retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minimum amount of time in seconds to keep binlog entries 
+before deletion. This may be extended for services that require binlog entries for longer than the
+default for example if using the MySQL Debezium Kafka connector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_go">
@@ -2798,6 +2794,17 @@ New backup is only started if previous backup has already completed.
 New backup is only started if previous backup has already completed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="binlogretentionperiod_nodejs">
+<a href="#binlogretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">binlog<wbr>Retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minimum amount of time in seconds to keep binlog entries 
+before deletion. This may be extended for services that require binlog entries for longer than the
+default for example if using the MySQL Debezium Kafka connector.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_nodejs">
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
 </span>
@@ -2934,6 +2941,17 @@ New backup is only started if previous backup has already completed.
     </dt>
     <dd>{{% md %}}The minute of an hour when backup for the service is started. 
 New backup is only started if previous backup has already completed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="binlog_retention_period_python">
+<a href="#binlog_retention_period_python" style="color: inherit; text-decoration: inherit;">binlog_<wbr>retention_<wbr>period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The minimum amount of time in seconds to keep binlog entries 
+before deletion. This may be extended for services that require binlog entries for longer than the
+default for example if using the MySQL Debezium Kafka connector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_filters_python">
@@ -4270,6 +4288,16 @@ a noninteractive connection before closing it.
 nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mysqlx_csharp">
+<a href="#mysqlx_csharp" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to mysqlx from the public internet for service 
+nodes that are in a project VPC or another type of private network
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="prometheus_csharp">
 <a href="#prometheus_csharp" style="color: inherit; text-decoration: inherit;">Prometheus</a>
 </span>
@@ -4291,6 +4319,16 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
+nodes that are in a project VPC or another type of private network
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_go">
+<a href="#mysqlx_go" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to mysqlx from the public internet for service 
 nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4318,6 +4356,16 @@ for service nodes that are in a project VPC or another type of private network
 nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mysqlx_nodejs">
+<a href="#mysqlx_nodejs" style="color: inherit; text-decoration: inherit;">mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to mysqlx from the public internet for service 
+nodes that are in a project VPC or another type of private network
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="prometheus_nodejs">
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
@@ -4339,6 +4387,16 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
+nodes that are in a project VPC or another type of private network
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_python">
+<a href="#mysqlx_python" style="color: inherit; text-decoration: inherit;">mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to mysqlx from the public internet for service 
 nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4366,6 +4424,16 @@ for service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_csharp">
+<a href="#mysqlx_csharp" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to mysqlx from the public internet for service 
+nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4379,6 +4447,16 @@ nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
+nodes that are in a project VPC or another type of private network
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_go">
+<a href="#mysqlx_go" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to mysqlx from the public internet for service 
 nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4394,6 +4472,16 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_nodejs">
+<a href="#mysqlx_nodejs" style="color: inherit; text-decoration: inherit;">mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to mysqlx from the public internet for service 
+nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4407,6 +4495,16 @@ nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
+nodes that are in a project VPC or another type of private network
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_python">
+<a href="#mysqlx_python" style="color: inherit; text-decoration: inherit;">mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to mysqlx from the public internet for service 
 nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4423,6 +4521,16 @@ nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
+nodes that are in a project VPC or another type of private network
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_csharp">
+<a href="#mysqlx_csharp" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to mysqlx from the public internet for service 
 nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4450,6 +4558,16 @@ for service nodes that are in a project VPC or another type of private network
 nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mysqlx_go">
+<a href="#mysqlx_go" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to mysqlx from the public internet for service 
+nodes that are in a project VPC or another type of private network
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="prometheus_go">
 <a href="#prometheus_go" style="color: inherit; text-decoration: inherit;">Prometheus</a>
 </span>
@@ -4474,6 +4592,16 @@ for service nodes that are in a project VPC or another type of private network
 nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mysqlx_nodejs">
+<a href="#mysqlx_nodejs" style="color: inherit; text-decoration: inherit;">mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to mysqlx from the public internet for service 
+nodes that are in a project VPC or another type of private network
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="prometheus_nodejs">
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
@@ -4495,6 +4623,16 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
+nodes that are in a project VPC or another type of private network
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_python">
+<a href="#mysqlx_python" style="color: inherit; text-decoration: inherit;">mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to mysqlx from the public internet for service 
 nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
