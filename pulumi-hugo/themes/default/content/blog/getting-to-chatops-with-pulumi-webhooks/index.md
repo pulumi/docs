@@ -4,7 +4,7 @@ date: "2019-01-23"
 meta_desc: "Get started with Pulumi Webhooks to enable notifications of infrastructure changes and respond to those changes as part of a ChatOps workflow."
 meta_image: "pulumi-webhooks.png"
 authors: ["chris-smith"]
-tags: ["CI/CD", "New-Features"]
+tags: ["continuous-delivery", "features"]
 ---
 
 Today we are delighted to announce the availability of Webhooks on

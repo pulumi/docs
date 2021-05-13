@@ -6,8 +6,7 @@ meta_image: sso.png
 authors:
     - alex-mullans
 tags:
-    - auth
-    - enterprise
+    - pulumi-enterprise
     - security
 ---
 

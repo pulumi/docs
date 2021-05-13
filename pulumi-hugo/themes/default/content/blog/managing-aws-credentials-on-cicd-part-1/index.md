@@ -7,7 +7,7 @@ authors:
     - chris-smith
     - sophia-parafina
 tags:
-    - CI/CD
+    - continuous-delivery
 ---
 
 Continuous delivery requires providing highly sensitive credentials to your

@@ -53,7 +53,7 @@ Many Function Apps are .NET applications created with native tooling like Visual
 const dotnetApp = new azure.appservice.ArchiveFunctionApp("http-dotnet", {
    resourceGroupName: resourceGroup.name,
    archive: new pulumi.asset.FileArchive("./app/bin/Debug/netcoreapp2.1/publish"),
-   appSettings: { runtime: "dotnet" },
+   appSettings: { runtime: ".NET" },
 });
 ```
 

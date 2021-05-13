@@ -1,7 +1,7 @@
 ---
 title: "Serving a Static Website on AWS with Pulumi"
 authors: ["chris-smith"]
-tags: ["AWS","Infrastructure","TypeScript"]
+tags: ["AWS","TypeScript"]
 date: "2018-07-17"
 meta_desc: "With around 200 lines of code, learn how Pulumi integrates four different AWS products  to host a static website served over HTTPS and from a worldwide CDN."
 

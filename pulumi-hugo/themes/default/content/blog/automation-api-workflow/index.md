@@ -7,8 +7,6 @@ authors:
     - sophia-parafina
 tags:
     - Automation API
-    - Aurora ADS
-    - workflow orchestration
 ---
 
 There are many moving parts when deploying infrastructure and applications. Playbooks are step-by-step maps that standardize how infrastructure and applications are deployed across your organization. Typically playbooks describe every action to build and deploy, requiring an operator to complete each step before moving on to the next. It's a process that can be tedious and prone to human error.

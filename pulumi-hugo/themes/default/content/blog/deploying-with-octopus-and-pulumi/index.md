@@ -1,7 +1,7 @@
 ---
 title: "Continuous Delivery on Octopus Deploy using Pulumi"
 authors: ["sophia-parafina"]
-tags: ["CD","Octopus"]
+tags: ["continuous-delivery"]
 meta_image: "octopus-pulumi.png"
 meta_desc: "Continuous delivery of Pulumi apps with Octopus Deploy "
 date: "2019-10-22"

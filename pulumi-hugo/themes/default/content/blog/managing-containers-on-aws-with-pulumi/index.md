@@ -6,9 +6,6 @@ meta_image: meta.png
 authors:
     - sophia-parafina
 tags:
-    - EKS
-    - ECS
-    - Lambda
     - AWS
     - containers
 ---

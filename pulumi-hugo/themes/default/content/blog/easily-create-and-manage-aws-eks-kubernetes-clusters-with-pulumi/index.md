@@ -9,7 +9,6 @@ authors:
   - levi-blackstone
 tags:
   - aws
-  - eks
   - kubernetes
 ---
 

@@ -7,9 +7,8 @@ authors:
     - sophia-parafina
 tags:
     - kubernetes
-    - EKS
-    - re:Invent 2020
-
+    - aws
+    - pulumi-events
 ---
 
 Amazon announced several Elastic Kubernetes Service feature releases and updates during the first week of AWS re:Invent 2020. If we look at all the announcements as a whole, we can see the Kubernetes ecosystem maturing to make deployments and management easier for organizations. Let's take a look at how they can benefit your use of EKS.

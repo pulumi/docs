@@ -6,7 +6,6 @@ meta_image: crossguard.png
 authors:
     - justin-vanpatten
 tags:
-    - crossguard
     - policy-as-code
 ---
 

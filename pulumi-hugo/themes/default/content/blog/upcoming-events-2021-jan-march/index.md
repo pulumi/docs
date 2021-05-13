@@ -6,8 +6,7 @@ meta_image: events.png
 authors:
     - sophia-parafina
 tags:
-    - workshops
-    - introductio to Pulumi
+    - pulumi-events
     - Kubernetes
     - serverless
 ---

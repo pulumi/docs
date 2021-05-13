@@ -8,7 +8,6 @@ authors:
     - lee-zen
 tags:
     - Testing
-    - Infrastructure
 ---
 
 When deploying infrastructure, we want to ensure that what we're deploying matches our expectations.

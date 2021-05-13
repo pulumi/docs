@@ -46,7 +46,7 @@ including all the required frontmatter parameters.
    ---
    ```
 
-   Feel free to adjust the title, authors (more on this below) and tags as appropriate. To change the post's URL, simply rename the folder containing `_index.md`; changing the folder name to `my-awesome-post`, for example, would result in a post ultimately published at https://www.pulumi.com/blog/my-awesome-post.
+   Adjust the title and authors and add tags as appropriate (see the two headings below for more details). To change the post's URL, simply rename the folder containing `_index.md`; changing the folder name to `my-awesome-post`, for example, would result in a post ultimately published at https://www.pulumi.com/blog/my-awesome-post.
 
    **Important**
 
@@ -62,6 +62,16 @@ including all the required frontmatter parameters.
    ```
 
    **Keep in mind that only posts dated prior to "now" (meaning the moment the build process begins) and _not_ marked as `draft`s will published to production.** The development server renders both future and draft content (so you can work on scheduled posts in advance), but the build process does not; see below for details on scheduling posts for future publishing.
+
+   **Tags**
+
+   Every tag added makes the overall tagging system harder to quickly grok and use. So, we strongly prefer using existing tags wherever possible. The tag system is as follows:
+
+   - **Pulumi tags:** `pulumi-news` for company news (funding, certifications, etc.), `pulumi-events` for events we participate in or host, `pulumi-interns` for intern posts, `pulumi-enterprise` for enterprise-focused blog posts
+   - **Cloud provider tags:** Only add a cloud provider tag if we expect to have multiple posts about the provider. Today, that means `aws`, `azure`, `google-cloud`, `digitalocean`
+   - **Feature tags:** Only add a feature tag if we expect to have multiple posts about the feature. Today, that means `features` (for feature announcements), `aliases`, `continuous-delivery`, `logging`, `migration`, `native-providers`, `packages`, `policy-as-code`, `secrets`, `testing`.
+   - **Technology/scenario tags:** Similar to feature tags, but focused on user scenarios. Today, that means `cloud-engineering`, `cloud-native`, `containers`, `data-and-analytics`, `development-environment`, `github-actions`, `kubernetes`, `serverless`.
+   - **Language tags:** Any post that is language/ecosystem specific should have one or more of `.net`, `go`, `javascript`, `python`, `typescript`.
 
 2. If you don't already have a [TOML](https://github.com/toml-lang/toml) file [in the `team` directory](https://github.com/pulumi/docs/tree/master/data/team/team) of the repo, create one now. For Pulumi employees, that file should look something like this:
 

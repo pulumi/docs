@@ -1,7 +1,7 @@
 ---
 title: "Unified Logs with pulumi logs"
 authors: ["luke-hoban"]
-tags: ["AWS","Features","Logging"]
+tags: ["AWS","features","Logging"]
 date: "2019-04-02"
 meta_desc: "The Pulumi CLI provides a seamless way to do logging for your applications without requiring the additional setup of cloud and third party logging solutions."
 meta_image: "terminal-logs.png"

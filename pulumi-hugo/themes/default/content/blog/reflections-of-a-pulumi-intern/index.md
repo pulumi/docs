@@ -3,7 +3,7 @@ title: "Reflections of a Pulumi Intern"
 meta_image: meta.png
 authors: ["albert-zhong"]
 meta_desc: "A reflection on my Pulumi intern experiences (summer 2020 edition)"
-tags: ["pulumi", "intern"]
+tags: ["pulumi-interns"]
 date: "2020-09-18"
 ---
 

@@ -4,7 +4,7 @@ date: "2019-04-30"
 meta_desc: "Using Pulumi to build a custom Docker image, publish it to a AWS container registry, and spin up an AWS Fargate load balanced service running that container."
 meta_image: "docker-fargate-history.png"
 authors: ["joe-duffy"]
-tags: ["JavaScript","AWS","Containers","Infrastructure","TypeScript"]
+tags: ["JavaScript","AWS","containers","TypeScript"]
 ---
 
 > Update: Check out the [Learning Machine Case Study]({{< relref "/case-studies/learning-machine" >}}) where provisioning went from 3 weeks to 1 hour with Pulumi and AWS.

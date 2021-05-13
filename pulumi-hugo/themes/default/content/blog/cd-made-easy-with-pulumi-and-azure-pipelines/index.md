@@ -4,7 +4,7 @@ date: "2019-05-06"
 meta_desc: "Pulumi open-source task extensions for Azure Pipelines will manage the installation of the Pulumi CLI, and run the Pulumi commands against your stack."
 meta_image: "add-pulumi.png"
 authors: ["praneet-loke"]
-tags: ["Azure", "CI/CD", "New-Features"]
+tags: ["Azure", "continuous-delivery", "features"]
 ---
 
 Azure DevOps is very popular among teams that want a single place to

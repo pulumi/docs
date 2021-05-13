@@ -6,7 +6,7 @@ meta_image: microservices.png
 authors:
     - sophia-parafina
 tags:
-    - microservices
+    - architecture-as-code
 ---
 
 This article is the third in a series about Architecture as Code. The [first article]({{< relref "/blog/architecture-as-code-intro">}}) provided an overview of virtual machines, microservices, serverless, and Kubernetes. The [second]({{< relref "/blog/architecture-as-code-vm" >}}) one went in-depth on deploying virtual machines as reusable components. In this third installment, we'll look at microservices and how to implement them as reusable components with Pulumi.

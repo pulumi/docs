@@ -6,7 +6,7 @@ meta_image: soc2.png
 authors:
    - eric-rudder
 tags:
-   - SOC 2
+   - pulumi-enterprise
 ---
 
 ## Pulumi’s Commitment

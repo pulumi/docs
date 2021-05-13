@@ -1,7 +1,7 @@
 ---
 title: "An Update on our Roadmap"
 authors: ["joe-duffy"]
-tags: ["Pulumi-News"]
+tags: ["pulumi-news"]
 date: "2020-03-09"
 meta_desc: "Learn about some of Pulumi's progress rounding out our .NET and Go SDKs in addition to infrastructure validation using testing and Policy as Code."
 meta_image: "pulumi-1-0.png"

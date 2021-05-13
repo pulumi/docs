@@ -2,7 +2,7 @@
 title: "Pulumi raises Series B to build the future of Cloud Engineering"
 allow_long_title: True
 authors: ["joe-duffy"]
-tags: ["Pulumi-News"]
+tags: ["pulumi-news"]
 meta_desc: "Today I'm thrilled to announce that we've raised $37.5 million in a new Series B led by NEA to bring Cloud Engineering to the market."
 date: "2020-10-27"
 meta_image: "series-b.png"

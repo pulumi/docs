@@ -7,7 +7,7 @@ authors:
     - andrew-kunzel
     - michael-goode
 tags:
-    - Pinpoint
+    - guest-post
     - Kubernetes
 ---
 

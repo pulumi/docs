@@ -1,7 +1,7 @@
 ---
 title: "Unlocking Spinnaker With Pulumi"
 authors: ["praneet-loke"]
-tags: ["Spinnaker","CI/CD","Cloud-Native"]
+tags: ["continuous-delivery"]
 date: "2020-06-18"
 meta_desc: "We are excited to announce the launch of free, open-source Pulumi plugin for Spinnaker."
 meta_image: pulumi-spinnaker.png

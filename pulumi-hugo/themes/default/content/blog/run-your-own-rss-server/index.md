@@ -8,9 +8,7 @@ authors:
     - christian-nunciato
 tags:
     - containers
-    - database
     - aws
-    - rss
 ---
 
 It's been a few years since [Google shut down Google Reader](https://googleblog.blogspot.com/2013/03/a-second-spring-of-cleaning.html), and while a number of nice commercial alternatives have sprung in its wake, none of them has ever been quite the right fit for me personally.

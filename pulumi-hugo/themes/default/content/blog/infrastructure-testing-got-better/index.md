@@ -6,8 +6,7 @@ meta_image: dustin-farris.png
 authors:
     - dustin-farris
 tags:
-    - test driven development
-    - unit testing
+    - testing
 ---
 
 **Guest Article:** Dustin Farris is an experienced cloud engineering consultant.  He’s currently building a new data lake for a large public university using Pulumi. The project handles sensitive student and research data and as a result, his team must meet stringent QA and security requirements.  Dustin shows how resource mocking in Pulumi makes testing and verification faster than ever before.

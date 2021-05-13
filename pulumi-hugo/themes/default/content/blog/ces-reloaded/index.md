@@ -6,7 +6,7 @@ meta_image: cloud_engineering.png
 authors:
     - sophia-parafina
 tags:
-    - cloud engineering summit=
+    - cloud-engineering
 ---
 
 Putting on a new event is always risky, especially when the calendar is saturated with virtual conferences. Our goal for the Cloud Engineering Summit was to bring the level of conversation above specific technologies and take a holistic look into the future of the cloud and you knocked it out of the park! Here are the stats:

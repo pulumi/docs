@@ -10,7 +10,7 @@ tags:
  - kubernetes
  - azure
  - aws
- - gcp
+ - google-cloud
 ---
 
 Running Kubernetes in production can be challenging. This past year, Pulumi has collected common patterns of usage informed by best practices for provisioning Kubernetes infrastructure and running containerized applications. We call this Pulumi Crosswalk for Kubernetes: a collection of playbooks and libraries to help you to successfully configure, deploy, and manage Kubernetes in a way that works for teams in production.

@@ -2,7 +2,7 @@
 title: "AWS EKS - How to Scale Your Cluster"
 h1: "How to Scale Your Amazon EKS Cluster: EC2, Managed Node Groups, and Fargate"
 authors: ["joe-duffy"]
-tags: ["Pulumi-News", "AWS", "Kubernetes", "EKS"]
+tags: ["AWS", "Kubernetes"]
 meta_desc: "Pulumi supports simplify the scaling your Elastic Kubernetes Service (EKS) clusters with Managed Node Groups and Fargate."
 date: "2019-12-05"
 meta_image: "pulumi-eks-fargate.png"

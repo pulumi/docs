@@ -6,8 +6,7 @@ meta_image: meta.png
 authors:
     - alex-mullans
 tags:
-    - pulumi-packages
-    - PulumiUP
+    - packages
 ---
 
 Pulumi Packages are the core technology that enables cloud infrastructure resource provisioning to be defined once, in your language of choice, and made available to users in all Pulumi languages. If you’ve used a Pulumi [cloud provider]({{< relref "/docs/intro/cloud-providers" >}}), including one of our new [Pulumi native providers]({{< relref "/blog/pulumiup-native-providers" >}}), you’ve used a Pulumi Package. But until today, Pulumi Packages only worked with Pulumi Resources: direct, low-level representations of individual cloud services like object storage. Many of us, however, enjoy creating Pulumi Components, which combine low-level resources into higher-level, more opinionated building blocks like the production-grade Kubernetes cluster component in [Pulumi EKS](https://github.com/pulumi/pulumi-eks/). Unfortunately, those components, though powerful and unique to Pulumi's IaC approach, were previously confined to a single language: so if your infrastructure team built a component in Python, your developers who might want to use TypeScript could not use it.

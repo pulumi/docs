@@ -6,9 +6,9 @@ meta_image: "meta.png"
 authors:
     - mikhail-shilkov
 tags:
-    - "GCP"
+    - google-cloud
     - "Serverless"
-    - "Containers"
+    - "containers"
 ---
 
 Google [Cloud Run](https://cloud.google.com/run/) is the latest addition to the serverless compute family. While it may look similar to existing services of public cloud, the feature set makes Cloud Run unique:

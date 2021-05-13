@@ -6,9 +6,8 @@ meta_image: meta.jpg
 authors:
     - sophia-parafina
 tags:
-    - "Crosswalk for Kubernetes"
-    - "Query for Kubernetes"
-    - "KubeCon 2019"
+    - Kubernetes
+    - pulumi-events
 ---
 
 ![Pulumi Booth KubeCon2019](booth.jpg)

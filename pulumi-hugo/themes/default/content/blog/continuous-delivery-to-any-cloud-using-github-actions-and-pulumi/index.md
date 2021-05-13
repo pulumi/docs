@@ -2,7 +2,7 @@
 title: Continuous Delivery to Any Cloud using GitHub Actions
 h1: "Continuous Delivery to Any Cloud using GitHub Actions and Pulumi"
 authors: ["joe-duffy"]
-tags: ["Pulumi-News", "New-Features", "CI/CD"]
+tags: ["pulumi-news", "features", "continuous-delivery"]
 meta_desc: "Pulumi GitHub Actions delivers the easiest, most capable, and friction-free way to achieve continuous delivery of cloud applications and infrastructure."
 date: "2018-10-17"
 

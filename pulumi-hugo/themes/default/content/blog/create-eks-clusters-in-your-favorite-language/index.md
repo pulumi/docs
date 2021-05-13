@@ -8,7 +8,6 @@ authors:
     - levi-blackstone
 tags:
     - aws
-    - eks
     - .net
     - python
     - go

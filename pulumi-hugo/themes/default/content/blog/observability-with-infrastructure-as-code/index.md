@@ -7,8 +7,7 @@ meta_desc: "Andy Davies from Reaktor introduces observability into infrastructur
 authors:
 - andy-davies
 tags:
-- observability
-- honeycomb
+- guest-post
 - automation-api
 
 meta_image: "reaktor.png"

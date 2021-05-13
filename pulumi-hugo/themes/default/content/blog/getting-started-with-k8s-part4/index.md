@@ -7,7 +7,6 @@ authors:
     - sophia-parafina
 tags:
     - Kubernetes
-    - StatefulSets
 ---
 
 This article is the fourth in a series using infrastructure as code to deploy applications with Kubernetes. This series walks you through:

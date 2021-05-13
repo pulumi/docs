@@ -4,7 +4,7 @@ date: "2020-02-20"
 meta_desc: "Pulumi now supports Audit Logs. Learn how to audit your organization's infrastructure as code activity"
 meta_image: "auditlogs.png"
 authors: ["sean-holung"]
-tags: ["New-Features", "AuditLogs", "Enterprise"]
+tags: ["features", "pulumi-enterprise"]
 ---
 
 We are excited to announce the release of Audit Logs on

@@ -1,7 +1,7 @@
 ---
 title: "AWS Serverless Analytics"
 authors: ["evan-boyle"]
-tags: ["AWS-Serverless", "Analytics", "Architecture-as-Code", "Data-Warehouse"]
+tags: ["AWS", "data-and-analytics"]
 date: "2020-01-30"
 meta_desc: "Building a serverless data warehouse on AWS using architecture as code."
 meta_image: "ServerlessArchitecture.png"

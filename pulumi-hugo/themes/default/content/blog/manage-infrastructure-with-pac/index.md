@@ -9,7 +9,7 @@ tags:
    - "Policy as Code"
    - "AWS"
    - "Azure"
-   - "GCP"
+   - google-cloud
    - "Kubernetes"
 ---
 

@@ -20,7 +20,7 @@ The following language runtimes are currently supported by Pulumi:
 
 * [Node.js]({{< relref "javascript" >}}) - JavaScript, TypeScript, or any other Node.js compatible language
 * [Python]({{< relref "python" >}}) - Python 3.6 or greater
-* [.NET Core]({{< relref "dotnet" >}}) - C#, F#, and Visual Basic on .NET Core 3.1 or greater
+* [.NET Core]({{< relref ".NET" >}}) - C#, F#, and Visual Basic on .NET Core 3.1 or greater
 * [Go]({{< relref "go" >}}) - statically compiled Go binaries
 
 If your favorite language isn't listed, it may be on its way soon. Pulumi is [open

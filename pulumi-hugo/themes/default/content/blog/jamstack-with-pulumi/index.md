@@ -6,7 +6,6 @@ meta_image: jamstack.png
 authors:
     - sophia-parafina
 tags:
-    - jamstack
     - aws
 ---
 

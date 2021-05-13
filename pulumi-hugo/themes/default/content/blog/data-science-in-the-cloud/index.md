@@ -6,8 +6,7 @@ meta_image: data_science.png
 authors:
     - sophia-parafina
 tags:
-    - Jupyter
-    - Data Science
+    - data-and-analytics
     - Automation API
     - Python
 ---

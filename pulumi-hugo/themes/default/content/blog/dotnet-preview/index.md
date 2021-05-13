@@ -8,9 +8,6 @@ authors:
     - sophia-parafina
 tags:
     - ".NET"
-    - "C#"
-    - "F#"
-    - "Visual Basic"
 ---
 With the release of [Pulumi for .NET preview]({{< relref "/blog/pulumi-dotnet-core" >}}), we've open the doors to infrastructure as code to even more developers and operators. Millions of .NET developers can now use their favorite languages and open source ecosystems to build modern, cloud native applications. We've added support for C#, F#, and Visual Basic. Because .NET Core is available on Windows, Linux, and macOS, you have a choice of platforms to use.
 

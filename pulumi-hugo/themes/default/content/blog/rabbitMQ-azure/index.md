@@ -6,10 +6,8 @@ meta_image: 1.png
 authors:
     - itay-podhajcer
 tags:
-    - RabbitMQ
     - Azure
-    - .NET Core
-    - devops
+    - .NET
 
 ---
 

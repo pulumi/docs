@@ -6,7 +6,7 @@ meta_image: cumundi-pulumi.png
 authors:
     - ringo-de-smet
 tags:
-    - Test Driven Development
+    - aliases
 ---
 
 **Guest Article:** [Ringo De Smet](https://www.linkedin.com/in/ringodesmet/), Founder of Cumundi, standardizes on Pulumi for writing infrastructure as reusable code libraries for his customers. Pulumi enables him to rapidly iterate through the build-test-release cycle of these building blocks.

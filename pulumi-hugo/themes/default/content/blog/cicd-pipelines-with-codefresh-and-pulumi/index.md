@@ -7,8 +7,7 @@ authors:
     - sophia-parafina
     - kostis-kapelonis
 tags:
-    - CI/CD
-    - Codefresh
+    - continuous-delivery
     - Kubernetes
 
 ---

@@ -4,7 +4,7 @@ date: "2019-06-18"
 meta_desc: "It's been a year since we open sourced Pulumi, multi-cloud infrastructure as code using your favorite languages. Read more about what we've achieved."
 meta_image: "pulumi-birthday.png"
 authors: ["joe-duffy"]
-tags: ["Pulumi-News"]
+tags: ["pulumi-news"]
 ---
 
 One year ago today -- on June 18, 2018 --

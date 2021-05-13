@@ -6,8 +6,7 @@ meta_image: meta.png
 authors:
     - itamar-syn-hershko
 tags:
-    - BigData Boutique
-    - Elasticsearch
+    - guest-post
     - testing
 
 ---

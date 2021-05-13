@@ -4,7 +4,7 @@ date: "2018-06-20"
 meta_desc: "This blog covers creating a container registry instance in ECR, creating task definitions in ECS, and configuring a load balancer."
 meta_image: "hello-world-page.png"
 authors: ["donna-malayeri"]
-tags: ["JavaScript","AWS","Containers"]
+tags: ["JavaScript","AWS","containers"]
 ---
 
 Containers are a great way to deploy applications to the cloud,

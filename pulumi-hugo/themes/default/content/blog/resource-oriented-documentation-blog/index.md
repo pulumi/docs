@@ -6,7 +6,7 @@ meta_image: docs.png
 authors:
     - luke-hoban
 tags:
-    - documentation
+    - features
 ---
 
 Documentation in any product is super important, and an area where folks have shared a lot of feedback! We've heard you, and this week we took a major step in rolling out a brand new approach to resource documentation.  We hope you like it as much as we do.

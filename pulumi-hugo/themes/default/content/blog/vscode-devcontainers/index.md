@@ -6,9 +6,8 @@ meta_image: devcontainer.png
 authors:
     - sophia-parafina
 tags:
-    - "VS Code"
-    - "devcontainers"
-    - Docker
+    - development-environment
+    - containers
 ---
 
 One of the major advantages of using containers for development is reducing the need to install software and associated dependencies. Developers can start writing code without configuring a development environment that emulates production. The Visual Studio Code Remote - Containers extension lets you develop inside a container. If you want to use Pulumi’s infrastructure as code engine without installing the Pulumi CLI, this blog post is for you!

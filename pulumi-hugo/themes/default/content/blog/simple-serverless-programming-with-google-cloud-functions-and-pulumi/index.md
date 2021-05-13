@@ -2,7 +2,7 @@
 title: Simple Serverless programming with Google Cloud Functions
 h1: "Simple Serverless programming with Google Cloud Functions and Pulumi"
 authors: ["cyrus-najmabadi"]
-tags: ["Serverless","GCP"]
+tags: ["Serverless",google-cloud]
 date: "2019-04-10"
 meta_desc: "Pulumi lets you create, deploy, and manage Google Cloud applications and infrastructure in familiar languages without needing DSLs or YAML templating solutions."
 

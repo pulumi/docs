@@ -1,7 +1,7 @@
 ---
 title: "Pulumi 2.0 Roadmap"
 authors: ["joe-duffy"]
-tags: ["Pulumi-News"]
+tags: ["pulumi-news"]
 meta_desc: "We've published Pulumi's 2.0 roadmap. This release will support great productivity, deeper support for enterprise workloads, and a whole lot more."
 date: "2019-12-02"
 
