@@ -172,6 +172,7 @@ This is a list of the audit log events currently being recorded.
 | Policy Pack Deleted                      | indicates the deletion of a policy pack                                                                              |
 | Policy Pack Disabled                     | indicates the disabling of a policy pack                                                                             |
 | Policy Pack Enabled                      | indicates the enabling of a policy pack                                                                              |
+| Secret Decrypted                         | indicates the decryption of a secret value associated with a stack                                                                  |
 | Stack Collaborator Added                 | indicates the adding of a collaborator to a stack                                                               |
 | Stack Collaborator Permissions Changed   | indicates a change in permissions for a stack collaborator                                         |
 | Stack Collaborator Removed               | indicates the removal of a collaborator to a stack                                                            |
