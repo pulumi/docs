@@ -221,25 +221,19 @@ const exampleInstance = new alicloud.tsdb.Instance("exampleInstance", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -251,25 +245,19 @@ const exampleInstance = new alicloud.tsdb.Instance("exampleInstance", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -281,33 +269,25 @@ const exampleInstance = new alicloud.tsdb.Instance("exampleInstance", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -319,25 +299,19 @@ const exampleInstance = new alicloud.tsdb.Instance("exampleInstance", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -382,7 +356,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 - `tsdb.12x.standard` refers to standard edition I;
 - `tsdb.24x.standard` refers to standard edition II;
 - `tsdb.48x.large` refers to ultimate edition I;
-- `tsdb.94x.large` refers to ultimate edition II.
+- `tsdb.96x.large` refers to ultimate edition II.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancestorage_csharp">
@@ -498,7 +472,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 - `tsdb.12x.standard` refers to standard edition I;
 - `tsdb.24x.standard` refers to standard edition II;
 - `tsdb.48x.large` refers to ultimate edition I;
-- `tsdb.94x.large` refers to ultimate edition II.
+- `tsdb.96x.large` refers to ultimate edition II.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancestorage_go">
@@ -614,7 +588,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 - `tsdb.12x.standard` refers to standard edition I;
 - `tsdb.24x.standard` refers to standard edition II;
 - `tsdb.48x.large` refers to ultimate edition I;
-- `tsdb.94x.large` refers to ultimate edition II.
+- `tsdb.96x.large` refers to ultimate edition II.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancestorage_nodejs">
@@ -730,7 +704,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 - `tsdb.12x.standard` refers to standard edition I;
 - `tsdb.24x.standard` refers to standard edition II;
 - `tsdb.48x.large` refers to ultimate edition I;
-- `tsdb.94x.large` refers to ultimate edition II.
+- `tsdb.96x.large` refers to ultimate edition II.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_storage_python">
@@ -1118,7 +1092,7 @@ The following state arguments are supported:
 - `tsdb.12x.standard` refers to standard edition I;
 - `tsdb.24x.standard` refers to standard edition II;
 - `tsdb.48x.large` refers to ultimate edition I;
-- `tsdb.94x.large` refers to ultimate edition II.
+- `tsdb.96x.large` refers to ultimate edition II.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancestorage_csharp">
@@ -1243,7 +1217,7 @@ The following state arguments are supported:
 - `tsdb.12x.standard` refers to standard edition I;
 - `tsdb.24x.standard` refers to standard edition II;
 - `tsdb.48x.large` refers to ultimate edition I;
-- `tsdb.94x.large` refers to ultimate edition II.
+- `tsdb.96x.large` refers to ultimate edition II.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancestorage_go">
@@ -1368,7 +1342,7 @@ The following state arguments are supported:
 - `tsdb.12x.standard` refers to standard edition I;
 - `tsdb.24x.standard` refers to standard edition II;
 - `tsdb.48x.large` refers to ultimate edition I;
-- `tsdb.94x.large` refers to ultimate edition II.
+- `tsdb.96x.large` refers to ultimate edition II.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancestorage_nodejs">
@@ -1493,7 +1467,7 @@ The following state arguments are supported:
 - `tsdb.12x.standard` refers to standard edition I;
 - `tsdb.24x.standard` refers to standard edition II;
 - `tsdb.48x.large` refers to ultimate edition I;
-- `tsdb.94x.large` refers to ultimate edition II.
+- `tsdb.96x.large` refers to ultimate edition II.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_storage_python">

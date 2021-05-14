@@ -37,11 +37,37 @@ class MyStack : Stack
         var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
         {
             CidrBlock = "172.16.0.0/12",
+            VpcName = "VpcConfig",
         });
         var defaultNetworkAcl = new AliCloud.Vpc.NetworkAcl("defaultNetworkAcl", new AliCloud.Vpc.NetworkAclArgs
         {
             VpcId = defaultNetwork.Id,
+            NetworkAclName = "network_acl",
             Description = "network_acl",
+            IngressAclEntries = 
+            {
+                new AliCloud.Vpc.Inputs.NetworkAclIngressAclEntryArgs
+                {
+                    Description = "tf-testacc",
+                    NetworkAclEntryName = "tcp23",
+                    SourceCidrIp = "196.168.2.0/21",
+                    Policy = "accept",
+                    Port = "22/80",
+                    Protocol = "tcp",
+                },
+            },
+            EgressAclEntries = 
+            {
+                new AliCloud.Vpc.Inputs.NetworkAclEgressAclEntryArgs
+                {
+                    Description = "tf-testacc",
+                    NetworkAclEntryName = "tcp23",
+                    DestinationCidrIp = "0.0.0.0/0",
+                    Policy = "accept",
+                    Port = "-1/-1",
+                    Protocol = "all",
+                },
+            },
         });
     }
 
@@ -66,13 +92,35 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		defaultNetwork, err := vpc.NewNetwork(ctx, "defaultNetwork", &vpc.NetworkArgs{
 			CidrBlock: pulumi.String("172.16.0.0/12"),
+			VpcName:   pulumi.String("VpcConfig"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = vpc.NewNetworkAcl(ctx, "defaultNetworkAcl", &vpc.NetworkAclArgs{
-			VpcId:       defaultNetwork.ID(),
-			Description: pulumi.String("network_acl"),
+			VpcId:          defaultNetwork.ID(),
+			NetworkAclName: pulumi.String("network_acl"),
+			Description:    pulumi.String("network_acl"),
+			IngressAclEntries: vpc.NetworkAclIngressAclEntryArray{
+				&vpc.NetworkAclIngressAclEntryArgs{
+					Description:         pulumi.String("tf-testacc"),
+					NetworkAclEntryName: pulumi.String("tcp23"),
+					SourceCidrIp:        pulumi.String("196.168.2.0/21"),
+					Policy:              pulumi.String("accept"),
+					Port:                pulumi.String("22/80"),
+					Protocol:            pulumi.String("tcp"),
+				},
+			},
+			EgressAclEntries: vpc.NetworkAclEgressAclEntryArray{
+				&vpc.NetworkAclEgressAclEntryArgs{
+					Description:         pulumi.String("tf-testacc"),
+					NetworkAclEntryName: pulumi.String("tcp23"),
+					DestinationCidrIp:   pulumi.String("0.0.0.0/0"),
+					Policy:              pulumi.String("accept"),
+					Port:                pulumi.String("-1/-1"),
+					Protocol:            pulumi.String("all"),
+				},
+			},
 		})
 		if err != nil {
 			return err
@@ -92,10 +140,29 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
-default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/12")
+default_network = alicloud.vpc.Network("defaultNetwork",
+    cidr_block="172.16.0.0/12",
+    vpc_name="VpcConfig")
 default_network_acl = alicloud.vpc.NetworkAcl("defaultNetworkAcl",
     vpc_id=default_network.id,
-    description="network_acl")
+    network_acl_name="network_acl",
+    description="network_acl",
+    ingress_acl_entries=[alicloud.vpc.NetworkAclIngressAclEntryArgs(
+        description="tf-testacc",
+        network_acl_entry_name="tcp23",
+        source_cidr_ip="196.168.2.0/21",
+        policy="accept",
+        port="22/80",
+        protocol="tcp",
+    )],
+    egress_acl_entries=[alicloud.vpc.NetworkAclEgressAclEntryArgs(
+        description="tf-testacc",
+        network_acl_entry_name="tcp23",
+        destination_cidr_ip="0.0.0.0/0",
+        policy="accept",
+        port="-1/-1",
+        protocol="all",
+    )])
 ```
 
 
@@ -109,10 +176,30 @@ default_network_acl = alicloud.vpc.NetworkAcl("defaultNetworkAcl",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/12"});
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {
+    cidrBlock: "172.16.0.0/12",
+    vpcName: "VpcConfig",
+});
 const defaultNetworkAcl = new alicloud.vpc.NetworkAcl("defaultNetworkAcl", {
     vpcId: defaultNetwork.id,
+    networkAclName: "network_acl",
     description: "network_acl",
+    ingressAclEntries: [{
+        description: "tf-testacc",
+        networkAclEntryName: "tcp23",
+        sourceCidrIp: "196.168.2.0/21",
+        policy: "accept",
+        port: "22/80",
+        protocol: "tcp",
+    }],
+    egressAclEntries: [{
+        description: "tf-testacc",
+        networkAclEntryName: "tcp23",
+        destinationCidrIp: "0.0.0.0/0",
+        policy: "accept",
+        port: "-1/-1",
+        protocol: "all",
+    }],
 });
 ```
 
@@ -141,7 +228,10 @@ const defaultNetworkAcl = new alicloud.vpc.NetworkAcl("defaultNetworkAcl", {
 <span class="k">def </span><span class="nx">NetworkAcl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">egress_acl_entries</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkAclEgressAclEntryArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">ingress_acl_entries</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkAclIngressAclEntryArgs]]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">network_acl_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">NetworkAcl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -165,25 +255,19 @@ const defaultNetworkAcl = new alicloud.vpc.NetworkAcl("defaultNetworkAcl", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkAclArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -195,25 +279,19 @@ const defaultNetworkAcl = new alicloud.vpc.NetworkAcl("defaultNetworkAcl", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkAclArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -225,33 +303,25 @@ const defaultNetworkAcl = new alicloud.vpc.NetworkAcl("defaultNetworkAcl", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkAclArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -263,25 +333,19 @@ const defaultNetworkAcl = new alicloud.vpc.NetworkAcl("defaultNetworkAcl", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkAclArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -313,11 +377,38 @@ The NetworkAcl resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the network acl instance.
+    <dd>{{% md %}}The description of egress entries.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="egressaclentries_csharp">
+<a href="#egressaclentries_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Acl<wbr>Entries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclegressaclentry">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Network<wbr>Acl<wbr>Egress<wbr>Acl<wbr>Entry<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block `egress_acl_entries`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingressaclentries_csharp">
+<a href="#ingressaclentries_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Acl<wbr>Entries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclingressaclentry">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Network<wbr>Acl<wbr>Ingress<wbr>Acl<wbr>Entry<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block `ingress_acl_entries`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.122.0. New field `network_acl_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.122.0. New field &#39;network_acl_name&#39; instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkaclname_csharp">
+<a href="#networkaclname_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -344,11 +435,38 @@ The NetworkAcl resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the network acl instance.
+    <dd>{{% md %}}The description of egress entries.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="egressaclentries_go">
+<a href="#egressaclentries_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Acl<wbr>Entries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclegressaclentry">[]Network<wbr>Acl<wbr>Egress<wbr>Acl<wbr>Entry</a></span>
+    </dt>
+    <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block `egress_acl_entries`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingressaclentries_go">
+<a href="#ingressaclentries_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Acl<wbr>Entries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclingressaclentry">[]Network<wbr>Acl<wbr>Ingress<wbr>Acl<wbr>Entry</a></span>
+    </dt>
+    <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block `ingress_acl_entries`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.122.0. New field `network_acl_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.122.0. New field &#39;network_acl_name&#39; instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkaclname_go">
+<a href="#networkaclname_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -375,11 +493,38 @@ The NetworkAcl resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the network acl instance.
+    <dd>{{% md %}}The description of egress entries.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="egressaclentries_nodejs">
+<a href="#egressaclentries_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Acl<wbr>Entries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclegressaclentry">Network<wbr>Acl<wbr>Egress<wbr>Acl<wbr>Entry<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block `egress_acl_entries`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingressaclentries_nodejs">
+<a href="#ingressaclentries_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Acl<wbr>Entries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclingressaclentry">Network<wbr>Acl<wbr>Ingress<wbr>Acl<wbr>Entry<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block `ingress_acl_entries`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.122.0. New field `network_acl_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.122.0. New field &#39;network_acl_name&#39; instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkaclname_nodejs">
+<a href="#networkaclname_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acl<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -406,11 +551,38 @@ The NetworkAcl resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the network acl instance.
+    <dd>{{% md %}}The description of egress entries.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="egress_acl_entries_python">
+<a href="#egress_acl_entries_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>acl_<wbr>entries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclegressaclentry">Sequence[Network<wbr>Acl<wbr>Egress<wbr>Acl<wbr>Entry<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block `egress_acl_entries`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingress_acl_entries_python">
+<a href="#ingress_acl_entries_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>acl_<wbr>entries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclingressaclentry">Sequence[Network<wbr>Acl<wbr>Ingress<wbr>Acl<wbr>Entry<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block `ingress_acl_entries`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.122.0. New field `network_acl_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.122.0. New field &#39;network_acl_name&#39; instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_acl_name_python">
+<a href="#network_acl_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acl_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -435,7 +607,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.122.0+) The status of the network acl.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -447,7 +628,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.122.0+) The status of the network acl.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -459,7 +649,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.122.0+) The status of the network acl.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -471,7 +670,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.122.0+) The status of the network acl.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -491,7 +699,11 @@ Get an existing NetworkAcl resource's state with the given name, ID, and optiona
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">egress_acl_entries</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkAclEgressAclEntryArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">ingress_acl_entries</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkAclIngressAclEntryArgs]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network_acl_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NetworkAcl</code></pre></div>
 {{% /choosable %}}
 
@@ -611,16 +823,52 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the network acl instance.
+    <dd>{{% md %}}The description of egress entries.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_egressaclentries_csharp">
+<a href="#state_egressaclentries_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Acl<wbr>Entries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclegressaclentry">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Network<wbr>Acl<wbr>Egress<wbr>Acl<wbr>Entry<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block `egress_acl_entries`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ingressaclentries_csharp">
+<a href="#state_ingressaclentries_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Acl<wbr>Entries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclingressaclentry">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Network<wbr>Acl<wbr>Ingress<wbr>Acl<wbr>Entry<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block `ingress_acl_entries`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.122.0. New field `network_acl_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.122.0. New field &#39;network_acl_name&#39; instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_networkaclname_csharp">
+<a href="#state_networkaclname_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}The name of the network acl.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.122.0+) The status of the network acl.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_csharp">
@@ -642,16 +890,52 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the network acl instance.
+    <dd>{{% md %}}The description of egress entries.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_egressaclentries_go">
+<a href="#state_egressaclentries_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Acl<wbr>Entries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclegressaclentry">[]Network<wbr>Acl<wbr>Egress<wbr>Acl<wbr>Entry</a></span>
+    </dt>
+    <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block `egress_acl_entries`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ingressaclentries_go">
+<a href="#state_ingressaclentries_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Acl<wbr>Entries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclingressaclentry">[]Network<wbr>Acl<wbr>Ingress<wbr>Acl<wbr>Entry</a></span>
+    </dt>
+    <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block `ingress_acl_entries`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.122.0. New field `network_acl_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.122.0. New field &#39;network_acl_name&#39; instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_networkaclname_go">
+<a href="#state_networkaclname_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}The name of the network acl.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.122.0+) The status of the network acl.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_go">
@@ -673,16 +957,52 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the network acl instance.
+    <dd>{{% md %}}The description of egress entries.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_egressaclentries_nodejs">
+<a href="#state_egressaclentries_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Acl<wbr>Entries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclegressaclentry">Network<wbr>Acl<wbr>Egress<wbr>Acl<wbr>Entry<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block `egress_acl_entries`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ingressaclentries_nodejs">
+<a href="#state_ingressaclentries_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Acl<wbr>Entries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclingressaclentry">Network<wbr>Acl<wbr>Ingress<wbr>Acl<wbr>Entry<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block `ingress_acl_entries`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.122.0. New field `network_acl_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.122.0. New field &#39;network_acl_name&#39; instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_networkaclname_nodejs">
+<a href="#state_networkaclname_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acl<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}The name of the network acl.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.122.0+) The status of the network acl.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_nodejs">
@@ -704,16 +1024,52 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the network acl instance.
+    <dd>{{% md %}}The description of egress entries.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_egress_acl_entries_python">
+<a href="#state_egress_acl_entries_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>acl_<wbr>entries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclegressaclentry">Sequence[Network<wbr>Acl<wbr>Egress<wbr>Acl<wbr>Entry<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block `egress_acl_entries`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ingress_acl_entries_python">
+<a href="#state_ingress_acl_entries_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>acl_<wbr>entries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclingressaclentry">Sequence[Network<wbr>Acl<wbr>Ingress<wbr>Acl<wbr>Entry<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block `ingress_acl_entries`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.122.0. New field `network_acl_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.122.0. New field &#39;network_acl_name&#39; instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_network_acl_name_python">
+<a href="#state_network_acl_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acl_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
     <dd>{{% md %}}The name of the network acl.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.122.0+) The status of the network acl.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_id_python">
@@ -730,6 +1086,478 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="networkaclegressaclentry">Network<wbr>Acl<wbr>Egress<wbr>Acl<wbr>Entry</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationcidrip_csharp">
+<a href="#destinationcidrip_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination cidr ip of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkaclentryname_csharp">
+<a href="#networkaclentryname_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The entry name of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policy_csharp">
+<a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The policy of egress entries. Valid values `accept` and `drop`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The port of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of egress entries. Valid values `icmp`,`gre`,`tcp`,`udp`, and `all`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationcidrip_go">
+<a href="#destinationcidrip_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination cidr ip of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkaclentryname_go">
+<a href="#networkaclentryname_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The entry name of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policy_go">
+<a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The policy of egress entries. Valid values `accept` and `drop`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The port of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of egress entries. Valid values `icmp`,`gre`,`tcp`,`udp`, and `all`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationcidrip_nodejs">
+<a href="#destinationcidrip_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination cidr ip of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkaclentryname_nodejs">
+<a href="#networkaclentryname_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acl<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The entry name of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policy_nodejs">
+<a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The policy of egress entries. Valid values `accept` and `drop`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The port of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of egress entries. Valid values `icmp`,`gre`,`tcp`,`udp`, and `all`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destination_cidr_ip_python">
+<a href="#destination_cidr_ip_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The destination cidr ip of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_acl_entry_name_python">
+<a href="#network_acl_entry_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acl_<wbr>entry_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The entry name of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policy_python">
+<a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The policy of egress entries. Valid values `accept` and `drop`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The port of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The protocol of egress entries. Valid values `icmp`,`gre`,`tcp`,`udp`, and `all`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="networkaclingressaclentry">Network<wbr>Acl<wbr>Ingress<wbr>Acl<wbr>Entry</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkaclentryname_csharp">
+<a href="#networkaclentryname_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The entry name of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policy_csharp">
+<a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The policy of egress entries. Valid values `accept` and `drop`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The port of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of egress entries. Valid values `icmp`,`gre`,`tcp`,`udp`, and `all`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourcecidrip_csharp">
+<a href="#sourcecidrip_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source cidr ip of ingress entries.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkaclentryname_go">
+<a href="#networkaclentryname_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The entry name of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policy_go">
+<a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The policy of egress entries. Valid values `accept` and `drop`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The port of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of egress entries. Valid values `icmp`,`gre`,`tcp`,`udp`, and `all`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourcecidrip_go">
+<a href="#sourcecidrip_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source cidr ip of ingress entries.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkaclentryname_nodejs">
+<a href="#networkaclentryname_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acl<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The entry name of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policy_nodejs">
+<a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The policy of egress entries. Valid values `accept` and `drop`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The port of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of egress entries. Valid values `icmp`,`gre`,`tcp`,`udp`, and `all`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourcecidrip_nodejs">
+<a href="#sourcecidrip_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Cidr<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source cidr ip of ingress entries.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_acl_entry_name_python">
+<a href="#network_acl_entry_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acl_<wbr>entry_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The entry name of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policy_python">
+<a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The policy of egress entries. Valid values `accept` and `drop`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The port of egress entries.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The protocol of egress entries. Valid values `icmp`,`gre`,`tcp`,`udp`, and `all`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="source_cidr_ip_python">
+<a href="#source_cidr_ip_python" style="color: inherit; text-decoration: inherit;">source_<wbr>cidr_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The source cidr ip of ingress entries.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

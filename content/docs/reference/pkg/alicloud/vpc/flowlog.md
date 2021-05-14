@@ -237,25 +237,19 @@ const defaultFlowLog = new alicloud.vpc.FlowLog("defaultFlowLog", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FlowLogArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -267,25 +261,19 @@ const defaultFlowLog = new alicloud.vpc.FlowLog("defaultFlowLog", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FlowLogArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -297,33 +285,25 @@ const defaultFlowLog = new alicloud.vpc.FlowLog("defaultFlowLog", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FlowLogArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -335,25 +315,19 @@ const defaultFlowLog = new alicloud.vpc.FlowLog("defaultFlowLog", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FlowLogArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -403,7 +377,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource to capture traffic.
+    <dd>{{% md %}}The type of the resource to capture traffic. Valid values `NetworkInterface`, `VPC`, and `VSwitch`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="traffictype_csharp">
@@ -412,7 +386,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of traffic collected.
+    <dd>{{% md %}}The type of traffic collected. Valid values `All`, `Drop` and `Allow`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -439,7 +413,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the VPC Flow Log.
+    <dd>{{% md %}}The status of the VPC Flow Log. Valid values `Active` and `Inactive`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -479,7 +453,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource to capture traffic.
+    <dd>{{% md %}}The type of the resource to capture traffic. Valid values `NetworkInterface`, `VPC`, and `VSwitch`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="traffictype_go">
@@ -488,7 +462,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of traffic collected.
+    <dd>{{% md %}}The type of traffic collected. Valid values `All`, `Drop` and `Allow`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -515,7 +489,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the VPC Flow Log.
+    <dd>{{% md %}}The status of the VPC Flow Log. Valid values `Active` and `Inactive`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -555,7 +529,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource to capture traffic.
+    <dd>{{% md %}}The type of the resource to capture traffic. Valid values `NetworkInterface`, `VPC`, and `VSwitch`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="traffictype_nodejs">
@@ -564,7 +538,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of traffic collected.
+    <dd>{{% md %}}The type of traffic collected. Valid values `All`, `Drop` and `Allow`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -591,7 +565,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the VPC Flow Log.
+    <dd>{{% md %}}The status of the VPC Flow Log. Valid values `Active` and `Inactive`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -631,7 +605,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource to capture traffic.
+    <dd>{{% md %}}The type of the resource to capture traffic. Valid values `NetworkInterface`, `VPC`, and `VSwitch`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="traffic_type_python">
@@ -640,7 +614,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of traffic collected.
+    <dd>{{% md %}}The type of traffic collected. Valid values `All`, `Drop` and `Allow`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -667,7 +641,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the VPC Flow Log.
+    <dd>{{% md %}}The status of the VPC Flow Log. Valid values `Active` and `Inactive`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -913,7 +887,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource to capture traffic.
+    <dd>{{% md %}}The type of the resource to capture traffic. Valid values `NetworkInterface`, `VPC`, and `VSwitch`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
@@ -922,7 +896,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the VPC Flow Log.
+    <dd>{{% md %}}The status of the VPC Flow Log. Valid values `Active` and `Inactive`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_traffictype_csharp">
@@ -931,7 +905,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of traffic collected.
+    <dd>{{% md %}}The type of traffic collected. Valid values `All`, `Drop` and `Allow`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -989,7 +963,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource to capture traffic.
+    <dd>{{% md %}}The type of the resource to capture traffic. Valid values `NetworkInterface`, `VPC`, and `VSwitch`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
@@ -998,7 +972,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the VPC Flow Log.
+    <dd>{{% md %}}The status of the VPC Flow Log. Valid values `Active` and `Inactive`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_traffictype_go">
@@ -1007,7 +981,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of traffic collected.
+    <dd>{{% md %}}The type of traffic collected. Valid values `All`, `Drop` and `Allow`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1065,7 +1039,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource to capture traffic.
+    <dd>{{% md %}}The type of the resource to capture traffic. Valid values `NetworkInterface`, `VPC`, and `VSwitch`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
@@ -1074,7 +1048,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the VPC Flow Log.
+    <dd>{{% md %}}The status of the VPC Flow Log. Valid values `Active` and `Inactive`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_traffictype_nodejs">
@@ -1083,7 +1057,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of traffic collected.
+    <dd>{{% md %}}The type of traffic collected. Valid values `All`, `Drop` and `Allow`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1141,7 +1115,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource to capture traffic.
+    <dd>{{% md %}}The type of the resource to capture traffic. Valid values `NetworkInterface`, `VPC`, and `VSwitch`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
@@ -1150,7 +1124,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the VPC Flow Log.
+    <dd>{{% md %}}The status of the VPC Flow Log. Valid values `Active` and `Inactive`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_traffic_type_python">
@@ -1159,7 +1133,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of traffic collected.
+    <dd>{{% md %}}The type of traffic collected. Valid values `All`, `Drop` and `Allow`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
