@@ -172,7 +172,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Limit the search to default rules
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namefilter_csharp">
 <a href="#namefilter_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Filter</a>
@@ -180,7 +181,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A rule name to limit the search
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsfilters_csharp">
 <a href="#tagsfilters_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>Filters</a>
@@ -188,7 +190,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of tags to limit the search
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useronlyfilter_csharp">
 <a href="#useronlyfilter_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Only<wbr>Filter</a>
@@ -196,7 +199,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Limit the search to user rules
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -208,7 +212,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Limit the search to default rules
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namefilter_go">
 <a href="#namefilter_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Filter</a>
@@ -216,7 +221,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A rule name to limit the search
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsfilters_go">
 <a href="#tagsfilters_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>Filters</a>
@@ -224,7 +230,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of tags to limit the search
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useronlyfilter_go">
 <a href="#useronlyfilter_go" style="color: inherit; text-decoration: inherit;">User<wbr>Only<wbr>Filter</a>
@@ -232,7 +239,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Limit the search to user rules
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -244,7 +252,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Limit the search to default rules
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namefilter_nodejs">
 <a href="#namefilter_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Filter</a>
@@ -252,7 +261,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A rule name to limit the search
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsfilters_nodejs">
 <a href="#tagsfilters_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>Filters</a>
@@ -260,7 +270,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of tags to limit the search
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useronlyfilter_nodejs">
 <a href="#useronlyfilter_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Only<wbr>Filter</a>
@@ -268,7 +279,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Limit the search to user rules
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -280,7 +292,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Limit the search to default rules
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_filter_python">
 <a href="#name_filter_python" style="color: inherit; text-decoration: inherit;">name_<wbr>filter</a>
@@ -288,7 +301,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A rule name to limit the search
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_filters_python">
 <a href="#tags_filters_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>filters</a>
@@ -296,7 +310,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of tags to limit the search
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_only_filter_python">
 <a href="#user_only_filter_python" style="color: inherit; text-decoration: inherit;">user_<wbr>only_<wbr>filter</a>
@@ -304,7 +319,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Limit the search to user rules
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -334,7 +350,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}List of IDs of the matched rules.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -342,7 +359,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritymonitoringrulesrule">List&lt;Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}List of rules.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultonlyfilter_csharp">
 <a href="#defaultonlyfilter_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Only<wbr>Filter</a>
@@ -350,7 +368,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Limit the search to default rules
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="namefilter_csharp">
 <a href="#namefilter_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Filter</a>
@@ -358,7 +377,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A rule name to limit the search
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tagsfilters_csharp">
 <a href="#tagsfilters_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>Filters</a>
@@ -366,7 +386,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A list of tags to limit the search
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="useronlyfilter_csharp">
 <a href="#useronlyfilter_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Only<wbr>Filter</a>
@@ -374,7 +395,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Limit the search to user rules
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -395,7 +417,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}List of IDs of the matched rules.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -403,7 +426,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritymonitoringrulesrule">[]Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}List of rules.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultonlyfilter_go">
 <a href="#defaultonlyfilter_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Only<wbr>Filter</a>
@@ -411,7 +435,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Limit the search to default rules
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="namefilter_go">
 <a href="#namefilter_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Filter</a>
@@ -419,7 +444,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A rule name to limit the search
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tagsfilters_go">
 <a href="#tagsfilters_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>Filters</a>
@@ -427,7 +453,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A list of tags to limit the search
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="useronlyfilter_go">
 <a href="#useronlyfilter_go" style="color: inherit; text-decoration: inherit;">User<wbr>Only<wbr>Filter</a>
@@ -435,7 +462,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Limit the search to user rules
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -456,7 +484,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}List of IDs of the matched rules.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -464,7 +493,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritymonitoringrulesrule">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}List of rules.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultonlyfilter_nodejs">
 <a href="#defaultonlyfilter_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Only<wbr>Filter</a>
@@ -472,7 +502,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Limit the search to default rules
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="namefilter_nodejs">
 <a href="#namefilter_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Filter</a>
@@ -480,7 +511,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A rule name to limit the search
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tagsfilters_nodejs">
 <a href="#tagsfilters_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>Filters</a>
@@ -488,7 +520,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A list of tags to limit the search
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="useronlyfilter_nodejs">
 <a href="#useronlyfilter_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Only<wbr>Filter</a>
@@ -496,7 +529,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Limit the search to user rules
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -517,7 +551,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}List of IDs of the matched rules.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -525,7 +560,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritymonitoringrulesrule">Sequence[Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}List of rules.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_only_filter_python">
 <a href="#default_only_filter_python" style="color: inherit; text-decoration: inherit;">default_<wbr>only_<wbr>filter</a>
@@ -533,7 +569,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Limit the search to default rules
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_filter_python">
 <a href="#name_filter_python" style="color: inherit; text-decoration: inherit;">name_<wbr>filter</a>
@@ -541,7 +578,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A rule name to limit the search
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_filters_python">
 <a href="#tags_filters_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>filters</a>
@@ -549,7 +587,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A list of tags to limit the search
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_only_filter_python">
 <a href="#user_only_filter_python" style="color: inherit; text-decoration: inherit;">user_<wbr>only_<wbr>filter</a>
@@ -557,7 +596,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Limit the search to user rules
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -579,7 +619,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritymonitoringrulesrulecase">List&lt;Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Case&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Cases for generating signals.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -587,7 +628,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Message for generated signals.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -595,7 +637,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the rule.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="queries_csharp">
 <a href="#queries_csharp" style="color: inherit; text-decoration: inherit;">Queries</a>
@@ -603,7 +646,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritymonitoringrulesrulequery">List&lt;Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Query&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Queries for selecting logs which are part of the rule.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -611,7 +655,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether the rule is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_csharp">
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -619,7 +664,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritymonitoringrulesruleoptions">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Options on rules.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -627,7 +673,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Tags for generated signals.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -639,7 +686,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritymonitoringrulesrulecase">[]Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Case</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Cases for generating signals.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -647,7 +695,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Message for generated signals.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -655,7 +704,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the rule.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="queries_go">
 <a href="#queries_go" style="color: inherit; text-decoration: inherit;">Queries</a>
@@ -663,7 +713,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritymonitoringrulesrulequery">[]Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Queries for selecting logs which are part of the rule.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -671,7 +722,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether the rule is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_go">
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -679,7 +731,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritymonitoringrulesruleoptions">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Options on rules.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -687,7 +740,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Tags for generated signals.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -699,7 +753,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritymonitoringrulesrulecase">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Case[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Cases for generating signals.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -707,7 +762,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Message for generated signals.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -715,7 +771,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the rule.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="queries_nodejs">
 <a href="#queries_nodejs" style="color: inherit; text-decoration: inherit;">queries</a>
@@ -723,7 +780,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritymonitoringrulesrulequery">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Query[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Queries for selecting logs which are part of the rule.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -731,7 +789,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether the rule is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_nodejs">
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
@@ -739,7 +798,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritymonitoringrulesruleoptions">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Options on rules.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -747,7 +807,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Tags for generated signals.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -759,7 +820,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritymonitoringrulesrulecase">Sequence[Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Case]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Cases for generating signals.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -767,7 +829,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Message for generated signals.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -775,7 +838,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the rule.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="queries_python">
 <a href="#queries_python" style="color: inherit; text-decoration: inherit;">queries</a>
@@ -783,7 +847,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritymonitoringrulesrulequery">Sequence[Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Query]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Queries for selecting logs which are part of the rule.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -791,7 +856,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether the rule is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_python">
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
@@ -799,7 +865,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritymonitoringrulesruleoptions">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Options on rules.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -807,7 +874,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Tags for generated signals.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getsecuritymonitoringrulesrulecase">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Case</h4>

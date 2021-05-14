@@ -163,25 +163,19 @@ const sandbox = new datadog.azure.Integration("sandbox", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IntegrationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -193,25 +187,19 @@ const sandbox = new datadog.azure.Integration("sandbox", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IntegrationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -223,33 +211,25 @@ const sandbox = new datadog.azure.Integration("sandbox", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IntegrationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -261,25 +241,19 @@ const sandbox = new datadog.azure.Integration("sandbox", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IntegrationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -329,9 +303,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics
-from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the
-defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
+    <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -371,9 +343,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics
-from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the
-defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
+    <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -413,9 +383,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics
-from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the
-defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
+    <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -455,9 +423,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics
-from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the
-defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
+    <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -672,9 +638,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics
-from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the
-defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
+    <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantname_csharp">
@@ -714,9 +678,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics
-from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the
-defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
+    <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantname_go">
@@ -756,9 +718,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics
-from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the
-defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
+    <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantname_nodejs">
@@ -798,9 +758,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics
-from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the
-defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
+    <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_name_python">
@@ -820,7 +778,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
 ## Import
 
 
-Microsoft Azure integrations can be imported using their `tenant name` and `client id` separated with a colon (`:`).
+# Microsoft Azure integrations can be imported using their `tenant name` and `client` id separated with a colon (`:`).
 
 ```sh
  $ pulumi import datadog:azure/integration:Integration sandbox ${tenant_name}:${client_id}

@@ -168,25 +168,19 @@ const privateLocation = new datadog.SyntheticsPrivateLocation("private_location"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SyntheticsPrivateLocationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -198,25 +192,19 @@ const privateLocation = new datadog.SyntheticsPrivateLocation("private_location"
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SyntheticsPrivateLocationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -228,33 +216,25 @@ const privateLocation = new datadog.SyntheticsPrivateLocation("private_location"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SyntheticsPrivateLocationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -266,25 +246,19 @@ const privateLocation = new datadog.SyntheticsPrivateLocation("private_location"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SyntheticsPrivateLocationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -438,8 +412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration skeleton for the private location. See installation instructions of the private location on how to use
-this configuration.
+    <dd>{{% md %}}Configuration skeleton for the private location. See installation instructions of the private location on how to use this configuration.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -460,8 +433,7 @@ this configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration skeleton for the private location. See installation instructions of the private location on how to use
-this configuration.
+    <dd>{{% md %}}Configuration skeleton for the private location. See installation instructions of the private location on how to use this configuration.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -482,8 +454,7 @@ this configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration skeleton for the private location. See installation instructions of the private location on how to use
-this configuration.
+    <dd>{{% md %}}Configuration skeleton for the private location. See installation instructions of the private location on how to use this configuration.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -504,8 +475,7 @@ this configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Configuration skeleton for the private location. See installation instructions of the private location on how to use
-this configuration.
+    <dd>{{% md %}}Configuration skeleton for the private location. See installation instructions of the private location on how to use this configuration.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -655,8 +625,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration skeleton for the private location. See installation instructions of the private location on how to use
-this configuration.
+    <dd>{{% md %}}Configuration skeleton for the private location. See installation instructions of the private location on how to use this configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -696,8 +665,7 @@ this configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration skeleton for the private location. See installation instructions of the private location on how to use
-this configuration.
+    <dd>{{% md %}}Configuration skeleton for the private location. See installation instructions of the private location on how to use this configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -737,8 +705,7 @@ this configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration skeleton for the private location. See installation instructions of the private location on how to use
-this configuration.
+    <dd>{{% md %}}Configuration skeleton for the private location. See installation instructions of the private location on how to use this configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
@@ -778,8 +745,7 @@ this configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Configuration skeleton for the private location. See installation instructions of the private location on how to use
-this configuration.
+    <dd>{{% md %}}Configuration skeleton for the private location. See installation instructions of the private location on how to use this configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
@@ -817,7 +783,7 @@ this configuration.
 ## Import
 
 
-Synthetics private locations can be imported using their string ID, e.g.
+# Synthetics private locations can be imported using their string ID, e.g.
 
 ```sh
  $ pulumi import datadog:index/syntheticsPrivateLocation:SyntheticsPrivateLocation bar pl:private-location-name-abcdef123456
