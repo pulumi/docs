@@ -313,25 +313,19 @@ const myNodeGroup = new yandex.KubernetesNodeGroup("my_node_group", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesNodeGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -343,25 +337,19 @@ const myNodeGroup = new yandex.KubernetesNodeGroup("my_node_group", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesNodeGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -373,33 +361,25 @@ const myNodeGroup = new yandex.KubernetesNodeGroup("my_node_group", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesNodeGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -411,25 +391,19 @@ const myNodeGroup = new yandex.KubernetesNodeGroup("my_node_group", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesNodeGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -2208,6 +2182,14 @@ Minor version upgrades (e.g. 1.13->1.14) should be performed manually. The struc
     <dd>{{% md %}}An array with the network interfaces that will be attached to the instance. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="placementpolicy_csharp">
+<a href="#placementpolicy_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesnodegroupinstancetemplateplacementpolicy">Kubernetes<wbr>Node<wbr>Group<wbr>Instance<wbr>Template<wbr>Placement<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="platformid_csharp">
 <a href="#platformid_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Id</a>
 </span>
@@ -2277,6 +2259,14 @@ Minor version upgrades (e.g. 1.13->1.14) should be performed manually. The struc
     </dt>
     <dd>{{% md %}}An array with the network interfaces that will be attached to the instance. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="placementpolicy_go">
+<a href="#placementpolicy_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesnodegroupinstancetemplateplacementpolicy">Kubernetes<wbr>Node<wbr>Group<wbr>Instance<wbr>Template<wbr>Placement<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platformid_go">
 <a href="#platformid_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Id</a>
@@ -2348,6 +2338,14 @@ Minor version upgrades (e.g. 1.13->1.14) should be performed manually. The struc
     <dd>{{% md %}}An array with the network interfaces that will be attached to the instance. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="placementpolicy_nodejs">
+<a href="#placementpolicy_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesnodegroupinstancetemplateplacementpolicy">Kubernetes<wbr>Node<wbr>Group<wbr>Instance<wbr>Template<wbr>Placement<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="platformid_nodejs">
 <a href="#platformid_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Id</a>
 </span>
@@ -2417,6 +2415,14 @@ Minor version upgrades (e.g. 1.13->1.14) should be performed manually. The struc
     </dt>
     <dd>{{% md %}}An array with the network interfaces that will be attached to the instance. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="placement_policy_python">
+<a href="#placement_policy_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesnodegroupinstancetemplateplacementpolicy">Kubernetes<wbr>Node<wbr>Group<wbr>Instance<wbr>Template<wbr>Placement<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platform_id_python">
 <a href="#platform_id_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>id</a>
@@ -2659,6 +2665,56 @@ Minor version upgrades (e.g. 1.13->1.14) should be performed manually. The struc
     </dt>
     <dd>{{% md %}}Security group ids for network interface.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="kubernetesnodegroupinstancetemplateplacementpolicy">Kubernetes<wbr>Node<wbr>Group<wbr>Instance<wbr>Template<wbr>Placement<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="placementgroupid_csharp">
+<a href="#placementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="placementgroupid_go">
+<a href="#placementgroupid_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="placementgroupid_nodejs">
+<a href="#placementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="placement_group_id_python">
+<a href="#placement_group_id_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kubernetesnodegroupinstancetemplateresources">Kubernetes<wbr>Node<wbr>Group<wbr>Instance<wbr>Template<wbr>Resources</h4>

@@ -488,6 +488,15 @@ The following output properties are available:
     <dd>{{% md %}}Health of the host.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="hostgroupids_csharp">
+<a href="#hostgroupids_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of IDs of the host groups hosting VMs of the cluster.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="hosts_csharp">
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
 </span>
@@ -640,6 +649,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health of the host.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="hostgroupids_go">
+<a href="#hostgroupids_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of IDs of the host groups hosting VMs of the cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hosts_go">
@@ -796,6 +814,15 @@ The following output properties are available:
     <dd>{{% md %}}Health of the host.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="hostgroupids_nodejs">
+<a href="#hostgroupids_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of IDs of the host groups hosting VMs of the cluster.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="hosts_nodejs">
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
@@ -948,6 +975,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Health of the host.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="host_group_ids_python">
+<a href="#host_group_ids_python" style="color: inherit; text-decoration: inherit;">host_<wbr>group_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of IDs of the host groups hosting VMs of the cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hosts_python">

@@ -1,6 +1,6 @@
 ---
-title: "yandex"
-title_tag: "yandex.yandex"
+title: "Yandex"
+title_tag: "yandex.Yandex"
 meta_desc: "A Pulumi package for creating and managing yandex cloud resources."
 menu:
     reference:
@@ -126,6 +126,6 @@ A Pulumi package for creating and managing yandex cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`yandex` Terraform Provider](https://github.com/yandex-cloud/terraform-provider-yandex).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

@@ -377,6 +377,7 @@ const fooDataprocCluster = new yandex.DataprocCluster("fooDataprocCluster", {
                     <span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[DataprocClusterClusterConfigArgs]</span> = None<span class="p">,</span>
                     <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">host_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                     <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -405,25 +406,19 @@ const fooDataprocCluster = new yandex.DataprocCluster("fooDataprocCluster", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DataprocClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -435,25 +430,19 @@ const fooDataprocCluster = new yandex.DataprocCluster("fooDataprocCluster", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DataprocClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -465,33 +454,25 @@ const fooDataprocCluster = new yandex.DataprocCluster("fooDataprocCluster", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DataprocClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -503,25 +484,19 @@ const fooDataprocCluster = new yandex.DataprocCluster("fooDataprocCluster", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DataprocClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -583,6 +558,15 @@ The DataprocCluster resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}ID of the folder to create a cluster in. If it is not provided, the default provider folder is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hostgroupids_csharp">
+<a href="#hostgroupids_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of host group IDs to place VMs of the cluster on.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
@@ -607,7 +591,7 @@ The DataprocCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Security group ids, to which cluster belongs.
+    <dd>{{% md %}}A list of security group IDs that the cluster belongs to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uiproxy_csharp">
@@ -677,6 +661,15 @@ The DataprocCluster resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}ID of the folder to create a cluster in. If it is not provided, the default provider folder is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hostgroupids_go">
+<a href="#hostgroupids_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of host group IDs to place VMs of the cluster on.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
@@ -701,7 +694,7 @@ The DataprocCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Security group ids, to which cluster belongs.
+    <dd>{{% md %}}A list of security group IDs that the cluster belongs to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uiproxy_go">
@@ -771,6 +764,15 @@ The DataprocCluster resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}ID of the folder to create a cluster in. If it is not provided, the default provider folder is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hostgroupids_nodejs">
+<a href="#hostgroupids_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of host group IDs to place VMs of the cluster on.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
@@ -795,7 +797,7 @@ The DataprocCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Security group ids, to which cluster belongs.
+    <dd>{{% md %}}A list of security group IDs that the cluster belongs to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uiproxy_nodejs">
@@ -865,6 +867,15 @@ The DataprocCluster resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}ID of the folder to create a cluster in. If it is not provided, the default provider folder is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="host_group_ids_python">
+<a href="#host_group_ids_python" style="color: inherit; text-decoration: inherit;">host_<wbr>group_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of host group IDs to place VMs of the cluster on.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
@@ -889,7 +900,7 @@ The DataprocCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Security group ids, to which cluster belongs.
+    <dd>{{% md %}}A list of security group IDs that the cluster belongs to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ui_proxy_python">
@@ -1027,6 +1038,7 @@ Get an existing DataprocCluster resource's state with the given name, ID, and op
         <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">host_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -1191,6 +1203,15 @@ The following state arguments are supported:
     <dd>{{% md %}}ID of the folder to create a cluster in. If it is not provided, the default provider folder is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_hostgroupids_csharp">
+<a href="#state_hostgroupids_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of host group IDs to place VMs of the cluster on.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
@@ -1215,7 +1236,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Security group ids, to which cluster belongs.
+    <dd>{{% md %}}A list of security group IDs that the cluster belongs to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountid_csharp">
@@ -1295,6 +1316,15 @@ The following state arguments are supported:
     <dd>{{% md %}}ID of the folder to create a cluster in. If it is not provided, the default provider folder is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_hostgroupids_go">
+<a href="#state_hostgroupids_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of host group IDs to place VMs of the cluster on.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
@@ -1319,7 +1349,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Security group ids, to which cluster belongs.
+    <dd>{{% md %}}A list of security group IDs that the cluster belongs to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountid_go">
@@ -1399,6 +1429,15 @@ The following state arguments are supported:
     <dd>{{% md %}}ID of the folder to create a cluster in. If it is not provided, the default provider folder is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_hostgroupids_nodejs">
+<a href="#state_hostgroupids_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of host group IDs to place VMs of the cluster on.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
@@ -1423,7 +1462,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Security group ids, to which cluster belongs.
+    <dd>{{% md %}}A list of security group IDs that the cluster belongs to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountid_nodejs">
@@ -1503,6 +1542,15 @@ The following state arguments are supported:
     <dd>{{% md %}}ID of the folder to create a cluster in. If it is not provided, the default provider folder is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_host_group_ids_python">
+<a href="#state_host_group_ids_python" style="color: inherit; text-decoration: inherit;">host_<wbr>group_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of host group IDs to place VMs of the cluster on.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
@@ -1527,7 +1575,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Security group ids, to which cluster belongs.
+    <dd>{{% md %}}A list of security group IDs that the cluster belongs to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_account_id_python">
