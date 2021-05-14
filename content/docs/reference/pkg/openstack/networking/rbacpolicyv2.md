@@ -187,25 +187,19 @@ const rbacPolicy1 = new openstack.networking.RbacPolicyV2("rbac_policy_1", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RbacPolicyV2Args</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -217,25 +211,19 @@ const rbacPolicy1 = new openstack.networking.RbacPolicyV2("rbac_policy_1", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RbacPolicyV2Args</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -247,33 +235,25 @@ const rbacPolicy1 = new openstack.networking.RbacPolicyV2("rbac_policy_1", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RbacPolicyV2Args</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -285,25 +265,19 @@ const rbacPolicy1 = new openstack.networking.RbacPolicyV2("rbac_policy_1", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RbacPolicyV2Args</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -348,7 +322,8 @@ The RbacPolicyV2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the object that the RBAC policy
-affects. Can either be `qos-policy` or `network`.
+affects. Can be one of the following: `address_scope`, `address_group`,
+`network`, `qos_policy`, `security_group` or `subnetpool`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targettenant_csharp">
@@ -405,7 +380,8 @@ routing entry.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the object that the RBAC policy
-affects. Can either be `qos-policy` or `network`.
+affects. Can be one of the following: `address_scope`, `address_group`,
+`network`, `qos_policy`, `security_group` or `subnetpool`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targettenant_go">
@@ -462,7 +438,8 @@ routing entry.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the object that the RBAC policy
-affects. Can either be `qos-policy` or `network`.
+affects. Can be one of the following: `address_scope`, `address_group`,
+`network`, `qos_policy`, `security_group` or `subnetpool`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targettenant_nodejs">
@@ -519,7 +496,8 @@ routing entry.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the object that the RBAC policy
-affects. Can either be `qos-policy` or `network`.
+affects. Can be one of the following: `address_scope`, `address_group`,
+`network`, `qos_policy`, `security_group` or `subnetpool`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_tenant_python">
@@ -794,7 +772,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the object that the RBAC policy
-affects. Can either be `qos-policy` or `network`.
+affects. Can be one of the following: `address_scope`, `address_group`,
+`network`, `qos_policy`, `security_group` or `subnetpool`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
@@ -859,7 +838,8 @@ will be enforced.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the object that the RBAC policy
-affects. Can either be `qos-policy` or `network`.
+affects. Can be one of the following: `address_scope`, `address_group`,
+`network`, `qos_policy`, `security_group` or `subnetpool`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
@@ -924,7 +904,8 @@ will be enforced.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the object that the RBAC policy
-affects. Can either be `qos-policy` or `network`.
+affects. Can be one of the following: `address_scope`, `address_group`,
+`network`, `qos_policy`, `security_group` or `subnetpool`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
@@ -989,7 +970,8 @@ will be enforced.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the object that the RBAC policy
-affects. Can either be `qos-policy` or `network`.
+affects. Can be one of the following: `address_scope`, `address_group`,
+`network`, `qos_policy`, `security_group` or `subnetpool`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
