@@ -286,6 +286,7 @@ const db = new azure.cosmosdb.Account("db", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">access_key_metadata_writes_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">analytical_storage_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountCapabilityArgs]]</span> = None<span class="p">,</span>
             <span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[AccountConsistencyPolicyArgs]</span> = None<span class="p">,</span>
@@ -298,7 +299,10 @@ const db = new azure.cosmosdb.Account("db", {
             <span class="nx">key_vault_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">mongo_server_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">network_acl_bypass_for_azure_services</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">network_acl_bypass_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">offer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -326,25 +330,19 @@ const db = new azure.cosmosdb.Account("db", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -356,25 +354,19 @@ const db = new azure.cosmosdb.Account("db", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -386,33 +378,25 @@ const db = new azure.cosmosdb.Account("db", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -424,25 +408,19 @@ const db = new azure.cosmosdb.Account("db", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -493,6 +471,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accesskeymetadatawritesenabled_csharp">
+<a href="#accesskeymetadatawritesenabled_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Metadata<wbr>Writes<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is write operations on metadata resources (databases, containers, throughput) via account keys enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="analyticalstorageenabled_csharp">
@@ -585,6 +572,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mongoserverversion_csharp">
+<a href="#mongoserverversion_csharp" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Server<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -592,6 +588,24 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkaclbypassforazureservices_csharp">
+<a href="#networkaclbypassforazureservices_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Bypass<wbr>For<wbr>Azure<wbr>Services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If azure services can bypass ACLs. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkaclbypassids_csharp">
+<a href="#networkaclbypassids_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Bypass<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of resource Ids for Network Acl Bypass for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccessenabled_csharp">
@@ -659,6 +673,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accesskeymetadatawritesenabled_go">
+<a href="#accesskeymetadatawritesenabled_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Metadata<wbr>Writes<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is write operations on metadata resources (databases, containers, throughput) via account keys enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="analyticalstorageenabled_go">
@@ -751,6 +774,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mongoserverversion_go">
+<a href="#mongoserverversion_go" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Server<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -758,6 +790,24 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkaclbypassforazureservices_go">
+<a href="#networkaclbypassforazureservices_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Bypass<wbr>For<wbr>Azure<wbr>Services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If azure services can bypass ACLs. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkaclbypassids_go">
+<a href="#networkaclbypassids_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Bypass<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of resource Ids for Network Acl Bypass for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccessenabled_go">
@@ -825,6 +875,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accesskeymetadatawritesenabled_nodejs">
+<a href="#accesskeymetadatawritesenabled_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Metadata<wbr>Writes<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is write operations on metadata resources (databases, containers, throughput) via account keys enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="analyticalstorageenabled_nodejs">
@@ -917,6 +976,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mongoserverversion_nodejs">
+<a href="#mongoserverversion_nodejs" style="color: inherit; text-decoration: inherit;">mongo<wbr>Server<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -924,6 +992,24 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkaclbypassforazureservices_nodejs">
+<a href="#networkaclbypassforazureservices_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acl<wbr>Bypass<wbr>For<wbr>Azure<wbr>Services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If azure services can bypass ACLs. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkaclbypassids_nodejs">
+<a href="#networkaclbypassids_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acl<wbr>Bypass<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of resource Ids for Network Acl Bypass for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccessenabled_nodejs">
@@ -991,6 +1077,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="access_key_metadata_writes_enabled_python">
+<a href="#access_key_metadata_writes_enabled_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>metadata_<wbr>writes_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is write operations on metadata resources (databases, containers, throughput) via account keys enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="analytical_storage_enabled_python">
@@ -1083,6 +1178,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mongo_server_version_python">
+<a href="#mongo_server_version_python" style="color: inherit; text-decoration: inherit;">mongo_<wbr>server_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1090,6 +1194,24 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_acl_bypass_for_azure_services_python">
+<a href="#network_acl_bypass_for_azure_services_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acl_<wbr>bypass_<wbr>for_<wbr>azure_<wbr>services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If azure services can bypass ACLs. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_acl_bypass_ids_python">
+<a href="#network_acl_bypass_ids_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acl_<wbr>bypass_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of resource Ids for Network Acl Bypass for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_enabled_python">
@@ -1607,6 +1729,7 @@ Get an existing Account resource's state with the given name, ID, and optional e
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">access_key_metadata_writes_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">analytical_storage_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountCapabilityArgs]]</span> = None<span class="p">,</span>
         <span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -1621,7 +1744,10 @@ Get an existing Account resource's state with the given name, ID, and optional e
         <span class="nx">key_vault_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">mongo_server_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network_acl_bypass_for_azure_services</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">network_acl_bypass_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">offer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">primary_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">primary_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1749,6 +1875,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_accesskeymetadatawritesenabled_csharp">
+<a href="#state_accesskeymetadatawritesenabled_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Metadata<wbr>Writes<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is write operations on metadata resources (databases, containers, throughput) via account keys enabled? Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_analyticalstorageenabled_csharp">
 <a href="#state_analyticalstorageenabled_csharp" style="color: inherit; text-decoration: inherit;">Analytical<wbr>Storage<wbr>Enabled</a>
 </span>
@@ -1875,6 +2010,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_mongoserverversion_csharp">
+<a href="#state_mongoserverversion_csharp" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Server<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1882,6 +2026,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_networkaclbypassforazureservices_csharp">
+<a href="#state_networkaclbypassforazureservices_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Bypass<wbr>For<wbr>Azure<wbr>Services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If azure services can bypass ACLs. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_networkaclbypassids_csharp">
+<a href="#state_networkaclbypassids_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Bypass<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of resource Ids for Network Acl Bypass for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offertype_csharp">
@@ -2019,6 +2181,15 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_accesskeymetadatawritesenabled_go">
+<a href="#state_accesskeymetadatawritesenabled_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Metadata<wbr>Writes<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is write operations on metadata resources (databases, containers, throughput) via account keys enabled? Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_analyticalstorageenabled_go">
 <a href="#state_analyticalstorageenabled_go" style="color: inherit; text-decoration: inherit;">Analytical<wbr>Storage<wbr>Enabled</a>
 </span>
@@ -2145,6 +2316,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_mongoserverversion_go">
+<a href="#state_mongoserverversion_go" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Server<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -2152,6 +2332,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_networkaclbypassforazureservices_go">
+<a href="#state_networkaclbypassforazureservices_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Bypass<wbr>For<wbr>Azure<wbr>Services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If azure services can bypass ACLs. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_networkaclbypassids_go">
+<a href="#state_networkaclbypassids_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Bypass<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of resource Ids for Network Acl Bypass for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offertype_go">
@@ -2289,6 +2487,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_accesskeymetadatawritesenabled_nodejs">
+<a href="#state_accesskeymetadatawritesenabled_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Metadata<wbr>Writes<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is write operations on metadata resources (databases, containers, throughput) via account keys enabled? Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_analyticalstorageenabled_nodejs">
 <a href="#state_analyticalstorageenabled_nodejs" style="color: inherit; text-decoration: inherit;">analytical<wbr>Storage<wbr>Enabled</a>
 </span>
@@ -2415,6 +2622,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_mongoserverversion_nodejs">
+<a href="#state_mongoserverversion_nodejs" style="color: inherit; text-decoration: inherit;">mongo<wbr>Server<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -2422,6 +2638,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_networkaclbypassforazureservices_nodejs">
+<a href="#state_networkaclbypassforazureservices_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acl<wbr>Bypass<wbr>For<wbr>Azure<wbr>Services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If azure services can bypass ACLs. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_networkaclbypassids_nodejs">
+<a href="#state_networkaclbypassids_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acl<wbr>Bypass<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of resource Ids for Network Acl Bypass for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offertype_nodejs">
@@ -2559,6 +2793,15 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_access_key_metadata_writes_enabled_python">
+<a href="#state_access_key_metadata_writes_enabled_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>metadata_<wbr>writes_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is write operations on metadata resources (databases, containers, throughput) via account keys enabled? Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_analytical_storage_enabled_python">
 <a href="#state_analytical_storage_enabled_python" style="color: inherit; text-decoration: inherit;">analytical_<wbr>storage_<wbr>enabled</a>
 </span>
@@ -2685,6 +2928,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_mongo_server_version_python">
+<a href="#state_mongo_server_version_python" style="color: inherit; text-decoration: inherit;">mongo_<wbr>server_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -2692,6 +2944,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_network_acl_bypass_for_azure_services_python">
+<a href="#state_network_acl_bypass_for_azure_services_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acl_<wbr>bypass_<wbr>for_<wbr>azure_<wbr>services</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If azure services can bypass ACLs. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_network_acl_bypass_ids_python">
+<a href="#state_network_acl_bypass_ids_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acl_<wbr>bypass_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of resource Ids for Network Acl Bypass for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offer_type_python">

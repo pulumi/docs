@@ -139,6 +139,7 @@ const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Factory</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">customer_managed_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">github_configuration</span><span class="p">:</span> <span class="nx">Optional[FactoryGithubConfigurationArgs]</span> = None<span class="p">,</span>
             <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[FactoryIdentityArgs]</span> = None<span class="p">,</span>
             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -169,25 +170,19 @@ const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FactoryArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -199,25 +194,19 @@ const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FactoryArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -229,33 +218,25 @@ const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FactoryArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -267,25 +248,19 @@ const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FactoryArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -309,6 +284,15 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customermanagedkeyid_csharp">
+<a href="#customermanagedkeyid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Azure Key Vault Key ID to be used as the Customer Managed Key (CMK) for double encryption. Required with user assigned identity.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubconfiguration_csharp">
@@ -387,6 +371,15 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customermanagedkeyid_go">
+<a href="#customermanagedkeyid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Azure Key Vault Key ID to be used as the Customer Managed Key (CMK) for double encryption. Required with user assigned identity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="githubconfiguration_go">
 <a href="#githubconfiguration_go" style="color: inherit; text-decoration: inherit;">Github<wbr>Configuration</a>
 </span>
@@ -463,6 +456,15 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customermanagedkeyid_nodejs">
+<a href="#customermanagedkeyid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Managed<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Azure Key Vault Key ID to be used as the Customer Managed Key (CMK) for double encryption. Required with user assigned identity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="githubconfiguration_nodejs">
 <a href="#githubconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">github<wbr>Configuration</a>
 </span>
@@ -537,6 +539,15 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customer_managed_key_id_python">
+<a href="#customer_managed_key_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>managed_<wbr>key_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Azure Key Vault Key ID to be used as the Customer Managed Key (CMK) for double encryption. Required with user assigned identity.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="github_configuration_python">
@@ -674,6 +685,7 @@ Get an existing Factory resource's state with the given name, ID, and optional e
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">customer_managed_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">github_configuration</span><span class="p">:</span> <span class="nx">Optional[FactoryGithubConfigurationArgs]</span> = None<span class="p">,</span>
         <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[FactoryIdentityArgs]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -794,6 +806,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_customermanagedkeyid_csharp">
+<a href="#state_customermanagedkeyid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Azure Key Vault Key ID to be used as the Customer Managed Key (CMK) for double encryption. Required with user assigned identity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_githubconfiguration_csharp">
 <a href="#state_githubconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Github<wbr>Configuration</a>
 </span>
@@ -869,6 +890,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_customermanagedkeyid_go">
+<a href="#state_customermanagedkeyid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Azure Key Vault Key ID to be used as the Customer Managed Key (CMK) for double encryption. Required with user assigned identity.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_githubconfiguration_go">
 <a href="#state_githubconfiguration_go" style="color: inherit; text-decoration: inherit;">Github<wbr>Configuration</a>
@@ -946,6 +976,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_customermanagedkeyid_nodejs">
+<a href="#state_customermanagedkeyid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Managed<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Azure Key Vault Key ID to be used as the Customer Managed Key (CMK) for double encryption. Required with user assigned identity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_githubconfiguration_nodejs">
 <a href="#state_githubconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">github<wbr>Configuration</a>
 </span>
@@ -1021,6 +1060,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_customer_managed_key_id_python">
+<a href="#state_customer_managed_key_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>managed_<wbr>key_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Azure Key Vault Key ID to be used as the Customer Managed Key (CMK) for double encryption. Required with user assigned identity.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_github_configuration_python">
 <a href="#state_github_configuration_python" style="color: inherit; text-decoration: inherit;">github_<wbr>configuration</a>
@@ -1313,7 +1361,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the identity type of the Data Factory. At this time the only allowed value is `SystemAssigned`.
+    <dd>{{% md %}}Specifies the identity type of the Data Factory. Possible values are `SystemAssigned` and `UserAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_csharp">
+<a href="#identityids_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies the IDs of user assigned identities. Requiered if `UserAssigned` type is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
@@ -1344,7 +1401,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the identity type of the Data Factory. At this time the only allowed value is `SystemAssigned`.
+    <dd>{{% md %}}Specifies the identity type of the Data Factory. Possible values are `SystemAssigned` and `UserAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_go">
+<a href="#identityids_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the IDs of user assigned identities. Requiered if `UserAssigned` type is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
@@ -1375,7 +1441,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the identity type of the Data Factory. At this time the only allowed value is `SystemAssigned`.
+    <dd>{{% md %}}Specifies the identity type of the Data Factory. Possible values are `SystemAssigned` and `UserAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_nodejs">
+<a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies the IDs of user assigned identities. Requiered if `UserAssigned` type is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
@@ -1406,7 +1481,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the identity type of the Data Factory. At this time the only allowed value is `SystemAssigned`.
+    <dd>{{% md %}}Specifies the identity type of the Data Factory. Possible values are `SystemAssigned` and `UserAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_ids_python">
+<a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies the IDs of user assigned identities. Requiered if `UserAssigned` type is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">

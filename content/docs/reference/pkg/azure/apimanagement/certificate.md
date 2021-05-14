@@ -28,6 +28,8 @@ Manages an Certificate within an API Management Service.
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                 <span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">key_vault_identity_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">key_vault_secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -53,25 +55,19 @@ Manages an Certificate within an API Management Service.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CertificateArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -83,25 +79,19 @@ Manages an Certificate within an API Management Service.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CertificateArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -113,33 +103,25 @@ Manages an Certificate within an API Management Service.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CertificateArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -151,25 +133,19 @@ Manages an Certificate within an API Management Service.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CertificateArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -195,15 +171,6 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The Name of the API Management Service where this Service should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="data_csharp">
-<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The base-64 encoded certificate data, which must be a PFX file. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -211,6 +178,33 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_csharp">
+<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The base-64 encoded certificate data, which must be a PFX file. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultidentityclientid_csharp">
+<a href="#keyvaultidentityclientid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the User Assigned Managed Identity to use for retrieving certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultsecretid_csharp">
+<a href="#keyvaultsecretid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Secret<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type `application/x-pkcs12`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -244,15 +238,6 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The Name of the API Management Service where this Service should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="data_go">
-<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The base-64 encoded certificate data, which must be a PFX file. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -260,6 +245,33 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_go">
+<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The base-64 encoded certificate data, which must be a PFX file. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultidentityclientid_go">
+<a href="#keyvaultidentityclientid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the User Assigned Managed Identity to use for retrieving certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultsecretid_go">
+<a href="#keyvaultsecretid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Secret<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type `application/x-pkcs12`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -293,15 +305,6 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The Name of the API Management Service where this Service should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="data_nodejs">
-<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The base-64 encoded certificate data, which must be a PFX file. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -309,6 +312,33 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_nodejs">
+<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The base-64 encoded certificate data, which must be a PFX file. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultidentityclientid_nodejs">
+<a href="#keyvaultidentityclientid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the User Assigned Managed Identity to use for retrieving certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultsecretid_nodejs">
+<a href="#keyvaultsecretid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Secret<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type `application/x-pkcs12`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -342,15 +372,6 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The Name of the API Management Service where this Service should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="data_python">
-<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The base-64 encoded certificate data, which must be a PFX file. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -358,6 +379,33 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_python">
+<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The base-64 encoded certificate data, which must be a PFX file. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_vault_identity_client_id_python">
+<a href="#key_vault_identity_client_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>identity_<wbr>client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the User Assigned Managed Identity to use for retrieving certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_vault_secret_id_python">
+<a href="#key_vault_secret_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>secret_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type `application/x-pkcs12`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -561,6 +609,8 @@ Get an existing Certificate resource's state with the given name, ID, and option
         <span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">expiration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">key_vault_identity_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">key_vault_secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -705,6 +755,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The Expiration Date of this Certificate, formatted as an RFC3339 string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_keyvaultidentityclientid_csharp">
+<a href="#state_keyvaultidentityclientid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the User Assigned Managed Identity to use for retrieving certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_keyvaultsecretid_csharp">
+<a href="#state_keyvaultsecretid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Secret<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type `application/x-pkcs12`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -779,6 +847,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Expiration Date of this Certificate, formatted as an RFC3339 string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_keyvaultidentityclientid_go">
+<a href="#state_keyvaultidentityclientid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the User Assigned Managed Identity to use for retrieving certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_keyvaultsecretid_go">
+<a href="#state_keyvaultsecretid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Secret<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type `application/x-pkcs12`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -857,6 +943,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The Expiration Date of this Certificate, formatted as an RFC3339 string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_keyvaultidentityclientid_nodejs">
+<a href="#state_keyvaultidentityclientid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the User Assigned Managed Identity to use for retrieving certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_keyvaultsecretid_nodejs">
+<a href="#state_keyvaultsecretid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Secret<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type `application/x-pkcs12`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -931,6 +1035,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Expiration Date of this Certificate, formatted as an RFC3339 string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_key_vault_identity_client_id_python">
+<a href="#state_key_vault_identity_client_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>identity_<wbr>client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the User Assigned Managed Identity to use for retrieving certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_key_vault_secret_id_python">
+<a href="#state_key_vault_secret_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>secret_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type `application/x-pkcs12`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
