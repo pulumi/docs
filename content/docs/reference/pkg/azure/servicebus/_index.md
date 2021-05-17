@@ -13,6 +13,7 @@ Explore the resources and functions of the azure.servicebus module.
 <ul class="api">
     <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
     <li><a href="namespaceauthorizationrule" title="NamespaceAuthorizationRule"><span class="symbol resource"></span>NamespaceAuthorizationRule</a></li>
+    <li><a href="namespacedisasterrecoveryconfig" title="NamespaceDisasterRecoveryConfig"><span class="symbol resource"></span>NamespaceDisasterRecoveryConfig</a></li>
     <li><a href="namespacenetworkruleset" title="NamespaceNetworkRuleSet"><span class="symbol resource"></span>NamespaceNetworkRuleSet</a></li>
     <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
     <li><a href="queueauthorizationrule" title="QueueAuthorizationRule"><span class="symbol resource"></span>QueueAuthorizationRule</a></li>
@@ -42,6 +43,6 @@ Explore the resources and functions of the azure.servicebus module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.2.0</dd>
+	<dd>4.3.0</dd>
 </dl>
 

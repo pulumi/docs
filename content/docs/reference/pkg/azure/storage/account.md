@@ -393,6 +393,7 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
             <span class="nx">account_replication_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">account_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">azure_files_authentication</span><span class="p">:</span> <span class="nx">Optional[AccountAzureFilesAuthenticationArgs]</span> = None<span class="p">,</span>
             <span class="nx">blob_properties</span><span class="p">:</span> <span class="nx">Optional[AccountBlobPropertiesArgs]</span> = None<span class="p">,</span>
             <span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[AccountCustomDomainArgs]</span> = None<span class="p">,</span>
             <span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -406,6 +407,7 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
             <span class="nx">nfsv3_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">queue_properties</span><span class="p">:</span> <span class="nx">Optional[AccountQueuePropertiesArgs]</span> = None<span class="p">,</span>
             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">routing</span><span class="p">:</span> <span class="nx">Optional[AccountRoutingArgs]</span> = None<span class="p">,</span>
             <span class="nx">static_website</span><span class="p">:</span> <span class="nx">Optional[AccountStaticWebsiteArgs]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -591,6 +593,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azurefilesauthentication_csharp">
+<a href="#azurefilesauthentication_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Files<wbr>Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountazurefilesauthentication">Account<wbr>Azure<wbr>Files<wbr>Authentication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `azure_files_authentication` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="blobproperties_csharp">
 <a href="#blobproperties_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Properties</a>
 </span>
@@ -700,6 +711,15 @@ for more information. Defaults to `true`.
     <dd>{{% md %}}A `queue_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="routing_csharp">
+<a href="#routing_csharp" style="color: inherit; text-decoration: inherit;">Routing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountrouting">Account<wbr>Routing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `routing` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="staticwebsite_csharp">
 <a href="#staticwebsite_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Website</a>
 </span>
@@ -774,6 +794,15 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="azurefilesauthentication_go">
+<a href="#azurefilesauthentication_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Files<wbr>Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountazurefilesauthentication">Account<wbr>Azure<wbr>Files<wbr>Authentication</a></span>
+    </dt>
+    <dd>{{% md %}}A `azure_files_authentication` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobproperties_go">
@@ -885,6 +914,15 @@ for more information. Defaults to `true`.
     <dd>{{% md %}}A `queue_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="routing_go">
+<a href="#routing_go" style="color: inherit; text-decoration: inherit;">Routing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountrouting">Account<wbr>Routing</a></span>
+    </dt>
+    <dd>{{% md %}}A `routing` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="staticwebsite_go">
 <a href="#staticwebsite_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Website</a>
 </span>
@@ -959,6 +997,15 @@ for more information. Defaults to `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="azurefilesauthentication_nodejs">
+<a href="#azurefilesauthentication_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Files<wbr>Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountazurefilesauthentication">Account<wbr>Azure<wbr>Files<wbr>Authentication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `azure_files_authentication` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobproperties_nodejs">
@@ -1070,6 +1117,15 @@ for more information. Defaults to `true`.
     <dd>{{% md %}}A `queue_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="routing_nodejs">
+<a href="#routing_nodejs" style="color: inherit; text-decoration: inherit;">routing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountrouting">Account<wbr>Routing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `routing` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="staticwebsite_nodejs">
 <a href="#staticwebsite_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Website</a>
 </span>
@@ -1144,6 +1200,15 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="azure_files_authentication_python">
+<a href="#azure_files_authentication_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>files_<wbr>authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountazurefilesauthentication">Account<wbr>Azure<wbr>Files<wbr>Authentication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `azure_files_authentication` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blob_properties_python">
@@ -1253,6 +1318,15 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `queue_properties` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routing_python">
+<a href="#routing_python" style="color: inherit; text-decoration: inherit;">routing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountrouting">Account<wbr>Routing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `routing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="static_website_python">
@@ -2502,6 +2576,7 @@ Get an existing Account resource's state with the given name, ID, and optional e
         <span class="nx">account_replication_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">account_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">azure_files_authentication</span><span class="p">:</span> <span class="nx">Optional[AccountAzureFilesAuthenticationArgs]</span> = None<span class="p">,</span>
         <span class="nx">blob_properties</span><span class="p">:</span> <span class="nx">Optional[AccountBlobPropertiesArgs]</span> = None<span class="p">,</span>
         <span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[AccountCustomDomainArgs]</span> = None<span class="p">,</span>
         <span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -2531,6 +2606,7 @@ Get an existing Account resource's state with the given name, ID, and optional e
         <span class="nx">primary_web_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">queue_properties</span><span class="p">:</span> <span class="nx">Optional[AccountQueuePropertiesArgs]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">routing</span><span class="p">:</span> <span class="nx">Optional[AccountRoutingArgs]</span> = None<span class="p">,</span>
         <span class="nx">secondary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">secondary_blob_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">secondary_blob_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2704,6 +2780,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_azurefilesauthentication_csharp">
+<a href="#state_azurefilesauthentication_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Files<wbr>Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountazurefilesauthentication">Account<wbr>Azure<wbr>Files<wbr>Authentication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `azure_files_authentication` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blobproperties_csharp">
@@ -2968,6 +3053,15 @@ for more information. Defaults to `true`.
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_routing_csharp">
+<a href="#state_routing_csharp" style="color: inherit; text-decoration: inherit;">Routing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountrouting">Account<wbr>Routing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `routing` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_secondaryaccesskey_csharp">
 <a href="#state_secondaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
 </span>
@@ -3177,6 +3271,15 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_azurefilesauthentication_go">
+<a href="#state_azurefilesauthentication_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Files<wbr>Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountazurefilesauthentication">Account<wbr>Azure<wbr>Files<wbr>Authentication</a></span>
+    </dt>
+    <dd>{{% md %}}A `azure_files_authentication` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blobproperties_go">
@@ -3441,6 +3544,15 @@ for more information. Defaults to `true`.
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_routing_go">
+<a href="#state_routing_go" style="color: inherit; text-decoration: inherit;">Routing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountrouting">Account<wbr>Routing</a></span>
+    </dt>
+    <dd>{{% md %}}A `routing` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_secondaryaccesskey_go">
 <a href="#state_secondaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
 </span>
@@ -3650,6 +3762,15 @@ for more information. Defaults to `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_azurefilesauthentication_nodejs">
+<a href="#state_azurefilesauthentication_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Files<wbr>Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountazurefilesauthentication">Account<wbr>Azure<wbr>Files<wbr>Authentication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `azure_files_authentication` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blobproperties_nodejs">
@@ -3914,6 +4035,15 @@ for more information. Defaults to `true`.
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_routing_nodejs">
+<a href="#state_routing_nodejs" style="color: inherit; text-decoration: inherit;">routing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountrouting">Account<wbr>Routing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `routing` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_secondaryaccesskey_nodejs">
 <a href="#state_secondaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Access<wbr>Key</a>
 </span>
@@ -4123,6 +4253,15 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_azure_files_authentication_python">
+<a href="#state_azure_files_authentication_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>files_<wbr>authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountazurefilesauthentication">Account<wbr>Azure<wbr>Files<wbr>Authentication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `azure_files_authentication` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blob_properties_python">
@@ -4387,6 +4526,15 @@ for more information. Defaults to `true`.
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_routing_python">
+<a href="#state_routing_python" style="color: inherit; text-decoration: inherit;">routing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountrouting">Account<wbr>Routing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `routing` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_secondary_access_key_python">
 <a href="#state_secondary_access_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>access_<wbr>key</a>
 </span>
@@ -4559,10 +4707,343 @@ for more information. Defaults to `true`.
 
 
 
+<h4 id="accountazurefilesauthentication">Account<wbr>Azure<wbr>Files<wbr>Authentication</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="directorytype_csharp">
+<a href="#directorytype_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the directory service used. Possible values are `AADDS` and `AD`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="activedirectory_csharp">
+<a href="#activedirectory_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountazurefilesauthenticationactivedirectory">Account<wbr>Azure<wbr>Files<wbr>Authentication<wbr>Active<wbr>Directory<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `active_directory` block as defined below. Required when `directory_type` is `AD`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="directorytype_go">
+<a href="#directorytype_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the directory service used. Possible values are `AADDS` and `AD`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="activedirectory_go">
+<a href="#activedirectory_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountazurefilesauthenticationactivedirectory">Account<wbr>Azure<wbr>Files<wbr>Authentication<wbr>Active<wbr>Directory</a></span>
+    </dt>
+    <dd>{{% md %}}A `active_directory` block as defined below. Required when `directory_type` is `AD`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="directorytype_nodejs">
+<a href="#directorytype_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the directory service used. Possible values are `AADDS` and `AD`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="activedirectory_nodejs">
+<a href="#activedirectory_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountazurefilesauthenticationactivedirectory">Account<wbr>Azure<wbr>Files<wbr>Authentication<wbr>Active<wbr>Directory<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `active_directory` block as defined below. Required when `directory_type` is `AD`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="directory_type_python">
+<a href="#directory_type_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the directory service used. Possible values are `AADDS` and `AD`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="active_directory_python">
+<a href="#active_directory_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountazurefilesauthenticationactivedirectory">Account<wbr>Azure<wbr>Files<wbr>Authentication<wbr>Active<wbr>Directory<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `active_directory` block as defined below. Required when `directory_type` is `AD`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="accountazurefilesauthenticationactivedirectory">Account<wbr>Azure<wbr>Files<wbr>Authentication<wbr>Active<wbr>Directory</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domainguid_csharp">
+<a href="#domainguid_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the domain GUID.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainname_csharp">
+<a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary domain that the AD DNS server is authoritative for.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainsid_csharp">
+<a href="#domainsid_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the security identifier (SID).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forestname_csharp">
+<a href="#forestname_csharp" style="color: inherit; text-decoration: inherit;">Forest<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Active Directory forest.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="netbiosdomainname_csharp">
+<a href="#netbiosdomainname_csharp" style="color: inherit; text-decoration: inherit;">Netbios<wbr>Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the NetBIOS domain name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storagesid_csharp">
+<a href="#storagesid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the security identifier (SID) for Azure Storage.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domainguid_go">
+<a href="#domainguid_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the domain GUID.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainname_go">
+<a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary domain that the AD DNS server is authoritative for.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainsid_go">
+<a href="#domainsid_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the security identifier (SID).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forestname_go">
+<a href="#forestname_go" style="color: inherit; text-decoration: inherit;">Forest<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Active Directory forest.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="netbiosdomainname_go">
+<a href="#netbiosdomainname_go" style="color: inherit; text-decoration: inherit;">Netbios<wbr>Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the NetBIOS domain name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storagesid_go">
+<a href="#storagesid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the security identifier (SID) for Azure Storage.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domainguid_nodejs">
+<a href="#domainguid_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the domain GUID.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainname_nodejs">
+<a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary domain that the AD DNS server is authoritative for.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domainsid_nodejs">
+<a href="#domainsid_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the security identifier (SID).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forestname_nodejs">
+<a href="#forestname_nodejs" style="color: inherit; text-decoration: inherit;">forest<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Active Directory forest.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="netbiosdomainname_nodejs">
+<a href="#netbiosdomainname_nodejs" style="color: inherit; text-decoration: inherit;">netbios<wbr>Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the NetBIOS domain name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storagesid_nodejs">
+<a href="#storagesid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the security identifier (SID) for Azure Storage.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domain_guid_python">
+<a href="#domain_guid_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the domain GUID.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domain_name_python">
+<a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary domain that the AD DNS server is authoritative for.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domain_sid_python">
+<a href="#domain_sid_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the security identifier (SID).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forest_name_python">
+<a href="#forest_name_python" style="color: inherit; text-decoration: inherit;">forest_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Active Directory forest.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="netbios_domain_name_python">
+<a href="#netbios_domain_name_python" style="color: inherit; text-decoration: inherit;">netbios_<wbr>domain_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the NetBIOS domain name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storage_sid_python">
+<a href="#storage_sid_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the security identifier (SID) for Azure Storage.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="accountblobproperties">Account<wbr>Blob<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="changefeedenabled_csharp">
+<a href="#changefeedenabled_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Feed<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the blob service properties for change feed events enabled? Default to `false`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerdeleteretentionpolicy_csharp">
 <a href="#containerdeleteretentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Delete<wbr>Retention<wbr>Policy</a>
@@ -4622,6 +5103,15 @@ for more information. Defaults to `true`.
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="changefeedenabled_go">
+<a href="#changefeedenabled_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Feed<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the blob service properties for change feed events enabled? Default to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="containerdeleteretentionpolicy_go">
 <a href="#containerdeleteretentionpolicy_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Delete<wbr>Retention<wbr>Policy</a>
 </span>
@@ -4680,6 +5170,15 @@ for more information. Defaults to `true`.
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="changefeedenabled_nodejs">
+<a href="#changefeedenabled_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Feed<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is the blob service properties for change feed events enabled? Default to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="containerdeleteretentionpolicy_nodejs">
 <a href="#containerdeleteretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Delete<wbr>Retention<wbr>Policy</a>
 </span>
@@ -4737,6 +5236,15 @@ for more information. Defaults to `true`.
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="change_feed_enabled_python">
+<a href="#change_feed_enabled_python" style="color: inherit; text-decoration: inherit;">change_<wbr>feed_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the blob service properties for change feed events enabled? Default to `false`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_delete_retention_policy_python">
 <a href="#container_delete_retention_policy_python" style="color: inherit; text-decoration: inherit;">container_<wbr>delete_<wbr>retention_<wbr>policy</a>
@@ -5352,6 +5860,15 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
     <dd>{{% md %}}List of public IP or IP ranges in CIDR Format. Only IPV4 addresses are allowed. Private IP address ranges (as defined in [RFC 1918](https://tools.ietf.org/html/rfc1918#section-3)) are not allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccesses_csharp">
+<a href="#privatelinkaccesses_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Accesses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccess">List&lt;Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or More `private_link_access` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="virtualnetworksubnetids_csharp">
 <a href="#virtualnetworksubnetids_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
 </span>
@@ -5391,6 +5908,15 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of public IP or IP ranges in CIDR Format. Only IPV4 addresses are allowed. Private IP address ranges (as defined in [RFC 1918](https://tools.ietf.org/html/rfc1918#section-3)) are not allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccesses_go">
+<a href="#privatelinkaccesses_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Accesses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccess">[]Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}One or More `private_link_access` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworksubnetids_go">
@@ -5434,6 +5960,15 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
     <dd>{{% md %}}List of public IP or IP ranges in CIDR Format. Only IPV4 addresses are allowed. Private IP address ranges (as defined in [RFC 1918](https://tools.ietf.org/html/rfc1918#section-3)) are not allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccesses_nodejs">
+<a href="#privatelinkaccesses_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Accesses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccess">Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or More `private_link_access` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="virtualnetworksubnetids_nodejs">
 <a href="#virtualnetworksubnetids_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
 </span>
@@ -5475,6 +6010,15 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
     <dd>{{% md %}}List of public IP or IP ranges in CIDR Format. Only IPV4 addresses are allowed. Private IP address ranges (as defined in [RFC 1918](https://tools.ietf.org/html/rfc1918#section-3)) are not allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="private_link_accesses_python">
+<a href="#private_link_accesses_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>accesses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccess">Sequence[Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or More `private_link_access` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="virtual_network_subnet_ids_python">
 <a href="#virtual_network_subnet_ids_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>ids</a>
 </span>
@@ -5482,6 +6026,96 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of resource ids for subnets.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="accountnetworkrulesprivatelinkaccess">Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="endpointresourceid_csharp">
+<a href="#endpointresourceid_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource id of the `azure.privatelink.Endpoint` of the resource access rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="endpointtenantid_csharp">
+<a href="#endpointtenantid_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of the `azure.privatelink.Endpoint` of the resource access rule. Defaults to the current tenant id.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="endpointresourceid_go">
+<a href="#endpointresourceid_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource id of the `azure.privatelink.Endpoint` of the resource access rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="endpointtenantid_go">
+<a href="#endpointtenantid_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of the `azure.privatelink.Endpoint` of the resource access rule. Defaults to the current tenant id.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="endpointresourceid_nodejs">
+<a href="#endpointresourceid_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource id of the `azure.privatelink.Endpoint` of the resource access rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="endpointtenantid_nodejs">
+<a href="#endpointtenantid_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of the `azure.privatelink.Endpoint` of the resource access rule. Defaults to the current tenant id.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="endpoint_resource_id_python">
+<a href="#endpoint_resource_id_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource id of the `azure.privatelink.Endpoint` of the resource access rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="endpoint_tenant_id_python">
+<a href="#endpoint_tenant_id_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of the `azure.privatelink.Endpoint` of the resource access rule. Defaults to the current tenant id.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6368,6 +7002,132 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that logs will be retained. Changing this forces a new resource.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="accountrouting">Account<wbr>Routing</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="choice_csharp">
+<a href="#choice_csharp" style="color: inherit; text-decoration: inherit;">Choice</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the kind of network routing opted by the user. Possible values are `InternetRouting` and `MicrosoftRouting`. Defaults to `MicrosoftRouting`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publishinternetendpoints_csharp">
+<a href="#publishinternetendpoints_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Internet<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should internet routing storage endpoints be published? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publishmicrosoftendpoints_csharp">
+<a href="#publishmicrosoftendpoints_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Microsoft<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should microsoft routing storage endpoints be published? Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="choice_go">
+<a href="#choice_go" style="color: inherit; text-decoration: inherit;">Choice</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the kind of network routing opted by the user. Possible values are `InternetRouting` and `MicrosoftRouting`. Defaults to `MicrosoftRouting`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publishinternetendpoints_go">
+<a href="#publishinternetendpoints_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Internet<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should internet routing storage endpoints be published? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publishmicrosoftendpoints_go">
+<a href="#publishmicrosoftendpoints_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Microsoft<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should microsoft routing storage endpoints be published? Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="choice_nodejs">
+<a href="#choice_nodejs" style="color: inherit; text-decoration: inherit;">choice</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the kind of network routing opted by the user. Possible values are `InternetRouting` and `MicrosoftRouting`. Defaults to `MicrosoftRouting`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publishinternetendpoints_nodejs">
+<a href="#publishinternetendpoints_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Internet<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should internet routing storage endpoints be published? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publishmicrosoftendpoints_nodejs">
+<a href="#publishmicrosoftendpoints_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Microsoft<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should microsoft routing storage endpoints be published? Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="choice_python">
+<a href="#choice_python" style="color: inherit; text-decoration: inherit;">choice</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the kind of network routing opted by the user. Possible values are `InternetRouting` and `MicrosoftRouting`. Defaults to `MicrosoftRouting`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publish_internet_endpoints_python">
+<a href="#publish_internet_endpoints_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>internet_<wbr>endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should internet routing storage endpoints be published? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publish_microsoft_endpoints_python">
+<a href="#publish_microsoft_endpoints_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>microsoft_<wbr>endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should microsoft routing storage endpoints be published? Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
