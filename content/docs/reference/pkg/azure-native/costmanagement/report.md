@@ -173,8 +173,8 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 report = azure_native.costmanagement.Report("report",
-    definition={
-        "dataset": {
+    definition=azure_native.costmanagement.ReportDefinitionArgs(
+        dataset={
             "aggregation": {
                 "costSum": azure_native.costmanagement.ReportAggregationArgs(
                     function="Sum",
@@ -237,9 +237,9 @@ report = azure_native.costmanagement.Report("report",
                 ),
             ],
         },
-        "timeframe": "MonthToDate",
-        "type": "Usage",
-    },
+        timeframe="MonthToDate",
+        type="Usage",
+    ),
     delivery_info=azure_native.costmanagement.ReportDeliveryInfoArgs(
         destination=azure_native.costmanagement.ReportDeliveryDestinationArgs(
             container="reports",

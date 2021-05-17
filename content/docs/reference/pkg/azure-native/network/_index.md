@@ -95,6 +95,7 @@ Explore the resources and functions of the azure-native.network module.
     <li><a href="virtualnetwork" title="VirtualNetwork"><span class="symbol resource"></span>VirtualNetwork</a></li>
     <li><a href="virtualnetworkgateway" title="VirtualNetworkGateway"><span class="symbol resource"></span>VirtualNetworkGateway</a></li>
     <li><a href="virtualnetworkgatewayconnection" title="VirtualNetworkGatewayConnection"><span class="symbol resource"></span>VirtualNetworkGatewayConnection</a></li>
+    <li><a href="virtualnetworkgatewaynatrule" title="VirtualNetworkGatewayNatRule"><span class="symbol resource"></span>VirtualNetworkGatewayNatRule</a></li>
     <li><a href="virtualnetworklink" title="VirtualNetworkLink"><span class="symbol resource"></span>VirtualNetworkLink</a></li>
     <li><a href="virtualnetworkpeering" title="VirtualNetworkPeering"><span class="symbol resource"></span>VirtualNetworkPeering</a></li>
     <li><a href="virtualnetworktap" title="VirtualNetworkTap"><span class="symbol resource"></span>VirtualNetworkTap</a></li>
@@ -204,6 +205,7 @@ Explore the resources and functions of the azure-native.network module.
     <li><a href="getvirtualnetworkgatewaybgppeerstatus" title="GetVirtualNetworkGatewayBgpPeerStatus"><span class="symbol function"></span>GetVirtualNetworkGatewayBgpPeerStatus</a></li>
     <li><a href="getvirtualnetworkgatewayconnection" title="GetVirtualNetworkGatewayConnection"><span class="symbol function"></span>GetVirtualNetworkGatewayConnection</a></li>
     <li><a href="getvirtualnetworkgatewaylearnedroutes" title="GetVirtualNetworkGatewayLearnedRoutes"><span class="symbol function"></span>GetVirtualNetworkGatewayLearnedRoutes</a></li>
+    <li><a href="getvirtualnetworkgatewaynatrule" title="GetVirtualNetworkGatewayNatRule"><span class="symbol function"></span>GetVirtualNetworkGatewayNatRule</a></li>
     <li><a href="getvirtualnetworkgatewayvpnclientconnectionhealth" title="GetVirtualNetworkGatewayVpnclientConnectionHealth"><span class="symbol function"></span>GetVirtualNetworkGatewayVpnclientConnectionHealth</a></li>
     <li><a href="getvirtualnetworkgatewayvpnclientipsecparameters" title="GetVirtualNetworkGatewayVpnclientIpsecParameters"><span class="symbol function"></span>GetVirtualNetworkGatewayVpnclientIpsecParameters</a></li>
     <li><a href="getvirtualnetworklink" title="GetVirtualNetworkLink"><span class="symbol function"></span>GetVirtualNetworkLink</a></li>
@@ -233,6 +235,6 @@ Explore the resources and functions of the azure-native.network module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.5.0</dd>
+	<dd>1.6.0</dd>
 </dl>
 

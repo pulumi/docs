@@ -3086,7 +3086,15 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dailyrecurrence_csharp">
 <a href="#dailyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Recurrence</a>
@@ -3103,14 +3111,6 @@ The following output properties are available:
         <span class="property-type"><a href="#hourdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Hour<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3178,7 +3178,15 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dailyrecurrence_go">
 <a href="#dailyrecurrence_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Recurrence</a>
@@ -3195,14 +3203,6 @@ The following output properties are available:
         <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3270,7 +3270,15 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dailyrecurrence_nodejs">
 <a href="#dailyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Recurrence</a>
@@ -3287,14 +3295,6 @@ The following output properties are available:
         <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3362,7 +3362,15 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="daily_recurrence_python">
 <a href="#daily_recurrence_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>recurrence</a>
@@ -3379,14 +3387,6 @@ The following output properties are available:
         <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>

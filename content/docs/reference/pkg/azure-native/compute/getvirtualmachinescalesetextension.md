@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.compute.getVirtualMachineScaleSet
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a Virtual Machine Scale Set Extension.
-API Version: 2020-12-01.
+API Version: 2021-03-01.
 
 
 

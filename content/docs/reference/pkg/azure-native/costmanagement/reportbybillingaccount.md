@@ -194,8 +194,8 @@ report_by_billing_account = azure_native.costmanagement.ReportByBillingAccount("
             ),
             "filter": {
                 "and": [
-                    {
-                        "or": [
+                    azure_native.costmanagement.ReportFilterArgs(
+                        or_=[
                             azure_native.costmanagement.ReportFilterArgs(
                                 dimension=azure_native.costmanagement.ReportComparisonExpressionArgs(
                                     name="ResourceLocation",
@@ -217,7 +217,7 @@ report_by_billing_account = azure_native.costmanagement.ReportByBillingAccount("
                                 ),
                             ),
                         ],
-                    },
+                    ),
                     azure_native.costmanagement.ReportFilterArgs(
                         dimension=azure_native.costmanagement.ReportComparisonExpressionArgs(
                             name="ResourceGroup",
@@ -3671,7 +3671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:costmanagement:ReportByBillingAccount TestReport providers/Microsoft.Billing/billingAccounts/{billingAccount-Id}/providers/Microsoft.CostManagement/reports/TestReport 
+$ pulumi import azure-native:costmanagement:ReportByBillingAccount TestReport providers/Microsoft.Billing/billingAccounts/{billingAccount-id}/providers/Microsoft.CostManagement/reports/TestReport 
 ```
 
 

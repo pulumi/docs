@@ -8995,7 +8995,7 @@ The following output properties are available:
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9007,7 +9007,7 @@ The following output properties are available:
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9019,7 +9019,7 @@ The following output properties are available:
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9031,7 +9031,7 @@ The following output properties are available:
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9047,7 +9047,7 @@ The following output properties are available:
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9059,7 +9059,7 @@ The following output properties are available:
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9071,7 +9071,7 @@ The following output properties are available:
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9083,7 +9083,7 @@ The following output properties are available:
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9171,7 +9171,7 @@ The following output properties are available:
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9183,7 +9183,7 @@ The following output properties are available:
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9195,7 +9195,7 @@ The following output properties are available:
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9207,7 +9207,7 @@ The following output properties are available:
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9223,7 +9223,7 @@ The following output properties are available:
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9235,7 +9235,7 @@ The following output properties are available:
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9247,7 +9247,7 @@ The following output properties are available:
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9259,7 +9259,7 @@ The following output properties are available:
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9615,15 +9615,15 @@ The following output properties are available:
 <a href="#compressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressionlevel_csharp">
 <a href="#compressionlevel_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9755,15 +9755,15 @@ The following output properties are available:
 <a href="#compressioncodec_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressionlevel_go">
 <a href="#compressionlevel_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9895,15 +9895,15 @@ The following output properties are available:
 <a href="#compressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressionlevel_nodejs">
 <a href="#compressionlevel_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10035,15 +10035,15 @@ The following output properties are available:
 <a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_level_python">
 <a href="#compression_level_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16731,7 +16731,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#filepattern_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16791,7 +16791,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#filepattern_go" style="color: inherit; text-decoration: inherit;">File<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16851,7 +16851,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#filepattern_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16911,7 +16911,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#file_pattern_python" style="color: inherit; text-decoration: inherit;">file_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21683,9 +21683,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -21759,9 +21759,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compressioncodec_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -21835,9 +21835,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -21911,9 +21911,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>

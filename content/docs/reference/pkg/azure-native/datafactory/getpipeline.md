@@ -31883,7 +31883,7 @@ The following output properties are available:
 <a href="#filepattern_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. This setting controls the way a collection of JSON objects will be treated. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -31895,7 +31895,7 @@ The following output properties are available:
 <a href="#filepattern_go" style="color: inherit; text-decoration: inherit;">File<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. This setting controls the way a collection of JSON objects will be treated. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -31907,7 +31907,7 @@ The following output properties are available:
 <a href="#filepattern_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. This setting controls the way a collection of JSON objects will be treated. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -31919,7 +31919,7 @@ The following output properties are available:
 <a href="#file_pattern_python" style="color: inherit; text-decoration: inherit;">file_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. This setting controls the way a collection of JSON objects will be treated. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}

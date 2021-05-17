@@ -246,7 +246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The flag that indicates whether the alert should be automatically resolved or not. The default is true.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The flag that indicates whether the alert should be automatically resolved or not. The default is false.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -394,7 +394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The flag that indicates whether the alert should be automatically resolved or not. The default is true.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The flag that indicates whether the alert should be automatically resolved or not. The default is false.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -542,7 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The flag that indicates whether the alert should be automatically resolved or not. The default is true.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The flag that indicates whether the alert should be automatically resolved or not. The default is false.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -690,7 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The flag that indicates whether the alert should be automatically resolved or not. The default is true.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The flag that indicates whether the alert should be automatically resolved or not. The default is false.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
