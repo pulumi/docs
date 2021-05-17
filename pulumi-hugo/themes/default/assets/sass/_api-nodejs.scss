@@ -36,15 +36,18 @@ h3.api {
 ul.api {
     @apply list-none p-0 m-0 overflow-hidden;
 
-    columns: 3 220px;
+    columns: 1;
+
+    @screen xl {
+        columns: 2;
+    }
 
     li {
         @apply truncate mt-0;
 
         a {
-            @apply btn truncate bg-transparent inline-block p-1;
+            @apply btn truncate bg-transparent inline-block p-1 max-w-full;
 
-            max-width: 250px;
         }
 
         .symbol {
