@@ -12,6 +12,225 @@ meta_desc: "Documentation for the aws.datasync.Task resource with examples, inpu
 
 Manages an AWS DataSync Task, which represents a configuration for synchronization. Starting an execution of these DataSync Tasks (actually synchronizing files) is performed outside of this resource.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### With Scheduling
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.DataSync.Task("example", new Aws.DataSync.TaskArgs
+        {
+            DestinationLocationArn = aws_datasync_location_s3.Destination.Arn,
+            SourceLocationArn = aws_datasync_location_nfs.Source.Arn,
+            Schedule = new Aws.DataSync.Inputs.TaskScheduleArgs
+            {
+                ScheduleExpression = "cron(0 12 ? * SUN,WED *)",
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/datasync"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datasync.NewTask(ctx, "example", &datasync.TaskArgs{
+			DestinationLocationArn: pulumi.Any(aws_datasync_location_s3.Destination.Arn),
+			SourceLocationArn:      pulumi.Any(aws_datasync_location_nfs.Source.Arn),
+			Schedule: &datasync.TaskScheduleArgs{
+				ScheduleExpression: pulumi.String("cron(0 12 ? * SUN,WED *)"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.datasync.Task("example",
+    destination_location_arn=aws_datasync_location_s3["destination"]["arn"],
+    source_location_arn=aws_datasync_location_nfs["source"]["arn"],
+    schedule=aws.datasync.TaskScheduleArgs(
+        schedule_expression="cron(0 12 ? * SUN,WED *)",
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.datasync.Task("example", {
+    destinationLocationArn: aws_datasync_location_s3.destination.arn,
+    sourceLocationArn: aws_datasync_location_nfs.source.arn,
+    schedule: {
+        scheduleExpression: "cron(0 12 ? * SUN,WED *)",
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### With Filtering
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.DataSync.Task("example", new Aws.DataSync.TaskArgs
+        {
+            DestinationLocationArn = aws_datasync_location_s3.Destination.Arn,
+            SourceLocationArn = aws_datasync_location_nfs.Source.Arn,
+            Excludes = new Aws.DataSync.Inputs.TaskExcludesArgs
+            {
+                FilterType = "SIMPLE_PATTERN",
+                Value = "/folder1|/folder2",
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/datasync"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datasync.NewTask(ctx, "example", &datasync.TaskArgs{
+			DestinationLocationArn: pulumi.Any(aws_datasync_location_s3.Destination.Arn),
+			SourceLocationArn:      pulumi.Any(aws_datasync_location_nfs.Source.Arn),
+			Excludes: &datasync.TaskExcludesArgs{
+				FilterType: pulumi.String("SIMPLE_PATTERN"),
+				Value:      pulumi.String("/folder1|/folder2"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.datasync.Task("example",
+    destination_location_arn=aws_datasync_location_s3["destination"]["arn"],
+    source_location_arn=aws_datasync_location_nfs["source"]["arn"],
+    excludes=aws.datasync.TaskExcludesArgs(
+        filter_type="SIMPLE_PATTERN",
+        value="/folder1|/folder2",
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.datasync.Task("example", {
+    destinationLocationArn: aws_datasync_location_s3.destination.arn,
+    sourceLocationArn: aws_datasync_location_nfs.source.arn,
+    excludes: {
+        filterType: "SIMPLE_PATTERN",
+        value: "/folder1|/folder2",
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a Task Resource {#create}
@@ -28,8 +247,10 @@ Manages an AWS DataSync Task, which represents a configuration for synchronizati
          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
          <span class="nx">cloudwatch_log_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">destination_location_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[TaskExcludesArgs]</span> = None<span class="p">,</span>
          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[TaskOptionsArgs]</span> = None<span class="p">,</span>
+         <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[TaskScheduleArgs]</span> = None<span class="p">,</span>
          <span class="nx">source_location_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
          <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
@@ -189,6 +410,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="excludes_csharp">
+<a href="#excludes_csharp" style="color: inherit; text-decoration: inherit;">Excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskexcludes">Task<wbr>Excludes<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Filter rules that determines which files to exclude from a task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -205,6 +435,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#taskoptions">Task<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schedule_csharp">
+<a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskschedule">Task<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a schedule used to periodically transfer files from a source to a destination location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -256,6 +495,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="excludes_go">
+<a href="#excludes_go" style="color: inherit; text-decoration: inherit;">Excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskexcludes">Task<wbr>Excludes</a></span>
+    </dt>
+    <dd>{{% md %}}Filter rules that determines which files to exclude from a task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -272,6 +520,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#taskoptions">Task<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schedule_go">
+<a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskschedule">Task<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a schedule used to periodically transfer files from a source to a destination location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -323,6 +580,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="excludes_nodejs">
+<a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskexcludes">Task<wbr>Excludes<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Filter rules that determines which files to exclude from a task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -339,6 +605,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#taskoptions">Task<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schedule_nodejs">
+<a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskschedule">Task<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a schedule used to periodically transfer files from a source to a destination location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -390,6 +665,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="excludes_python">
+<a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskexcludes">Task<wbr>Excludes<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Filter rules that determines which files to exclude from a task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -406,6 +690,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#taskoptions">Task<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schedule_python">
+<a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskschedule">Task<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a schedule used to periodically transfer files from a source to a destination location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -537,8 +830,10 @@ Get an existing Task resource's state with the given name, ID, and optional extr
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">cloudwatch_log_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">destination_location_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[TaskExcludesArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[TaskOptionsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[TaskScheduleArgs]</span> = None<span class="p">,</span>
         <span class="nx">source_location_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Task</code></pre></div>
@@ -681,6 +976,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Amazon Resource Name (ARN) of destination DataSync Location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_excludes_csharp">
+<a href="#state_excludes_csharp" style="color: inherit; text-decoration: inherit;">Excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskexcludes">Task<wbr>Excludes<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Filter rules that determines which files to exclude from a task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -697,6 +1001,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#taskoptions">Task<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_schedule_csharp">
+<a href="#state_schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskschedule">Task<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a schedule used to periodically transfer files from a source to a destination location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcelocationarn_csharp">
@@ -757,6 +1070,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Amazon Resource Name (ARN) of destination DataSync Location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_excludes_go">
+<a href="#state_excludes_go" style="color: inherit; text-decoration: inherit;">Excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskexcludes">Task<wbr>Excludes</a></span>
+    </dt>
+    <dd>{{% md %}}Filter rules that determines which files to exclude from a task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -773,6 +1095,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#taskoptions">Task<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_schedule_go">
+<a href="#state_schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskschedule">Task<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a schedule used to periodically transfer files from a source to a destination location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcelocationarn_go">
@@ -833,6 +1164,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Amazon Resource Name (ARN) of destination DataSync Location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_excludes_nodejs">
+<a href="#state_excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskexcludes">Task<wbr>Excludes<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Filter rules that determines which files to exclude from a task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -849,6 +1189,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#taskoptions">Task<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_schedule_nodejs">
+<a href="#state_schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskschedule">Task<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a schedule used to periodically transfer files from a source to a destination location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcelocationarn_nodejs">
@@ -909,6 +1258,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Amazon Resource Name (ARN) of destination DataSync Location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_excludes_python">
+<a href="#state_excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskexcludes">Task<wbr>Excludes<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Filter rules that determines which files to exclude from a task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -925,6 +1283,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#taskoptions">Task<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_schedule_python">
+<a href="#state_schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskschedule">Task<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a schedule used to periodically transfer files from a source to a destination location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_location_arn_python">
@@ -964,6 +1331,96 @@ The following state arguments are supported:
 
 
 
+<h4 id="taskexcludes">Task<wbr>Excludes</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="filtertype_csharp">
+<a href="#filtertype_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of filter rule to apply. Valid values: `SIMPLE_PATTERN`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A single filter string that consists of the patterns to include or exclude. The patterns are delimited by "|" (that is, a pipe), for example: `/folder1|/folder2`
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="filtertype_go">
+<a href="#filtertype_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of filter rule to apply. Valid values: `SIMPLE_PATTERN`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A single filter string that consists of the patterns to include or exclude. The patterns are delimited by "|" (that is, a pipe), for example: `/folder1|/folder2`
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="filtertype_nodejs">
+<a href="#filtertype_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of filter rule to apply. Valid values: `SIMPLE_PATTERN`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A single filter string that consists of the patterns to include or exclude. The patterns are delimited by "|" (that is, a pipe), for example: `/folder1|/folder2`
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="filter_type_python">
+<a href="#filter_type_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of filter rule to apply. Valid values: `SIMPLE_PATTERN`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A single filter string that consists of the patterns to include or exclude. The patterns are delimited by "|" (that is, a pipe), for example: `/folder1|/folder2`
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="taskoptions">Task<wbr>Options</h4>
 
 {{% choosable language csharp %}}
@@ -1002,7 +1459,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of logs to be published to a log stream. Valid values: `OFF`, `BASIC`, `TRANSFER`. Default: `OFF`.
+    <dd>{{% md %}}Determines the type of logs that DataSync publishes to a log stream in the Amazon CloudWatch log group that you provide. Valid values: `OFF`, `BASIC`, `TRANSFER`. Default: `OFF`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtime_csharp">
@@ -1012,6 +1469,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A file metadata that indicates the last time a file was modified (written to) before the sync `PREPARING` phase. Value values: `NONE`, `PRESERVE`. Default: `PRESERVE`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="overwritemode_csharp">
+<a href="#overwritemode_csharp" style="color: inherit; text-decoration: inherit;">Overwrite<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines whether files at the destination should be overwritten or preserved when copying files. Valid values: `ALWAYS`, `NEVER`. Default: `ALWAYS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="posixpermissions_csharp">
@@ -1039,6 +1505,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the DataSync Task should preserve the metadata of block and character devices in the source files system, and recreate the files with that device name and metadata on the destination. The DataSync Task can’t sync the actual contents of such devices, because many of the devices are non-terminal and don’t return an end of file (EOF) marker. Valid values: `NONE`, `PRESERVE`. Default: `NONE` (ignore special devices).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="taskqueueing_csharp">
+<a href="#taskqueueing_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Queueing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines whether tasks should be queued before executing the tasks. Valid values: `ENABLED`, `DISABLED`. Default `ENABLED`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transfermode_csharp">
+<a href="#transfermode_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines whether DataSync transfers only the data and metadata that differ between the source and the destination location, or whether DataSync transfers all the content from the source, without comparing to the destination location. Valid values: `CHANGED`, `ALL`. Default: `CHANGED`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uid_csharp">
@@ -1096,7 +1580,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of logs to be published to a log stream. Valid values: `OFF`, `BASIC`, `TRANSFER`. Default: `OFF`.
+    <dd>{{% md %}}Determines the type of logs that DataSync publishes to a log stream in the Amazon CloudWatch log group that you provide. Valid values: `OFF`, `BASIC`, `TRANSFER`. Default: `OFF`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtime_go">
@@ -1106,6 +1590,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A file metadata that indicates the last time a file was modified (written to) before the sync `PREPARING` phase. Value values: `NONE`, `PRESERVE`. Default: `PRESERVE`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="overwritemode_go">
+<a href="#overwritemode_go" style="color: inherit; text-decoration: inherit;">Overwrite<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines whether files at the destination should be overwritten or preserved when copying files. Valid values: `ALWAYS`, `NEVER`. Default: `ALWAYS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="posixpermissions_go">
@@ -1133,6 +1626,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the DataSync Task should preserve the metadata of block and character devices in the source files system, and recreate the files with that device name and metadata on the destination. The DataSync Task can’t sync the actual contents of such devices, because many of the devices are non-terminal and don’t return an end of file (EOF) marker. Valid values: `NONE`, `PRESERVE`. Default: `NONE` (ignore special devices).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="taskqueueing_go">
+<a href="#taskqueueing_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Queueing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines whether tasks should be queued before executing the tasks. Valid values: `ENABLED`, `DISABLED`. Default `ENABLED`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transfermode_go">
+<a href="#transfermode_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines whether DataSync transfers only the data and metadata that differ between the source and the destination location, or whether DataSync transfers all the content from the source, without comparing to the destination location. Valid values: `CHANGED`, `ALL`. Default: `CHANGED`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uid_go">
@@ -1190,7 +1701,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of logs to be published to a log stream. Valid values: `OFF`, `BASIC`, `TRANSFER`. Default: `OFF`.
+    <dd>{{% md %}}Determines the type of logs that DataSync publishes to a log stream in the Amazon CloudWatch log group that you provide. Valid values: `OFF`, `BASIC`, `TRANSFER`. Default: `OFF`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtime_nodejs">
@@ -1200,6 +1711,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A file metadata that indicates the last time a file was modified (written to) before the sync `PREPARING` phase. Value values: `NONE`, `PRESERVE`. Default: `PRESERVE`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="overwritemode_nodejs">
+<a href="#overwritemode_nodejs" style="color: inherit; text-decoration: inherit;">overwrite<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines whether files at the destination should be overwritten or preserved when copying files. Valid values: `ALWAYS`, `NEVER`. Default: `ALWAYS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="posixpermissions_nodejs">
@@ -1227,6 +1747,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the DataSync Task should preserve the metadata of block and character devices in the source files system, and recreate the files with that device name and metadata on the destination. The DataSync Task can’t sync the actual contents of such devices, because many of the devices are non-terminal and don’t return an end of file (EOF) marker. Valid values: `NONE`, `PRESERVE`. Default: `NONE` (ignore special devices).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="taskqueueing_nodejs">
+<a href="#taskqueueing_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Queueing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines whether tasks should be queued before executing the tasks. Valid values: `ENABLED`, `DISABLED`. Default `ENABLED`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transfermode_nodejs">
+<a href="#transfermode_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines whether DataSync transfers only the data and metadata that differ between the source and the destination location, or whether DataSync transfers all the content from the source, without comparing to the destination location. Valid values: `CHANGED`, `ALL`. Default: `CHANGED`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uid_nodejs">
@@ -1284,7 +1822,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of logs to be published to a log stream. Valid values: `OFF`, `BASIC`, `TRANSFER`. Default: `OFF`.
+    <dd>{{% md %}}Determines the type of logs that DataSync publishes to a log stream in the Amazon CloudWatch log group that you provide. Valid values: `OFF`, `BASIC`, `TRANSFER`. Default: `OFF`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtime_python">
@@ -1294,6 +1832,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A file metadata that indicates the last time a file was modified (written to) before the sync `PREPARING` phase. Value values: `NONE`, `PRESERVE`. Default: `PRESERVE`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="overwrite_mode_python">
+<a href="#overwrite_mode_python" style="color: inherit; text-decoration: inherit;">overwrite_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Determines whether files at the destination should be overwritten or preserved when copying files. Valid values: `ALWAYS`, `NEVER`. Default: `ALWAYS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="posix_permissions_python">
@@ -1323,6 +1870,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether the DataSync Task should preserve the metadata of block and character devices in the source files system, and recreate the files with that device name and metadata on the destination. The DataSync Task can’t sync the actual contents of such devices, because many of the devices are non-terminal and don’t return an end of file (EOF) marker. Valid values: `NONE`, `PRESERVE`. Default: `NONE` (ignore special devices).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="task_queueing_python">
+<a href="#task_queueing_python" style="color: inherit; text-decoration: inherit;">task_<wbr>queueing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Determines whether tasks should be queued before executing the tasks. Valid values: `ENABLED`, `DISABLED`. Default `ENABLED`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transfer_mode_python">
+<a href="#transfer_mode_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Determines whether DataSync transfers only the data and metadata that differ between the source and the destination location, or whether DataSync transfers all the content from the source, without comparing to the destination location. Valid values: `CHANGED`, `ALL`. Default: `CHANGED`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="uid_python">
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
@@ -1339,6 +1904,60 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred. Valid values: `NONE`, `POINT_IN_TIME_CONSISTENT`, `ONLY_FILES_TRANSFERRED`. Default: `POINT_IN_TIME_CONSISTENT`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="taskschedule">Task<wbr>Schedule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="scheduleexpression_csharp">
+<a href="#scheduleexpression_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the schedule you want your task to use for repeated executions. For more information, see [Schedule Expressions for Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="scheduleexpression_go">
+<a href="#scheduleexpression_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the schedule you want your task to use for repeated executions. For more information, see [Schedule Expressions for Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="scheduleexpression_nodejs">
+<a href="#scheduleexpression_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the schedule you want your task to use for repeated executions. For more information, see [Schedule Expressions for Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedule_expression_python">
+<a href="#schedule_expression_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the schedule you want your task to use for repeated executions. For more information, see [Schedule Expressions for Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

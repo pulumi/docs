@@ -264,29 +264,30 @@ const examplePipeline = new aws.codepipeline.Pipeline("examplePipeline", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">host_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">provider_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ConnectionArgs]</a></span> = None<span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Connection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Connection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -298,7 +299,7 @@ const examplePipeline = new aws.codepipeline.Pipeline("examplePipeline", {
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectionArgs</a></span>
@@ -322,7 +323,7 @@ const examplePipeline = new aws.codepipeline.Pipeline("examplePipeline", {
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectionArgs</a></span>
@@ -352,7 +353,7 @@ const examplePipeline = new aws.codepipeline.Pipeline("examplePipeline", {
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectionArgs</a></span>
@@ -376,7 +377,7 @@ const examplePipeline = new aws.codepipeline.Pipeline("examplePipeline", {
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectionArgs</a></span>
@@ -402,15 +403,15 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="providertype_csharp">
-<a href="#providertype_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Type</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="hostarn_csharp">
+<a href="#hostarn_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub`, or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the host associated with the connection. Conflicts with `provider_type`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -420,6 +421,15 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the connection to be created. The name must be unique in the calling AWS account. Changing `name` will create a new resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="providertype_csharp">
+<a href="#providertype_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub` or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource. Conflicts with `host_arn`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -442,15 +452,15 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="providertype_go">
-<a href="#providertype_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Type</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="hostarn_go">
+<a href="#hostarn_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub`, or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the host associated with the connection. Conflicts with `provider_type`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -460,6 +470,15 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the connection to be created. The name must be unique in the calling AWS account. Changing `name` will create a new resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="providertype_go">
+<a href="#providertype_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub` or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource. Conflicts with `host_arn`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -482,15 +501,15 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="providertype_nodejs">
-<a href="#providertype_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Type</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="hostarn_nodejs">
+<a href="#hostarn_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub`, or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the host associated with the connection. Conflicts with `provider_type`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -500,6 +519,15 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the connection to be created. The name must be unique in the calling AWS account. Changing `name` will create a new resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="providertype_nodejs">
+<a href="#providertype_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub` or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource. Conflicts with `host_arn`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -522,15 +550,15 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="provider_type_python">
-<a href="#provider_type_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>type</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="host_arn_python">
+<a href="#host_arn_python" style="color: inherit; text-decoration: inherit;">host_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub`, or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the host associated with the connection. Conflicts with `provider_type`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -540,6 +568,15 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the connection to be created. The name must be unique in the calling AWS account. Changing `name` will create a new resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provider_type_python">
+<a href="#provider_type_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub` or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource. Conflicts with `host_arn`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -706,6 +743,7 @@ Get an existing Connection resource's state with the given name, ID, and optiona
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">connection_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">host_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">provider_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -840,6 +878,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The codestar connection status. Possible values are `PENDING`, `AVAILABLE` and `ERROR`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_hostarn_csharp">
+<a href="#state_hostarn_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the host associated with the connection. Conflicts with `provider_type`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -855,7 +902,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub`, or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource.
+    <dd>{{% md %}}The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub` or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource. Conflicts with `host_arn`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -898,6 +945,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The codestar connection status. Possible values are `PENDING`, `AVAILABLE` and `ERROR`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_hostarn_go">
+<a href="#state_hostarn_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the host associated with the connection. Conflicts with `provider_type`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -913,7 +969,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub`, or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource.
+    <dd>{{% md %}}The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub` or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource. Conflicts with `host_arn`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -956,6 +1012,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The codestar connection status. Possible values are `PENDING`, `AVAILABLE` and `ERROR`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_hostarn_nodejs">
+<a href="#state_hostarn_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the host associated with the connection. Conflicts with `provider_type`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -971,7 +1036,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub`, or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource.
+    <dd>{{% md %}}The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub` or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource. Conflicts with `host_arn`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -1014,6 +1079,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The codestar connection status. Possible values are `PENDING`, `AVAILABLE` and `ERROR`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_host_arn_python">
+<a href="#state_host_arn_python" style="color: inherit; text-decoration: inherit;">host_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the host associated with the connection. Conflicts with `provider_type`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1029,7 +1103,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub`, or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource.
+    <dd>{{% md %}}The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub` or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource. Conflicts with `host_arn`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
