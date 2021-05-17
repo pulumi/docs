@@ -31,7 +31,7 @@ export class GreenhouseJobsList {
         this.departments = []
     }
 
-    componentDidLoad() {
+    componentWillLoad() {
         this.fetchJobs();
     }
 

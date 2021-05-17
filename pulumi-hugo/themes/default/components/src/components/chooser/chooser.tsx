@@ -1,5 +1,5 @@
 import { Component, Element, Host, h, Listen, Prop, State } from "@stencil/core";
-import { Store, Unsubscribe } from "@stencil/redux";
+import { store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
 import { setLanguage, setK8sLanguage, setOS, setCloud, setPersona } from "../../store/actions/preferences";
 
@@ -78,10 +78,6 @@ export interface Choice {
 export class Chooser {
     private storeUnsubscribe: Unsubscribe;
 
-    // A handle to the application store.
-    @Prop({ context: "store" })
-    store: Store;
-
     // A handle to the host element.
     @Element()
     el: HTMLElement;
@@ -126,7 +122,7 @@ export class Chooser {
         this.parseOptions();
     }
 
-    componentDidUnload() {
+    disconnectedCallback() {
         if (this.storeUnsubscribe) {
             this.storeUnsubscribe();
         }
@@ -149,10 +145,10 @@ export class Chooser {
         this.parseOptions();
 
         // Map internal methods to actions defined on the store.
-        this.store.mapDispatchToProps(this, { setLanguage, setK8sLanguage, setOS, setCloud, setPersona });
+        store.mapDispatchToProps(this, { setLanguage, setK8sLanguage, setOS, setCloud, setPersona });
 
         // Map currently selected values from the store, so we can use them in this component.
-        this.storeUnsubscribe = this.store.mapStateToProps(this, (state: AppState) => {
+        this.storeUnsubscribe = store.mapStateToProps(this, (state: AppState) => {
             const { preferences: { language, k8sLanguage, os, cloud, persona } } = state;
 
             // In some cases, the user's preferred (i.e., most recently selected) choice

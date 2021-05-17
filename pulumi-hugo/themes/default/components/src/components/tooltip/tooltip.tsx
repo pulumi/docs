@@ -36,7 +36,7 @@ export class Tooltip {
     // Show the tooltip.
     @Method()
     async show() {
-        return new Promise(resolve => {
+        return new Promise<void>(resolve => {
             this.active = true;
 
             // Wait 100ms to allow for the fade-in transition to complete.
@@ -47,7 +47,7 @@ export class Tooltip {
     // Hide the tooltip.
     @Method()
     async hide() {
-        return new Promise(resolve => {
+        return new Promise<void>(resolve => {
             this.active = false;
 
             // Wait 100ms to allow for the fade-out transition to complete.

@@ -45,7 +45,8 @@ export class WebinarFormSelect {
     componentWillLoad() {
         const parsedSessions: WebinarSessionItem[] = JSON.parse(this.sessions).map((session: WebinarSessionItem) => {
             const sessionDate = new Date(session.datetime);
-            const options = {
+
+            const options: Intl.DateTimeFormatOptions = {
                 timeZoneName: "short",
                 weekday: "short",
                 year: "numeric",

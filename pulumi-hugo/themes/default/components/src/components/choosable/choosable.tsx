@@ -1,5 +1,5 @@
 import { Component, Element, h, Listen, Prop, Watch } from '@stencil/core';
-import { Store, Unsubscribe } from "@stencil/redux";
+import { store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
 import { ChooserType, ChooserKey, ChooserMode } from "../chooser/chooser";
 
@@ -21,10 +21,6 @@ import { ChooserType, ChooserKey, ChooserMode } from "../chooser/chooser";
 })
 export class Choosable {
     private storeUnsubscribe: Unsubscribe;
-
-    // A handle to the application store.
-    @Prop({ context: "store" })
-    store: Store;
 
     @Element()
     el: HTMLElement;
@@ -61,7 +57,7 @@ export class Choosable {
     @Prop({ mutable: true })
     selection: ChooserKey;
 
-    componentDidUnload() {
+    disconnectedCallback() {
         if (this.storeUnsubscribe) {
             this.storeUnsubscribe();
         }
@@ -74,7 +70,7 @@ export class Choosable {
         this.mode = "global";
 
         if (this.mode === "global") {
-            this.storeUnsubscribe = this.store.mapStateToProps(this, (state: AppState) => {
+            this.storeUnsubscribe = store.mapStateToProps(this, (state: AppState) => {
                 const { preferences: { language, k8sLanguage, os, cloud, persona } } = state;
 
                 switch (this.type) {

@@ -1,6 +1,6 @@
 import "@stencil/redux";
-import { Component, Event, EventEmitter, Prop, h } from "@stencil/core";
-import { Store } from "@stencil/redux";
+import { Component, Event, EventEmitter, h } from "@stencil/core";
+import { store } from "@stencil/redux";
 import { configureStore } from "../../store";
 import { LanguageKey } from "../chooser/chooser";
 import { setLanguage } from "../../store/actions/preferences";
@@ -12,9 +12,6 @@ import { getQueryVariable } from "../../util/util";
 })
 export class Root {
 
-    @Prop({ context: "store" })
-    store: Store;
-
     @Event()
     rendered: EventEmitter;
 
@@ -24,9 +21,9 @@ export class Root {
     componentWillLoad() {
 
         // Initialize the store. This makes the store available to any component on the page.
-        this.store.setStore(configureStore());
+        store.setStore(configureStore());
         // Map internal methods to actions defined on the store.
-        this.store.mapDispatchToProps(this, { setLanguage });
+        store.mapDispatchToProps(this, { setLanguage });
     }
 
     componentDidRender() {

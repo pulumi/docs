@@ -1,11 +1,12 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h } from "@stencil/core";
 
 @Component({
-    tag: 'pulumi-datetime',
-    styleUrl: 'datetime.scss',
-    shadow: true
+    tag: "pulumi-datetime",
+    styleUrl: "datetime.scss",
+    shadow: true,
 })
 export class Datetime {
+
     @Prop()
     class?: string;
 
@@ -14,14 +15,15 @@ export class Datetime {
 
     componentWillLoad() {
         const date = new Date(this.date);
-        const options = {
-          timeZoneName: "short",
-          weekday: 'short',
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-          hour: "numeric",
-          minute: "2-digit"
+
+        const options: Intl.DateTimeFormatOptions = {
+            timeZoneName: "short",
+            weekday: "short",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            hour: "numeric",
+            minute: "2-digit"
         };
 
         this.date = date.toLocaleString(undefined, options);

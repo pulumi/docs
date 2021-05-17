@@ -40,8 +40,7 @@ describe("pulumi-banner", () => {
 
         it("does not show a dismiss icon", async () => {
             const dismissButton = await element.find(".dismiss");
-            const buttonStyle = await dismissButton.getComputedStyle();
-            expect(buttonStyle.display).toBe("none");
+            await dismissButton.waitForNotVisible();
         });
 
         describe("when the banner is marked dismissible", () => {
@@ -58,10 +57,9 @@ describe("pulumi-banner", () => {
                 element = await page.find("pulumi-banner");
             });
 
-            it("shows a dismiss icon", async() => {
+            it("shows a dismiss icon", async () => {
                 const dismissButton = await element.find(".dismiss");
-                const buttonStyle = await dismissButton.getComputedStyle();
-                expect(buttonStyle.display).toBe("block");
+                await dismissButton.waitForVisible();
             });
 
             describe("and the banner is dismissed", () => {
