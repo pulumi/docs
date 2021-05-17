@@ -155,6 +155,7 @@ const example = new aws.ec2.AmiCopy("example", {
 <span class="k">def </span><span class="nx">AmiCopy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">destination_outpost_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[AmiCopyEbsBlockDeviceArgs]]</span> = None<span class="p">,</span>
             <span class="nx">encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[AmiCopyEphemeralBlockDeviceArgs]]</span> = None<span class="p">,</span>
@@ -322,6 +323,16 @@ same as the AWS provider region in order to create a copy within the same region
     <dd>{{% md %}}A longer, human-readable description for the AMI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="destinationoutpostarn_csharp">
+<a href="#destinationoutpostarn_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Outpost<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Outpost to which to copy the AMI.
+Only specify this parameter when copying an AMI from an AWS Region to an Outpost. The AMI must be in the Region of the destination Outpost.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ebsblockdevices_csharp">
 <a href="#ebsblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
 </span>
@@ -419,6 +430,16 @@ same as the AWS provider region in order to create a copy within the same region
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationoutpostarn_go">
+<a href="#destinationoutpostarn_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Outpost<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Outpost to which to copy the AMI.
+Only specify this parameter when copying an AMI from an AWS Region to an Outpost. The AMI must be in the Region of the destination Outpost.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsblockdevices_go">
@@ -520,6 +541,16 @@ same as the AWS provider region in order to create a copy within the same region
     <dd>{{% md %}}A longer, human-readable description for the AMI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="destinationoutpostarn_nodejs">
+<a href="#destinationoutpostarn_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Outpost<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Outpost to which to copy the AMI.
+Only specify this parameter when copying an AMI from an AWS Region to an Outpost. The AMI must be in the Region of the destination Outpost.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ebsblockdevices_nodejs">
 <a href="#ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
 </span>
@@ -617,6 +648,16 @@ same as the AWS provider region in order to create a copy within the same region
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destination_outpost_arn_python">
+<a href="#destination_outpost_arn_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>outpost_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Outpost to which to copy the AMI.
+Only specify this parameter when copying an AMI from an AWS Region to an Outpost. The AMI must be in the Region of the destination Outpost.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebs_block_devices_python">
@@ -1428,6 +1469,7 @@ Get an existing AmiCopy resource's state with the given name, ID, and optional e
         <span class="nx">architecture</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">destination_outpost_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[AmiCopyEbsBlockDeviceArgs]]</span> = None<span class="p">,</span>
         <span class="nx">ena_support</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -1591,6 +1633,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_destinationoutpostarn_csharp">
+<a href="#state_destinationoutpostarn_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Outpost<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Outpost to which to copy the AMI.
+Only specify this parameter when copying an AMI from an AWS Region to an Outpost. The AMI must be in the Region of the destination Outpost.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebsblockdevices_csharp">
@@ -1859,6 +1911,16 @@ changes the set of further arguments that are required, as described below.
     <dd>{{% md %}}A longer, human-readable description for the AMI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_destinationoutpostarn_go">
+<a href="#state_destinationoutpostarn_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Outpost<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Outpost to which to copy the AMI.
+Only specify this parameter when copying an AMI from an AWS Region to an Outpost. The AMI must be in the Region of the destination Outpost.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ebsblockdevices_go">
 <a href="#state_ebsblockdevices_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
 </span>
@@ -2125,6 +2187,16 @@ changes the set of further arguments that are required, as described below.
     <dd>{{% md %}}A longer, human-readable description for the AMI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_destinationoutpostarn_nodejs">
+<a href="#state_destinationoutpostarn_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Outpost<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Outpost to which to copy the AMI.
+Only specify this parameter when copying an AMI from an AWS Region to an Outpost. The AMI must be in the Region of the destination Outpost.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ebsblockdevices_nodejs">
 <a href="#state_ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
 </span>
@@ -2389,6 +2461,16 @@ changes the set of further arguments that are required, as described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_destination_outpost_arn_python">
+<a href="#state_destination_outpost_arn_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>outpost_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Outpost to which to copy the AMI.
+Only specify this parameter when copying an AMI from an AWS Region to an Outpost. The AMI must be in the Region of the destination Outpost.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebs_block_devices_python">

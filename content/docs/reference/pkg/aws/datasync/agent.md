@@ -126,8 +126,12 @@ const example = new aws.datasync.Agent("example", {
           <span class="nx">activation_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">private_link_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">security_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">subnet_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-          <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+          <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+          <span class="nx">vpc_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Agent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[AgentArgs]</a></span> = None<span class="p">,</span>
@@ -263,7 +267,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DataSync Agent activation key during resource creation. Conflicts with `ip_address`. If an `ip_address` is provided instead, this provider will retrieve the `activation_key` as part of the resource creation.
+    <dd>{{% md %}}DataSync Agent activation key during resource creation. Conflicts with `ip_address`. If an `ip_address` is provided instead, the provider will retrieve the `activation_key` as part of the resource creation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
@@ -284,13 +288,40 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Name of the DataSync Agent.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="privatelinkendpoint_csharp">
+<a href="#privatelinkendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP address of the VPC endpoint the agent should connect to when retrieving an activation key during resource creation. Conflicts with `activation_key`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securitygrouparns_csharp">
+<a href="#securitygrouparns_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The ARNs of the security groups used to protect your data transfer task subnets.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetarns_csharp">
+<a href="#subnetarns_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Names (ARNs) of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Agent.
+    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Agent. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_csharp">
@@ -300,6 +331,15 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpcendpointid_csharp">
+<a href="#vpcendpointid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC (virtual private cloud) endpoint that the agent has access to.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -312,7 +352,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DataSync Agent activation key during resource creation. Conflicts with `ip_address`. If an `ip_address` is provided instead, this provider will retrieve the `activation_key` as part of the resource creation.
+    <dd>{{% md %}}DataSync Agent activation key during resource creation. Conflicts with `ip_address`. If an `ip_address` is provided instead, the provider will retrieve the `activation_key` as part of the resource creation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
@@ -333,13 +373,40 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Name of the DataSync Agent.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="privatelinkendpoint_go">
+<a href="#privatelinkendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP address of the VPC endpoint the agent should connect to when retrieving an activation key during resource creation. Conflicts with `activation_key`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securitygrouparns_go">
+<a href="#securitygrouparns_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The ARNs of the security groups used to protect your data transfer task subnets.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetarns_go">
+<a href="#subnetarns_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Names (ARNs) of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Agent.
+    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Agent. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_go">
@@ -349,6 +416,15 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpcendpointid_go">
+<a href="#vpcendpointid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC (virtual private cloud) endpoint that the agent has access to.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -361,7 +437,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DataSync Agent activation key during resource creation. Conflicts with `ip_address`. If an `ip_address` is provided instead, this provider will retrieve the `activation_key` as part of the resource creation.
+    <dd>{{% md %}}DataSync Agent activation key during resource creation. Conflicts with `ip_address`. If an `ip_address` is provided instead, the provider will retrieve the `activation_key` as part of the resource creation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
@@ -382,13 +458,40 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Name of the DataSync Agent.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="privatelinkendpoint_nodejs">
+<a href="#privatelinkendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP address of the VPC endpoint the agent should connect to when retrieving an activation key during resource creation. Conflicts with `activation_key`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securitygrouparns_nodejs">
+<a href="#securitygrouparns_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The ARNs of the security groups used to protect your data transfer task subnets.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetarns_nodejs">
+<a href="#subnetarns_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Names (ARNs) of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Agent.
+    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Agent. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_nodejs">
@@ -398,6 +501,15 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpcendpointid_nodejs">
+<a href="#vpcendpointid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Endpoint<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC (virtual private cloud) endpoint that the agent has access to.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -410,7 +522,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DataSync Agent activation key during resource creation. Conflicts with `ip_address`. If an `ip_address` is provided instead, this provider will retrieve the `activation_key` as part of the resource creation.
+    <dd>{{% md %}}DataSync Agent activation key during resource creation. Conflicts with `ip_address`. If an `ip_address` is provided instead, the provider will retrieve the `activation_key` as part of the resource creation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
@@ -431,13 +543,40 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Name of the DataSync Agent.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="private_link_endpoint_python">
+<a href="#private_link_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IP address of the VPC endpoint the agent should connect to when retrieving an activation key during resource creation. Conflicts with `activation_key`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="security_group_arns_python">
+<a href="#security_group_arns_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The ARNs of the security groups used to protect your data transfer task subnets.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_arns_python">
+<a href="#subnet_arns_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Names (ARNs) of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Agent.
+    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Agent. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_all_python">
@@ -447,6 +586,15 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpc_endpoint_id_python">
+<a href="#vpc_endpoint_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>endpoint_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC (virtual private cloud) endpoint that the agent has access to.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -561,8 +709,12 @@ Get an existing Agent resource's state with the given name, ID, and optional ext
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">private_link_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">security_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">subnet_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Agent</code></pre></div>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">vpc_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Agent</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -681,7 +833,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DataSync Agent activation key during resource creation. Conflicts with `ip_address`. If an `ip_address` is provided instead, this provider will retrieve the `activation_key` as part of the resource creation.
+    <dd>{{% md %}}DataSync Agent activation key during resource creation. Conflicts with `ip_address`. If an `ip_address` is provided instead, the provider will retrieve the `activation_key` as part of the resource creation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
@@ -711,13 +863,40 @@ The following state arguments are supported:
     <dd>{{% md %}}Name of the DataSync Agent.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_privatelinkendpoint_csharp">
+<a href="#state_privatelinkendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP address of the VPC endpoint the agent should connect to when retrieving an activation key during resource creation. Conflicts with `activation_key`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_securitygrouparns_csharp">
+<a href="#state_securitygrouparns_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The ARNs of the security groups used to protect your data transfer task subnets.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_subnetarns_csharp">
+<a href="#state_subnetarns_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Names (ARNs) of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Agent.
+    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Agent. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_csharp">
@@ -727,6 +906,15 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vpcendpointid_csharp">
+<a href="#state_vpcendpointid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC (virtual private cloud) endpoint that the agent has access to.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -739,7 +927,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DataSync Agent activation key during resource creation. Conflicts with `ip_address`. If an `ip_address` is provided instead, this provider will retrieve the `activation_key` as part of the resource creation.
+    <dd>{{% md %}}DataSync Agent activation key during resource creation. Conflicts with `ip_address`. If an `ip_address` is provided instead, the provider will retrieve the `activation_key` as part of the resource creation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
@@ -769,13 +957,40 @@ The following state arguments are supported:
     <dd>{{% md %}}Name of the DataSync Agent.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_privatelinkendpoint_go">
+<a href="#state_privatelinkendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP address of the VPC endpoint the agent should connect to when retrieving an activation key during resource creation. Conflicts with `activation_key`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_securitygrouparns_go">
+<a href="#state_securitygrouparns_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The ARNs of the security groups used to protect your data transfer task subnets.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_subnetarns_go">
+<a href="#state_subnetarns_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Names (ARNs) of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Agent.
+    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Agent. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_go">
@@ -785,6 +1000,15 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vpcendpointid_go">
+<a href="#state_vpcendpointid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC (virtual private cloud) endpoint that the agent has access to.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -797,7 +1021,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DataSync Agent activation key during resource creation. Conflicts with `ip_address`. If an `ip_address` is provided instead, this provider will retrieve the `activation_key` as part of the resource creation.
+    <dd>{{% md %}}DataSync Agent activation key during resource creation. Conflicts with `ip_address`. If an `ip_address` is provided instead, the provider will retrieve the `activation_key` as part of the resource creation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
@@ -827,13 +1051,40 @@ The following state arguments are supported:
     <dd>{{% md %}}Name of the DataSync Agent.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_privatelinkendpoint_nodejs">
+<a href="#state_privatelinkendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP address of the VPC endpoint the agent should connect to when retrieving an activation key during resource creation. Conflicts with `activation_key`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_securitygrouparns_nodejs">
+<a href="#state_securitygrouparns_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The ARNs of the security groups used to protect your data transfer task subnets.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_subnetarns_nodejs">
+<a href="#state_subnetarns_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Names (ARNs) of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Agent.
+    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Agent. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_nodejs">
@@ -843,6 +1094,15 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vpcendpointid_nodejs">
+<a href="#state_vpcendpointid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Endpoint<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC (virtual private cloud) endpoint that the agent has access to.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -855,7 +1115,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DataSync Agent activation key during resource creation. Conflicts with `ip_address`. If an `ip_address` is provided instead, this provider will retrieve the `activation_key` as part of the resource creation.
+    <dd>{{% md %}}DataSync Agent activation key during resource creation. Conflicts with `ip_address`. If an `ip_address` is provided instead, the provider will retrieve the `activation_key` as part of the resource creation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
@@ -885,13 +1145,40 @@ The following state arguments are supported:
     <dd>{{% md %}}Name of the DataSync Agent.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_private_link_endpoint_python">
+<a href="#state_private_link_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IP address of the VPC endpoint the agent should connect to when retrieving an activation key during resource creation. Conflicts with `activation_key`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_security_group_arns_python">
+<a href="#state_security_group_arns_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The ARNs of the security groups used to protect your data transfer task subnets.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_subnet_arns_python">
+<a href="#state_subnet_arns_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Names (ARNs) of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Agent.
+    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Agent. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_all_python">
@@ -901,6 +1188,15 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vpc_endpoint_id_python">
+<a href="#state_vpc_endpoint_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>endpoint_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC (virtual private cloud) endpoint that the agent has access to.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

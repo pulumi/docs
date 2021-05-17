@@ -441,6 +441,7 @@ const example_AmazonEC2ContainerRegistryReadOnly = new aws.iam.RolePolicyAttachm
               <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
               <span class="nx">launch_template</span><span class="p">:</span> <span class="nx">Optional[NodeGroupLaunchTemplateArgs]</span> = None<span class="p">,</span>
               <span class="nx">node_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">node_group_name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">node_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">release_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">remote_access</span><span class="p">:</span> <span class="nx">Optional[NodeGroupRemoteAccessArgs]</span> = None<span class="p">,</span>
@@ -620,7 +621,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`. This provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`, `CUSTOM`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacitytype_csharp">
@@ -683,7 +684,16 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the EKS Node Group.
+    <dd>{{% md %}}Name of the EKS Node Group. If omitted, this provider will assign a random, unique name. Conflicts with `node_group_name_prefix`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nodegroupnameprefix_csharp">
+<a href="#nodegroupnameprefix_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Group<wbr>Name<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `node_group_name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="releaseversion_csharp">
@@ -719,7 +729,8 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -776,7 +787,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`. This provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`, `CUSTOM`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacitytype_go">
@@ -839,7 +850,16 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the EKS Node Group.
+    <dd>{{% md %}}Name of the EKS Node Group. If omitted, this provider will assign a random, unique name. Conflicts with `node_group_name_prefix`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nodegroupnameprefix_go">
+<a href="#nodegroupnameprefix_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Group<wbr>Name<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `node_group_name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="releaseversion_go">
@@ -875,7 +895,8 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -932,7 +953,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`. This provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`, `CUSTOM`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacitytype_nodejs">
@@ -995,7 +1016,16 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the EKS Node Group.
+    <dd>{{% md %}}Name of the EKS Node Group. If omitted, this provider will assign a random, unique name. Conflicts with `node_group_name_prefix`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nodegroupnameprefix_nodejs">
+<a href="#nodegroupnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Group<wbr>Name<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `node_group_name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="releaseversion_nodejs">
@@ -1031,7 +1061,8 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1088,7 +1119,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`. This provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`, `CUSTOM`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_type_python">
@@ -1151,7 +1182,16 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the EKS Node Group.
+    <dd>{{% md %}}Name of the EKS Node Group. If omitted, this provider will assign a random, unique name. Conflicts with `node_group_name_prefix`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="node_group_name_prefix_python">
+<a href="#node_group_name_prefix_python" style="color: inherit; text-decoration: inherit;">node_<wbr>group_<wbr>name_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `node_group_name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="release_version_python">
@@ -1187,7 +1227,8 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1388,6 +1429,7 @@ Get an existing NodeGroup resource's state with the given name, ID, and optional
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">launch_template</span><span class="p">:</span> <span class="nx">Optional[NodeGroupLaunchTemplateArgs]</span> = None<span class="p">,</span>
         <span class="nx">node_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">node_group_name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">node_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">release_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">remote_access</span><span class="p">:</span> <span class="nx">Optional[NodeGroupRemoteAccessArgs]</span> = None<span class="p">,</span>
@@ -1516,7 +1558,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`. This provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`, `CUSTOM`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
@@ -1597,7 +1639,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the EKS Node Group.
+    <dd>{{% md %}}Name of the EKS Node Group. If omitted, this provider will assign a random, unique name. Conflicts with `node_group_name_prefix`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_nodegroupnameprefix_csharp">
+<a href="#state_nodegroupnameprefix_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Group<wbr>Name<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `node_group_name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noderolearn_csharp">
@@ -1678,7 +1729,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1699,7 +1751,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`. This provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`, `CUSTOM`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
@@ -1780,7 +1832,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the EKS Node Group.
+    <dd>{{% md %}}Name of the EKS Node Group. If omitted, this provider will assign a random, unique name. Conflicts with `node_group_name_prefix`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_nodegroupnameprefix_go">
+<a href="#state_nodegroupnameprefix_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Group<wbr>Name<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `node_group_name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noderolearn_go">
@@ -1861,7 +1922,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1882,7 +1944,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`. This provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`, `CUSTOM`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
@@ -1963,7 +2025,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the EKS Node Group.
+    <dd>{{% md %}}Name of the EKS Node Group. If omitted, this provider will assign a random, unique name. Conflicts with `node_group_name_prefix`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_nodegroupnameprefix_nodejs">
+<a href="#state_nodegroupnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Group<wbr>Name<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `node_group_name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noderolearn_nodejs">
@@ -2044,7 +2115,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2065,7 +2137,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`. This provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`, `CUSTOM`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
@@ -2146,7 +2218,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the EKS Node Group.
+    <dd>{{% md %}}Name of the EKS Node Group. If omitted, this provider will assign a random, unique name. Conflicts with `node_group_name_prefix`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_node_group_name_prefix_python">
+<a href="#state_node_group_name_prefix_python" style="color: inherit; text-decoration: inherit;">node_<wbr>group_<wbr>name_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `node_group_name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_role_arn_python">
@@ -2227,7 +2308,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>

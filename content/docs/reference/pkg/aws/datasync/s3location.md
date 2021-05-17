@@ -139,6 +139,7 @@ const example = new aws.datasync.S3Location("example", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">S3Location</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">agent_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                <span class="nx">s3_bucket_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">s3_config</span><span class="p">:</span> <span class="nx">Optional[S3LocationS3ConfigArgs]</span> = None<span class="p">,</span>
                <span class="nx">s3_storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -301,6 +302,15 @@ The S3Location resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Prefix to perform actions as source or destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="agentarns_csharp">
+<a href="#agentarns_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="s3storageclass_csharp">
 <a href="#s3storageclass_csharp" style="color: inherit; text-decoration: inherit;">S3Storage<wbr>Class</a>
 </span>
@@ -357,6 +367,15 @@ The S3Location resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prefix to perform actions as source or destination.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="agentarns_go">
+<a href="#agentarns_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3storageclass_go">
@@ -417,6 +436,15 @@ The S3Location resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Prefix to perform actions as source or destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="agentarns_nodejs">
+<a href="#agentarns_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="s3storageclass_nodejs">
 <a href="#s3storageclass_nodejs" style="color: inherit; text-decoration: inherit;">s3Storage<wbr>Class</a>
 </span>
@@ -473,6 +501,15 @@ The S3Location resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Prefix to perform actions as source or destination.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="agent_arns_python">
+<a href="#agent_arns_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3_storage_class_python">
@@ -642,6 +679,7 @@ Get an existing S3Location resource's state with the given name, ID, and optiona
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">agent_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">s3_bucket_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">s3_config</span><span class="p">:</span> <span class="nx">Optional[S3LocationS3ConfigArgs]</span> = None<span class="p">,</span>
@@ -762,6 +800,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_agentarns_csharp">
+<a href="#state_agentarns_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
@@ -836,6 +883,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_agentarns_go">
+<a href="#state_agentarns_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -912,6 +968,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_agentarns_nodejs">
+<a href="#state_agentarns_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
@@ -986,6 +1051,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_agent_arns_python">
+<a href="#state_agent_arns_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
