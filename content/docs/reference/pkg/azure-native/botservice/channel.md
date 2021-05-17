@@ -312,7 +312,8 @@ class MyStack : Stack
                 ChannelName = "DirectLineSpeechChannel",
                 Properties = new AzureNative.BotService.Inputs.DirectLineSpeechChannelPropertiesArgs
                 {
-                    CognitiveServicesSubscriptionId = "XcognitiveServicesSubscriptionIdX",
+                    CognitiveServiceRegion = "XcognitiveServiceRegionX",
+                    CognitiveServiceSubscriptionKey = "XcognitiveServiceSubscriptionKeyX",
                     IsEnabled = true,
                 },
             },
@@ -348,7 +349,8 @@ func main() {
 			Properties: botservice.DirectLineSpeechChannel{
 				ChannelName: "DirectLineSpeechChannel",
 				Properties: botservice.DirectLineSpeechChannelProperties{
-					CognitiveServicesSubscriptionId: "XcognitiveServicesSubscriptionIdX",
+					CognitiveServiceRegion:          "XcognitiveServiceRegionX",
+					CognitiveServiceSubscriptionKey: "XcognitiveServiceSubscriptionKeyX",
 					IsEnabled:                       true,
 				},
 			},
@@ -381,7 +383,8 @@ channel = azure_native.botservice.Channel("channel",
     properties=azure_native.botservice.DirectLineSpeechChannelArgs(
         channel_name="DirectLineSpeechChannel",
         properties=azure_native.botservice.DirectLineSpeechChannelPropertiesArgs(
-            cognitive_services_subscription_id="XcognitiveServicesSubscriptionIdX",
+            cognitive_service_region="XcognitiveServiceRegionX",
+            cognitive_service_subscription_key="XcognitiveServiceSubscriptionKeyX",
             is_enabled=True,
         ),
     ),
@@ -407,7 +410,8 @@ const channel = new azure_native.botservice.Channel("channel", {
     properties: {
         channelName: "DirectLineSpeechChannel",
         properties: {
-            cognitiveServicesSubscriptionId: "XcognitiveServicesSubscriptionIdX",
+            cognitiveServiceRegion: "XcognitiveServiceRegionX",
+            cognitiveServiceSubscriptionKey: "XcognitiveServiceSubscriptionKeyX",
             isEnabled: true,
         },
     },
@@ -2255,13 +2259,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cognitiveservicessubscriptionid_csharp">
-<a href="#cognitiveservicessubscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
+        <span id="cognitiveserviceregion_csharp">
+<a href="#cognitiveserviceregion_csharp" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Service<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cognitive service region with this channel registration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cognitiveservicesubscriptionkey_csharp">
+<a href="#cognitiveservicesubscriptionkey_csharp" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Service<wbr>Subscription<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cognitive service subscription key to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customspeechmodelid_csharp">
 <a href="#customspeechmodelid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Speech<wbr>Model<wbr>Id</a>
@@ -2299,13 +2311,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cognitiveservicessubscriptionid_go">
-<a href="#cognitiveservicessubscriptionid_go" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
+        <span id="cognitiveserviceregion_go">
+<a href="#cognitiveserviceregion_go" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Service<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cognitive service region with this channel registration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cognitiveservicesubscriptionkey_go">
+<a href="#cognitiveservicesubscriptionkey_go" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Service<wbr>Subscription<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cognitive service subscription key to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customspeechmodelid_go">
 <a href="#customspeechmodelid_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Speech<wbr>Model<wbr>Id</a>
@@ -2343,13 +2363,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cognitiveservicessubscriptionid_nodejs">
-<a href="#cognitiveservicessubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
+        <span id="cognitiveserviceregion_nodejs">
+<a href="#cognitiveserviceregion_nodejs" style="color: inherit; text-decoration: inherit;">cognitive<wbr>Service<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cognitive service region with this channel registration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cognitiveservicesubscriptionkey_nodejs">
+<a href="#cognitiveservicesubscriptionkey_nodejs" style="color: inherit; text-decoration: inherit;">cognitive<wbr>Service<wbr>Subscription<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cognitive service subscription key to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customspeechmodelid_nodejs">
 <a href="#customspeechmodelid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Speech<wbr>Model<wbr>Id</a>
@@ -2387,13 +2415,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cognitive_services_subscription_id_python">
-<a href="#cognitive_services_subscription_id_python" style="color: inherit; text-decoration: inherit;">cognitive_<wbr>services_<wbr>subscription_<wbr>id</a>
+        <span id="cognitive_service_region_python">
+<a href="#cognitive_service_region_python" style="color: inherit; text-decoration: inherit;">cognitive_<wbr>service_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cognitive service region with this channel registration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cognitive_service_subscription_key_python">
+<a href="#cognitive_service_subscription_key_python" style="color: inherit; text-decoration: inherit;">cognitive_<wbr>service_<wbr>subscription_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cognitive service subscription key to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_speech_model_id_python">
 <a href="#custom_speech_model_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>speech_<wbr>model_<wbr>id</a>
@@ -2433,13 +2469,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cognitiveservicessubscriptionid_csharp">
-<a href="#cognitiveservicessubscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
+        <span id="cognitiveserviceregion_csharp">
+<a href="#cognitiveserviceregion_csharp" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Service<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cognitive service region with this channel registration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cognitiveservicesubscriptionkey_csharp">
+<a href="#cognitiveservicesubscriptionkey_csharp" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Service<wbr>Subscription<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cognitive service subscription key to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customspeechmodelid_csharp">
 <a href="#customspeechmodelid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Speech<wbr>Model<wbr>Id</a>
@@ -2477,13 +2521,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cognitiveservicessubscriptionid_go">
-<a href="#cognitiveservicessubscriptionid_go" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
+        <span id="cognitiveserviceregion_go">
+<a href="#cognitiveserviceregion_go" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Service<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cognitive service region with this channel registration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cognitiveservicesubscriptionkey_go">
+<a href="#cognitiveservicesubscriptionkey_go" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Service<wbr>Subscription<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cognitive service subscription key to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customspeechmodelid_go">
 <a href="#customspeechmodelid_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Speech<wbr>Model<wbr>Id</a>
@@ -2521,13 +2573,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cognitiveservicessubscriptionid_nodejs">
-<a href="#cognitiveservicessubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
+        <span id="cognitiveserviceregion_nodejs">
+<a href="#cognitiveserviceregion_nodejs" style="color: inherit; text-decoration: inherit;">cognitive<wbr>Service<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cognitive service region with this channel registration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cognitiveservicesubscriptionkey_nodejs">
+<a href="#cognitiveservicesubscriptionkey_nodejs" style="color: inherit; text-decoration: inherit;">cognitive<wbr>Service<wbr>Subscription<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cognitive service subscription key to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customspeechmodelid_nodejs">
 <a href="#customspeechmodelid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Speech<wbr>Model<wbr>Id</a>
@@ -2565,13 +2625,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cognitive_services_subscription_id_python">
-<a href="#cognitive_services_subscription_id_python" style="color: inherit; text-decoration: inherit;">cognitive_<wbr>services_<wbr>subscription_<wbr>id</a>
+        <span id="cognitive_service_region_python">
+<a href="#cognitive_service_region_python" style="color: inherit; text-decoration: inherit;">cognitive_<wbr>service_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cognitive service region with this channel registration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cognitive_service_subscription_key_python">
+<a href="#cognitive_service_subscription_key_python" style="color: inherit; text-decoration: inherit;">cognitive_<wbr>service_<wbr>subscription_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cognitive service subscription key to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_speech_model_id_python">
 <a href="#custom_speech_model_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>speech_<wbr>model_<wbr>id</a>

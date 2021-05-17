@@ -15248,40 +15248,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="compressioncodec">Compression<wbr>Codec</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>None</dt>
-    <dd>none</dd><dt>Gzip</dt>
-    <dd>gzip</dd><dt>Snappy</dt>
-    <dd>snappy</dd><dt>Lzo</dt>
-    <dd>lzo</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Compression<wbr>Codec<wbr>None</dt>
-    <dd>none</dd><dt>Compression<wbr>Codec<wbr>Gzip</dt>
-    <dd>gzip</dd><dt>Compression<wbr>Codec<wbr>Snappy</dt>
-    <dd>snappy</dd><dt>Compression<wbr>Codec<wbr>Lzo</dt>
-    <dd>lzo</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>None</dt>
-    <dd>none</dd><dt>Gzip</dt>
-    <dd>gzip</dd><dt>Snappy</dt>
-    <dd>snappy</dd><dt>Lzo</dt>
-    <dd>lzo</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>NONE</dt>
-    <dd>none</dd><dt>GZIP</dt>
-    <dd>gzip</dd><dt>SNAPPY</dt>
-    <dd>snappy</dd><dt>LZO</dt>
-    <dd>lzo</dd></dl>
-{{% /choosable %}}
-
 <h4 id="concurobjectdataset">Concur<wbr>Object<wbr>Dataset</h4>
 
 {{% choosable language csharp %}}
@@ -17994,32 +17960,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="resources-properties"></dl>
 {{% /choosable %}}
 
-<h4 id="datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Optimal</dt>
-    <dd>Optimal</dd><dt>Fastest</dt>
-    <dd>Fastest</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Dataset<wbr>Compression<wbr>Level<wbr>Optimal</dt>
-    <dd>Optimal</dd><dt>Dataset<wbr>Compression<wbr>Level<wbr>Fastest</dt>
-    <dd>Fastest</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Optimal</dt>
-    <dd>Optimal</dd><dt>Fastest</dt>
-    <dd>Fastest</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>OPTIMAL</dt>
-    <dd>Optimal</dd><dt>FASTEST</dt>
-    <dd>Fastest</dd></dl>
-{{% /choosable %}}
-
 <h4 id="datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</h4>
 
 {{% choosable language csharp %}}
@@ -18029,7 +17969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18041,7 +17981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18053,7 +17993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18065,7 +18005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18079,7 +18019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18091,7 +18031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18103,7 +18043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18115,7 +18055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18179,7 +18119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18191,7 +18131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18203,7 +18143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18215,7 +18155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18229,7 +18169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18241,7 +18181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18253,7 +18193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18265,7 +18205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18365,7 +18305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18377,7 +18317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18389,7 +18329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18401,7 +18341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18415,7 +18355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18427,7 +18367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18439,7 +18379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18451,7 +18391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18465,7 +18405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18477,7 +18417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18489,7 +18429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18501,7 +18441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18515,7 +18455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18527,7 +18467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18539,7 +18479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18551,7 +18491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19209,15 +19149,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#compressioncodec">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Compression<wbr>Codec</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressionlevel_csharp">
 <a href="#compressionlevel_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19349,15 +19289,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compressioncodec_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#compressioncodec">Compression<wbr>Codec</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressionlevel_go">
 <a href="#compressionlevel_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19489,15 +19429,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#compressioncodec">Compression<wbr>Codec</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressionlevel_nodejs">
 <a href="#compressionlevel_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19629,15 +19569,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#compressioncodec">Compression<wbr>Codec</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_level_python">
 <a href="#compression_level_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19771,15 +19711,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressionlevel_csharp">
 <a href="#compressionlevel_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19911,15 +19851,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compressioncodec_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressionlevel_go">
 <a href="#compressionlevel_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20051,15 +19991,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressionlevel_nodejs">
 <a href="#compressionlevel_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20191,15 +20131,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_level_python">
 <a href="#compression_level_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33357,7 +33297,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#filepattern_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#jsonformatfilepattern">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Json<wbr>Format<wbr>File<wbr>Pattern</a></span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33417,7 +33357,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#filepattern_go" style="color: inherit; text-decoration: inherit;">File<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#jsonformatfilepattern">Json<wbr>Format<wbr>File<wbr>Pattern</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33477,7 +33417,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#filepattern_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#jsonformatfilepattern">Json<wbr>Format<wbr>File<wbr>Pattern</a></span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33537,7 +33477,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#file_pattern_python" style="color: inherit; text-decoration: inherit;">file_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#jsonformatfilepattern">Json<wbr>Format<wbr>File<wbr>Pattern</a></span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33574,32 +33514,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
     <dd>{{% md %}}Serializer. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="jsonformatfilepattern">Json<wbr>Format<wbr>File<wbr>Pattern</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Set<wbr>Of<wbr>Objects</dt>
-    <dd>setOfObjects</dd><dt>Array<wbr>Of<wbr>Objects</dt>
-    <dd>arrayOfObjects</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Json<wbr>Format<wbr>File<wbr>Pattern<wbr>Set<wbr>Of<wbr>Objects</dt>
-    <dd>setOfObjects</dd><dt>Json<wbr>Format<wbr>File<wbr>Pattern<wbr>Array<wbr>Of<wbr>Objects</dt>
-    <dd>arrayOfObjects</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Set<wbr>Of<wbr>Objects</dt>
-    <dd>setOfObjects</dd><dt>Array<wbr>Of<wbr>Objects</dt>
-    <dd>arrayOfObjects</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>SET_OF_OBJECTS</dt>
-    <dd>setOfObjects</dd><dt>ARRAY_OF_OBJECTS</dt>
-    <dd>arrayOfObjects</dd></dl>
-{{% /choosable %}}
-
 <h4 id="jsonformatresponse">Json<wbr>Format<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -33625,7 +33539,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#filepattern_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33685,7 +33599,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#filepattern_go" style="color: inherit; text-decoration: inherit;">File<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33745,7 +33659,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#filepattern_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33805,7 +33719,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#file_pattern_python" style="color: inherit; text-decoration: inherit;">file_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -43279,9 +43193,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#compressioncodec">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Compression<wbr>Codec</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -43355,9 +43269,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compressioncodec_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#compressioncodec">Compression<wbr>Codec</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -43431,9 +43345,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#compressioncodec">Compression<wbr>Codec</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -43507,9 +43421,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#compressioncodec">Compression<wbr>Codec</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -43585,9 +43499,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -43661,9 +43575,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compressioncodec_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -43737,9 +43651,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -43813,9 +43727,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>

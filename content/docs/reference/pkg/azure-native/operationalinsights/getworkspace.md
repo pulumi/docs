@@ -220,7 +220,7 @@ The following output properties are available:
 <a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#workspacefeaturesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Operational<wbr>Insights.<wbr>Outputs.<wbr>Workspace<wbr>Features<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Workspace features.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -368,7 +368,7 @@ The following output properties are available:
 <a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#workspacefeaturesresponse">Workspace<wbr>Features<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Workspace features.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -516,7 +516,7 @@ The following output properties are available:
 <a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#workspacefeaturesresponse">Workspace<wbr>Features<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Workspace features.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -664,7 +664,7 @@ The following output properties are available:
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#workspacefeaturesresponse">Workspace<wbr>Features<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Workspace features.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -937,6 +937,154 @@ The following output properties are available:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="workspacefeaturesresponse">Workspace<wbr>Features<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clusterresourceid_csharp">
+<a href="#clusterresourceid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Dedicated LA cluster resourceId that is linked to the workspaces.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledataexport_csharp">
+<a href="#enabledataexport_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Data<wbr>Export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicate if data should be exported.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablelogaccessusingonlyresourcepermissions_csharp">
+<a href="#enablelogaccessusingonlyresourcepermissions_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Log<wbr>Access<wbr>Using<wbr>Only<wbr>Resource<wbr>Permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicate which permission to use - resource or workspace or both.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="immediatepurgedataon30days_csharp">
+<a href="#immediatepurgedataon30days_csharp" style="color: inherit; text-decoration: inherit;">Immediate<wbr>Purge<wbr>Data<wbr>On30Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that describes if we want to remove the data after 30 days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clusterresourceid_go">
+<a href="#clusterresourceid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Dedicated LA cluster resourceId that is linked to the workspaces.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledataexport_go">
+<a href="#enabledataexport_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Data<wbr>Export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicate if data should be exported.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablelogaccessusingonlyresourcepermissions_go">
+<a href="#enablelogaccessusingonlyresourcepermissions_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Log<wbr>Access<wbr>Using<wbr>Only<wbr>Resource<wbr>Permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicate which permission to use - resource or workspace or both.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="immediatepurgedataon30days_go">
+<a href="#immediatepurgedataon30days_go" style="color: inherit; text-decoration: inherit;">Immediate<wbr>Purge<wbr>Data<wbr>On30Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that describes if we want to remove the data after 30 days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clusterresourceid_nodejs">
+<a href="#clusterresourceid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Dedicated LA cluster resourceId that is linked to the workspaces.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledataexport_nodejs">
+<a href="#enabledataexport_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Data<wbr>Export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicate if data should be exported.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablelogaccessusingonlyresourcepermissions_nodejs">
+<a href="#enablelogaccessusingonlyresourcepermissions_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Log<wbr>Access<wbr>Using<wbr>Only<wbr>Resource<wbr>Permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicate which permission to use - resource or workspace or both.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="immediatepurgedataon30days_nodejs">
+<a href="#immediatepurgedataon30days_nodejs" style="color: inherit; text-decoration: inherit;">immediate<wbr>Purge<wbr>Data<wbr>On30Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that describes if we want to remove the data after 30 days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cluster_resource_id_python">
+<a href="#cluster_resource_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Dedicated LA cluster resourceId that is linked to the workspaces.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_data_export_python">
+<a href="#enable_data_export_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>data_<wbr>export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicate if data should be exported.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_log_access_using_only_resource_permissions_python">
+<a href="#enable_log_access_using_only_resource_permissions_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>log_<wbr>access_<wbr>using_<wbr>only_<wbr>resource_<wbr>permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicate which permission to use - resource or workspace or both.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="immediate_purge_data_on30_days_python">
+<a href="#immediate_purge_data_on30_days_python" style="color: inherit; text-decoration: inherit;">immediate_<wbr>purge_<wbr>data_<wbr>on30_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that describes if we want to remove the data after 30 days.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workspaceskuresponse">Workspace<wbr>Sku<wbr>Response</h4>

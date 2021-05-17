@@ -193,6 +193,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="resourceguid_csharp">
+<a href="#resourceguid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resourceGuid property of the Virtual Network peering resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="allowforwardedtraffic_csharp">
 <a href="#allowforwardedtraffic_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forwarded<wbr>Traffic</a>
 </span>
@@ -216,6 +224,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="donotverifyremotegateways_csharp">
+<a href="#donotverifyremotegateways_csharp" style="color: inherit; text-decoration: inherit;">Do<wbr>Not<wbr>Verify<wbr>Remote<wbr>Gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -265,6 +281,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="useremotegateways_csharp">
 <a href="#useremotegateways_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Remote<wbr>Gateways</a>
 </span>
@@ -293,6 +317,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="resourceguid_go">
+<a href="#resourceguid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resourceGuid property of the Virtual Network peering resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="allowforwardedtraffic_go">
 <a href="#allowforwardedtraffic_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forwarded<wbr>Traffic</a>
 </span>
@@ -316,6 +348,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="donotverifyremotegateways_go">
+<a href="#donotverifyremotegateways_go" style="color: inherit; text-decoration: inherit;">Do<wbr>Not<wbr>Verify<wbr>Remote<wbr>Gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -365,6 +405,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="useremotegateways_go">
 <a href="#useremotegateways_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Remote<wbr>Gateways</a>
 </span>
@@ -393,6 +441,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="resourceguid_nodejs">
+<a href="#resourceguid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resourceGuid property of the Virtual Network peering resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="allowforwardedtraffic_nodejs">
 <a href="#allowforwardedtraffic_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forwarded<wbr>Traffic</a>
 </span>
@@ -416,6 +472,14 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="donotverifyremotegateways_nodejs">
+<a href="#donotverifyremotegateways_nodejs" style="color: inherit; text-decoration: inherit;">do<wbr>Not<wbr>Verify<wbr>Remote<wbr>Gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -465,6 +529,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="useremotegateways_nodejs">
 <a href="#useremotegateways_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Remote<wbr>Gateways</a>
 </span>
@@ -493,6 +565,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="resource_guid_python">
+<a href="#resource_guid_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resourceGuid property of the Virtual Network peering resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="allow_forwarded_traffic_python">
 <a href="#allow_forwarded_traffic_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forwarded_<wbr>traffic</a>
 </span>
@@ -516,6 +596,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="do_not_verify_remote_gateways_python">
+<a href="#do_not_verify_remote_gateways_python" style="color: inherit; text-decoration: inherit;">do_<wbr>not_<wbr>verify_<wbr>remote_<wbr>gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -564,6 +652,14 @@ The following output properties are available:
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="use_remote_gateways_python">
 <a href="#use_remote_gateways_python" style="color: inherit; text-decoration: inherit;">use_<wbr>remote_<wbr>gateways</a>
