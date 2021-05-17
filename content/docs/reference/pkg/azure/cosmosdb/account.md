@@ -101,7 +101,7 @@ package main
 import (
 	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
 	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/cosmosdb"
-	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -288,12 +288,15 @@ const db = new azure.cosmosdb.Account("db", {
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">access_key_metadata_writes_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">analytical_storage_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[AccountBackupArgs]</span> = None<span class="p">,</span>
             <span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountCapabilityArgs]]</span> = None<span class="p">,</span>
             <span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[AccountConsistencyPolicyArgs]</span> = None<span class="p">,</span>
+            <span class="nx">cors_rule</span><span class="p">:</span> <span class="nx">Optional[AccountCorsRuleArgs]</span> = None<span class="p">,</span>
             <span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">geo_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountGeoLocationArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[AccountIdentityArgs]</span> = None<span class="p">,</span>
             <span class="nx">ip_range_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">key_vault_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -491,6 +494,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="backup_csharp">
+<a href="#backup_csharp" style="color: inherit; text-decoration: inherit;">Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountbackup">Account<wbr>Backup<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `backup` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="capabilities_csharp">
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
@@ -498,6 +510,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#accountcapability">List&lt;Account<wbr>Capability<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="corsrule_csharp">
+<a href="#corsrule_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountcorsrule">Account<wbr>Cors<wbr>Rule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableautomaticfailover_csharp">
@@ -525,6 +546,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprangefilter_csharp">
@@ -693,6 +723,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="backup_go">
+<a href="#backup_go" style="color: inherit; text-decoration: inherit;">Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountbackup">Account<wbr>Backup</a></span>
+    </dt>
+    <dd>{{% md %}}A `backup` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="capabilities_go">
 <a href="#capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
@@ -700,6 +739,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#accountcapability">[]Account<wbr>Capability</a></span>
     </dt>
     <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="corsrule_go">
+<a href="#corsrule_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountcorsrule">Account<wbr>Cors<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableautomaticfailover_go">
@@ -727,6 +775,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprangefilter_go">
@@ -895,6 +952,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="backup_nodejs">
+<a href="#backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountbackup">Account<wbr>Backup<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `backup` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="capabilities_nodejs">
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
@@ -902,6 +968,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#accountcapability">Account<wbr>Capability<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="corsrule_nodejs">
+<a href="#corsrule_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountcorsrule">Account<wbr>Cors<wbr>Rule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableautomaticfailover_nodejs">
@@ -929,6 +1004,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprangefilter_nodejs">
@@ -1097,6 +1181,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="backup_python">
+<a href="#backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountbackup">Account<wbr>Backup<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `backup` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="capabilities_python">
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
@@ -1104,6 +1197,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#accountcapability">Sequence[Account<wbr>Capability<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cors_rule_python">
+<a href="#cors_rule_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountcorsrule">Account<wbr>Cors<wbr>Rule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_automatic_failover_python">
@@ -1131,6 +1233,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_range_filter_python">
@@ -1731,14 +1842,17 @@ Get an existing Account resource's state with the given name, ID, and optional e
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">access_key_metadata_writes_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">analytical_storage_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[AccountBackupArgs]</span> = None<span class="p">,</span>
         <span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountCapabilityArgs]]</span> = None<span class="p">,</span>
         <span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[AccountConsistencyPolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">cors_rule</span><span class="p">:</span> <span class="nx">Optional[AccountCorsRuleArgs]</span> = None<span class="p">,</span>
         <span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">geo_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountGeoLocationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[AccountIdentityArgs]</span> = None<span class="p">,</span>
         <span class="nx">ip_range_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">key_vault_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1893,6 +2007,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_backup_csharp">
+<a href="#state_backup_csharp" style="color: inherit; text-decoration: inherit;">Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountbackup">Account<wbr>Backup<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `backup` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_capabilities_csharp">
 <a href="#state_capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
@@ -1918,6 +2041,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_corsrule_csharp">
+<a href="#state_corsrule_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountcorsrule">Account<wbr>Cors<wbr>Rule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableautomaticfailover_csharp">
@@ -1963,6 +2095,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#accountgeolocation">List&lt;Account<wbr>Geo<wbr>Location<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location. Value is a `geo_location` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_csharp">
+<a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iprangefilter_csharp">
@@ -2199,6 +2340,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_backup_go">
+<a href="#state_backup_go" style="color: inherit; text-decoration: inherit;">Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountbackup">Account<wbr>Backup</a></span>
+    </dt>
+    <dd>{{% md %}}A `backup` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_capabilities_go">
 <a href="#state_capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
@@ -2224,6 +2374,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_corsrule_go">
+<a href="#state_corsrule_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountcorsrule">Account<wbr>Cors<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableautomaticfailover_go">
@@ -2269,6 +2428,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#accountgeolocation">[]Account<wbr>Geo<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location. Value is a `geo_location` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_go">
+<a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iprangefilter_go">
@@ -2505,6 +2673,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_backup_nodejs">
+<a href="#state_backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountbackup">Account<wbr>Backup<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `backup` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_capabilities_nodejs">
 <a href="#state_capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
@@ -2530,6 +2707,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_corsrule_nodejs">
+<a href="#state_corsrule_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountcorsrule">Account<wbr>Cors<wbr>Rule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableautomaticfailover_nodejs">
@@ -2575,6 +2761,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#accountgeolocation">Account<wbr>Geo<wbr>Location<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location. Value is a `geo_location` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_nodejs">
+<a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iprangefilter_nodejs">
@@ -2811,6 +3006,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_backup_python">
+<a href="#state_backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountbackup">Account<wbr>Backup<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `backup` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_capabilities_python">
 <a href="#state_capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
@@ -2836,6 +3040,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_cors_rule_python">
+<a href="#state_cors_rule_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountcorsrule">Account<wbr>Cors<wbr>Rule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_automatic_failover_python">
@@ -2881,6 +3094,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#accountgeolocation">Sequence[Account<wbr>Geo<wbr>Location<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location. Value is a `geo_location` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_python">
+<a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_range_filter_python">
@@ -3105,6 +3327,132 @@ The following state arguments are supported:
 
 
 
+<h4 id="accountbackup">Account<wbr>Backup</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the `backup`. Possible values are `Continuous` and `Periodic`. Defaults to `Periodic`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalinminutes_csharp">
+<a href="#intervalinminutes_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The interval in minutes between two backups. This is configurable only when `type` is `Periodic`. Possible values are between 60 and 1440.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentioninhours_csharp">
+<a href="#retentioninhours_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time in hours that each backup is retained. This is configurable only when `type` is `Periodic`. Possible values are between 8 and 720.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the `backup`. Possible values are `Continuous` and `Periodic`. Defaults to `Periodic`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalinminutes_go">
+<a href="#intervalinminutes_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The interval in minutes between two backups. This is configurable only when `type` is `Periodic`. Possible values are between 60 and 1440.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentioninhours_go">
+<a href="#retentioninhours_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time in hours that each backup is retained. This is configurable only when `type` is `Periodic`. Possible values are between 8 and 720.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the `backup`. Possible values are `Continuous` and `Periodic`. Defaults to `Periodic`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalinminutes_nodejs">
+<a href="#intervalinminutes_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The interval in minutes between two backups. This is configurable only when `type` is `Periodic`. Possible values are between 60 and 1440.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentioninhours_nodejs">
+<a href="#retentioninhours_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The time in hours that each backup is retained. This is configurable only when `type` is `Periodic`. Possible values are between 8 and 720.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the `backup`. Possible values are `Continuous` and `Periodic`. Defaults to `Periodic`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_in_minutes_python">
+<a href="#interval_in_minutes_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The interval in minutes between two backups. This is configurable only when `type` is `Periodic`. Possible values are between 60 and 1440.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retention_in_hours_python">
+<a href="#retention_in_hours_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time in hours that each backup is retained. This is configurable only when `type` is `Periodic`. Possible values are between 8 and 720.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="accountcapability">Account<wbr>Capability</h4>
 
 {{% choosable language csharp %}}
@@ -3282,6 +3630,204 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is `10` – `2147483647`. Defaults to `100`. Required when `consistency_level` is set to `BoundedStaleness`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="accountcorsrule">Account<wbr>Cors<wbr>Rule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedheaders_csharp">
+<a href="#allowedheaders_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="allowedmethods_csharp">
+<a href="#allowedmethods_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are  `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="allowedorigins_csharp">
+<a href="#allowedorigins_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="exposedheaders_csharp">
+<a href="#exposedheaders_csharp" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maxageinseconds_csharp">
+<a href="#maxageinseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds the client should cache a preflight response.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedheaders_go">
+<a href="#allowedheaders_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="allowedmethods_go">
+<a href="#allowedmethods_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are  `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="allowedorigins_go">
+<a href="#allowedorigins_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="exposedheaders_go">
+<a href="#exposedheaders_go" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maxageinseconds_go">
+<a href="#maxageinseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds the client should cache a preflight response.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedheaders_nodejs">
+<a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="allowedmethods_nodejs">
+<a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are  `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="allowedorigins_nodejs">
+<a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="exposedheaders_nodejs">
+<a href="#exposedheaders_nodejs" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maxageinseconds_nodejs">
+<a href="#maxageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds the client should cache a preflight response.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowed_headers_python">
+<a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="allowed_methods_python">
+<a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are  `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="allowed_origins_python">
+<a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="exposed_headers_python">
+<a href="#exposed_headers_python" style="color: inherit; text-decoration: inherit;">exposed_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="max_age_in_seconds_python">
+<a href="#max_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds the client should cache a preflight response.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3480,6 +4026,132 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should zone redundancy be enabled for this region? Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="accountidentity">Account<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this Cosmos Account. Possible value is only `SystemAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Principal ID associated with this Managed Service Identity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Tenant ID associated with this Managed Service Identity.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this Cosmos Account. Possible value is only `SystemAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Principal ID associated with this Managed Service Identity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Tenant ID associated with this Managed Service Identity.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this Cosmos Account. Possible value is only `SystemAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Principal ID associated with this Managed Service Identity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Tenant ID associated with this Managed Service Identity.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this Cosmos Account. Possible value is only `SystemAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Principal ID associated with this Managed Service Identity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Tenant ID associated with this Managed Service Identity.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

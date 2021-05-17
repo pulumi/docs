@@ -240,6 +240,7 @@ const example = new azure.cosmosdb.SqlContainer("example", {
 <span class="k">def </span><span class="nx">SqlContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                  <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">analytical_storage_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                  <span class="nx">autoscale_settings</span><span class="p">:</span> <span class="nx">Optional[SqlContainerAutoscaleSettingsArgs]</span> = None<span class="p">,</span>
                  <span class="nx">conflict_resolution_policy</span><span class="p">:</span> <span class="nx">Optional[SqlContainerConflictResolutionPolicyArgs]</span> = None<span class="p">,</span>
                  <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -416,6 +417,15 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The name of the resource group in which the Cosmos DB SQL Container is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="analyticalstoragettl_csharp">
+<a href="#analyticalstoragettl_csharp" style="color: inherit; text-decoration: inherit;">Analytical<wbr>Storage<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The default time to live of Analytical Storage for this SQL container. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="autoscalesettings_csharp">
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
@@ -526,6 +536,15 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Cosmos DB SQL Container is created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="analyticalstoragettl_go">
+<a href="#analyticalstoragettl_go" style="color: inherit; text-decoration: inherit;">Analytical<wbr>Storage<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The default time to live of Analytical Storage for this SQL container. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalesettings_go">
@@ -640,6 +659,15 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The name of the resource group in which the Cosmos DB SQL Container is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="analyticalstoragettl_nodejs">
+<a href="#analyticalstoragettl_nodejs" style="color: inherit; text-decoration: inherit;">analytical<wbr>Storage<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The default time to live of Analytical Storage for this SQL container. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="autoscalesettings_nodejs">
 <a href="#autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
 </span>
@@ -750,6 +778,15 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Cosmos DB SQL Container is created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="analytical_storage_ttl_python">
+<a href="#analytical_storage_ttl_python" style="color: inherit; text-decoration: inherit;">analytical_<wbr>storage_<wbr>ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The default time to live of Analytical Storage for this SQL container. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_settings_python">
@@ -897,6 +934,7 @@ Get an existing SqlContainer resource's state with the given name, ID, and optio
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">analytical_storage_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">autoscale_settings</span><span class="p">:</span> <span class="nx">Optional[SqlContainerAutoscaleSettingsArgs]</span> = None<span class="p">,</span>
         <span class="nx">conflict_resolution_policy</span><span class="p">:</span> <span class="nx">Optional[SqlContainerConflictResolutionPolicyArgs]</span> = None<span class="p">,</span>
         <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1029,6 +1067,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Cosmos DB Account to create the container within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_analyticalstoragettl_csharp">
+<a href="#state_analyticalstoragettl_csharp" style="color: inherit; text-decoration: inherit;">Analytical<wbr>Storage<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The default time to live of Analytical Storage for this SQL container. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_autoscalesettings_csharp">
 <a href="#state_autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
@@ -1139,6 +1186,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB Account to create the container within. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_analyticalstoragettl_go">
+<a href="#state_analyticalstoragettl_go" style="color: inherit; text-decoration: inherit;">Analytical<wbr>Storage<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The default time to live of Analytical Storage for this SQL container. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalesettings_go">
@@ -1253,6 +1309,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Cosmos DB Account to create the container within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_analyticalstoragettl_nodejs">
+<a href="#state_analyticalstoragettl_nodejs" style="color: inherit; text-decoration: inherit;">analytical<wbr>Storage<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The default time to live of Analytical Storage for this SQL container. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_autoscalesettings_nodejs">
 <a href="#state_autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
 </span>
@@ -1363,6 +1428,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB Account to create the container within. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_analytical_storage_ttl_python">
+<a href="#state_analytical_storage_ttl_python" style="color: inherit; text-decoration: inherit;">analytical_<wbr>storage_<wbr>ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The default time to live of Analytical Storage for this SQL container. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscale_settings_python">

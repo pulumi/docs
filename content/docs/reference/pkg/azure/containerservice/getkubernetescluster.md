@@ -1615,6 +1615,15 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the Application Gateway integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when gateway_id is specified when configuring the `ingress_application_gateway` addon.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ingressapplicationgatewayidentities_csharp">
+<a href="#ingressapplicationgatewayidentities_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Application<wbr>Gateway<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="subnetcidr_csharp">
 <a href="#subnetcidr_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Cidr</a>
 </span>
@@ -1662,6 +1671,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Gateway integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when gateway_id is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ingressapplicationgatewayidentities_go">
+<a href="#ingressapplicationgatewayidentities_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Application<wbr>Gateway<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway_identity` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetcidr_go">
@@ -1713,6 +1731,15 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the Application Gateway integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when gateway_id is specified when configuring the `ingress_application_gateway` addon.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ingressapplicationgatewayidentities_nodejs">
+<a href="#ingressapplicationgatewayidentities_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Application<wbr>Gateway<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity[]</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="subnetcidr_nodejs">
 <a href="#subnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Cidr</a>
 </span>
@@ -1762,6 +1789,15 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the Application Gateway integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when gateway_id is specified when configuring the `ingress_application_gateway` addon.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ingress_application_gateway_identities_python">
+<a href="#ingress_application_gateway_identities_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>application_<wbr>gateway_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity]</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="subnet_cidr_python">
 <a href="#subnet_cidr_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>cidr</a>
 </span>
@@ -1778,6 +1814,134 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the subnet on which to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when `subnet_id` is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getkubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="objectid_csharp">
+<a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityid_csharp">
+<a href="#userassignedidentityid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="objectid_go">
+<a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityid_go">
+<a href="#userassignedidentityid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="objectid_nodejs">
+<a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityid_nodejs">
+<a href="#userassignedidentityid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="object_id_python">
+<a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="user_assigned_identity_id_python">
+<a href="#user_assigned_identity_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

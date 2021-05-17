@@ -514,7 +514,8 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Azure Billing Scope ID. Can be either a Microsoft Customer Account Billing Scope ID or an Enrollment Billing Scope ID.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -522,7 +523,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Subscription. Cannot be specified with `billing_account`, `billing_profile`, `enrollment_account`, or `invoice_section` Changing this forces a new Subscription to be created.
+    <dd>{{% md %}}The ID of the Subscription. Changing this forces a new Subscription to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workload_csharp">
@@ -562,7 +563,8 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Azure Billing Scope ID. Can be either a Microsoft Customer Account Billing Scope ID or an Enrollment Billing Scope ID.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -570,7 +572,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Subscription. Cannot be specified with `billing_account`, `billing_profile`, `enrollment_account`, or `invoice_section` Changing this forces a new Subscription to be created.
+    <dd>{{% md %}}The ID of the Subscription. Changing this forces a new Subscription to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workload_go">
@@ -610,7 +612,8 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Azure Billing Scope ID. Can be either a Microsoft Customer Account Billing Scope ID or an Enrollment Billing Scope ID.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
@@ -618,7 +621,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Subscription. Cannot be specified with `billing_account`, `billing_profile`, `enrollment_account`, or `invoice_section` Changing this forces a new Subscription to be created.
+    <dd>{{% md %}}The ID of the Subscription. Changing this forces a new Subscription to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workload_nodejs">
@@ -658,7 +661,8 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Azure Billing Scope ID. Can be either a Microsoft Customer Account Billing Scope ID or an Enrollment Billing Scope ID.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
@@ -666,7 +670,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Subscription. Cannot be specified with `billing_account`, `billing_profile`, `enrollment_account`, or `invoice_section` Changing this forces a new Subscription to be created.
+    <dd>{{% md %}}The ID of the Subscription. Changing this forces a new Subscription to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workload_python">
@@ -952,7 +956,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Azure Billing Scope ID. Can be either a Microsoft Customer Account Billing Scope ID or an Enrollment Billing Scope ID.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptionid_csharp">
 <a href="#state_subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -960,7 +965,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Subscription. Cannot be specified with `billing_account`, `billing_profile`, `enrollment_account`, or `invoice_section` Changing this forces a new Subscription to be created.
+    <dd>{{% md %}}The ID of the Subscription. Changing this forces a new Subscription to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptionname_csharp">
@@ -1017,7 +1022,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Azure Billing Scope ID. Can be either a Microsoft Customer Account Billing Scope ID or an Enrollment Billing Scope ID.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptionid_go">
 <a href="#state_subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -1025,7 +1031,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Subscription. Cannot be specified with `billing_account`, `billing_profile`, `enrollment_account`, or `invoice_section` Changing this forces a new Subscription to be created.
+    <dd>{{% md %}}The ID of the Subscription. Changing this forces a new Subscription to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptionname_go">
@@ -1082,7 +1088,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Azure Billing Scope ID. Can be either a Microsoft Customer Account Billing Scope ID or an Enrollment Billing Scope ID.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptionid_nodejs">
 <a href="#state_subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
@@ -1090,7 +1097,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Subscription. Cannot be specified with `billing_account`, `billing_profile`, `enrollment_account`, or `invoice_section` Changing this forces a new Subscription to be created.
+    <dd>{{% md %}}The ID of the Subscription. Changing this forces a new Subscription to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptionname_nodejs">
@@ -1147,7 +1154,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Azure Billing Scope ID. Can be either a Microsoft Customer Account Billing Scope ID or an Enrollment Billing Scope ID.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscription_id_python">
 <a href="#state_subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
@@ -1155,7 +1163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Subscription. Cannot be specified with `billing_account`, `billing_profile`, `enrollment_account`, or `invoice_section` Changing this forces a new Subscription to be created.
+    <dd>{{% md %}}The ID of the Subscription. Changing this forces a new Subscription to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscription_name_python">

@@ -162,7 +162,7 @@ import (
 	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/appplatform"
 	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
 	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/keyvault"
-	"github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi-azuread/sdk/v4/go/azuread"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
