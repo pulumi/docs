@@ -104,9 +104,9 @@ The following SDKs are available to work with IaaS resources, and managed or sel
 The packages are available in Node.js (Javascript and Typescript), Python, Go, and .NET.
 
 - AWS: [`pulumi/aws`](https://github.com/pulumi/aws)
-- Azure: [`pulumi/azure`](https://github.com/pulumi/pulumi-azure)
+- Azure: [`pulumi/azure-native`](https://github.com/pulumi/pulumi-azure-native)
 - DigitalOcean: [`pulumi/digitalocean`](https://github.com/pulumi/pulumi-digitalocean)
-- GCP: [`pulumi/gcp`](https://github.com/pulumi/gcp)
+- Google Cloud: [`pulumi/gcp`](https://github.com/pulumi/gcp)
 
 #### Extension Packages
 
