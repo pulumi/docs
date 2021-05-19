@@ -11,6 +11,9 @@ Explore the resources and functions of the azure-native.machinelearningservices 
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="aciservice" title="ACIService"><span class="symbol resource"></span>ACIService</a></li>
+    <li><a href="aksservice" title="AKSService"><span class="symbol resource"></span>AKSService</a></li>
+    <li><a href="endpointvariant" title="EndpointVariant"><span class="symbol resource"></span>EndpointVariant</a></li>
     <li><a href="labelingjob" title="LabelingJob"><span class="symbol resource"></span>LabelingJob</a></li>
     <li><a href="linkedservice" title="LinkedService"><span class="symbol resource"></span>LinkedService</a></li>
     <li><a href="linkedworkspace" title="LinkedWorkspace"><span class="symbol resource"></span>LinkedWorkspace</a></li>
@@ -25,6 +28,9 @@ Explore the resources and functions of the azure-native.machinelearningservices 
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getaciservice" title="GetACIService"><span class="symbol function"></span>GetACIService</a></li>
+    <li><a href="getaksservice" title="GetAKSService"><span class="symbol function"></span>GetAKSService</a></li>
+    <li><a href="getendpointvariant" title="GetEndpointVariant"><span class="symbol function"></span>GetEndpointVariant</a></li>
     <li><a href="getlabelingjob" title="GetLabelingJob"><span class="symbol function"></span>GetLabelingJob</a></li>
     <li><a href="getlinkedservice" title="GetLinkedService"><span class="symbol function"></span>GetLinkedService</a></li>
     <li><a href="getlinkedworkspace" title="GetLinkedWorkspace"><span class="symbol function"></span>GetLinkedWorkspace</a></li>
@@ -50,6 +56,6 @@ Explore the resources and functions of the azure-native.machinelearningservices 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.6.0</dd>
+	<dd>1.7.0</dd>
 </dl>
 

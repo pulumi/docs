@@ -13,15 +13,18 @@ Explore the resources and functions of the azure-native.avs module.
 <ul class="api">
     <li><a href="addon" title="Addon"><span class="symbol resource"></span>Addon</a></li>
     <li><a href="authorization" title="Authorization"><span class="symbol resource"></span>Authorization</a></li>
+    <li><a href="cloudlink" title="CloudLink"><span class="symbol resource"></span>CloudLink</a></li>
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
     <li><a href="datastore" title="Datastore"><span class="symbol resource"></span>Datastore</a></li>
     <li><a href="globalreachconnection" title="GlobalReachConnection"><span class="symbol resource"></span>GlobalReachConnection</a></li>
     <li><a href="hcxenterprisesite" title="HcxEnterpriseSite"><span class="symbol resource"></span>HcxEnterpriseSite</a></li>
     <li><a href="privatecloud" title="PrivateCloud"><span class="symbol resource"></span>PrivateCloud</a></li>
+    <li><a href="scriptexecution" title="ScriptExecution"><span class="symbol resource"></span>ScriptExecution</a></li>
     <li><a href="workloadnetworkdhcp" title="WorkloadNetworkDhcp"><span class="symbol resource"></span>WorkloadNetworkDhcp</a></li>
     <li><a href="workloadnetworkdnsservice" title="WorkloadNetworkDnsService"><span class="symbol resource"></span>WorkloadNetworkDnsService</a></li>
     <li><a href="workloadnetworkdnszone" title="WorkloadNetworkDnsZone"><span class="symbol resource"></span>WorkloadNetworkDnsZone</a></li>
     <li><a href="workloadnetworkportmirroring" title="WorkloadNetworkPortMirroring"><span class="symbol resource"></span>WorkloadNetworkPortMirroring</a></li>
+    <li><a href="workloadnetworkpublicip" title="WorkloadNetworkPublicIP"><span class="symbol resource"></span>WorkloadNetworkPublicIP</a></li>
     <li><a href="workloadnetworksegment" title="WorkloadNetworkSegment"><span class="symbol resource"></span>WorkloadNetworkSegment</a></li>
     <li><a href="workloadnetworkvmgroup" title="WorkloadNetworkVMGroup"><span class="symbol resource"></span>WorkloadNetworkVMGroup</a></li>
 </ul>
@@ -30,15 +33,19 @@ Explore the resources and functions of the azure-native.avs module.
 <ul class="api">
     <li><a href="getaddon" title="GetAddon"><span class="symbol function"></span>GetAddon</a></li>
     <li><a href="getauthorization" title="GetAuthorization"><span class="symbol function"></span>GetAuthorization</a></li>
+    <li><a href="getcloudlink" title="GetCloudLink"><span class="symbol function"></span>GetCloudLink</a></li>
     <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
     <li><a href="getdatastore" title="GetDatastore"><span class="symbol function"></span>GetDatastore</a></li>
     <li><a href="getglobalreachconnection" title="GetGlobalReachConnection"><span class="symbol function"></span>GetGlobalReachConnection</a></li>
     <li><a href="gethcxenterprisesite" title="GetHcxEnterpriseSite"><span class="symbol function"></span>GetHcxEnterpriseSite</a></li>
     <li><a href="getprivatecloud" title="GetPrivateCloud"><span class="symbol function"></span>GetPrivateCloud</a></li>
+    <li><a href="getscriptexecution" title="GetScriptExecution"><span class="symbol function"></span>GetScriptExecution</a></li>
+    <li><a href="getscriptexecutionlogs" title="GetScriptExecutionLogs"><span class="symbol function"></span>GetScriptExecutionLogs</a></li>
     <li><a href="getworkloadnetworkdhcp" title="GetWorkloadNetworkDhcp"><span class="symbol function"></span>GetWorkloadNetworkDhcp</a></li>
     <li><a href="getworkloadnetworkdnsservice" title="GetWorkloadNetworkDnsService"><span class="symbol function"></span>GetWorkloadNetworkDnsService</a></li>
     <li><a href="getworkloadnetworkdnszone" title="GetWorkloadNetworkDnsZone"><span class="symbol function"></span>GetWorkloadNetworkDnsZone</a></li>
     <li><a href="getworkloadnetworkportmirroring" title="GetWorkloadNetworkPortMirroring"><span class="symbol function"></span>GetWorkloadNetworkPortMirroring</a></li>
+    <li><a href="getworkloadnetworkpublicip" title="GetWorkloadNetworkPublicIP"><span class="symbol function"></span>GetWorkloadNetworkPublicIP</a></li>
     <li><a href="getworkloadnetworksegment" title="GetWorkloadNetworkSegment"><span class="symbol function"></span>GetWorkloadNetworkSegment</a></li>
     <li><a href="getworkloadnetworkvmgroup" title="GetWorkloadNetworkVMGroup"><span class="symbol function"></span>GetWorkloadNetworkVMGroup</a></li>
     <li><a href="listprivatecloudadmincredentials" title="ListPrivateCloudAdminCredentials"><span class="symbol function"></span>ListPrivateCloudAdminCredentials</a></li>
@@ -51,6 +58,6 @@ Explore the resources and functions of the azure-native.avs module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.6.0</dd>
+	<dd>1.7.0</dd>
 </dl>
 
