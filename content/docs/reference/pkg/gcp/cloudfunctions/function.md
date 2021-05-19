@@ -53,7 +53,7 @@ class MyStack : Stack
         var function = new Gcp.CloudFunctions.Function("function", new Gcp.CloudFunctions.FunctionArgs
         {
             Description = "My function",
-            Runtime = "nodejs12",
+            Runtime = "nodejs14",
             AvailableMemoryMb = 128,
             SourceArchiveBucket = bucket.Name,
             SourceArchiveObject = archive.Name,
@@ -104,7 +104,7 @@ func main() {
 		}
 		function, err := cloudfunctions.NewFunction(ctx, "function", &cloudfunctions.FunctionArgs{
 			Description:         pulumi.String("My function"),
-			Runtime:             pulumi.String("nodejs12"),
+			Runtime:             pulumi.String("nodejs14"),
 			AvailableMemoryMb:   pulumi.Int(128),
 			SourceArchiveBucket: bucket.Name,
 			SourceArchiveObject: archive.Name,
@@ -145,7 +145,7 @@ archive = gcp.storage.BucketObject("archive",
     source=pulumi.FileAsset("./path/to/zip/file/which/contains/code"))
 function = gcp.cloudfunctions.Function("function",
     description="My function",
-    runtime="nodejs12",
+    runtime="nodejs14",
     available_memory_mb=128,
     source_archive_bucket=bucket.name,
     source_archive_object=archive.name,
@@ -178,7 +178,7 @@ const archive = new gcp.storage.BucketObject("archive", {
 });
 const _function = new gcp.cloudfunctions.Function("function", {
     description: "My function",
-    runtime: "nodejs12",
+    runtime: "nodejs14",
     availableMemoryMb: 128,
     sourceArchiveBucket: bucket.name,
     sourceArchiveObject: archive.name,
@@ -225,7 +225,7 @@ class MyStack : Stack
         var function = new Gcp.CloudFunctions.Function("function", new Gcp.CloudFunctions.FunctionArgs
         {
             Description = "My function",
-            Runtime = "nodejs12",
+            Runtime = "nodejs14",
             AvailableMemoryMb = 128,
             SourceArchiveBucket = bucket.Name,
             SourceArchiveObject = archive.Name,
@@ -285,7 +285,7 @@ func main() {
 		}
 		function, err := cloudfunctions.NewFunction(ctx, "function", &cloudfunctions.FunctionArgs{
 			Description:         pulumi.String("My function"),
-			Runtime:             pulumi.String("nodejs12"),
+			Runtime:             pulumi.String("nodejs14"),
 			AvailableMemoryMb:   pulumi.Int(128),
 			SourceArchiveBucket: bucket.Name,
 			SourceArchiveObject: archive.Name,
@@ -333,7 +333,7 @@ archive = gcp.storage.BucketObject("archive",
     source=pulumi.FileAsset("./path/to/zip/file/which/contains/code"))
 function = gcp.cloudfunctions.Function("function",
     description="My function",
-    runtime="nodejs12",
+    runtime="nodejs14",
     available_memory_mb=128,
     source_archive_bucket=bucket.name,
     source_archive_object=archive.name,
@@ -373,7 +373,7 @@ const archive = new gcp.storage.BucketObject("archive", {
 });
 const _function = new gcp.cloudfunctions.Function("function", {
     description: "My function",
-    runtime: "nodejs12",
+    runtime: "nodejs14",
     availableMemoryMb: 128,
     sourceArchiveBucket: bucket.name,
     sourceArchiveObject: archive.name,
@@ -579,7 +579,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
-Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
+Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availablememorymb_csharp">
@@ -783,7 +783,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
-Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
+Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availablememorymb_go">
@@ -987,7 +987,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
-Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
+Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availablememorymb_nodejs">
@@ -1191,7 +1191,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
-Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
+Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="available_memory_mb_python">
@@ -1714,7 +1714,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
-Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
+Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountemail_csharp">
@@ -1918,7 +1918,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
-Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
+Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountemail_go">
@@ -2122,7 +2122,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
-Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
+Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountemail_nodejs">
@@ -2326,7 +2326,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
-Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
+Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_account_email_python">

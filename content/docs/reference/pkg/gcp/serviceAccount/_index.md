@@ -35,6 +35,6 @@ Explore the resources and functions of the gcp.serviceAccount module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.3.0</dd>
+	<dd>5.4.0</dd>
 </dl>
 
