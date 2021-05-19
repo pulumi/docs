@@ -139,32 +139,39 @@ examples:
 
     - title: Deploy containers to Microsoft ACI
       body: >
-          The <code>@pulumi/azure</code> library provides fine-grained control of Azure resources. In this example,
+          The <code>@pulumi/azure-native</code> library provides fine-grained control of Azure resources. In this example,
           we deploy a simple linux container to Microsoft ACI, in the West US zone.
       code: |
-          import * as azure from "@pulumi/azure";
+          import * as containerinstance from "@pulumi/azure-native/containerinstance";
+          import * as resources from "@pulumi/azure-native/resources";
 
-          const resourceGroup = new azure.core.ResourceGroup("resourcegroup", {
+          const resourceGroup = new resources.ResourceGroup("resourcegroup", {
               location: "West US",
           });
 
-          const containerGroup = new azure.containerservice.Group("containergroup", {
-              location: resourceGroup.location,
+          const imageName = "mcr.microsoft.com/azuredocs/aci-helloworld";
+          const containerGroup = new containerinstance.ContainerGroup("containerGroup", {
               resourceGroupName: resourceGroup.name,
-              ipAddressType: "public",
-              osType: "linux",
-              containers: [
-                  {
-                      name: "hw",
-                      image: "microsoft/aci-helloworld:latest",
-                      cpu: 0.5,
-                      memory: 1.5,
-                      port: 80
+              osType: "Linux",
+              containers: [{
+                  name: "acilinuxpublicipcontainergroup",
+                  image: imageName,
+                  resources: {
+                      requests: {
+                          cpu: 1.0,
+                          memoryInGB: 1.5,
+                      },
                   },
-              ],
-              tags: {
-                  "environment": "testing",
-              },
+                  ports: [{ port: 80 }],
+              }],
+              ipAddresses: [{
+                  ports: [{
+                    port: 80,
+                    protocol: "Tcp",
+                  }],
+                  type: "Public",
+              }],
+              restartPolicy: "always",
           });
       cta:
           url: /docs/get-started
