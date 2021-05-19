@@ -111,6 +111,7 @@ gs://my-bucket-11a9046/index.html-77a5d80
 ```
 
 {{% choosable language javascript %}}
+
 Now that `index.html` is in your bucket, modify the program file to have the bucket serve `index.html` as a static website.
 
 First, set the `website` property on your bucket. And, to align with Google Cloud Storage recommendations, set uniform bucket-level access on the bucket to `true`.
@@ -153,6 +154,7 @@ exports.bucketEndpoint = pulumi.concat("http://storage.googleapis.com/", bucket.
 {{% /choosable %}}
 
 {{% choosable language typescript %}}
+
 Now that `index.html` is in your bucket, modify the program file to have the bucket serve `index.html` as a static website.
 
 First, set the `website` property on your bucket. And, to align with Google Cloud Storage recommendations, set uniform bucket-level access on the bucket to `true`.
@@ -195,6 +197,7 @@ export const bucketEndpoint = pulumi.concat("http://storage.googleapis.com/", bu
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 Now that `index.html` is in your bucket, modify the program file to have the bucket serve `index.html` as a static website.
 
 First, set the `website` property on your bucket. And, to align with Google Cloud Storage recommendations, set uniform bucket-level access on the bucket to `True`.
@@ -290,6 +293,7 @@ ctx.Export("bucketEndpoint", pulumi.Sprintf("http://storage.googleapis.com/%s/%s
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 Now that `index.html` is in your bucket, modify the program file to have the bucket serve `index.html` as a static website.
 
 First, set the `website` property on your bucket. And, to align with Google Cloud Storage recommendations, set uniform bucket-level access on the bucket to `true`.
