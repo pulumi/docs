@@ -13,6 +13,7 @@ Explore the resources and functions of the gcp.pubsub module.
 <ul class="api">
     <li><a href="litesubscription" title="LiteSubscription"><span class="symbol resource"></span>LiteSubscription</a></li>
     <li><a href="litetopic" title="LiteTopic"><span class="symbol resource"></span>LiteTopic</a></li>
+    <li><a href="schema" title="Schema"><span class="symbol resource"></span>Schema</a></li>
     <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
     <li><a href="subscriptioniambinding" title="SubscriptionIAMBinding"><span class="symbol resource"></span>SubscriptionIAMBinding</a></li>
     <li><a href="subscriptioniammember" title="SubscriptionIAMMember"><span class="symbol resource"></span>SubscriptionIAMMember</a></li>
@@ -37,6 +38,6 @@ Explore the resources and functions of the gcp.pubsub module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.3.0</dd>
+	<dd>5.4.0</dd>
 </dl>
 

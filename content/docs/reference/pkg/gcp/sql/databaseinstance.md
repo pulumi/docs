@@ -3426,7 +3426,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
-for more details and supported versions. Postgres supports only shared-core machine types such as `db-f1-micro`,
+for more details and supported versions. Postgres supports only shared-core machine types,
 and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3601,7 +3601,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
-for more details and supported versions. Postgres supports only shared-core machine types such as `db-f1-micro`,
+for more details and supported versions. Postgres supports only shared-core machine types,
 and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3776,7 +3776,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
-for more details and supported versions. Postgres supports only shared-core machine types such as `db-f1-micro`,
+for more details and supported versions. Postgres supports only shared-core machine types,
 and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3951,7 +3951,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
-for more details and supported versions. Postgres supports only shared-core machine types such as `db-f1-micro`,
+for more details and supported versions. Postgres supports only shared-core machine types,
 and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
