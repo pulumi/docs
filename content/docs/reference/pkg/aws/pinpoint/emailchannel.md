@@ -428,15 +428,6 @@ The EmailChannel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an identity verified with SES.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rolearn_csharp">
-<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationset_csharp">
@@ -455,6 +446,15 @@ The EmailChannel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -486,15 +486,6 @@ The EmailChannel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an identity verified with SES.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rolearn_go">
-<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationset_go">
@@ -513,6 +504,15 @@ The EmailChannel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -544,15 +544,6 @@ The EmailChannel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an identity verified with SES.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rolearn_nodejs">
-<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationset_nodejs">
@@ -571,6 +562,15 @@ The EmailChannel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -602,15 +602,6 @@ The EmailChannel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an identity verified with SES.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="role_arn_python">
-<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_set_python">
@@ -629,6 +620,15 @@ The EmailChannel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -12,6 +12,7 @@ Explore the resources and functions of the aws.organizations module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
+    <li><a href="delegatedadministrator" title="DelegatedAdministrator"><span class="symbol resource"></span>DelegatedAdministrator</a></li>
     <li><a href="organization" title="Organization"><span class="symbol resource"></span>Organization</a></li>
     <li><a href="organizationalunit" title="OrganizationalUnit"><span class="symbol resource"></span>OrganizationalUnit</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
@@ -20,6 +21,8 @@ Explore the resources and functions of the aws.organizations module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getdelegatedadministrators" title="GetDelegatedAdministrators"><span class="symbol function"></span>GetDelegatedAdministrators</a></li>
+    <li><a href="getdelegatedservices" title="GetDelegatedServices"><span class="symbol function"></span>GetDelegatedServices</a></li>
     <li><a href="getorganization" title="GetOrganization"><span class="symbol function"></span>GetOrganization</a></li>
     <li><a href="getorganizationalunits" title="GetOrganizationalUnits"><span class="symbol function"></span>GetOrganizationalUnits</a></li>
 </ul>
@@ -33,6 +36,6 @@ Explore the resources and functions of the aws.organizations module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.4.1</dd>
+	<dd>4.5.0</dd>
 </dl>
 
