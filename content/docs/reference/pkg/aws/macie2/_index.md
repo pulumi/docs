@@ -13,6 +13,9 @@ Explore the resources and functions of the aws.macie2 module.
 <ul class="api">
     <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
     <li><a href="classificationjob" title="ClassificationJob"><span class="symbol resource"></span>ClassificationJob</a></li>
+    <li><a href="invitationaccepter" title="InvitationAccepter"><span class="symbol resource"></span>InvitationAccepter</a></li>
+    <li><a href="member" title="Member"><span class="symbol resource"></span>Member</a></li>
+    <li><a href="organizationadminaccount" title="OrganizationAdminAccount"><span class="symbol resource"></span>OrganizationAdminAccount</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,6 +27,6 @@ Explore the resources and functions of the aws.macie2 module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.4.1</dd>
+	<dd>4.5.1</dd>
 </dl>
 

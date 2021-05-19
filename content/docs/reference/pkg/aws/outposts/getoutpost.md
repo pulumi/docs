@@ -125,6 +125,7 @@ const example = pulumi.output(aws.outposts.getOutpost({
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_outpost(</span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetOutpostResult</code></pre></div>
 {{% /choosable %}}
 
@@ -176,6 +177,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Outpost.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ownerid_csharp">
+<a href="#ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}AWS Account identifier of the Outpost owner.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -207,6 +217,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Outpost.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ownerid_go">
+<a href="#ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}AWS Account identifier of the Outpost owner.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -238,6 +257,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Outpost.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ownerid_nodejs">
+<a href="#ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}AWS Account identifier of the Outpost owner.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -269,6 +297,15 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Outpost.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="owner_id_python">
+<a href="#owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}AWS Account identifier of the Outpost owner.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -341,8 +378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AWS Account identifier of the Outpost owner.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="siteid_csharp">
 <a href="#siteid_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Id</a>
@@ -414,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AWS Account identifier of the Outpost owner.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="siteid_go">
 <a href="#siteid_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Id</a>
@@ -487,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AWS Account identifier of the Outpost owner.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="siteid_nodejs">
 <a href="#siteid_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Id</a>
@@ -560,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}AWS Account identifier of the Outpost owner.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="site_id_python">
 <a href="#site_id_python" style="color: inherit; text-decoration: inherit;">site_<wbr>id</a>

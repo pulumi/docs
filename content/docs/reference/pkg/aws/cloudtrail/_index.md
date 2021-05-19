@@ -16,6 +16,7 @@ Explore the resources and functions of the aws.cloudtrail module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getfunction" title="GetFunction"><span class="symbol function"></span>GetFunction</a></li>
     <li><a href="getserviceaccount" title="GetServiceAccount"><span class="symbol function"></span>GetServiceAccount</a></li>
 </ul>
 
@@ -28,6 +29,6 @@ Explore the resources and functions of the aws.cloudtrail module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.4.1</dd>
+	<dd>4.5.1</dd>
 </dl>
 

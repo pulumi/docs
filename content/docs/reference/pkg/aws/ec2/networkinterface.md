@@ -132,6 +132,7 @@ const test = new aws.ec2.NetworkInterface("test", {
                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                      <span class="nx">attachments</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkInterfaceAttachmentArgs]]</span> = None<span class="p">,</span>
                      <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">interface_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">ipv6_address_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                      <span class="nx">ipv6_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                      <span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -298,6 +299,15 @@ The NetworkInterface resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}A description for the network interface.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="interfacetype_csharp">
+<a href="#interfacetype_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of network interface to create. Set to `efa` for Elastic Fabric Adapter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipv6addresscount_csharp">
 <a href="#ipv6addresscount_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Count</a>
 </span>
@@ -407,6 +417,15 @@ The NetworkInterface resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interfacetype_go">
+<a href="#interfacetype_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of network interface to create. Set to `efa` for Elastic Fabric Adapter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6addresscount_go">
@@ -520,6 +539,15 @@ The NetworkInterface resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}A description for the network interface.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="interfacetype_nodejs">
+<a href="#interfacetype_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of network interface to create. Set to `efa` for Elastic Fabric Adapter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipv6addresscount_nodejs">
 <a href="#ipv6addresscount_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Count</a>
 </span>
@@ -629,6 +657,15 @@ The NetworkInterface resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interface_type_python">
+<a href="#interface_type_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of network interface to create. Set to `efa` for Elastic Fabric Adapter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_address_count_python">
@@ -889,6 +926,7 @@ Get an existing NetworkInterface resource's state with the given name, ID, and o
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">attachments</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkInterfaceAttachmentArgs]]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">interface_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ipv6_address_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">ipv6_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">mac_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1032,6 +1070,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A description for the network interface.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_interfacetype_csharp">
+<a href="#state_interfacetype_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of network interface to create. Set to `efa` for Elastic Fabric Adapter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ipv6addresscount_csharp">
 <a href="#state_ipv6addresscount_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Count</a>
 </span>
@@ -1167,6 +1214,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_interfacetype_go">
+<a href="#state_interfacetype_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of network interface to create. Set to `efa` for Elastic Fabric Adapter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6addresscount_go">
@@ -1306,6 +1362,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A description for the network interface.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_interfacetype_nodejs">
+<a href="#state_interfacetype_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of network interface to create. Set to `efa` for Elastic Fabric Adapter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ipv6addresscount_nodejs">
 <a href="#state_ipv6addresscount_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Count</a>
 </span>
@@ -1441,6 +1506,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_interface_type_python">
+<a href="#state_interface_type_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of network interface to create. Set to `efa` for Elastic Fabric Adapter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_address_count_python">
