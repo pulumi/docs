@@ -23,6 +23,8 @@ Explore the resources and functions of the azure-native.network module.
     <li><a href="customipprefix" title="CustomIPPrefix"><span class="symbol resource"></span>CustomIPPrefix</a></li>
     <li><a href="ddoscustompolicy" title="DdosCustomPolicy"><span class="symbol resource"></span>DdosCustomPolicy</a></li>
     <li><a href="ddosprotectionplan" title="DdosProtectionPlan"><span class="symbol resource"></span>DdosProtectionPlan</a></li>
+    <li><a href="defaultadminrule" title="DefaultAdminRule"><span class="symbol resource"></span>DefaultAdminRule</a></li>
+    <li><a href="defaultuserrule" title="DefaultUserRule"><span class="symbol resource"></span>DefaultUserRule</a></li>
     <li><a href="dscpconfiguration" title="DscpConfiguration"><span class="symbol resource"></span>DscpConfiguration</a></li>
     <li><a href="endpoint" title="Endpoint"><span class="symbol resource"></span>Endpoint</a></li>
     <li><a href="experiment" title="Experiment"><span class="symbol resource"></span>Experiment</a></li>
@@ -127,6 +129,8 @@ Explore the resources and functions of the azure-native.network module.
     <li><a href="getcustomipprefix" title="GetCustomIPPrefix"><span class="symbol function"></span>GetCustomIPPrefix</a></li>
     <li><a href="getddoscustompolicy" title="GetDdosCustomPolicy"><span class="symbol function"></span>GetDdosCustomPolicy</a></li>
     <li><a href="getddosprotectionplan" title="GetDdosProtectionPlan"><span class="symbol function"></span>GetDdosProtectionPlan</a></li>
+    <li><a href="getdefaultadminrule" title="GetDefaultAdminRule"><span class="symbol function"></span>GetDefaultAdminRule</a></li>
+    <li><a href="getdefaultuserrule" title="GetDefaultUserRule"><span class="symbol function"></span>GetDefaultUserRule</a></li>
     <li><a href="getdnsresourcereferencebytarresources" title="GetDnsResourceReferenceByTarResources"><span class="symbol function"></span>GetDnsResourceReferenceByTarResources</a></li>
     <li><a href="getdscpconfiguration" title="GetDscpConfiguration"><span class="symbol function"></span>GetDscpConfiguration</a></li>
     <li><a href="getendpoint" title="GetEndpoint"><span class="symbol function"></span>GetEndpoint</a></li>
@@ -235,6 +239,6 @@ Explore the resources and functions of the azure-native.network module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.6.0</dd>
+	<dd>1.7.0</dd>
 </dl>
 

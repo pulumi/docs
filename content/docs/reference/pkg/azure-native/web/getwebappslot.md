@@ -4691,6 +4691,22 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
     </dt>
     <dd>{{% md %}}Site MachineKey.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="acrusemanagedidentitycreds_csharp">
+<a href="#acrusemanagedidentitycreds_csharp" style="color: inherit; text-decoration: inherit;">Acr<wbr>Use<wbr>Managed<wbr>Identity<wbr>Creds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to use Managed Identity Creds for ACR pull{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acrusermanagedidentityid_csharp">
+<a href="#acrusermanagedidentityid_csharp" style="color: inherit; text-decoration: inherit;">Acr<wbr>User<wbr>Managed<wbr>Identity<wbr>ID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If using user managed identity, the user managed identity ClientId{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="alwayson_csharp">
 <a href="#alwayson_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>On</a>
 </span>
@@ -5219,6 +5235,22 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
         <span class="property-type"><a href="#sitemachinekeyresponse">Site<wbr>Machine<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Site MachineKey.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acrusemanagedidentitycreds_go">
+<a href="#acrusemanagedidentitycreds_go" style="color: inherit; text-decoration: inherit;">Acr<wbr>Use<wbr>Managed<wbr>Identity<wbr>Creds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to use Managed Identity Creds for ACR pull{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acrusermanagedidentityid_go">
+<a href="#acrusermanagedidentityid_go" style="color: inherit; text-decoration: inherit;">Acr<wbr>User<wbr>Managed<wbr>Identity<wbr>ID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If using user managed identity, the user managed identity ClientId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alwayson_go">
 <a href="#alwayson_go" style="color: inherit; text-decoration: inherit;">Always<wbr>On</a>
@@ -5749,6 +5781,22 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}Site MachineKey.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="acrusemanagedidentitycreds_nodejs">
+<a href="#acrusemanagedidentitycreds_nodejs" style="color: inherit; text-decoration: inherit;">acr<wbr>Use<wbr>Managed<wbr>Identity<wbr>Creds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to use Managed Identity Creds for ACR pull{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acrusermanagedidentityid_nodejs">
+<a href="#acrusermanagedidentityid_nodejs" style="color: inherit; text-decoration: inherit;">acr<wbr>User<wbr>Managed<wbr>Identity<wbr>ID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If using user managed identity, the user managed identity ClientId{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="alwayson_nodejs">
 <a href="#alwayson_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>On</a>
 </span>
@@ -6277,6 +6325,22 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
         <span class="property-type"><a href="#sitemachinekeyresponse">Site<wbr>Machine<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Site MachineKey.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acr_use_managed_identity_creds_python">
+<a href="#acr_use_managed_identity_creds_python" style="color: inherit; text-decoration: inherit;">acr_<wbr>use_<wbr>managed_<wbr>identity_<wbr>creds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to use Managed Identity Creds for ACR pull{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acr_user_managed_identity_id_python">
+<a href="#acr_user_managed_identity_id_python" style="color: inherit; text-decoration: inherit;">acr_<wbr>user_<wbr>managed_<wbr>identity_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If using user managed identity, the user managed identity ClientId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="always_on_python">
 <a href="#always_on_python" style="color: inherit; text-decoration: inherit;">always_<wbr>on</a>

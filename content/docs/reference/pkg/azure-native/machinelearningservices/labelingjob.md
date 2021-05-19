@@ -145,9 +145,9 @@ labeling_job = azure_native.machinelearningservices.LabelingJob("labelingJob",
             uri="https://www.testjobInstructions.com/labeling1.txt",
         ),
         label_categories={
-            "testCategory": azure_native.machinelearningservices.LabelCategoryArgs(
-                allow_multi_select=False,
-                classes={
+            "testCategory": {
+                "allowMultiSelect": False,
+                "classes": {
                     "testClass1": azure_native.machinelearningservices.LabelClassArgs(
                         display_name="testClass1",
                         subclasses={
@@ -160,8 +160,8 @@ labeling_job = azure_native.machinelearningservices.LabelingJob("labelingJob",
                         display_name="testClass2",
                     ),
                 },
-                display_name="testCategory",
-            ),
+                "displayName": "testCategory",
+            },
         },
         labeling_job_media_properties=azure_native.machinelearningservices.LabelingJobImagePropertiesArgs(
             annotation_type="BoundingBox",

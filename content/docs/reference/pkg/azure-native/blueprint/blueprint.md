@@ -443,7 +443,6 @@ const blueprint = new azure_native.blueprint.Blueprint("blueprint", {
               <span class="nx">blueprint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">layout</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
               <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ParameterDefinitionArgs]]</span> = None<span class="p">,</span>
               <span class="nx">resource_groups</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ResourceGroupDefinitionArgs]]</span> = None<span class="p">,</span>
               <span class="nx">resource_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -618,14 +617,6 @@ The Blueprint resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="layout_csharp">
-<a href="#layout_csharp" style="color: inherit; text-decoration: inherit;">Layout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
@@ -693,14 +684,6 @@ The Blueprint resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="layout_go">
-<a href="#layout_go" style="color: inherit; text-decoration: inherit;">Layout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -770,14 +753,6 @@ The Blueprint resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="layout_nodejs">
-<a href="#layout_nodejs" style="color: inherit; text-decoration: inherit;">layout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
@@ -846,14 +821,6 @@ The Blueprint resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="layout_python">
-<a href="#layout_python" style="color: inherit; text-decoration: inherit;">layout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
@@ -897,6 +864,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="layout_csharp">
+<a href="#layout_csharp" style="color: inherit; text-decoration: inherit;">Layout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -932,6 +907,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="layout_go">
+<a href="#layout_go" style="color: inherit; text-decoration: inherit;">Layout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -969,6 +952,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="layout_nodejs">
+<a href="#layout_nodejs" style="color: inherit; text-decoration: inherit;">layout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1004,6 +995,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="layout_python">
+<a href="#layout_python" style="color: inherit; text-decoration: inherit;">layout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>

@@ -152,6 +152,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}String Id used to locate any resource on Azure.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="layout_csharp">
+<a href="#layout_csharp" style="color: inherit; text-decoration: inherit;">Layout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -200,14 +208,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="layout_csharp">
-<a href="#layout_csharp" style="color: inherit; text-decoration: inherit;">Layout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
@@ -243,6 +243,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String Id used to locate any resource on Azure.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="layout_go">
+<a href="#layout_go" style="color: inherit; text-decoration: inherit;">Layout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -292,14 +300,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="layout_go">
-<a href="#layout_go" style="color: inherit; text-decoration: inherit;">Layout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
@@ -335,6 +335,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String Id used to locate any resource on Azure.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="layout_nodejs">
+<a href="#layout_nodejs" style="color: inherit; text-decoration: inherit;">layout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -384,14 +392,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="layout_nodejs">
-<a href="#layout_nodejs" style="color: inherit; text-decoration: inherit;">layout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
@@ -427,6 +427,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String Id used to locate any resource on Azure.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="layout_python">
+<a href="#layout_python" style="color: inherit; text-decoration: inherit;">layout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -475,14 +483,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="layout_python">
-<a href="#layout_python" style="color: inherit; text-decoration: inherit;">layout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>

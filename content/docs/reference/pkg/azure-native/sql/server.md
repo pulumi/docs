@@ -177,7 +177,7 @@ const server = new azure_native.sql.Server("server", {
            <span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">administrators</span><span class="p">:</span> <span class="nx">Optional[ServerExternalAdministratorArgs]</span> = None<span class="p">,</span>
-           <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityWithUserAssignedIdentitiesArgs]</span> = None<span class="p">,</span>
+           <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityArgs]</span> = None<span class="p">,</span>
            <span class="nx">key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">minimal_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -352,7 +352,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -460,7 +460,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -568,7 +568,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -676,7 +676,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1394,7 +1394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="resourceidentitywithuserassignedidentities">Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities</h4>
+<h4 id="resourceidentity">Resource<wbr>Identity</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -1476,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="resourceidentitywithuserassignedidentitiesresponse">Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response</h4>
+<h4 id="resourceidentityresponse">Resource<wbr>Identity<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
