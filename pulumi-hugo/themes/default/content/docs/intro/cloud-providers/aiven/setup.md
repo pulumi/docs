@@ -15,10 +15,10 @@ before it can be used to create resources.
 
 Once obtained, there are two ways to communicate your authorization tokens to Pulumi:
 
-1. Set the environment variable `AIVEN_API_TOKEN`:
+1. Set the environment variable `AIVEN_TOKEN`:
 
     ```bash
-    $ export AIVEN_API_TOKEN=XXXXXXXXXXXXXX
+    $ export AIVEN_TOKEN=XXXXXXXXXXXXXX
     ```
 
 2. Set them using configuration, if you prefer that they be stored alongside your Pulumi stack for easy multi-user access:
