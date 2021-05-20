@@ -13,6 +13,7 @@ Explore the resources and functions of the aws.cloudfront module.
 <ul class="api">
     <li><a href="cachepolicy" title="CachePolicy"><span class="symbol resource"></span>CachePolicy</a></li>
     <li><a href="distribution" title="Distribution"><span class="symbol resource"></span>Distribution</a></li>
+    <li><a href="function" title="Function"><span class="symbol resource"></span>Function</a></li>
     <li><a href="keygroup" title="KeyGroup"><span class="symbol resource"></span>KeyGroup</a></li>
     <li><a href="originaccessidentity" title="OriginAccessIdentity"><span class="symbol resource"></span>OriginAccessIdentity</a></li>
     <li><a href="originrequestpolicy" title="OriginRequestPolicy"><span class="symbol resource"></span>OriginRequestPolicy</a></li>
@@ -36,6 +37,6 @@ Explore the resources and functions of the aws.cloudfront module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.4.1</dd>
+	<dd>4.5.1</dd>
 </dl>
 
