@@ -271,8 +271,11 @@ this.BucketEndpoint = Output.Format($"http://{bucket.WebsiteEndpoint}");
 ```
 
 ```csharp
-[Output] public Output<string> BucketName { get; set; }
-[Output] public Output<string> BucketEndpoint { get; set; }
+[Output]
+public Output<string> BucketName { get; set; }
+
+[Output]
+public Output<string> BucketEndpoint { get; set; }
 ```
 
 {{% /choosable %}}
