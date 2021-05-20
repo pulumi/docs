@@ -30,11 +30,9 @@ Throughout this guide, we are testing a program that creates a simple AWS EC2-ba
 
 Our starting code is loosely based on the [aws-js-webserver example](https://github.com/pulumi/examples/tree/master/aws-js-webserver):
 
-<div class="note note-info" role="alert">
-    <p>
-        Choose the language below to adjust the contents of this guide. Your choice is applied throughout the guide.
-    </p>
-</div>
+{{< notes >}}
+Choose a language below to adjust the contents of this guide. Your choice is applied throughout the guide.
+{{< /notes >}}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 

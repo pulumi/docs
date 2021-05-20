@@ -9,11 +9,10 @@ menu:
 
 aliases: ["/docs/reference/clouds/google-native/"]
 ---
-<div class="note note-info" role="alert">
-    <p>
-        The Google Cloud Native provider is currently in <strong> public preview</strong>
-    </p>
-</div>
+
+{{< notes >}}
+The Google Cloud Native provider is currently in public preview.
+{{< /notes >}}
 
 <img src="/logos/tech/gcp.svg" align="right" class="h-16 px-8 pb-4">
 
