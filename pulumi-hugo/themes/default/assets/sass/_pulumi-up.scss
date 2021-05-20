@@ -80,9 +80,7 @@ $orange900: theme("colors.orange.900");
     }
 }
 
-.pulumi-up-body {
-    @apply bg-gray-900;
-}
+
 
 %dialog-box {
     @apply relative p-8 w-full text-white;
@@ -173,8 +171,7 @@ $orange900: theme("colors.orange.900");
 }
 
 .speaker-image {
-    @apply rounded-full p-1 bg-orange-400;
-    box-shadow: inset 0 0 0.4em $orange400, 0 0 0.4em $orange400;
+    @apply rounded-full p-1 bg-violet-400;
 
     img {
         @apply w-24 rounded-full;

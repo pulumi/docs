@@ -42,9 +42,7 @@
             <div class="md:w-3/12 md:pl-8">
                 <div class="sticky-sidebar">
                     {{ partial "blog/right-nav.html" . }}
-                    <div class="mt-8">
-                        <a href="{{ relref . "/pulumi-up" }}?iaid=blog-right-nav"><img src="/images/pulumiup/pulumiup-rectangle-cta.png" alt="Register now for PulumiUP" /></a>
-                    </div>
+                    {{ partial "right-nav-ad.html" }}
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@ meta_desc: "Watch Pulumi CEO, Joe Duffy and Corey Quinn as they walk-through Pul
 meta_image: "/images/webinar/pulumi-update-twitter-card.png"
 
 # A featured webinar will display first in the list.
-featured: true
+featured: false
 
 aliases:
     - /webinars/pulumi-v2-virtual-launch

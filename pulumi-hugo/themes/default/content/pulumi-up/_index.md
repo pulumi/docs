@@ -4,13 +4,45 @@ type: page
 layout: pulumi-up
 meta_image: /images/pulumiup/pulumiup_social.png
 meta_desc: |
-    On April 20th Pulumi presents PulumiUP, a 2 hour virtual event that will feature product updates, company news,
-    and much more.
+    PulumiUP introduces you to the emerging practice of Cloud Engineering. Hear from the Pulumi team
+    and assorted industry experts.
 
 aliases:
     - /pulumiup
 
 countdown_date: 2021-04-20T09:00:00-07:00
+
+event_description: |
+    PulumiUP is for anyone who is interested in cloud engineering,
+    cloud infrastructure, software development, modern applications, or Pulumi.
+    Whether you’re a seasoned cloud engineer or just curious to learn what’s all
+    the fuss about cloud engineering, PulumiUP will teach you something new about
+    the future of building on the cloud.
+
+    In the first part of the event you will hear from Pulumi CEO and Co-Founder Joe Duffy and technical
+    leaders of pioneering companies as they present the vision for the future of cloud engineering and
+    what it means for people and teams leveraging cloud infrastructure and modern applications.
+
+    During part two, Joe Duffy and Pulumi CTO Luke Hoban will walk us through new announcements about Pulumi's
+    Cloud Engineering Platform and present demos with help from assorted Pulumi team members. You will
+    learn about all the new features and capabilities we've been cooking up in the last year.
+
+    Finally in the last part of the event you will hear from technical leaders across the industry and a collection
+    of Pulumi customers about how they have adopted Cloud Engineering best practices and how those practices have
+    helped them be successful in this new era of software development.
+
+speakers:
+    - "joe-duffy"
+    - "adrian-cockcroft"
+    - "keith-redmond"
+    - "justin-fitzhugh"
+    - "luke-hoban"
+    - "lee-zen"
+    - "komal-ali"
+    - "charity-majors"
+    - "justin-fitzhugh"
+    - "kat-cosgrove"
+    - "dana-lawson"
 
 event_sections:
     - title: The Vision
