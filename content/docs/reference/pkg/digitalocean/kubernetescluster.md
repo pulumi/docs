@@ -36,7 +36,7 @@ Before importing a Kubernetes cluster, the cluster's default node pool must be t
                       <span class="nx">auto_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                       <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">node_pool</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterNodePoolArgs]</span> = None<span class="p">,</span>
-                      <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[Union[str, Region]]</span> = None<span class="p">,</span>
                       <span class="nx">surge_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                       <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                       <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -63,25 +63,19 @@ Before importing a Kubernetes cluster, the cluster's default node pool must be t
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -93,25 +87,19 @@ Before importing a Kubernetes cluster, the cluster's default node pool must be t
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -123,33 +111,25 @@ Before importing a Kubernetes cluster, the cluster's default node pool must be t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -161,25 +141,19 @@ Before importing a Kubernetes cluster, the cluster's default node pool must be t
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -209,7 +183,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#region">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Region</a></span>
     </dt>
     <dd>{{% md %}}The slug identifier for the region where the Kubernetes cluster will be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -285,7 +259,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#region">Region</a></span>
     </dt>
     <dd>{{% md %}}The slug identifier for the region where the Kubernetes cluster will be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -361,7 +335,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Region</span>
+        <span class="property-type">string | <a href="#region">Region</a></span>
     </dt>
     <dd>{{% md %}}The slug identifier for the region where the Kubernetes cluster will be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -437,7 +411,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">str | <a href="#region">Region</a></span>
     </dt>
     <dd>{{% md %}}The slug identifier for the region where the Kubernetes cluster will be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -860,7 +834,7 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
         <span class="nx">kube_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesClusterKubeConfigArgs]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">node_pool</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterNodePoolArgs]</span> = None<span class="p">,</span>
-        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[Union[str, Region]]</span> = None<span class="p">,</span>
         <span class="nx">service_subnet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">surge_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -1055,7 +1029,7 @@ The following state arguments are supported:
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#region">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Region</a></span>
     </dt>
     <dd>{{% md %}}The slug identifier for the region where the Kubernetes cluster will be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1202,7 +1176,7 @@ The following state arguments are supported:
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#region">Region</a></span>
     </dt>
     <dd>{{% md %}}The slug identifier for the region where the Kubernetes cluster will be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1349,7 +1323,7 @@ The following state arguments are supported:
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Region</span>
+        <span class="property-type">string | <a href="#region">Region</a></span>
     </dt>
     <dd>{{% md %}}The slug identifier for the region where the Kubernetes cluster will be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1496,7 +1470,7 @@ The following state arguments are supported:
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">str | <a href="#region">Region</a></span>
     </dt>
     <dd>{{% md %}}The slug identifier for the region where the Kubernetes cluster will be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2652,6 +2626,76 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}An arbitrary string. The "key" and "value" fields of the "taint" object form a key-value pair.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="region">Region</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>NYC1</dt>
+    <dd>nyc1</dd><dt>NYC2</dt>
+    <dd>nyc2</dd><dt>NYC3</dt>
+    <dd>nyc3</dd><dt>SGP1</dt>
+    <dd>sgp1</dd><dt>LON1</dt>
+    <dd>lon1</dd><dt>AMS2</dt>
+    <dd>ams2</dd><dt>AMS3</dt>
+    <dd>ams3</dd><dt>FRA1</dt>
+    <dd>fra1</dd><dt>TOR1</dt>
+    <dd>tor1</dd><dt>SFO1</dt>
+    <dd>sfo1</dd><dt>SFO2</dt>
+    <dd>sfo2</dd><dt>SFO3</dt>
+    <dd>sfo3</dd><dt>BLR1</dt>
+    <dd>blr1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Region<wbr>NYC1</dt>
+    <dd>nyc1</dd><dt>Region<wbr>NYC2</dt>
+    <dd>nyc2</dd><dt>Region<wbr>NYC3</dt>
+    <dd>nyc3</dd><dt>Region<wbr>SGP1</dt>
+    <dd>sgp1</dd><dt>Region<wbr>LON1</dt>
+    <dd>lon1</dd><dt>Region<wbr>AMS2</dt>
+    <dd>ams2</dd><dt>Region<wbr>AMS3</dt>
+    <dd>ams3</dd><dt>Region<wbr>FRA1</dt>
+    <dd>fra1</dd><dt>Region<wbr>TOR1</dt>
+    <dd>tor1</dd><dt>Region<wbr>SFO1</dt>
+    <dd>sfo1</dd><dt>Region<wbr>SFO2</dt>
+    <dd>sfo2</dd><dt>Region<wbr>SFO3</dt>
+    <dd>sfo3</dd><dt>Region<wbr>BLR1</dt>
+    <dd>blr1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>NYC1</dt>
+    <dd>nyc1</dd><dt>NYC2</dt>
+    <dd>nyc2</dd><dt>NYC3</dt>
+    <dd>nyc3</dd><dt>SGP1</dt>
+    <dd>sgp1</dd><dt>LON1</dt>
+    <dd>lon1</dd><dt>AMS2</dt>
+    <dd>ams2</dd><dt>AMS3</dt>
+    <dd>ams3</dd><dt>FRA1</dt>
+    <dd>fra1</dd><dt>TOR1</dt>
+    <dd>tor1</dd><dt>SFO1</dt>
+    <dd>sfo1</dd><dt>SFO2</dt>
+    <dd>sfo2</dd><dt>SFO3</dt>
+    <dd>sfo3</dd><dt>BLR1</dt>
+    <dd>blr1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NYC1</dt>
+    <dd>nyc1</dd><dt>NYC2</dt>
+    <dd>nyc2</dd><dt>NYC3</dt>
+    <dd>nyc3</dd><dt>SGP1</dt>
+    <dd>sgp1</dd><dt>LON1</dt>
+    <dd>lon1</dd><dt>AMS2</dt>
+    <dd>ams2</dd><dt>AMS3</dt>
+    <dd>ams3</dd><dt>FRA1</dt>
+    <dd>fra1</dd><dt>TOR1</dt>
+    <dd>tor1</dd><dt>SFO1</dt>
+    <dd>sfo1</dd><dt>SFO2</dt>
+    <dd>sfo2</dd><dt>SFO3</dt>
+    <dd>sfo3</dd><dt>BLR1</dt>
+    <dd>blr1</dd></dl>
 {{% /choosable %}}
 
 
