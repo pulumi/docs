@@ -8,7 +8,8 @@
       "darwin-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v3.3.0-darwin-arm64.tar.gz",
       "windows-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.3.0-windows-x64.zip"
     },
-    "checksums": "https://get.pulumi.com/releases/sdk/pulumi-3.3.0-checksums.txt"
+    "checksums": "https://get.pulumi.com/releases/sdk/pulumi-3.3.0-checksums.txt",
+    "latest": true
   },
   {
     "version": "v3.2.1",
@@ -52,8 +53,7 @@
       "darwin-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v3.0.0-darwin-arm64.tar.gz",
       "windows-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.0.0-windows-x64.zip"
     },
-    "checksums": "https://get.pulumi.com/releases/sdk/pulumi-3.0.0-checksums.txt",
-    "latest": true
+    "checksums": "https://get.pulumi.com/releases/sdk/pulumi-3.0.0-checksums.txt"
   },
   {
     "version": "v3.0.0-rc.1",
