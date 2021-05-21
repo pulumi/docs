@@ -376,7 +376,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The system disk size of worker node.
+    <dd>{{% md %}}The security group id for worker node.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="systemdiskcategory_csharp">
@@ -631,7 +631,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The system disk size of worker node.
+    <dd>{{% md %}}The security group id for worker node.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="systemdiskcategory_go">
@@ -886,7 +886,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The system disk size of worker node.
+    <dd>{{% md %}}The security group id for worker node.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="systemdiskcategory_nodejs">
@@ -1141,7 +1141,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The system disk size of worker node.
+    <dd>{{% md %}}The security group id for worker node.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="system_disk_category_python">
@@ -1674,7 +1674,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The system disk size of worker node.
+    <dd>{{% md %}}The security group id for worker node.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_systemdiskcategory_csharp">
@@ -1946,7 +1946,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The system disk size of worker node.
+    <dd>{{% md %}}The security group id for worker node.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_systemdiskcategory_go">
@@ -2218,7 +2218,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The system disk size of worker node.
+    <dd>{{% md %}}The security group id for worker node.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_systemdiskcategory_nodejs">
@@ -2490,7 +2490,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The system disk size of worker node.
+    <dd>{{% md %}}The security group id for worker node.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_system_disk_category_python">

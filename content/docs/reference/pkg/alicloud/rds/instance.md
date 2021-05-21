@@ -545,7 +545,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
+    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL and SQLServer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcerestart_csharp">
@@ -835,7 +835,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
+    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL and SQLServer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcerestart_go">
@@ -1125,7 +1125,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
+    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL and SQLServer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcerestart_nodejs">
@@ -1415,7 +1415,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
+    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL and SQLServer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_restart_python">
@@ -1993,7 +1993,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
+    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL and SQLServer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_csharp">
@@ -2310,7 +2310,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
+    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL and SQLServer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_go">
@@ -2627,7 +2627,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
+    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL and SQLServer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_nodejs">
@@ -2944,7 +2944,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
+    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL and SQLServer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_python">
