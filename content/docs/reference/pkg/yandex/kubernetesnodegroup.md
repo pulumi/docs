@@ -2555,6 +2555,24 @@ Minor version upgrades (e.g. 1.13->1.14) should be performed manually. The struc
     <dd>{{% md %}}The IDs of the subnets.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ipv4_csharp">
+<a href="#ipv4_csharp" style="color: inherit; text-decoration: inherit;">Ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allocate an IPv4 address for the interface. The default value is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6_csharp">
+<a href="#ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, allocate an IPv6 address for the interface. The address will be automatically assigned from the specified subnet.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nat_csharp">
 <a href="#nat_csharp" style="color: inherit; text-decoration: inherit;">Nat</a>
 </span>
@@ -2584,6 +2602,24 @@ Minor version upgrades (e.g. 1.13->1.14) should be performed manually. The struc
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of the subnets.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv4_go">
+<a href="#ipv4_go" style="color: inherit; text-decoration: inherit;">Ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allocate an IPv4 address for the interface. The default value is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6_go">
+<a href="#ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, allocate an IPv6 address for the interface. The address will be automatically assigned from the specified subnet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nat_go">
@@ -2617,6 +2653,24 @@ Minor version upgrades (e.g. 1.13->1.14) should be performed manually. The struc
     <dd>{{% md %}}The IDs of the subnets.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ipv4_nodejs">
+<a href="#ipv4_nodejs" style="color: inherit; text-decoration: inherit;">ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Allocate an IPv4 address for the interface. The default value is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6_nodejs">
+<a href="#ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, allocate an IPv6 address for the interface. The address will be automatically assigned from the specified subnet.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nat_nodejs">
 <a href="#nat_nodejs" style="color: inherit; text-decoration: inherit;">nat</a>
 </span>
@@ -2646,6 +2700,24 @@ Minor version upgrades (e.g. 1.13->1.14) should be performed manually. The struc
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of the subnets.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv4_python">
+<a href="#ipv4_python" style="color: inherit; text-decoration: inherit;">ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allocate an IPv4 address for the interface. The default value is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6_python">
+<a href="#ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, allocate an IPv6 address for the interface. The address will be automatically assigned from the specified subnet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nat_python">

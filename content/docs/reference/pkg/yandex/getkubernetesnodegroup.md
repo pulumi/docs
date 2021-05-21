@@ -1638,6 +1638,24 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="ipv4_csharp">
+<a href="#ipv4_csharp" style="color: inherit; text-decoration: inherit;">Ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the IPv4 address has been assigned.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipv6_csharp">
+<a href="#ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the IPv6 address has been assigned.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="nat_csharp">
 <a href="#nat_csharp" style="color: inherit; text-decoration: inherit;">Nat</a>
 </span>
@@ -1668,6 +1686,24 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ipv4_go">
+<a href="#ipv4_go" style="color: inherit; text-decoration: inherit;">Ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the IPv4 address has been assigned.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipv6_go">
+<a href="#ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the IPv6 address has been assigned.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nat_go">
 <a href="#nat_go" style="color: inherit; text-decoration: inherit;">Nat</a>
@@ -1700,6 +1736,24 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="ipv4_nodejs">
+<a href="#ipv4_nodejs" style="color: inherit; text-decoration: inherit;">ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the IPv4 address has been assigned.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipv6_nodejs">
+<a href="#ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the IPv6 address has been assigned.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="nat_nodejs">
 <a href="#nat_nodejs" style="color: inherit; text-decoration: inherit;">nat</a>
 </span>
@@ -1730,6 +1784,24 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ipv4_python">
+<a href="#ipv4_python" style="color: inherit; text-decoration: inherit;">ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the IPv4 address has been assigned.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipv6_python">
+<a href="#ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the IPv6 address has been assigned.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nat_python">
 <a href="#nat_python" style="color: inherit; text-decoration: inherit;">nat</a>

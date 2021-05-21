@@ -14,6 +14,7 @@ A Pulumi package for creating and managing yandex cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="albtargetgroup" title="AlbTargetGroup"><span class="symbol resource"></span>AlbTargetGroup</a></li>
     <li><a href="apigateway" title="ApiGateway"><span class="symbol resource"></span>ApiGateway</a></li>
     <li><a href="computedisk" title="ComputeDisk"><span class="symbol resource"></span>ComputeDisk</a></li>
     <li><a href="computediskplacementgroup" title="ComputeDiskPlacementGroup"><span class="symbol resource"></span>ComputeDiskPlacementGroup</a></li>
@@ -73,6 +74,7 @@ A Pulumi package for creating and managing yandex cloud resources.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getalbtargetgroup" title="GetAlbTargetGroup"><span class="symbol function"></span>GetAlbTargetGroup</a></li>
     <li><a href="getapigateway" title="GetApiGateway"><span class="symbol function"></span>GetApiGateway</a></li>
     <li><a href="getclientconfig" title="GetClientConfig"><span class="symbol function"></span>GetClientConfig</a></li>
     <li><a href="getcomputedisk" title="GetComputeDisk"><span class="symbol function"></span>GetComputeDisk</a></li>
@@ -126,6 +128,6 @@ A Pulumi package for creating and managing yandex cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`yandex` Terraform Provider](https://github.com/yandex-cloud/terraform-provider-yandex).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 
