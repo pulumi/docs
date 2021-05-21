@@ -58,9 +58,12 @@ A Pulumi package for creating and managing Datadog resources.
     <li><a href="getdashboardlist" title="GetDashboardList"><span class="symbol function"></span>GetDashboardList</a></li>
     <li><a href="getipranges" title="GetIpRanges"><span class="symbol function"></span>GetIpRanges</a></li>
     <li><a href="getmonitor" title="GetMonitor"><span class="symbol function"></span>GetMonitor</a></li>
+    <li><a href="getmonitors" title="GetMonitors"><span class="symbol function"></span>GetMonitors</a></li>
     <li><a href="getpermissions" title="GetPermissions"><span class="symbol function"></span>GetPermissions</a></li>
     <li><a href="getrole" title="GetRole"><span class="symbol function"></span>GetRole</a></li>
     <li><a href="getsecuritymonitoringrules" title="GetSecurityMonitoringRules"><span class="symbol function"></span>GetSecurityMonitoringRules</a></li>
+    <li><a href="getservicelevelobjective" title="GetServiceLevelObjective"><span class="symbol function"></span>GetServiceLevelObjective</a></li>
+    <li><a href="getservicelevelobjectives" title="GetServiceLevelObjectives"><span class="symbol function"></span>GetServiceLevelObjectives</a></li>
     <li><a href="getsyntheticslocations" title="GetSyntheticsLocations"><span class="symbol function"></span>GetSyntheticsLocations</a></li>
 </ul>
 
@@ -73,6 +76,6 @@ A Pulumi package for creating and managing Datadog resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
+	<dd>3.2.0</dd>
 </dl>
 

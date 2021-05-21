@@ -158,8 +158,6 @@ const foo = new datadog.Downtime("foo", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Downtime</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-             <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">end</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">end_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -308,24 +306,6 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}specify the group scope to which this downtime applies. For everything use '*'
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="active_csharp">
-<a href="#active_csharp" style="color: inherit; text-decoration: inherit;">Active</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true indicates this downtime is being actively applied
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="disabled_csharp">
-<a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true indicates this downtime is not being applied
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="end_csharp">
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
 </span>
@@ -418,24 +398,6 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}specify the group scope to which this downtime applies. For everything use '*'
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="active_go">
-<a href="#active_go" style="color: inherit; text-decoration: inherit;">Active</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true indicates this downtime is being actively applied
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="disabled_go">
-<a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true indicates this downtime is not being applied
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_go">
@@ -532,24 +494,6 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}specify the group scope to which this downtime applies. For everything use '*'
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="active_nodejs">
-<a href="#active_nodejs" style="color: inherit; text-decoration: inherit;">active</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}When true indicates this downtime is being actively applied
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="disabled_nodejs">
-<a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}When true indicates this downtime is not being applied
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="end_nodejs">
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
@@ -644,24 +588,6 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}specify the group scope to which this downtime applies. For everything use '*'
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="active_python">
-<a href="#active_python" style="color: inherit; text-decoration: inherit;">active</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true indicates this downtime is being actively applied
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="disabled_python">
-<a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true indicates this downtime is not being applied
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="end_python">
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
@@ -754,6 +680,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="active_csharp">
+<a href="#active_csharp" style="color: inherit; text-decoration: inherit;">Active</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true indicates this downtime is being actively applied
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="disabled_csharp">
+<a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true indicates this downtime is not being applied
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -765,6 +709,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="active_go">
+<a href="#active_go" style="color: inherit; text-decoration: inherit;">Active</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true indicates this downtime is being actively applied
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="disabled_go">
+<a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true indicates this downtime is not being applied
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -778,6 +740,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="active_nodejs">
+<a href="#active_nodejs" style="color: inherit; text-decoration: inherit;">active</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When true indicates this downtime is being actively applied
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="disabled_nodejs">
+<a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When true indicates this downtime is not being applied
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -789,6 +769,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="active_python">
+<a href="#active_python" style="color: inherit; text-decoration: inherit;">active</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true indicates this downtime is being actively applied
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="disabled_python">
+<a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true indicates this downtime is not being applied
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>

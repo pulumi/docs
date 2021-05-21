@@ -671,6 +671,7 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
                    <span class="nx">request_definition</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestDefinitionArgs]</span> = None<span class="p">,</span>
                    <span class="nx">request_headers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
                    <span class="nx">request_query</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+                   <span class="nx">set_cookie</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestStepArgs]]</span> = None<span class="p">,</span>
                    <span class="nx">subtype</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -974,6 +975,15 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Query arguments name and value map.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="setcookie_csharp">
+<a href="#setcookie_csharp" style="color: inherit; text-decoration: inherit;">Set<wbr>Cookie</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cookies to be used for a browser test request, using the [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) syntax.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="steps_csharp">
@@ -991,7 +1001,7 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns` or `multi`. Defaults to `http`.
+    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns`, `icmp` or `multi`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -1184,6 +1194,15 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Query arguments name and value map.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="setcookie_go">
+<a href="#setcookie_go" style="color: inherit; text-decoration: inherit;">Set<wbr>Cookie</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cookies to be used for a browser test request, using the [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) syntax.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="steps_go">
@@ -1201,7 +1220,7 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns` or `multi`. Defaults to `http`.
+    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns`, `icmp` or `multi`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -1394,6 +1413,15 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Query arguments name and value map.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="setcookie_nodejs">
+<a href="#setcookie_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Cookie</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cookies to be used for a browser test request, using the [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) syntax.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="steps_nodejs">
@@ -1411,7 +1439,7 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns` or `multi`. Defaults to `http`.
+    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns`, `icmp` or `multi`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -1604,6 +1632,15 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Query arguments name and value map.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="set_cookie_python">
+<a href="#set_cookie_python" style="color: inherit; text-decoration: inherit;">set_<wbr>cookie</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Cookies to be used for a browser test request, using the [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) syntax.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="steps_python">
@@ -1621,7 +1658,7 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns` or `multi`. Defaults to `http`.
+    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns`, `icmp` or `multi`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -1768,6 +1805,7 @@ Get an existing SyntheticsTest resource's state with the given name, ID, and opt
         <span class="nx">request_definition</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestDefinitionArgs]</span> = None<span class="p">,</span>
         <span class="nx">request_headers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
         <span class="nx">request_query</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+        <span class="nx">set_cookie</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestStepArgs]]</span> = None<span class="p">,</span>
         <span class="nx">subtype</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2047,6 +2085,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Query arguments name and value map.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_setcookie_csharp">
+<a href="#state_setcookie_csharp" style="color: inherit; text-decoration: inherit;">Set<wbr>Cookie</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cookies to be used for a browser test request, using the [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) syntax.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -2071,7 +2118,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns` or `multi`. Defaults to `http`.
+    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns`, `icmp` or `multi`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -2266,6 +2313,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Query arguments name and value map.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_setcookie_go">
+<a href="#state_setcookie_go" style="color: inherit; text-decoration: inherit;">Set<wbr>Cookie</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cookies to be used for a browser test request, using the [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) syntax.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -2290,7 +2346,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns` or `multi`. Defaults to `http`.
+    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns`, `icmp` or `multi`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -2485,6 +2541,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Query arguments name and value map.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_setcookie_nodejs">
+<a href="#state_setcookie_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Cookie</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cookies to be used for a browser test request, using the [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) syntax.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -2509,7 +2574,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns` or `multi`. Defaults to `http`.
+    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns`, `icmp` or `multi`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -2704,6 +2769,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Query arguments name and value map.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_set_cookie_python">
+<a href="#state_set_cookie_python" style="color: inherit; text-decoration: inherit;">set_<wbr>cookie</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Cookies to be used for a browser test request, using the [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) syntax.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -2728,7 +2802,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns` or `multi`. Defaults to `http`.
+    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns`, `icmp` or `multi`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -2782,6 +2856,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the step.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allowfailure_csharp">
+<a href="#allowfailure_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Failure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to continue with test if this step fails.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="assertions_csharp">
 <a href="#assertions_csharp" style="color: inherit; text-decoration: inherit;">Assertions</a>
 </span>
@@ -2798,6 +2881,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#syntheticstestapistepextractedvalue">List&lt;Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Extracted<wbr>Value<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Values to parse and save as variables from the response.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iscritical_csharp">
+<a href="#iscritical_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to consider the entire test as failed if this step fails. Can be used only if `allow_failure` is `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestbasicauth_csharp">
@@ -2867,6 +2959,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the step.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allowfailure_go">
+<a href="#allowfailure_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Failure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to continue with test if this step fails.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="assertions_go">
 <a href="#assertions_go" style="color: inherit; text-decoration: inherit;">Assertions</a>
 </span>
@@ -2883,6 +2984,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#syntheticstestapistepextractedvalue">[]Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Extracted<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}Values to parse and save as variables from the response.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iscritical_go">
+<a href="#iscritical_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to consider the entire test as failed if this step fails. Can be used only if `allow_failure` is `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestbasicauth_go">
@@ -2952,6 +3062,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the step.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allowfailure_nodejs">
+<a href="#allowfailure_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Failure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to continue with test if this step fails.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="assertions_nodejs">
 <a href="#assertions_nodejs" style="color: inherit; text-decoration: inherit;">assertions</a>
 </span>
@@ -2968,6 +3087,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#syntheticstestapistepextractedvalue">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Extracted<wbr>Value<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Values to parse and save as variables from the response.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iscritical_nodejs">
+<a href="#iscritical_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to consider the entire test as failed if this step fails. Can be used only if `allow_failure` is `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestbasicauth_nodejs">
@@ -3037,6 +3165,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the step.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allow_failure_python">
+<a href="#allow_failure_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>failure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to continue with test if this step fails.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="assertions_python">
 <a href="#assertions_python" style="color: inherit; text-decoration: inherit;">assertions</a>
 </span>
@@ -3053,6 +3190,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#syntheticstestapistepextractedvalue">Sequence[Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Extracted<wbr>Value<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Values to parse and save as variables from the response.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="is_critical_python">
+<a href="#is_critical_python" style="color: inherit; text-decoration: inherit;">is_<wbr>critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to consider the entire test as failed if this step fails. Can be used only if `allow_failure` is `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_basicauth_python">
@@ -4021,6 +4167,15 @@ The following state arguments are supported:
     <dd>{{% md %}}DNS server to use for DNS tests (`subtype = "dns"`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsserverport_csharp">
+<a href="#dnsserverport_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS server port to use for DNS tests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
 </span>
@@ -4048,6 +4203,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Determines whether or not to save the response body.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="numberofpackets_csharp">
+<a href="#numberofpackets_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of pings to use per test for ICMP tests (`subtype = "icmp"`) between 0 and 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
@@ -4055,6 +4219,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrackhops_csharp">
+<a href="#shouldtrackhops_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Track<wbr>Hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This will turn on a traceroute probe to discover all gateways along the path to the host destination. For ICMP tests (`subtype = "icmp"`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
@@ -4097,6 +4270,15 @@ The following state arguments are supported:
     <dd>{{% md %}}DNS server to use for DNS tests (`subtype = "dns"`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsserverport_go">
+<a href="#dnsserverport_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS server port to use for DNS tests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
 </span>
@@ -4124,6 +4306,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Determines whether or not to save the response body.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="numberofpackets_go">
+<a href="#numberofpackets_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of pings to use per test for ICMP tests (`subtype = "icmp"`) between 0 and 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
@@ -4131,6 +4322,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrackhops_go">
+<a href="#shouldtrackhops_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Track<wbr>Hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This will turn on a traceroute probe to discover all gateways along the path to the host destination. For ICMP tests (`subtype = "icmp"`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
@@ -4173,6 +4373,15 @@ The following state arguments are supported:
     <dd>{{% md %}}DNS server to use for DNS tests (`subtype = "dns"`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsserverport_nodejs">
+<a href="#dnsserverport_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Server<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}DNS server port to use for DNS tests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
@@ -4200,6 +4409,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Determines whether or not to save the response body.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="numberofpackets_nodejs">
+<a href="#numberofpackets_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of pings to use per test for ICMP tests (`subtype = "icmp"`) between 0 and 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
@@ -4207,6 +4425,15 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrackhops_nodejs">
+<a href="#shouldtrackhops_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Track<wbr>Hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}This will turn on a traceroute probe to discover all gateways along the path to the host destination. For ICMP tests (`subtype = "icmp"`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
@@ -4249,6 +4476,15 @@ The following state arguments are supported:
     <dd>{{% md %}}DNS server to use for DNS tests (`subtype = "dns"`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dns_server_port_python">
+<a href="#dns_server_port_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>server_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS server port to use for DNS tests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
@@ -4276,6 +4512,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Determines whether or not to save the response body.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="number_of_packets_python">
+<a href="#number_of_packets_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of pings to use per test for ICMP tests (`subtype = "icmp"`) between 0 and 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
@@ -4283,6 +4528,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="should_track_hops_python">
+<a href="#should_track_hops_python" style="color: inherit; text-decoration: inherit;">should_<wbr>track_<wbr>hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This will turn on a traceroute probe to discover all gateways along the path to the host destination. For ICMP tests (`subtype = "icmp"`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
@@ -6351,6 +6605,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsserverport_csharp">
+<a href="#dnsserverport_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
 </span>
@@ -6375,11 +6637,27 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="numberofpackets_csharp">
+<a href="#numberofpackets_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrackhops_csharp">
+<a href="#shouldtrackhops_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Track<wbr>Hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6419,6 +6697,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsserverport_go">
+<a href="#dnsserverport_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
 </span>
@@ -6443,11 +6729,27 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="numberofpackets_go">
+<a href="#numberofpackets_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrackhops_go">
+<a href="#shouldtrackhops_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Track<wbr>Hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6487,6 +6789,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsserverport_nodejs">
+<a href="#dnsserverport_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Server<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
@@ -6511,11 +6821,27 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="numberofpackets_nodejs">
+<a href="#numberofpackets_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrackhops_nodejs">
+<a href="#shouldtrackhops_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Track<wbr>Hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6555,6 +6881,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dns_server_port_python">
+<a href="#dns_server_port_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>server_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
@@ -6579,11 +6913,27 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="number_of_packets_python">
+<a href="#number_of_packets_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="should_track_hops_python">
+<a href="#should_track_hops_python" style="color: inherit; text-decoration: inherit;">should_<wbr>track_<wbr>hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6963,6 +7313,15 @@ The following state arguments are supported:
     <dd>{{% md %}}DNS server to use for DNS tests (`subtype = "dns"`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsserverport_csharp">
+<a href="#dnsserverport_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS server port to use for DNS tests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
 </span>
@@ -6990,6 +7349,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Determines whether or not to save the response body.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="numberofpackets_csharp">
+<a href="#numberofpackets_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of pings to use per test for ICMP tests (`subtype = "icmp"`) between 0 and 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
@@ -6997,6 +7365,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrackhops_csharp">
+<a href="#shouldtrackhops_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Track<wbr>Hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This will turn on a traceroute probe to discover all gateways along the path to the host destination. For ICMP tests (`subtype = "icmp"`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
@@ -7039,6 +7416,15 @@ The following state arguments are supported:
     <dd>{{% md %}}DNS server to use for DNS tests (`subtype = "dns"`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsserverport_go">
+<a href="#dnsserverport_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS server port to use for DNS tests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
 </span>
@@ -7066,6 +7452,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Determines whether or not to save the response body.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="numberofpackets_go">
+<a href="#numberofpackets_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of pings to use per test for ICMP tests (`subtype = "icmp"`) between 0 and 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
@@ -7073,6 +7468,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrackhops_go">
+<a href="#shouldtrackhops_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Track<wbr>Hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This will turn on a traceroute probe to discover all gateways along the path to the host destination. For ICMP tests (`subtype = "icmp"`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
@@ -7115,6 +7519,15 @@ The following state arguments are supported:
     <dd>{{% md %}}DNS server to use for DNS tests (`subtype = "dns"`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsserverport_nodejs">
+<a href="#dnsserverport_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Server<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}DNS server port to use for DNS tests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
@@ -7142,6 +7555,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Determines whether or not to save the response body.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="numberofpackets_nodejs">
+<a href="#numberofpackets_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of pings to use per test for ICMP tests (`subtype = "icmp"`) between 0 and 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
@@ -7149,6 +7571,15 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrackhops_nodejs">
+<a href="#shouldtrackhops_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Track<wbr>Hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}This will turn on a traceroute probe to discover all gateways along the path to the host destination. For ICMP tests (`subtype = "icmp"`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
@@ -7191,6 +7622,15 @@ The following state arguments are supported:
     <dd>{{% md %}}DNS server to use for DNS tests (`subtype = "dns"`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dns_server_port_python">
+<a href="#dns_server_port_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>server_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS server port to use for DNS tests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
@@ -7218,6 +7658,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Determines whether or not to save the response body.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="number_of_packets_python">
+<a href="#number_of_packets_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of pings to use per test for ICMP tests (`subtype = "icmp"`) between 0 and 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
@@ -7225,6 +7674,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="should_track_hops_python">
+<a href="#should_track_hops_python" style="color: inherit; text-decoration: inherit;">should_<wbr>track_<wbr>hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This will turn on a traceroute probe to discover all gateways along the path to the host destination. For ICMP tests (`subtype = "icmp"`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
