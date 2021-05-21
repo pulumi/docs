@@ -2849,7 +2849,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The monitor `CRITICAL` recovery threshold. Must be a number.
+    <dd>{{% md %}}The monitor `CRITICAL` threshold. Must be a number.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criticalrecovery_csharp">
@@ -2907,7 +2907,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The monitor `CRITICAL` recovery threshold. Must be a number.
+    <dd>{{% md %}}The monitor `CRITICAL` threshold. Must be a number.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criticalrecovery_go">
@@ -2965,7 +2965,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The monitor `CRITICAL` recovery threshold. Must be a number.
+    <dd>{{% md %}}The monitor `CRITICAL` threshold. Must be a number.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criticalrecovery_nodejs">
@@ -3023,7 +3023,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The monitor `CRITICAL` recovery threshold. Must be a number.
+    <dd>{{% md %}}The monitor `CRITICAL` threshold. Must be a number.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="critical_recovery_python">

@@ -33,6 +33,8 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">api_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">api_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">app_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">http_client_retry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">http_client_retry_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">validate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -192,6 +194,24 @@ you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
     <dd>{{% md %}}(Required unless validate is false) Datadog APP key. This can also be set via the DD_APP_KEY environment variable.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="httpclientretryenabled_csharp">
+<a href="#httpclientretryenabled_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Client<wbr>Retry<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables request retries on HTTP status codes 429 and 5xx.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpclientretrytimeout_csharp">
+<a href="#httpclientretrytimeout_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Client<wbr>Retry<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The HTTP request retry timeout period.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="validate_csharp">
 <a href="#validate_csharp" style="color: inherit; text-decoration: inherit;">Validate</a>
 </span>
@@ -233,6 +253,24 @@ you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required unless validate is false) Datadog APP key. This can also be set via the DD_APP_KEY environment variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpclientretryenabled_go">
+<a href="#httpclientretryenabled_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Client<wbr>Retry<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables request retries on HTTP status codes 429 and 5xx.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpclientretrytimeout_go">
+<a href="#httpclientretrytimeout_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Client<wbr>Retry<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The HTTP request retry timeout period.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_go">
@@ -278,6 +316,24 @@ you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
     <dd>{{% md %}}(Required unless validate is false) Datadog APP key. This can also be set via the DD_APP_KEY environment variable.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="httpclientretryenabled_nodejs">
+<a href="#httpclientretryenabled_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Client<wbr>Retry<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables request retries on HTTP status codes 429 and 5xx.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpclientretrytimeout_nodejs">
+<a href="#httpclientretrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Client<wbr>Retry<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The HTTP request retry timeout period.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="validate_nodejs">
 <a href="#validate_nodejs" style="color: inherit; text-decoration: inherit;">validate</a>
 </span>
@@ -319,6 +375,24 @@ you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required unless validate is false) Datadog APP key. This can also be set via the DD_APP_KEY environment variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="http_client_retry_enabled_python">
+<a href="#http_client_retry_enabled_python" style="color: inherit; text-decoration: inherit;">http_<wbr>client_<wbr>retry_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables request retries on HTTP status codes 429 and 5xx.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="http_client_retry_timeout_python">
+<a href="#http_client_retry_timeout_python" style="color: inherit; text-decoration: inherit;">http_<wbr>client_<wbr>retry_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The HTTP request retry timeout period.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_python">
