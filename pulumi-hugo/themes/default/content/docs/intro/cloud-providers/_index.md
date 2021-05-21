@@ -49,8 +49,10 @@ aliases: ["/docs/reference/clouds/"]
 * [PagerDuty]({{< relref "./pagerduty" >}})
 * [RabbitMQ]({{< relref "./rabbitmq" >}})
 * [Rancher2]({{< relref "./rancher2" >}})
+* [RKE]({{< relref "./rke" >}})
 * [Spotinst]({{< relref "./spotinst" >}})
 * [Splunk]({{< relref "./splunk" >}})
+* [SumoLogic]({{< relref "./sumologic" >}})
 * [Vault]({{< relref "./vault" >}})
 * [Venafi]({{< relref "./venafi" >}})
 
