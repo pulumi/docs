@@ -40,14 +40,14 @@ class MyStack : Stack
             {
                 ServerVersion = "3.2",
             },
-            BackupPolicy = 
+            BackupPolicy = new AzureNative.DocumentDB.Inputs.PeriodicModeBackupPolicyArgs
             {
-                { "periodicModeProperties", new AzureNative.DocumentDB.Inputs.PeriodicModePropertiesArgs
+                PeriodicModeProperties = new AzureNative.DocumentDB.Inputs.PeriodicModePropertiesArgs
                 {
                     BackupIntervalInMinutes = 240,
                     BackupRetentionIntervalInHours = 8,
-                } },
-                { "type", "Periodic" },
+                },
+                Type = "Periodic",
             },
             ConsistencyPolicy = new AzureNative.DocumentDB.Inputs.ConsistencyPolicyArgs
             {
@@ -133,7 +133,96 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := documentdb.NewDatabaseAccount(ctx, "databaseAccount", &documentdb.DatabaseAccountArgs{
+			AccountName: pulumi.String("ddb1"),
+			ApiProperties: &documentdb.ApiPropertiesArgs{
+				ServerVersion: pulumi.String("3.2"),
+			},
+			BackupPolicy: documentdb.PeriodicModeBackupPolicy{
+				PeriodicModeProperties: documentdb.PeriodicModeProperties{
+					BackupIntervalInMinutes:        240,
+					BackupRetentionIntervalInHours: 8,
+				},
+				Type: "Periodic",
+			},
+			ConsistencyPolicy: &documentdb.ConsistencyPolicyArgs{
+				DefaultConsistencyLevel: "BoundedStaleness",
+				MaxIntervalInSeconds:    pulumi.Int(10),
+				MaxStalenessPrefix:      pulumi.Float64(200),
+			},
+			Cors: documentdb.CorsPolicyArray{
+				&documentdb.CorsPolicyArgs{
+					AllowedOrigins: pulumi.String("https://test"),
+				},
+			},
+			DatabaseAccountOfferType: "Standard",
+			DefaultIdentity:          pulumi.String("FirstPartyIdentity"),
+			EnableAnalyticalStorage:  pulumi.Bool(true),
+			EnableFreeTier:           pulumi.Bool(false),
+			Identity: &documentdb.ManagedServiceIdentityArgs{
+				Type: "SystemAssigned,UserAssigned",
+				UserAssignedIdentities: pulumi.MapMap{
+					"/subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/eu2cgroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": nil,
+				},
+			},
+			IpRules: documentdb.IpAddressOrRangeArray{
+				&documentdb.IpAddressOrRangeArgs{
+					IpAddressOrRange: pulumi.String("23.43.230.120"),
+				},
+				&documentdb.IpAddressOrRangeArgs{
+					IpAddressOrRange: pulumi.String("110.12.240.0/12"),
+				},
+			},
+			IsVirtualNetworkFilterEnabled: pulumi.Bool(true),
+			KeyVaultKeyUri:                pulumi.String("https://myKeyVault.vault.azure.net"),
+			Kind:                          pulumi.String("MongoDB"),
+			Location:                      pulumi.String("westus"),
+			Locations: documentdb.LocationArray{
+				&documentdb.LocationArgs{
+					FailoverPriority: pulumi.Int(0),
+					IsZoneRedundant:  pulumi.Bool(false),
+					LocationName:     pulumi.String("southcentralus"),
+				},
+				&documentdb.LocationArgs{
+					FailoverPriority: pulumi.Int(1),
+					IsZoneRedundant:  pulumi.Bool(false),
+					LocationName:     pulumi.String("eastus"),
+				},
+			},
+			NetworkAclBypass: "AzureServices",
+			NetworkAclBypassResourceIds: pulumi.StringArray{
+				pulumi.String("/subscriptions/subId/resourcegroups/rgName/providers/Microsoft.Synapse/workspaces/workspaceName"),
+			},
+			PublicNetworkAccess: pulumi.String("Enabled"),
+			ResourceGroupName:   pulumi.String("rg1"),
+			Tags:                nil,
+			VirtualNetworkRules: documentdb.VirtualNetworkRuleArray{
+				&documentdb.VirtualNetworkRuleArgs{
+					Id:                               pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1"),
+					IgnoreMissingVNetServiceEndpoint: pulumi.Bool(false),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -150,13 +239,13 @@ database_account = azure_native.documentdb.DatabaseAccount("databaseAccount",
     api_properties=azure_native.documentdb.ApiPropertiesArgs(
         server_version="3.2",
     ),
-    backup_policy={
-        "periodicModeProperties": azure_native.documentdb.PeriodicModePropertiesArgs(
+    backup_policy=azure_native.documentdb.PeriodicModeBackupPolicyArgs(
+        periodic_mode_properties=azure_native.documentdb.PeriodicModePropertiesArgs(
             backup_interval_in_minutes=240,
             backup_retention_interval_in_hours=8,
         ),
-        "type": "Periodic",
-    },
+        type="Periodic",
+    ),
     consistency_policy=azure_native.documentdb.ConsistencyPolicyArgs(
         default_consistency_level="BoundedStaleness",
         max_interval_in_seconds=10,
@@ -492,25 +581,19 @@ const databaseAccount = new azure_native.documentdb.DatabaseAccount("databaseAcc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseAccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -522,25 +605,19 @@ const databaseAccount = new azure_native.documentdb.DatabaseAccount("databaseAcc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseAccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -552,33 +629,25 @@ const databaseAccount = new azure_native.documentdb.DatabaseAccount("databaseAcc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseAccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -590,25 +659,19 @@ const databaseAccount = new azure_native.documentdb.DatabaseAccount("databaseAcc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseAccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

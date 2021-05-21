@@ -45,6 +45,7 @@ Creates a new Cloud SQL instance.
              <span class="nx">max_disk_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">on_premises_configuration</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.OnPremisesConfigurationArgs]</span> = None<span class="p">,</span>
+             <span class="nx">out_of_disk_report</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.SqlOutOfDiskReportArgs]</span> = None<span class="p">,</span>
              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">replica_configuration</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.ReplicaConfigurationArgs]</span> = None<span class="p">,</span>
@@ -81,25 +82,19 @@ Creates a new Cloud SQL instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -111,25 +106,19 @@ Creates a new Cloud SQL instance.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -141,33 +130,25 @@ Creates a new Cloud SQL instance.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -179,25 +160,19 @@ Creates a new Cloud SQL instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -365,6 +340,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#onpremisesconfiguration">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Inputs.<wbr>On<wbr>Premises<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration specific to on-premises instances.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="outofdiskreport_csharp">
+<a href="#outofdiskreport_csharp" style="color: inherit; text-decoration: inherit;">Out<wbr>Of<wbr>Disk<wbr>Report</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqloutofdiskreport">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Inputs.<wbr>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This field represents the report generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend -- the proactive database wellness job{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -626,6 +609,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Configuration specific to on-premises instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="outofdiskreport_go">
+<a href="#outofdiskreport_go" style="color: inherit; text-decoration: inherit;">Out<wbr>Of<wbr>Disk<wbr>Report</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqloutofdiskreport">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report</a></span>
+    </dt>
+    <dd>{{% md %}}This field represents the report generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend -- the proactive database wellness job{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
@@ -886,6 +877,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Configuration specific to on-premises instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="outofdiskreport_nodejs">
+<a href="#outofdiskreport_nodejs" style="color: inherit; text-decoration: inherit;">out<wbr>Of<wbr>Disk<wbr>Report</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqloutofdiskreport">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This field represents the report generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend -- the proactive database wellness job{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
@@ -1145,6 +1144,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#onpremisesconfiguration">On<wbr>Premises<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration specific to on-premises instances.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="out_of_disk_report_python">
+<a href="#out_of_disk_report_python" style="color: inherit; text-decoration: inherit;">out_<wbr>of_<wbr>disk_<wbr>report</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqloutofdiskreport">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This field represents the report generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend -- the proactive database wellness job{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -7914,6 +7921,170 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always sql#activeDirectoryConfig.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sqloutofdiskreport">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="sqlminrecommendedincreasesizegb_csharp">
+<a href="#sqlminrecommendedincreasesizegb_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Min<wbr>Recommended<wbr>Increase<wbr>Size<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sqloutofdiskstate_csharp">
+<a href="#sqloutofdiskstate_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend -- the proactive database wellness job{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="sqlminrecommendedincreasesizegb_go">
+<a href="#sqlminrecommendedincreasesizegb_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Min<wbr>Recommended<wbr>Increase<wbr>Size<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sqloutofdiskstate_go">
+<a href="#sqloutofdiskstate_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend -- the proactive database wellness job{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="sqlminrecommendedincreasesizegb_nodejs">
+<a href="#sqlminrecommendedincreasesizegb_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Min<wbr>Recommended<wbr>Increase<wbr>Size<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sqloutofdiskstate_nodejs">
+<a href="#sqloutofdiskstate_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend -- the proactive database wellness job{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="sql_min_recommended_increase_size_gb_python">
+<a href="#sql_min_recommended_increase_size_gb_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>min_<wbr>recommended_<wbr>increase_<wbr>size_<wbr>gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sql_out_of_disk_state_python">
+<a href="#sql_out_of_disk_state_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>out_<wbr>of_<wbr>disk_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend -- the proactive database wellness job{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sqloutofdiskreportresponse">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="sqlminrecommendedincreasesizegb_csharp">
+<a href="#sqlminrecommendedincreasesizegb_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Min<wbr>Recommended<wbr>Increase<wbr>Size<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sqloutofdiskstate_csharp">
+<a href="#sqloutofdiskstate_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend -- the proactive database wellness job{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="sqlminrecommendedincreasesizegb_go">
+<a href="#sqlminrecommendedincreasesizegb_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Min<wbr>Recommended<wbr>Increase<wbr>Size<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sqloutofdiskstate_go">
+<a href="#sqloutofdiskstate_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend -- the proactive database wellness job{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="sqlminrecommendedincreasesizegb_nodejs">
+<a href="#sqlminrecommendedincreasesizegb_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Min<wbr>Recommended<wbr>Increase<wbr>Size<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sqloutofdiskstate_nodejs">
+<a href="#sqloutofdiskstate_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend -- the proactive database wellness job{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="sql_min_recommended_increase_size_gb_python">
+<a href="#sql_min_recommended_increase_size_gb_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>min_<wbr>recommended_<wbr>increase_<wbr>size_<wbr>gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sql_out_of_disk_state_python">
+<a href="#sql_out_of_disk_state_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>out_<wbr>of_<wbr>disk_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend -- the proactive database wellness job{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqlscheduledmaintenance">Sql<wbr>Scheduled<wbr>Maintenance</h4>

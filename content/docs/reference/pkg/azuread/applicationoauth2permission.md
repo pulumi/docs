@@ -12,6 +12,8 @@ meta_desc: "Documentation for the azuread.ApplicationOAuth2Permission resource w
 
 Manages an OAuth2 Permission (also known as a Scope) associated with an Application within Azure Active Directory.
 
+> This resource is deprecated in favour of azuread.ApplicationOauth2PermissionScope and will be removed in version 2.0 of the provider.
+
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
 {{% examples %}}
@@ -164,8 +166,10 @@ const exampleApplicationOAuth2Permission = new azuread.ApplicationOAuth2Permissi
                                 <span class="nx">admin_consent_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                 <span class="nx">admin_consent_display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                 <span class="nx">application_object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                                 <span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                                 <span class="nx">permission_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">scope_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                 <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                 <span class="nx">user_consent_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                 <span class="nx">user_consent_display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -192,25 +196,19 @@ const exampleApplicationOAuth2Permission = new azuread.ApplicationOAuth2Permissi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ApplicationOAuth2PermissionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -222,25 +220,19 @@ const exampleApplicationOAuth2Permission = new azuread.ApplicationOAuth2Permissi
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ApplicationOAuth2PermissionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -252,33 +244,25 @@ const exampleApplicationOAuth2Permission = new azuread.ApplicationOAuth2Permissi
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ApplicationOAuth2PermissionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -290,25 +274,19 @@ const exampleApplicationOAuth2Permission = new azuread.ApplicationOAuth2Permissi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ApplicationOAuth2PermissionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -388,6 +366,14 @@ The ApplicationOAuth2Permission resource accepts the following [input]({{< relre
     <dd>{{% md %}}The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
 </span>
@@ -395,8 +381,8 @@ The ApplicationOAuth2Permission resource accepts the following [input]({{< relre
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the Permission is enabled. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `enabled` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="permissionid_csharp">
 <a href="#permissionid_csharp" style="color: inherit; text-decoration: inherit;">Permission<wbr>Id</a>
 </span>
@@ -404,7 +390,15 @@ The ApplicationOAuth2Permission resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a custom UUID for the Permission. If omitted, a random UUID will be automatically generated. Changing this field forces a new resource to be created.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `scope_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="scopeid_csharp">
+<a href="#scopeid_csharp" style="color: inherit; text-decoration: inherit;">Scope<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -473,6 +467,14 @@ The ApplicationOAuth2Permission resource accepts the following [input]({{< relre
     <dd>{{% md %}}The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
 </span>
@@ -480,8 +482,8 @@ The ApplicationOAuth2Permission resource accepts the following [input]({{< relre
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the Permission is enabled. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `enabled` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="permissionid_go">
 <a href="#permissionid_go" style="color: inherit; text-decoration: inherit;">Permission<wbr>Id</a>
 </span>
@@ -489,7 +491,15 @@ The ApplicationOAuth2Permission resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a custom UUID for the Permission. If omitted, a random UUID will be automatically generated. Changing this field forces a new resource to be created.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `scope_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="scopeid_go">
+<a href="#scopeid_go" style="color: inherit; text-decoration: inherit;">Scope<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -558,6 +568,14 @@ The ApplicationOAuth2Permission resource accepts the following [input]({{< relre
     <dd>{{% md %}}The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
@@ -565,8 +583,8 @@ The ApplicationOAuth2Permission resource accepts the following [input]({{< relre
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the Permission is enabled. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `enabled` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="permissionid_nodejs">
 <a href="#permissionid_nodejs" style="color: inherit; text-decoration: inherit;">permission<wbr>Id</a>
 </span>
@@ -574,7 +592,15 @@ The ApplicationOAuth2Permission resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a custom UUID for the Permission. If omitted, a random UUID will be automatically generated. Changing this field forces a new resource to be created.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `scope_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="scopeid_nodejs">
+<a href="#scopeid_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -643,6 +669,14 @@ The ApplicationOAuth2Permission resource accepts the following [input]({{< relre
     <dd>{{% md %}}The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
@@ -650,8 +684,8 @@ The ApplicationOAuth2Permission resource accepts the following [input]({{< relre
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the Permission is enabled. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `enabled` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="permission_id_python">
 <a href="#permission_id_python" style="color: inherit; text-decoration: inherit;">permission_<wbr>id</a>
 </span>
@@ -659,7 +693,15 @@ The ApplicationOAuth2Permission resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a custom UUID for the Permission. If omitted, a random UUID will be automatically generated. Changing this field forces a new resource to be created.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `scope_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="scope_id_python">
+<a href="#scope_id_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -736,8 +778,10 @@ Get an existing ApplicationOAuth2Permission resource's state with the given name
         <span class="nx">admin_consent_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">admin_consent_display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">application_object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">permission_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">scope_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">user_consent_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">user_consent_display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -881,6 +925,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The Object ID of the Application for which this Permission should be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_enabled_csharp">
+<a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_isenabled_csharp">
 <a href="#state_isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
 </span>
@@ -888,8 +940,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the Permission is enabled. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `enabled` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_permissionid_csharp">
 <a href="#state_permissionid_csharp" style="color: inherit; text-decoration: inherit;">Permission<wbr>Id</a>
 </span>
@@ -897,7 +949,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a custom UUID for the Permission. If omitted, a random UUID will be automatically generated. Changing this field forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `scope_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_scopeid_csharp">
+<a href="#state_scopeid_csharp" style="color: inherit; text-decoration: inherit;">Scope<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -966,6 +1026,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The Object ID of the Application for which this Permission should be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_enabled_go">
+<a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_isenabled_go">
 <a href="#state_isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
 </span>
@@ -973,8 +1041,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the Permission is enabled. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `enabled` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_permissionid_go">
 <a href="#state_permissionid_go" style="color: inherit; text-decoration: inherit;">Permission<wbr>Id</a>
 </span>
@@ -982,7 +1050,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a custom UUID for the Permission. If omitted, a random UUID will be automatically generated. Changing this field forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `scope_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_scopeid_go">
+<a href="#state_scopeid_go" style="color: inherit; text-decoration: inherit;">Scope<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1051,6 +1127,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The Object ID of the Application for which this Permission should be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_enabled_nodejs">
+<a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_isenabled_nodejs">
 <a href="#state_isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
@@ -1058,8 +1142,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the Permission is enabled. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `enabled` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_permissionid_nodejs">
 <a href="#state_permissionid_nodejs" style="color: inherit; text-decoration: inherit;">permission<wbr>Id</a>
 </span>
@@ -1067,7 +1151,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a custom UUID for the Permission. If omitted, a random UUID will be automatically generated. Changing this field forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `scope_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_scopeid_nodejs">
+<a href="#state_scopeid_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1136,6 +1228,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The Object ID of the Application for which this Permission should be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_enabled_python">
+<a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_is_enabled_python">
 <a href="#state_is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
@@ -1143,8 +1243,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the Permission is enabled. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `enabled` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_permission_id_python">
 <a href="#state_permission_id_python" style="color: inherit; text-decoration: inherit;">permission_<wbr>id</a>
 </span>
@@ -1152,7 +1252,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a custom UUID for the Permission. If omitted, a random UUID will be automatically generated. Changing this field forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `scope_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_scope_id_python">
+<a href="#state_scope_id_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1214,6 +1322,6 @@ OAuth2 Permissions can be imported using the `object id` of an Application and t
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/hashicorp/terraform-provider-azuread).{{% /md %}}</dd>
 </dl>
 

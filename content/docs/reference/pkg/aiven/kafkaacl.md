@@ -37,10 +37,10 @@ class MyStack : Stack
     {
         var mytestacl = new Aiven.KafkaAcl("mytestacl", new Aiven.KafkaAclArgs
         {
-            Permission = "admin",
             Project = aiven_project.Myproject.Project,
-            ServiceName = aiven_service.Myservice.Service_name,
+            ServiceName = aiven_kafka.Myservice.Service_name,
             Topic = "<TOPIC_NAME_PATTERN>",
+            Permission = "admin",
             Username = "<USERNAME_PATTERN>",
         });
     }
@@ -65,10 +65,10 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.NewKafkaAcl(ctx, "mytestacl", &aiven.KafkaAclArgs{
-			Permission:  pulumi.String("admin"),
 			Project:     pulumi.Any(aiven_project.Myproject.Project),
-			ServiceName: pulumi.Any(aiven_service.Myservice.Service_name),
+			ServiceName: pulumi.Any(aiven_kafka.Myservice.Service_name),
 			Topic:       pulumi.String("<TOPIC_NAME_PATTERN>"),
+			Permission:  pulumi.String("admin"),
 			Username:    pulumi.String("<USERNAME_PATTERN>"),
 		})
 		if err != nil {
@@ -90,10 +90,10 @@ import pulumi
 import pulumi_aiven as aiven
 
 mytestacl = aiven.KafkaAcl("mytestacl",
-    permission="admin",
     project=aiven_project["myproject"]["project"],
-    service_name=aiven_service["myservice"]["service_name"],
+    service_name=aiven_kafka["myservice"]["service_name"],
     topic="<TOPIC_NAME_PATTERN>",
+    permission="admin",
     username="<USERNAME_PATTERN>")
 ```
 
@@ -109,10 +109,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
 const mytestacl = new aiven.KafkaAcl("mytestacl", {
-    permission: "admin",
-    project: aiven_project_myproject.project,
-    serviceName: aiven_service_myservice.serviceName,
+    project: aiven_project.myproject.project,
+    serviceName: aiven_kafka.myservice.service_name,
     topic: "<TOPIC_NAME_PATTERN>",
+    permission: "admin",
     username: "<USERNAME_PATTERN>",
 });
 ```
@@ -168,25 +168,19 @@ const mytestacl = new aiven.KafkaAcl("mytestacl", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KafkaAclArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -198,25 +192,19 @@ const mytestacl = new aiven.KafkaAcl("mytestacl", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KafkaAclArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -228,33 +216,25 @@ const mytestacl = new aiven.KafkaAcl("mytestacl", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KafkaAclArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -266,25 +246,19 @@ const mytestacl = new aiven.KafkaAcl("mytestacl", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KafkaAclArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

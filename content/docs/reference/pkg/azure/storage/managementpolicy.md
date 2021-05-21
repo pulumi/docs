@@ -63,6 +63,15 @@ class MyStack : Stack
                         {
                             "blockBlob",
                         },
+                        MatchBlobIndexTags = 
+                        {
+                            new Azure.Storage.Inputs.ManagementPolicyRuleFiltersMatchBlobIndexTagArgs
+                            {
+                                Name = "tag1",
+                                Operation = "==",
+                                Value = "val1",
+                            },
+                        },
                     },
                     Actions = new Azure.Storage.Inputs.ManagementPolicyRuleActionsArgs
                     {
@@ -104,7 +113,15 @@ class MyStack : Stack
                         },
                         Snapshot = new Azure.Storage.Inputs.ManagementPolicyRuleActionsSnapshotArgs
                         {
+                            ChangeTierToArchiveAfterDaysSinceCreation = 90,
+                            ChangeTierToCoolAfterDaysSinceCreation = 23,
                             DeleteAfterDaysSinceCreationGreaterThan = 31,
+                        },
+                        Version = new Azure.Storage.Inputs.ManagementPolicyRuleActionsVersionArgs
+                        {
+                            ChangeTierToArchiveAfterDaysSinceCreation = 9,
+                            ChangeTierToCoolAfterDaysSinceCreation = 90,
+                            DeleteAfterDaysSinceCreation = 3,
                         },
                     },
                 },
@@ -161,6 +178,13 @@ func main() {
 						BlobTypes: pulumi.StringArray{
 							pulumi.String("blockBlob"),
 						},
+						MatchBlobIndexTags: storage.ManagementPolicyRuleFiltersMatchBlobIndexTagArray{
+							&storage.ManagementPolicyRuleFiltersMatchBlobIndexTagArgs{
+								Name:      pulumi.String("tag1"),
+								Operation: pulumi.String("=="),
+								Value:     pulumi.String("val1"),
+							},
+						},
 					},
 					Actions: &storage.ManagementPolicyRuleActionsArgs{
 						BaseBlob: &storage.ManagementPolicyRuleActionsBaseBlobArgs{
@@ -192,7 +216,14 @@ func main() {
 							DeleteAfterDaysSinceModificationGreaterThan:        pulumi.Int(101),
 						},
 						Snapshot: &storage.ManagementPolicyRuleActionsSnapshotArgs{
-							DeleteAfterDaysSinceCreationGreaterThan: pulumi.Int(31),
+							ChangeTierToArchiveAfterDaysSinceCreation: pulumi.Int(90),
+							ChangeTierToCoolAfterDaysSinceCreation:    pulumi.Int(23),
+							DeleteAfterDaysSinceCreationGreaterThan:   pulumi.Int(31),
+						},
+						Version: &storage.ManagementPolicyRuleActionsVersionArgs{
+							ChangeTierToArchiveAfterDaysSinceCreation: pulumi.Int(9),
+							ChangeTierToCoolAfterDaysSinceCreation:    pulumi.Int(90),
+							DeleteAfterDaysSinceCreation:              pulumi.Int(3),
 						},
 					},
 				},
@@ -232,6 +263,11 @@ example_management_policy = azure.storage.ManagementPolicy("exampleManagementPol
             filters=azure.storage.ManagementPolicyRuleFiltersArgs(
                 prefix_matches=["container1/prefix1"],
                 blob_types=["blockBlob"],
+                match_blob_index_tags=[azure.storage.ManagementPolicyRuleFiltersMatchBlobIndexTagArgs(
+                    name="tag1",
+                    operation="==",
+                    value="val1",
+                )],
             ),
             actions=azure.storage.ManagementPolicyRuleActionsArgs(
                 base_blob=azure.storage.ManagementPolicyRuleActionsBaseBlobArgs(
@@ -261,7 +297,14 @@ example_management_policy = azure.storage.ManagementPolicy("exampleManagementPol
                     delete_after_days_since_modification_greater_than=101,
                 ),
                 snapshot=azure.storage.ManagementPolicyRuleActionsSnapshotArgs(
+                    change_tier_to_archive_after_days_since_creation=90,
+                    change_tier_to_cool_after_days_since_creation=23,
                     delete_after_days_since_creation_greater_than=31,
+                ),
+                version=azure.storage.ManagementPolicyRuleActionsVersionArgs(
+                    change_tier_to_archive_after_days_since_creation=9,
+                    change_tier_to_cool_after_days_since_creation=90,
+                    delete_after_days_since_creation=3,
                 ),
             ),
         ),
@@ -296,6 +339,11 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
             filters: {
                 prefixMatches: ["container1/prefix1"],
                 blobTypes: ["blockBlob"],
+                matchBlobIndexTags: [{
+                    name: "tag1",
+                    operation: "==",
+                    value: "val1",
+                }],
             },
             actions: {
                 baseBlob: {
@@ -325,7 +373,14 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
                     deleteAfterDaysSinceModificationGreaterThan: 101,
                 },
                 snapshot: {
+                    changeTierToArchiveAfterDaysSinceCreation: 90,
+                    changeTierToCoolAfterDaysSinceCreation: 23,
                     deleteAfterDaysSinceCreationGreaterThan: 31,
+                },
+                version: {
+                    changeTierToArchiveAfterDaysSinceCreation: 9,
+                    changeTierToCoolAfterDaysSinceCreation: 90,
+                    deleteAfterDaysSinceCreation: 3,
                 },
             },
         },
@@ -381,25 +436,19 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ManagementPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -411,25 +460,19 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ManagementPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -441,33 +484,25 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ManagementPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -479,25 +514,19 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ManagementPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1061,6 +1090,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyruleactionsversion">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Version<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `version` block as documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1083,6 +1121,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyruleactionsversion">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Version</a></span>
+    </dt>
+    <dd>{{% md %}}A `version` block as documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1105,6 +1152,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyruleactionsversion">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Version<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `version` block as documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1127,6 +1183,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyruleactionsversion">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Version<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `version` block as documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1141,7 +1206,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The age in days after last modification to delete the blob. Must be at least 0.
+    <dd>{{% md %}}The age in days after last modification to delete the blob. Must be between 0 and 99999.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tiertoarchiveafterdayssincemodificationgreaterthan_csharp">
@@ -1150,7 +1215,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier. Must be at least 0.
+    <dd>{{% md %}}The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier. Must be between 0 and 99999.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tiertocoolafterdayssincemodificationgreaterthan_csharp">
@@ -1159,7 +1224,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier. Must be at least 0.
+    <dd>{{% md %}}The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier. Must be between 0 and 99999.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1172,7 +1237,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The age in days after last modification to delete the blob. Must be at least 0.
+    <dd>{{% md %}}The age in days after last modification to delete the blob. Must be between 0 and 99999.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tiertoarchiveafterdayssincemodificationgreaterthan_go">
@@ -1181,7 +1246,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier. Must be at least 0.
+    <dd>{{% md %}}The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier. Must be between 0 and 99999.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tiertocoolafterdayssincemodificationgreaterthan_go">
@@ -1190,7 +1255,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier. Must be at least 0.
+    <dd>{{% md %}}The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier. Must be between 0 and 99999.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1203,7 +1268,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The age in days after last modification to delete the blob. Must be at least 0.
+    <dd>{{% md %}}The age in days after last modification to delete the blob. Must be between 0 and 99999.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tiertoarchiveafterdayssincemodificationgreaterthan_nodejs">
@@ -1212,7 +1277,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier. Must be at least 0.
+    <dd>{{% md %}}The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier. Must be between 0 and 99999.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tiertocoolafterdayssincemodificationgreaterthan_nodejs">
@@ -1221,7 +1286,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier. Must be at least 0.
+    <dd>{{% md %}}The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier. Must be between 0 and 99999.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1234,7 +1299,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The age in days after last modification to delete the blob. Must be at least 0.
+    <dd>{{% md %}}The age in days after last modification to delete the blob. Must be between 0 and 99999.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_to_archive_after_days_since_modification_greater_than_python">
@@ -1243,7 +1308,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier. Must be at least 0.
+    <dd>{{% md %}}The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier. Must be between 0 and 99999.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_to_cool_after_days_since_modification_greater_than_python">
@@ -1252,7 +1317,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier. Must be at least 0.
+    <dd>{{% md %}}The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier. Must be between 0 and 99999.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1261,18 +1326,54 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="changetiertoarchiveafterdayssincecreation_csharp">
+<a href="#changetiertoarchiveafterdayssincecreation_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob snapshot to archive storage. Must be between 0 and 99999.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="changetiertocoolafterdayssincecreation_csharp">
+<a href="#changetiertocoolafterdayssincecreation_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob snapshot to cool storage. Must be between 0 and 99999.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="deleteafterdayssincecreationgreaterthan_csharp">
 <a href="#deleteafterdayssincecreationgreaterthan_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The age in days after create to delete the snaphot. Must be at least 0.
+    <dd>{{% md %}}The age in days after creation to delete the blob snapshot. Must be between 0 and 99999.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="changetiertoarchiveafterdayssincecreation_go">
+<a href="#changetiertoarchiveafterdayssincecreation_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob snapshot to archive storage. Must be between 0 and 99999.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="changetiertocoolafterdayssincecreation_go">
+<a href="#changetiertocoolafterdayssincecreation_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob snapshot to cool storage. Must be between 0 and 99999.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteafterdayssincecreationgreaterthan_go">
 <a href="#deleteafterdayssincecreationgreaterthan_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</a>
@@ -1280,12 +1381,30 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The age in days after create to delete the snaphot. Must be at least 0.
+    <dd>{{% md %}}The age in days after creation to delete the blob snapshot. Must be between 0 and 99999.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="changetiertoarchiveafterdayssincecreation_nodejs">
+<a href="#changetiertoarchiveafterdayssincecreation_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob snapshot to archive storage. Must be between 0 and 99999.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="changetiertocoolafterdayssincecreation_nodejs">
+<a href="#changetiertocoolafterdayssincecreation_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob snapshot to cool storage. Must be between 0 and 99999.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteafterdayssincecreationgreaterthan_nodejs">
 <a href="#deleteafterdayssincecreationgreaterthan_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</a>
@@ -1293,12 +1412,30 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The age in days after create to delete the snaphot. Must be at least 0.
+    <dd>{{% md %}}The age in days after creation to delete the blob snapshot. Must be between 0 and 99999.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="change_tier_to_archive_after_days_since_creation_python">
+<a href="#change_tier_to_archive_after_days_since_creation_python" style="color: inherit; text-decoration: inherit;">change_<wbr>tier_<wbr>to_<wbr>archive_<wbr>after_<wbr>days_<wbr>since_<wbr>creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob snapshot to archive storage. Must be between 0 and 99999.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="change_tier_to_cool_after_days_since_creation_python">
+<a href="#change_tier_to_cool_after_days_since_creation_python" style="color: inherit; text-decoration: inherit;">change_<wbr>tier_<wbr>to_<wbr>cool_<wbr>after_<wbr>days_<wbr>since_<wbr>creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob snapshot to cool storage. Must be between 0 and 99999.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_after_days_since_creation_greater_than_python">
 <a href="#delete_after_days_since_creation_greater_than_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after_<wbr>days_<wbr>since_<wbr>creation_<wbr>greater_<wbr>than</a>
@@ -1306,7 +1443,133 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The age in days after create to delete the snaphot. Must be at least 0.
+    <dd>{{% md %}}The age in days after creation to delete the blob snapshot. Must be between 0 and 99999.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="managementpolicyruleactionsversion">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Version</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="changetiertoarchiveafterdayssincecreation_csharp">
+<a href="#changetiertoarchiveafterdayssincecreation_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to archive storage. Must be between 0 and 99999.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="changetiertocoolafterdayssincecreation_csharp">
+<a href="#changetiertocoolafterdayssincecreation_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days creation create to  tier blob version to cool storage. Must be between 0 and 99999.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deleteafterdayssincecreation_csharp">
+<a href="#deleteafterdayssincecreation_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to delete the blob version. Must be between 0 and 99999.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="changetiertoarchiveafterdayssincecreation_go">
+<a href="#changetiertoarchiveafterdayssincecreation_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to archive storage. Must be between 0 and 99999.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="changetiertocoolafterdayssincecreation_go">
+<a href="#changetiertocoolafterdayssincecreation_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days creation create to  tier blob version to cool storage. Must be between 0 and 99999.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deleteafterdayssincecreation_go">
+<a href="#deleteafterdayssincecreation_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to delete the blob version. Must be between 0 and 99999.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="changetiertoarchiveafterdayssincecreation_nodejs">
+<a href="#changetiertoarchiveafterdayssincecreation_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to archive storage. Must be between 0 and 99999.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="changetiertocoolafterdayssincecreation_nodejs">
+<a href="#changetiertocoolafterdayssincecreation_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The age in days creation create to  tier blob version to cool storage. Must be between 0 and 99999.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deleteafterdayssincecreation_nodejs">
+<a href="#deleteafterdayssincecreation_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to delete the blob version. Must be between 0 and 99999.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="change_tier_to_archive_after_days_since_creation_python">
+<a href="#change_tier_to_archive_after_days_since_creation_python" style="color: inherit; text-decoration: inherit;">change_<wbr>tier_<wbr>to_<wbr>archive_<wbr>after_<wbr>days_<wbr>since_<wbr>creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to tier blob version to archive storage. Must be between 0 and 99999.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="change_tier_to_cool_after_days_since_creation_python">
+<a href="#change_tier_to_cool_after_days_since_creation_python" style="color: inherit; text-decoration: inherit;">change_<wbr>tier_<wbr>to_<wbr>cool_<wbr>after_<wbr>days_<wbr>since_<wbr>creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days creation create to  tier blob version to cool storage. Must be between 0 and 99999.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delete_after_days_since_creation_python">
+<a href="#delete_after_days_since_creation_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after_<wbr>days_<wbr>since_<wbr>creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in days after creation to delete the blob version. Must be between 0 and 99999.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1322,6 +1585,15 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of predefined values. Valid options are `blockBlob` and `appendBlob`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchblobindextags_csharp">
+<a href="#matchblobindextags_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Blob<wbr>Index<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyrulefiltersmatchblobindextag">List&lt;Management<wbr>Policy<wbr>Rule<wbr>Filters<wbr>Match<wbr>Blob<wbr>Index<wbr>Tag<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `match_blob_index_tag` block as defined below. The block defines the blob index tag based filtering for blob objects.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixmatches_csharp">
@@ -1346,6 +1618,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of predefined values. Valid options are `blockBlob` and `appendBlob`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="matchblobindextags_go">
+<a href="#matchblobindextags_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Blob<wbr>Index<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyrulefiltersmatchblobindextag">[]Management<wbr>Policy<wbr>Rule<wbr>Filters<wbr>Match<wbr>Blob<wbr>Index<wbr>Tag</a></span>
+    </dt>
+    <dd>{{% md %}}A `match_blob_index_tag` block as defined below. The block defines the blob index tag based filtering for blob objects.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="prefixmatches_go">
 <a href="#prefixmatches_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Matches</a>
 </span>
@@ -1366,6 +1647,15 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of predefined values. Valid options are `blockBlob` and `appendBlob`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchblobindextags_nodejs">
+<a href="#matchblobindextags_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Blob<wbr>Index<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyrulefiltersmatchblobindextag">Management<wbr>Policy<wbr>Rule<wbr>Filters<wbr>Match<wbr>Blob<wbr>Index<wbr>Tag<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `match_blob_index_tag` block as defined below. The block defines the blob index tag based filtering for blob objects.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixmatches_nodejs">
@@ -1390,6 +1680,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of predefined values. Valid options are `blockBlob` and `appendBlob`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="match_blob_index_tags_python">
+<a href="#match_blob_index_tags_python" style="color: inherit; text-decoration: inherit;">match_<wbr>blob_<wbr>index_<wbr>tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyrulefiltersmatchblobindextag">Sequence[Management<wbr>Policy<wbr>Rule<wbr>Filters<wbr>Match<wbr>Blob<wbr>Index<wbr>Tag<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `match_blob_index_tag` block as defined below. The block defines the blob index tag based filtering for blob objects.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="prefix_matches_python">
 <a href="#prefix_matches_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>matches</a>
 </span>
@@ -1397,6 +1696,132 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be matched.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="managementpolicyrulefiltersmatchblobindextag">Management<wbr>Policy<wbr>Rule<wbr>Filters<wbr>Match<wbr>Blob<wbr>Index<wbr>Tag</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filter tag name used for tag based filtering for blob objects.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filter tag value used for tag based filtering for blob objects.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="operation_csharp">
+<a href="#operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The comparison operator which is used for object comparison and filtering. Possible value is `==`. Defaults to `==`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filter tag name used for tag based filtering for blob objects.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filter tag value used for tag based filtering for blob objects.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="operation_go">
+<a href="#operation_go" style="color: inherit; text-decoration: inherit;">Operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The comparison operator which is used for object comparison and filtering. Possible value is `==`. Defaults to `==`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filter tag name used for tag based filtering for blob objects.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filter tag value used for tag based filtering for blob objects.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="operation_nodejs">
+<a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The comparison operator which is used for object comparison and filtering. Possible value is `==`. Defaults to `==`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The filter tag name used for tag based filtering for blob objects.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The filter tag value used for tag based filtering for blob objects.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="operation_python">
+<a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The comparison operator which is used for object comparison and filtering. Possible value is `==`. Defaults to `==`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

@@ -18,9 +18,12 @@ Explore the resources and functions of the azure.cosmosdb module.
     <li><a href="gremlingraph" title="GremlinGraph"><span class="symbol resource"></span>GremlinGraph</a></li>
     <li><a href="mongocollection" title="MongoCollection"><span class="symbol resource"></span>MongoCollection</a></li>
     <li><a href="mongodatabase" title="MongoDatabase"><span class="symbol resource"></span>MongoDatabase</a></li>
+    <li><a href="notebookworkspace" title="NotebookWorkspace"><span class="symbol resource"></span>NotebookWorkspace</a></li>
     <li><a href="sqlcontainer" title="SqlContainer"><span class="symbol resource"></span>SqlContainer</a></li>
     <li><a href="sqldatabase" title="SqlDatabase"><span class="symbol resource"></span>SqlDatabase</a></li>
+    <li><a href="sqlfunction" title="SqlFunction"><span class="symbol resource"></span>SqlFunction</a></li>
     <li><a href="sqlstoredprocedure" title="SqlStoredProcedure"><span class="symbol resource"></span>SqlStoredProcedure</a></li>
+    <li><a href="sqltrigger" title="SqlTrigger"><span class="symbol resource"></span>SqlTrigger</a></li>
     <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
 </ul>
 
@@ -38,6 +41,6 @@ Explore the resources and functions of the azure.cosmosdb module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.0.0</dd>
+	<dd>4.3.0</dd>
 </dl>
 

@@ -20,7 +20,9 @@ Explore the resources and functions of the aws.route53 module.
     <li><a href="resolverdnssecconfig" title="ResolverDnsSecConfig"><span class="symbol resource"></span>ResolverDnsSecConfig</a></li>
     <li><a href="resolverendpoint" title="ResolverEndpoint"><span class="symbol resource"></span>ResolverEndpoint</a></li>
     <li><a href="resolverfirewalldomainlist" title="ResolverFirewallDomainList"><span class="symbol resource"></span>ResolverFirewallDomainList</a></li>
+    <li><a href="resolverfirewallrule" title="ResolverFirewallRule"><span class="symbol resource"></span>ResolverFirewallRule</a></li>
     <li><a href="resolverfirewallrulegroup" title="ResolverFirewallRuleGroup"><span class="symbol resource"></span>ResolverFirewallRuleGroup</a></li>
+    <li><a href="resolverfirewallrulegroupassociation" title="ResolverFirewallRuleGroupAssociation"><span class="symbol resource"></span>ResolverFirewallRuleGroupAssociation</a></li>
     <li><a href="resolverquerylogconfig" title="ResolverQueryLogConfig"><span class="symbol resource"></span>ResolverQueryLogConfig</a></li>
     <li><a href="resolverquerylogconfigassociation" title="ResolverQueryLogConfigAssociation"><span class="symbol resource"></span>ResolverQueryLogConfigAssociation</a></li>
     <li><a href="resolverrule" title="ResolverRule"><span class="symbol resource"></span>ResolverRule</a></li>
@@ -48,6 +50,6 @@ Explore the resources and functions of the aws.route53 module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.0.0</dd>
+	<dd>4.5.1</dd>
 </dl>
 

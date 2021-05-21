@@ -29,7 +29,6 @@ const test = new mongodbatlas.Cluster("test", {
     providerBackupEnabled: true,
     clusterType: "GEOSHARDED",
     providerName: "AWS",
-    providerDiskIops: 240,
     providerInstanceSizeName: "M30",
     replicationSpecs: [
         {
@@ -79,7 +78,6 @@ test = mongodbatlas.Cluster("test",
     provider_backup_enabled=True,
     cluster_type="GEOSHARDED",
     provider_name="AWS",
-    provider_disk_iops=240,
     provider_instance_size_name="M30",
     replication_specs=[
         mongodbatlas.ClusterReplicationSpecArgs(
@@ -132,7 +130,6 @@ class MyStack : Stack
             ProviderBackupEnabled = true,
             ClusterType = "GEOSHARDED",
             ProviderName = "AWS",
-            ProviderDiskIops = 240,
             ProviderInstanceSizeName = "M30",
             ReplicationSpecs = 
             {
@@ -211,7 +208,6 @@ func main() {
 			ProviderBackupEnabled:    pulumi.Bool(true),
 			ClusterType:              pulumi.String("GEOSHARDED"),
 			ProviderName:             pulumi.String("AWS"),
-			ProviderDiskIops:         pulumi.Int(240),
 			ProviderInstanceSizeName: pulumi.String("M30"),
 			ReplicationSpecs: mongodbatlas.ClusterReplicationSpecArray{
 				&mongodbatlas.ClusterReplicationSpecArgs{
@@ -283,8 +279,6 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     mongoDbMajorVersion: "4.0",
     providerName: "AWS",
     diskSizeGb: 100,
-    providerDiskIops: 300,
-    providerEncryptEbsVolume: false,
     providerInstanceSizeName: "M40",
     providerRegionName: "US_EAST_1",
 });
@@ -315,8 +309,6 @@ cluster_test = mongodbatlas.Cluster("cluster-test",
     mongo_db_major_version="4.0",
     provider_name="AWS",
     disk_size_gb=100,
-    provider_disk_iops=300,
-    provider_encrypt_ebs_volume=False,
     provider_instance_size_name="M40",
     provider_region_name="US_EAST_1")
 config = mongodbatlas.GlobalClusterConfig("config",
@@ -350,8 +342,6 @@ class MyStack : Stack
             MongoDbMajorVersion = "4.0",
             ProviderName = "AWS",
             DiskSizeGb = 100,
-            ProviderDiskIops = 300,
-            ProviderEncryptEbsVolume = false,
             ProviderInstanceSizeName = "M40",
             ProviderRegionName = "US_EAST_1",
         });
@@ -400,8 +390,6 @@ func main() {
 			MongoDbMajorVersion:      pulumi.String("4.0"),
 			ProviderName:             pulumi.String("AWS"),
 			DiskSizeGb:               pulumi.Float64(100),
-			ProviderDiskIops:         pulumi.Int(300),
-			ProviderEncryptEbsVolume: pulumi.Bool(false),
 			ProviderInstanceSizeName: pulumi.String("M40"),
 			ProviderRegionName:       pulumi.String("US_EAST_1"),
 		})
@@ -473,25 +461,19 @@ func main() {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GlobalClusterConfigArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -503,25 +485,19 @@ func main() {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GlobalClusterConfigArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -533,33 +509,25 @@ func main() {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GlobalClusterConfigArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -571,25 +539,19 @@ func main() {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GlobalClusterConfigArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -612,7 +574,8 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the Global Cluster.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -621,7 +584,6 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-* `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customzonemappings_csharp">
@@ -652,7 +614,8 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the Global Cluster.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -661,7 +624,6 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-* `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customzonemappings_go">
@@ -692,7 +654,8 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the Global Cluster.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -701,7 +664,6 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-* `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customzonemappings_nodejs">
@@ -732,7 +694,8 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the Global Cluster.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -741,7 +704,6 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-* `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_zone_mappings_python">
@@ -993,7 +955,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the Global Cluster.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customzonemapping_csharp">
 <a href="#state_customzonemapping_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mapping</a>
@@ -1029,7 +992,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-* `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1042,7 +1004,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the Global Cluster.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customzonemapping_go">
 <a href="#state_customzonemapping_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mapping</a>
@@ -1078,7 +1041,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-* `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1091,7 +1053,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the Global Cluster.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customzonemapping_nodejs">
 <a href="#state_customzonemapping_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Zone<wbr>Mapping</a>
@@ -1127,7 +1090,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-* `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1140,7 +1102,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the Global Cluster.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_zone_mapping_python">
 <a href="#state_custom_zone_mapping_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>zone_<wbr>mapping</a>
@@ -1176,7 +1139,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-* `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

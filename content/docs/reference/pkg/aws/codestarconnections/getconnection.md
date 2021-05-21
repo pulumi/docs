@@ -263,6 +263,15 @@ The following output properties are available:
     <dd>{{% md %}}The CodeStar Connection status. Possible values are `PENDING`, `AVAILABLE` and `ERROR`.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="hostarn_csharp">
+<a href="#hostarn_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the host associated with the connection.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -318,6 +327,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodeStar Connection status. Possible values are `PENDING`, `AVAILABLE` and `ERROR`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="hostarn_go">
+<a href="#hostarn_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the host associated with the connection.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -377,6 +395,15 @@ The following output properties are available:
     <dd>{{% md %}}The CodeStar Connection status. Possible values are `PENDING`, `AVAILABLE` and `ERROR`.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="hostarn_nodejs">
+<a href="#hostarn_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the host associated with the connection.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -432,6 +459,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CodeStar Connection status. Possible values are `PENDING`, `AVAILABLE` and `ERROR`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="host_arn_python">
+<a href="#host_arn_python" style="color: inherit; text-decoration: inherit;">host_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the host associated with the connection.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">

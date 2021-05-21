@@ -301,25 +301,19 @@ const exampleGremlinGraph = new azure.cosmosdb.GremlinGraph("exampleGremlinGraph
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GremlinGraphArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -331,25 +325,19 @@ const exampleGremlinGraph = new azure.cosmosdb.GremlinGraph("exampleGremlinGraph
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GremlinGraphArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -361,33 +349,25 @@ const exampleGremlinGraph = new azure.cosmosdb.GremlinGraph("exampleGremlinGraph
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GremlinGraphArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -399,25 +379,19 @@ const exampleGremlinGraph = new azure.cosmosdb.GremlinGraph("exampleGremlinGraph
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GremlinGraphArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -443,15 +417,6 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The name of the CosmosDB Account to create the Gremlin Graph within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="conflictresolutionpolicies_csharp">
-<a href="#conflictresolutionpolicies_csharp" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">List&lt;Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The conflict resolution policy for the graph. One or more `conflict_resolution_policy` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
 </span>
@@ -468,6 +433,15 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#gremlingraphindexpolicy">List&lt;Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. One or more `index_policy` blocks as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="partitionkeypath_csharp">
+<a href="#partitionkeypath_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -487,6 +461,15 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="conflictresolutionpolicies_csharp">
+<a href="#conflictresolutionpolicies_csharp" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">List&lt;Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="defaultttl_csharp">
 <a href="#defaultttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
 </span>
@@ -503,15 +486,6 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB Gremlin Graph. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="partitionkeypath_csharp">
-<a href="#partitionkeypath_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_csharp">
@@ -545,15 +519,6 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The name of the CosmosDB Account to create the Gremlin Graph within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="conflictresolutionpolicies_go">
-<a href="#conflictresolutionpolicies_go" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">[]Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}The conflict resolution policy for the graph. One or more `conflict_resolution_policy` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
 </span>
@@ -570,6 +535,15 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#gremlingraphindexpolicy">[]Gremlin<wbr>Graph<wbr>Index<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. One or more `index_policy` blocks as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="partitionkeypath_go">
+<a href="#partitionkeypath_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -589,6 +563,15 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="conflictresolutionpolicies_go">
+<a href="#conflictresolutionpolicies_go" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">[]Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="defaultttl_go">
 <a href="#defaultttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
 </span>
@@ -605,15 +588,6 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB Gremlin Graph. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="partitionkeypath_go">
-<a href="#partitionkeypath_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_go">
@@ -647,15 +621,6 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The name of the CosmosDB Account to create the Gremlin Graph within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="conflictresolutionpolicies_nodejs">
-<a href="#conflictresolutionpolicies_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args[]</a></span>
-    </dt>
-    <dd>{{% md %}}The conflict resolution policy for the graph. One or more `conflict_resolution_policy` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
@@ -672,6 +637,15 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#gremlingraphindexpolicy">Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. One or more `index_policy` blocks as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="partitionkeypath_nodejs">
+<a href="#partitionkeypath_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -691,6 +665,15 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="conflictresolutionpolicies_nodejs">
+<a href="#conflictresolutionpolicies_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="defaultttl_nodejs">
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
@@ -707,15 +690,6 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB Gremlin Graph. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="partitionkeypath_nodejs">
-<a href="#partitionkeypath_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key<wbr>Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_nodejs">
@@ -749,15 +723,6 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The name of the CosmosDB Account to create the Gremlin Graph within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="conflict_resolution_policies_python">
-<a href="#conflict_resolution_policies_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">Sequence[Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}The conflict resolution policy for the graph. One or more `conflict_resolution_policy` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
@@ -774,6 +739,15 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#gremlingraphindexpolicy">Sequence[Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. One or more `index_policy` blocks as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="partition_key_path_python">
+<a href="#partition_key_path_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -793,6 +767,15 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="conflict_resolution_policies_python">
+<a href="#conflict_resolution_policies_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">Sequence[Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="default_ttl_python">
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span>
@@ -809,15 +792,6 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB Gremlin Graph. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="partition_key_path_python">
-<a href="#partition_key_path_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key_<wbr>path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_python">
@@ -1056,7 +1030,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">List&lt;Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The conflict resolution policy for the graph. One or more `conflict_resolution_policy` blocks as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_csharp">
@@ -1158,7 +1132,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">[]Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}The conflict resolution policy for the graph. One or more `conflict_resolution_policy` blocks as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_go">
@@ -1260,7 +1234,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}The conflict resolution policy for the graph. One or more `conflict_resolution_policy` blocks as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_nodejs">
@@ -1362,7 +1336,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">Sequence[Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The conflict resolution policy for the graph. One or more `conflict_resolution_policy` blocks as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_name_python">

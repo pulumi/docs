@@ -18,6 +18,7 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="aadiam/" title="aadiam"><span class="symbol module"></span>aadiam</a></li>
     <li><a href="addons/" title="addons"><span class="symbol module"></span>addons</a></li>
     <li><a href="advisor/" title="advisor"><span class="symbol module"></span>advisor</a></li>
+    <li><a href="agfoodplatform/" title="agfoodplatform"><span class="symbol module"></span>agfoodplatform</a></li>
     <li><a href="alertsmanagement/" title="alertsmanagement"><span class="symbol module"></span>alertsmanagement</a></li>
     <li><a href="analysisservices/" title="analysisservices"><span class="symbol module"></span>analysisservices</a></li>
     <li><a href="apimanagement/" title="apimanagement"><span class="symbol module"></span>apimanagement</a></li>
@@ -170,7 +171,9 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="streamanalytics/" title="streamanalytics"><span class="symbol module"></span>streamanalytics</a></li>
     <li><a href="subscription/" title="subscription"><span class="symbol module"></span>subscription</a></li>
     <li><a href="synapse/" title="synapse"><span class="symbol module"></span>synapse</a></li>
+    <li><a href="testbase/" title="testbase"><span class="symbol module"></span>testbase</a></li>
     <li><a href="timeseriesinsights/" title="timeseriesinsights"><span class="symbol module"></span>timeseriesinsights</a></li>
+    <li><a href="videoanalyzer/" title="videoanalyzer"><span class="symbol module"></span>videoanalyzer</a></li>
     <li><a href="virtualmachineimages/" title="virtualmachineimages"><span class="symbol module"></span>virtualmachineimages</a></li>
     <li><a href="visualstudio/" title="visualstudio"><span class="symbol module"></span>visualstudio</a></li>
     <li><a href="vmwarecloudsimple/" title="vmwarecloudsimple"><span class="symbol module"></span>vmwarecloudsimple</a></li>
@@ -192,6 +195,6 @@ A native Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.1.0</dd>
+	<dd>1.7.0</dd>
 </dl>
 

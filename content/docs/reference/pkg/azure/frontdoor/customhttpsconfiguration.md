@@ -12,10 +12,10 @@ meta_desc: "Documentation for the azure.frontdoor.CustomHttpsConfiguration resou
 
 ## Import
 
-Front Door Custom Https Configurations can be imported using the `resource id` of the Frontend Endpoint, e.g.
+Front Door Custom Https Configurations can be imported using the `resource id` of the Front Door Custom Https Configuration, e.g.
 
 ```sh
- $ pulumi import azure:frontdoor/customHttpsConfiguration:CustomHttpsConfiguration example_custom_https_1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/frontDoors/frontdoor1/frontendEndpoints/endpoint1
+ $ pulumi import azure:frontdoor/customHttpsConfiguration:CustomHttpsConfiguration example_custom_https_1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/frontDoors/frontdoor1/customHttpsConfiguration/endpoint1
 ```
 
 
@@ -35,8 +35,7 @@ Front Door Custom Https Configurations can be imported using the `resource id` o
                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                              <span class="nx">custom_https_configuration</span><span class="p">:</span> <span class="nx">Optional[CustomHttpsConfigurationCustomHttpsConfigurationArgs]</span> = None<span class="p">,</span>
                              <span class="nx">custom_https_provisioning_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-                             <span class="nx">frontend_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                             <span class="nx">frontend_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">CustomHttpsConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CustomHttpsConfigurationArgs</a></span><span class="p">,</span>
@@ -59,25 +58,19 @@ Front Door Custom Https Configurations can be imported using the `resource id` o
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CustomHttpsConfigurationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -89,25 +82,19 @@ Front Door Custom Https Configurations can be imported using the `resource id` o
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CustomHttpsConfigurationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -119,33 +106,25 @@ Front Door Custom Https Configurations can be imported using the `resource id` o
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CustomHttpsConfigurationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -157,25 +136,19 @@ Front Door Custom Https Configurations can be imported using the `resource id` o
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CustomHttpsConfigurationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -217,15 +190,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="resourcegroupname_csharp">
-<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -256,15 +221,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="resourcegroupname_go">
-<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -295,15 +252,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="resourcegroupname_nodejs">
-<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -334,15 +283,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="resource_group_name_python">
-<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -418,8 +359,7 @@ Get an existing CustomHttpsConfiguration resource's state with the given name, I
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">custom_https_configuration</span><span class="p">:</span> <span class="nx">Optional[CustomHttpsConfigurationCustomHttpsConfigurationArgs]</span> = None<span class="p">,</span>
         <span class="nx">custom_https_provisioning_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-        <span class="nx">frontend_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CustomHttpsConfiguration</code></pre></div>
+        <span class="nx">frontend_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CustomHttpsConfiguration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -557,15 +497,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_resourcegroupname_csharp">
-<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -596,15 +528,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_resourcegroupname_go">
-<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -635,15 +559,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_resourcegroupname_nodejs">
-<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -674,15 +590,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_resource_group_name_python">
-<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -714,7 +622,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX.
+    <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX. Defaults to `Latest`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvaultcertificatevaultid_csharp">
@@ -779,7 +687,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX.
+    <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX. Defaults to `Latest`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvaultcertificatevaultid_go">
@@ -844,7 +752,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX.
+    <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX. Defaults to `Latest`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvaultcertificatevaultid_nodejs">
@@ -909,7 +817,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX.
+    <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX. Defaults to `Latest`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_key_vault_certificate_vault_id_python">

@@ -39,19 +39,19 @@ class MyStack : Stack
             {
                 new AzureNative.Network.Inputs.ConnectivityGroupItemArgs
                 {
-                    GroupConnectivity = "Transitive",
-                    IsGlobal = false,
+                    GroupConnectivity = "None",
+                    IsGlobal = "False",
                     NetworkGroupId = "subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkManagers/testNetworkManager/networkManagerGroups/group1",
-                    UseHubGateway = true,
+                    UseHubGateway = "True",
                 },
             },
             ConfigurationName = "myTestConnectivityConfig",
-            ConnectivityTopology = "HubAndSpokeTopology",
-            DeleteExistingPeering = true,
+            ConnectivityTopology = "HubAndSpoke",
+            DeleteExistingPeering = "True",
             Description = "Sample Configuration",
             DisplayName = "myTestConnectivityConfig",
             HubId = "subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myTestConnectivityConfig",
-            IsGlobal = true,
+            IsGlobal = "True",
             NetworkManagerName = "testNetworkManager",
             ResourceGroupName = "myResourceGroup",
         });
@@ -81,19 +81,19 @@ func main() {
 		_, err := network.NewConnectivityConfiguration(ctx, "connectivityConfiguration", &network.ConnectivityConfigurationArgs{
 			AppliesToGroups: network.ConnectivityGroupItemArray{
 				&network.ConnectivityGroupItemArgs{
-					GroupConnectivity: pulumi.String("Transitive"),
-					IsGlobal:          pulumi.Bool(false),
+					GroupConnectivity: pulumi.String("None"),
+					IsGlobal:          pulumi.String("False"),
 					NetworkGroupId:    pulumi.String("subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkManagers/testNetworkManager/networkManagerGroups/group1"),
-					UseHubGateway:     pulumi.Bool(true),
+					UseHubGateway:     pulumi.String("True"),
 				},
 			},
 			ConfigurationName:     pulumi.String("myTestConnectivityConfig"),
-			ConnectivityTopology:  pulumi.String("HubAndSpokeTopology"),
-			DeleteExistingPeering: pulumi.Bool(true),
+			ConnectivityTopology:  pulumi.String("HubAndSpoke"),
+			DeleteExistingPeering: pulumi.String("True"),
 			Description:           pulumi.String("Sample Configuration"),
 			DisplayName:           pulumi.String("myTestConnectivityConfig"),
 			HubId:                 pulumi.String("subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myTestConnectivityConfig"),
-			IsGlobal:              pulumi.Bool(true),
+			IsGlobal:              pulumi.String("True"),
 			NetworkManagerName:    pulumi.String("testNetworkManager"),
 			ResourceGroupName:     pulumi.String("myResourceGroup"),
 		})
@@ -119,18 +119,18 @@ import pulumi_azure_native as azure_native
 
 connectivity_configuration = azure_native.network.ConnectivityConfiguration("connectivityConfiguration",
     applies_to_groups=[azure_native.network.ConnectivityGroupItemArgs(
-        group_connectivity="Transitive",
-        is_global=False,
+        group_connectivity="None",
+        is_global="False",
         network_group_id="subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkManagers/testNetworkManager/networkManagerGroups/group1",
-        use_hub_gateway=True,
+        use_hub_gateway="True",
     )],
     configuration_name="myTestConnectivityConfig",
-    connectivity_topology="HubAndSpokeTopology",
-    delete_existing_peering=True,
+    connectivity_topology="HubAndSpoke",
+    delete_existing_peering="True",
     description="Sample Configuration",
     display_name="myTestConnectivityConfig",
     hub_id="subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myTestConnectivityConfig",
-    is_global=True,
+    is_global="True",
     network_manager_name="testNetworkManager",
     resource_group_name="myResourceGroup")
 
@@ -149,18 +149,18 @@ import * as azure_native from "@pulumi/azure-native";
 
 const connectivityConfiguration = new azure_native.network.ConnectivityConfiguration("connectivityConfiguration", {
     appliesToGroups: [{
-        groupConnectivity: "Transitive",
-        isGlobal: false,
+        groupConnectivity: "None",
+        isGlobal: "False",
         networkGroupId: "subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkManagers/testNetworkManager/networkManagerGroups/group1",
-        useHubGateway: true,
+        useHubGateway: "True",
     }],
     configurationName: "myTestConnectivityConfig",
-    connectivityTopology: "HubAndSpokeTopology",
-    deleteExistingPeering: true,
+    connectivityTopology: "HubAndSpoke",
+    deleteExistingPeering: "True",
     description: "Sample Configuration",
     displayName: "myTestConnectivityConfig",
     hubId: "subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myTestConnectivityConfig",
-    isGlobal: true,
+    isGlobal: "True",
     networkManagerName: "testNetworkManager",
     resourceGroupName: "myResourceGroup",
 });
@@ -194,11 +194,11 @@ const connectivityConfiguration = new azure_native.network.ConnectivityConfigura
                               <span class="nx">applies_to_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectivityGroupItemArgs]]</span> = None<span class="p">,</span>
                               <span class="nx">configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">connectivity_topology</span><span class="p">:</span> <span class="nx">Optional[Union[str, ConnectivityTopology]]</span> = None<span class="p">,</span>
-                              <span class="nx">delete_existing_peering</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                              <span class="nx">delete_existing_peering</span><span class="p">:</span> <span class="nx">Optional[Union[str, DeleteExistingPeering]]</span> = None<span class="p">,</span>
                               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                              <span class="nx">is_global</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                              <span class="nx">is_global</span><span class="p">:</span> <span class="nx">Optional[Union[str, IsGlobal]]</span> = None<span class="p">,</span>
                               <span class="nx">network_manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -223,25 +223,19 @@ const connectivityConfiguration = new azure_native.network.ConnectivityConfigura
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectivityConfigurationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -253,25 +247,19 @@ const connectivityConfiguration = new azure_native.network.ConnectivityConfigura
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectivityConfigurationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -283,33 +271,25 @@ const connectivityConfiguration = new azure_native.network.ConnectivityConfigura
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectivityConfigurationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -321,25 +301,19 @@ const connectivityConfiguration = new azure_native.network.ConnectivityConfigura
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectivityConfigurationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -400,7 +374,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#deleteexistingpeering_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Existing<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string | <a href="#deleteexistingpeering">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Delete<wbr>Existing<wbr>Peering</a></span>
     </dt>
     <dd>{{% md %}}Flag if need to remove current existing peerings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -432,7 +406,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#isglobal_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string | <a href="#isglobal">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Is<wbr>Global</a></span>
     </dt>
     <dd>{{% md %}}Flag if global mesh is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -484,7 +458,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#deleteexistingpeering_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Existing<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string | <a href="#deleteexistingpeering">Delete<wbr>Existing<wbr>Peering</a></span>
     </dt>
     <dd>{{% md %}}Flag if need to remove current existing peerings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -516,7 +490,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#isglobal_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string | <a href="#isglobal">Is<wbr>Global</a></span>
     </dt>
     <dd>{{% md %}}Flag if global mesh is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -568,7 +542,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#deleteexistingpeering_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Existing<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">string | <a href="#deleteexistingpeering">Delete<wbr>Existing<wbr>Peering</a></span>
     </dt>
     <dd>{{% md %}}Flag if need to remove current existing peerings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -600,7 +574,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#isglobal_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">string | <a href="#isglobal">Is<wbr>Global</a></span>
     </dt>
     <dd>{{% md %}}Flag if global mesh is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -652,7 +626,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#delete_existing_peering_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>existing_<wbr>peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">str | <a href="#deleteexistingpeering">Delete<wbr>Existing<wbr>Peering</a></span>
     </dt>
     <dd>{{% md %}}Flag if need to remove current existing peerings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -684,7 +658,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#is_global_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">str | <a href="#isglobal">Is<wbr>Global</a></span>
     </dt>
     <dd>{{% md %}}Flag if global mesh is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -931,7 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isglobal_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string | <a href="#isglobal">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Is<wbr>Global</a></span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -947,7 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usehubgateway_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Hub<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string | <a href="#usehubgateway">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Use<wbr>Hub<wbr>Gateway</a></span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -967,7 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isglobal_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string | <a href="#isglobal">Is<wbr>Global</a></span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -983,7 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usehubgateway_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Hub<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string | <a href="#usehubgateway">Use<wbr>Hub<wbr>Gateway</a></span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1003,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isglobal_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">string | <a href="#isglobal">Is<wbr>Global</a></span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1019,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usehubgateway_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Hub<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">string | <a href="#usehubgateway">Use<wbr>Hub<wbr>Gateway</a></span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1039,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_global_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">str | <a href="#isglobal">Is<wbr>Global</a></span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1055,7 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_hub_gateway_python" style="color: inherit; text-decoration: inherit;">use_<wbr>hub_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">str | <a href="#usehubgateway">Use<wbr>Hub<wbr>Gateway</a></span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1077,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isglobal_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1093,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usehubgateway_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Hub<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1113,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isglobal_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usehubgateway_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Hub<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1149,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isglobal_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1165,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usehubgateway_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Hub<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1185,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_global_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1201,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_hub_gateway_python" style="color: inherit; text-decoration: inherit;">use_<wbr>hub_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1209,27 +1183,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="connectivitytopology">Connectivity<wbr>Topology</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular"><dt>Hub<wbr>And<wbr>Spoke<wbr>Topology</dt>
-    <dd>HubAndSpokeTopology</dd><dt>Mesh<wbr>Topology</dt>
-    <dd>MeshTopology</dd></dl>
+<dl class="tabular"><dt>Hub<wbr>And<wbr>Spoke</dt>
+    <dd>HubAndSpoke</dd><dt>Mesh</dt>
+    <dd>Mesh</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Connectivity<wbr>Topology<wbr>Hub<wbr>And<wbr>Spoke<wbr>Topology</dt>
-    <dd>HubAndSpokeTopology</dd><dt>Connectivity<wbr>Topology<wbr>Mesh<wbr>Topology</dt>
-    <dd>MeshTopology</dd></dl>
+<dl class="tabular"><dt>Connectivity<wbr>Topology<wbr>Hub<wbr>And<wbr>Spoke</dt>
+    <dd>HubAndSpoke</dd><dt>Connectivity<wbr>Topology<wbr>Mesh</dt>
+    <dd>Mesh</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular"><dt>Hub<wbr>And<wbr>Spoke<wbr>Topology</dt>
-    <dd>HubAndSpokeTopology</dd><dt>Mesh<wbr>Topology</dt>
-    <dd>MeshTopology</dd></dl>
+<dl class="tabular"><dt>Hub<wbr>And<wbr>Spoke</dt>
+    <dd>HubAndSpoke</dd><dt>Mesh</dt>
+    <dd>Mesh</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular"><dt>HUB_AND_SPOKE_TOPOLOGY</dt>
-    <dd>HubAndSpokeTopology</dd><dt>MESH_TOPOLOGY</dt>
-    <dd>MeshTopology</dd></dl>
+<dl class="tabular"><dt>HUB_AND_SPOKE</dt>
+    <dd>HubAndSpoke</dd><dt>MESH</dt>
+    <dd>Mesh</dd></dl>
+{{% /choosable %}}
+
+<h4 id="deleteexistingpeering">Delete<wbr>Existing<wbr>Peering</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>False</dt>
+    <dd>False</dd><dt>True</dt>
+    <dd>True</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Delete<wbr>Existing<wbr>Peering<wbr>False</dt>
+    <dd>False</dd><dt>Delete<wbr>Existing<wbr>Peering<wbr>True</dt>
+    <dd>True</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>False</dt>
+    <dd>False</dd><dt>True</dt>
+    <dd>True</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FALSE</dt>
+    <dd>False</dd><dt>TRUE</dt>
+    <dd>True</dd></dl>
 {{% /choosable %}}
 
 <h4 id="groupconnectivity">Group<wbr>Connectivity</h4>
@@ -1256,6 +1256,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>NONE</dt>
     <dd>None</dd><dt>DIRECTLY_CONNECTED</dt>
     <dd>DirectlyConnected</dd></dl>
+{{% /choosable %}}
+
+<h4 id="isglobal">Is<wbr>Global</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>False</dt>
+    <dd>False</dd><dt>True</dt>
+    <dd>True</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Is<wbr>Global<wbr>False</dt>
+    <dd>False</dd><dt>Is<wbr>Global<wbr>True</dt>
+    <dd>True</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>False</dt>
+    <dd>False</dd><dt>True</dt>
+    <dd>True</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FALSE</dt>
+    <dd>False</dd><dt>TRUE</dt>
+    <dd>True</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
@@ -1466,6 +1492,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="usehubgateway">Use<wbr>Hub<wbr>Gateway</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>False</dt>
+    <dd>False</dd><dt>True</dt>
+    <dd>True</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Use<wbr>Hub<wbr>Gateway<wbr>False</dt>
+    <dd>False</dd><dt>Use<wbr>Hub<wbr>Gateway<wbr>True</dt>
+    <dd>True</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>False</dt>
+    <dd>False</dd><dt>True</dt>
+    <dd>True</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FALSE</dt>
+    <dd>False</dd><dt>TRUE</dt>
+    <dd>True</dd></dl>
 {{% /choosable %}}
 ## Import
 

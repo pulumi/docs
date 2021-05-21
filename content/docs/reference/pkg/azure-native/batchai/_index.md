@@ -13,7 +13,6 @@ Explore the resources and functions of the azure-native.batchai module.
 <ul class="api">
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
     <li><a href="experiment" title="Experiment"><span class="symbol resource"></span>Experiment</a></li>
-    <li><a href="fileserver" title="FileServer"><span class="symbol resource"></span>FileServer</a></li>
     <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
     <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
 </ul>
@@ -22,7 +21,6 @@ Explore the resources and functions of the azure-native.batchai module.
 <ul class="api">
     <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
     <li><a href="getexperiment" title="GetExperiment"><span class="symbol function"></span>GetExperiment</a></li>
-    <li><a href="getfileserver" title="GetFileServer"><span class="symbol function"></span>GetFileServer</a></li>
     <li><a href="getjob" title="GetJob"><span class="symbol function"></span>GetJob</a></li>
     <li><a href="getworkspace" title="GetWorkspace"><span class="symbol function"></span>GetWorkspace</a></li>
     <li><a href="listclusterremotelogininformation" title="ListClusterRemoteLoginInformation"><span class="symbol function"></span>ListClusterRemoteLoginInformation</a></li>
@@ -37,6 +35,6 @@ Explore the resources and functions of the azure-native.batchai module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.1.0</dd>
+	<dd>1.7.0</dd>
 </dl>
 

@@ -172,6 +172,7 @@ const database = new gcp.spanner.Database("database", {
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
              <span class="nx">ddls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
              <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">encryption_config</span><span class="p">:</span> <span class="nx">Optional[DatabaseEncryptionConfigArgs]</span> = None<span class="p">,</span>
              <span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -197,25 +198,19 @@ const database = new gcp.spanner.Database("database", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -227,25 +222,19 @@ const database = new gcp.spanner.Database("database", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -257,33 +246,25 @@ const database = new gcp.spanner.Database("database", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -295,25 +276,19 @@ const database = new gcp.spanner.Database("database", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -359,6 +334,16 @@ error in any statement, the database is not created.
     </dt>
     <dd>{{% md %}}Whether or not to allow the provider to destroy the instance. Unless this field is set to false
 in state, a `destroy` or `update` that would delete the instance will fail.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryptionconfig_csharp">
+<a href="#encryptionconfig_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseencryptionconfig">Database<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the database
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -416,6 +401,16 @@ error in any statement, the database is not created.
 in state, a `destroy` or `update` that would delete the instance will fail.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptionconfig_go">
+<a href="#encryptionconfig_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseencryptionconfig">Database<wbr>Encryption<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the database
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -471,6 +466,16 @@ error in any statement, the database is not created.
 in state, a `destroy` or `update` that would delete the instance will fail.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptionconfig_nodejs">
+<a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseencryptionconfig">Database<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the database
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -524,6 +529,16 @@ error in any statement, the database is not created.
     </dt>
     <dd>{{% md %}}Whether or not to allow the provider to destroy the instance. Unless this field is set to false
 in state, a `destroy` or `update` that would delete the instance will fail.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryption_config_python">
+<a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseencryptionconfig">Database<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the database
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -656,6 +671,7 @@ Get an existing Database resource's state with the given name, ID, and optional 
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">ddls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">encryption_config</span><span class="p">:</span> <span class="nx">Optional[DatabaseEncryptionConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -794,6 +810,16 @@ error in any statement, the database is not created.
 in state, a `destroy` or `update` that would delete the instance will fail.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryptionconfig_csharp">
+<a href="#state_encryptionconfig_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseencryptionconfig">Database<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the database
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_instance_csharp">
 <a href="#state_instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
 </span>
@@ -856,6 +882,16 @@ error in any statement, the database is not created.
     </dt>
     <dd>{{% md %}}Whether or not to allow the provider to destroy the instance. Unless this field is set to false
 in state, a `destroy` or `update` that would delete the instance will fail.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_encryptionconfig_go">
+<a href="#state_encryptionconfig_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseencryptionconfig">Database<wbr>Encryption<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the database
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_go">
@@ -922,6 +958,16 @@ error in any statement, the database is not created.
 in state, a `destroy` or `update` that would delete the instance will fail.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryptionconfig_nodejs">
+<a href="#state_encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseencryptionconfig">Database<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the database
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_instance_nodejs">
 <a href="#state_instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
@@ -986,6 +1032,16 @@ error in any statement, the database is not created.
 in state, a `destroy` or `update` that would delete the instance will fail.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryption_config_python">
+<a href="#state_encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseencryptionconfig">Database<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the database
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_instance_python">
 <a href="#state_instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
@@ -1029,6 +1085,68 @@ If it is not provided, the provider project is used.
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="databaseencryptionconfig">Database<wbr>Encryption<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kmskeyname_csharp">
+<a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified name of the KMS key to use to encrypt this database. This key must exist
+in the same location as the Spanner Database.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kmskeyname_go">
+<a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified name of the KMS key to use to encrypt this database. This key must exist
+in the same location as the Spanner Database.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kmskeyname_nodejs">
+<a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified name of the KMS key to use to encrypt this database. This key must exist
+in the same location as the Spanner Database.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kms_key_name_python">
+<a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified name of the KMS key to use to encrypt this database. This key must exist
+in the same location as the Spanner Database.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

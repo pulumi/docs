@@ -37,28 +37,28 @@ class MyStack : Stack
         {
             DatasetName = "exampleDataset",
             FactoryName = "exampleFactoryName",
-            Properties = 
+            Properties = new AzureNative.DataFactory.Inputs.AzureBlobDatasetArgs
             {
-                { "fileName", 
+                FileName = 
                 {
                     { "type", "Expression" },
                     { "value", "@dataset().MyFileName" },
-                } },
-                { "folderPath", 
+                },
+                FolderPath = 
                 {
                     { "type", "Expression" },
                     { "value", "@dataset().MyFolderPath" },
-                } },
-                { "format", 
+                },
+                Format = 
                 {
                     { "type", "TextFormat" },
-                } },
-                { "linkedServiceName", new AzureNative.DataFactory.Inputs.LinkedServiceReferenceArgs
+                },
+                LinkedServiceName = new AzureNative.DataFactory.Inputs.LinkedServiceReferenceArgs
                 {
                     ReferenceName = "exampleLinkedService",
                     Type = "LinkedServiceReference",
-                } },
-                { "parameters", 
+                },
+                Parameters = 
                 {
                     { "MyFileName", new AzureNative.DataFactory.Inputs.ParameterSpecificationArgs
                     {
@@ -68,8 +68,8 @@ class MyStack : Stack
                     {
                         Type = "String",
                     } },
-                } },
-                { "type", "AzureBlob" },
+                },
+                Type = "AzureBlob",
             },
             ResourceGroupName = "exampleResourceGroup",
         });
@@ -100,23 +100,23 @@ import pulumi_azure_native as azure_native
 dataset = azure_native.datafactory.Dataset("dataset",
     dataset_name="exampleDataset",
     factory_name="exampleFactoryName",
-    properties={
-        "fileName": {
+    properties=azure_native.datafactory.AzureBlobDatasetArgs(
+        file_name={
             "type": "Expression",
             "value": "@dataset().MyFileName",
         },
-        "folderPath": {
+        folder_path={
             "type": "Expression",
             "value": "@dataset().MyFolderPath",
         },
-        "format": {
+        format={
             "type": "TextFormat",
         },
-        "linkedServiceName": azure_native.datafactory.LinkedServiceReferenceArgs(
+        linked_service_name=azure_native.datafactory.LinkedServiceReferenceArgs(
             reference_name="exampleLinkedService",
             type="LinkedServiceReference",
         ),
-        "parameters": {
+        parameters={
             "MyFileName": azure_native.datafactory.ParameterSpecificationArgs(
                 type="String",
             ),
@@ -124,8 +124,8 @@ dataset = azure_native.datafactory.Dataset("dataset",
                 type="String",
             ),
         },
-        "type": "AzureBlob",
-    },
+        type="AzureBlob",
+    ),
     resource_group_name="exampleResourceGroup")
 
 ```
@@ -198,29 +198,29 @@ class MyStack : Stack
         {
             DatasetName = "exampleDataset",
             FactoryName = "exampleFactoryName",
-            Properties = 
+            Properties = new AzureNative.DataFactory.Inputs.AzureBlobDatasetArgs
             {
-                { "description", "Example description" },
-                { "fileName", 
+                Description = "Example description",
+                FileName = 
                 {
                     { "type", "Expression" },
                     { "value", "@dataset().MyFileName" },
-                } },
-                { "folderPath", 
+                },
+                FolderPath = 
                 {
                     { "type", "Expression" },
                     { "value", "@dataset().MyFolderPath" },
-                } },
-                { "format", 
+                },
+                Format = 
                 {
                     { "type", "TextFormat" },
-                } },
-                { "linkedServiceName", new AzureNative.DataFactory.Inputs.LinkedServiceReferenceArgs
+                },
+                LinkedServiceName = new AzureNative.DataFactory.Inputs.LinkedServiceReferenceArgs
                 {
                     ReferenceName = "exampleLinkedService",
                     Type = "LinkedServiceReference",
-                } },
-                { "parameters", 
+                },
+                Parameters = 
                 {
                     { "MyFileName", new AzureNative.DataFactory.Inputs.ParameterSpecificationArgs
                     {
@@ -230,8 +230,8 @@ class MyStack : Stack
                     {
                         Type = "String",
                     } },
-                } },
-                { "type", "AzureBlob" },
+                },
+                Type = "AzureBlob",
             },
             ResourceGroupName = "exampleResourceGroup",
         });
@@ -262,24 +262,24 @@ import pulumi_azure_native as azure_native
 dataset = azure_native.datafactory.Dataset("dataset",
     dataset_name="exampleDataset",
     factory_name="exampleFactoryName",
-    properties={
-        "description": "Example description",
-        "fileName": {
+    properties=azure_native.datafactory.AzureBlobDatasetArgs(
+        description="Example description",
+        file_name={
             "type": "Expression",
             "value": "@dataset().MyFileName",
         },
-        "folderPath": {
+        folder_path={
             "type": "Expression",
             "value": "@dataset().MyFolderPath",
         },
-        "format": {
+        format={
             "type": "TextFormat",
         },
-        "linkedServiceName": azure_native.datafactory.LinkedServiceReferenceArgs(
+        linked_service_name=azure_native.datafactory.LinkedServiceReferenceArgs(
             reference_name="exampleLinkedService",
             type="LinkedServiceReference",
         ),
-        "parameters": {
+        parameters={
             "MyFileName": azure_native.datafactory.ParameterSpecificationArgs(
                 type="String",
             ),
@@ -287,8 +287,8 @@ dataset = azure_native.datafactory.Dataset("dataset",
                 type="String",
             ),
         },
-        "type": "AzureBlob",
-    },
+        type="AzureBlob",
+    ),
     resource_group_name="exampleResourceGroup")
 
 ```
@@ -389,25 +389,19 @@ const dataset = new azure_native.datafactory.Dataset("dataset", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatasetArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -419,25 +413,19 @@ const dataset = new azure_native.datafactory.Dataset("dataset", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatasetArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -449,33 +437,25 @@ const dataset = new azure_native.datafactory.Dataset("dataset", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatasetArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -487,25 +467,19 @@ const dataset = new azure_native.datafactory.Dataset("dataset", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatasetArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -15274,40 +15248,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="compressioncodec">Compression<wbr>Codec</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>None</dt>
-    <dd>none</dd><dt>Gzip</dt>
-    <dd>gzip</dd><dt>Snappy</dt>
-    <dd>snappy</dd><dt>Lzo</dt>
-    <dd>lzo</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Compression<wbr>Codec<wbr>None</dt>
-    <dd>none</dd><dt>Compression<wbr>Codec<wbr>Gzip</dt>
-    <dd>gzip</dd><dt>Compression<wbr>Codec<wbr>Snappy</dt>
-    <dd>snappy</dd><dt>Compression<wbr>Codec<wbr>Lzo</dt>
-    <dd>lzo</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>None</dt>
-    <dd>none</dd><dt>Gzip</dt>
-    <dd>gzip</dd><dt>Snappy</dt>
-    <dd>snappy</dd><dt>Lzo</dt>
-    <dd>lzo</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>NONE</dt>
-    <dd>none</dd><dt>GZIP</dt>
-    <dd>gzip</dd><dt>SNAPPY</dt>
-    <dd>snappy</dd><dt>LZO</dt>
-    <dd>lzo</dd></dl>
-{{% /choosable %}}
-
 <h4 id="concurobjectdataset">Concur<wbr>Object<wbr>Dataset</h4>
 
 {{% choosable language csharp %}}
@@ -18020,32 +17960,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="resources-properties"></dl>
 {{% /choosable %}}
 
-<h4 id="datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Optimal</dt>
-    <dd>Optimal</dd><dt>Fastest</dt>
-    <dd>Fastest</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Dataset<wbr>Compression<wbr>Level<wbr>Optimal</dt>
-    <dd>Optimal</dd><dt>Dataset<wbr>Compression<wbr>Level<wbr>Fastest</dt>
-    <dd>Fastest</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Optimal</dt>
-    <dd>Optimal</dd><dt>Fastest</dt>
-    <dd>Fastest</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>OPTIMAL</dt>
-    <dd>Optimal</dd><dt>FASTEST</dt>
-    <dd>Fastest</dd></dl>
-{{% /choosable %}}
-
 <h4 id="datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</h4>
 
 {{% choosable language csharp %}}
@@ -18055,7 +17969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18067,7 +17981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18079,7 +17993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18091,7 +18005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18105,7 +18019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18117,7 +18031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18129,7 +18043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18141,7 +18055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18205,7 +18119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18217,7 +18131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18229,7 +18143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18241,7 +18155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18255,7 +18169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18267,7 +18181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18279,7 +18193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18291,7 +18205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18391,7 +18305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18403,7 +18317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18415,7 +18329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18427,7 +18341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18441,7 +18355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18453,7 +18367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18465,7 +18379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18477,7 +18391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18491,7 +18405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18503,7 +18417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18515,7 +18429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18527,7 +18441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18541,7 +18455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18553,7 +18467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18565,7 +18479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18577,7 +18491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19235,15 +19149,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#compressioncodec">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Compression<wbr>Codec</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressionlevel_csharp">
 <a href="#compressionlevel_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19375,15 +19289,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compressioncodec_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#compressioncodec">Compression<wbr>Codec</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressionlevel_go">
 <a href="#compressionlevel_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19515,15 +19429,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#compressioncodec">Compression<wbr>Codec</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressionlevel_nodejs">
 <a href="#compressionlevel_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19655,15 +19569,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#compressioncodec">Compression<wbr>Codec</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_level_python">
 <a href="#compression_level_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasetcompressionlevel">Dataset<wbr>Compression<wbr>Level</a></span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19797,15 +19711,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressionlevel_csharp">
 <a href="#compressionlevel_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19937,15 +19851,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compressioncodec_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressionlevel_go">
 <a href="#compressionlevel_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20077,15 +19991,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressionlevel_nodejs">
 <a href="#compressionlevel_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20217,15 +20131,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_level_python">
 <a href="#compression_level_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The data compression method used for DelimitedText.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23689,15 +23603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amazons3compatiblelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sheetname_csharp">
-<a href="#sheetname_csharp" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}The sheet of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -23771,6 +23677,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sheetindex_csharp">
+<a href="#sheetindex_csharp" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheetname_csharp">
+<a href="#sheetname_csharp" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The sheet name of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="structure_csharp">
 <a href="#structure_csharp" style="color: inherit; text-decoration: inherit;">Structure</a>
 </span>
@@ -23797,15 +23719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
     </dt>
-    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sheetname_go">
-<a href="#sheetname_go" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}The sheet of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -23879,6 +23793,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sheetindex_go">
+<a href="#sheetindex_go" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheetname_go">
+<a href="#sheetname_go" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The sheet name of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="structure_go">
 <a href="#structure_go" style="color: inherit; text-decoration: inherit;">Structure</a>
 </span>
@@ -23905,15 +23835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sheetname_nodejs">
-<a href="#sheetname_nodejs" style="color: inherit; text-decoration: inherit;">sheet<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}The sheet of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -23987,6 +23909,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sheetindex_nodejs">
+<a href="#sheetindex_nodejs" style="color: inherit; text-decoration: inherit;">sheet<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheetname_nodejs">
+<a href="#sheetname_nodejs" style="color: inherit; text-decoration: inherit;">sheet<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The sheet name of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="structure_nodejs">
 <a href="#structure_nodejs" style="color: inherit; text-decoration: inherit;">structure</a>
 </span>
@@ -24013,15 +23951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sheet_name_python">
-<a href="#sheet_name_python" style="color: inherit; text-decoration: inherit;">sheet_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}The sheet of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -24095,6 +24025,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sheet_index_python">
+<a href="#sheet_index_python" style="color: inherit; text-decoration: inherit;">sheet_<wbr>index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheet_name_python">
+<a href="#sheet_name_python" style="color: inherit; text-decoration: inherit;">sheet_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The sheet name of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="structure_python">
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span>
@@ -24123,15 +24069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sheetname_csharp">
-<a href="#sheetname_csharp" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}The sheet of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -24205,6 +24143,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sheetindex_csharp">
+<a href="#sheetindex_csharp" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheetname_csharp">
+<a href="#sheetname_csharp" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The sheet name of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="structure_csharp">
 <a href="#structure_csharp" style="color: inherit; text-decoration: inherit;">Structure</a>
 </span>
@@ -24231,15 +24185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sheetname_go">
-<a href="#sheetname_go" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}The sheet of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -24313,6 +24259,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sheetindex_go">
+<a href="#sheetindex_go" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheetname_go">
+<a href="#sheetname_go" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The sheet name of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="structure_go">
 <a href="#structure_go" style="color: inherit; text-decoration: inherit;">Structure</a>
 </span>
@@ -24339,15 +24301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sheetname_nodejs">
-<a href="#sheetname_nodejs" style="color: inherit; text-decoration: inherit;">sheet<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}The sheet of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -24421,6 +24375,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sheetindex_nodejs">
+<a href="#sheetindex_nodejs" style="color: inherit; text-decoration: inherit;">sheet<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheetname_nodejs">
+<a href="#sheetname_nodejs" style="color: inherit; text-decoration: inherit;">sheet<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The sheet name of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="structure_nodejs">
 <a href="#structure_nodejs" style="color: inherit; text-decoration: inherit;">structure</a>
 </span>
@@ -24447,15 +24417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sheet_name_python">
-<a href="#sheet_name_python" style="color: inherit; text-decoration: inherit;">sheet_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}The sheet of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -24528,6 +24490,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheet_index_python">
+<a href="#sheet_index_python" style="color: inherit; text-decoration: inherit;">sheet_<wbr>index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheet_name_python">
+<a href="#sheet_name_python" style="color: inherit; text-decoration: inherit;">sheet_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The sheet name of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="structure_python">
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
@@ -33319,7 +33297,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#filepattern_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#jsonformatfilepattern">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Json<wbr>Format<wbr>File<wbr>Pattern</a></span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33379,7 +33357,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#filepattern_go" style="color: inherit; text-decoration: inherit;">File<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#jsonformatfilepattern">Json<wbr>Format<wbr>File<wbr>Pattern</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33439,7 +33417,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#filepattern_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#jsonformatfilepattern">Json<wbr>Format<wbr>File<wbr>Pattern</a></span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33499,7 +33477,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#file_pattern_python" style="color: inherit; text-decoration: inherit;">file_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#jsonformatfilepattern">Json<wbr>Format<wbr>File<wbr>Pattern</a></span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33536,32 +33514,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
     <dd>{{% md %}}Serializer. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="jsonformatfilepattern">Json<wbr>Format<wbr>File<wbr>Pattern</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Set<wbr>Of<wbr>Objects</dt>
-    <dd>setOfObjects</dd><dt>Array<wbr>Of<wbr>Objects</dt>
-    <dd>arrayOfObjects</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Json<wbr>Format<wbr>File<wbr>Pattern<wbr>Set<wbr>Of<wbr>Objects</dt>
-    <dd>setOfObjects</dd><dt>Json<wbr>Format<wbr>File<wbr>Pattern<wbr>Array<wbr>Of<wbr>Objects</dt>
-    <dd>arrayOfObjects</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Set<wbr>Of<wbr>Objects</dt>
-    <dd>setOfObjects</dd><dt>Array<wbr>Of<wbr>Objects</dt>
-    <dd>arrayOfObjects</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>SET_OF_OBJECTS</dt>
-    <dd>setOfObjects</dd><dt>ARRAY_OF_OBJECTS</dt>
-    <dd>arrayOfObjects</dd></dl>
-{{% /choosable %}}
-
 <h4 id="jsonformatresponse">Json<wbr>Format<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -33587,7 +33539,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#filepattern_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33647,7 +33599,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#filepattern_go" style="color: inherit; text-decoration: inherit;">File<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33707,7 +33659,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#filepattern_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33767,7 +33719,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#file_pattern_python" style="color: inherit; text-decoration: inherit;">file_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -43241,9 +43193,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#compressioncodec">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Compression<wbr>Codec</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -43317,9 +43269,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compressioncodec_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#compressioncodec">Compression<wbr>Codec</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -43393,9 +43345,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#compressioncodec">Compression<wbr>Codec</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -43469,9 +43421,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#compressioncodec">Compression<wbr>Codec</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -43547,9 +43499,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -43623,9 +43575,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compressioncodec_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -43699,9 +43651,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -43775,9 +43727,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data compressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>

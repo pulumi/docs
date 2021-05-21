@@ -195,6 +195,7 @@ const realmSamlIdentityProvider = new keycloak.saml.IdentityProvider("realmSamlI
                      <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                      <span class="nx">entity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
                      <span class="nx">first_broker_login_flow_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">force_authn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                      <span class="nx">gui_order</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -241,25 +242,19 @@ const realmSamlIdentityProvider = new keycloak.saml.IdentityProvider("realmSamlI
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IdentityProviderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -271,25 +266,19 @@ const realmSamlIdentityProvider = new keycloak.saml.IdentityProvider("realmSamlI
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IdentityProviderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -301,33 +290,25 @@ const realmSamlIdentityProvider = new keycloak.saml.IdentityProvider("realmSamlI
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IdentityProviderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -339,25 +320,19 @@ const realmSamlIdentityProvider = new keycloak.saml.IdentityProvider("realmSamlI
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IdentityProviderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -455,6 +430,14 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extraconfig_csharp">
+<a href="#extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="firstbrokerloginflowalias_csharp">
 <a href="#firstbrokerloginflowalias_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
 </span>
@@ -479,7 +462,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GUI Order
+    <dd>{{% md %}}A number defining the order of this identity provider in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideonloginpage_csharp">
@@ -605,7 +588,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sync Mode
+    <dd>{{% md %}}The default sync mode to use for all mappers attached to this identity provider. Can be once of `IMPORT`, `FORCE`, or `LEGACY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustemail_csharp">
@@ -738,6 +721,14 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extraconfig_go">
+<a href="#extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="firstbrokerloginflowalias_go">
 <a href="#firstbrokerloginflowalias_go" style="color: inherit; text-decoration: inherit;">First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
 </span>
@@ -762,7 +753,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GUI Order
+    <dd>{{% md %}}A number defining the order of this identity provider in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideonloginpage_go">
@@ -888,7 +879,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sync Mode
+    <dd>{{% md %}}The default sync mode to use for all mappers attached to this identity provider. Can be once of `IMPORT`, `FORCE`, or `LEGACY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustemail_go">
@@ -1021,6 +1012,14 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extraconfig_nodejs">
+<a href="#extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="firstbrokerloginflowalias_nodejs">
 <a href="#firstbrokerloginflowalias_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
 </span>
@@ -1045,7 +1044,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GUI Order
+    <dd>{{% md %}}A number defining the order of this identity provider in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideonloginpage_nodejs">
@@ -1171,7 +1170,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sync Mode
+    <dd>{{% md %}}The default sync mode to use for all mappers attached to this identity provider. Can be once of `IMPORT`, `FORCE`, or `LEGACY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustemail_nodejs">
@@ -1304,6 +1303,14 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extra_config_python">
+<a href="#extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="first_broker_login_flow_alias_python">
 <a href="#first_broker_login_flow_alias_python" style="color: inherit; text-decoration: inherit;">first_<wbr>broker_<wbr>login_<wbr>flow_<wbr>alias</a>
 </span>
@@ -1328,7 +1335,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}GUI Order
+    <dd>{{% md %}}A number defining the order of this identity provider in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hide_on_login_page_python">
@@ -1454,7 +1461,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sync Mode
+    <dd>{{% md %}}The default sync mode to use for all mappers attached to this identity provider. Can be once of `IMPORT`, `FORCE`, or `LEGACY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trust_email_python">
@@ -1617,6 +1624,7 @@ Get an existing IdentityProvider resource's state with the given name, ID, and o
         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">entity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
         <span class="nx">first_broker_login_flow_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">force_authn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">gui_order</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1817,6 +1825,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The Entity ID that will be used to uniquely identify this SAML Service Provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_extraconfig_csharp">
+<a href="#state_extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_firstbrokerloginflowalias_csharp">
 <a href="#state_firstbrokerloginflowalias_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
 </span>
@@ -1841,7 +1857,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GUI Order
+    <dd>{{% md %}}A number defining the order of this identity provider in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideonloginpage_csharp">
@@ -1994,7 +2010,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sync Mode
+    <dd>{{% md %}}The default sync mode to use for all mappers attached to this identity provider. Can be once of `IMPORT`, `FORCE`, or `LEGACY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustemail_csharp">
@@ -2109,6 +2125,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The Entity ID that will be used to uniquely identify this SAML Service Provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_extraconfig_go">
+<a href="#state_extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_firstbrokerloginflowalias_go">
 <a href="#state_firstbrokerloginflowalias_go" style="color: inherit; text-decoration: inherit;">First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
 </span>
@@ -2133,7 +2157,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GUI Order
+    <dd>{{% md %}}A number defining the order of this identity provider in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideonloginpage_go">
@@ -2286,7 +2310,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sync Mode
+    <dd>{{% md %}}The default sync mode to use for all mappers attached to this identity provider. Can be once of `IMPORT`, `FORCE`, or `LEGACY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustemail_go">
@@ -2401,6 +2425,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The Entity ID that will be used to uniquely identify this SAML Service Provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_extraconfig_nodejs">
+<a href="#state_extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_firstbrokerloginflowalias_nodejs">
 <a href="#state_firstbrokerloginflowalias_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
 </span>
@@ -2425,7 +2457,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GUI Order
+    <dd>{{% md %}}A number defining the order of this identity provider in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideonloginpage_nodejs">
@@ -2578,7 +2610,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sync Mode
+    <dd>{{% md %}}The default sync mode to use for all mappers attached to this identity provider. Can be once of `IMPORT`, `FORCE`, or `LEGACY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustemail_nodejs">
@@ -2693,6 +2725,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The Entity ID that will be used to uniquely identify this SAML Service Provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_extra_config_python">
+<a href="#state_extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_first_broker_login_flow_alias_python">
 <a href="#state_first_broker_login_flow_alias_python" style="color: inherit; text-decoration: inherit;">first_<wbr>broker_<wbr>login_<wbr>flow_<wbr>alias</a>
 </span>
@@ -2717,7 +2757,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}GUI Order
+    <dd>{{% md %}}A number defining the order of this identity provider in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hide_on_login_page_python">
@@ -2870,7 +2910,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sync Mode
+    <dd>{{% md %}}The default sync mode to use for all mappers attached to this identity provider. Can be once of `IMPORT`, `FORCE`, or `LEGACY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trust_email_python">

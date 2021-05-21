@@ -38,8 +38,8 @@ class MyStack : Stack
     {
         var myendpoint = Output.Create(Aiven.GetServiceIntegrationEndpoint.InvokeAsync(new Aiven.GetServiceIntegrationEndpointArgs
         {
-            EndpointName = "<ENDPOINT_NAME>",
             Project = aiven_project.Myproject.Project,
+            EndpointName = "<ENDPOINT_NAME>",
         }));
     }
 
@@ -63,8 +63,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.LookupServiceIntegrationEndpoint(ctx, &aiven.LookupServiceIntegrationEndpointArgs{
-			EndpointName: "<ENDPOINT_NAME>",
 			Project:      aiven_project.Myproject.Project,
+			EndpointName: "<ENDPOINT_NAME>",
 		}, nil)
 		if err != nil {
 			return err
@@ -84,8 +84,8 @@ func main() {
 import pulumi
 import pulumi_aiven as aiven
 
-myendpoint = aiven.get_service_integration_endpoint(endpoint_name="<ENDPOINT_NAME>",
-    project=aiven_project["myproject"]["project"])
+myendpoint = aiven.get_service_integration_endpoint(project=aiven_project["myproject"]["project"],
+    endpoint_name="<ENDPOINT_NAME>")
 ```
 
 
@@ -99,10 +99,10 @@ myendpoint = aiven.get_service_integration_endpoint(endpoint_name="<ENDPOINT_NAM
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
-const myendpoint = aiven_project_myproject.project.apply(project => aiven.getServiceIntegrationEndpoint({
+const myendpoint = aiven.getServiceIntegrationEndpoint({
+    project: aiven_project.myproject.project,
     endpointName: "<ENDPOINT_NAME>",
-    project: project,
-}, { async: true }));
+});
 ```
 
 

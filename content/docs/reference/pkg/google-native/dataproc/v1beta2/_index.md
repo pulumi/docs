@@ -33,6 +33,6 @@ Explore the resources and functions of the google-native.dataproc/v1beta2 module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

@@ -3014,6 +3014,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether private IP needs to be enabled on this gateway for connections or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_csharp">
+<a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="gatewaydefaultsite_csharp">
 <a href="#gatewaydefaultsite_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Default<wbr>Site</a>
 </span>
@@ -3076,15 +3084,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtualnetworkextendedlocation_csharp">
-<a href="#virtualnetworkextendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Extended<wbr>Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientconfiguration_csharp">
 <a href="#vpnclientconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Configuration</a>
@@ -3210,6 +3210,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether private IP needs to be enabled on this gateway for connections or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_go">
+<a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="gatewaydefaultsite_go">
 <a href="#gatewaydefaultsite_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Default<wbr>Site</a>
 </span>
@@ -3272,15 +3280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtualnetworkextendedlocation_go">
-<a href="#virtualnetworkextendedlocation_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Extended<wbr>Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientconfiguration_go">
 <a href="#vpnclientconfiguration_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Configuration</a>
@@ -3406,6 +3406,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether private IP needs to be enabled on this gateway for connections or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_nodejs">
+<a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="gatewaydefaultsite_nodejs">
 <a href="#gatewaydefaultsite_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Default<wbr>Site</a>
 </span>
@@ -3468,15 +3476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtualnetworkextendedlocation_nodejs">
-<a href="#virtualnetworkextendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Extended<wbr>Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientconfiguration_nodejs">
 <a href="#vpnclientconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Configuration</a>
@@ -3602,6 +3602,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether private IP needs to be enabled on this gateway for connections or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extended_location_python">
+<a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="gateway_default_site_python">
 <a href="#gateway_default_site_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>default_<wbr>site</a>
 </span>
@@ -3664,15 +3672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtual_network_extended_location_python">
-<a href="#virtual_network_extended_location_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>extended_<wbr>location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpn_client_configuration_python">
 <a href="#vpn_client_configuration_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>configuration</a>

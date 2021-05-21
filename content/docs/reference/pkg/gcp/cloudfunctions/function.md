@@ -53,7 +53,7 @@ class MyStack : Stack
         var function = new Gcp.CloudFunctions.Function("function", new Gcp.CloudFunctions.FunctionArgs
         {
             Description = "My function",
-            Runtime = "nodejs12",
+            Runtime = "nodejs14",
             AvailableMemoryMb = 128,
             SourceArchiveBucket = bucket.Name,
             SourceArchiveObject = archive.Name,
@@ -104,7 +104,7 @@ func main() {
 		}
 		function, err := cloudfunctions.NewFunction(ctx, "function", &cloudfunctions.FunctionArgs{
 			Description:         pulumi.String("My function"),
-			Runtime:             pulumi.String("nodejs12"),
+			Runtime:             pulumi.String("nodejs14"),
 			AvailableMemoryMb:   pulumi.Int(128),
 			SourceArchiveBucket: bucket.Name,
 			SourceArchiveObject: archive.Name,
@@ -145,7 +145,7 @@ archive = gcp.storage.BucketObject("archive",
     source=pulumi.FileAsset("./path/to/zip/file/which/contains/code"))
 function = gcp.cloudfunctions.Function("function",
     description="My function",
-    runtime="nodejs12",
+    runtime="nodejs14",
     available_memory_mb=128,
     source_archive_bucket=bucket.name,
     source_archive_object=archive.name,
@@ -178,7 +178,7 @@ const archive = new gcp.storage.BucketObject("archive", {
 });
 const _function = new gcp.cloudfunctions.Function("function", {
     description: "My function",
-    runtime: "nodejs12",
+    runtime: "nodejs14",
     availableMemoryMb: 128,
     sourceArchiveBucket: bucket.name,
     sourceArchiveObject: archive.name,
@@ -225,7 +225,7 @@ class MyStack : Stack
         var function = new Gcp.CloudFunctions.Function("function", new Gcp.CloudFunctions.FunctionArgs
         {
             Description = "My function",
-            Runtime = "nodejs12",
+            Runtime = "nodejs14",
             AvailableMemoryMb = 128,
             SourceArchiveBucket = bucket.Name,
             SourceArchiveObject = archive.Name,
@@ -285,7 +285,7 @@ func main() {
 		}
 		function, err := cloudfunctions.NewFunction(ctx, "function", &cloudfunctions.FunctionArgs{
 			Description:         pulumi.String("My function"),
-			Runtime:             pulumi.String("nodejs12"),
+			Runtime:             pulumi.String("nodejs14"),
 			AvailableMemoryMb:   pulumi.Int(128),
 			SourceArchiveBucket: bucket.Name,
 			SourceArchiveObject: archive.Name,
@@ -333,7 +333,7 @@ archive = gcp.storage.BucketObject("archive",
     source=pulumi.FileAsset("./path/to/zip/file/which/contains/code"))
 function = gcp.cloudfunctions.Function("function",
     description="My function",
-    runtime="nodejs12",
+    runtime="nodejs14",
     available_memory_mb=128,
     source_archive_bucket=bucket.name,
     source_archive_object=archive.name,
@@ -373,7 +373,7 @@ const archive = new gcp.storage.BucketObject("archive", {
 });
 const _function = new gcp.cloudfunctions.Function("function", {
     description: "My function",
-    runtime: "nodejs12",
+    runtime: "nodejs14",
     availableMemoryMb: 128,
     sourceArchiveBucket: bucket.name,
     sourceArchiveObject: archive.name,
@@ -465,25 +465,19 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FunctionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -495,25 +489,19 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FunctionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -525,33 +513,25 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FunctionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -563,25 +543,19 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FunctionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -605,7 +579,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
-Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
+Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availablememorymb_csharp">
@@ -614,7 +588,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
+    <dd>{{% md %}}Memory (in MB), available to the function. Default value is `256`. Possible values include `128`, `256`, `512`, `1024`, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildenvironmentvariables_csharp">
@@ -809,7 +783,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
-Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
+Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availablememorymb_go">
@@ -818,7 +792,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
+    <dd>{{% md %}}Memory (in MB), available to the function. Default value is `256`. Possible values include `128`, `256`, `512`, `1024`, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildenvironmentvariables_go">
@@ -1013,7 +987,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
-Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
+Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availablememorymb_nodejs">
@@ -1022,7 +996,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
+    <dd>{{% md %}}Memory (in MB), available to the function. Default value is `256`. Possible values include `128`, `256`, `512`, `1024`, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildenvironmentvariables_nodejs">
@@ -1217,7 +1191,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
-Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
+Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="available_memory_mb_python">
@@ -1226,7 +1200,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
+    <dd>{{% md %}}Memory (in MB), available to the function. Default value is `256`. Possible values include `128`, `256`, `512`, `1024`, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="build_environment_variables_python">
@@ -1622,7 +1596,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
+    <dd>{{% md %}}Memory (in MB), available to the function. Default value is `256`. Possible values include `128`, `256`, `512`, `1024`, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_buildenvironmentvariables_csharp">
@@ -1740,7 +1714,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
-Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
+Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountemail_csharp">
@@ -1826,7 +1800,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
+    <dd>{{% md %}}Memory (in MB), available to the function. Default value is `256`. Possible values include `128`, `256`, `512`, `1024`, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_buildenvironmentvariables_go">
@@ -1944,7 +1918,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
-Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
+Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountemail_go">
@@ -2030,7 +2004,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
+    <dd>{{% md %}}Memory (in MB), available to the function. Default value is `256`. Possible values include `128`, `256`, `512`, `1024`, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_buildenvironmentvariables_nodejs">
@@ -2148,7 +2122,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
-Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
+Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountemail_nodejs">
@@ -2234,7 +2208,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
+    <dd>{{% md %}}Memory (in MB), available to the function. Default value is `256`. Possible values include `128`, `256`, `512`, `1024`, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_build_environment_variables_python">
@@ -2352,7 +2326,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
-Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
+Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_account_email_python">

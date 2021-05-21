@@ -134,25 +134,19 @@ const sampleArchiveOrder = new datadog.LogsArchiveOrder("sample_archive_order", 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LogsArchiveOrderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -164,25 +158,19 @@ const sampleArchiveOrder = new datadog.LogsArchiveOrder("sample_archive_order", 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LogsArchiveOrderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -194,33 +182,25 @@ const sampleArchiveOrder = new datadog.LogsArchiveOrder("sample_archive_order", 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LogsArchiveOrderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -232,25 +212,19 @@ const sampleArchiveOrder = new datadog.LogsArchiveOrder("sample_archive_order", 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LogsArchiveOrderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -273,9 +247,7 @@ The LogsArchiveOrder resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
-`archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
-will try to update the order.
+    <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it will try to update the order.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -288,9 +260,7 @@ will try to update the order.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
-`archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
-will try to update the order.
+    <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it will try to update the order.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -303,9 +273,7 @@ will try to update the order.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
-`archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
-will try to update the order.
+    <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it will try to update the order.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -318,9 +286,7 @@ will try to update the order.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
-`archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
-will try to update the order.
+    <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it will try to update the order.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -514,9 +480,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
-`archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
-will try to update the order.
+    <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it will try to update the order.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -529,9 +493,7 @@ will try to update the order.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
-`archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
-will try to update the order.
+    <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it will try to update the order.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -544,9 +506,7 @@ will try to update the order.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
-`archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
-will try to update the order.
+    <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it will try to update the order.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -559,9 +519,7 @@ will try to update the order.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
-`archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
-will try to update the order.
+    <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it will try to update the order.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -572,7 +530,7 @@ will try to update the order.
 ## Import
 
 
-There must be at most one `datadog_logs_archive_order` resource. You can import the `datadog_logs_archive_order` or create an archive order.
+# There must be at most one datadog_logs_archive_order resource. You can import the datadog_logs_archive_order or create an archive order.
 
 ```sh
  $ pulumi import datadog:index/logsArchiveOrder:LogsArchiveOrder name> archiveOrderID

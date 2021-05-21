@@ -169,7 +169,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Shared Image in which the Shared Image exists.
+    <dd>{{% md %}}The name of the Shared Image Gallery in which the Shared Image exists.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagename_csharp">
@@ -209,7 +209,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Shared Image in which the Shared Image exists.
+    <dd>{{% md %}}The name of the Shared Image Gallery in which the Shared Image exists.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagename_go">
@@ -249,7 +249,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Shared Image in which the Shared Image exists.
+    <dd>{{% md %}}The name of the Shared Image Gallery in which the Shared Image exists.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagename_nodejs">
@@ -289,7 +289,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Shared Image in which the Shared Image exists.
+    <dd>{{% md %}}The name of the Shared Image Gallery in which the Shared Image exists.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_name_python">

@@ -127,6 +127,153 @@ func main() {
 }
 ```
 
+## Example API Gateway target
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleEventRule = new aws.cloudwatch.EventRule("exampleEventRule", {});
+// ...
+const exampleDeployment = new aws.apigateway.Deployment("exampleDeployment", {restApi: aws_api_gateway_rest_api.example.id});
+// ...
+const exampleStage = new aws.apigateway.Stage("exampleStage", {
+    restApi: aws_api_gateway_rest_api.example.id,
+    deployment: exampleDeployment.id,
+});
+// ...
+const exampleEventTarget = new aws.cloudwatch.EventTarget("exampleEventTarget", {
+    arn: pulumi.interpolate`${exampleStage.executionArn}/GET`,
+    rule: exampleEventRule.id,
+    httpTarget: {
+        queryStringParameters: {
+            Body: `$.detail.body`,
+        },
+        headerParameters: {
+            Env: "Test",
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_event_rule = aws.cloudwatch.EventRule("exampleEventRule")
+# ...
+example_deployment = aws.apigateway.Deployment("exampleDeployment", rest_api=aws_api_gateway_rest_api["example"]["id"])
+# ...
+example_stage = aws.apigateway.Stage("exampleStage",
+    rest_api=aws_api_gateway_rest_api["example"]["id"],
+    deployment=example_deployment.id)
+# ...
+example_event_target = aws.cloudwatch.EventTarget("exampleEventTarget",
+    arn=example_stage.execution_arn.apply(lambda execution_arn: f"{execution_arn}/GET"),
+    rule=example_event_rule.id,
+    http_target=aws.cloudwatch.EventTargetHttpTargetArgs(
+        query_string_parameters={
+            "Body": "$.detail.body",
+        },
+        header_parameters={
+            "Env": "Test",
+        },
+    ))
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleEventRule = new Aws.CloudWatch.EventRule("exampleEventRule", new Aws.CloudWatch.EventRuleArgs
+        {
+        });
+        // ...
+        var exampleDeployment = new Aws.ApiGateway.Deployment("exampleDeployment", new Aws.ApiGateway.DeploymentArgs
+        {
+            RestApi = aws_api_gateway_rest_api.Example.Id,
+        });
+        // ...
+        var exampleStage = new Aws.ApiGateway.Stage("exampleStage", new Aws.ApiGateway.StageArgs
+        {
+            RestApi = aws_api_gateway_rest_api.Example.Id,
+            Deployment = exampleDeployment.Id,
+        });
+        // ...
+        var exampleEventTarget = new Aws.CloudWatch.EventTarget("exampleEventTarget", new Aws.CloudWatch.EventTargetArgs
+        {
+            Arn = exampleStage.ExecutionArn.Apply(executionArn => $"{executionArn}/GET"),
+            Rule = exampleEventRule.Id,
+            HttpTarget = new Aws.CloudWatch.Inputs.EventTargetHttpTargetArgs
+            {
+                QueryStringParameters = 
+                {
+                    { "Body", "$.detail.body" },
+                },
+                HeaderParameters = 
+                {
+                    { "Env", "Test" },
+                },
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigateway"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleEventRule, err := cloudwatch.NewEventRule(ctx, "exampleEventRule", nil)
+		if err != nil {
+			return err
+		}
+		exampleDeployment, err := apigateway.NewDeployment(ctx, "exampleDeployment", &apigateway.DeploymentArgs{
+			RestApi: pulumi.Any(aws_api_gateway_rest_api.Example.Id),
+		})
+		if err != nil {
+			return err
+		}
+		exampleStage, err := apigateway.NewStage(ctx, "exampleStage", &apigateway.StageArgs{
+			RestApi:    pulumi.Any(aws_api_gateway_rest_api.Example.Id),
+			Deployment: exampleDeployment.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cloudwatch.NewEventTarget(ctx, "exampleEventTarget", &cloudwatch.EventTargetArgs{
+			Arn: exampleStage.ExecutionArn.ApplyT(func(executionArn string) (string, error) {
+				return fmt.Sprintf("%v%v", executionArn, "/GET"), nil
+			}).(pulumi.StringOutput),
+			Rule: exampleEventRule.ID(),
+			HttpTarget: &cloudwatch.EventTargetHttpTargetArgs{
+				QueryStringParameters: pulumi.StringMap{
+					"Body": pulumi.String(fmt.Sprintf("%v%v", "$", ".detail.body")),
+				},
+				HeaderParameters: pulumi.StringMap{
+					"Env": pulumi.String("Test"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 ## Example Input Transformer Usage - JSON Object
 
 ```typescript
@@ -582,6 +729,7 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
                 <span class="nx">dead_letter_config</span><span class="p">:</span> <span class="nx">Optional[EventTargetDeadLetterConfigArgs]</span> = None<span class="p">,</span>
                 <span class="nx">ecs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetEcsTargetArgs]</span> = None<span class="p">,</span>
                 <span class="nx">event_bus_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">http_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetHttpTargetArgs]</span> = None<span class="p">,</span>
                 <span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">input_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">input_transformer</span><span class="p">:</span> <span class="nx">Optional[EventTargetInputTransformerArgs]</span> = None<span class="p">,</span>
@@ -614,25 +762,19 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EventTargetArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -644,25 +786,19 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EventTargetArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -674,33 +810,25 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EventTargetArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -712,25 +840,19 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EventTargetArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -753,7 +875,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rule_csharp">
@@ -780,7 +902,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+    <dd>{{% md %}}Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecstarget_csharp">
@@ -799,6 +921,15 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httptarget_csharp">
+<a href="#httptarget_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargethttptarget">Event<wbr>Target<wbr>Http<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are using the rule to invoke an API Gateway REST endpoint. Documented below. A maximum of 1 is allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_csharp">
@@ -892,7 +1023,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rule_go">
@@ -919,7 +1050,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+    <dd>{{% md %}}Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecstarget_go">
@@ -938,6 +1069,15 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httptarget_go">
+<a href="#httptarget_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargethttptarget">Event<wbr>Target<wbr>Http<wbr>Target</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are using the rule to invoke an API Gateway REST endpoint. Documented below. A maximum of 1 is allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_go">
@@ -1031,7 +1171,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rule_nodejs">
@@ -1058,7 +1198,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+    <dd>{{% md %}}Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecstarget_nodejs">
@@ -1077,6 +1217,15 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httptarget_nodejs">
+<a href="#httptarget_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargethttptarget">Event<wbr>Target<wbr>Http<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are using the rule to invoke an API Gateway REST endpoint. Documented below. A maximum of 1 is allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_nodejs">
@@ -1170,7 +1319,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rule_python">
@@ -1197,7 +1346,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+    <dd>{{% md %}}Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecs_target_python">
@@ -1216,6 +1365,15 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="http_target_python">
+<a href="#http_target_python" style="color: inherit; text-decoration: inherit;">http_<wbr>target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargethttptarget">Event<wbr>Target<wbr>Http<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are using the rule to invoke an API Gateway REST endpoint. Documented below. A maximum of 1 is allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_python">
@@ -1376,6 +1534,7 @@ Get an existing EventTarget resource's state with the given name, ID, and option
         <span class="nx">dead_letter_config</span><span class="p">:</span> <span class="nx">Optional[EventTargetDeadLetterConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">ecs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetEcsTargetArgs]</span> = None<span class="p">,</span>
         <span class="nx">event_bus_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">http_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetHttpTargetArgs]</span> = None<span class="p">,</span>
         <span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">input_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">input_transformer</span><span class="p">:</span> <span class="nx">Optional[EventTargetInputTransformerArgs]</span> = None<span class="p">,</span>
@@ -1504,7 +1663,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_batchtarget_csharp">
@@ -1522,7 +1681,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+    <dd>{{% md %}}Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecstarget_csharp">
@@ -1541,6 +1700,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_httptarget_csharp">
+<a href="#state_httptarget_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargethttptarget">Event<wbr>Target<wbr>Http<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are using the rule to invoke an API Gateway REST endpoint. Documented below. A maximum of 1 is allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_input_csharp">
@@ -1643,7 +1811,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_batchtarget_go">
@@ -1661,7 +1829,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+    <dd>{{% md %}}Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecstarget_go">
@@ -1680,6 +1848,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_httptarget_go">
+<a href="#state_httptarget_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargethttptarget">Event<wbr>Target<wbr>Http<wbr>Target</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are using the rule to invoke an API Gateway REST endpoint. Documented below. A maximum of 1 is allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_input_go">
@@ -1782,7 +1959,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_batchtarget_nodejs">
@@ -1800,7 +1977,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+    <dd>{{% md %}}Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecstarget_nodejs">
@@ -1819,6 +1996,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_httptarget_nodejs">
+<a href="#state_httptarget_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargethttptarget">Event<wbr>Target<wbr>Http<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are using the rule to invoke an API Gateway REST endpoint. Documented below. A maximum of 1 is allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_input_nodejs">
@@ -1921,7 +2107,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_batch_target_python">
@@ -1939,7 +2125,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+    <dd>{{% md %}}Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecs_target_python">
@@ -1958,6 +2144,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_http_target_python">
+<a href="#state_http_target_python" style="color: inherit; text-decoration: inherit;">http_<wbr>target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargethttptarget">Event<wbr>Target<wbr>Http<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are using the rule to invoke an API Gateway REST endpoint. Documented below. A maximum of 1 is allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_input_python">
@@ -2633,6 +2828,132 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="eventtargethttptarget">Event<wbr>Target<wbr>Http<wbr>Target</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headerparameters_csharp">
+<a href="#headerparameters_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Enables you to specify HTTP headers to add to the request.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pathparametervalues_csharp">
+<a href="#pathparametervalues_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Parameter<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of values that correspond sequentially to any path variables in your endpoint ARN (for example `arn:aws:execute-api:us-east-1:123456:myapi/*/POST/pets/*`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="querystringparameters_csharp">
+<a href="#querystringparameters_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Represents keys/values of query string parameters that are appended to the invoked endpoint.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headerparameters_go">
+<a href="#headerparameters_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Enables you to specify HTTP headers to add to the request.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pathparametervalues_go">
+<a href="#pathparametervalues_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Parameter<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of values that correspond sequentially to any path variables in your endpoint ARN (for example `arn:aws:execute-api:us-east-1:123456:myapi/*/POST/pets/*`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="querystringparameters_go">
+<a href="#querystringparameters_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Represents keys/values of query string parameters that are appended to the invoked endpoint.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headerparameters_nodejs">
+<a href="#headerparameters_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Enables you to specify HTTP headers to add to the request.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pathparametervalues_nodejs">
+<a href="#pathparametervalues_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Parameter<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of values that correspond sequentially to any path variables in your endpoint ARN (for example `arn:aws:execute-api:us-east-1:123456:myapi/*/POST/pets/*`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="querystringparameters_nodejs">
+<a href="#querystringparameters_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Represents keys/values of query string parameters that are appended to the invoked endpoint.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="header_parameters_python">
+<a href="#header_parameters_python" style="color: inherit; text-decoration: inherit;">header_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Enables you to specify HTTP headers to add to the request.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_parameter_values_python">
+<a href="#path_parameter_values_python" style="color: inherit; text-decoration: inherit;">path_<wbr>parameter_<wbr>values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of values that correspond sequentially to any path variables in your endpoint ARN (for example `arn:aws:execute-api:us-east-1:123456:myapi/*/POST/pets/*`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="query_string_parameters_python">
+<a href="#query_string_parameters_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Represents keys/values of query string parameters that are appended to the invoked endpoint.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

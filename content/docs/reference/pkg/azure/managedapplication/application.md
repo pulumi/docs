@@ -197,6 +197,7 @@ const exampleApplication = new azure.managedapplication.Application("exampleAppl
                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">parameter_values</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                 <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[ApplicationPlanArgs]</span> = None<span class="p">,</span>
                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -223,25 +224,19 @@ const exampleApplication = new azure.managedapplication.Application("exampleAppl
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -253,25 +248,19 @@ const exampleApplication = new azure.managedapplication.Application("exampleAppl
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -283,33 +272,25 @@ const exampleApplication = new azure.managedapplication.Application("exampleAppl
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -321,25 +302,19 @@ const exampleApplication = new azure.managedapplication.Application("exampleAppl
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -408,6 +383,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Managed Application. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parametervalues_csharp">
+<a href="#parametervalues_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The parameter values to pass to the Managed Application. This field is a json object that allows you to assign parameters to this Managed Application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
@@ -495,6 +479,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Specifies the name of the Managed Application. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="parametervalues_go">
+<a href="#parametervalues_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The parameter values to pass to the Managed Application. This field is a json object that allows you to assign parameters to this Managed Application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
@@ -580,6 +573,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Specifies the name of the Managed Application. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="parametervalues_nodejs">
+<a href="#parametervalues_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The parameter values to pass to the Managed Application. This field is a json object that allows you to assign parameters to this Managed Application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
@@ -663,6 +665,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Managed Application. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameter_values_python">
+<a href="#parameter_values_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The parameter values to pass to the Managed Application. This field is a json object that allows you to assign parameters to this Managed Application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
@@ -806,6 +817,7 @@ Get an existing Application resource's state with the given name, ID, and option
         <span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">parameter_values</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[ApplicationPlanArgs]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -976,6 +988,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name and value pairs that define the managed application outputs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_parametervalues_csharp">
+<a href="#state_parametervalues_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The parameter values to pass to the Managed Application. This field is a json object that allows you to assign parameters to this Managed Application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_parameters_csharp">
 <a href="#state_parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
@@ -1068,6 +1089,15 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The name and value pairs that define the managed application outputs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_parametervalues_go">
+<a href="#state_parametervalues_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The parameter values to pass to the Managed Application. This field is a json object that allows you to assign parameters to this Managed Application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_go">
@@ -1164,6 +1194,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name and value pairs that define the managed application outputs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_parametervalues_nodejs">
+<a href="#state_parametervalues_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The parameter values to pass to the Managed Application. This field is a json object that allows you to assign parameters to this Managed Application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_parameters_nodejs">
 <a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
@@ -1256,6 +1295,15 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The name and value pairs that define the managed application outputs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_parameter_values_python">
+<a href="#state_parameter_values_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The parameter values to pass to the Managed Application. This field is a json object that allows you to assign parameters to this Managed Application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_python">

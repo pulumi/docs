@@ -37,8 +37,8 @@ class MyStack : Stack
     {
         var mytestuser = Output.Create(Aiven.GetProjectUser.InvokeAsync(new Aiven.GetProjectUserArgs
         {
-            Email = "john.doe@example.com",
             Project = aiven_project.Myproject.Project,
+            Email = "john.doe@example.com",
         }));
     }
 
@@ -62,8 +62,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.LookupProjectUser(ctx, &aiven.LookupProjectUserArgs{
-			Email:   "john.doe@example.com",
 			Project: aiven_project.Myproject.Project,
+			Email:   "john.doe@example.com",
 		}, nil)
 		if err != nil {
 			return err
@@ -83,8 +83,8 @@ func main() {
 import pulumi
 import pulumi_aiven as aiven
 
-mytestuser = aiven.get_project_user(email="john.doe@example.com",
-    project=aiven_project["myproject"]["project"])
+mytestuser = aiven.get_project_user(project=aiven_project["myproject"]["project"],
+    email="john.doe@example.com")
 ```
 
 
@@ -98,10 +98,10 @@ mytestuser = aiven.get_project_user(email="john.doe@example.com",
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
-const mytestuser = aiven_project_myproject.project.apply(project => aiven.getProjectUser({
+const mytestuser = aiven.getProjectUser({
+    project: aiven_project.myproject.project,
     email: "john.doe@example.com",
-    project: project,
-}, { async: true }));
+});
 ```
 
 

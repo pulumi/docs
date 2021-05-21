@@ -174,6 +174,7 @@ const fooMdbKafkaCluster = new yandex.MdbKafkaCluster("foo", {
                     <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">host_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                     <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -203,25 +204,19 @@ const fooMdbKafkaCluster = new yandex.MdbKafkaCluster("foo", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MdbKafkaClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -233,25 +228,19 @@ const fooMdbKafkaCluster = new yandex.MdbKafkaCluster("foo", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MdbKafkaClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -263,33 +252,25 @@ const fooMdbKafkaCluster = new yandex.MdbKafkaCluster("foo", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MdbKafkaClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -301,25 +282,19 @@ const fooMdbKafkaCluster = new yandex.MdbKafkaCluster("foo", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MdbKafkaClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -379,6 +354,15 @@ The MdbKafkaCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the folder that the resource belongs to. If it is not provided, the default provider folder is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hostgroupids_csharp">
+<a href="#hostgroupids_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of IDs of the host groups to place VMs of the cluster on.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
@@ -483,6 +467,15 @@ The MdbKafkaCluster resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The ID of the folder that the resource belongs to. If it is not provided, the default provider folder is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hostgroupids_go">
+<a href="#hostgroupids_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of IDs of the host groups to place VMs of the cluster on.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
@@ -585,6 +578,15 @@ The MdbKafkaCluster resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The ID of the folder that the resource belongs to. If it is not provided, the default provider folder is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hostgroupids_nodejs">
+<a href="#hostgroupids_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of IDs of the host groups to place VMs of the cluster on.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
@@ -685,6 +687,15 @@ The MdbKafkaCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the folder that the resource belongs to. If it is not provided, the default provider folder is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="host_group_ids_python">
+<a href="#host_group_ids_python" style="color: inherit; text-decoration: inherit;">host_<wbr>group_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of IDs of the host groups to place VMs of the cluster on.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
@@ -966,6 +977,7 @@ Get an existing MdbKafkaCluster resource's state with the given name, ID, and op
         <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">health</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">host_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[MdbKafkaClusterHostArgs]]</span> = None<span class="p">,</span>
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1141,6 +1153,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Health of the host.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_hostgroupids_csharp">
+<a href="#state_hostgroupids_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of IDs of the host groups to place VMs of the cluster on.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_hosts_csharp">
 <a href="#state_hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
 </span>
@@ -1278,6 +1299,15 @@ For more information see `status` field of JSON representation in [the official 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health of the host.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_hostgroupids_go">
+<a href="#state_hostgroupids_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of IDs of the host groups to place VMs of the cluster on.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosts_go">
@@ -1419,6 +1449,15 @@ For more information see `status` field of JSON representation in [the official 
     <dd>{{% md %}}Health of the host.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_hostgroupids_nodejs">
+<a href="#state_hostgroupids_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of IDs of the host groups to place VMs of the cluster on.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_hosts_nodejs">
 <a href="#state_hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
@@ -1556,6 +1595,15 @@ For more information see `status` field of JSON representation in [the official 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Health of the host.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_host_group_ids_python">
+<a href="#state_host_group_ids_python" style="color: inherit; text-decoration: inherit;">host_<wbr>group_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of IDs of the host groups to place VMs of the cluster on.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosts_python">

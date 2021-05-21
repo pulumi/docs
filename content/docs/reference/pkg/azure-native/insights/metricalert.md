@@ -48,9 +48,9 @@ class MyStack : Stack
                 },
             },
             AutoMitigate = false,
-            Criteria = 
+            Criteria = new AzureNative.Insights.Inputs.MetricAlertMultipleResourceMultipleMetricCriteriaArgs
             {
-                { "allOf", 
+                AllOf = 
                 {
                     
                     {
@@ -68,8 +68,8 @@ class MyStack : Stack
                         { "operator", "GreaterOrLessThan" },
                         { "timeAggregation", "Average" },
                     },
-                } },
-                { "odataType", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
+                },
+                OdataType = "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -121,8 +121,8 @@ metric_alert = azure_native.insights.MetricAlert("metricAlert",
         },
     )],
     auto_mitigate=False,
-    criteria={
-        "allOf": [{
+    criteria=azure_native.insights.MetricAlertMultipleResourceMultipleMetricCriteriaArgs(
+        all_of=[{
             "alertSensitivity": "Medium",
             "criterionType": "DynamicThresholdCriterion",
             "dimensions": [],
@@ -136,8 +136,8 @@ metric_alert = azure_native.insights.MetricAlert("metricAlert",
             "operator": "GreaterOrLessThan",
             "timeAggregation": "Average",
         }],
-        "odataType": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
-    },
+        odata_type="Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+    ),
     description="This is the description of the rule1",
     enabled=True,
     evaluation_frequency="PT1M",
@@ -246,9 +246,9 @@ class MyStack : Stack
                 },
             },
             AutoMitigate = false,
-            Criteria = 
+            Criteria = new AzureNative.Insights.Inputs.MetricAlertMultipleResourceMultipleMetricCriteriaArgs
             {
-                { "allOf", 
+                AllOf = 
                 {
                     
                     {
@@ -267,8 +267,8 @@ class MyStack : Stack
                         { "operator", "GreaterOrLessThan" },
                         { "timeAggregation", "Average" },
                     },
-                } },
-                { "odataType", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
+                },
+                OdataType = "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -317,8 +317,8 @@ metric_alert = azure_native.insights.MetricAlert("metricAlert",
         },
     )],
     auto_mitigate=False,
-    criteria={
-        "allOf": [{
+    criteria=azure_native.insights.MetricAlertMultipleResourceMultipleMetricCriteriaArgs(
+        all_of=[{
             "alertSensitivity": "Medium",
             "criterionType": "DynamicThresholdCriterion",
             "dimensions": [],
@@ -333,8 +333,8 @@ metric_alert = azure_native.insights.MetricAlert("metricAlert",
             "operator": "GreaterOrLessThan",
             "timeAggregation": "Average",
         }],
-        "odataType": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
-    },
+        odata_type="Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+    ),
     description="This is the description of the rule1",
     enabled=True,
     evaluation_frequency="PT1M",
@@ -422,12 +422,12 @@ class MyStack : Stack
         var metricAlert = new AzureNative.Insights.MetricAlert("metricAlert", new AzureNative.Insights.MetricAlertArgs
         {
             Actions = {},
-            Criteria = 
+            Criteria = new AzureNative.Insights.Inputs.WebtestLocationAvailabilityCriteriaArgs
             {
-                { "componentId", "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example" },
-                { "failedLocationCount", 2 },
-                { "odataType", "Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria" },
-                { "webTestId", "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example" },
+                ComponentId = "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example",
+                FailedLocationCount = 2,
+                OdataType = "Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria",
+                WebTestId = "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example",
             },
             Description = "Automatically created alert rule for availability test \"component-example\" a",
             Enabled = true,
@@ -460,7 +460,51 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := insights.NewMetricAlert(ctx, "metricAlert", &insights.MetricAlertArgs{
+			Actions: insights.MetricAlertActionArray{},
+			Criteria: insights.WebtestLocationAvailabilityCriteria{
+				ComponentId:         "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example",
+				FailedLocationCount: 2,
+				OdataType:           "Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria",
+				WebTestId:           "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example",
+			},
+			Description:         pulumi.String("Automatically created alert rule for availability test \"component-example\" a"),
+			Enabled:             pulumi.Bool(true),
+			EvaluationFrequency: pulumi.String("PT1M"),
+			Location:            pulumi.String("global"),
+			ResourceGroupName:   pulumi.String("rg-example"),
+			RuleName:            pulumi.String("webtest-name-example"),
+			Scopes: pulumi.StringArray{
+				pulumi.String("/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example"),
+				pulumi.String("/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example"),
+			},
+			Severity: pulumi.Int(4),
+			Tags: pulumi.StringMap{
+				"hidden-link:/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example": pulumi.String("Resource"),
+				"hidden-link:/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example":      pulumi.String("Resource"),
+			},
+			WindowSize: pulumi.String("PT15M"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -474,12 +518,12 @@ import pulumi_azure_native as azure_native
 
 metric_alert = azure_native.insights.MetricAlert("metricAlert",
     actions=[],
-    criteria={
-        "componentId": "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example",
-        "failedLocationCount": 2,
-        "odataType": "Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria",
-        "webTestId": "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example",
-    },
+    criteria=azure_native.insights.WebtestLocationAvailabilityCriteriaArgs(
+        component_id="/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example",
+        failed_location_count=2,
+        odata_type="Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria",
+        web_test_id="/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example",
+    ),
     description="Automatically created alert rule for availability test \"component-example\" a",
     enabled=True,
     evaluation_frequency="PT1M",
@@ -572,9 +616,9 @@ class MyStack : Stack
                 },
             },
             AutoMitigate = false,
-            Criteria = 
+            Criteria = new AzureNative.Insights.Inputs.MetricAlertMultipleResourceMultipleMetricCriteriaArgs
             {
-                { "allOf", 
+                AllOf = 
                 {
                     
                     {
@@ -587,8 +631,8 @@ class MyStack : Stack
                         { "threshold", 80.5 },
                         { "timeAggregation", "Average" },
                     },
-                } },
-                { "odataType", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
+                },
+                OdataType = "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -640,8 +684,8 @@ metric_alert = azure_native.insights.MetricAlert("metricAlert",
         },
     )],
     auto_mitigate=False,
-    criteria={
-        "allOf": [{
+    criteria=azure_native.insights.MetricAlertMultipleResourceMultipleMetricCriteriaArgs(
+        all_of=[{
             "criterionType": "StaticThresholdCriterion",
             "dimensions": [],
             "metricName": "Percentage CPU",
@@ -651,8 +695,8 @@ metric_alert = azure_native.insights.MetricAlert("metricAlert",
             "threshold": 80.5,
             "timeAggregation": "Average",
         }],
-        "odataType": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
-    },
+        odata_type="Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+    ),
     description="This is the description of the rule1",
     enabled=True,
     evaluation_frequency="PT1M",
@@ -757,22 +801,22 @@ class MyStack : Stack
                 },
             },
             AutoMitigate = false,
-            Criteria = 
+            Criteria = new AzureNative.Insights.Inputs.MetricAlertSingleResourceMultipleMetricCriteriaArgs
             {
-                { "allOf", 
+                AllOf = 
                 {
-                    
+                    new AzureNative.Insights.Inputs.MetricCriteriaArgs
                     {
-                        { "criterionType", "StaticThresholdCriterion" },
-                        { "dimensions", {} },
-                        { "metricName", "\\Processor(_Total)\\% Processor Time" },
-                        { "name", "High_CPU_80" },
-                        { "operator", "GreaterThan" },
-                        { "threshold", 80.5 },
-                        { "timeAggregation", "Average" },
+                        CriterionType = "StaticThresholdCriterion",
+                        Dimensions = {},
+                        MetricName = "\\Processor(_Total)\\% Processor Time",
+                        Name = "High_CPU_80",
+                        Operator = "GreaterThan",
+                        Threshold = 80.5,
+                        TimeAggregation = "Average",
                     },
-                } },
-                { "odataType", "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria" },
+                },
+                OdataType = "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria",
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -800,7 +844,66 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	"fmt"
+
+	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := insights.NewMetricAlert(ctx, "metricAlert", &insights.MetricAlertArgs{
+			Actions: insights.MetricAlertActionArray{
+				&insights.MetricAlertActionArgs{
+					ActionGroupId: pulumi.String("/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2"),
+					WebHookProperties: pulumi.StringMap{
+						"key11": pulumi.String("value11"),
+						"key12": pulumi.String("value12"),
+					},
+				},
+			},
+			AutoMitigate: pulumi.Bool(false),
+			Criteria: insights.MetricAlertSingleResourceMultipleMetricCriteria{
+				AllOf: []insights.MetricCriteria{
+					insights.MetricCriteria{
+						CriterionType:   "StaticThresholdCriterion",
+						Dimensions:      []insights.MetricDimension{},
+						MetricName:      fmt.Sprintf("%v%v%v", "\\Processor(_Total)\\", "%", " Processor Time"),
+						Name:            "High_CPU_80",
+						Operator:        "GreaterThan",
+						Threshold:       80.5,
+						TimeAggregation: "Average",
+					},
+				},
+				OdataType: "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria",
+			},
+			Description:         pulumi.String("This is the description of the rule1"),
+			Enabled:             pulumi.Bool(true),
+			EvaluationFrequency: pulumi.String("Pt1m"),
+			Location:            pulumi.String("global"),
+			ResourceGroupName:   pulumi.String("gigtest"),
+			RuleName:            pulumi.String("chiricutin"),
+			Scopes: pulumi.StringArray{
+				pulumi.String("/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/Microsoft.Compute/virtualMachines/gigwadme"),
+			},
+			Severity:   pulumi.Int(3),
+			Tags:       nil,
+			WindowSize: pulumi.String("Pt15m"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -821,18 +924,18 @@ metric_alert = azure_native.insights.MetricAlert("metricAlert",
         },
     )],
     auto_mitigate=False,
-    criteria={
-        "allOf": [{
-            "criterionType": "StaticThresholdCriterion",
-            "dimensions": [],
-            "metricName": "\\Processor(_Total)\\% Processor Time",
-            "name": "High_CPU_80",
-            "operator": "GreaterThan",
-            "threshold": 80.5,
-            "timeAggregation": "Average",
-        }],
-        "odataType": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria",
-    },
+    criteria=azure_native.insights.MetricAlertSingleResourceMultipleMetricCriteriaArgs(
+        all_of=[azure_native.insights.MetricCriteriaArgs(
+            criterion_type="StaticThresholdCriterion",
+            dimensions=[],
+            metric_name="\\Processor(_Total)\\% Processor Time",
+            name="High_CPU_80",
+            operator="GreaterThan",
+            threshold=80.5,
+            time_aggregation="Average",
+        )],
+        odata_type="Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria",
+    ),
     description="This is the description of the rule1",
     enabled=True,
     evaluation_frequency="Pt1m",
@@ -926,9 +1029,9 @@ class MyStack : Stack
                 },
             },
             AutoMitigate = false,
-            Criteria = 
+            Criteria = new AzureNative.Insights.Inputs.MetricAlertMultipleResourceMultipleMetricCriteriaArgs
             {
-                { "allOf", 
+                AllOf = 
                 {
                     
                     {
@@ -941,8 +1044,8 @@ class MyStack : Stack
                         { "threshold", 80.5 },
                         { "timeAggregation", "Average" },
                     },
-                } },
-                { "odataType", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
+                },
+                OdataType = "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -994,8 +1097,8 @@ metric_alert = azure_native.insights.MetricAlert("metricAlert",
         },
     )],
     auto_mitigate=False,
-    criteria={
-        "allOf": [{
+    criteria=azure_native.insights.MetricAlertMultipleResourceMultipleMetricCriteriaArgs(
+        all_of=[{
             "criterionType": "StaticThresholdCriterion",
             "dimensions": [],
             "metricName": "Percentage CPU",
@@ -1005,8 +1108,8 @@ metric_alert = azure_native.insights.MetricAlert("metricAlert",
             "threshold": 80.5,
             "timeAggregation": "Average",
         }],
-        "odataType": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
-    },
+        odata_type="Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+    ),
     description="This is the description of the rule1",
     enabled=True,
     evaluation_frequency="PT1M",
@@ -1111,9 +1214,9 @@ class MyStack : Stack
                 },
             },
             AutoMitigate = false,
-            Criteria = 
+            Criteria = new AzureNative.Insights.Inputs.MetricAlertMultipleResourceMultipleMetricCriteriaArgs
             {
-                { "allOf", 
+                AllOf = 
                 {
                     
                     {
@@ -1126,8 +1229,8 @@ class MyStack : Stack
                         { "threshold", 80.5 },
                         { "timeAggregation", "Average" },
                     },
-                } },
-                { "odataType", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
+                },
+                OdataType = "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -1178,8 +1281,8 @@ metric_alert = azure_native.insights.MetricAlert("metricAlert",
         },
     )],
     auto_mitigate=False,
-    criteria={
-        "allOf": [{
+    criteria=azure_native.insights.MetricAlertMultipleResourceMultipleMetricCriteriaArgs(
+        all_of=[{
             "criterionType": "StaticThresholdCriterion",
             "dimensions": [],
             "metricName": "Percentage CPU",
@@ -1189,8 +1292,8 @@ metric_alert = azure_native.insights.MetricAlert("metricAlert",
             "threshold": 80.5,
             "timeAggregation": "Average",
         }],
-        "odataType": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
-    },
+        odata_type="Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+    ),
     description="This is the description of the rule1",
     enabled=True,
     evaluation_frequency="PT1M",
@@ -1289,9 +1392,9 @@ class MyStack : Stack
                 },
             },
             AutoMitigate = true,
-            Criteria = 
+            Criteria = new AzureNative.Insights.Inputs.MetricAlertMultipleResourceMultipleMetricCriteriaArgs
             {
-                { "allOf", 
+                AllOf = 
                 {
                     
                     {
@@ -1324,8 +1427,8 @@ class MyStack : Stack
                         { "threshold", 55 },
                         { "timeAggregation", "Average" },
                     },
-                } },
-                { "odataType", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
+                },
+                OdataType = "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -1374,8 +1477,8 @@ metric_alert = azure_native.insights.MetricAlert("metricAlert",
         },
     )],
     auto_mitigate=True,
-    criteria={
-        "allOf": [{
+    criteria=azure_native.insights.MetricAlertMultipleResourceMultipleMetricCriteriaArgs(
+        all_of=[{
             "criterionType": "StaticThresholdCriterion",
             "dimensions": [
                 azure_native.insights.MetricDimensionArgs(
@@ -1396,8 +1499,8 @@ metric_alert = azure_native.insights.MetricAlert("metricAlert",
             "threshold": 55,
             "timeAggregation": "Average",
         }],
-        "odataType": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
-    },
+        odata_type="Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+    ),
     description="This is the description of the rule1",
     enabled=True,
     evaluation_frequency="PT1H",
@@ -1530,25 +1633,19 @@ const metricAlert = new azure_native.insights.MetricAlert("metricAlert", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MetricAlertArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1560,25 +1657,19 @@ const metricAlert = new azure_native.insights.MetricAlert("metricAlert", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MetricAlertArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1590,33 +1681,25 @@ const metricAlert = new azure_native.insights.MetricAlert("metricAlert", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MetricAlertArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1628,25 +1711,19 @@ const metricAlert = new azure_native.insights.MetricAlert("metricAlert", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MetricAlertArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

@@ -38,7 +38,7 @@ class MyStack : Stack
         var kafka_es_con1 = new Aiven.KafkaConnector("kafka-es-con1", new Aiven.KafkaConnectorArgs
         {
             Project = aiven_project.Kafka_con_project1.Project,
-            ServiceName = aiven_service.Kafka_service1.Service_name,
+            ServiceName = aiven_kafka.Kafka_service1.Service_name,
             ConnectorName = "kafka-es-con1",
             Config = 
             {
@@ -46,7 +46,7 @@ class MyStack : Stack
                 { "connector.class", "io.aiven.connect.elasticsearch.ElasticsearchSinkConnector" },
                 { "type.name", "es-connector" },
                 { "name", "kafka-es-con1" },
-                { "connection.url", aiven_service.Es_service1.Service_uri },
+                { "connection.url", aiven_elasticsearch.Es_service1.Service_uri },
             },
         });
     }
@@ -72,14 +72,14 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.NewKafkaConnector(ctx, "kafka_es_con1", &aiven.KafkaConnectorArgs{
 			Project:       pulumi.Any(aiven_project.Kafka - con - project1.Project),
-			ServiceName:   pulumi.Any(aiven_service.Kafka - service1.Service_name),
+			ServiceName:   pulumi.Any(aiven_kafka.Kafka - service1.Service_name),
 			ConnectorName: pulumi.String("kafka-es-con1"),
 			Config: pulumi.StringMap{
 				"topics":          pulumi.Any(aiven_kafka_topic.Kafka - topic1.Topic_name),
 				"connector.class": pulumi.String("io.aiven.connect.elasticsearch.ElasticsearchSinkConnector"),
 				"type.name":       pulumi.String("es-connector"),
 				"name":            pulumi.String("kafka-es-con1"),
-				"connection.url":  pulumi.Any(aiven_service.Es - service1.Service_uri),
+				"connection.url":  pulumi.Any(aiven_elasticsearch.Es - service1.Service_uri),
 			},
 		})
 		if err != nil {
@@ -102,14 +102,14 @@ import pulumi_aiven as aiven
 
 kafka_es_con1 = aiven.KafkaConnector("kafka-es-con1",
     project=aiven_project["kafka-con-project1"]["project"],
-    service_name=aiven_service["kafka-service1"]["service_name"],
+    service_name=aiven_kafka["kafka-service1"]["service_name"],
     connector_name="kafka-es-con1",
     config={
         "topics": aiven_kafka_topic["kafka-topic1"]["topic_name"],
         "connector.class": "io.aiven.connect.elasticsearch.ElasticsearchSinkConnector",
         "type.name": "es-connector",
         "name": "kafka-es-con1",
-        "connection.url": aiven_service["es-service1"]["service_uri"],
+        "connection.url": aiven_elasticsearch["es-service1"]["service_uri"],
     })
 ```
 
@@ -126,14 +126,14 @@ import * as aiven from "@pulumi/aiven";
 
 const kafka_es_con1 = new aiven.KafkaConnector("kafka-es-con1", {
     project: aiven_project["kafka-con-project1"].project,
-    serviceName: aiven_service["kafka-service1"].service_name,
+    serviceName: aiven_kafka["kafka-service1"].service_name,
     connectorName: "kafka-es-con1",
     config: {
         topics: aiven_kafka_topic["kafka-topic1"].topic_name,
         "connector.class": "io.aiven.connect.elasticsearch.ElasticsearchSinkConnector",
         "type.name": "es-connector",
         name: "kafka-es-con1",
-        "connection.url": aiven_service["es-service1"].service_uri,
+        "connection.url": aiven_elasticsearch["es-service1"].service_uri,
     },
 });
 ```
@@ -188,25 +188,19 @@ const kafka_es_con1 = new aiven.KafkaConnector("kafka-es-con1", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KafkaConnectorArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -218,25 +212,19 @@ const kafka_es_con1 = new aiven.KafkaConnector("kafka-es-con1", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KafkaConnectorArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -248,33 +236,25 @@ const kafka_es_con1 = new aiven.KafkaConnector("kafka-es-con1", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KafkaConnectorArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -286,25 +266,19 @@ const kafka_es_con1 = new aiven.KafkaConnector("kafka-es-con1", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KafkaConnectorArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

@@ -3334,6 +3334,14 @@ Interfaces below for more details.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="hostresourcegrouparn_csharp">
+<a href="#hostresourcegrouparn_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Resource<wbr>Group<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="partitionnumber_csharp">
 <a href="#partitionnumber_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Number</a>
 </span>
@@ -3388,6 +3396,14 @@ Interfaces below for more details.
             title="Required">
         <span id="hostid_go">
 <a href="#hostid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hostresourcegrouparn_go">
+<a href="#hostresourcegrouparn_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Resource<wbr>Group<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3454,6 +3470,14 @@ Interfaces below for more details.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="hostresourcegrouparn_nodejs">
+<a href="#hostresourcegrouparn_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Resource<wbr>Group<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="partitionnumber_nodejs">
 <a href="#partitionnumber_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Number</a>
 </span>
@@ -3508,6 +3532,14 @@ Interfaces below for more details.
             title="Required">
         <span id="host_id_python">
 <a href="#host_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="host_resource_group_arn_python">
+<a href="#host_resource_group_arn_python" style="color: inherit; text-decoration: inherit;">host_<wbr>resource_<wbr>group_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

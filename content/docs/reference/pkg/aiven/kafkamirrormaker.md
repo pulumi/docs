@@ -209,25 +209,19 @@ const mm1 = new aiven.KafkaMirrorMaker("mm1", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KafkaMirrorMakerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -239,25 +233,19 @@ const mm1 = new aiven.KafkaMirrorMaker("mm1", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KafkaMirrorMakerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -269,33 +257,25 @@ const mm1 = new aiven.KafkaMirrorMaker("mm1", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KafkaMirrorMakerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -307,25 +287,19 @@ const mm1 = new aiven.KafkaMirrorMaker("mm1", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KafkaMirrorMakerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -394,7 +368,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options.
 The following configuration options available:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -404,7 +378,7 @@ The following configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}day of week when maintenance operations should be performed. 
+    <dd>{{% md %}}day of week when maintenance operations should be performed.
 On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +388,7 @@ On monday, tuesday, wednesday, etc.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}time of day when maintenance operations should be performed. 
+    <dd>{{% md %}}time of day when maintenance operations should be performed.
 UTC time in HH:mm:ss format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +500,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options.
 The following configuration options available:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -536,7 +510,7 @@ The following configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}day of week when maintenance operations should be performed. 
+    <dd>{{% md %}}day of week when maintenance operations should be performed.
 On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +520,7 @@ On monday, tuesday, wednesday, etc.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}time of day when maintenance operations should be performed. 
+    <dd>{{% md %}}time of day when maintenance operations should be performed.
 UTC time in HH:mm:ss format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -658,7 +632,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options.
 The following configuration options available:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -668,7 +642,7 @@ The following configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}day of week when maintenance operations should be performed. 
+    <dd>{{% md %}}day of week when maintenance operations should be performed.
 On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +652,7 @@ On monday, tuesday, wednesday, etc.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}time of day when maintenance operations should be performed. 
+    <dd>{{% md %}}time of day when maintenance operations should be performed.
 UTC time in HH:mm:ss format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -790,7 +764,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options.
 The following configuration options available:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -800,7 +774,7 @@ The following configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}day of week when maintenance operations should be performed. 
+    <dd>{{% md %}}day of week when maintenance operations should be performed.
 On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -810,7 +784,7 @@ On monday, tuesday, wednesday, etc.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}time of day when maintenance operations should be performed. 
+    <dd>{{% md %}}time of day when maintenance operations should be performed.
 UTC time in HH:mm:ss format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1396,7 +1370,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options.
 The following configuration options available:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1406,7 +1380,7 @@ The following configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}day of week when maintenance operations should be performed. 
+    <dd>{{% md %}}day of week when maintenance operations should be performed.
 On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1416,7 +1390,7 @@ On monday, tuesday, wednesday, etc.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}time of day when maintenance operations should be performed. 
+    <dd>{{% md %}}time of day when maintenance operations should be performed.
 UTC time in HH:mm:ss format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1600,7 +1574,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options.
 The following configuration options available:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1610,7 +1584,7 @@ The following configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}day of week when maintenance operations should be performed. 
+    <dd>{{% md %}}day of week when maintenance operations should be performed.
 On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1620,7 +1594,7 @@ On monday, tuesday, wednesday, etc.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}time of day when maintenance operations should be performed. 
+    <dd>{{% md %}}time of day when maintenance operations should be performed.
 UTC time in HH:mm:ss format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1804,7 +1778,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options.
 The following configuration options available:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1814,7 +1788,7 @@ The following configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}day of week when maintenance operations should be performed. 
+    <dd>{{% md %}}day of week when maintenance operations should be performed.
 On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1824,7 +1798,7 @@ On monday, tuesday, wednesday, etc.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}time of day when maintenance operations should be performed. 
+    <dd>{{% md %}}time of day when maintenance operations should be performed.
 UTC time in HH:mm:ss format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2008,7 +1982,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options.
 The following configuration options available:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2018,7 +1992,7 @@ The following configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}day of week when maintenance operations should be performed. 
+    <dd>{{% md %}}day of week when maintenance operations should be performed.
 On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2028,7 +2002,7 @@ On monday, tuesday, wednesday, etc.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}time of day when maintenance operations should be performed. 
+    <dd>{{% md %}}time of day when maintenance operations should be performed.
 UTC time in HH:mm:ss format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2522,7 +2496,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically write the translated offsets 
+    <dd>{{% md %}}Whether to periodically write the translated offsets
 of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster,
 as long as no active consumers in that group are connected to the target cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2541,7 +2515,7 @@ as long as no active consumers in that group are connected to the target cluster
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically check for new consumer groups. 
+    <dd>{{% md %}}Whether to periodically check for new consumer groups.
 Defaults to 'true'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2551,8 +2525,8 @@ Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically check for new topics and 
-partitions. Defaults to 'true'.
+    <dd>{{% md %}}Frequency of consumer group refresh in seconds.
+Defaults to 600 seconds (10 minutes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtopicsenabled_csharp">
@@ -2561,7 +2535,9 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to periodically check for new topics and
+partitions. Defaults to 'true'.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtopicsintervalseconds_csharp">
 <a href="#refreshtopicsintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Topics<wbr>Interval<wbr>Seconds</a>
@@ -2569,7 +2545,7 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Frequency of topic and partitions refresh in 
+    <dd>{{% md %}}Frequency of topic and partitions refresh in
 seconds. Defaults to 600 seconds (10 minutes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2579,7 +2555,8 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to periodically write the translated offsets of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster, as long as no active consumers in that group are connected to the target cluster. Defaults to 'false'.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncgroupoffsetsintervalseconds_csharp">
 <a href="#syncgroupoffsetsintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
@@ -2587,7 +2564,7 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Frequency at which consumer group offsets 
+    <dd>{{% md %}}Frequency at which consumer group offsets
 are synced (default: 60, every minute).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2601,7 +2578,7 @@ are synced (default: 60, every minute).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically write the translated offsets 
+    <dd>{{% md %}}Whether to periodically write the translated offsets
 of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster,
 as long as no active consumers in that group are connected to the target cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2620,7 +2597,7 @@ as long as no active consumers in that group are connected to the target cluster
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically check for new consumer groups. 
+    <dd>{{% md %}}Whether to periodically check for new consumer groups.
 Defaults to 'true'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2630,8 +2607,8 @@ Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically check for new topics and 
-partitions. Defaults to 'true'.
+    <dd>{{% md %}}Frequency of consumer group refresh in seconds.
+Defaults to 600 seconds (10 minutes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtopicsenabled_go">
@@ -2640,7 +2617,9 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to periodically check for new topics and
+partitions. Defaults to 'true'.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtopicsintervalseconds_go">
 <a href="#refreshtopicsintervalseconds_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Topics<wbr>Interval<wbr>Seconds</a>
@@ -2648,7 +2627,7 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Frequency of topic and partitions refresh in 
+    <dd>{{% md %}}Frequency of topic and partitions refresh in
 seconds. Defaults to 600 seconds (10 minutes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2658,7 +2637,8 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to periodically write the translated offsets of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster, as long as no active consumers in that group are connected to the target cluster. Defaults to 'false'.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncgroupoffsetsintervalseconds_go">
 <a href="#syncgroupoffsetsintervalseconds_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
@@ -2666,7 +2646,7 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Frequency at which consumer group offsets 
+    <dd>{{% md %}}Frequency at which consumer group offsets
 are synced (default: 60, every minute).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2680,7 +2660,7 @@ are synced (default: 60, every minute).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically write the translated offsets 
+    <dd>{{% md %}}Whether to periodically write the translated offsets
 of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster,
 as long as no active consumers in that group are connected to the target cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2699,7 +2679,7 @@ as long as no active consumers in that group are connected to the target cluster
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically check for new consumer groups. 
+    <dd>{{% md %}}Whether to periodically check for new consumer groups.
 Defaults to 'true'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2709,8 +2689,8 @@ Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically check for new topics and 
-partitions. Defaults to 'true'.
+    <dd>{{% md %}}Frequency of consumer group refresh in seconds.
+Defaults to 600 seconds (10 minutes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtopicsenabled_nodejs">
@@ -2719,7 +2699,9 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to periodically check for new topics and
+partitions. Defaults to 'true'.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtopicsintervalseconds_nodejs">
 <a href="#refreshtopicsintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Topics<wbr>Interval<wbr>Seconds</a>
@@ -2727,7 +2709,7 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Frequency of topic and partitions refresh in 
+    <dd>{{% md %}}Frequency of topic and partitions refresh in
 seconds. Defaults to 600 seconds (10 minutes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2737,7 +2719,8 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to periodically write the translated offsets of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster, as long as no active consumers in that group are connected to the target cluster. Defaults to 'false'.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncgroupoffsetsintervalseconds_nodejs">
 <a href="#syncgroupoffsetsintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
@@ -2745,7 +2728,7 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Frequency at which consumer group offsets 
+    <dd>{{% md %}}Frequency at which consumer group offsets
 are synced (default: 60, every minute).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2759,7 +2742,7 @@ are synced (default: 60, every minute).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically write the translated offsets 
+    <dd>{{% md %}}Whether to periodically write the translated offsets
 of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster,
 as long as no active consumers in that group are connected to the target cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2778,7 +2761,7 @@ as long as no active consumers in that group are connected to the target cluster
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically check for new consumer groups. 
+    <dd>{{% md %}}Whether to periodically check for new consumer groups.
 Defaults to 'true'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2788,8 +2771,8 @@ Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically check for new topics and 
-partitions. Defaults to 'true'.
+    <dd>{{% md %}}Frequency of consumer group refresh in seconds.
+Defaults to 600 seconds (10 minutes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_topics_enabled_python">
@@ -2798,7 +2781,9 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to periodically check for new topics and
+partitions. Defaults to 'true'.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_topics_interval_seconds_python">
 <a href="#refresh_topics_interval_seconds_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>topics_<wbr>interval_<wbr>seconds</a>
@@ -2806,7 +2791,7 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Frequency of topic and partitions refresh in 
+    <dd>{{% md %}}Frequency of topic and partitions refresh in
 seconds. Defaults to 600 seconds (10 minutes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2816,7 +2801,8 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to periodically write the translated offsets of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster, as long as no active consumers in that group are connected to the target cluster. Defaults to 'false'.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sync_group_offsets_interval_seconds_python">
 <a href="#sync_group_offsets_interval_seconds_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>offsets_<wbr>interval_<wbr>seconds</a>
@@ -2824,7 +2810,7 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Frequency at which consumer group offsets 
+    <dd>{{% md %}}Frequency at which consumer group offsets
 are synced (default: 60, every minute).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -176,7 +176,7 @@ the names returned by [list-addon](https://docs.aws.amazon.com/cli/latest/refere
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the EKS Cluster.
+    <dd>{{% md %}}Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -207,7 +207,7 @@ the names returned by [list-addon](https://docs.aws.amazon.com/cli/latest/refere
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the EKS Cluster.
+    <dd>{{% md %}}Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -238,7 +238,7 @@ the names returned by [list-addon](https://docs.aws.amazon.com/cli/latest/refere
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the EKS Cluster.
+    <dd>{{% md %}}Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -269,7 +269,7 @@ the names returned by [list-addon](https://docs.aws.amazon.com/cli/latest/refere
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the EKS Cluster.
+    <dd>{{% md %}}Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">

@@ -245,7 +245,7 @@ The following output properties are available:
 <a href="#deleteexistingpeering_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Existing<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if need to remove current existing peerings.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -277,7 +277,7 @@ The following output properties are available:
 <a href="#isglobal_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if global mesh is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -353,7 +353,7 @@ The following output properties are available:
 <a href="#deleteexistingpeering_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Existing<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if need to remove current existing peerings.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -385,7 +385,7 @@ The following output properties are available:
 <a href="#isglobal_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if global mesh is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -461,7 +461,7 @@ The following output properties are available:
 <a href="#deleteexistingpeering_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Existing<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if need to remove current existing peerings.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -493,7 +493,7 @@ The following output properties are available:
 <a href="#isglobal_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if global mesh is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -569,7 +569,7 @@ The following output properties are available:
 <a href="#delete_existing_peering_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>existing_<wbr>peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flag if need to remove current existing peerings.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -601,7 +601,7 @@ The following output properties are available:
 <a href="#is_global_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flag if global mesh is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -631,7 +631,7 @@ The following output properties are available:
 <a href="#isglobal_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -647,7 +647,7 @@ The following output properties are available:
 <a href="#usehubgateway_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Hub<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -667,7 +667,7 @@ The following output properties are available:
 <a href="#isglobal_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -683,7 +683,7 @@ The following output properties are available:
 <a href="#usehubgateway_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Hub<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -703,7 +703,7 @@ The following output properties are available:
 <a href="#isglobal_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -719,7 +719,7 @@ The following output properties are available:
 <a href="#usehubgateway_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Hub<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#is_global_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -755,7 +755,7 @@ The following output properties are available:
 <a href="#use_hub_gateway_python" style="color: inherit; text-decoration: inherit;">use_<wbr>hub_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}

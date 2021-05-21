@@ -48,6 +48,7 @@ class MyStack : Stack
         {
             Region = "us-central1",
             Protocol = "HTTP",
+            LoadBalancingScheme = "INTERNAL_MANAGED",
             TimeoutSec = 10,
             HealthChecks = 
             {
@@ -58,6 +59,7 @@ class MyStack : Stack
         {
             Region = "us-central1",
             Protocol = "HTTP",
+            LoadBalancingScheme = "INTERNAL_MANAGED",
             TimeoutSec = 10,
             HealthChecks = 
             {
@@ -151,9 +153,10 @@ func main() {
 			return err
 		}
 		login, err := compute.NewRegionBackendService(ctx, "login", &compute.RegionBackendServiceArgs{
-			Region:     pulumi.String("us-central1"),
-			Protocol:   pulumi.String("HTTP"),
-			TimeoutSec: pulumi.Int(10),
+			Region:              pulumi.String("us-central1"),
+			Protocol:            pulumi.String("HTTP"),
+			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
+			TimeoutSec:          pulumi.Int(10),
 			HealthChecks: pulumi.String(pulumi.String{
 				_default.ID(),
 			}),
@@ -162,9 +165,10 @@ func main() {
 			return err
 		}
 		home, err := compute.NewRegionBackendService(ctx, "home", &compute.RegionBackendServiceArgs{
-			Region:     pulumi.String("us-central1"),
-			Protocol:   pulumi.String("HTTP"),
-			TimeoutSec: pulumi.Int(10),
+			Region:              pulumi.String("us-central1"),
+			Protocol:            pulumi.String("HTTP"),
+			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
+			TimeoutSec:          pulumi.Int(10),
 			HealthChecks: pulumi.String(pulumi.String{
 				_default.ID(),
 			}),
@@ -241,11 +245,13 @@ default = gcp.compute.RegionHealthCheck("default",
 login = gcp.compute.RegionBackendService("login",
     region="us-central1",
     protocol="HTTP",
+    load_balancing_scheme="INTERNAL_MANAGED",
     timeout_sec=10,
     health_checks=[default.id])
 home = gcp.compute.RegionBackendService("home",
     region="us-central1",
     protocol="HTTP",
+    load_balancing_scheme="INTERNAL_MANAGED",
     timeout_sec=10,
     health_checks=[default.id])
 regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
@@ -300,12 +306,14 @@ const _default = new gcp.compute.RegionHealthCheck("default", {
 const login = new gcp.compute.RegionBackendService("login", {
     region: "us-central1",
     protocol: "HTTP",
+    loadBalancingScheme: "INTERNAL_MANAGED",
     timeoutSec: 10,
     healthChecks: [_default.id],
 });
 const home = new gcp.compute.RegionBackendService("home", {
     region: "us-central1",
     protocol: "HTTP",
+    loadBalancingScheme: "INTERNAL_MANAGED",
     timeoutSec: 10,
     healthChecks: [_default.id],
 });
@@ -2106,25 +2114,19 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RegionUrlMapArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -2136,25 +2138,19 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RegionUrlMapArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -2166,33 +2162,25 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RegionUrlMapArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -2204,25 +2192,19 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RegionUrlMapArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

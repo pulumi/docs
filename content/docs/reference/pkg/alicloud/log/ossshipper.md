@@ -58,7 +58,7 @@ class MyStack : Stack
             LogstoreName = alicloud_log_logstore.Example.Name,
             ShipperName = "oss_shipper_name",
             OssBucket = "test_bucket",
-            OssPrefix = "/root",
+            OssPrefix = "root",
             BufferInterval = 300,
             BufferSize = 250,
             CompressType = "none",
@@ -114,7 +114,7 @@ func main() {
 			LogstoreName:   pulumi.Any(alicloud_log_logstore.Example.Name),
 			ShipperName:    pulumi.String("oss_shipper_name"),
 			OssBucket:      pulumi.String("test_bucket"),
-			OssPrefix:      pulumi.String("/root"),
+			OssPrefix:      pulumi.String("root"),
 			BufferInterval: pulumi.Int(300),
 			BufferSize:     pulumi.Int(250),
 			CompressType:   pulumi.String("none"),
@@ -157,7 +157,7 @@ example_oss_shipper = alicloud.log.OssShipper("exampleOssShipper",
     logstore_name=alicloud_log_logstore["example"]["name"],
     shipper_name="oss_shipper_name",
     oss_bucket="test_bucket",
-    oss_prefix="/root",
+    oss_prefix="root",
     buffer_interval=300,
     buffer_size=250,
     compress_type="none",
@@ -196,7 +196,7 @@ const exampleOssShipper = new alicloud.log.OssShipper("exampleOssShipper", {
     logstoreName: alicloud_log_logstore.example.name,
     shipperName: "oss_shipper_name",
     ossBucket: "test_bucket",
-    ossPrefix: "/root",
+    ossPrefix: "root",
     bufferInterval: 300,
     bufferSize: 250,
     compressType: "none",
@@ -271,25 +271,19 @@ const exampleOssShipper = new alicloud.log.OssShipper("exampleOssShipper", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OssShipperArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -301,25 +295,19 @@ const exampleOssShipper = new alicloud.log.OssShipper("exampleOssShipper", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OssShipperArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -331,33 +319,25 @@ const exampleOssShipper = new alicloud.log.OssShipper("exampleOssShipper", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OssShipperArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -369,25 +349,19 @@ const exampleOssShipper = new alicloud.log.OssShipper("exampleOssShipper", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OssShipperArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -438,7 +412,7 @@ The OssShipper resource accepts the following [input]({{< relref "/docs/intro/co
 `csv_config_nullidentifier` - (Optional) Invalid field content.
 `csv_config_quote` - (Optional) Escape character under csv configuration.
 `csv_config_header` - (Optional) Indicates whether to write the field name to the CSV file, the default value is `false`.
-`csv_config_linefeed` - (Optional) Separator in csv configuration.
+`csv_config_linefeed` - (Optional) lineFeed in csv configuration.
 - format = `parquet`
 `parquet_config` - (Optional) Configure to use parquet storage format.
 `name` - (Required) The name of the key.
@@ -619,7 +593,7 @@ The OssShipper resource accepts the following [input]({{< relref "/docs/intro/co
 `csv_config_nullidentifier` - (Optional) Invalid field content.
 `csv_config_quote` - (Optional) Escape character under csv configuration.
 `csv_config_header` - (Optional) Indicates whether to write the field name to the CSV file, the default value is `false`.
-`csv_config_linefeed` - (Optional) Separator in csv configuration.
+`csv_config_linefeed` - (Optional) lineFeed in csv configuration.
 - format = `parquet`
 `parquet_config` - (Optional) Configure to use parquet storage format.
 `name` - (Required) The name of the key.
@@ -800,7 +774,7 @@ The OssShipper resource accepts the following [input]({{< relref "/docs/intro/co
 `csv_config_nullidentifier` - (Optional) Invalid field content.
 `csv_config_quote` - (Optional) Escape character under csv configuration.
 `csv_config_header` - (Optional) Indicates whether to write the field name to the CSV file, the default value is `false`.
-`csv_config_linefeed` - (Optional) Separator in csv configuration.
+`csv_config_linefeed` - (Optional) lineFeed in csv configuration.
 - format = `parquet`
 `parquet_config` - (Optional) Configure to use parquet storage format.
 `name` - (Required) The name of the key.
@@ -981,7 +955,7 @@ The OssShipper resource accepts the following [input]({{< relref "/docs/intro/co
 `csv_config_nullidentifier` - (Optional) Invalid field content.
 `csv_config_quote` - (Optional) Escape character under csv configuration.
 `csv_config_header` - (Optional) Indicates whether to write the field name to the CSV file, the default value is `false`.
-`csv_config_linefeed` - (Optional) Separator in csv configuration.
+`csv_config_linefeed` - (Optional) lineFeed in csv configuration.
 - format = `parquet`
 `parquet_config` - (Optional) Configure to use parquet storage format.
 `name` - (Required) The name of the key.
@@ -1418,7 +1392,7 @@ The following state arguments are supported:
 `csv_config_nullidentifier` - (Optional) Invalid field content.
 `csv_config_quote` - (Optional) Escape character under csv configuration.
 `csv_config_header` - (Optional) Indicates whether to write the field name to the CSV file, the default value is `false`.
-`csv_config_linefeed` - (Optional) Separator in csv configuration.
+`csv_config_linefeed` - (Optional) lineFeed in csv configuration.
 - format = `parquet`
 `parquet_config` - (Optional) Configure to use parquet storage format.
 `name` - (Required) The name of the key.
@@ -1599,7 +1573,7 @@ The following state arguments are supported:
 `csv_config_nullidentifier` - (Optional) Invalid field content.
 `csv_config_quote` - (Optional) Escape character under csv configuration.
 `csv_config_header` - (Optional) Indicates whether to write the field name to the CSV file, the default value is `false`.
-`csv_config_linefeed` - (Optional) Separator in csv configuration.
+`csv_config_linefeed` - (Optional) lineFeed in csv configuration.
 - format = `parquet`
 `parquet_config` - (Optional) Configure to use parquet storage format.
 `name` - (Required) The name of the key.
@@ -1780,7 +1754,7 @@ The following state arguments are supported:
 `csv_config_nullidentifier` - (Optional) Invalid field content.
 `csv_config_quote` - (Optional) Escape character under csv configuration.
 `csv_config_header` - (Optional) Indicates whether to write the field name to the CSV file, the default value is `false`.
-`csv_config_linefeed` - (Optional) Separator in csv configuration.
+`csv_config_linefeed` - (Optional) lineFeed in csv configuration.
 - format = `parquet`
 `parquet_config` - (Optional) Configure to use parquet storage format.
 `name` - (Required) The name of the key.
@@ -1961,7 +1935,7 @@ The following state arguments are supported:
 `csv_config_nullidentifier` - (Optional) Invalid field content.
 `csv_config_quote` - (Optional) Escape character under csv configuration.
 `csv_config_header` - (Optional) Indicates whether to write the field name to the CSV file, the default value is `false`.
-`csv_config_linefeed` - (Optional) Separator in csv configuration.
+`csv_config_linefeed` - (Optional) lineFeed in csv configuration.
 - format = `parquet`
 `parquet_config` - (Optional) Configure to use parquet storage format.
 `name` - (Required) The name of the key.

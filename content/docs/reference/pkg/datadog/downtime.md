@@ -12,39 +12,18 @@ meta_desc: "Documentation for the datadog.Downtime resource with examples, input
 
 Provides a Datadog downtime resource. This can be used to create and manage Datadog downtimes.
 
-## Example: downtime for a specific monitor
+{{% examples %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as datadog from "@pulumi/datadog";
+## Example Usage
 
-// Create a new daily 1700-0900 Datadog downtime for a specific monitor id
-const foo = new datadog.Downtime("foo", {
-    end: 1483365600,
-    monitorId: 12345,
-    recurrence: {
-        period: 1,
-        type: "days",
-    },
-    scopes: ["*"],
-    start: 1483308000,
-});
-```
-```python
-import pulumi
-import pulumi_datadog as datadog
+{{< chooser language "typescript,python,go,csharp" / >}}
 
-# Create a new daily 1700-0900 Datadog downtime for a specific monitor id
-foo = datadog.Downtime("foo",
-    end=1483365600,
-    monitor_id=12345,
-    recurrence=datadog.DowntimeRecurrenceArgs(
-        period=1,
-        type="days",
-    ),
-    scopes=["*"],
-    start=1483308000)
-```
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Datadog = Pulumi.Datadog;
@@ -53,95 +32,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        // Create a new daily 1700-0900 Datadog downtime for a specific monitor id
-        var foo = new Datadog.Downtime("foo", new Datadog.DowntimeArgs
-        {
-            End = 1483365600,
-            MonitorId = 12345,
-            Recurrence = new Datadog.Inputs.DowntimeRecurrenceArgs
-            {
-                Period = 1,
-                Type = "days",
-            },
-            Scopes = 
-            {
-                "*",
-            },
-            Start = 1483308000,
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-datadog/sdk/v3/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datadog.NewDowntime(ctx, "foo", &datadog.DowntimeArgs{
-			End:       pulumi.Int(1483365600),
-			MonitorId: pulumi.Int(12345),
-			Recurrence: &datadog.DowntimeRecurrenceArgs{
-				Period: pulumi.Int(1),
-				Type:   pulumi.String("days"),
-			},
-			Scopes: pulumi.StringArray{
-				pulumi.String("*"),
-			},
-			Start: pulumi.Int(1483308000),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-## Example: downtime for all monitors
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as datadog from "@pulumi/datadog";
-
-// Create a new daily 1700-0900 Datadog downtime for all monitors
-const foo = new datadog.Downtime("foo", {
-    end: 1483365600,
-    recurrence: {
-        period: 1,
-        type: "days",
-    },
-    scopes: ["*"],
-    start: 1483308000,
-});
-```
-```python
-import pulumi
-import pulumi_datadog as datadog
-
-# Create a new daily 1700-0900 Datadog downtime for all monitors
-foo = datadog.Downtime("foo",
-    end=1483365600,
-    recurrence=datadog.DowntimeRecurrenceArgs(
-        period=1,
-        type="days",
-    ),
-    scopes=["*"],
-    start=1483308000)
-```
-```csharp
-using Pulumi;
-using Datadog = Pulumi.Datadog;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
+        // Example: downtime for all monitors
         // Create a new daily 1700-0900 Datadog downtime for all monitors
         var foo = new Datadog.Downtime("foo", new Datadog.DowntimeArgs
         {
@@ -161,6 +52,13 @@ class MyStack : Stack
 
 }
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -191,6 +89,62 @@ func main() {
 ```
 
 
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_datadog as datadog
+
+# Example: downtime for all monitors
+# Create a new daily 1700-0900 Datadog downtime for all monitors
+foo = datadog.Downtime("foo",
+    end=1483365600,
+    recurrence=datadog.DowntimeRecurrenceArgs(
+        period=1,
+        type="days",
+    ),
+    scopes=["*"],
+    start=1483308000)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as datadog from "@pulumi/datadog";
+
+// Example: downtime for all monitors
+// Create a new daily 1700-0900 Datadog downtime for all monitors
+const foo = new datadog.Downtime("foo", {
+    end: 1483365600,
+    recurrence: {
+        period: 1,
+        type: "days",
+    },
+    scopes: ["*"],
+    start: 1483308000,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
+
 
 ## Create a Downtime Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
@@ -204,8 +158,6 @@ func main() {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Downtime</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-             <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">end</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">end_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -238,25 +190,19 @@ func main() {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DowntimeArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -268,25 +214,19 @@ func main() {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DowntimeArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -298,33 +238,25 @@ func main() {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DowntimeArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -336,25 +268,19 @@ func main() {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DowntimeArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -378,24 +304,6 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}specify the group scope to which this downtime applies. For everything use '*'
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="active_csharp">
-<a href="#active_csharp" style="color: inherit; text-decoration: inherit;">Active</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true indicates this downtime is being actively applied
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="disabled_csharp">
-<a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true indicates this downtime is not being applied
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_csharp">
@@ -492,24 +400,6 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}specify the group scope to which this downtime applies. For everything use '*'
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="active_go">
-<a href="#active_go" style="color: inherit; text-decoration: inherit;">Active</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true indicates this downtime is being actively applied
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="disabled_go">
-<a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true indicates this downtime is not being applied
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="end_go">
 <a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
 </span>
@@ -602,24 +492,6 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}specify the group scope to which this downtime applies. For everything use '*'
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="active_nodejs">
-<a href="#active_nodejs" style="color: inherit; text-decoration: inherit;">active</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}When true indicates this downtime is being actively applied
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="disabled_nodejs">
-<a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}When true indicates this downtime is not being applied
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_nodejs">
@@ -716,24 +588,6 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}specify the group scope to which this downtime applies. For everything use '*'
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="active_python">
-<a href="#active_python" style="color: inherit; text-decoration: inherit;">active</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true indicates this downtime is being actively applied
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="disabled_python">
-<a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true indicates this downtime is not being applied
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="end_python">
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
@@ -826,6 +680,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="active_csharp">
+<a href="#active_csharp" style="color: inherit; text-decoration: inherit;">Active</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true indicates this downtime is being actively applied
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="disabled_csharp">
+<a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true indicates this downtime is not being applied
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -837,6 +709,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="active_go">
+<a href="#active_go" style="color: inherit; text-decoration: inherit;">Active</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true indicates this downtime is being actively applied
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="disabled_go">
+<a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true indicates this downtime is not being applied
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -850,6 +740,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="active_nodejs">
+<a href="#active_nodejs" style="color: inherit; text-decoration: inherit;">active</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When true indicates this downtime is being actively applied
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="disabled_nodejs">
+<a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When true indicates this downtime is not being applied
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -861,6 +769,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="active_python">
+<a href="#active_python" style="color: inherit; text-decoration: inherit;">active</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true indicates this downtime is being actively applied
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="disabled_python">
+<a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true indicates this downtime is not being applied
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1476,7 +1402,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}One of `days`, `weeks`, `months`, or `years`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -1484,7 +1411,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}How often to repeat as an integer. For example to repeat every 3 days, select a `type` of `days` and a `period` of `3`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rrule_csharp">
 <a href="#rrule_csharp" style="color: inherit; text-decoration: inherit;">Rrule</a>
@@ -1492,7 +1420,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The RRULE standard for defining recurring events. For example, to have a recurring event on the first day of each month, use `FREQ=MONTHLY;INTERVAL=1`. Most common rrule options from the iCalendar Spec are supported. Attributes specifying the duration in RRULE are not supported (for example, `DTSTART`, `DTEND`, `DURATION`).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="untildate_csharp">
 <a href="#untildate_csharp" style="color: inherit; text-decoration: inherit;">Until<wbr>Date</a>
@@ -1500,7 +1429,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The date at which the recurrence should end as a POSIX timestamp. `until_occurrences` and `until_date` are mutually exclusive.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="untiloccurrences_csharp">
 <a href="#untiloccurrences_csharp" style="color: inherit; text-decoration: inherit;">Until<wbr>Occurrences</a>
@@ -1508,7 +1438,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}How many times the downtime will be rescheduled. `until_occurrences` and `until_date` are mutually exclusive.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_csharp">
 <a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
@@ -1516,7 +1447,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of week days to repeat on. Choose from: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat` or `Sun`. Only applicable when `type` is `weeks`. First letter must be capitalized.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1528,7 +1460,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}One of `days`, `weeks`, `months`, or `years`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -1536,7 +1469,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}How often to repeat as an integer. For example to repeat every 3 days, select a `type` of `days` and a `period` of `3`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rrule_go">
 <a href="#rrule_go" style="color: inherit; text-decoration: inherit;">Rrule</a>
@@ -1544,7 +1478,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The RRULE standard for defining recurring events. For example, to have a recurring event on the first day of each month, use `FREQ=MONTHLY;INTERVAL=1`. Most common rrule options from the iCalendar Spec are supported. Attributes specifying the duration in RRULE are not supported (for example, `DTSTART`, `DTEND`, `DURATION`).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="untildate_go">
 <a href="#untildate_go" style="color: inherit; text-decoration: inherit;">Until<wbr>Date</a>
@@ -1552,7 +1487,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The date at which the recurrence should end as a POSIX timestamp. `until_occurrences` and `until_date` are mutually exclusive.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="untiloccurrences_go">
 <a href="#untiloccurrences_go" style="color: inherit; text-decoration: inherit;">Until<wbr>Occurrences</a>
@@ -1560,7 +1496,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}How many times the downtime will be rescheduled. `until_occurrences` and `until_date` are mutually exclusive.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_go">
 <a href="#weekdays_go" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
@@ -1568,7 +1505,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of week days to repeat on. Choose from: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat` or `Sun`. Only applicable when `type` is `weeks`. First letter must be capitalized.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1580,7 +1518,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}One of `days`, `weeks`, `months`, or `years`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1588,7 +1527,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}How often to repeat as an integer. For example to repeat every 3 days, select a `type` of `days` and a `period` of `3`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rrule_nodejs">
 <a href="#rrule_nodejs" style="color: inherit; text-decoration: inherit;">rrule</a>
@@ -1596,7 +1536,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The RRULE standard for defining recurring events. For example, to have a recurring event on the first day of each month, use `FREQ=MONTHLY;INTERVAL=1`. Most common rrule options from the iCalendar Spec are supported. Attributes specifying the duration in RRULE are not supported (for example, `DTSTART`, `DTEND`, `DURATION`).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="untildate_nodejs">
 <a href="#untildate_nodejs" style="color: inherit; text-decoration: inherit;">until<wbr>Date</a>
@@ -1604,7 +1545,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The date at which the recurrence should end as a POSIX timestamp. `until_occurrences` and `until_date` are mutually exclusive.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="untiloccurrences_nodejs">
 <a href="#untiloccurrences_nodejs" style="color: inherit; text-decoration: inherit;">until<wbr>Occurrences</a>
@@ -1612,7 +1554,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}How many times the downtime will be rescheduled. `until_occurrences` and `until_date` are mutually exclusive.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_nodejs">
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Days</a>
@@ -1620,7 +1563,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of week days to repeat on. Choose from: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat` or `Sun`. Only applicable when `type` is `weeks`. First letter must be capitalized.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1632,7 +1576,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}One of `days`, `weeks`, `months`, or `years`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1640,7 +1585,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}How often to repeat as an integer. For example to repeat every 3 days, select a `type` of `days` and a `period` of `3`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rrule_python">
 <a href="#rrule_python" style="color: inherit; text-decoration: inherit;">rrule</a>
@@ -1648,7 +1594,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The RRULE standard for defining recurring events. For example, to have a recurring event on the first day of each month, use `FREQ=MONTHLY;INTERVAL=1`. Most common rrule options from the iCalendar Spec are supported. Attributes specifying the duration in RRULE are not supported (for example, `DTSTART`, `DTEND`, `DURATION`).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="until_date_python">
 <a href="#until_date_python" style="color: inherit; text-decoration: inherit;">until_<wbr>date</a>
@@ -1656,7 +1603,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The date at which the recurrence should end as a POSIX timestamp. `until_occurrences` and `until_date` are mutually exclusive.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="until_occurrences_python">
 <a href="#until_occurrences_python" style="color: inherit; text-decoration: inherit;">until_<wbr>occurrences</a>
@@ -1664,7 +1612,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}How many times the downtime will be rescheduled. `until_occurrences` and `until_date` are mutually exclusive.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="week_days_python">
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
@@ -1672,12 +1621,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of week days to repeat on. Choose from: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat` or `Sun`. Only applicable when `type` is `weeks`. First letter must be capitalized.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
-
-Downtimes can be imported using their numeric ID, e.g.
 
 ```sh
  $ pulumi import datadog:index/downtime:Downtime bytes_received_localhost 2081

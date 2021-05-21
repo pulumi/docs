@@ -17,6 +17,7 @@ A native Pulumi package for creating and managing Google Cloud resources.
     <li><a href="accesscontextmanager/" title="accesscontextmanager"><span class="symbol module"></span>accesscontextmanager</a></li>
     <li><a href="apigateway/" title="apigateway"><span class="symbol module"></span>apigateway</a></li>
     <li><a href="apigee/" title="apigee"><span class="symbol module"></span>apigee</a></li>
+    <li><a href="apikeys/" title="apikeys"><span class="symbol module"></span>apikeys</a></li>
     <li><a href="appengine/" title="appengine"><span class="symbol module"></span>appengine</a></li>
     <li><a href="artifactregistry/" title="artifactregistry"><span class="symbol module"></span>artifactregistry</a></li>
     <li><a href="assuredworkloads/" title="assuredworkloads"><span class="symbol module"></span>assuredworkloads</a></li>
@@ -56,6 +57,7 @@ A native Pulumi package for creating and managing Google Cloud resources.
     <li><a href="dlp/" title="dlp"><span class="symbol module"></span>dlp</a></li>
     <li><a href="dns/" title="dns"><span class="symbol module"></span>dns</a></li>
     <li><a href="domains/" title="domains"><span class="symbol module"></span>domains</a></li>
+    <li><a href="essentialcontacts/" title="essentialcontacts"><span class="symbol module"></span>essentialcontacts</a></li>
     <li><a href="eventarc/" title="eventarc"><span class="symbol module"></span>eventarc</a></li>
     <li><a href="file/" title="file"><span class="symbol module"></span>file</a></li>
     <li><a href="firebase/" title="firebase"><span class="symbol module"></span>firebase</a></li>
@@ -125,6 +127,6 @@ A native Pulumi package for creating and managing Google Cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

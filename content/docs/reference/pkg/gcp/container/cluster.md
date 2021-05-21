@@ -253,6 +253,118 @@ const primary = new gcp.container.Cluster("primary", {
 
 
 
+### Autopilot
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.ServiceAccount.Account("default", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "service-account-id",
+            DisplayName = "Service Account",
+        });
+        var primary = new Gcp.Container.Cluster("primary", new Gcp.Container.ClusterArgs
+        {
+            EnableAutopilot = true,
+            Location = "us-central1-a",
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/container"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := serviceAccount.NewAccount(ctx, "_default", &serviceAccount.AccountArgs{
+			AccountId:   pulumi.String("service-account-id"),
+			DisplayName: pulumi.String("Service Account"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = container.NewCluster(ctx, "primary", &container.ClusterArgs{
+			EnableAutopilot: pulumi.Bool(true),
+			Location:        pulumi.String("us-central1-a"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.service_account.Account("default",
+    account_id="service-account-id",
+    display_name="Service Account")
+primary = gcp.container.Cluster("primary",
+    enable_autopilot=True,
+    location="us-central1-a")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultAccount = new gcp.serviceAccount.Account("default", {
+    accountId: "service-account-id",
+    displayName: "Service Account",
+});
+const primary = new gcp.container.Cluster("primary", {
+    enableAutopilot: true,
+    location: "us-central1-a",
+}, { timeouts: {
+    create: "30m",
+    update: "40m",
+} });
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -341,25 +453,19 @@ const primary = new gcp.container.Cluster("primary", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -371,25 +477,19 @@ const primary = new gcp.container.Cluster("primary", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -401,33 +501,25 @@ const primary = new gcp.container.Cluster("primary", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -439,25 +531,19 @@ const primary = new gcp.container.Cluster("primary", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -5778,7 +5864,6 @@ Whether this cluster should enable the Google Compute Engine Persistent Disk Con
     <dd>{{% md %}}The status of the Horizontal Pod Autoscaling
 addon, which increases or decreases the number of replica pods a replication controller
 has based on the resource usage of the existing pods.
-It ensures that a Heapster pod is running in the cluster, which is also used by the Cloud Monitoring service.
 It is enabled by default;
 set `disabled = true` to disable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5881,7 +5966,6 @@ Whether this cluster should enable the Google Compute Engine Persistent Disk Con
     <dd>{{% md %}}The status of the Horizontal Pod Autoscaling
 addon, which increases or decreases the number of replica pods a replication controller
 has based on the resource usage of the existing pods.
-It ensures that a Heapster pod is running in the cluster, which is also used by the Cloud Monitoring service.
 It is enabled by default;
 set `disabled = true` to disable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5984,7 +6068,6 @@ Whether this cluster should enable the Google Compute Engine Persistent Disk Con
     <dd>{{% md %}}The status of the Horizontal Pod Autoscaling
 addon, which increases or decreases the number of replica pods a replication controller
 has based on the resource usage of the existing pods.
-It ensures that a Heapster pod is running in the cluster, which is also used by the Cloud Monitoring service.
 It is enabled by default;
 set `disabled = true` to disable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6087,7 +6170,6 @@ Whether this cluster should enable the Google Compute Engine Persistent Disk Con
     <dd>{{% md %}}The status of the Horizontal Pod Autoscaling
 addon, which increases or decreases the number of replica pods a replication controller
 has based on the resource usage of the existing pods.
-It ensures that a Heapster pod is running in the cluster, which is also used by the Cloud Monitoring service.
 It is enabled by default;
 set `disabled = true` to disable.
 {{% /md %}}</dd><dt class="property-optional"

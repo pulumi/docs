@@ -15,6 +15,7 @@ Explore the resources and functions of the azure.postgresql module.
     <li><a href="configuration" title="Configuration"><span class="symbol resource"></span>Configuration</a></li>
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
     <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
+    <li><a href="flexibleserver" title="FlexibleServer"><span class="symbol resource"></span>FlexibleServer</a></li>
     <li><a href="server" title="Server"><span class="symbol resource"></span>Server</a></li>
     <li><a href="serverkey" title="ServerKey"><span class="symbol resource"></span>ServerKey</a></li>
     <li><a href="virtualnetworkrule" title="VirtualNetworkRule"><span class="symbol resource"></span>VirtualNetworkRule</a></li>
@@ -22,6 +23,7 @@ Explore the resources and functions of the azure.postgresql module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getflexibleserver" title="GetFlexibleServer"><span class="symbol function"></span>GetFlexibleServer</a></li>
     <li><a href="getserver" title="GetServer"><span class="symbol function"></span>GetServer</a></li>
 </ul>
 
@@ -34,6 +36,6 @@ Explore the resources and functions of the azure.postgresql module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.0.0</dd>
+	<dd>4.3.0</dd>
 </dl>
 

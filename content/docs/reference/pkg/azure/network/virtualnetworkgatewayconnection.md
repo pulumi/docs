@@ -810,25 +810,19 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VirtualNetworkGatewayConnectionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -840,25 +834,19 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VirtualNetworkGatewayConnectionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -870,33 +858,25 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VirtualNetworkGatewayConnectionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -908,25 +888,19 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VirtualNetworkGatewayConnectionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -2868,7 +2842,7 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm. Valid
-options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
+options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, or `GCMAES256`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrity_csharp">
@@ -2878,7 +2852,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm. Valid
-options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
+options are `GCMAES128`, `GCMAES256`, `MD5`, `SHA1`, `SHA256`, or `SHA384`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecencryption_csharp">
@@ -2908,7 +2882,7 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DH group used in IKE phase 2 for new child SA.
-Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS2048`, `PFS24`,
+Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS14`, `PFS2`, `PFS2048`, `PFS24`, `PFSMM`,
 or `None`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2954,7 +2928,7 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm. Valid
-options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
+options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, or `GCMAES256`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrity_go">
@@ -2964,7 +2938,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm. Valid
-options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
+options are `GCMAES128`, `GCMAES256`, `MD5`, `SHA1`, `SHA256`, or `SHA384`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecencryption_go">
@@ -2994,7 +2968,7 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DH group used in IKE phase 2 for new child SA.
-Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS2048`, `PFS24`,
+Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS14`, `PFS2`, `PFS2048`, `PFS24`, `PFSMM`,
 or `None`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3040,7 +3014,7 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm. Valid
-options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
+options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, or `GCMAES256`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrity_nodejs">
@@ -3050,7 +3024,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm. Valid
-options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
+options are `GCMAES128`, `GCMAES256`, `MD5`, `SHA1`, `SHA256`, or `SHA384`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecencryption_nodejs">
@@ -3080,7 +3054,7 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DH group used in IKE phase 2 for new child SA.
-Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS2048`, `PFS24`,
+Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS14`, `PFS2`, `PFS2048`, `PFS24`, `PFSMM`,
 or `None`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3126,7 +3100,7 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm. Valid
-options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
+options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, or `GCMAES256`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ike_integrity_python">
@@ -3136,7 +3110,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm. Valid
-options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
+options are `GCMAES128`, `GCMAES256`, `MD5`, `SHA1`, `SHA256`, or `SHA384`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsec_encryption_python">
@@ -3166,7 +3140,7 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DH group used in IKE phase 2 for new child SA.
-Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS2048`, `PFS24`,
+Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS14`, `PFS2`, `PFS2048`, `PFS24`, `PFSMM`,
 or `None`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">

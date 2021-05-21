@@ -38,7 +38,7 @@ class MyStack : Stack
         var config = new Aiven.KafkaSchemaConfiguration("config", new Aiven.KafkaSchemaConfigurationArgs
         {
             Project = aiven_project.Kafka_schemas_project1.Project,
-            ServiceName = aiven_service.Kafka_service1.Service_name,
+            ServiceName = aiven_kafka.Kafka_service1.Service_name,
             CompatibilityLevel = "BACKWARD",
         });
     }
@@ -64,7 +64,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.NewKafkaSchemaConfiguration(ctx, "config", &aiven.KafkaSchemaConfigurationArgs{
 			Project:            pulumi.Any(aiven_project.Kafka - schemas - project1.Project),
-			ServiceName:        pulumi.Any(aiven_service.Kafka - service1.Service_name),
+			ServiceName:        pulumi.Any(aiven_kafka.Kafka - service1.Service_name),
 			CompatibilityLevel: pulumi.String("BACKWARD"),
 		})
 		if err != nil {
@@ -87,7 +87,7 @@ import pulumi_aiven as aiven
 
 config = aiven.KafkaSchemaConfiguration("config",
     project=aiven_project["kafka-schemas-project1"]["project"],
-    service_name=aiven_service["kafka-service1"]["service_name"],
+    service_name=aiven_kafka["kafka-service1"]["service_name"],
     compatibility_level="BACKWARD")
 ```
 
@@ -104,7 +104,7 @@ import * as aiven from "@pulumi/aiven";
 
 const config = new aiven.KafkaSchemaConfiguration("config", {
     project: aiven_project["kafka-schemas-project1"].project,
-    serviceName: aiven_service["kafka-service1"].service_name,
+    serviceName: aiven_kafka["kafka-service1"].service_name,
     compatibilityLevel: "BACKWARD",
 });
 ```
@@ -158,25 +158,19 @@ const config = new aiven.KafkaSchemaConfiguration("config", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KafkaSchemaConfigurationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -188,25 +182,19 @@ const config = new aiven.KafkaSchemaConfiguration("config", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KafkaSchemaConfigurationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -218,33 +206,25 @@ const config = new aiven.KafkaSchemaConfiguration("config", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KafkaSchemaConfigurationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -256,25 +236,19 @@ const config = new aiven.KafkaSchemaConfiguration("config", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KafkaSchemaConfigurationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

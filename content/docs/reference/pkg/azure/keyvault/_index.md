@@ -17,6 +17,7 @@ Explore the resources and functions of the azure.keyvault module.
     <li><a href="certificateissuer" title="CertificateIssuer"><span class="symbol resource"></span>CertificateIssuer</a></li>
     <li><a href="key" title="Key"><span class="symbol resource"></span>Key</a></li>
     <li><a href="keyvault" title="KeyVault"><span class="symbol resource"></span>KeyVault</a></li>
+    <li><a href="managedhardwaresecuritymodule" title="ManagedHardwareSecurityModule"><span class="symbol resource"></span>ManagedHardwareSecurityModule</a></li>
     <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
 </ul>
 
@@ -28,6 +29,7 @@ Explore the resources and functions of the azure.keyvault module.
     <li><a href="getcertificateissuer" title="GetCertificateIssuer"><span class="symbol function"></span>GetCertificateIssuer</a></li>
     <li><a href="getkey" title="GetKey"><span class="symbol function"></span>GetKey</a></li>
     <li><a href="getkeyvault" title="GetKeyVault"><span class="symbol function"></span>GetKeyVault</a></li>
+    <li><a href="getmanagedhardwaresecuritymodule" title="GetManagedHardwareSecurityModule"><span class="symbol function"></span>GetManagedHardwareSecurityModule</a></li>
     <li><a href="getsecret" title="GetSecret"><span class="symbol function"></span>GetSecret</a></li>
 </ul>
 
@@ -40,6 +42,6 @@ Explore the resources and functions of the azure.keyvault module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.0.0</dd>
+	<dd>4.3.0</dd>
 </dl>
 

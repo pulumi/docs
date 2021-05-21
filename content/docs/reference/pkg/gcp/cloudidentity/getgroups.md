@@ -373,6 +373,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="initialgroupconfig_csharp">
+<a href="#initialgroupconfig_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Group<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
@@ -439,6 +447,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getgroupsgroupgroupkey">[]Get<wbr>Groups<wbr>Group<wbr>Group<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="initialgroupconfig_go">
+<a href="#initialgroupconfig_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Group<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -511,6 +527,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="initialgroupconfig_nodejs">
+<a href="#initialgroupconfig_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Group<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
@@ -577,6 +601,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getgroupsgroupgroupkey">Sequence[Get<wbr>Groups<wbr>Group<wbr>Group<wbr>Key]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="initial_group_config_python">
+<a href="#initial_group_config_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>group_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">

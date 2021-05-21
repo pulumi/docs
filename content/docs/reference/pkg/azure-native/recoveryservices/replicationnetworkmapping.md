@@ -40,9 +40,9 @@ class MyStack : Stack
             NetworkName = "e2267b5c-2650-49bd-ab3f-d66aae694c06",
             Properties = new AzureNative.RecoveryServices.Inputs.CreateNetworkMappingInputPropertiesArgs
             {
-                FabricSpecificDetails = 
+                FabricSpecificDetails = new AzureNative.RecoveryServices.Inputs.VmmToAzureCreateNetworkMappingInputArgs
                 {
-                    { "instanceType", "VmmToAzure" },
+                    InstanceType = "VmmToAzure",
                 },
                 RecoveryFabricName = "Microsoft Azure",
                 RecoveryNetworkId = "/subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/siterecoveryProd1/providers/Microsoft.Network/virtualNetworks/vnetavrai",
@@ -62,7 +62,40 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewReplicationNetworkMapping(ctx, "replicationNetworkMapping", &recoveryservices.ReplicationNetworkMappingArgs{
+			FabricName:         pulumi.String("b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac"),
+			NetworkMappingName: pulumi.String("corpe2amap"),
+			NetworkName:        pulumi.String("e2267b5c-2650-49bd-ab3f-d66aae694c06"),
+			Properties: &recoveryservices.CreateNetworkMappingInputPropertiesArgs{
+				FabricSpecificDetails: recoveryservices.VmmToAzureCreateNetworkMappingInput{
+					InstanceType: "VmmToAzure",
+				},
+				RecoveryFabricName: pulumi.String("Microsoft Azure"),
+				RecoveryNetworkId:  pulumi.String("/subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/siterecoveryProd1/providers/Microsoft.Network/virtualNetworks/vnetavrai"),
+			},
+			ResourceGroupName: pulumi.String("srcBvte2a14C27"),
+			ResourceName:      pulumi.String("srce2avaultbvtaC27"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -79,9 +112,9 @@ replication_network_mapping = azure_native.recoveryservices.ReplicationNetworkMa
     network_mapping_name="corpe2amap",
     network_name="e2267b5c-2650-49bd-ab3f-d66aae694c06",
     properties=azure_native.recoveryservices.CreateNetworkMappingInputPropertiesArgs(
-        fabric_specific_details={
-            "instanceType": "VmmToAzure",
-        },
+        fabric_specific_details=azure_native.recoveryservices.VmmToAzureCreateNetworkMappingInputArgs(
+            instance_type="VmmToAzure",
+        ),
         recovery_fabric_name="Microsoft Azure",
         recovery_network_id="/subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/siterecoveryProd1/providers/Microsoft.Network/virtualNetworks/vnetavrai",
     ),
@@ -170,25 +203,19 @@ const replicationNetworkMapping = new azure_native.recoveryservices.ReplicationN
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ReplicationNetworkMappingArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -200,25 +227,19 @@ const replicationNetworkMapping = new azure_native.recoveryservices.ReplicationN
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ReplicationNetworkMappingArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -230,33 +251,25 @@ const replicationNetworkMapping = new azure_native.recoveryservices.ReplicationN
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ReplicationNetworkMappingArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -268,25 +281,19 @@ const replicationNetworkMapping = new azure_native.recoveryservices.ReplicationN
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ReplicationNetworkMappingArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

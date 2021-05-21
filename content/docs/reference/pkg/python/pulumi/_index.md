@@ -1048,9 +1048,9 @@ form in state files.</p>
 
 <dl class="py method">
 <dt id="pulumi.Output.all">
-<em class="property">static </em><code class="sig-name descname">all</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>T<span class="p">, </span>Awaitable<span class="p">[</span>T<span class="p">]</span><span class="p">, </span>pulumi.output.Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output<span class="p">[</span>List<span class="p">[</span>T<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#pulumi.Output.all" title="Permalink to this definition"></a></dt>
+<em class="property">static </em><code class="sig-name descname">all</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>T<span class="p">, </span>Awaitable<span class="p">[</span>T<span class="p">]</span><span class="p">, </span><a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a><span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a><span class="p">[</span>List<span class="p">[</span>T<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#pulumi.Output.all" title="Permalink to this definition"></a></dt>
 <dt>
-<em class="property">static </em><code class="sig-name descname">all</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>T<span class="p">, </span>Awaitable<span class="p">[</span>T<span class="p">]</span><span class="p">, </span>pulumi.output.Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output<span class="p">[</span>Dict<span class="p">[</span>str<span class="p">, </span>T<span class="p">]</span><span class="p">]</span></dt>
+<em class="property">static </em><code class="sig-name descname">all</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>T<span class="p">, </span>Awaitable<span class="p">[</span>T<span class="p">]</span><span class="p">, </span><a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a><span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a><span class="p">[</span>Dict<span class="p">[</span>str<span class="p">, </span>T<span class="p">]</span><span class="p">]</span></dt>
 <dd><p>Produces an Output of a list (if args i.e a list of inputs are supplied)
 or dict (if kwargs i.e. keyworded arguments are supplied).</p>
 <p>This function can be used to combine multiple, separate Inputs into a single
@@ -1699,6 +1699,20 @@ This can be combined with ExportStack to edit a stack’s state (such as recover
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt id="pulumi.automation.LocalWorkspace.stack_outputs">
+<code class="sig-name descname">stack_outputs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; MutableMapping<span class="p">[</span>str<span class="p">, </span>pulumi.automation._output.OutputValue<span class="p">]</span><a class="headerlink" href="#pulumi.automation.LocalWorkspace.stack_outputs" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the current set of Stack outputs from the last Stack.up().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>stack_name</strong> – The name of the stack.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>OutputMap</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -1730,8 +1744,7 @@ It fails if a stack with that name already exists.</p>
 <dt id="pulumi.automation.Stack.select">
 <em class="property">classmethod </em><code class="sig-name descname">select</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">workspace</span><span class="p">:</span> <span class="n">pulumi.automation._workspace.Workspace</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.Stack<a class="headerlink" href="#pulumi.automation.Stack.select" title="Permalink to this definition"></a></dt>
 <dd><p>Selects stack using the given workspace, and stack name.
-It returns an error if the given Stack does not exist. All LocalWorkspace operations will call <code class="docutils literal notranslate"><span class="pre">select</span></code> before
-running.</p>
+It returns an error if the given Stack does not exist.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1943,7 +1956,7 @@ cloud provider. Any such changes are adopted into the current stack.</p>
 
 <dl class="py method">
 <dt id="pulumi.automation.Stack.outputs">
-<code class="sig-name descname">outputs</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; MutableMapping<span class="p">[</span>str<span class="p">, </span>pulumi.automation._stack.OutputValue<span class="p">]</span><a class="headerlink" href="#pulumi.automation.Stack.outputs" title="Permalink to this definition"></a></dt>
+<code class="sig-name descname">outputs</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; MutableMapping<span class="p">[</span>str<span class="p">, </span>pulumi.automation._output.OutputValue<span class="p">]</span><a class="headerlink" href="#pulumi.automation.Stack.outputs" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the current set of Stack outputs from the last Stack.up().</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>

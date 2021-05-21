@@ -46,9 +46,9 @@ class MyStack : Stack
                 },
             },
             DefaultMoveCost = "Medium",
-            PartitionDescription = 
+            PartitionDescription = new AzureNative.ServiceFabric.Inputs.SingletonPartitionSchemeDescriptionArgs
             {
-                { "partitionScheme", "Singleton" },
+                PartitionScheme = "Singleton",
             },
             PlacementConstraints = "NodeType==frontend",
             ResourceGroupName = "resRg",
@@ -79,7 +79,54 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	servicefabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabric"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := servicefabric.NewService(ctx, "service", &servicefabric.ServiceArgs{
+			ApplicationName: pulumi.String("myApp"),
+			ClusterName:     pulumi.String("myCluster"),
+			CorrelationScheme: servicefabric.ServiceCorrelationDescriptionArray{
+				&servicefabric.ServiceCorrelationDescriptionArgs{
+					Scheme:      pulumi.String("Affinity"),
+					ServiceName: pulumi.String("fabric:/app1/app1~svc1"),
+				},
+			},
+			DefaultMoveCost: pulumi.String("Medium"),
+			PartitionDescription: servicefabric.SingletonPartitionSchemeDescription{
+				PartitionScheme: "Singleton",
+			},
+			PlacementConstraints: pulumi.String("NodeType==frontend"),
+			ResourceGroupName:    pulumi.String("resRg"),
+			ServiceDnsName:       pulumi.String("my.service.dns"),
+			ServiceKind:          pulumi.String("Stateless"),
+			ServiceLoadMetrics: servicefabric.ServiceLoadMetricDescriptionArray{
+				&servicefabric.ServiceLoadMetricDescriptionArgs{
+					Name:   pulumi.String("metric1"),
+					Weight: pulumi.String("Low"),
+				},
+			},
+			ServiceName:                  pulumi.String("myService"),
+			ServicePackageActivationMode: pulumi.String("SharedProcess"),
+			ServicePlacementPolicies:     servicefabric.ServicePlacementPolicyDescriptionArray{},
+			ServiceTypeName:              pulumi.String("myServiceType"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -99,9 +146,9 @@ service = azure_native.servicefabric.Service("service",
         service_name="fabric:/app1/app1~svc1",
     )],
     default_move_cost="Medium",
-    partition_description={
-        "partitionScheme": "Singleton",
-    },
+    partition_description=azure_native.servicefabric.SingletonPartitionSchemeDescriptionArgs(
+        partition_scheme="Singleton",
+    ),
     placement_constraints="NodeType==frontend",
     resource_group_name="resRg",
     service_dns_name="my.service.dns",
@@ -178,9 +225,9 @@ class MyStack : Stack
         {
             ApplicationName = "myApp",
             ClusterName = "myCluster",
-            PartitionDescription = 
+            PartitionDescription = new AzureNative.ServiceFabric.Inputs.SingletonPartitionSchemeDescriptionArgs
             {
-                { "partitionScheme", "Singleton" },
+                PartitionScheme = "Singleton",
             },
             ResourceGroupName = "resRg",
             ServiceKind = "Stateless",
@@ -199,7 +246,37 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	servicefabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabric"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := servicefabric.NewService(ctx, "service", &servicefabric.ServiceArgs{
+			ApplicationName: pulumi.String("myApp"),
+			ClusterName:     pulumi.String("myCluster"),
+			PartitionDescription: servicefabric.SingletonPartitionSchemeDescription{
+				PartitionScheme: "Singleton",
+			},
+			ResourceGroupName: pulumi.String("resRg"),
+			ServiceKind:       pulumi.String("Stateless"),
+			ServiceName:       pulumi.String("myService"),
+			ServiceTypeName:   pulumi.String("myServiceType"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -214,9 +291,9 @@ import pulumi_azure_native as azure_native
 service = azure_native.servicefabric.Service("service",
     application_name="myApp",
     cluster_name="myCluster",
-    partition_description={
-        "partitionScheme": "Singleton",
-    },
+    partition_description=azure_native.servicefabric.SingletonPartitionSchemeDescriptionArgs(
+        partition_scheme="Singleton",
+    ),
     resource_group_name="resRg",
     service_kind="Stateless",
     service_name="myService",
@@ -311,25 +388,19 @@ const service = new azure_native.servicefabric.Service("service", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -341,25 +412,19 @@ const service = new azure_native.servicefabric.Service("service", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -371,33 +436,25 @@ const service = new azure_native.servicefabric.Service("service", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -409,25 +466,19 @@ const service = new azure_native.servicefabric.Service("service", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

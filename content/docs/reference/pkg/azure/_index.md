@@ -34,6 +34,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="cognitive/" title="cognitive"><span class="symbol module"></span>cognitive</a></li>
     <li><a href="communication/" title="communication"><span class="symbol module"></span>communication</a></li>
     <li><a href="compute/" title="compute"><span class="symbol module"></span>compute</a></li>
+    <li><a href="consumption/" title="consumption"><span class="symbol module"></span>consumption</a></li>
     <li><a href="containerservice/" title="containerservice"><span class="symbol module"></span>containerservice</a></li>
     <li><a href="core/" title="core"><span class="symbol module"></span>core</a></li>
     <li><a href="cosmosdb/" title="cosmosdb"><span class="symbol module"></span>cosmosdb</a></li>
@@ -126,6 +127,6 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.0.0</dd>
+	<dd>4.3.0</dd>
 </dl>
 

@@ -233,25 +233,19 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NodeBalancerConfigArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -263,25 +257,19 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NodeBalancerConfigArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -293,33 +281,25 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NodeBalancerConfigArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -331,25 +311,19 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NodeBalancerConfigArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -983,7 +957,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodebalancerconfignodestatus">List&lt;Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A structure containing information about the health of the backends for this port. This information is updated
+periodically as checks are performed against backends.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslcommonname_csharp">
 <a href="#sslcommonname_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Commonname</a>
@@ -1023,7 +999,9 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodebalancerconfignodestatus">[]Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A structure containing information about the health of the backends for this port. This information is updated
+periodically as checks are performed against backends.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslcommonname_go">
 <a href="#sslcommonname_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Commonname</a>
@@ -1063,7 +1041,9 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodebalancerconfignodestatus">Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A structure containing information about the health of the backends for this port. This information is updated
+periodically as checks are performed against backends.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslcommonname_nodejs">
 <a href="#sslcommonname_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Commonname</a>
@@ -1103,7 +1083,9 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodebalancerconfignodestatus">Sequence[Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A structure containing information about the health of the backends for this port. This information is updated
+periodically as checks are performed against backends.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssl_commonname_python">
 <a href="#ssl_commonname_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>commonname</a>
@@ -1361,7 +1343,9 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodebalancerconfignodestatus">List&lt;Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A structure containing information about the health of the backends for this port. This information is updated
+periodically as checks are performed against backends.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodebalancerid_csharp">
 <a href="#state_nodebalancerid_csharp" style="color: inherit; text-decoration: inherit;">Nodebalancer<wbr>Id</a>
@@ -1538,7 +1522,9 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodebalancerconfignodestatus">[]Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A structure containing information about the health of the backends for this port. This information is updated
+periodically as checks are performed against backends.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodebalancerid_go">
 <a href="#state_nodebalancerid_go" style="color: inherit; text-decoration: inherit;">Nodebalancer<wbr>Id</a>
@@ -1715,7 +1701,9 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodebalancerconfignodestatus">Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A structure containing information about the health of the backends for this port. This information is updated
+periodically as checks are performed against backends.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodebalancerid_nodejs">
 <a href="#state_nodebalancerid_nodejs" style="color: inherit; text-decoration: inherit;">nodebalancer<wbr>Id</a>
@@ -1892,7 +1880,9 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodebalancerconfignodestatus">Sequence[Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A structure containing information about the health of the backends for this port. This information is updated
+periodically as checks are performed against backends.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodebalancer_id_python">
 <a href="#state_nodebalancer_id_python" style="color: inherit; text-decoration: inherit;">nodebalancer_<wbr>id</a>

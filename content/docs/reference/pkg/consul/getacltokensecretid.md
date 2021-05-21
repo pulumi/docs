@@ -25,6 +25,7 @@ meta_desc: "Documentation for the consul.getAclTokenSecretId function with examp
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_acl_token_secret_id(</span><span class="nx">accessor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                             <span class="nx">pgp_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAclTokenSecretIdResult</code></pre></div>
 {{% /choosable %}}
@@ -61,6 +62,15 @@ The following arguments are supported:
     <dd>{{% md %}}The accessor ID of the ACL token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The namespace to lookup the token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="pgpkey_csharp">
 <a href="#pgpkey_csharp" style="color: inherit; text-decoration: inherit;">Pgp<wbr>Key</a>
 </span>
@@ -80,6 +90,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accessor ID of the ACL token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The namespace to lookup the token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgpkey_go">
@@ -103,6 +122,15 @@ The following arguments are supported:
     <dd>{{% md %}}The accessor ID of the ACL token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The namespace to lookup the token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="pgpkey_nodejs">
 <a href="#pgpkey_nodejs" style="color: inherit; text-decoration: inherit;">pgp<wbr>Key</a>
 </span>
@@ -122,6 +150,15 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accessor ID of the ACL token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The namespace to lookup the token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgp_key_python">
@@ -179,6 +216,14 @@ The following output properties are available:
     <dd>{{% md %}}The secret ID of the ACL token if `pgp_key` has not been set.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="pgpkey_csharp">
 <a href="#pgpkey_csharp" style="color: inherit; text-decoration: inherit;">Pgp<wbr>Key</a>
 </span>
@@ -224,6 +269,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The secret ID of the ACL token if `pgp_key` has not been set.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pgpkey_go">
 <a href="#pgpkey_go" style="color: inherit; text-decoration: inherit;">Pgp<wbr>Key</a>
@@ -271,6 +324,14 @@ The following output properties are available:
     <dd>{{% md %}}The secret ID of the ACL token if `pgp_key` has not been set.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="pgpkey_nodejs">
 <a href="#pgpkey_nodejs" style="color: inherit; text-decoration: inherit;">pgp<wbr>Key</a>
 </span>
@@ -316,6 +377,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The secret ID of the ACL token if `pgp_key` has not been set.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pgp_key_python">
 <a href="#pgp_key_python" style="color: inherit; text-decoration: inherit;">pgp_<wbr>key</a>

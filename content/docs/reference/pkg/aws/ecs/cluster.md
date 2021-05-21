@@ -34,6 +34,14 @@ class MyStack : Stack
     {
         var foo = new Aws.Ecs.Cluster("foo", new Aws.Ecs.ClusterArgs
         {
+            Settings = 
+            {
+                new Aws.Ecs.Inputs.ClusterSettingArgs
+                {
+                    Name = "containerInsights",
+                    Value = "enabled",
+                },
+            },
         });
     }
 
@@ -56,7 +64,14 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := ecs.NewCluster(ctx, "foo", nil)
+		_, err := ecs.NewCluster(ctx, "foo", &ecs.ClusterArgs{
+			Settings: ecs.ClusterSettingArray{
+				&ecs.ClusterSettingArgs{
+					Name:  pulumi.String("containerInsights"),
+					Value: pulumi.String("enabled"),
+				},
+			},
+		})
 		if err != nil {
 			return err
 		}
@@ -75,7 +90,10 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-foo = aws.ecs.Cluster("foo")
+foo = aws.ecs.Cluster("foo", settings=[aws.ecs.ClusterSettingArgs(
+    name="containerInsights",
+    value="enabled",
+)])
 ```
 
 
@@ -89,7 +107,12 @@ foo = aws.ecs.Cluster("foo")
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const foo = new aws.ecs.Cluster("foo", {});
+const foo = new aws.ecs.Cluster("foo", {
+    settings: [{
+        name: "containerInsights",
+        value: "enabled",
+    }],
+});
 ```
 
 
@@ -120,7 +143,8 @@ const foo = new aws.ecs.Cluster("foo", {});
             <span class="nx">default_capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterDefaultCapacityProviderStrategyArgs]]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterSettingArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ClusterArgs]</a></span> = None<span class="p">,</span>
@@ -143,25 +167,19 @@ const foo = new aws.ecs.Cluster("foo", {});
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -173,25 +191,19 @@ const foo = new aws.ecs.Cluster("foo", {});
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -203,33 +215,25 @@ const foo = new aws.ecs.Cluster("foo", {});
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -241,25 +245,19 @@ const foo = new aws.ecs.Cluster("foo", {});
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -291,7 +289,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">List&lt;Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
+    <dd>{{% md %}}Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -300,7 +298,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
+    <dd>{{% md %}}Name of the setting to manage. Valid values: `containerInsights`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_csharp">
@@ -309,7 +307,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustersetting">List&lt;Cluster<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
+    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -318,8 +316,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -340,7 +345,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">[]Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy</a></span>
     </dt>
-    <dd>{{% md %}}The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
+    <dd>{{% md %}}Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -349,7 +354,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
+    <dd>{{% md %}}Name of the setting to manage. Valid values: `containerInsights`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_go">
@@ -358,7 +363,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustersetting">[]Cluster<wbr>Setting</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
+    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -367,8 +372,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -389,7 +401,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
+    <dd>{{% md %}}Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -398,7 +410,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
+    <dd>{{% md %}}Name of the setting to manage. Valid values: `containerInsights`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_nodejs">
@@ -407,7 +419,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustersetting">Cluster<wbr>Setting<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
+    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -416,8 +428,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -438,7 +457,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">Sequence[Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
+    <dd>{{% md %}}Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -447,7 +466,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
+    <dd>{{% md %}}Name of the setting to manage. Valid values: `containerInsights`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_python">
@@ -456,7 +475,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustersetting">Sequence[Cluster<wbr>Setting<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
+    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -465,8 +484,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -485,7 +511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the cluster
+    <dd>{{% md %}}ARN that identifies the cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -506,7 +532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the cluster
+    <dd>{{% md %}}ARN that identifies the cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -527,7 +553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the cluster
+    <dd>{{% md %}}ARN that identifies the cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -548,7 +574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the cluster
+    <dd>{{% md %}}ARN that identifies the cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -581,7 +607,8 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
         <span class="nx">default_capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterDefaultCapacityProviderStrategyArgs]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterSettingArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -700,7 +727,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the cluster
+    <dd>{{% md %}}ARN that identifies the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_capacityproviders_csharp">
@@ -718,7 +745,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">List&lt;Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
+    <dd>{{% md %}}Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -727,7 +754,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
+    <dd>{{% md %}}Name of the setting to manage. Valid values: `containerInsights`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_csharp">
@@ -736,7 +763,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustersetting">List&lt;Cluster<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
+    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -745,8 +772,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -758,7 +792,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the cluster
+    <dd>{{% md %}}ARN that identifies the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_capacityproviders_go">
@@ -776,7 +810,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">[]Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy</a></span>
     </dt>
-    <dd>{{% md %}}The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
+    <dd>{{% md %}}Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -785,7 +819,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
+    <dd>{{% md %}}Name of the setting to manage. Valid values: `containerInsights`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_go">
@@ -794,7 +828,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustersetting">[]Cluster<wbr>Setting</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
+    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -803,8 +837,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -816,7 +857,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the cluster
+    <dd>{{% md %}}ARN that identifies the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_capacityproviders_nodejs">
@@ -834,7 +875,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
+    <dd>{{% md %}}Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -843,7 +884,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
+    <dd>{{% md %}}Name of the setting to manage. Valid values: `containerInsights`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_nodejs">
@@ -852,7 +893,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustersetting">Cluster<wbr>Setting<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
+    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -861,8 +902,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -874,7 +922,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the cluster
+    <dd>{{% md %}}ARN that identifies the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_capacity_providers_python">
@@ -892,7 +940,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">Sequence[Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
+    <dd>{{% md %}}Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -901,7 +949,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
+    <dd>{{% md %}}Name of the setting to manage. Valid values: `containerInsights`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_python">
@@ -910,7 +958,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustersetting">Sequence[Cluster<wbr>Setting<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
+    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -919,8 +967,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

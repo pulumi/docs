@@ -18,6 +18,7 @@ Explore the resources and functions of the azure.appservice module.
     <li><a href="certificateorder" title="CertificateOrder"><span class="symbol resource"></span>CertificateOrder</a></li>
     <li><a href="customhostnamebinding" title="CustomHostnameBinding"><span class="symbol resource"></span>CustomHostnameBinding</a></li>
     <li><a href="environment" title="Environment"><span class="symbol resource"></span>Environment</a></li>
+    <li><a href="environmentv3" title="EnvironmentV3"><span class="symbol resource"></span>EnvironmentV3</a></li>
     <li><a href="functionapp" title="FunctionApp"><span class="symbol resource"></span>FunctionApp</a></li>
     <li><a href="functionappslot" title="FunctionAppSlot"><span class="symbol resource"></span>FunctionAppSlot</a></li>
     <li><a href="hybridconnection" title="HybridConnection"><span class="symbol resource"></span>HybridConnection</a></li>
@@ -36,6 +37,7 @@ Explore the resources and functions of the azure.appservice module.
     <li><a href="getappserviceplan" title="GetAppServicePlan"><span class="symbol function"></span>GetAppServicePlan</a></li>
     <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
     <li><a href="getcertificateorder" title="GetCertificateOrder"><span class="symbol function"></span>GetCertificateOrder</a></li>
+    <li><a href="getenvironmentv3" title="GetEnvironmentV3"><span class="symbol function"></span>GetEnvironmentV3</a></li>
     <li><a href="getfunctionapp" title="GetFunctionApp"><span class="symbol function"></span>GetFunctionApp</a></li>
     <li><a href="getfunctionapphostkeys" title="GetFunctionAppHostKeys"><span class="symbol function"></span>GetFunctionAppHostKeys</a></li>
 </ul>
@@ -49,6 +51,6 @@ Explore the resources and functions of the azure.appservice module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.0.0</dd>
+	<dd>4.3.0</dd>
 </dl>
 

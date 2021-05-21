@@ -235,6 +235,7 @@ const exampleWorkspace = new azure.synapse.Workspace("exampleWorkspace", {
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
               <span class="nx">aad_admin</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAadAdminArgs]</span> = None<span class="p">,</span>
               <span class="nx">azure_devops_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAzureDevopsRepoArgs]</span> = None<span class="p">,</span>
+              <span class="nx">customer_managed_key_versionless_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">github_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceGithubRepoArgs]</span> = None<span class="p">,</span>
               <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -268,25 +269,19 @@ const exampleWorkspace = new azure.synapse.Workspace("exampleWorkspace", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -298,25 +293,19 @@ const exampleWorkspace = new azure.synapse.Workspace("exampleWorkspace", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -328,33 +317,25 @@ const exampleWorkspace = new azure.synapse.Workspace("exampleWorkspace", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -366,25 +347,19 @@ const exampleWorkspace = new azure.synapse.Workspace("exampleWorkspace", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -453,6 +428,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customermanagedkeyversionlessid_csharp">
+<a href="#customermanagedkeyversionlessid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key<wbr>Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubrepo_csharp">
@@ -576,6 +560,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customermanagedkeyversionlessid_go">
+<a href="#customermanagedkeyversionlessid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key<wbr>Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="githubrepo_go">
 <a href="#githubrepo_go" style="color: inherit; text-decoration: inherit;">Github<wbr>Repo</a>
 </span>
@@ -697,6 +690,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customermanagedkeyversionlessid_nodejs">
+<a href="#customermanagedkeyversionlessid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Managed<wbr>Key<wbr>Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="githubrepo_nodejs">
 <a href="#githubrepo_nodejs" style="color: inherit; text-decoration: inherit;">github<wbr>Repo</a>
 </span>
@@ -816,6 +818,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customer_managed_key_versionless_id_python">
+<a href="#customer_managed_key_versionless_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>managed_<wbr>key_<wbr>versionless_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="github_repo_python">
@@ -1028,6 +1039,7 @@ Get an existing Workspace resource's state with the given name, ID, and optional
         <span class="nx">aad_admin</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAadAdminArgs]</span> = None<span class="p">,</span>
         <span class="nx">azure_devops_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAzureDevopsRepoArgs]</span> = None<span class="p">,</span>
         <span class="nx">connectivity_endpoints</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">customer_managed_key_versionless_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">github_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceGithubRepoArgs]</span> = None<span class="p">,</span>
         <span class="nx">identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkspaceIdentityArgs]]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1179,6 +1191,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_customermanagedkeyversionlessid_csharp">
+<a href="#state_customermanagedkeyversionlessid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key<wbr>Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_githubrepo_csharp">
 <a href="#state_githubrepo_csharp" style="color: inherit; text-decoration: inherit;">Github<wbr>Repo</a>
 </span>
@@ -1316,6 +1337,15 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_customermanagedkeyversionlessid_go">
+<a href="#state_customermanagedkeyversionlessid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key<wbr>Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_githubrepo_go">
@@ -1457,6 +1487,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_customermanagedkeyversionlessid_nodejs">
+<a href="#state_customermanagedkeyversionlessid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Managed<wbr>Key<wbr>Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_githubrepo_nodejs">
 <a href="#state_githubrepo_nodejs" style="color: inherit; text-decoration: inherit;">github<wbr>Repo</a>
 </span>
@@ -1594,6 +1633,15 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_customer_managed_key_versionless_id_python">
+<a href="#state_customer_managed_key_versionless_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>managed_<wbr>key_<wbr>versionless_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_github_repo_python">

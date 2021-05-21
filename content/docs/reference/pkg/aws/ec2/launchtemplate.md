@@ -56,6 +56,7 @@ Provides an EC2 launch template resource. Can be used to create instances or aut
                    <span class="nx">security_group_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                    <span class="nx">tag_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateTagSpecificationArgs]]</span> = None<span class="p">,</span>
                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                   <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                    <span class="nx">update_default_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                    <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
@@ -81,25 +82,19 @@ Provides an EC2 launch template resource. Can be used to create instances or aut
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LaunchTemplateArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -111,25 +106,19 @@ Provides an EC2 launch template resource. Can be used to create instances or aut
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LaunchTemplateArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -141,33 +130,25 @@ Provides an EC2 launch template resource. Can be used to create instances or aut
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LaunchTemplateArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -179,25 +160,19 @@ Provides an EC2 launch template resource. Can be used to create instances or aut
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LaunchTemplateArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -490,7 +465,16 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the launch template.
+    <dd>{{% md %}}A map of tags to assign to the launch template. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedefaultversion_csharp">
@@ -800,7 +784,16 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the launch template.
+    <dd>{{% md %}}A map of tags to assign to the launch template. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedefaultversion_go">
@@ -1110,7 +1103,16 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the launch template.
+    <dd>{{% md %}}A map of tags to assign to the launch template. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedefaultversion_nodejs">
@@ -1420,7 +1422,16 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the launch template.
+    <dd>{{% md %}}A map of tags to assign to the launch template. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_default_version_python">
@@ -1626,6 +1637,7 @@ Get an existing LaunchTemplate resource's state with the given name, ID, and opt
         <span class="nx">security_group_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">tag_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateTagSpecificationArgs]]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">update_default_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> LaunchTemplate</code></pre></div>
@@ -2035,7 +2047,16 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the launch template.
+    <dd>{{% md %}}A map of tags to assign to the launch template. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedefaultversion_csharp">
@@ -2363,7 +2384,16 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the launch template.
+    <dd>{{% md %}}A map of tags to assign to the launch template. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedefaultversion_go">
@@ -2691,7 +2721,16 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the launch template.
+    <dd>{{% md %}}A map of tags to assign to the launch template. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedefaultversion_nodejs">
@@ -3019,7 +3058,16 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the launch template.
+    <dd>{{% md %}}A map of tags to assign to the launch template. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_default_version_python">
@@ -4725,6 +4773,15 @@ Otherwise, specify the default value of 2.
     <dd>{{% md %}}The integer index of the network interface attachment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="interfacetype_csharp">
+<a href="#interfacetype_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of network interface. To create an Elastic Fabric Adapter (EFA), specify `efa`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipv4addresscount_csharp">
 <a href="#ipv4addresscount_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address<wbr>Count</a>
 </span>
@@ -4844,6 +4901,15 @@ Otherwise, specify the default value of 2.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The integer index of the network interface attachment.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interfacetype_go">
+<a href="#interfacetype_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of network interface. To create an Elastic Fabric Adapter (EFA), specify `efa`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4addresscount_go">
@@ -4967,6 +5033,15 @@ Otherwise, specify the default value of 2.
     <dd>{{% md %}}The integer index of the network interface attachment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="interfacetype_nodejs">
+<a href="#interfacetype_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of network interface. To create an Elastic Fabric Adapter (EFA), specify `efa`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipv4addresscount_nodejs">
 <a href="#ipv4addresscount_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address<wbr>Count</a>
 </span>
@@ -5088,6 +5163,15 @@ Otherwise, specify the default value of 2.
     <dd>{{% md %}}The integer index of the network interface attachment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="interface_type_python">
+<a href="#interface_type_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of network interface. To create an Elastic Fabric Adapter (EFA), specify `efa`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipv4_address_count_python">
 <a href="#ipv4_address_count_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address_<wbr>count</a>
 </span>
@@ -5202,6 +5286,15 @@ Otherwise, specify the default value of 2.
     <dd>{{% md %}}The ID of the Dedicated Host for the instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hostresourcegrouparn_csharp">
+<a href="#hostresourcegrouparn_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Resource<wbr>Group<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Host Resource Group in which to launch instances.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="partitionnumber_csharp">
 <a href="#partitionnumber_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Number</a>
 </span>
@@ -5267,6 +5360,15 @@ Otherwise, specify the default value of 2.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Dedicated Host for the instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hostresourcegrouparn_go">
+<a href="#hostresourcegrouparn_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Resource<wbr>Group<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Host Resource Group in which to launch instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitionnumber_go">
@@ -5336,6 +5438,15 @@ Otherwise, specify the default value of 2.
     <dd>{{% md %}}The ID of the Dedicated Host for the instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hostresourcegrouparn_nodejs">
+<a href="#hostresourcegrouparn_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Resource<wbr>Group<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Host Resource Group in which to launch instances.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="partitionnumber_nodejs">
 <a href="#partitionnumber_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Number</a>
 </span>
@@ -5401,6 +5512,15 @@ Otherwise, specify the default value of 2.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Dedicated Host for the instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="host_resource_group_arn_python">
+<a href="#host_resource_group_arn_python" style="color: inherit; text-decoration: inherit;">host_<wbr>resource_<wbr>group_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Host Resource Group in which to launch instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partition_number_python">

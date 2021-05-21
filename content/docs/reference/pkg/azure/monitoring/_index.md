@@ -11,6 +11,7 @@ Explore the resources and functions of the azure.monitoring module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="aaddiagnosticsetting" title="AadDiagnosticSetting"><span class="symbol resource"></span>AadDiagnosticSetting</a></li>
     <li><a href="actiongroup" title="ActionGroup"><span class="symbol resource"></span>ActionGroup</a></li>
     <li><a href="actionruleactiongroup" title="ActionRuleActionGroup"><span class="symbol resource"></span>ActionRuleActionGroup</a></li>
     <li><a href="actionrulesuppression" title="ActionRuleSuppression"><span class="symbol resource"></span>ActionRuleSuppression</a></li>
@@ -42,6 +43,6 @@ Explore the resources and functions of the azure.monitoring module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.0.0</dd>
+	<dd>4.3.0</dd>
 </dl>
 

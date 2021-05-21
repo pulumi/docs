@@ -36,11 +36,11 @@ class MyStack : Stack
         var step = new AzureNative.DeploymentManager.Step("step", new AzureNative.DeploymentManager.StepArgs
         {
             Location = "centralus",
-            Properties = 
+            Properties = new AzureNative.DeploymentManager.Inputs.HealthCheckStepPropertiesArgs
             {
-                { "attributes", 
+                Attributes = new AzureNative.DeploymentManager.Inputs.RestHealthCheckStepAttributesArgs
                 {
-                    { "healthChecks", 
+                    HealthChecks = 
                     {
                         new AzureNative.DeploymentManager.Inputs.RestHealthCheckArgs
                         {
@@ -109,13 +109,13 @@ class MyStack : Stack
                                 },
                             },
                         },
-                    } },
-                    { "healthyStateDuration", "PT2H" },
-                    { "maxElasticDuration", "PT30M" },
-                    { "type", "REST" },
-                    { "waitDuration", "PT15M" },
-                } },
-                { "stepType", "HealthCheck" },
+                    },
+                    HealthyStateDuration = "PT2H",
+                    MaxElasticDuration = "PT30M",
+                    Type = "REST",
+                    WaitDuration = "PT15M",
+                },
+                StepType = "HealthCheck",
             },
             ResourceGroupName = "myResourceGroup",
             StepName = "healthCheckStep",
@@ -147,9 +147,9 @@ import pulumi_azure_native as azure_native
 
 step = azure_native.deploymentmanager.Step("step",
     location="centralus",
-    properties={
-        "attributes": {
-            "healthChecks": [
+    properties=azure_native.deploymentmanager.HealthCheckStepPropertiesArgs(
+        attributes=azure_native.deploymentmanager.RestHealthCheckStepAttributesArgs(
+            health_checks=[
                 azure_native.deploymentmanager.RestHealthCheckArgs(
                     name="appHealth",
                     request=azure_native.deploymentmanager.RestRequestArgs(
@@ -200,13 +200,13 @@ step = azure_native.deploymentmanager.Step("step",
                     ),
                 ),
             ],
-            "healthyStateDuration": "PT2H",
-            "maxElasticDuration": "PT30M",
-            "type": "REST",
-            "waitDuration": "PT15M",
-        },
-        "stepType": "HealthCheck",
-    },
+            healthy_state_duration="PT2H",
+            max_elastic_duration="PT30M",
+            type="REST",
+            wait_duration="PT15M",
+        ),
+        step_type="HealthCheck",
+    ),
     resource_group_name="myResourceGroup",
     step_name="healthCheckStep",
     tags={})
@@ -315,13 +315,13 @@ class MyStack : Stack
         var step = new AzureNative.DeploymentManager.Step("step", new AzureNative.DeploymentManager.StepArgs
         {
             Location = "centralus",
-            Properties = 
+            Properties = new AzureNative.DeploymentManager.Inputs.WaitStepPropertiesArgs
             {
-                { "attributes", 
+                Attributes = new AzureNative.DeploymentManager.Inputs.WaitStepAttributesArgs
                 {
-                    { "duration", "PT20M" },
-                } },
-                { "stepType", "Wait" },
+                    Duration = "PT20M",
+                },
+                StepType = "Wait",
             },
             ResourceGroupName = "myResourceGroup",
             StepName = "waitStep",
@@ -339,7 +339,38 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	deploymentmanager "github.com/pulumi/pulumi-azure-native/sdk/go/azure/deploymentmanager"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := deploymentmanager.NewStep(ctx, "step", &deploymentmanager.StepArgs{
+			Location: pulumi.String("centralus"),
+			Properties: deploymentmanager.WaitStepProperties{
+				Attributes: deploymentmanager.WaitStepAttributes{
+					Duration: "PT20M",
+				},
+				StepType: "Wait",
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StepName:          pulumi.String("waitStep"),
+			Tags:              nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -353,12 +384,12 @@ import pulumi_azure_native as azure_native
 
 step = azure_native.deploymentmanager.Step("step",
     location="centralus",
-    properties={
-        "attributes": {
-            "duration": "PT20M",
-        },
-        "stepType": "Wait",
-    },
+    properties=azure_native.deploymentmanager.WaitStepPropertiesArgs(
+        attributes=azure_native.deploymentmanager.WaitStepAttributesArgs(
+            duration="PT20M",
+        ),
+        step_type="Wait",
+    ),
     resource_group_name="myResourceGroup",
     step_name="waitStep",
     tags={})
@@ -442,25 +473,19 @@ const step = new azure_native.deploymentmanager.Step("step", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StepArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -472,25 +497,19 @@ const step = new azure_native.deploymentmanager.Step("step", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StepArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -502,33 +521,25 @@ const step = new azure_native.deploymentmanager.Step("step", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StepArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -540,25 +551,19 @@ const step = new azure_native.deploymentmanager.Step("step", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StepArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

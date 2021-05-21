@@ -20,6 +20,7 @@ A Pulumi package for creating and managing consul resources.
     <li><a href="aclrole" title="AclRole"><span class="symbol resource"></span>AclRole</a></li>
     <li><a href="acltoken" title="AclToken"><span class="symbol resource"></span>AclToken</a></li>
     <li><a href="acltokenpolicyattachment" title="AclTokenPolicyAttachment"><span class="symbol resource"></span>AclTokenPolicyAttachment</a></li>
+    <li><a href="acltokenroleattachment" title="AclTokenRoleAttachment"><span class="symbol resource"></span>AclTokenRoleAttachment</a></li>
     <li><a href="agentservice" title="AgentService"><span class="symbol resource"></span>AgentService</a></li>
     <li><a href="autopilotconfig" title="AutopilotConfig"><span class="symbol resource"></span>AutopilotConfig</a></li>
     <li><a href="catalogentry" title="CatalogEntry"><span class="symbol resource"></span>CatalogEntry</a></li>
@@ -69,6 +70,6 @@ A Pulumi package for creating and managing consul resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.1.0</dd>
 </dl>
 

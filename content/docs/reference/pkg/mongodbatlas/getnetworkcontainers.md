@@ -524,6 +524,15 @@ The following output properties are available:
     <dd>{{% md %}}The Atlas AWS region name for where this container exists.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="regions_csharp">
+<a href="#regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Atlas GCP regions where the container resides.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="vnetname_csharp">
 <a href="#vnetname_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Name</a>
 </span>
@@ -625,6 +634,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Atlas AWS region name for where this container exists.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="regions_go">
+<a href="#regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Atlas GCP regions where the container resides.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vnetname_go">
@@ -730,6 +748,15 @@ The following output properties are available:
     <dd>{{% md %}}The Atlas AWS region name for where this container exists.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="regions_nodejs">
+<a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Atlas GCP regions where the container resides.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="vnetname_nodejs">
 <a href="#vnetname_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Name</a>
 </span>
@@ -831,6 +858,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Atlas AWS region name for where this container exists.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="regions_python">
+<a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Atlas GCP regions where the container resides.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vnet_name_python">

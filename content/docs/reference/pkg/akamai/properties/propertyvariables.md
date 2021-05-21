@@ -188,7 +188,7 @@ The PropertyVariables resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertyvariablesvariable">List&lt;Property<wbr>Variables<wbr>Variable<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}resource &#34;akamai_property_variables&#34; is no longer supported - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;akamai_property_variables&#34; has been deprecated.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -200,7 +200,7 @@ The PropertyVariables resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertyvariablesvariable">[]Property<wbr>Variables<wbr>Variable</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}resource &#34;akamai_property_variables&#34; is no longer supported - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;akamai_property_variables&#34; has been deprecated.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -212,7 +212,7 @@ The PropertyVariables resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertyvariablesvariable">Property<wbr>Variables<wbr>Variable<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}resource &#34;akamai_property_variables&#34; is no longer supported - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;akamai_property_variables&#34; has been deprecated.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -224,7 +224,7 @@ The PropertyVariables resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertyvariablesvariable">Sequence[Property<wbr>Variables<wbr>Variable<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}resource &#34;akamai_property_variables&#34; is no longer supported - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;akamai_property_variables&#34; has been deprecated.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -463,7 +463,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertyvariablesvariable">List&lt;Property<wbr>Variables<wbr>Variable<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}resource &#34;akamai_property_variables&#34; is no longer supported - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;akamai_property_variables&#34; has been deprecated.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -484,7 +484,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertyvariablesvariable">[]Property<wbr>Variables<wbr>Variable</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}resource &#34;akamai_property_variables&#34; is no longer supported - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;akamai_property_variables&#34; has been deprecated.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -505,7 +505,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertyvariablesvariable">Property<wbr>Variables<wbr>Variable<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}resource &#34;akamai_property_variables&#34; is no longer supported - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;akamai_property_variables&#34; has been deprecated.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -526,7 +526,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertyvariablesvariable">Sequence[Property<wbr>Variables<wbr>Variable<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}resource &#34;akamai_property_variables&#34; is no longer supported - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;akamai_property_variables&#34; has been deprecated.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 

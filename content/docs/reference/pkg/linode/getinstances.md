@@ -1326,6 +1326,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="interfaces_csharp">
+<a href="#interfaces_csharp" style="color: inherit; text-decoration: inherit;">Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancesinstanceconfiginterface">List&lt;Get<wbr>Instances<wbr>Instance<wbr>Config<wbr>Interface&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="kernel_csharp">
 <a href="#kernel_csharp" style="color: inherit; text-decoration: inherit;">Kernel</a>
 </span>
@@ -1399,6 +1407,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancesinstanceconfighelper">[]Get<wbr>Instances<wbr>Instance<wbr>Config<wbr>Helper</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="interfaces_go">
+<a href="#interfaces_go" style="color: inherit; text-decoration: inherit;">Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancesinstanceconfiginterface">[]Get<wbr>Instances<wbr>Instance<wbr>Config<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1478,6 +1494,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="interfaces_nodejs">
+<a href="#interfaces_nodejs" style="color: inherit; text-decoration: inherit;">interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancesinstanceconfiginterface">Get<wbr>Instances<wbr>Instance<wbr>Config<wbr>Interface[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="kernel_nodejs">
 <a href="#kernel_nodejs" style="color: inherit; text-decoration: inherit;">kernel</a>
 </span>
@@ -1551,6 +1575,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancesinstanceconfighelper">Sequence[Get<wbr>Instances<wbr>Instance<wbr>Config<wbr>Helper]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="interfaces_python">
+<a href="#interfaces_python" style="color: inherit; text-decoration: inherit;">interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancesinstanceconfiginterface">Sequence[Get<wbr>Instances<wbr>Instance<wbr>Config<wbr>Interface]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2983,6 +3015,122 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getinstancesinstanceconfiginterface">Get<wbr>Instances<wbr>Instance<wbr>Config<wbr>Interface</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ipamaddress_csharp">
+<a href="#ipamaddress_csharp" style="color: inherit; text-decoration: inherit;">Ipam<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purpose_csharp">
+<a href="#purpose_csharp" style="color: inherit; text-decoration: inherit;">Purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ipamaddress_go">
+<a href="#ipamaddress_go" style="color: inherit; text-decoration: inherit;">Ipam<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purpose_go">
+<a href="#purpose_go" style="color: inherit; text-decoration: inherit;">Purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ipamaddress_nodejs">
+<a href="#ipamaddress_nodejs" style="color: inherit; text-decoration: inherit;">ipam<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purpose_nodejs">
+<a href="#purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ipam_address_python">
+<a href="#ipam_address_python" style="color: inherit; text-decoration: inherit;">ipam_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purpose_python">
+<a href="#purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

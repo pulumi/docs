@@ -25,7 +25,7 @@ otherwise, the policy may be destroyed too soon and the compute environment will
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-
+### EC2 Type
 
 
 {{< example csharp >}}
@@ -47,7 +47,7 @@ class MyStack : Stack
 	    ""Action"": ""sts:AssumeRole"",
 	    ""Effect"": ""Allow"",
 	    ""Principal"": {
-		""Service"": ""ec2.amazonaws.com""
+	        ""Service"": ""ec2.amazonaws.com""
 	    }
 	}
     ]
@@ -167,7 +167,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		ecsInstanceRoleRole, err := iam.NewRole(ctx, "ecsInstanceRoleRole", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "	{\n", "	    \"Action\": \"sts:AssumeRole\",\n", "	    \"Effect\": \"Allow\",\n", "	    \"Principal\": {\n", "		\"Service\": \"ec2.amazonaws.com\"\n", "	    }\n", "	}\n", "    ]\n", "}\n")),
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "	{\n", "	    \"Action\": \"sts:AssumeRole\",\n", "	    \"Effect\": \"Allow\",\n", "	    \"Principal\": {\n", "	        \"Service\": \"ec2.amazonaws.com\"\n", "	    }\n", "	}\n", "    ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -274,7 +274,7 @@ ecs_instance_role_role = aws.iam.Role("ecsInstanceRoleRole", assume_role_policy=
 	    "Action": "sts:AssumeRole",
 	    "Effect": "Allow",
 	    "Principal": {
-		"Service": "ec2.amazonaws.com"
+	        "Service": "ec2.amazonaws.com"
 	    }
 	}
     ]
@@ -346,7 +346,7 @@ const ecsInstanceRoleRole = new aws.iam.Role("ecsInstanceRoleRole", {assumeRoleP
 	    "Action": "sts:AssumeRole",
 	    "Effect": "Allow",
 	    "Principal": {
-		"Service": "ec2.amazonaws.com"
+	        "Service": "ec2.amazonaws.com"
 	    }
 	}
     ]
@@ -412,6 +412,111 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sampleCompute
 
 
 
+### Fargate Type
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sample = new Aws.Batch.ComputeEnvironment("sample", new Aws.Batch.ComputeEnvironmentArgs
+        {
+            ComputeEnvironmentName = "sample",
+            ComputeResources = new Aws.Batch.Inputs.ComputeEnvironmentComputeResourcesArgs
+            {
+                MaxVcpus = 16,
+                SecurityGroupIds = 
+                {
+                    aws_security_group.Sample.Id,
+                },
+                Subnets = 
+                {
+                    aws_subnet.Sample.Id,
+                },
+                Type = "FARGATE",
+            },
+            ServiceRole = aws_iam_role.Aws_batch_service_role.Arn,
+            Type = "MANAGED",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                aws_iam_role_policy_attachment.Aws_batch_service_role,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+sample = aws.batch.ComputeEnvironment("sample",
+    compute_environment_name="sample",
+    compute_resources=aws.batch.ComputeEnvironmentComputeResourcesArgs(
+        max_vcpus=16,
+        security_group_ids=[aws_security_group["sample"]["id"]],
+        subnets=[aws_subnet["sample"]["id"]],
+        type="FARGATE",
+    ),
+    service_role=aws_iam_role["aws_batch_service_role"]["arn"],
+    type="MANAGED",
+    opts=pulumi.ResourceOptions(depends_on=[aws_iam_role_policy_attachment["aws_batch_service_role"]]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const sample = new aws.batch.ComputeEnvironment("sample", {
+    computeEnvironmentName: "sample",
+    computeResources: {
+        maxVcpus: 16,
+        securityGroupIds: [aws_security_group.sample.id],
+        subnets: [aws_subnet.sample.id],
+        type: "FARGATE",
+    },
+    serviceRole: aws_iam_role.aws_batch_service_role.arn,
+    type: "MANAGED",
+}, {
+    dependsOn: [aws_iam_role_policy_attachment.aws_batch_service_role],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -436,6 +541,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sampleCompute
                        <span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                       <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ComputeEnvironment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -459,25 +565,19 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sampleCompute
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ComputeEnvironmentArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -489,25 +589,19 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sampleCompute
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ComputeEnvironmentArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -519,33 +613,25 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sampleCompute
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ComputeEnvironmentArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -557,25 +643,19 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sampleCompute
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ComputeEnvironmentArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -592,22 +672,13 @@ The ComputeEnvironment resource accepts the following [input]({{< relref "/docs/
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="servicerole_csharp">
-<a href="#servicerole_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Role</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
+    <dd>{{% md %}}The type of compute environment. Valid items are `EC2`, `SPOT`, `FARGATE` or `FARGATE_SPOT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computeenvironmentname_csharp">
@@ -637,6 +708,15 @@ The ComputeEnvironment resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="servicerole_csharp">
+<a href="#servicerole_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
@@ -652,21 +732,21 @@ The ComputeEnvironment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment.
+    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="servicerole_go">
-<a href="#servicerole_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Role</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -674,7 +754,7 @@ The ComputeEnvironment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
+    <dd>{{% md %}}The type of compute environment. Valid items are `EC2`, `SPOT`, `FARGATE` or `FARGATE_SPOT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computeenvironmentname_go">
@@ -704,6 +784,15 @@ The ComputeEnvironment resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="servicerole_go">
+<a href="#servicerole_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
@@ -719,21 +808,21 @@ The ComputeEnvironment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment.
+    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="servicerole_nodejs">
-<a href="#servicerole_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -741,7 +830,7 @@ The ComputeEnvironment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
+    <dd>{{% md %}}The type of compute environment. Valid items are `EC2`, `SPOT`, `FARGATE` or `FARGATE_SPOT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computeenvironmentname_nodejs">
@@ -771,6 +860,15 @@ The ComputeEnvironment resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="servicerole_nodejs">
+<a href="#servicerole_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
@@ -786,21 +884,21 @@ The ComputeEnvironment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment.
+    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="service_role_python">
-<a href="#service_role_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -808,7 +906,7 @@ The ComputeEnvironment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
+    <dd>{{% md %}}The type of compute environment. Valid items are `EC2`, `SPOT`, `FARGATE` or `FARGATE_SPOT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_environment_name_python">
@@ -838,6 +936,15 @@ The ComputeEnvironment resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="service_role_python">
+<a href="#service_role_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
@@ -853,7 +960,16 @@ The ComputeEnvironment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment.
+    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1082,6 +1198,7 @@ Get an existing ComputeEnvironment resource's state with the given name, ID, and
         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">status_reason</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ComputeEnvironment</code></pre></div>
 {{% /choosable %}}
 
@@ -1282,7 +1399,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment.
+    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
@@ -1291,7 +1417,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
+    <dd>{{% md %}}The type of compute environment. Valid items are `EC2`, `SPOT`, `FARGATE` or `FARGATE_SPOT`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1385,7 +1511,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment.
+    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
@@ -1394,7 +1529,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
+    <dd>{{% md %}}The type of compute environment. Valid items are `EC2`, `SPOT`, `FARGATE` or `FARGATE_SPOT`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1488,7 +1623,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment.
+    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
@@ -1497,7 +1641,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
+    <dd>{{% md %}}The type of compute environment. Valid items are `EC2`, `SPOT`, `FARGATE` or `FARGATE_SPOT`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1591,7 +1735,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment.
+    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
@@ -1600,7 +1753,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
+    <dd>{{% md %}}The type of compute environment. Valid items are `EC2`, `SPOT`, `FARGATE` or `FARGATE_SPOT`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1618,24 +1771,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="instancerole_csharp">
-<a href="#instancerole_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Role</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon ECS instance role applied to Amazon EC2 instances in a compute environment.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="instancetypes_csharp">
-<a href="#instancetypes_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of instance types that may be launched.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="maxvcpus_csharp">
 <a href="#maxvcpus_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Vcpus</a>
 </span>
@@ -1643,15 +1778,6 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of EC2 vCPUs that an environment can reach.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="minvcpus_csharp">
-<a href="#minvcpus_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Vcpus</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The minimum number of EC2 vCPUs that an environment should maintain.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroupids_csharp">
@@ -1678,7 +1804,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
+    <dd>{{% md %}}The type of compute environment. Valid items are `EC2`, `SPOT`, `FARGATE` or `FARGATE_SPOT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocationstrategy_csharp">
@@ -1687,7 +1813,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are `BEST_FIT_PROGRESSIVE`, `SPOT_CAPACITY_OPTIMIZED` or `BEST_FIT`. Defaults to `BEST_FIT`. See [AWS docs](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html) for details.
+    <dd>{{% md %}}The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are `BEST_FIT_PROGRESSIVE`, `SPOT_CAPACITY_OPTIMIZED` or `BEST_FIT`. Defaults to `BEST_FIT`. See [AWS docs](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html) for details. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bidpercentage_csharp">
@@ -1696,7 +1822,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer of minimum percentage that a Spot Instance price must be when compared with the On-Demand price for that instance type before instances are launched. For example, if your bid percentage is 20% (`20`), then the Spot price must be below 20% of the current On-Demand price for that EC2 instance. This parameter is required for SPOT compute environments.
+    <dd>{{% md %}}Integer of minimum percentage that a Spot Instance price must be when compared with the On-Demand price for that instance type before instances are launched. For example, if your bid percentage is 20% (`20`), then the Spot price must be below 20% of the current On-Demand price for that EC2 instance. This parameter is required for SPOT compute environments. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredvcpus_csharp">
@@ -1705,7 +1831,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The desired number of EC2 vCPUS in the compute environment.
+    <dd>{{% md %}}The desired number of EC2 vCPUS in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ec2keypair_csharp">
@@ -1714,7 +1840,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EC2 key pair that is used for instances launched in the compute environment.
+    <dd>{{% md %}}The EC2 key pair that is used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_csharp">
@@ -1723,7 +1849,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment.
+    <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancerole_csharp">
+<a href="#instancerole_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon ECS instance role applied to Amazon EC2 instances in a compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancetypes_csharp">
+<a href="#instancetypes_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of instance types that may be launched. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launchtemplate_csharp">
@@ -1732,7 +1876,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeenvironmentcomputeresourceslaunchtemplate">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The launch template to use for your compute resources. See details below.
+    <dd>{{% md %}}The launch template to use for your compute resources. See details below. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minvcpus_csharp">
+<a href="#minvcpus_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Vcpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of EC2 vCPUs that an environment should maintain. For `EC2` or `SPOT` compute environments, if the parameter is not explicitly defined, a `0` default value will be set. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotiamfleetrole_csharp">
@@ -1741,7 +1894,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a SPOT compute environment. This parameter is required for SPOT compute environments.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a SPOT compute environment. This parameter is required for SPOT compute environments. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -1750,30 +1903,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment.
+    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="instancerole_go">
-<a href="#instancerole_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Role</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon ECS instance role applied to Amazon EC2 instances in a compute environment.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="instancetypes_go">
-<a href="#instancetypes_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of instance types that may be launched.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxvcpus_go">
 <a href="#maxvcpus_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Vcpus</a>
@@ -1782,15 +1917,6 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of EC2 vCPUs that an environment can reach.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="minvcpus_go">
-<a href="#minvcpus_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Vcpus</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The minimum number of EC2 vCPUs that an environment should maintain.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroupids_go">
@@ -1817,7 +1943,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
+    <dd>{{% md %}}The type of compute environment. Valid items are `EC2`, `SPOT`, `FARGATE` or `FARGATE_SPOT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocationstrategy_go">
@@ -1826,7 +1952,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are `BEST_FIT_PROGRESSIVE`, `SPOT_CAPACITY_OPTIMIZED` or `BEST_FIT`. Defaults to `BEST_FIT`. See [AWS docs](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html) for details.
+    <dd>{{% md %}}The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are `BEST_FIT_PROGRESSIVE`, `SPOT_CAPACITY_OPTIMIZED` or `BEST_FIT`. Defaults to `BEST_FIT`. See [AWS docs](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html) for details. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bidpercentage_go">
@@ -1835,7 +1961,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer of minimum percentage that a Spot Instance price must be when compared with the On-Demand price for that instance type before instances are launched. For example, if your bid percentage is 20% (`20`), then the Spot price must be below 20% of the current On-Demand price for that EC2 instance. This parameter is required for SPOT compute environments.
+    <dd>{{% md %}}Integer of minimum percentage that a Spot Instance price must be when compared with the On-Demand price for that instance type before instances are launched. For example, if your bid percentage is 20% (`20`), then the Spot price must be below 20% of the current On-Demand price for that EC2 instance. This parameter is required for SPOT compute environments. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredvcpus_go">
@@ -1844,7 +1970,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The desired number of EC2 vCPUS in the compute environment.
+    <dd>{{% md %}}The desired number of EC2 vCPUS in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ec2keypair_go">
@@ -1853,7 +1979,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EC2 key pair that is used for instances launched in the compute environment.
+    <dd>{{% md %}}The EC2 key pair that is used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_go">
@@ -1862,7 +1988,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment.
+    <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancerole_go">
+<a href="#instancerole_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon ECS instance role applied to Amazon EC2 instances in a compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancetypes_go">
+<a href="#instancetypes_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of instance types that may be launched. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launchtemplate_go">
@@ -1871,7 +2015,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeenvironmentcomputeresourceslaunchtemplate">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template</a></span>
     </dt>
-    <dd>{{% md %}}The launch template to use for your compute resources. See details below.
+    <dd>{{% md %}}The launch template to use for your compute resources. See details below. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minvcpus_go">
+<a href="#minvcpus_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Vcpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of EC2 vCPUs that an environment should maintain. For `EC2` or `SPOT` compute environments, if the parameter is not explicitly defined, a `0` default value will be set. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotiamfleetrole_go">
@@ -1880,7 +2033,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a SPOT compute environment. This parameter is required for SPOT compute environments.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a SPOT compute environment. This parameter is required for SPOT compute environments. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -1889,30 +2042,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment.
+    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="instancerole_nodejs">
-<a href="#instancerole_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Role</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon ECS instance role applied to Amazon EC2 instances in a compute environment.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="instancetypes_nodejs">
-<a href="#instancetypes_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of instance types that may be launched.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxvcpus_nodejs">
 <a href="#maxvcpus_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Vcpus</a>
@@ -1921,15 +2056,6 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of EC2 vCPUs that an environment can reach.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="minvcpus_nodejs">
-<a href="#minvcpus_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Vcpus</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The minimum number of EC2 vCPUs that an environment should maintain.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroupids_nodejs">
@@ -1956,7 +2082,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
+    <dd>{{% md %}}The type of compute environment. Valid items are `EC2`, `SPOT`, `FARGATE` or `FARGATE_SPOT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocationstrategy_nodejs">
@@ -1965,7 +2091,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are `BEST_FIT_PROGRESSIVE`, `SPOT_CAPACITY_OPTIMIZED` or `BEST_FIT`. Defaults to `BEST_FIT`. See [AWS docs](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html) for details.
+    <dd>{{% md %}}The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are `BEST_FIT_PROGRESSIVE`, `SPOT_CAPACITY_OPTIMIZED` or `BEST_FIT`. Defaults to `BEST_FIT`. See [AWS docs](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html) for details. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bidpercentage_nodejs">
@@ -1974,7 +2100,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Integer of minimum percentage that a Spot Instance price must be when compared with the On-Demand price for that instance type before instances are launched. For example, if your bid percentage is 20% (`20`), then the Spot price must be below 20% of the current On-Demand price for that EC2 instance. This parameter is required for SPOT compute environments.
+    <dd>{{% md %}}Integer of minimum percentage that a Spot Instance price must be when compared with the On-Demand price for that instance type before instances are launched. For example, if your bid percentage is 20% (`20`), then the Spot price must be below 20% of the current On-Demand price for that EC2 instance. This parameter is required for SPOT compute environments. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredvcpus_nodejs">
@@ -1983,7 +2109,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The desired number of EC2 vCPUS in the compute environment.
+    <dd>{{% md %}}The desired number of EC2 vCPUS in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ec2keypair_nodejs">
@@ -1992,7 +2118,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EC2 key pair that is used for instances launched in the compute environment.
+    <dd>{{% md %}}The EC2 key pair that is used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_nodejs">
@@ -2001,7 +2127,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment.
+    <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancerole_nodejs">
+<a href="#instancerole_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon ECS instance role applied to Amazon EC2 instances in a compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancetypes_nodejs">
+<a href="#instancetypes_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of instance types that may be launched. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launchtemplate_nodejs">
@@ -2010,7 +2154,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeenvironmentcomputeresourceslaunchtemplate">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The launch template to use for your compute resources. See details below.
+    <dd>{{% md %}}The launch template to use for your compute resources. See details below. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minvcpus_nodejs">
+<a href="#minvcpus_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Vcpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of EC2 vCPUs that an environment should maintain. For `EC2` or `SPOT` compute environments, if the parameter is not explicitly defined, a `0` default value will be set. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotiamfleetrole_nodejs">
@@ -2019,7 +2172,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a SPOT compute environment. This parameter is required for SPOT compute environments.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a SPOT compute environment. This parameter is required for SPOT compute environments. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -2028,30 +2181,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment.
+    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="instance_role_python">
-<a href="#instance_role_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>role</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Amazon ECS instance role applied to Amazon EC2 instances in a compute environment.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="instance_types_python">
-<a href="#instance_types_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of instance types that may be launched.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_vcpus_python">
 <a href="#max_vcpus_python" style="color: inherit; text-decoration: inherit;">max_<wbr>vcpus</a>
@@ -2060,15 +2195,6 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of EC2 vCPUs that an environment can reach.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="min_vcpus_python">
-<a href="#min_vcpus_python" style="color: inherit; text-decoration: inherit;">min_<wbr>vcpus</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The minimum number of EC2 vCPUs that an environment should maintain.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="security_group_ids_python">
@@ -2095,7 +2221,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
+    <dd>{{% md %}}The type of compute environment. Valid items are `EC2`, `SPOT`, `FARGATE` or `FARGATE_SPOT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocation_strategy_python">
@@ -2104,7 +2230,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are `BEST_FIT_PROGRESSIVE`, `SPOT_CAPACITY_OPTIMIZED` or `BEST_FIT`. Defaults to `BEST_FIT`. See [AWS docs](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html) for details.
+    <dd>{{% md %}}The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are `BEST_FIT_PROGRESSIVE`, `SPOT_CAPACITY_OPTIMIZED` or `BEST_FIT`. Defaults to `BEST_FIT`. See [AWS docs](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html) for details. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bid_percentage_python">
@@ -2113,7 +2239,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer of minimum percentage that a Spot Instance price must be when compared with the On-Demand price for that instance type before instances are launched. For example, if your bid percentage is 20% (`20`), then the Spot price must be below 20% of the current On-Demand price for that EC2 instance. This parameter is required for SPOT compute environments.
+    <dd>{{% md %}}Integer of minimum percentage that a Spot Instance price must be when compared with the On-Demand price for that instance type before instances are launched. For example, if your bid percentage is 20% (`20`), then the Spot price must be below 20% of the current On-Demand price for that EC2 instance. This parameter is required for SPOT compute environments. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desired_vcpus_python">
@@ -2122,7 +2248,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The desired number of EC2 vCPUS in the compute environment.
+    <dd>{{% md %}}The desired number of EC2 vCPUS in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ec2_key_pair_python">
@@ -2131,7 +2257,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The EC2 key pair that is used for instances launched in the compute environment.
+    <dd>{{% md %}}The EC2 key pair that is used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_id_python">
@@ -2140,7 +2266,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment.
+    <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instance_role_python">
+<a href="#instance_role_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon ECS instance role applied to Amazon EC2 instances in a compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instance_types_python">
+<a href="#instance_types_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of instance types that may be launched. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launch_template_python">
@@ -2149,7 +2293,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeenvironmentcomputeresourceslaunchtemplate">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The launch template to use for your compute resources. See details below.
+    <dd>{{% md %}}The launch template to use for your compute resources. See details below. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_vcpus_python">
+<a href="#min_vcpus_python" style="color: inherit; text-decoration: inherit;">min_<wbr>vcpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of EC2 vCPUs that an environment should maintain. For `EC2` or `SPOT` compute environments, if the parameter is not explicitly defined, a `0` default value will be set. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spot_iam_fleet_role_python">
@@ -2158,7 +2311,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a SPOT compute environment. This parameter is required for SPOT compute environments.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a SPOT compute environment. This parameter is required for SPOT compute environments. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -2167,7 +2320,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment.
+    <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

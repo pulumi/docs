@@ -18,6 +18,7 @@ Explore the resources and functions of the azure-native.dbforpostgresql module.
     <li><a href="server" title="Server"><span class="symbol resource"></span>Server</a></li>
     <li><a href="serveradministrator" title="ServerAdministrator"><span class="symbol resource"></span>ServerAdministrator</a></li>
     <li><a href="serverkey" title="ServerKey"><span class="symbol resource"></span>ServerKey</a></li>
+    <li><a href="serversecurityalertpolicy" title="ServerSecurityAlertPolicy"><span class="symbol resource"></span>ServerSecurityAlertPolicy</a></li>
     <li><a href="virtualnetworkrule" title="VirtualNetworkRule"><span class="symbol resource"></span>VirtualNetworkRule</a></li>
 </ul>
 
@@ -30,6 +31,7 @@ Explore the resources and functions of the azure-native.dbforpostgresql module.
     <li><a href="getserver" title="GetServer"><span class="symbol function"></span>GetServer</a></li>
     <li><a href="getserveradministrator" title="GetServerAdministrator"><span class="symbol function"></span>GetServerAdministrator</a></li>
     <li><a href="getserverkey" title="GetServerKey"><span class="symbol function"></span>GetServerKey</a></li>
+    <li><a href="getserversecurityalertpolicy" title="GetServerSecurityAlertPolicy"><span class="symbol function"></span>GetServerSecurityAlertPolicy</a></li>
     <li><a href="getvirtualnetworkrule" title="GetVirtualNetworkRule"><span class="symbol function"></span>GetVirtualNetworkRule</a></li>
 </ul>
 
@@ -40,6 +42,6 @@ Explore the resources and functions of the azure-native.dbforpostgresql module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.1.0</dd>
+	<dd>1.7.0</dd>
 </dl>
 

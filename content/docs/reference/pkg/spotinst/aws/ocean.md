@@ -234,11 +234,11 @@ const example = new spotinst.aws.Ocean("example", {
     desiredCapacity: 2,
     drainingTimeout: 120,
     ebsOptimized: true,
-    // --- STRATEGY --------------------
+    // region STRATEGY
     fallbackToOndemand: true,
     gracePeriod: 600,
     iamInstanceProfile: "iam-profile",
-    // --- LAUNCH CONFIGURATION --------------
+    // region LAUNCH CONFIGURATION
     imageId: "ami-123456",
     keyName: "fake key",
     loadBalancers: [
@@ -497,7 +497,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
+    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public IP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_csharp">
@@ -515,7 +515,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Describes the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blacklists_csharp">
@@ -533,7 +533,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
+    <dd>{{% md %}}The Ocean cluster identifier. Example: `ocean.k8s`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_csharp">
@@ -641,7 +641,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
+    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -650,7 +650,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
@@ -769,7 +769,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
+    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public IP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_go">
@@ -787,7 +787,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler</a></span>
     </dt>
-    <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Describes the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blacklists_go">
@@ -805,7 +805,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
+    <dd>{{% md %}}The Ocean cluster identifier. Example: `ocean.k8s`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_go">
@@ -913,7 +913,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
+    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -922,7 +922,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
@@ -1041,7 +1041,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
+    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public IP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_nodejs">
@@ -1059,7 +1059,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Describes the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blacklists_nodejs">
@@ -1077,7 +1077,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
+    <dd>{{% md %}}The Ocean cluster identifier. Example: `ocean.k8s`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_nodejs">
@@ -1185,7 +1185,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
+    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -1194,7 +1194,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
@@ -1313,7 +1313,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
+    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public IP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associate_public_ip_address_python">
@@ -1331,7 +1331,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Describes the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blacklists_python">
@@ -1349,7 +1349,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
+    <dd>{{% md %}}The Ocean cluster identifier. Example: `ocean.k8s`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desired_capacity_python">
@@ -1457,7 +1457,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
+    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -1466,7 +1466,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
@@ -1795,7 +1795,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Describes the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blacklists_csharp">
@@ -1813,7 +1813,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
+    <dd>{{% md %}}The Ocean cluster identifier. Example: `ocean.k8s`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desiredcapacity_csharp">
@@ -1921,7 +1921,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
+    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1930,7 +1930,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
@@ -1984,7 +1984,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
+    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public IP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -2067,7 +2067,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler</a></span>
     </dt>
-    <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Describes the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blacklists_go">
@@ -2085,7 +2085,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
+    <dd>{{% md %}}The Ocean cluster identifier. Example: `ocean.k8s`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desiredcapacity_go">
@@ -2193,7 +2193,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
+    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -2202,7 +2202,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
@@ -2256,7 +2256,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
+    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public IP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -2339,7 +2339,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Describes the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blacklists_nodejs">
@@ -2357,7 +2357,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
+    <dd>{{% md %}}The Ocean cluster identifier. Example: `ocean.k8s`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desiredcapacity_nodejs">
@@ -2465,7 +2465,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
+    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -2474,7 +2474,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
@@ -2528,7 +2528,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
+    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public IP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -2611,7 +2611,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Describes the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blacklists_python">
@@ -2629,7 +2629,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
+    <dd>{{% md %}}The Ocean cluster identifier. Example: `ocean.k8s`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desired_capacity_python">
@@ -2737,7 +2737,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
+    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -2746,7 +2746,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
@@ -2800,7 +2800,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
+    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public IP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -2930,7 +2930,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Enable the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelimits_csharp">
@@ -2997,7 +2997,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Enable the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelimits_go">
@@ -3064,7 +3064,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Enable the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelimits_nodejs">
@@ -3131,7 +3131,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Enable the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_limits_python">
@@ -3250,7 +3250,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Optionally configure the number of GPUS to allocate the headroom.
+    <dd>{{% md %}}Optionally configure the number of GPUs to allocate the headroom.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_csharp">
@@ -3290,7 +3290,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Optionally configure the number of GPUS to allocate the headroom.
+    <dd>{{% md %}}Optionally configure the number of GPUs to allocate the headroom.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_go">
@@ -3330,7 +3330,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Optionally configure the number of GPUS to allocate the headroom.
+    <dd>{{% md %}}Optionally configure the number of GPUs to allocate the headroom.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_nodejs">
@@ -3370,7 +3370,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Optionally configure the number of GPUS to allocate the headroom.
+    <dd>{{% md %}}Optionally configure the number of GPUs to allocate the headroom.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_per_unit_python">
@@ -3493,7 +3493,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to TARGET_GROUP
+    <dd>{{% md %}}Required if type is set to `TARGET_GROUP`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -3502,7 +3502,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
@@ -3511,7 +3511,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Can be set to CLASSIC or TARGET_GROUP
+    <dd>{{% md %}}Can be set to `CLASSIC` or `TARGET_GROUP`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3524,7 +3524,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to TARGET_GROUP
+    <dd>{{% md %}}Required if type is set to `TARGET_GROUP`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -3533,7 +3533,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
@@ -3542,7 +3542,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Can be set to CLASSIC or TARGET_GROUP
+    <dd>{{% md %}}Can be set to `CLASSIC` or `TARGET_GROUP`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3555,7 +3555,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to TARGET_GROUP
+    <dd>{{% md %}}Required if type is set to `TARGET_GROUP`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -3564,7 +3564,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
@@ -3573,7 +3573,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Can be set to CLASSIC or TARGET_GROUP
+    <dd>{{% md %}}Can be set to `CLASSIC` or `TARGET_GROUP`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3586,7 +3586,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to TARGET_GROUP
+    <dd>{{% md %}}Required if type is set to `TARGET_GROUP`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -3595,7 +3595,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
@@ -3604,7 +3604,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Can be set to CLASSIC or TARGET_GROUP
+    <dd>{{% md %}}Can be set to `CLASSIC` or `TARGET_GROUP`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3709,8 +3709,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
-Example: Fri:15:30-Wed:14:30
+    <dd>{{% md %}}Set time windows for shutdown hours. Specify a list of `timeWindows` with at least one time window Each string is in the format of: `ddd:hh:mm-ddd:hh:mm` where `ddd` = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat, `hh` = hour 24 = 0 -23, `mm` = minute = 0 - 59. Time windows should not overlap. Required if `cluster.scheduling.isEnabled` is `true`. (Example: `Fri:15:30-Wed:14:30`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
@@ -3719,7 +3718,7 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3732,8 +3731,7 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
-Example: Fri:15:30-Wed:14:30
+    <dd>{{% md %}}Set time windows for shutdown hours. Specify a list of `timeWindows` with at least one time window Each string is in the format of: `ddd:hh:mm-ddd:hh:mm` where `ddd` = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat, `hh` = hour 24 = 0 -23, `mm` = minute = 0 - 59. Time windows should not overlap. Required if `cluster.scheduling.isEnabled` is `true`. (Example: `Fri:15:30-Wed:14:30`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
@@ -3742,7 +3740,7 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3755,8 +3753,7 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
-Example: Fri:15:30-Wed:14:30
+    <dd>{{% md %}}Set time windows for shutdown hours. Specify a list of `timeWindows` with at least one time window Each string is in the format of: `ddd:hh:mm-ddd:hh:mm` where `ddd` = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat, `hh` = hour 24 = 0 -23, `mm` = minute = 0 - 59. Time windows should not overlap. Required if `cluster.scheduling.isEnabled` is `true`. (Example: `Fri:15:30-Wed:14:30`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
@@ -3765,7 +3762,7 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3778,8 +3775,7 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
-Example: Fri:15:30-Wed:14:30
+    <dd>{{% md %}}Set time windows for shutdown hours. Specify a list of `timeWindows` with at least one time window Each string is in the format of: `ddd:hh:mm-ddd:hh:mm` where `ddd` = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat, `hh` = hour 24 = 0 -23, `mm` = minute = 0 - 59. Time windows should not overlap. Required if `cluster.scheduling.isEnabled` is `true`. (Example: `Fri:15:30-Wed:14:30`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_enabled_python">
@@ -3788,7 +3784,7 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3803,8 +3799,7 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
-Example: 0 1 * * *
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of `frequency` or `cronExpression` should be used at a time. Required for `cluster.scheduling.tasks` object. (Example: `0 1 * * *`).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
@@ -3813,7 +3808,7 @@ Example: 0 1 * * *
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tasktype_csharp">
@@ -3822,8 +3817,7 @@ Example: 0 1 * * *
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values: "clusterRoll". Required for cluster.scheduling.tasks object
-Example: clusterRoll
+    <dd>{{% md %}}Valid values: `clusterRoll`. Required for `cluster.scheduling.tasks` object. (Example: `clusterRoll`).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3836,8 +3830,7 @@ Example: clusterRoll
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
-Example: 0 1 * * *
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of `frequency` or `cronExpression` should be used at a time. Required for `cluster.scheduling.tasks` object. (Example: `0 1 * * *`).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
@@ -3846,7 +3839,7 @@ Example: 0 1 * * *
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tasktype_go">
@@ -3855,8 +3848,7 @@ Example: 0 1 * * *
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values: "clusterRoll". Required for cluster.scheduling.tasks object
-Example: clusterRoll
+    <dd>{{% md %}}Valid values: `clusterRoll`. Required for `cluster.scheduling.tasks` object. (Example: `clusterRoll`).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3869,8 +3861,7 @@ Example: clusterRoll
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
-Example: 0 1 * * *
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of `frequency` or `cronExpression` should be used at a time. Required for `cluster.scheduling.tasks` object. (Example: `0 1 * * *`).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
@@ -3879,7 +3870,7 @@ Example: 0 1 * * *
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tasktype_nodejs">
@@ -3888,8 +3879,7 @@ Example: 0 1 * * *
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values: "clusterRoll". Required for cluster.scheduling.tasks object
-Example: clusterRoll
+    <dd>{{% md %}}Valid values: `clusterRoll`. Required for `cluster.scheduling.tasks` object. (Example: `clusterRoll`).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3902,8 +3892,7 @@ Example: clusterRoll
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
-Example: 0 1 * * *
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of `frequency` or `cronExpression` should be used at a time. Required for `cluster.scheduling.tasks` object. (Example: `0 1 * * *`).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
@@ -3912,7 +3901,7 @@ Example: 0 1 * * *
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="task_type_python">
@@ -3921,8 +3910,7 @@ Example: 0 1 * * *
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Valid values: "clusterRoll". Required for cluster.scheduling.tasks object
-Example: clusterRoll
+    <dd>{{% md %}}Valid values: `clusterRoll`. Required for `cluster.scheduling.tasks` object. (Example: `clusterRoll`).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

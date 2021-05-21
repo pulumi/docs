@@ -1306,7 +1306,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesnodegroupinstancetemplateschedulingpolicy">Get<wbr>Kubernetes<wbr>Node<wbr>Group<wbr>Instance<wbr>Template<wbr>Scheduling<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The scheduling policy for the instances in node group. The structure is documented below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="placementpolicy_csharp">
+<a href="#placementpolicy_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesnodegroupinstancetemplateplacementpolicy">Get<wbr>Kubernetes<wbr>Node<wbr>Group<wbr>Instance<wbr>Template<wbr>Placement<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1372,7 +1380,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesnodegroupinstancetemplateschedulingpolicy">Get<wbr>Kubernetes<wbr>Node<wbr>Group<wbr>Instance<wbr>Template<wbr>Scheduling<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The scheduling policy for the instances in node group. The structure is documented below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="placementpolicy_go">
+<a href="#placementpolicy_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesnodegroupinstancetemplateplacementpolicy">Get<wbr>Kubernetes<wbr>Node<wbr>Group<wbr>Instance<wbr>Template<wbr>Placement<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1438,7 +1454,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesnodegroupinstancetemplateschedulingpolicy">Get<wbr>Kubernetes<wbr>Node<wbr>Group<wbr>Instance<wbr>Template<wbr>Scheduling<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The scheduling policy for the instances in node group. The structure is documented below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="placementpolicy_nodejs">
+<a href="#placementpolicy_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesnodegroupinstancetemplateplacementpolicy">Get<wbr>Kubernetes<wbr>Node<wbr>Group<wbr>Instance<wbr>Template<wbr>Placement<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1504,7 +1528,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesnodegroupinstancetemplateschedulingpolicy">Get<wbr>Kubernetes<wbr>Node<wbr>Group<wbr>Instance<wbr>Template<wbr>Scheduling<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The scheduling policy for the instances in node group. The structure is documented below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="placement_policy_python">
+<a href="#placement_policy_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesnodegroupinstancetemplateplacementpolicy">Get<wbr>Kubernetes<wbr>Node<wbr>Group<wbr>Instance<wbr>Template<wbr>Placement<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesnodegroupinstancetemplatebootdisk">Get<wbr>Kubernetes<wbr>Node<wbr>Group<wbr>Instance<wbr>Template<wbr>Boot<wbr>Disk</h4>
@@ -1606,6 +1638,24 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="ipv4_csharp">
+<a href="#ipv4_csharp" style="color: inherit; text-decoration: inherit;">Ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the IPv4 address has been assigned.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipv6_csharp">
+<a href="#ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the IPv6 address has been assigned.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="nat_csharp">
 <a href="#nat_csharp" style="color: inherit; text-decoration: inherit;">Nat</a>
 </span>
@@ -1636,6 +1686,24 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ipv4_go">
+<a href="#ipv4_go" style="color: inherit; text-decoration: inherit;">Ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the IPv4 address has been assigned.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipv6_go">
+<a href="#ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the IPv6 address has been assigned.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nat_go">
 <a href="#nat_go" style="color: inherit; text-decoration: inherit;">Nat</a>
@@ -1668,6 +1736,24 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="ipv4_nodejs">
+<a href="#ipv4_nodejs" style="color: inherit; text-decoration: inherit;">ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the IPv4 address has been assigned.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipv6_nodejs">
+<a href="#ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the IPv6 address has been assigned.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="nat_nodejs">
 <a href="#nat_nodejs" style="color: inherit; text-decoration: inherit;">nat</a>
 </span>
@@ -1699,6 +1785,24 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="ipv4_python">
+<a href="#ipv4_python" style="color: inherit; text-decoration: inherit;">ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the IPv4 address has been assigned.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipv6_python">
+<a href="#ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the IPv6 address has been assigned.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="nat_python">
 <a href="#nat_python" style="color: inherit; text-decoration: inherit;">nat</a>
 </span>
@@ -1725,6 +1829,58 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The IDs of the subnets.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getkubernetesnodegroupinstancetemplateplacementpolicy">Get<wbr>Kubernetes<wbr>Node<wbr>Group<wbr>Instance<wbr>Template<wbr>Placement<wbr>Policy</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="placementgroupid_csharp">
+<a href="#placementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="placementgroupid_go">
+<a href="#placementgroupid_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="placementgroupid_nodejs">
+<a href="#placementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="placement_group_id_python">
+<a href="#placement_group_id_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesnodegroupinstancetemplateresources">Get<wbr>Kubernetes<wbr>Node<wbr>Group<wbr>Instance<wbr>Template<wbr>Resources</h4>

@@ -135,7 +135,9 @@ const route2 = new f5bigip.net.Route("route2", {
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
           <span class="nx">gw</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-          <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+          <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">reject</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">tunnel_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Route</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">,</span>
@@ -158,25 +160,19 @@ const route2 = new f5bigip.net.Route("route2", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RouteArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -188,25 +184,19 @@ const route2 = new f5bigip.net.Route("route2", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RouteArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -218,33 +208,25 @@ const route2 = new f5bigip.net.Route("route2", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RouteArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -256,25 +238,19 @@ const route2 = new f5bigip.net.Route("route2", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RouteArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -316,6 +292,24 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a gateway address for the route.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reject_csharp">
+<a href="#reject_csharp" style="color: inherit; text-decoration: inherit;">Reject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}reject route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tunnelref_csharp">
+<a href="#tunnelref_csharp" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}tunnel_ref to route traffic
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -347,6 +341,24 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a gateway address for the route.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reject_go">
+<a href="#reject_go" style="color: inherit; text-decoration: inherit;">Reject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}reject route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tunnelref_go">
+<a href="#tunnelref_go" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}tunnel_ref to route traffic
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -378,6 +390,24 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a gateway address for the route.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reject_nodejs">
+<a href="#reject_nodejs" style="color: inherit; text-decoration: inherit;">reject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}reject route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tunnelref_nodejs">
+<a href="#tunnelref_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}tunnel_ref to route traffic
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -409,6 +439,24 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a gateway address for the route.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reject_python">
+<a href="#reject_python" style="color: inherit; text-decoration: inherit;">reject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}reject route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tunnel_ref_python">
+<a href="#tunnel_ref_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}tunnel_ref to route traffic
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -485,7 +533,9 @@ Get an existing Route resource's state with the given name, ID, and optional ext
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">gw</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Route</code></pre></div>
+        <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">reject</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Route</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -623,6 +673,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination subnet and netmask for the route.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_reject_csharp">
+<a href="#state_reject_csharp" style="color: inherit; text-decoration: inherit;">Reject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}reject route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnelref_csharp">
+<a href="#state_tunnelref_csharp" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}tunnel_ref to route traffic
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -654,6 +722,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination subnet and netmask for the route.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_reject_go">
+<a href="#state_reject_go" style="color: inherit; text-decoration: inherit;">Reject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}reject route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnelref_go">
+<a href="#state_tunnelref_go" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}tunnel_ref to route traffic
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -685,6 +771,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination subnet and netmask for the route.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_reject_nodejs">
+<a href="#state_reject_nodejs" style="color: inherit; text-decoration: inherit;">reject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}reject route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnelref_nodejs">
+<a href="#state_tunnelref_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}tunnel_ref to route traffic
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -716,6 +820,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination subnet and netmask for the route.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_reject_python">
+<a href="#state_reject_python" style="color: inherit; text-decoration: inherit;">reject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}reject route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel_ref_python">
+<a href="#state_tunnel_ref_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}tunnel_ref to route traffic
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -55,9 +55,9 @@ class MyStack : Stack
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
             Status = "Enabled",
-            Step = 
+            Step = new AzureNative.ContainerRegistry.Inputs.DockerBuildStepArgs
             {
-                { "arguments", 
+                Arguments = 
                 {
                     new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
                     {
@@ -71,16 +71,16 @@ class MyStack : Stack
                         Name = "mysecrettestargument",
                         Value = "mysecrettestvalue",
                     },
-                } },
-                { "contextPath", "src" },
-                { "dockerFilePath", "src/DockerFile" },
-                { "imageNames", 
+                },
+                ContextPath = "src",
+                DockerFilePath = "src/DockerFile",
+                ImageNames = 
                 {
                     "azurerest:testtag",
-                } },
-                { "isPushEnabled", true },
-                { "noCache", false },
-                { "type", "Docker" },
+                },
+                IsPushEnabled = true,
+                NoCache = false,
+                Type = "Docker",
             },
             Tags = 
             {
@@ -140,7 +140,101 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerregistry.NewTask(ctx, "task", &containerregistry.TaskArgs{
+			AgentConfiguration: &containerregistry.AgentPropertiesArgs{
+				Cpu: pulumi.Int(2),
+			},
+			Identity: &containerregistry.IdentityPropertiesArgs{
+				Type: "SystemAssigned",
+			},
+			IsSystemTask: pulumi.Bool(false),
+			Location:     pulumi.String("eastus"),
+			LogTemplate:  pulumi.String("acr/tasks:{{.Run.OS}}"),
+			Platform: &containerregistry.PlatformPropertiesArgs{
+				Architecture: pulumi.String("amd64"),
+				Os:           pulumi.String("Linux"),
+			},
+			RegistryName:      pulumi.String("myRegistry"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			Status:            pulumi.String("Enabled"),
+			Step: containerregistry.DockerBuildStep{
+				Arguments: []containerregistry.Argument{
+					containerregistry.Argument{
+						IsSecret: false,
+						Name:     "mytestargument",
+						Value:    "mytestvalue",
+					},
+					containerregistry.Argument{
+						IsSecret: true,
+						Name:     "mysecrettestargument",
+						Value:    "mysecrettestvalue",
+					},
+				},
+				ContextPath:    "src",
+				DockerFilePath: "src/DockerFile",
+				ImageNames: []string{
+					"azurerest:testtag",
+				},
+				IsPushEnabled: true,
+				NoCache:       false,
+				Type:          "Docker",
+			},
+			Tags: pulumi.StringMap{
+				"testkey": pulumi.String("value"),
+			},
+			TaskName: pulumi.String("mytTask"),
+			Trigger: &containerregistry.TriggerPropertiesArgs{
+				BaseImageTrigger: &containerregistry.BaseImageTriggerArgs{
+					BaseImageTriggerType:     pulumi.String("Runtime"),
+					Name:                     pulumi.String("myBaseImageTrigger"),
+					UpdateTriggerEndpoint:    pulumi.String("https://user:pass@mycicd.webhook.com?token=foo"),
+					UpdateTriggerPayloadType: pulumi.String("Token"),
+				},
+				SourceTriggers: containerregistry.SourceTriggerArray{
+					&containerregistry.SourceTriggerArgs{
+						Name: pulumi.String("mySourceTrigger"),
+						SourceRepository: &containerregistry.SourcePropertiesArgs{
+							Branch:        pulumi.String("master"),
+							RepositoryUrl: pulumi.String("https://github.com/Azure/azure-rest-api-specs"),
+							SourceControlAuthProperties: &containerregistry.AuthInfoArgs{
+								Token:     pulumi.String("xxxxx"),
+								TokenType: pulumi.String("PAT"),
+							},
+							SourceControlType: pulumi.String("Github"),
+						},
+						SourceTriggerEvents: pulumi.StringArray{
+							pulumi.String("commit"),
+						},
+					},
+				},
+				TimerTriggers: containerregistry.TimerTriggerArray{
+					&containerregistry.TimerTriggerArgs{
+						Name:     pulumi.String("myTimerTrigger"),
+						Schedule: pulumi.String("30 9 * * 1-5"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -169,8 +263,8 @@ task = azure_native.containerregistry.Task("task",
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
     status="Enabled",
-    step={
-        "arguments": [
+    step=azure_native.containerregistry.DockerBuildStepArgs(
+        arguments=[
             azure_native.containerregistry.ArgumentArgs(
                 is_secret=False,
                 name="mytestargument",
@@ -182,13 +276,13 @@ task = azure_native.containerregistry.Task("task",
                 value="mysecrettestvalue",
             ),
         ],
-        "contextPath": "src",
-        "dockerFilePath": "src/DockerFile",
-        "imageNames": ["azurerest:testtag"],
-        "isPushEnabled": True,
-        "noCache": False,
-        "type": "Docker",
-    },
+        context_path="src",
+        docker_file_path="src/DockerFile",
+        image_names=["azurerest:testtag"],
+        is_push_enabled=True,
+        no_cache=False,
+        type="Docker",
+    ),
     tags={
         "testkey": "value",
     },
@@ -473,9 +567,9 @@ class MyStack : Stack
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
             Status = "Enabled",
-            Step = 
+            Step = new AzureNative.ContainerRegistry.Inputs.DockerBuildStepArgs
             {
-                { "arguments", 
+                Arguments = 
                 {
                     new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
                     {
@@ -489,16 +583,16 @@ class MyStack : Stack
                         Name = "mysecrettestargument",
                         Value = "mysecrettestvalue",
                     },
-                } },
-                { "contextPath", "src" },
-                { "dockerFilePath", "src/DockerFile" },
-                { "imageNames", 
+                },
+                ContextPath = "src",
+                DockerFilePath = "src/DockerFile",
+                ImageNames = 
                 {
                     "azurerest:testtag",
-                } },
-                { "isPushEnabled", true },
-                { "noCache", false },
-                { "type", "Docker" },
+                },
+                IsPushEnabled = true,
+                NoCache = false,
+                Type = "Docker",
             },
             Tags = 
             {
@@ -589,8 +683,8 @@ task = azure_native.containerregistry.Task("task",
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
     status="Enabled",
-    step={
-        "arguments": [
+    step=azure_native.containerregistry.DockerBuildStepArgs(
+        arguments=[
             azure_native.containerregistry.ArgumentArgs(
                 is_secret=False,
                 name="mytestargument",
@@ -602,13 +696,13 @@ task = azure_native.containerregistry.Task("task",
                 value="mysecrettestvalue",
             ),
         ],
-        "contextPath": "src",
-        "dockerFilePath": "src/DockerFile",
-        "imageNames": ["azurerest:testtag"],
-        "isPushEnabled": True,
-        "noCache": False,
-        "type": "Docker",
-    },
+        context_path="src",
+        docker_file_path="src/DockerFile",
+        image_names=["azurerest:testtag"],
+        is_push_enabled=True,
+        no_cache=False,
+        type="Docker",
+    ),
     tags={
         "testkey": "value",
     },
@@ -768,9 +862,9 @@ class MyStack : Stack
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
             Status = "Enabled",
-            Step = 
+            Step = new AzureNative.ContainerRegistry.Inputs.DockerBuildStepArgs
             {
-                { "arguments", 
+                Arguments = 
                 {
                     new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
                     {
@@ -784,16 +878,16 @@ class MyStack : Stack
                         Name = "mysecrettestargument",
                         Value = "mysecrettestvalue",
                     },
-                } },
-                { "contextPath", "src" },
-                { "dockerFilePath", "src/DockerFile" },
-                { "imageNames", 
+                },
+                ContextPath = "src",
+                DockerFilePath = "src/DockerFile",
+                ImageNames = 
                 {
                     "azurerest:testtag",
-                } },
-                { "isPushEnabled", true },
-                { "noCache", false },
-                { "type", "Docker" },
+                },
+                IsPushEnabled = true,
+                NoCache = false,
+                Type = "Docker",
             },
             Tags = 
             {
@@ -885,8 +979,8 @@ task = azure_native.containerregistry.Task("task",
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
     status="Enabled",
-    step={
-        "arguments": [
+    step=azure_native.containerregistry.DockerBuildStepArgs(
+        arguments=[
             azure_native.containerregistry.ArgumentArgs(
                 is_secret=False,
                 name="mytestargument",
@@ -898,13 +992,13 @@ task = azure_native.containerregistry.Task("task",
                 value="mysecrettestvalue",
             ),
         ],
-        "contextPath": "src",
-        "dockerFilePath": "src/DockerFile",
-        "imageNames": ["azurerest:testtag"],
-        "isPushEnabled": True,
-        "noCache": False,
-        "type": "Docker",
-    },
+        context_path="src",
+        docker_file_path="src/DockerFile",
+        image_names=["azurerest:testtag"],
+        is_push_enabled=True,
+        no_cache=False,
+        type="Docker",
+    ),
     tags={
         "testkey": "value",
     },
@@ -1060,9 +1154,9 @@ class MyStack : Stack
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
             Status = "Enabled",
-            Step = 
+            Step = new AzureNative.ContainerRegistry.Inputs.DockerBuildStepArgs
             {
-                { "arguments", 
+                Arguments = 
                 {
                     new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
                     {
@@ -1076,16 +1170,16 @@ class MyStack : Stack
                         Name = "mysecrettestargument",
                         Value = "mysecrettestvalue",
                     },
-                } },
-                { "contextPath", "src" },
-                { "dockerFilePath", "src/DockerFile" },
-                { "imageNames", 
+                },
+                ContextPath = "src",
+                DockerFilePath = "src/DockerFile",
+                ImageNames = 
                 {
                     "azurerest:testtag",
-                } },
-                { "isPushEnabled", true },
-                { "noCache", false },
-                { "type", "Docker" },
+                },
+                IsPushEnabled = true,
+                NoCache = false,
+                Type = "Docker",
             },
             Tags = 
             {
@@ -1143,7 +1237,98 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerregistry.NewTask(ctx, "task", &containerregistry.TaskArgs{
+			AgentConfiguration: &containerregistry.AgentPropertiesArgs{
+				Cpu: pulumi.Int(2),
+			},
+			Identity: &containerregistry.IdentityPropertiesArgs{
+				Type: "SystemAssigned",
+			},
+			IsSystemTask: pulumi.Bool(false),
+			Location:     pulumi.String("eastus"),
+			Platform: &containerregistry.PlatformPropertiesArgs{
+				Architecture: pulumi.String("amd64"),
+				Os:           pulumi.String("Linux"),
+			},
+			RegistryName:      pulumi.String("myRegistry"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			Status:            pulumi.String("Enabled"),
+			Step: containerregistry.DockerBuildStep{
+				Arguments: []containerregistry.Argument{
+					containerregistry.Argument{
+						IsSecret: false,
+						Name:     "mytestargument",
+						Value:    "mytestvalue",
+					},
+					containerregistry.Argument{
+						IsSecret: true,
+						Name:     "mysecrettestargument",
+						Value:    "mysecrettestvalue",
+					},
+				},
+				ContextPath:    "src",
+				DockerFilePath: "src/DockerFile",
+				ImageNames: []string{
+					"azurerest:testtag",
+				},
+				IsPushEnabled: true,
+				NoCache:       false,
+				Type:          "Docker",
+			},
+			Tags: pulumi.StringMap{
+				"testkey": pulumi.String("value"),
+			},
+			TaskName: pulumi.String("mytTask"),
+			Trigger: &containerregistry.TriggerPropertiesArgs{
+				BaseImageTrigger: &containerregistry.BaseImageTriggerArgs{
+					BaseImageTriggerType: pulumi.String("Runtime"),
+					Name:                 pulumi.String("myBaseImageTrigger"),
+				},
+				SourceTriggers: containerregistry.SourceTriggerArray{
+					&containerregistry.SourceTriggerArgs{
+						Name: pulumi.String("mySourceTrigger"),
+						SourceRepository: &containerregistry.SourcePropertiesArgs{
+							Branch:        pulumi.String("master"),
+							RepositoryUrl: pulumi.String("https://github.com/Azure/azure-rest-api-specs"),
+							SourceControlAuthProperties: &containerregistry.AuthInfoArgs{
+								Token:     pulumi.String("xxxxx"),
+								TokenType: pulumi.String("PAT"),
+							},
+							SourceControlType: pulumi.String("Github"),
+						},
+						SourceTriggerEvents: pulumi.StringArray{
+							pulumi.String("commit"),
+						},
+					},
+				},
+				TimerTriggers: containerregistry.TimerTriggerArray{
+					&containerregistry.TimerTriggerArgs{
+						Name:     pulumi.String("myTimerTrigger"),
+						Schedule: pulumi.String("30 9 * * 1-5"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -1171,8 +1356,8 @@ task = azure_native.containerregistry.Task("task",
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
     status="Enabled",
-    step={
-        "arguments": [
+    step=azure_native.containerregistry.DockerBuildStepArgs(
+        arguments=[
             azure_native.containerregistry.ArgumentArgs(
                 is_secret=False,
                 name="mytestargument",
@@ -1184,13 +1369,13 @@ task = azure_native.containerregistry.Task("task",
                 value="mysecrettestvalue",
             ),
         ],
-        "contextPath": "src",
-        "dockerFilePath": "src/DockerFile",
-        "imageNames": ["azurerest:testtag"],
-        "isPushEnabled": True,
-        "noCache": False,
-        "type": "Docker",
-    },
+        context_path="src",
+        docker_file_path="src/DockerFile",
+        image_names=["azurerest:testtag"],
+        is_push_enabled=True,
+        no_cache=False,
+        type="Docker",
+    ),
     tags={
         "testkey": "value",
     },
@@ -1361,25 +1546,19 @@ const task = new azure_native.containerregistry.Task("task", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TaskArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1391,25 +1570,19 @@ const task = new azure_native.containerregistry.Task("task", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TaskArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1421,33 +1594,25 @@ const task = new azure_native.containerregistry.Task("task", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TaskArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1459,25 +1624,19 @@ const task = new azure_native.containerregistry.Task("task", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TaskArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

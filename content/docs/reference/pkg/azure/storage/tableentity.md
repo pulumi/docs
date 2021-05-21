@@ -24,21 +24,127 @@ Manages an Entity within a Table in an Azure Storage Account.
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var exampleTable = new Azure.Storage.Table("exampleTable", new Azure.Storage.TableArgs
+        {
+            StorageAccountName = exampleAccount.Name,
+        });
+        var exampleTableEntity = new Azure.Storage.TableEntity("exampleTableEntity", new Azure.Storage.TableEntityArgs
+        {
+            StorageAccountName = exampleAccount.Name,
+            TableName = exampleTable.Name,
+            PartitionKey = "examplepartition",
+            RowKey = "examplerow",
+            Entity = 
+            {
+                { "example", "example" },
+            },
+        });
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               exampleResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleTable, err := storage.NewTable(ctx, "exampleTable", &storage.TableArgs{
+			StorageAccountName: exampleAccount.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = storage.NewTableEntity(ctx, "exampleTableEntity", &storage.TableEntityArgs{
+			StorageAccountName: exampleAccount.Name,
+			TableName:          exampleTable.Name,
+			PartitionKey:       pulumi.String("examplepartition"),
+			RowKey:             pulumi.String("examplerow"),
+			Entity: pulumi.StringMap{
+				"example": pulumi.String("example"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_table = azure.storage.Table("exampleTable", storage_account_name=example_account.name)
+example_table_entity = azure.storage.TableEntity("exampleTableEntity",
+    storage_account_name=example_account.name,
+    table_name=example_table.name,
+    partition_key="examplepartition",
+    row_key="examplerow",
+    entity={
+        "example": "example",
+    })
+```
+
 
 {{< /example >}}
 
@@ -57,10 +163,7 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
     accountTier: "Standard",
     accountReplicationType: "LRS",
 });
-const exampleTable = new azure.storage.Table("exampleTable", {
-    resourceGroupName: exampleResourceGroup.name,
-    storageAccountName: exampleAccount.name,
-});
+const exampleTable = new azure.storage.Table("exampleTable", {storageAccountName: exampleAccount.name});
 const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
     storageAccountName: exampleAccount.name,
     tableName: exampleTable.name,
@@ -123,25 +226,19 @@ const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TableEntityArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -153,25 +250,19 @@ const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TableEntityArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -183,33 +274,25 @@ const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TableEntityArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -221,25 +304,19 @@ const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TableEntityArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

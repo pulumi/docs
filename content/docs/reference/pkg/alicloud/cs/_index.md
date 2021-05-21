@@ -16,6 +16,7 @@ Explore the resources and functions of the alicloud.cs module.
     <li><a href="edgekubernetes" title="EdgeKubernetes"><span class="symbol resource"></span>EdgeKubernetes</a></li>
     <li><a href="kubernetes" title="Kubernetes"><span class="symbol resource"></span>Kubernetes</a></li>
     <li><a href="kubernetesautoscaler" title="KubernetesAutoscaler"><span class="symbol resource"></span>KubernetesAutoscaler</a></li>
+    <li><a href="kubernetespermission" title="KubernetesPermission"><span class="symbol resource"></span>KubernetesPermission</a></li>
     <li><a href="managedkubernetes" title="ManagedKubernetes"><span class="symbol resource"></span>ManagedKubernetes</a></li>
     <li><a href="nodepool" title="NodePool"><span class="symbol resource"></span>NodePool</a></li>
     <li><a href="registryenterprisenamespace" title="RegistryEnterpriseNamespace"><span class="symbol resource"></span>RegistryEnterpriseNamespace</a></li>
@@ -30,6 +31,7 @@ Explore the resources and functions of the alicloud.cs module.
     <li><a href="getackservice" title="GetAckService"><span class="symbol function"></span>GetAckService</a></li>
     <li><a href="getedgekubernetesclusters" title="GetEdgeKubernetesClusters"><span class="symbol function"></span>GetEdgeKubernetesClusters</a></li>
     <li><a href="getkubernetesclusters" title="GetKubernetesClusters"><span class="symbol function"></span>GetKubernetesClusters</a></li>
+    <li><a href="getkubernetespermission" title="GetKubernetesPermission"><span class="symbol function"></span>GetKubernetesPermission</a></li>
     <li><a href="getmanagedkubernetesclusters" title="GetManagedKubernetesClusters"><span class="symbol function"></span>GetManagedKubernetesClusters</a></li>
     <li><a href="getregistryenterpriseinstances" title="GetRegistryEnterpriseInstances"><span class="symbol function"></span>GetRegistryEnterpriseInstances</a></li>
     <li><a href="getregistryenterprisenamespaces" title="GetRegistryEnterpriseNamespaces"><span class="symbol function"></span>GetRegistryEnterpriseNamespaces</a></li>
@@ -47,6 +49,6 @@ Explore the resources and functions of the alicloud.cs module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.2.0</dd>
 </dl>
 

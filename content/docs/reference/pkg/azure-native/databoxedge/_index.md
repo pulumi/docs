@@ -12,11 +12,19 @@ Explore the resources and functions of the azure-native.databoxedge module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="addon" title="Addon"><span class="symbol resource"></span>Addon</a></li>
+    <li><a href="arcaddon" title="ArcAddon"><span class="symbol resource"></span>ArcAddon</a></li>
     <li><a href="bandwidthschedule" title="BandwidthSchedule"><span class="symbol resource"></span>BandwidthSchedule</a></li>
+    <li><a href="cloudedgemanagementrole" title="CloudEdgeManagementRole"><span class="symbol resource"></span>CloudEdgeManagementRole</a></li>
     <li><a href="container" title="Container"><span class="symbol resource"></span>Container</a></li>
     <li><a href="device" title="Device"><span class="symbol resource"></span>Device</a></li>
+    <li><a href="fileeventtrigger" title="FileEventTrigger"><span class="symbol resource"></span>FileEventTrigger</a></li>
+    <li><a href="iotaddon" title="IoTAddon"><span class="symbol resource"></span>IoTAddon</a></li>
+    <li><a href="iotrole" title="IoTRole"><span class="symbol resource"></span>IoTRole</a></li>
+    <li><a href="kubernetesrole" title="KubernetesRole"><span class="symbol resource"></span>KubernetesRole</a></li>
+    <li><a href="mecrole" title="MECRole"><span class="symbol resource"></span>MECRole</a></li>
     <li><a href="monitoringconfig" title="MonitoringConfig"><span class="symbol resource"></span>MonitoringConfig</a></li>
     <li><a href="order" title="Order"><span class="symbol resource"></span>Order</a></li>
+    <li><a href="periodictimereventtrigger" title="PeriodicTimerEventTrigger"><span class="symbol resource"></span>PeriodicTimerEventTrigger</a></li>
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
     <li><a href="share" title="Share"><span class="symbol resource"></span>Share</a></li>
     <li><a href="storageaccount" title="StorageAccount"><span class="symbol resource"></span>StorageAccount</a></li>
@@ -28,12 +36,20 @@ Explore the resources and functions of the azure-native.databoxedge module.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getaddon" title="GetAddon"><span class="symbol function"></span>GetAddon</a></li>
+    <li><a href="getarcaddon" title="GetArcAddon"><span class="symbol function"></span>GetArcAddon</a></li>
     <li><a href="getbandwidthschedule" title="GetBandwidthSchedule"><span class="symbol function"></span>GetBandwidthSchedule</a></li>
+    <li><a href="getcloudedgemanagementrole" title="GetCloudEdgeManagementRole"><span class="symbol function"></span>GetCloudEdgeManagementRole</a></li>
     <li><a href="getcontainer" title="GetContainer"><span class="symbol function"></span>GetContainer</a></li>
     <li><a href="getdevice" title="GetDevice"><span class="symbol function"></span>GetDevice</a></li>
     <li><a href="getdeviceextendedinformation" title="GetDeviceExtendedInformation"><span class="symbol function"></span>GetDeviceExtendedInformation</a></li>
+    <li><a href="getfileeventtrigger" title="GetFileEventTrigger"><span class="symbol function"></span>GetFileEventTrigger</a></li>
+    <li><a href="getiotaddon" title="GetIoTAddon"><span class="symbol function"></span>GetIoTAddon</a></li>
+    <li><a href="getiotrole" title="GetIoTRole"><span class="symbol function"></span>GetIoTRole</a></li>
+    <li><a href="getkubernetesrole" title="GetKubernetesRole"><span class="symbol function"></span>GetKubernetesRole</a></li>
+    <li><a href="getmecrole" title="GetMECRole"><span class="symbol function"></span>GetMECRole</a></li>
     <li><a href="getmonitoringconfig" title="GetMonitoringConfig"><span class="symbol function"></span>GetMonitoringConfig</a></li>
     <li><a href="getorder" title="GetOrder"><span class="symbol function"></span>GetOrder</a></li>
+    <li><a href="getperiodictimereventtrigger" title="GetPeriodicTimerEventTrigger"><span class="symbol function"></span>GetPeriodicTimerEventTrigger</a></li>
     <li><a href="getrole" title="GetRole"><span class="symbol function"></span>GetRole</a></li>
     <li><a href="getshare" title="GetShare"><span class="symbol function"></span>GetShare</a></li>
     <li><a href="getstorageaccount" title="GetStorageAccount"><span class="symbol function"></span>GetStorageAccount</a></li>
@@ -50,6 +66,6 @@ Explore the resources and functions of the azure-native.databoxedge module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.1.0</dd>
+	<dd>1.7.0</dd>
 </dl>
 

@@ -194,25 +194,19 @@ const members1 = new openstack.loadbalancer.Members("members_1", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MembersArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -224,25 +218,19 @@ const members1 = new openstack.loadbalancer.Members("members_1", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MembersArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -254,33 +242,25 @@ const members1 = new openstack.loadbalancer.Members("members_1", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MembersArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -292,25 +272,19 @@ const members1 = new openstack.loadbalancer.Members("members_1", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MembersArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -838,6 +812,16 @@ the load balancer.
 A valid value is true (UP) or false (DOWN). Defaults to true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="backup_csharp">
+<a href="#backup_csharp" style="color: inherit; text-decoration: inherit;">Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A bool that indicates whether the the member is
+backup. Requires octavia microversion 2.1 or later.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -908,6 +892,16 @@ the load balancer.
     </dt>
     <dd>{{% md %}}The administrative state of the member.
 A valid value is true (UP) or false (DOWN). Defaults to true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backup_go">
+<a href="#backup_go" style="color: inherit; text-decoration: inherit;">Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A bool that indicates whether the the member is
+backup. Requires octavia microversion 2.1 or later.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
@@ -982,6 +976,16 @@ the load balancer.
 A valid value is true (UP) or false (DOWN). Defaults to true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="backup_nodejs">
+<a href="#backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A bool that indicates whether the the member is
+backup. Requires octavia microversion 2.1 or later.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1052,6 +1056,16 @@ the load balancer.
     </dt>
     <dd>{{% md %}}The administrative state of the member.
 A valid value is true (UP) or false (DOWN). Defaults to true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backup_python">
+<a href="#backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A bool that indicates whether the the member is
+backup. Requires octavia microversion 2.1 or later.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">

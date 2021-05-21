@@ -36,11 +36,11 @@ class MyStack : Stack
         var server = new AzureNative.DBforPostgreSQL.Server("server", new AzureNative.DBforPostgreSQL.ServerArgs
         {
             Location = "brazilsouth",
-            Properties = 
+            Properties = new AzureNative.DBforPostgreSQL.Inputs.ServerPropertiesForRestoreArgs
             {
-                { "createMode", "PointInTimeRestore" },
-                { "restorePointInTime", "2017-12-14T00:00:37.467Z" },
-                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver" },
+                CreateMode = "PointInTimeRestore",
+                RestorePointInTime = "2017-12-14T00:00:37.467Z",
+                SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
             },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
@@ -68,7 +68,45 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	dbforpostgresql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbforpostgresql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbforpostgresql.NewServer(ctx, "server", &dbforpostgresql.ServerArgs{
+			Location: pulumi.String("brazilsouth"),
+			Properties: dbforpostgresql.ServerPropertiesForRestore{
+				CreateMode:         "PointInTimeRestore",
+				RestorePointInTime: "2017-12-14T00:00:37.467Z",
+				SourceServerId:     "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
+			},
+			ResourceGroupName: pulumi.String("TargetResourceGroup"),
+			ServerName:        pulumi.String("targetserver"),
+			Sku: &dbforpostgresql.SkuArgs{
+				Capacity: pulumi.Int(2),
+				Family:   pulumi.String("Gen5"),
+				Name:     pulumi.String("B_Gen5_2"),
+				Tier:     pulumi.String("Basic"),
+			},
+			Tags: pulumi.StringMap{
+				"ElasticServer": pulumi.String("1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -82,11 +120,11 @@ import pulumi_azure_native as azure_native
 
 server = azure_native.dbforpostgresql.Server("server",
     location="brazilsouth",
-    properties={
-        "createMode": "PointInTimeRestore",
-        "restorePointInTime": "2017-12-14T00:00:37.467Z",
-        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
-    },
+    properties=azure_native.dbforpostgresql.ServerPropertiesForRestoreArgs(
+        create_mode="PointInTimeRestore",
+        restore_point_in_time="2017-12-14T00:00:37.467Z",
+        source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
+    ),
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
     sku=azure_native.dbforpostgresql.SkuArgs(
@@ -156,19 +194,19 @@ class MyStack : Stack
         var server = new AzureNative.DBforPostgreSQL.Server("server", new AzureNative.DBforPostgreSQL.ServerArgs
         {
             Location = "westus",
-            Properties = 
+            Properties = new AzureNative.DBforPostgreSQL.Inputs.ServerPropertiesForDefaultCreateArgs
             {
-                { "administratorLogin", "cloudsa" },
-                { "administratorLoginPassword", "<administratorLoginPassword>" },
-                { "createMode", "Default" },
-                { "minimalTlsVersion", "TLS1_2" },
-                { "sslEnforcement", "Enabled" },
-                { "storageProfile", new AzureNative.DBforPostgreSQL.Inputs.StorageProfileArgs
+                AdministratorLogin = "cloudsa",
+                AdministratorLoginPassword = "<administratorLoginPassword>",
+                CreateMode = "Default",
+                MinimalTlsVersion = "TLS1_2",
+                SslEnforcement = "Enabled",
+                StorageProfile = new AzureNative.DBforPostgreSQL.Inputs.StorageProfileArgs
                 {
                     BackupRetentionDays = 7,
                     GeoRedundantBackup = "Disabled",
                     StorageMB = 128000,
-                } },
+                },
             },
             ResourceGroupName = "TestGroup",
             ServerName = "pgtestsvc4",
@@ -196,7 +234,52 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	dbforpostgresql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbforpostgresql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbforpostgresql.NewServer(ctx, "server", &dbforpostgresql.ServerArgs{
+			Location: pulumi.String("westus"),
+			Properties: dbforpostgresql.ServerPropertiesForDefaultCreate{
+				AdministratorLogin:         "cloudsa",
+				AdministratorLoginPassword: "<administratorLoginPassword>",
+				CreateMode:                 "Default",
+				MinimalTlsVersion:          "TLS1_2",
+				SslEnforcement:             "Enabled",
+				StorageProfile: dbforpostgresql.StorageProfile{
+					BackupRetentionDays: 7,
+					GeoRedundantBackup:  "Disabled",
+					StorageMB:           128000,
+				},
+			},
+			ResourceGroupName: pulumi.String("TestGroup"),
+			ServerName:        pulumi.String("pgtestsvc4"),
+			Sku: &dbforpostgresql.SkuArgs{
+				Capacity: pulumi.Int(2),
+				Family:   pulumi.String("Gen5"),
+				Name:     pulumi.String("B_Gen5_2"),
+				Tier:     pulumi.String("Basic"),
+			},
+			Tags: pulumi.StringMap{
+				"ElasticServer": pulumi.String("1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -210,18 +293,18 @@ import pulumi_azure_native as azure_native
 
 server = azure_native.dbforpostgresql.Server("server",
     location="westus",
-    properties={
-        "administratorLogin": "cloudsa",
-        "administratorLoginPassword": "<administratorLoginPassword>",
-        "createMode": "Default",
-        "minimalTlsVersion": "TLS1_2",
-        "sslEnforcement": "Enabled",
-        "storageProfile": azure_native.dbforpostgresql.StorageProfileArgs(
+    properties=azure_native.dbforpostgresql.ServerPropertiesForDefaultCreateArgs(
+        administrator_login="cloudsa",
+        administrator_login_password="<administratorLoginPassword>",
+        create_mode="Default",
+        minimal_tls_version="TLS1_2",
+        ssl_enforcement="Enabled",
+        storage_profile=azure_native.dbforpostgresql.StorageProfileArgs(
             backup_retention_days=7,
             geo_redundant_backup="Disabled",
             storage_mb=128000,
         ),
-    },
+    ),
     resource_group_name="TestGroup",
     server_name="pgtestsvc4",
     sku=azure_native.dbforpostgresql.SkuArgs(
@@ -298,10 +381,10 @@ class MyStack : Stack
         var server = new AzureNative.DBforPostgreSQL.Server("server", new AzureNative.DBforPostgreSQL.ServerArgs
         {
             Location = "westcentralus",
-            Properties = 
+            Properties = new AzureNative.DBforPostgreSQL.Inputs.ServerPropertiesForReplicaArgs
             {
-                { "createMode", "Replica" },
-                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup_WestCentralUS/providers/Microsoft.DBforPostgreSQL/servers/testserver-master" },
+                CreateMode = "Replica",
+                SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup_WestCentralUS/providers/Microsoft.DBforPostgreSQL/servers/testserver-master",
             },
             ResourceGroupName = "TestGroup_WestCentralUS",
             ServerName = "testserver-replica1",
@@ -325,7 +408,41 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	dbforpostgresql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbforpostgresql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbforpostgresql.NewServer(ctx, "server", &dbforpostgresql.ServerArgs{
+			Location: pulumi.String("westcentralus"),
+			Properties: dbforpostgresql.ServerPropertiesForReplica{
+				CreateMode:     "Replica",
+				SourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup_WestCentralUS/providers/Microsoft.DBforPostgreSQL/servers/testserver-master",
+			},
+			ResourceGroupName: pulumi.String("TestGroup_WestCentralUS"),
+			ServerName:        pulumi.String("testserver-replica1"),
+			Sku: &dbforpostgresql.SkuArgs{
+				Capacity: pulumi.Int(2),
+				Family:   pulumi.String("Gen5"),
+				Name:     pulumi.String("GP_Gen5_2"),
+				Tier:     pulumi.String("GeneralPurpose"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -339,10 +456,10 @@ import pulumi_azure_native as azure_native
 
 server = azure_native.dbforpostgresql.Server("server",
     location="westcentralus",
-    properties={
-        "createMode": "Replica",
-        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup_WestCentralUS/providers/Microsoft.DBforPostgreSQL/servers/testserver-master",
-    },
+    properties=azure_native.dbforpostgresql.ServerPropertiesForReplicaArgs(
+        create_mode="Replica",
+        source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup_WestCentralUS/providers/Microsoft.DBforPostgreSQL/servers/testserver-master",
+    ),
     resource_group_name="TestGroup_WestCentralUS",
     server_name="testserver-replica1",
     sku=azure_native.dbforpostgresql.SkuArgs(
@@ -405,10 +522,10 @@ class MyStack : Stack
         var server = new AzureNative.DBforPostgreSQL.Server("server", new AzureNative.DBforPostgreSQL.ServerArgs
         {
             Location = "westus",
-            Properties = 
+            Properties = new AzureNative.DBforPostgreSQL.Inputs.ServerPropertiesForGeoRestoreArgs
             {
-                { "createMode", "GeoRestore" },
-                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver" },
+                CreateMode = "GeoRestore",
+                SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
             },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
@@ -436,7 +553,44 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	dbforpostgresql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbforpostgresql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbforpostgresql.NewServer(ctx, "server", &dbforpostgresql.ServerArgs{
+			Location: pulumi.String("westus"),
+			Properties: dbforpostgresql.ServerPropertiesForGeoRestore{
+				CreateMode:     "GeoRestore",
+				SourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
+			},
+			ResourceGroupName: pulumi.String("TargetResourceGroup"),
+			ServerName:        pulumi.String("targetserver"),
+			Sku: &dbforpostgresql.SkuArgs{
+				Capacity: pulumi.Int(2),
+				Family:   pulumi.String("Gen5"),
+				Name:     pulumi.String("GP_Gen5_2"),
+				Tier:     pulumi.String("GeneralPurpose"),
+			},
+			Tags: pulumi.StringMap{
+				"ElasticServer": pulumi.String("1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -450,10 +604,10 @@ import pulumi_azure_native as azure_native
 
 server = azure_native.dbforpostgresql.Server("server",
     location="westus",
-    properties={
-        "createMode": "GeoRestore",
-        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
-    },
+    properties=azure_native.dbforpostgresql.ServerPropertiesForGeoRestoreArgs(
+        create_mode="GeoRestore",
+        source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
+    ),
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
     sku=azure_native.dbforpostgresql.SkuArgs(
@@ -553,25 +707,19 @@ const server = new azure_native.dbforpostgresql.Server("server", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -583,25 +731,19 @@ const server = new azure_native.dbforpostgresql.Server("server", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -613,33 +755,25 @@ const server = new azure_native.dbforpostgresql.Server("server", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -651,25 +785,19 @@ const server = new azure_native.dbforpostgresql.Server("server", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

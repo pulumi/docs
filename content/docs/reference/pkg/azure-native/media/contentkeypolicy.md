@@ -42,22 +42,22 @@ class MyStack : Stack
             {
                 new AzureNative.Media.Inputs.ContentKeyPolicyOptionArgs
                 {
-                    Configuration = 
+                    Configuration = new AzureNative.Media.Inputs.ContentKeyPolicyClearKeyConfigurationArgs
                     {
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration" },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
                     },
                     Name = "ClearKeyOption",
-                    Restriction = 
+                    Restriction = new AzureNative.Media.Inputs.ContentKeyPolicyTokenRestrictionArgs
                     {
-                        { "audience", "urn:audience" },
-                        { "issuer", "urn:issuer" },
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyTokenRestriction" },
-                        { "primaryVerificationKey", 
+                        Audience = "urn:audience",
+                        Issuer = "urn:issuer",
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+                        PrimaryVerificationKey = 
                         {
                             { "keyValue", "AAAAAAAAAAAAAAAAAAAAAA==" },
                             { "odataType", "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey" },
-                        } },
-                        { "restrictionTokenType", "Swt" },
+                        },
+                        RestrictionTokenType = "Swt",
                     },
                 },
             },
@@ -92,20 +92,20 @@ content_key_policy = azure_native.media.ContentKeyPolicy("contentKeyPolicy",
     content_key_policy_name="PolicyWithClearKeyOptionAndSwtTokenRestriction",
     description="ArmPolicyDescription",
     options=[azure_native.media.ContentKeyPolicyOptionArgs(
-        configuration={
-            "odataType": "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
-        },
+        configuration=azure_native.media.ContentKeyPolicyClearKeyConfigurationArgs(
+            odata_type="#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
+        ),
         name="ClearKeyOption",
-        restriction={
-            "audience": "urn:audience",
-            "issuer": "urn:issuer",
-            "odataType": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
-            "primaryVerificationKey": {
+        restriction=azure_native.media.ContentKeyPolicyTokenRestrictionArgs(
+            audience="urn:audience",
+            issuer="urn:issuer",
+            odata_type="#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+            primary_verification_key={
                 "keyValue": "AAAAAAAAAAAAAAAAAAAAAA==",
                 "odataType": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
             },
-            "restrictionTokenType": "Swt",
-        },
+            restriction_token_type="Swt",
+        ),
     )],
     resource_group_name="contoso")
 
@@ -175,9 +175,9 @@ class MyStack : Stack
             {
                 new AzureNative.Media.Inputs.ContentKeyPolicyOptionArgs
                 {
-                    Configuration = 
+                    Configuration = new AzureNative.Media.Inputs.ContentKeyPolicyPlayReadyConfigurationArgs
                     {
-                        { "licenses", 
+                        Licenses = 
                         {
                             new AzureNative.Media.Inputs.ContentKeyPolicyPlayReadyLicenseArgs
                             {
@@ -198,13 +198,13 @@ class MyStack : Stack
                                     ScmsRestriction = 2,
                                 },
                             },
-                        } },
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration" },
+                        },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration",
                     },
                     Name = "ArmPolicyOptionName",
-                    Restriction = 
+                    Restriction = new AzureNative.Media.Inputs.ContentKeyPolicyOpenRestrictionArgs
                     {
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyOpenRestriction" },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
                     },
                 },
             },
@@ -239,8 +239,8 @@ content_key_policy = azure_native.media.ContentKeyPolicy("contentKeyPolicy",
     content_key_policy_name="PolicyWithPlayReadyOptionAndOpenRestriction",
     description="ArmPolicyDescription",
     options=[azure_native.media.ContentKeyPolicyOptionArgs(
-        configuration={
-            "licenses": [azure_native.media.ContentKeyPolicyPlayReadyLicenseArgs(
+        configuration=azure_native.media.ContentKeyPolicyPlayReadyConfigurationArgs(
+            licenses=[azure_native.media.ContentKeyPolicyPlayReadyLicenseArgs(
                 allow_test_devices=True,
                 begin_date="2017-10-16T18:22:53.46Z",
                 content_key_location={
@@ -256,12 +256,12 @@ content_key_policy = azure_native.media.ContentKeyPolicy("contentKeyPolicy",
                     scms_restriction=2,
                 ),
             )],
-            "odataType": "#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration",
-        },
+            odata_type="#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration",
+        ),
         name="ArmPolicyOptionName",
-        restriction={
-            "odataType": "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
-        },
+        restriction=azure_native.media.ContentKeyPolicyOpenRestrictionArgs(
+            odata_type="#Microsoft.Media.ContentKeyPolicyOpenRestriction",
+        ),
     )],
     resource_group_name="contoso")
 
@@ -340,32 +340,32 @@ class MyStack : Stack
             {
                 new AzureNative.Media.Inputs.ContentKeyPolicyOptionArgs
                 {
-                    Configuration = 
+                    Configuration = new AzureNative.Media.Inputs.ContentKeyPolicyWidevineConfigurationArgs
                     {
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration" },
-                        { "widevineTemplate", "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}" },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
+                        WidevineTemplate = "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
                     },
                     Name = "widevineoption",
-                    Restriction = 
+                    Restriction = new AzureNative.Media.Inputs.ContentKeyPolicyTokenRestrictionArgs
                     {
-                        { "alternateVerificationKeys", 
+                        AlternateVerificationKeys = 
                         {
                             
                             {
                                 { "keyValue", "AAAAAAAAAAAAAAAAAAAAAA==" },
                                 { "odataType", "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey" },
                             },
-                        } },
-                        { "audience", "urn:audience" },
-                        { "issuer", "urn:issuer" },
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyTokenRestriction" },
-                        { "primaryVerificationKey", 
+                        },
+                        Audience = "urn:audience",
+                        Issuer = "urn:issuer",
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+                        PrimaryVerificationKey = 
                         {
                             { "exponent", "AQAB" },
                             { "modulus", "AQAD" },
                             { "odataType", "#Microsoft.Media.ContentKeyPolicyRsaTokenKey" },
-                        } },
-                        { "restrictionTokenType", "Jwt" },
+                        },
+                        RestrictionTokenType = "Jwt",
                     },
                 },
             },
@@ -400,26 +400,26 @@ content_key_policy = azure_native.media.ContentKeyPolicy("contentKeyPolicy",
     content_key_policy_name="PolicyWithWidevineOptionAndJwtTokenRestriction",
     description="ArmPolicyDescription",
     options=[azure_native.media.ContentKeyPolicyOptionArgs(
-        configuration={
-            "odataType": "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
-            "widevineTemplate": "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
-        },
+        configuration=azure_native.media.ContentKeyPolicyWidevineConfigurationArgs(
+            odata_type="#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
+            widevine_template="{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
+        ),
         name="widevineoption",
-        restriction={
-            "alternateVerificationKeys": [{
+        restriction=azure_native.media.ContentKeyPolicyTokenRestrictionArgs(
+            alternate_verification_keys=[{
                 "keyValue": "AAAAAAAAAAAAAAAAAAAAAA==",
                 "odataType": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
             }],
-            "audience": "urn:audience",
-            "issuer": "urn:issuer",
-            "odataType": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
-            "primaryVerificationKey": {
+            audience="urn:audience",
+            issuer="urn:issuer",
+            odata_type="#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+            primary_verification_key={
                 "exponent": "AQAB",
                 "modulus": "AQAD",
                 "odataType": "#Microsoft.Media.ContentKeyPolicyRsaTokenKey",
             },
-            "restrictionTokenType": "Jwt",
-        },
+            restriction_token_type="Jwt",
+        ),
     )],
     resource_group_name="contoso")
 
@@ -495,35 +495,35 @@ class MyStack : Stack
             {
                 new AzureNative.Media.Inputs.ContentKeyPolicyOptionArgs
                 {
-                    Configuration = 
+                    Configuration = new AzureNative.Media.Inputs.ContentKeyPolicyClearKeyConfigurationArgs
                     {
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration" },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
                     },
                     Name = "ClearKeyOption",
-                    Restriction = 
+                    Restriction = new AzureNative.Media.Inputs.ContentKeyPolicyTokenRestrictionArgs
                     {
-                        { "audience", "urn:audience" },
-                        { "issuer", "urn:issuer" },
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyTokenRestriction" },
-                        { "primaryVerificationKey", 
+                        Audience = "urn:audience",
+                        Issuer = "urn:issuer",
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+                        PrimaryVerificationKey = 
                         {
                             { "keyValue", "AAAAAAAAAAAAAAAAAAAAAA==" },
                             { "odataType", "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey" },
-                        } },
-                        { "restrictionTokenType", "Swt" },
+                        },
+                        RestrictionTokenType = "Swt",
                     },
                 },
                 new AzureNative.Media.Inputs.ContentKeyPolicyOptionArgs
                 {
-                    Configuration = 
+                    Configuration = new AzureNative.Media.Inputs.ContentKeyPolicyWidevineConfigurationArgs
                     {
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration" },
-                        { "widevineTemplate", "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}" },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
+                        WidevineTemplate = "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
                     },
                     Name = "widevineoption",
-                    Restriction = 
+                    Restriction = new AzureNative.Media.Inputs.ContentKeyPolicyOpenRestrictionArgs
                     {
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyOpenRestriction" },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
                     },
                 },
             },
@@ -559,30 +559,30 @@ content_key_policy = azure_native.media.ContentKeyPolicy("contentKeyPolicy",
     description="ArmPolicyDescription",
     options=[
         azure_native.media.ContentKeyPolicyOptionArgs(
-            configuration={
-                "odataType": "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
-            },
+            configuration=azure_native.media.ContentKeyPolicyClearKeyConfigurationArgs(
+                odata_type="#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
+            ),
             name="ClearKeyOption",
-            restriction={
-                "audience": "urn:audience",
-                "issuer": "urn:issuer",
-                "odataType": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
-                "primaryVerificationKey": {
+            restriction=azure_native.media.ContentKeyPolicyTokenRestrictionArgs(
+                audience="urn:audience",
+                issuer="urn:issuer",
+                odata_type="#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+                primary_verification_key={
                     "keyValue": "AAAAAAAAAAAAAAAAAAAAAA==",
                     "odataType": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
                 },
-                "restrictionTokenType": "Swt",
-            },
+                restriction_token_type="Swt",
+            ),
         ),
         azure_native.media.ContentKeyPolicyOptionArgs(
-            configuration={
-                "odataType": "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
-                "widevineTemplate": "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
-            },
+            configuration=azure_native.media.ContentKeyPolicyWidevineConfigurationArgs(
+                odata_type="#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
+                widevine_template="{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
+            ),
             name="widevineoption",
-            restriction={
-                "odataType": "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
-            },
+            restriction=azure_native.media.ContentKeyPolicyOpenRestrictionArgs(
+                odata_type="#Microsoft.Media.ContentKeyPolicyOpenRestriction",
+            ),
         ),
     ],
     resource_group_name="contoso")
@@ -688,25 +688,19 @@ const contentKeyPolicy = new azure_native.media.ContentKeyPolicy("contentKeyPoli
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ContentKeyPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -718,25 +712,19 @@ const contentKeyPolicy = new azure_native.media.ContentKeyPolicy("contentKeyPoli
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ContentKeyPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -748,33 +736,25 @@ const contentKeyPolicy = new azure_native.media.ContentKeyPolicy("contentKeyPoli
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ContentKeyPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -786,25 +766,19 @@ const contentKeyPolicy = new azure_native.media.ContentKeyPolicy("contentKeyPoli
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ContentKeyPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

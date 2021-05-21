@@ -142,6 +142,11 @@ class MyStack : Stack
             AtlasCidrBlock = "10.8.0.0/21",
             ProjectId = "<YOUR-PROJECT-ID>",
             ProviderName = "GCP",
+            Regions = 
+            {
+                "US_EAST_4",
+                "US_WEST_3",
+            },
         });
     }
 
@@ -168,6 +173,10 @@ func main() {
 			AtlasCidrBlock: pulumi.String("10.8.0.0/21"),
 			ProjectId:      pulumi.String("<YOUR-PROJECT-ID>"),
 			ProviderName:   pulumi.String("GCP"),
+			Regions: pulumi.StringArray{
+				pulumi.String("US_EAST_4"),
+				pulumi.String("US_WEST_3"),
+			},
 		})
 		if err != nil {
 			return err
@@ -190,7 +199,11 @@ import pulumi_mongodbatlas as mongodbatlas
 test = mongodbatlas.NetworkContainer("test",
     atlas_cidr_block="10.8.0.0/21",
     project_id="<YOUR-PROJECT-ID>",
-    provider_name="GCP")
+    provider_name="GCP",
+    regions=[
+        "US_EAST_4",
+        "US_WEST_3",
+    ])
 ```
 
 
@@ -208,6 +221,10 @@ const test = new mongodbatlas.NetworkContainer("test", {
     atlasCidrBlock: "10.8.0.0/21",
     projectId: "<YOUR-PROJECT-ID>",
     providerName: "GCP",
+    regions: [
+        "US_EAST_4",
+        "US_WEST_3",
+    ],
 });
 ```
 
@@ -336,7 +353,8 @@ const test = new mongodbatlas.NetworkContainer("test", {
                      <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">region_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                     <span class="nx">region_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">NetworkContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkContainerArgs</a></span><span class="p">,</span>
@@ -359,25 +377,19 @@ const test = new mongodbatlas.NetworkContainer("test", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkContainerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -389,25 +401,19 @@ const test = new mongodbatlas.NetworkContainer("test", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkContainerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -419,33 +425,25 @@ const test = new mongodbatlas.NetworkContainer("test", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkContainerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -457,25 +455,19 @@ const test = new mongodbatlas.NetworkContainer("test", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkContainerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -538,6 +530,15 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Atlas AWS region name for where this container will exist, see the reference list for Atlas AWS region names [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regions_csharp">
+<a href="#regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Atlas regions where the container resides. Provide this field only if you provide an `atlas_cidr_block` smaller than `/18`. [GCP Regions values](https://docs.atlas.mongodb.com/reference/api/vpc-create-container/#request-body-parameters).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -590,6 +591,15 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Atlas AWS region name for where this container will exist, see the reference list for Atlas AWS region names [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regions_go">
+<a href="#regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Atlas regions where the container resides. Provide this field only if you provide an `atlas_cidr_block` smaller than `/18`. [GCP Regions values](https://docs.atlas.mongodb.com/reference/api/vpc-create-container/#request-body-parameters).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -642,6 +652,15 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Atlas AWS region name for where this container will exist, see the reference list for Atlas AWS region names [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regions_nodejs">
+<a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Atlas regions where the container resides. Provide this field only if you provide an `atlas_cidr_block` smaller than `/18`. [GCP Regions values](https://docs.atlas.mongodb.com/reference/api/vpc-create-container/#request-body-parameters).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -694,6 +713,15 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Atlas AWS region name for where this container will exist, see the reference list for Atlas AWS region names [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regions_python">
+<a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Atlas regions where the container resides. Provide this field only if you provide an `atlas_cidr_block` smaller than `/18`. [GCP Regions values](https://docs.atlas.mongodb.com/reference/api/vpc-create-container/#request-body-parameters).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1042,6 +1070,7 @@ Get an existing NetworkContainer resource's state with the given name, ID, and o
         <span class="nx">provisioned</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">region_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">vnet_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NetworkContainer</code></pre></div>
 {{% /choosable %}}
@@ -1252,6 +1281,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Atlas AWS region name for where this container will exist, see the reference list for Atlas AWS region names [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_regions_csharp">
+<a href="#state_regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Atlas regions where the container resides. Provide this field only if you provide an `atlas_cidr_block` smaller than `/18`. [GCP Regions values](https://docs.atlas.mongodb.com/reference/api/vpc-create-container/#request-body-parameters).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_vnetname_csharp">
 <a href="#state_vnetname_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Name</a>
 </span>
@@ -1368,6 +1406,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Atlas AWS region name for where this container will exist, see the reference list for Atlas AWS region names [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_regions_go">
+<a href="#state_regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Atlas regions where the container resides. Provide this field only if you provide an `atlas_cidr_block` smaller than `/18`. [GCP Regions values](https://docs.atlas.mongodb.com/reference/api/vpc-create-container/#request-body-parameters).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vnetname_go">
@@ -1488,6 +1535,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Atlas AWS region name for where this container will exist, see the reference list for Atlas AWS region names [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_regions_nodejs">
+<a href="#state_regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Atlas regions where the container resides. Provide this field only if you provide an `atlas_cidr_block` smaller than `/18`. [GCP Regions values](https://docs.atlas.mongodb.com/reference/api/vpc-create-container/#request-body-parameters).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_vnetname_nodejs">
 <a href="#state_vnetname_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Name</a>
 </span>
@@ -1604,6 +1660,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Atlas AWS region name for where this container will exist, see the reference list for Atlas AWS region names [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_regions_python">
+<a href="#state_regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Atlas regions where the container resides. Provide this field only if you provide an `atlas_cidr_block` smaller than `/18`. [GCP Regions values](https://docs.atlas.mongodb.com/reference/api/vpc-create-container/#request-body-parameters).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vnet_name_python">

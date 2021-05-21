@@ -121,7 +121,7 @@ const exampleNetworkConnectionMonitor = new azure.network.NetworkConnectionMonit
     endpoints: [
         {
             name: "source",
-            virtualMachineId: exampleVirtualMachine.id,
+            targetResourceId: exampleVirtualMachine.id,
             filter: {
                 items: [{
                     address: exampleVirtualMachine.id,
@@ -216,25 +216,19 @@ const exampleNetworkConnectionMonitor = new azure.network.NetworkConnectionMonit
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkConnectionMonitorArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -246,25 +240,19 @@ const exampleNetworkConnectionMonitor = new azure.network.NetworkConnectionMonit
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkConnectionMonitorArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -276,33 +264,25 @@ const exampleNetworkConnectionMonitor = new azure.network.NetworkConnectionMonit
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkConnectionMonitorArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -314,25 +294,19 @@ const exampleNetworkConnectionMonitor = new azure.network.NetworkConnectionMonit
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkConnectionMonitorArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1513,7 +1487,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
+    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor. This property is deprecated in favour of `target_resource_id`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
@@ -1544,7 +1518,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
+    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor. This property is deprecated in favour of `target_resource_id`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
@@ -1575,7 +1549,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
+    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor. This property is deprecated in favour of `target_resource_id`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
@@ -1606,7 +1580,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
+    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor. This property is deprecated in favour of `target_resource_id`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
@@ -1633,6 +1607,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The IP address or domain name of the Network Connection Monitor endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="coveragelevel_csharp">
+<a href="#coveragelevel_csharp" style="color: inherit; text-decoration: inherit;">Coverage<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The test coverage for the Network Connection Monitor endpoint. Possible values are `AboveAverage`, `Average`, `BelowAverage`, `Default`, `Full` and `Low`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="excludedipaddresses_csharp">
+<a href="#excludedipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv4/IPv6 subnet masks or IPv4/IPv6 IP addresses to be excluded to the Network Connection Monitor endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
@@ -1642,14 +1634,41 @@ The following state arguments are supported:
     <dd>{{% md %}}A `filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="includedipaddresses_csharp">
+<a href="#includedipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv4/IPv6 subnet masks or IPv4/IPv6 IP addresses to be included to the Network Connection Monitor endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetresourceid_csharp">
+<a href="#targetresourceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID which is used as the endpoint by the Network Connection Monitor.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetresourcetype_csharp">
+<a href="#targetresourcetype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint type of the Network Connection Monitor. Possible values are `AzureSubnet`, `AzureVM`, `AzureVNet`, `ExternalAddress`, `MMAWorkspaceMachine` and `MMAWorkspaceNetwork`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="virtualmachineid_csharp">
 <a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor. This property is deprecated in favour of `target_resource_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `target_resource_id` and will be removed in v3.0 of the provider.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1673,6 +1692,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The IP address or domain name of the Network Connection Monitor endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="coveragelevel_go">
+<a href="#coveragelevel_go" style="color: inherit; text-decoration: inherit;">Coverage<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The test coverage for the Network Connection Monitor endpoint. Possible values are `AboveAverage`, `Average`, `BelowAverage`, `Default`, `Full` and `Low`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="excludedipaddresses_go">
+<a href="#excludedipaddresses_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv4/IPv6 subnet masks or IPv4/IPv6 IP addresses to be excluded to the Network Connection Monitor endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
@@ -1682,14 +1719,41 @@ The following state arguments are supported:
     <dd>{{% md %}}A `filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="includedipaddresses_go">
+<a href="#includedipaddresses_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv4/IPv6 subnet masks or IPv4/IPv6 IP addresses to be included to the Network Connection Monitor endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetresourceid_go">
+<a href="#targetresourceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID which is used as the endpoint by the Network Connection Monitor.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetresourcetype_go">
+<a href="#targetresourcetype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint type of the Network Connection Monitor. Possible values are `AzureSubnet`, `AzureVM`, `AzureVNet`, `ExternalAddress`, `MMAWorkspaceMachine` and `MMAWorkspaceNetwork`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="virtualmachineid_go">
 <a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor. This property is deprecated in favour of `target_resource_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `target_resource_id` and will be removed in v3.0 of the provider.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1713,6 +1777,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The IP address or domain name of the Network Connection Monitor endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="coveragelevel_nodejs">
+<a href="#coveragelevel_nodejs" style="color: inherit; text-decoration: inherit;">coverage<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The test coverage for the Network Connection Monitor endpoint. Possible values are `AboveAverage`, `Average`, `BelowAverage`, `Default`, `Full` and `Low`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="excludedipaddresses_nodejs">
+<a href="#excludedipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv4/IPv6 subnet masks or IPv4/IPv6 IP addresses to be excluded to the Network Connection Monitor endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
@@ -1722,14 +1804,41 @@ The following state arguments are supported:
     <dd>{{% md %}}A `filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="includedipaddresses_nodejs">
+<a href="#includedipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv4/IPv6 subnet masks or IPv4/IPv6 IP addresses to be included to the Network Connection Monitor endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetresourceid_nodejs">
+<a href="#targetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID which is used as the endpoint by the Network Connection Monitor.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetresourcetype_nodejs">
+<a href="#targetresourcetype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint type of the Network Connection Monitor. Possible values are `AzureSubnet`, `AzureVM`, `AzureVNet`, `ExternalAddress`, `MMAWorkspaceMachine` and `MMAWorkspaceNetwork`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="virtualmachineid_nodejs">
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor. This property is deprecated in favour of `target_resource_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `target_resource_id` and will be removed in v3.0 of the provider.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1753,6 +1862,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The IP address or domain name of the Network Connection Monitor endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="coverage_level_python">
+<a href="#coverage_level_python" style="color: inherit; text-decoration: inherit;">coverage_<wbr>level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The test coverage for the Network Connection Monitor endpoint. Possible values are `AboveAverage`, `Average`, `BelowAverage`, `Default`, `Full` and `Low`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="excluded_ip_addresses_python">
+<a href="#excluded_ip_addresses_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv4/IPv6 subnet masks or IPv4/IPv6 IP addresses to be excluded to the Network Connection Monitor endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
@@ -1762,14 +1889,41 @@ The following state arguments are supported:
     <dd>{{% md %}}A `filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="included_ip_addresses_python">
+<a href="#included_ip_addresses_python" style="color: inherit; text-decoration: inherit;">included_<wbr>ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv4/IPv6 subnet masks or IPv4/IPv6 IP addresses to be included to the Network Connection Monitor endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_resource_id_python">
+<a href="#target_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource ID which is used as the endpoint by the Network Connection Monitor.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_resource_type_python">
+<a href="#target_resource_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The endpoint type of the Network Connection Monitor. Possible values are `AzureSubnet`, `AzureVM`, `AzureVNet`, `ExternalAddress`, `MMAWorkspaceMachine` and `MMAWorkspaceNetwork`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="virtual_machine_id_python">
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor. This property is deprecated in favour of `target_resource_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `target_resource_id` and will be removed in v3.0 of the provider.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkconnectionmonitorendpointfilter">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter</h4>
@@ -1972,7 +2126,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
+    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor. This property is deprecated in favour of `target_resource_id`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
@@ -1994,7 +2148,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
+    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor. This property is deprecated in favour of `target_resource_id`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
@@ -2016,7 +2170,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
+    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor. This property is deprecated in favour of `target_resource_id`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
@@ -2038,7 +2192,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
+    <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor. This property is deprecated in favour of `target_resource_id`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 

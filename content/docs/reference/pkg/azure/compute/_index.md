@@ -13,6 +13,7 @@ Explore the resources and functions of the azure.compute module.
 <ul class="api">
     <li><a href="availabilityset" title="AvailabilitySet"><span class="symbol resource"></span>AvailabilitySet</a></li>
     <li><a href="bastionhost" title="BastionHost"><span class="symbol resource"></span>BastionHost</a></li>
+    <li><a href="configurationpolicyassignment" title="ConfigurationPolicyAssignment"><span class="symbol resource"></span>ConfigurationPolicyAssignment</a></li>
     <li><a href="datadiskattachment" title="DataDiskAttachment"><span class="symbol resource"></span>DataDiskAttachment</a></li>
     <li><a href="dedicatedhost" title="DedicatedHost"><span class="symbol resource"></span>DedicatedHost</a></li>
     <li><a href="dedicatedhostgroup" title="DedicatedHostGroup"><span class="symbol resource"></span>DedicatedHostGroup</a></li>
@@ -66,6 +67,6 @@ Explore the resources and functions of the azure.compute module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.0.0</dd>
+	<dd>4.3.0</dd>
 </dl>
 

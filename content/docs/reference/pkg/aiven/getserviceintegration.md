@@ -42,9 +42,9 @@ class MyStack : Stack
     {
         var myintegration = Output.Create(Aiven.GetServiceIntegration.InvokeAsync(new Aiven.GetServiceIntegrationArgs
         {
+            Project = aiven_project.Myproject.Project,
             DestinationServiceName = "<DESTINATION_SERVICE_NAME>",
             IntegrationType = "datadog",
-            Project = aiven_project.Myproject.Project,
             SourceServiceName = "<SOURCE_SERVICE_NAME>",
         }));
     }
@@ -69,9 +69,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.LookupServiceIntegration(ctx, &aiven.LookupServiceIntegrationArgs{
+			Project:                aiven_project.Myproject.Project,
 			DestinationServiceName: "<DESTINATION_SERVICE_NAME>",
 			IntegrationType:        "datadog",
-			Project:                aiven_project.Myproject.Project,
 			SourceServiceName:      "<SOURCE_SERVICE_NAME>",
 		}, nil)
 		if err != nil {
@@ -92,9 +92,9 @@ func main() {
 import pulumi
 import pulumi_aiven as aiven
 
-myintegration = aiven.get_service_integration(destination_service_name="<DESTINATION_SERVICE_NAME>",
+myintegration = aiven.get_service_integration(project=aiven_project["myproject"]["project"],
+    destination_service_name="<DESTINATION_SERVICE_NAME>",
     integration_type="datadog",
-    project=aiven_project["myproject"]["project"],
     source_service_name="<SOURCE_SERVICE_NAME>")
 ```
 
@@ -109,12 +109,12 @@ myintegration = aiven.get_service_integration(destination_service_name="<DESTINA
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
-const myintegration = aiven_project_myproject.project.apply(project => aiven.getServiceIntegration({
+const myintegration = aiven.getServiceIntegration({
+    project: aiven_project.myproject.project,
     destinationServiceName: "<DESTINATION_SERVICE_NAME>",
     integrationType: "datadog",
-    project: project,
     sourceServiceName: "<SOURCE_SERVICE_NAME>",
-}, { async: true }));
+});
 ```
 
 
@@ -1944,6 +1944,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxjmxmetrics_csharp">
+<a href="#maxjmxmetrics_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Jmx<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1995,6 +2003,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxjmxmetrics_go">
+<a href="#maxjmxmetrics_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Jmx<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2048,6 +2064,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxjmxmetrics_nodejs">
+<a href="#maxjmxmetrics_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Jmx<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2099,6 +2123,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_jmx_metrics_python">
+<a href="#max_jmx_metrics_python" style="color: inherit; text-decoration: inherit;">max_<wbr>jmx_<wbr>metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2180,6 +2212,258 @@ The following output properties are available:
             title="Optional">
         <span id="tag_python">
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getserviceintegrationexternalawscloudwatchmetricsuserconfig">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="droppedmetrics_csharp">
+<a href="#droppedmetrics_csharp" style="color: inherit; text-decoration: inherit;">Dropped<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfigdroppedmetric">List&lt;Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Dropped<wbr>Metric&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extrametrics_csharp">
+<a href="#extrametrics_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfigextrametric">List&lt;Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Extra<wbr>Metric&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="droppedmetrics_go">
+<a href="#droppedmetrics_go" style="color: inherit; text-decoration: inherit;">Dropped<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfigdroppedmetric">[]Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Dropped<wbr>Metric</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extrametrics_go">
+<a href="#extrametrics_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfigextrametric">[]Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Extra<wbr>Metric</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="droppedmetrics_nodejs">
+<a href="#droppedmetrics_nodejs" style="color: inherit; text-decoration: inherit;">dropped<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfigdroppedmetric">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Dropped<wbr>Metric[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extrametrics_nodejs">
+<a href="#extrametrics_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfigextrametric">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Extra<wbr>Metric[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dropped_metrics_python">
+<a href="#dropped_metrics_python" style="color: inherit; text-decoration: inherit;">dropped_<wbr>metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfigdroppedmetric">Sequence[Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Dropped<wbr>Metric]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extra_metrics_python">
+<a href="#extra_metrics_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfigextrametric">Sequence[Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Extra<wbr>Metric]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getserviceintegrationexternalawscloudwatchmetricsuserconfigdroppedmetric">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Dropped<wbr>Metric</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="field_csharp">
+<a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metric_csharp">
+<a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="field_go">
+<a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metric_go">
+<a href="#metric_go" style="color: inherit; text-decoration: inherit;">Metric</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="field_nodejs">
+<a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metric_nodejs">
+<a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="field_python">
+<a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metric_python">
+<a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getserviceintegrationexternalawscloudwatchmetricsuserconfigextrametric">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Extra<wbr>Metric</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="field_csharp">
+<a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metric_csharp">
+<a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="field_go">
+<a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metric_go">
+<a href="#metric_go" style="color: inherit; text-decoration: inherit;">Metric</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="field_nodejs">
+<a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metric_nodejs">
+<a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="field_python">
+<a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metric_python">
+<a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

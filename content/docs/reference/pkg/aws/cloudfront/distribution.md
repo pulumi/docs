@@ -676,6 +676,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
                  <span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[DistributionRestrictionsArgs]</span> = None<span class="p">,</span>
                  <span class="nx">retain_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                 <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                  <span class="nx">viewer_certificate</span><span class="p">:</span> <span class="nx">Optional[DistributionViewerCertificateArgs]</span> = None<span class="p">,</span>
                  <span class="nx">wait_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -701,25 +702,19 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DistributionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -731,25 +726,19 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DistributionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -761,33 +750,25 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DistributionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -799,25 +780,19 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DistributionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1003,7 +978,16 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitfordeployment_csharp">
@@ -1205,7 +1189,16 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitfordeployment_go">
@@ -1407,7 +1400,16 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitfordeployment_nodejs">
@@ -1609,7 +1611,16 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_for_deployment_python">
@@ -2134,6 +2145,7 @@ Get an existing Distribution resource's state with the given name, ID, and optio
         <span class="nx">retain_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">trusted_key_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionTrustedKeyGroupArgs]]</span> = None<span class="p">,</span>
         <span class="nx">trusted_signers</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionTrustedSignerArgs]]</span> = None<span class="p">,</span>
         <span class="nx">viewer_certificate</span><span class="p">:</span> <span class="nx">Optional[DistributionViewerCertificateArgs]</span> = None<span class="p">,</span>
@@ -2489,7 +2501,16 @@ CloudFront system.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustedkeygroups_csharp">
@@ -2791,7 +2812,16 @@ CloudFront system.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustedkeygroups_go">
@@ -3093,7 +3123,16 @@ CloudFront system.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustedkeygroups_nodejs">
@@ -3395,7 +3434,16 @@ CloudFront system.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trusted_key_groups_python">
@@ -3746,6 +3794,16 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 handles query strings, cookies and headers (maximum one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="functionassociations_csharp">
+<a href="#functionassociations_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Associations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorfunctionassociation">List&lt;Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A config block that triggers a cloudfront
+function with specific actions (maximum 2).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="lambdafunctionassociations_csharp">
 <a href="#lambdafunctionassociations_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Function<wbr>Associations</a>
 </span>
@@ -3927,6 +3985,16 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="functionassociations_go">
+<a href="#functionassociations_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Associations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorfunctionassociation">[]Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association</a></span>
+    </dt>
+    <dd>{{% md %}}A config block that triggers a cloudfront
+function with specific actions (maximum 2).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdafunctionassociations_go">
@@ -4112,6 +4180,16 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 handles query strings, cookies and headers (maximum one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="functionassociations_nodejs">
+<a href="#functionassociations_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Associations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorfunctionassociation">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A config block that triggers a cloudfront
+function with specific actions (maximum 2).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="lambdafunctionassociations_nodejs">
 <a href="#lambdafunctionassociations_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Function<wbr>Associations</a>
 </span>
@@ -4293,6 +4371,16 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="function_associations_python">
+<a href="#function_associations_python" style="color: inherit; text-decoration: inherit;">function_<wbr>associations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorfunctionassociation">Sequence[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A config block that triggers a cloudfront
+function with specific actions (maximum 2).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambda_function_associations_python">
@@ -4681,6 +4769,100 @@ your origin.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="distributiondefaultcachebehaviorfunctionassociation">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="eventtype_csharp">
+<a href="#eventtype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific event to trigger this function.
+Valid values: `viewer-request` or `viewer-response`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="functionarn_csharp">
+<a href="#functionarn_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN of the Cloudfront function.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="eventtype_go">
+<a href="#eventtype_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific event to trigger this function.
+Valid values: `viewer-request` or `viewer-response`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="functionarn_go">
+<a href="#functionarn_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN of the Cloudfront function.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="eventtype_nodejs">
+<a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific event to trigger this function.
+Valid values: `viewer-request` or `viewer-response`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="functionarn_nodejs">
+<a href="#functionarn_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN of the Cloudfront function.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="event_type_python">
+<a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The specific event to trigger this function.
+Valid values: `viewer-request` or `viewer-response`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="function_arn_python">
+<a href="#function_arn_python" style="color: inherit; text-decoration: inherit;">function_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ARN of the Cloudfront function.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="distributiondefaultcachebehaviorlambdafunctionassociation">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association</h4>
 
 {{% choosable language csharp %}}
@@ -4693,8 +4875,7 @@ your origin.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request`, `origin-request`, `viewer-response`,
-`origin-response`
+Valid values: `viewer-request` or `viewer-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_csharp">
@@ -4726,8 +4907,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request`, `origin-request`, `viewer-response`,
-`origin-response`
+Valid values: `viewer-request` or `viewer-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_go">
@@ -4759,8 +4939,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request`, `origin-request`, `viewer-response`,
-`origin-response`
+Valid values: `viewer-request` or `viewer-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_nodejs">
@@ -4792,8 +4971,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request`, `origin-request`, `viewer-response`,
-`origin-response`
+Valid values: `viewer-request` or `viewer-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambda_arn_python">
@@ -5062,6 +5240,16 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 handles query strings, cookies and headers (maximum one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="functionassociations_csharp">
+<a href="#functionassociations_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Associations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorfunctionassociation">List&lt;Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A config block that triggers a cloudfront
+function with specific actions (maximum 2).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="lambdafunctionassociations_csharp">
 <a href="#lambdafunctionassociations_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Function<wbr>Associations</a>
 </span>
@@ -5253,6 +5441,16 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="functionassociations_go">
+<a href="#functionassociations_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Associations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorfunctionassociation">[]Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association</a></span>
+    </dt>
+    <dd>{{% md %}}A config block that triggers a cloudfront
+function with specific actions (maximum 2).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdafunctionassociations_go">
@@ -5448,6 +5646,16 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 handles query strings, cookies and headers (maximum one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="functionassociations_nodejs">
+<a href="#functionassociations_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Associations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorfunctionassociation">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A config block that triggers a cloudfront
+function with specific actions (maximum 2).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="lambdafunctionassociations_nodejs">
 <a href="#lambdafunctionassociations_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Function<wbr>Associations</a>
 </span>
@@ -5639,6 +5847,16 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="function_associations_python">
+<a href="#function_associations_python" style="color: inherit; text-decoration: inherit;">function_<wbr>associations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorfunctionassociation">Sequence[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A config block that triggers a cloudfront
+function with specific actions (maximum 2).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambda_function_associations_python">
@@ -6027,6 +6245,100 @@ your origin.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="distributionorderedcachebehaviorfunctionassociation">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="eventtype_csharp">
+<a href="#eventtype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific event to trigger this function.
+Valid values: `viewer-request` or `viewer-response`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="functionarn_csharp">
+<a href="#functionarn_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN of the Cloudfront function.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="eventtype_go">
+<a href="#eventtype_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific event to trigger this function.
+Valid values: `viewer-request` or `viewer-response`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="functionarn_go">
+<a href="#functionarn_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN of the Cloudfront function.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="eventtype_nodejs">
+<a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific event to trigger this function.
+Valid values: `viewer-request` or `viewer-response`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="functionarn_nodejs">
+<a href="#functionarn_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN of the Cloudfront function.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="event_type_python">
+<a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The specific event to trigger this function.
+Valid values: `viewer-request` or `viewer-response`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="function_arn_python">
+<a href="#function_arn_python" style="color: inherit; text-decoration: inherit;">function_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ARN of the Cloudfront function.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="distributionorderedcachebehaviorlambdafunctionassociation">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association</h4>
 
 {{% choosable language csharp %}}
@@ -6039,8 +6351,7 @@ your origin.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request`, `origin-request`, `viewer-response`,
-`origin-response`
+Valid values: `viewer-request` or `viewer-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_csharp">
@@ -6072,8 +6383,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request`, `origin-request`, `viewer-response`,
-`origin-response`
+Valid values: `viewer-request` or `viewer-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_go">
@@ -6105,8 +6415,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request`, `origin-request`, `viewer-response`,
-`origin-response`
+Valid values: `viewer-request` or `viewer-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_nodejs">
@@ -6138,8 +6447,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request`, `origin-request`, `viewer-response`,
-`origin-response`
+Valid values: `viewer-request` or `viewer-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambda_arn_python">

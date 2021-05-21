@@ -86,6 +86,7 @@ class MyStack : Stack
                         {
                             MetricTrigger = new AzureNative.Insights.Inputs.MetricTriggerArgs
                             {
+                                DividePerInstance = false,
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                                 Operator = "GreaterThan",
@@ -107,6 +108,7 @@ class MyStack : Stack
                         {
                             MetricTrigger = new AzureNative.Insights.Inputs.MetricTriggerArgs
                             {
+                                DividePerInstance = false,
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                                 Operator = "GreaterThan",
@@ -161,6 +163,7 @@ class MyStack : Stack
                         {
                             MetricTrigger = new AzureNative.Insights.Inputs.MetricTriggerArgs
                             {
+                                DividePerInstance = false,
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                                 Operator = "GreaterThan",
@@ -182,6 +185,7 @@ class MyStack : Stack
                         {
                             MetricTrigger = new AzureNative.Insights.Inputs.MetricTriggerArgs
                             {
+                                DividePerInstance = false,
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                                 Operator = "GreaterThan",
@@ -265,6 +269,7 @@ autoscale_setting = azure_native.insights.AutoscaleSetting("autoscaleSetting",
             rules=[
                 azure_native.insights.ScaleRuleArgs(
                     metric_trigger=azure_native.insights.MetricTriggerArgs(
+                        divide_per_instance=False,
                         metric_name="Percentage CPU",
                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator="GreaterThan",
@@ -283,6 +288,7 @@ autoscale_setting = azure_native.insights.AutoscaleSetting("autoscaleSetting",
                 ),
                 azure_native.insights.ScaleRuleArgs(
                     metric_trigger=azure_native.insights.MetricTriggerArgs(
+                        divide_per_instance=False,
                         metric_name="Percentage CPU",
                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator="GreaterThan",
@@ -320,6 +326,7 @@ autoscale_setting = azure_native.insights.AutoscaleSetting("autoscaleSetting",
             rules=[
                 azure_native.insights.ScaleRuleArgs(
                     metric_trigger=azure_native.insights.MetricTriggerArgs(
+                        divide_per_instance=False,
                         metric_name="Percentage CPU",
                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator="GreaterThan",
@@ -338,6 +345,7 @@ autoscale_setting = azure_native.insights.AutoscaleSetting("autoscaleSetting",
                 ),
                 azure_native.insights.ScaleRuleArgs(
                     metric_trigger=azure_native.insights.MetricTriggerArgs(
+                        divide_per_instance=False,
                         metric_name="Percentage CPU",
                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator="GreaterThan",
@@ -409,6 +417,7 @@ const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSe
             rules: [
                 {
                     metricTrigger: {
+                        dividePerInstance: false,
                         metricName: "Percentage CPU",
                         metricResourceUri: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator: "GreaterThan",
@@ -427,6 +436,7 @@ const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSe
                 },
                 {
                     metricTrigger: {
+                        dividePerInstance: false,
                         metricName: "Percentage CPU",
                         metricResourceUri: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator: "GreaterThan",
@@ -464,6 +474,7 @@ const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSe
             rules: [
                 {
                     metricTrigger: {
+                        dividePerInstance: false,
                         metricName: "Percentage CPU",
                         metricResourceUri: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator: "GreaterThan",
@@ -482,6 +493,7 @@ const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSe
                 },
                 {
                     metricTrigger: {
+                        dividePerInstance: false,
                         metricName: "Percentage CPU",
                         metricResourceUri: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator: "GreaterThan",
@@ -563,25 +575,19 @@ const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSe
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AutoscaleSettingArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -593,25 +599,19 @@ const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSe
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AutoscaleSettingArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -623,33 +623,25 @@ const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSe
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AutoscaleSettingArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -661,25 +653,19 @@ const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSe
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AutoscaleSettingArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -2059,6 +2045,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="divideperinstance_csharp">
+<a href="#divideperinstance_csharp" style="color: inherit; text-decoration: inherit;">Divide<wbr>Per<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="metricnamespace_csharp">
 <a href="#metricnamespace_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
 </span>
@@ -2142,6 +2136,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#scalerulemetricdimension">[]Scale<wbr>Rule<wbr>Metric<wbr>Dimension</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="divideperinstance_go">
+<a href="#divideperinstance_go" style="color: inherit; text-decoration: inherit;">Divide<wbr>Per<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_go">
 <a href="#metricnamespace_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
@@ -2227,6 +2229,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="divideperinstance_nodejs">
+<a href="#divideperinstance_nodejs" style="color: inherit; text-decoration: inherit;">divide<wbr>Per<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="metricnamespace_nodejs">
 <a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
 </span>
@@ -2310,6 +2320,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#scalerulemetricdimension">Sequence[Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="divide_per_instance_python">
+<a href="#divide_per_instance_python" style="color: inherit; text-decoration: inherit;">divide_<wbr>per_<wbr>instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_namespace_python">
 <a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
@@ -2397,6 +2415,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="divideperinstance_csharp">
+<a href="#divideperinstance_csharp" style="color: inherit; text-decoration: inherit;">Divide<wbr>Per<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="metricnamespace_csharp">
 <a href="#metricnamespace_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
 </span>
@@ -2480,6 +2506,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#scalerulemetricdimensionresponse">[]Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="divideperinstance_go">
+<a href="#divideperinstance_go" style="color: inherit; text-decoration: inherit;">Divide<wbr>Per<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_go">
 <a href="#metricnamespace_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
@@ -2565,6 +2599,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="divideperinstance_nodejs">
+<a href="#divideperinstance_nodejs" style="color: inherit; text-decoration: inherit;">divide<wbr>Per<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="metricnamespace_nodejs">
 <a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
 </span>
@@ -2648,6 +2690,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#scalerulemetricdimensionresponse">Sequence[Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="divide_per_instance_python">
+<a href="#divide_per_instance_python" style="color: inherit; text-decoration: inherit;">divide_<wbr>per_<wbr>instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_namespace_python">
 <a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>

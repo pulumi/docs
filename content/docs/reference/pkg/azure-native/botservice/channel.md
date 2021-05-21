@@ -37,14 +37,14 @@ class MyStack : Stack
         {
             ChannelName = "AlexaChannel",
             Location = "global",
-            Properties = 
+            Properties = new AzureNative.BotService.Inputs.AlexaChannelArgs
             {
-                { "channelName", "AlexaChannel" },
-                { "properties", 
+                ChannelName = "AlexaChannel",
+                Properties = new AzureNative.BotService.Inputs.AlexaChannelPropertiesArgs
                 {
-                    { "alexaSkillId", "XAlexaSkillIdX" },
-                    { "isEnabled", true },
-                } },
+                    AlexaSkillId = "XAlexaSkillIdX",
+                    IsEnabled = true,
+                },
             },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "samplebotname",
@@ -61,7 +61,39 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	botservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/botservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := botservice.NewChannel(ctx, "channel", &botservice.ChannelArgs{
+			ChannelName: pulumi.String("AlexaChannel"),
+			Location:    pulumi.String("global"),
+			Properties: botservice.AlexaChannel{
+				ChannelName: "AlexaChannel",
+				Properties: botservice.AlexaChannelProperties{
+					AlexaSkillId: "XAlexaSkillIdX",
+					IsEnabled:    true,
+				},
+			},
+			ResourceGroupName: pulumi.String("OneResourceGroupName"),
+			ResourceName:      pulumi.String("samplebotname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -76,13 +108,13 @@ import pulumi_azure_native as azure_native
 channel = azure_native.botservice.Channel("channel",
     channel_name="AlexaChannel",
     location="global",
-    properties={
-        "channelName": "AlexaChannel",
-        "properties": {
-            "alexaSkillId": "XAlexaSkillIdX",
-            "isEnabled": True,
-        },
-    },
+    properties=azure_native.botservice.AlexaChannelArgs(
+        channel_name="AlexaChannel",
+        properties=azure_native.botservice.AlexaChannelPropertiesArgs(
+            alexa_skill_id="XAlexaSkillIdX",
+            is_enabled=True,
+        ),
+    ),
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname")
 
@@ -138,15 +170,15 @@ class MyStack : Stack
         {
             ChannelName = "EmailChannel",
             Location = "global",
-            Properties = 
+            Properties = new AzureNative.BotService.Inputs.EmailChannelArgs
             {
-                { "channelName", "EmailChannel" },
-                { "properties", 
+                ChannelName = "EmailChannel",
+                Properties = new AzureNative.BotService.Inputs.EmailChannelPropertiesArgs
                 {
-                    { "emailAddress", "a@b.com" },
-                    { "isEnabled", true },
-                    { "password", "pwd" },
-                } },
+                    EmailAddress = "a@b.com",
+                    IsEnabled = true,
+                    Password = "pwd",
+                },
             },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "samplebotname",
@@ -163,7 +195,40 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	botservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/botservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := botservice.NewChannel(ctx, "channel", &botservice.ChannelArgs{
+			ChannelName: pulumi.String("EmailChannel"),
+			Location:    pulumi.String("global"),
+			Properties: botservice.EmailChannel{
+				ChannelName: "EmailChannel",
+				Properties: botservice.EmailChannelProperties{
+					EmailAddress: "a@b.com",
+					IsEnabled:    true,
+					Password:     "pwd",
+				},
+			},
+			ResourceGroupName: pulumi.String("OneResourceGroupName"),
+			ResourceName:      pulumi.String("samplebotname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -178,14 +243,14 @@ import pulumi_azure_native as azure_native
 channel = azure_native.botservice.Channel("channel",
     channel_name="EmailChannel",
     location="global",
-    properties={
-        "channelName": "EmailChannel",
-        "properties": {
-            "emailAddress": "a@b.com",
-            "isEnabled": True,
-            "password": "pwd",
-        },
-    },
+    properties=azure_native.botservice.EmailChannelArgs(
+        channel_name="EmailChannel",
+        properties=azure_native.botservice.EmailChannelPropertiesArgs(
+            email_address="a@b.com",
+            is_enabled=True,
+            password="pwd",
+        ),
+    ),
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname")
 
@@ -242,14 +307,15 @@ class MyStack : Stack
         {
             ChannelName = "DirectLineSpeechChannel",
             Location = "global",
-            Properties = 
+            Properties = new AzureNative.BotService.Inputs.DirectLineSpeechChannelArgs
             {
-                { "channelName", "DirectLineSpeechChannel" },
-                { "properties", 
+                ChannelName = "DirectLineSpeechChannel",
+                Properties = new AzureNative.BotService.Inputs.DirectLineSpeechChannelPropertiesArgs
                 {
-                    { "cognitiveServicesSubscriptionId", "XcognitiveServicesSubscriptionIdX" },
-                    { "isEnabled", true },
-                } },
+                    CognitiveServiceRegion = "XcognitiveServiceRegionX",
+                    CognitiveServiceSubscriptionKey = "XcognitiveServiceSubscriptionKeyX",
+                    IsEnabled = true,
+                },
             },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "samplebotname",
@@ -266,7 +332,40 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	botservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/botservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := botservice.NewChannel(ctx, "channel", &botservice.ChannelArgs{
+			ChannelName: pulumi.String("DirectLineSpeechChannel"),
+			Location:    pulumi.String("global"),
+			Properties: botservice.DirectLineSpeechChannel{
+				ChannelName: "DirectLineSpeechChannel",
+				Properties: botservice.DirectLineSpeechChannelProperties{
+					CognitiveServiceRegion:          "XcognitiveServiceRegionX",
+					CognitiveServiceSubscriptionKey: "XcognitiveServiceSubscriptionKeyX",
+					IsEnabled:                       true,
+				},
+			},
+			ResourceGroupName: pulumi.String("OneResourceGroupName"),
+			ResourceName:      pulumi.String("samplebotname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -281,13 +380,14 @@ import pulumi_azure_native as azure_native
 channel = azure_native.botservice.Channel("channel",
     channel_name="DirectLineSpeechChannel",
     location="global",
-    properties={
-        "channelName": "DirectLineSpeechChannel",
-        "properties": {
-            "cognitiveServicesSubscriptionId": "XcognitiveServicesSubscriptionIdX",
-            "isEnabled": True,
-        },
-    },
+    properties=azure_native.botservice.DirectLineSpeechChannelArgs(
+        channel_name="DirectLineSpeechChannel",
+        properties=azure_native.botservice.DirectLineSpeechChannelPropertiesArgs(
+            cognitive_service_region="XcognitiveServiceRegionX",
+            cognitive_service_subscription_key="XcognitiveServiceSubscriptionKeyX",
+            is_enabled=True,
+        ),
+    ),
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname")
 
@@ -310,7 +410,8 @@ const channel = new azure_native.botservice.Channel("channel", {
     properties: {
         channelName: "DirectLineSpeechChannel",
         properties: {
-            cognitiveServicesSubscriptionId: "XcognitiveServicesSubscriptionIdX",
+            cognitiveServiceRegion: "XcognitiveServiceRegionX",
+            cognitiveServiceSubscriptionKey: "XcognitiveServiceSubscriptionKeyX",
             isEnabled: true,
         },
     },
@@ -343,20 +444,20 @@ class MyStack : Stack
         {
             ChannelName = "LineChannel",
             Location = "global",
-            Properties = 
+            Properties = new AzureNative.BotService.Inputs.LineChannelArgs
             {
-                { "channelName", "LineChannel" },
-                { "properties", 
+                ChannelName = "LineChannel",
+                Properties = new AzureNative.BotService.Inputs.LineChannelPropertiesArgs
                 {
-                    { "lineRegistrations", 
+                    LineRegistrations = 
                     {
                         new AzureNative.BotService.Inputs.LineRegistrationArgs
                         {
                             ChannelAccessToken = "channelAccessToken",
                             ChannelSecret = "channelSecret",
                         },
-                    } },
-                } },
+                    },
+                },
             },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "samplebotname",
@@ -373,7 +474,43 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	botservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/botservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := botservice.NewChannel(ctx, "channel", &botservice.ChannelArgs{
+			ChannelName: pulumi.String("LineChannel"),
+			Location:    pulumi.String("global"),
+			Properties: botservice.LineChannel{
+				ChannelName: "LineChannel",
+				Properties: botservice.LineChannelProperties{
+					LineRegistrations: []botservice.LineRegistration{
+						botservice.LineRegistration{
+							ChannelAccessToken: "channelAccessToken",
+							ChannelSecret:      "channelSecret",
+						},
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("OneResourceGroupName"),
+			ResourceName:      pulumi.String("samplebotname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -388,15 +525,15 @@ import pulumi_azure_native as azure_native
 channel = azure_native.botservice.Channel("channel",
     channel_name="LineChannel",
     location="global",
-    properties={
-        "channelName": "LineChannel",
-        "properties": {
-            "lineRegistrations": [azure_native.botservice.LineRegistrationArgs(
+    properties=azure_native.botservice.LineChannelArgs(
+        channel_name="LineChannel",
+        properties=azure_native.botservice.LineChannelPropertiesArgs(
+            line_registrations=[azure_native.botservice.LineRegistrationArgs(
                 channel_access_token="channelAccessToken",
                 channel_secret="channelSecret",
             )],
-        },
-    },
+        ),
+    ),
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname")
 
@@ -486,25 +623,19 @@ const channel = new azure_native.botservice.Channel("channel", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ChannelArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -516,25 +647,19 @@ const channel = new azure_native.botservice.Channel("channel", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ChannelArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -546,33 +671,25 @@ const channel = new azure_native.botservice.Channel("channel", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ChannelArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -584,25 +701,19 @@ const channel = new azure_native.botservice.Channel("channel", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ChannelArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -2148,13 +2259,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cognitiveservicessubscriptionid_csharp">
-<a href="#cognitiveservicessubscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
+        <span id="cognitiveserviceregion_csharp">
+<a href="#cognitiveserviceregion_csharp" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Service<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cognitive service region with this channel registration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cognitiveservicesubscriptionkey_csharp">
+<a href="#cognitiveservicesubscriptionkey_csharp" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Service<wbr>Subscription<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cognitive service subscription key to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customspeechmodelid_csharp">
 <a href="#customspeechmodelid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Speech<wbr>Model<wbr>Id</a>
@@ -2192,13 +2311,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cognitiveservicessubscriptionid_go">
-<a href="#cognitiveservicessubscriptionid_go" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
+        <span id="cognitiveserviceregion_go">
+<a href="#cognitiveserviceregion_go" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Service<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cognitive service region with this channel registration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cognitiveservicesubscriptionkey_go">
+<a href="#cognitiveservicesubscriptionkey_go" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Service<wbr>Subscription<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cognitive service subscription key to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customspeechmodelid_go">
 <a href="#customspeechmodelid_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Speech<wbr>Model<wbr>Id</a>
@@ -2236,13 +2363,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cognitiveservicessubscriptionid_nodejs">
-<a href="#cognitiveservicessubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
+        <span id="cognitiveserviceregion_nodejs">
+<a href="#cognitiveserviceregion_nodejs" style="color: inherit; text-decoration: inherit;">cognitive<wbr>Service<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cognitive service region with this channel registration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cognitiveservicesubscriptionkey_nodejs">
+<a href="#cognitiveservicesubscriptionkey_nodejs" style="color: inherit; text-decoration: inherit;">cognitive<wbr>Service<wbr>Subscription<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cognitive service subscription key to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customspeechmodelid_nodejs">
 <a href="#customspeechmodelid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Speech<wbr>Model<wbr>Id</a>
@@ -2280,13 +2415,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cognitive_services_subscription_id_python">
-<a href="#cognitive_services_subscription_id_python" style="color: inherit; text-decoration: inherit;">cognitive_<wbr>services_<wbr>subscription_<wbr>id</a>
+        <span id="cognitive_service_region_python">
+<a href="#cognitive_service_region_python" style="color: inherit; text-decoration: inherit;">cognitive_<wbr>service_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cognitive service region with this channel registration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cognitive_service_subscription_key_python">
+<a href="#cognitive_service_subscription_key_python" style="color: inherit; text-decoration: inherit;">cognitive_<wbr>service_<wbr>subscription_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cognitive service subscription key to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_speech_model_id_python">
 <a href="#custom_speech_model_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>speech_<wbr>model_<wbr>id</a>
@@ -2326,13 +2469,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cognitiveservicessubscriptionid_csharp">
-<a href="#cognitiveservicessubscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
+        <span id="cognitiveserviceregion_csharp">
+<a href="#cognitiveserviceregion_csharp" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Service<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cognitive service region with this channel registration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cognitiveservicesubscriptionkey_csharp">
+<a href="#cognitiveservicesubscriptionkey_csharp" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Service<wbr>Subscription<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cognitive service subscription key to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customspeechmodelid_csharp">
 <a href="#customspeechmodelid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Speech<wbr>Model<wbr>Id</a>
@@ -2370,13 +2521,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cognitiveservicessubscriptionid_go">
-<a href="#cognitiveservicessubscriptionid_go" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
+        <span id="cognitiveserviceregion_go">
+<a href="#cognitiveserviceregion_go" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Service<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cognitive service region with this channel registration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cognitiveservicesubscriptionkey_go">
+<a href="#cognitiveservicesubscriptionkey_go" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Service<wbr>Subscription<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cognitive service subscription key to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customspeechmodelid_go">
 <a href="#customspeechmodelid_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Speech<wbr>Model<wbr>Id</a>
@@ -2414,13 +2573,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cognitiveservicessubscriptionid_nodejs">
-<a href="#cognitiveservicessubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
+        <span id="cognitiveserviceregion_nodejs">
+<a href="#cognitiveserviceregion_nodejs" style="color: inherit; text-decoration: inherit;">cognitive<wbr>Service<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cognitive service region with this channel registration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cognitiveservicesubscriptionkey_nodejs">
+<a href="#cognitiveservicesubscriptionkey_nodejs" style="color: inherit; text-decoration: inherit;">cognitive<wbr>Service<wbr>Subscription<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cognitive service subscription key to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customspeechmodelid_nodejs">
 <a href="#customspeechmodelid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Speech<wbr>Model<wbr>Id</a>
@@ -2458,13 +2625,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cognitive_services_subscription_id_python">
-<a href="#cognitive_services_subscription_id_python" style="color: inherit; text-decoration: inherit;">cognitive_<wbr>services_<wbr>subscription_<wbr>id</a>
+        <span id="cognitive_service_region_python">
+<a href="#cognitive_service_region_python" style="color: inherit; text-decoration: inherit;">cognitive_<wbr>service_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cognitive service region with this channel registration.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cognitive_service_subscription_key_python">
+<a href="#cognitive_service_subscription_key_python" style="color: inherit; text-decoration: inherit;">cognitive_<wbr>service_<wbr>subscription_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cognitive service subscription key to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_speech_model_id_python">
 <a href="#custom_speech_model_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>speech_<wbr>model_<wbr>id</a>

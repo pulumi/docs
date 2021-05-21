@@ -256,6 +256,15 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="automaticplacementenabled_csharp">
+<a href="#automaticplacementenabled_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Placement<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether virtual machines or virtual machine scale sets be placed automatically on this Dedicated Host Group.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -320,6 +329,15 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="automaticplacementenabled_go">
+<a href="#automaticplacementenabled_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Placement<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether virtual machines or virtual machine scale sets be placed automatically on this Dedicated Host Group.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -386,6 +404,15 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="automaticplacementenabled_nodejs">
+<a href="#automaticplacementenabled_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Placement<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether virtual machines or virtual machine scale sets be placed automatically on this Dedicated Host Group.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -450,6 +477,15 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="automatic_placement_enabled_python">
+<a href="#automatic_placement_enabled_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>placement_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether virtual machines or virtual machine scale sets be placed automatically on this Dedicated Host Group.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>

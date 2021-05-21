@@ -37,11 +37,11 @@ class MyStack : Stack
         {
             ContainerName = "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
             FabricName = "Azure",
-            Properties = 
+            Properties = new AzureNative.RecoveryServices.Inputs.AzureIaaSComputeVMProtectedItemArgs
             {
-                { "policyId", "/Subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SwaggerTestRg/providers/Microsoft.RecoveryServices/vaults/NetSDKTestRsVault/backupPolicies/DefaultPolicy" },
-                { "protectedItemType", "Microsoft.Compute/virtualMachines" },
-                { "sourceResourceId", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1" },
+                PolicyId = "/Subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SwaggerTestRg/providers/Microsoft.RecoveryServices/vaults/NetSDKTestRsVault/backupPolicies/DefaultPolicy",
+                ProtectedItemType = "Microsoft.Compute/virtualMachines",
+                SourceResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
             },
             ProtectedItemName = "VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
             ResourceGroupName = "SwaggerTestRg",
@@ -59,7 +59,38 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewProtectedItem(ctx, "protectedItem", &recoveryservices.ProtectedItemArgs{
+			ContainerName: pulumi.String("IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1"),
+			FabricName:    pulumi.String("Azure"),
+			Properties: recoveryservices.AzureIaaSComputeVMProtectedItem{
+				PolicyId:          "/Subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SwaggerTestRg/providers/Microsoft.RecoveryServices/vaults/NetSDKTestRsVault/backupPolicies/DefaultPolicy",
+				ProtectedItemType: "Microsoft.Compute/virtualMachines",
+				SourceResourceId:  "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
+			},
+			ProtectedItemName: pulumi.String("VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1"),
+			ResourceGroupName: pulumi.String("SwaggerTestRg"),
+			VaultName:         pulumi.String("NetSDKTestRsVault"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -74,11 +105,11 @@ import pulumi_azure_native as azure_native
 protected_item = azure_native.recoveryservices.ProtectedItem("protectedItem",
     container_name="IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     fabric_name="Azure",
-    properties={
-        "policyId": "/Subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SwaggerTestRg/providers/Microsoft.RecoveryServices/vaults/NetSDKTestRsVault/backupPolicies/DefaultPolicy",
-        "protectedItemType": "Microsoft.Compute/virtualMachines",
-        "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
-    },
+    properties=azure_native.recoveryservices.AzureIaaSComputeVMProtectedItemArgs(
+        policy_id="/Subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SwaggerTestRg/providers/Microsoft.RecoveryServices/vaults/NetSDKTestRsVault/backupPolicies/DefaultPolicy",
+        protected_item_type="Microsoft.Compute/virtualMachines",
+        source_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
+    ),
     protected_item_name="VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     resource_group_name="SwaggerTestRg",
     vault_name="NetSDKTestRsVault")
@@ -134,11 +165,11 @@ class MyStack : Stack
         {
             ContainerName = "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
             FabricName = "Azure",
-            Properties = 
+            Properties = new AzureNative.RecoveryServices.Inputs.AzureIaaSComputeVMProtectedItemArgs
             {
-                { "protectedItemType", "Microsoft.Compute/virtualMachines" },
-                { "protectionState", "ProtectionStopped" },
-                { "sourceResourceId", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1" },
+                ProtectedItemType = "Microsoft.Compute/virtualMachines",
+                ProtectionState = "ProtectionStopped",
+                SourceResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
             },
             ProtectedItemName = "VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
             ResourceGroupName = "SwaggerTestRg",
@@ -156,7 +187,38 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewProtectedItem(ctx, "protectedItem", &recoveryservices.ProtectedItemArgs{
+			ContainerName: pulumi.String("IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1"),
+			FabricName:    pulumi.String("Azure"),
+			Properties: recoveryservices.AzureIaaSComputeVMProtectedItem{
+				ProtectedItemType: "Microsoft.Compute/virtualMachines",
+				ProtectionState:   "ProtectionStopped",
+				SourceResourceId:  "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
+			},
+			ProtectedItemName: pulumi.String("VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1"),
+			ResourceGroupName: pulumi.String("SwaggerTestRg"),
+			VaultName:         pulumi.String("NetSDKTestRsVault"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -171,11 +233,11 @@ import pulumi_azure_native as azure_native
 protected_item = azure_native.recoveryservices.ProtectedItem("protectedItem",
     container_name="IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     fabric_name="Azure",
-    properties={
-        "protectedItemType": "Microsoft.Compute/virtualMachines",
-        "protectionState": "ProtectionStopped",
-        "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
-    },
+    properties=azure_native.recoveryservices.AzureIaaSComputeVMProtectedItemArgs(
+        protected_item_type="Microsoft.Compute/virtualMachines",
+        protection_state="ProtectionStopped",
+        source_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
+    ),
     protected_item_name="VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     resource_group_name="SwaggerTestRg",
     vault_name="NetSDKTestRsVault")
@@ -263,25 +325,19 @@ const protectedItem = new azure_native.recoveryservices.ProtectedItem("protected
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProtectedItemArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -293,25 +349,19 @@ const protectedItem = new azure_native.recoveryservices.ProtectedItem("protected
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProtectedItemArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -323,33 +373,25 @@ const protectedItem = new azure_native.recoveryservices.ProtectedItem("protected
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProtectedItemArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -361,25 +403,19 @@ const protectedItem = new azure_native.recoveryservices.ProtectedItem("protected
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProtectedItemArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

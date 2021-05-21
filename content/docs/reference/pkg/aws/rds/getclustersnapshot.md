@@ -271,7 +271,7 @@ The default is `false`.
     </dt>
     <dd>{{% md %}}The type of snapshots to be returned. If you don't specify a SnapshotType
 value, then both automated and manual DB cluster snapshots are returned. Shared and public DB Cluster Snapshots are not
-included in the returned results by default. Possible values are, `automated`, `manual`, `shared` and `public`.
+included in the returned results by default. Possible values are, `automated`, `manual`, `shared`, `public` and `awsbackup`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -343,7 +343,7 @@ The default is `false`.
     </dt>
     <dd>{{% md %}}The type of snapshots to be returned. If you don't specify a SnapshotType
 value, then both automated and manual DB cluster snapshots are returned. Shared and public DB Cluster Snapshots are not
-included in the returned results by default. Possible values are, `automated`, `manual`, `shared` and `public`.
+included in the returned results by default. Possible values are, `automated`, `manual`, `shared`, `public` and `awsbackup`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -415,7 +415,7 @@ The default is `false`.
     </dt>
     <dd>{{% md %}}The type of snapshots to be returned. If you don't specify a SnapshotType
 value, then both automated and manual DB cluster snapshots are returned. Shared and public DB Cluster Snapshots are not
-included in the returned results by default. Possible values are, `automated`, `manual`, `shared` and `public`.
+included in the returned results by default. Possible values are, `automated`, `manual`, `shared`, `public` and `awsbackup`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -487,7 +487,7 @@ The default is `false`.
     </dt>
     <dd>{{% md %}}The type of snapshots to be returned. If you don't specify a SnapshotType
 value, then both automated and manual DB cluster snapshots are returned. Shared and public DB Cluster Snapshots are not
-included in the returned results by default. Possible values are, `automated`, `manual`, `shared` and `public`.
+included in the returned results by default. Possible values are, `automated`, `manual`, `shared`, `public` and `awsbackup`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">

@@ -31,6 +31,8 @@ Maps a domain to an application. A user must be authorized to administer a domai
                      <span class="nx">domain_mappings_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">no_managed_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">override_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">resource_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[_appengine_v1alpha.ResourceRecordArgs]]</span> = None<span class="p">,</span>
                      <span class="nx">ssl_settings</span><span class="p">:</span> <span class="nx">Optional[_appengine_v1alpha.SslSettingsArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -55,25 +57,19 @@ Maps a domain to an application. A user must be authorized to administer a domai
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AppDomainMappingArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -85,25 +81,19 @@ Maps a domain to an application. A user must be authorized to administer a domai
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AppDomainMappingArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -115,33 +105,25 @@ Maps a domain to an application. A user must be authorized to administer a domai
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AppDomainMappingArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -153,25 +135,19 @@ Maps a domain to an application. A user must be authorized to administer a domai
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AppDomainMappingArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -219,6 +195,22 @@ The AppDomainMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.@OutputOnly{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nomanagedcertificate_csharp">
+<a href="#nomanagedcertificate_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Managed<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="overridestrategy_csharp">
+<a href="#overridestrategy_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcerecords_csharp">
 <a href="#resourcerecords_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Records</a>
@@ -272,6 +264,22 @@ The AppDomainMapping resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.@OutputOnly{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nomanagedcertificate_go">
+<a href="#nomanagedcertificate_go" style="color: inherit; text-decoration: inherit;">No<wbr>Managed<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="overridestrategy_go">
+<a href="#overridestrategy_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resourcerecords_go">
 <a href="#resourcerecords_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Records</a>
 </span>
@@ -324,6 +332,22 @@ The AppDomainMapping resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.@OutputOnly{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nomanagedcertificate_nodejs">
+<a href="#nomanagedcertificate_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Managed<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="overridestrategy_nodejs">
+<a href="#overridestrategy_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resourcerecords_nodejs">
 <a href="#resourcerecords_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Records</a>
 </span>
@@ -375,6 +399,22 @@ The AppDomainMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.@OutputOnly{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="no_managed_certificate_python">
+<a href="#no_managed_certificate_python" style="color: inherit; text-decoration: inherit;">no_<wbr>managed_<wbr>certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="override_strategy_python">
+<a href="#override_strategy_python" style="color: inherit; text-decoration: inherit;">override_<wbr>strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_records_python">
 <a href="#resource_records_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>records</a>

@@ -942,6 +942,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="divideperinstance_csharp">
+<a href="#divideperinstance_csharp" style="color: inherit; text-decoration: inherit;">Divide<wbr>Per<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="metricnamespace_csharp">
 <a href="#metricnamespace_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
 </span>
@@ -1025,6 +1033,14 @@ The following output properties are available:
         <span class="property-type"><a href="#scalerulemetricdimensionresponse">[]Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="divideperinstance_go">
+<a href="#divideperinstance_go" style="color: inherit; text-decoration: inherit;">Divide<wbr>Per<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_go">
 <a href="#metricnamespace_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
@@ -1110,6 +1126,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="divideperinstance_nodejs">
+<a href="#divideperinstance_nodejs" style="color: inherit; text-decoration: inherit;">divide<wbr>Per<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="metricnamespace_nodejs">
 <a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
 </span>
@@ -1193,6 +1217,14 @@ The following output properties are available:
         <span class="property-type"><a href="#scalerulemetricdimensionresponse">Sequence[Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="divide_per_instance_python">
+<a href="#divide_per_instance_python" style="color: inherit; text-decoration: inherit;">divide_<wbr>per_<wbr>instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_namespace_python">
 <a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>

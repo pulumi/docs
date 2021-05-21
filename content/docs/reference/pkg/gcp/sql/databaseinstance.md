@@ -239,7 +239,7 @@ import (
 	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
 	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/servicenetworking"
 	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/sql"
-	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -435,25 +435,19 @@ const instance = new gcp.sql.DatabaseInstance("instance", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseInstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -465,25 +459,19 @@ const instance = new gcp.sql.DatabaseInstance("instance", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseInstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -495,33 +483,25 @@ const instance = new gcp.sql.DatabaseInstance("instance", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseInstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -533,25 +513,19 @@ const instance = new gcp.sql.DatabaseInstance("instance", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseInstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -2475,15 +2449,6 @@ configuration is detailed below. Required if `clone` is not set.
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="pointintime_csharp">
-<a href="#pointintime_csharp" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of the point in time that should be restored.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="sourceinstancename_csharp">
 <a href="#sourceinstancename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Name</a>
 </span>
@@ -2491,20 +2456,20 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source instance which will be cloned.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="pointintime_go">
-<a href="#pointintime_go" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pointintime_csharp">
+<a href="#pointintime_csharp" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of the point in time that should be restored.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourceinstancename_go">
 <a href="#sourceinstancename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Name</a>
@@ -2513,20 +2478,20 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source instance which will be cloned.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="pointintime_nodejs">
-<a href="#pointintime_nodejs" style="color: inherit; text-decoration: inherit;">point<wbr>In<wbr>Time</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pointintime_go">
+<a href="#pointintime_go" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of the point in time that should be restored.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourceinstancename_nodejs">
 <a href="#sourceinstancename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance<wbr>Name</a>
@@ -2535,20 +2500,20 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source instance which will be cloned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pointintime_nodejs">
+<a href="#pointintime_nodejs" style="color: inherit; text-decoration: inherit;">point<wbr>In<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of the point in time that should be restored.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="point_in_time_python">
-<a href="#point_in_time_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of the point in time that should be restored.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_instance_name_python">
 <a href="#source_instance_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance_<wbr>name</a>
@@ -2557,6 +2522,15 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the source instance which will be cloned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="point_in_time_python">
+<a href="#point_in_time_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of the point in time that should be restored.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3452,7 +3426,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
-for more details and supported versions. Postgres supports only shared-core machine types such as `db-f1-micro`,
+for more details and supported versions. Postgres supports only shared-core machine types,
 and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3627,7 +3601,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
-for more details and supported versions. Postgres supports only shared-core machine types such as `db-f1-micro`,
+for more details and supported versions. Postgres supports only shared-core machine types,
 and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3802,7 +3776,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
-for more details and supported versions. Postgres supports only shared-core machine types such as `db-f1-micro`,
+for more details and supported versions. Postgres supports only shared-core machine types,
 and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3977,7 +3951,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
-for more details and supported versions. Postgres supports only shared-core machine types such as `db-f1-micro`,
+for more details and supported versions. Postgres supports only shared-core machine types,
 and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -1939,7 +1939,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This specifies when the instance should be
-active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
+active. Can be either `ALWAYS` or `NEVER`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authorizedgaeapplications_csharp">
@@ -2105,7 +2105,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This specifies when the instance should be
-active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
+active. Can be either `ALWAYS` or `NEVER`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authorizedgaeapplications_go">
@@ -2271,7 +2271,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This specifies when the instance should be
-active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
+active. Can be either `ALWAYS` or `NEVER`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authorizedgaeapplications_nodejs">
@@ -2437,7 +2437,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This specifies when the instance should be
-active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
+active. Can be either `ALWAYS` or `NEVER`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authorized_gae_applications_python">

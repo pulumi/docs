@@ -11,6 +11,7 @@ Explore the resources and functions of the aws.cloudformation module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="cloudformationtype" title="CloudFormationType"><span class="symbol resource"></span>CloudFormationType</a></li>
     <li><a href="stack" title="Stack"><span class="symbol resource"></span>Stack</a></li>
     <li><a href="stackset" title="StackSet"><span class="symbol resource"></span>StackSet</a></li>
     <li><a href="stacksetinstance" title="StackSetInstance"><span class="symbol resource"></span>StackSetInstance</a></li>
@@ -18,6 +19,7 @@ Explore the resources and functions of the aws.cloudformation module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getcloudformationtype" title="GetCloudFormationType"><span class="symbol function"></span>GetCloudFormationType</a></li>
     <li><a href="getexport" title="GetExport"><span class="symbol function"></span>GetExport</a></li>
     <li><a href="getstack" title="GetStack"><span class="symbol function"></span>GetStack</a></li>
 </ul>
@@ -31,6 +33,6 @@ Explore the resources and functions of the aws.cloudformation module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.0.0</dd>
+	<dd>4.5.1</dd>
 </dl>
 

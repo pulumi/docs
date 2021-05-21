@@ -37,8 +37,8 @@ class MyStack : Stack
     {
         var myvpc = Output.Create(Aiven.GetProjectVpc.InvokeAsync(new Aiven.GetProjectVpcArgs
         {
-            CloudName = "google-europe-west1",
             Project = aiven_project.Myproject.Project,
+            CloudName = "google-europe-west1",
         }));
     }
 
@@ -62,8 +62,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.LookupProjectVpc(ctx, &aiven.LookupProjectVpcArgs{
-			CloudName: "google-europe-west1",
 			Project:   aiven_project.Myproject.Project,
+			CloudName: "google-europe-west1",
 		}, nil)
 		if err != nil {
 			return err
@@ -83,8 +83,8 @@ func main() {
 import pulumi
 import pulumi_aiven as aiven
 
-myvpc = aiven.get_project_vpc(cloud_name="google-europe-west1",
-    project=aiven_project["myproject"]["project"])
+myvpc = aiven.get_project_vpc(project=aiven_project["myproject"]["project"],
+    cloud_name="google-europe-west1")
 ```
 
 
@@ -98,10 +98,10 @@ myvpc = aiven.get_project_vpc(cloud_name="google-europe-west1",
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
-const myvpc = aiven_project_myproject.project.apply(project => aiven.getProjectVpc({
+const myvpc = aiven.getProjectVpc({
+    project: aiven_project.myproject.project,
     cloudName: "google-europe-west1",
-    project: project,
-}, { async: true }));
+});
 ```
 
 

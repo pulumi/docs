@@ -218,25 +218,19 @@ const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecretArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -248,25 +242,19 @@ const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecretArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -278,33 +266,25 @@ const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecretArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -316,25 +296,19 @@ const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecretArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1251,6 +1225,16 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The canonical IDs of the location to replicate data. For example: "us-east1".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customermanagedencryption_csharp">
+<a href="#customermanagedencryption_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretreplicationusermanagedreplicacustomermanagedencryption">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica<wbr>Customer<wbr>Managed<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Encryption for the secret.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1264,6 +1248,16 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The canonical IDs of the location to replicate data. For example: "us-east1".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customermanagedencryption_go">
+<a href="#customermanagedencryption_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretreplicationusermanagedreplicacustomermanagedencryption">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica<wbr>Customer<wbr>Managed<wbr>Encryption</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Encryption for the secret.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1277,6 +1271,16 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The canonical IDs of the location to replicate data. For example: "us-east1".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customermanagedencryption_nodejs">
+<a href="#customermanagedencryption_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Managed<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretreplicationusermanagedreplicacustomermanagedencryption">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica<wbr>Customer<wbr>Managed<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Encryption for the secret.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1290,6 +1294,70 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The canonical IDs of the location to replicate data. For example: "us-east1".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customer_managed_encryption_python">
+<a href="#customer_managed_encryption_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>managed_<wbr>encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretreplicationusermanagedreplicacustomermanagedencryption">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica<wbr>Customer<wbr>Managed<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Encryption for the secret.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="secretreplicationusermanagedreplicacustomermanagedencryption">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica<wbr>Customer<wbr>Managed<wbr>Encryption</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kmskeyname_csharp">
+<a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination secret.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kmskeyname_go">
+<a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination secret.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kmskeyname_nodejs">
+<a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination secret.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kms_key_name_python">
+<a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination secret.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

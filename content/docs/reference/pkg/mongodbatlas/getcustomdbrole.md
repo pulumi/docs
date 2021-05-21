@@ -37,6 +37,8 @@ class MyStack : Stack
     {
         var testRole = new Mongodbatlas.CustomDbRole("testRole", new Mongodbatlas.CustomDbRoleArgs
         {
+            ProjectId = "<PROJECT-ID>",
+            RoleName = "myCustomRole",
             Actions = 
             {
                 new Mongodbatlas.Inputs.CustomDbRoleActionArgs
@@ -64,8 +66,6 @@ class MyStack : Stack
                     },
                 },
             },
-            ProjectId = "<PROJECT-ID>",
-            RoleName = "myCustomRole",
         });
         var test = Output.Tuple(testRole.ProjectId, testRole.RoleName).Apply(values =>
         {
@@ -99,6 +99,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		testRole, err := mongodbatlas.NewCustomDbRole(ctx, "testRole", &mongodbatlas.CustomDbRoleArgs{
+			ProjectId: pulumi.String("<PROJECT-ID>"),
+			RoleName:  pulumi.String("myCustomRole"),
 			Actions: mongodbatlas.CustomDbRoleActionArray{
 				&mongodbatlas.CustomDbRoleActionArgs{
 					Action: pulumi.String("UPDATE"),
@@ -119,8 +121,6 @@ func main() {
 					},
 				},
 			},
-			ProjectId: pulumi.String("<PROJECT-ID>"),
-			RoleName:  pulumi.String("myCustomRole"),
 		})
 		if err != nil {
 			return err
@@ -141,6 +141,8 @@ import pulumi
 import pulumi_mongodbatlas as mongodbatlas
 
 test_role = mongodbatlas.CustomDbRole("testRole",
+    project_id="<PROJECT-ID>",
+    role_name="myCustomRole",
     actions=[
         mongodbatlas.CustomDbRoleActionArgs(
             action="UPDATE",
@@ -156,9 +158,7 @@ test_role = mongodbatlas.CustomDbRole("testRole",
                 database_name="anyDatabase",
             )],
         ),
-    ],
-    project_id="<PROJECT-ID>",
-    role_name="myCustomRole")
+    ])
 test = pulumi.Output.all(test_role.project_id, test_role.role_name).apply(lambda project_id, role_name: mongodbatlas.get_custom_db_role(project_id=project_id,
     role_name=role_name))
 ```
@@ -174,7 +174,9 @@ test = pulumi.Output.all(test_role.project_id, test_role.role_name).apply(lambda
 import * as pulumi from "@pulumi/pulumi";
 import * as mongodbatlas from "@pulumi/mongodbatlas";
 
-const testRole = new mongodbatlas.CustomDbRole("test_role", {
+const testRole = new mongodbatlas.CustomDbRole("testRole", {
+    projectId: "<PROJECT-ID>",
+    roleName: "myCustomRole",
     actions: [
         {
             action: "UPDATE",
@@ -191,13 +193,11 @@ const testRole = new mongodbatlas.CustomDbRole("test_role", {
             }],
         },
     ],
-    projectId: "<PROJECT-ID>",
-    roleName: "myCustomRole",
 });
 const test = pulumi.all([testRole.projectId, testRole.roleName]).apply(([projectId, roleName]) => mongodbatlas.getCustomDbRole({
     projectId: projectId,
     roleName: roleName,
-}, { async: true }));
+}));
 ```
 
 

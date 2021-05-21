@@ -40,8 +40,6 @@ class MyStack : Stack
             NetworkManagerName = "TestNetworkManager",
             NetworkManagerScopeAccesses = 
             {
-                "Security",
-                "Routing",
                 "Connectivity",
             },
             NetworkManagerScopes = new AzureNative.Network.Inputs.NetworkManagerPropertiesNetworkManagerScopesArgs
@@ -85,8 +83,6 @@ func main() {
 			DisplayName:        pulumi.String("TestNetworkManager"),
 			NetworkManagerName: pulumi.String("TestNetworkManager"),
 			NetworkManagerScopeAccesses: pulumi.StringArray{
-				pulumi.String("Security"),
-				pulumi.String("Routing"),
 				pulumi.String("Connectivity"),
 			},
 			NetworkManagerScopes: &network.NetworkManagerPropertiesNetworkManagerScopesArgs{
@@ -123,11 +119,7 @@ network_manager = azure_native.network.NetworkManager("networkManager",
     description="My Test Network Manager",
     display_name="TestNetworkManager",
     network_manager_name="TestNetworkManager",
-    network_manager_scope_accesses=[
-        "Security",
-        "Routing",
-        "Connectivity",
-    ],
+    network_manager_scope_accesses=["Connectivity"],
     network_manager_scopes=azure_native.network.NetworkManagerPropertiesNetworkManagerScopesArgs(
         management_groups=["/Microsoft.Management/testmg"],
         subscriptions=["/subscriptions/00000000-0000-0000-0000-000000000000"],
@@ -151,11 +143,7 @@ const networkManager = new azure_native.network.NetworkManager("networkManager",
     description: "My Test Network Manager",
     displayName: "TestNetworkManager",
     networkManagerName: "TestNetworkManager",
-    networkManagerScopeAccesses: [
-        "Security",
-        "Routing",
-        "Connectivity",
-    ],
+    networkManagerScopeAccesses: ["Connectivity"],
     networkManagerScopes: {
         managementGroups: ["/Microsoft.Management/testmg"],
         subscriptions: ["/subscriptions/00000000-0000-0000-0000-000000000000"],
@@ -194,7 +182,7 @@ const networkManager = new azure_native.network.NetworkManager("networkManager",
                    <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">network_manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">network_manager_scope_accesses</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, ScopeAccesses]]]</span> = None<span class="p">,</span>
+                   <span class="nx">network_manager_scope_accesses</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, ConfigurationType]]]</span> = None<span class="p">,</span>
                    <span class="nx">network_manager_scopes</span><span class="p">:</span> <span class="nx">Optional[NetworkManagerPropertiesNetworkManagerScopesArgs]</span> = None<span class="p">,</span>
                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
@@ -220,25 +208,19 @@ const networkManager = new azure_native.network.NetworkManager("networkManager",
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkManagerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -250,25 +232,19 @@ const networkManager = new azure_native.network.NetworkManager("networkManager",
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkManagerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -280,33 +256,25 @@ const networkManager = new azure_native.network.NetworkManager("networkManager",
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkManagerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -318,25 +286,19 @@ const networkManager = new azure_native.network.NetworkManager("networkManager",
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkManagerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -405,7 +367,7 @@ The NetworkManager resource accepts the following [input]({{< relref "/docs/intr
 <a href="#networkmanagerscopeaccesses_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Manager<wbr>Scope<wbr>Accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Scope<wbr>Accesses&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Configuration<wbr>Type&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Scope Access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -557,7 +519,7 @@ The NetworkManager resource accepts the following [input]({{< relref "/docs/intr
 <a href="#networkmanagerscopeaccesses_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Manager<wbr>Scope<wbr>Accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Scope<wbr>Accesses[]</span>
+        <span class="property-type">string | Configuration<wbr>Type[]</span>
     </dt>
     <dd>{{% md %}}Scope Access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -633,7 +595,7 @@ The NetworkManager resource accepts the following [input]({{< relref "/docs/intr
 <a href="#network_manager_scope_accesses_python" style="color: inherit; text-decoration: inherit;">network_<wbr>manager_<wbr>scope_<wbr>accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Scope<wbr>Accesses]]</span>
+        <span class="property-type">Sequence[Union[str, Configuration<wbr>Type]]</span>
     </dt>
     <dd>{{% md %}}Scope Access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -879,6 +841,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="configurationtype">Configuration<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Admin<wbr>Security</dt>
+    <dd>AdminSecurity</dd><dt>User<wbr>Security</dt>
+    <dd>UserSecurity</dd><dt>Connectivity</dt>
+    <dd>Connectivity</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Configuration<wbr>Type<wbr>Admin<wbr>Security</dt>
+    <dd>AdminSecurity</dd><dt>Configuration<wbr>Type<wbr>User<wbr>Security</dt>
+    <dd>UserSecurity</dd><dt>Configuration<wbr>Type<wbr>Connectivity</dt>
+    <dd>Connectivity</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Admin<wbr>Security</dt>
+    <dd>AdminSecurity</dd><dt>User<wbr>Security</dt>
+    <dd>UserSecurity</dd><dt>Connectivity</dt>
+    <dd>Connectivity</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ADMIN_SECURITY</dt>
+    <dd>AdminSecurity</dd><dt>USER_SECURITY</dt>
+    <dd>UserSecurity</dd><dt>CONNECTIVITY</dt>
+    <dd>Connectivity</dd></dl>
+{{% /choosable %}}
+
 <h4 id="networkmanagerpropertiesnetworkmanagerscopes">Network<wbr>Manager<wbr>Properties<wbr>Network<wbr>Manager<wbr>Scopes</h4>
 
 {{% choosable language csharp %}}
@@ -1041,36 +1033,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of subscriptions.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="scopeaccesses">Scope<wbr>Accesses</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Security</dt>
-    <dd>Security</dd><dt>Routing</dt>
-    <dd>Routing</dd><dt>Connectivity</dt>
-    <dd>Connectivity</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Scope<wbr>Accesses<wbr>Security</dt>
-    <dd>Security</dd><dt>Scope<wbr>Accesses<wbr>Routing</dt>
-    <dd>Routing</dd><dt>Scope<wbr>Accesses<wbr>Connectivity</dt>
-    <dd>Connectivity</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Security</dt>
-    <dd>Security</dd><dt>Routing</dt>
-    <dd>Routing</dd><dt>Connectivity</dt>
-    <dd>Connectivity</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>SECURITY</dt>
-    <dd>Security</dd><dt>ROUTING</dt>
-    <dd>Routing</dd><dt>CONNECTIVITY</dt>
-    <dd>Connectivity</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>

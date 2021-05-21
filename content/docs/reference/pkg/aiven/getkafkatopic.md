@@ -37,17 +37,17 @@ class MyStack : Stack
     {
         var mytesttopic = Output.Create(Aiven.GetKafkaTopic.InvokeAsync(new Aiven.GetKafkaTopicArgs
         {
-            Config = new Aiven.Inputs.GetKafkaTopicConfigArgs
-            {
-                CleanupPolicy = "compact",
-                FlushMs = "10",
-                UncleanLeaderElectionEnable = "true",
-            },
-            Partitions = 3,
             Project = aiven_project.Myproject.Project,
-            Replication = 1,
             ServiceName = aiven_service.Myservice.Service_name,
             TopicName = "<TOPIC_NAME>",
+            Partitions = 3,
+            Replication = 1,
+            Config = new Aiven.Inputs.GetKafkaTopicConfigArgs
+            {
+                FlushMs = "10",
+                UncleanLeaderElectionEnable = "true",
+                CleanupPolicy = "compact",
+            },
         }));
     }
 
@@ -73,16 +73,16 @@ func main() {
 		opt0 := 3
 		opt1 := 1
 		_, err := aiven.LookupKafkaTopic(ctx, &aiven.LookupKafkaTopicArgs{
-			Config: aiven.GetKafkaTopicConfig{
-				CleanupPolicy:               "compact",
-				FlushMs:                     "10",
-				UncleanLeaderElectionEnable: "true",
-			},
-			Partitions:  &opt0,
 			Project:     aiven_project.Myproject.Project,
-			Replication: &opt1,
 			ServiceName: aiven_service.Myservice.Service_name,
 			TopicName:   "<TOPIC_NAME>",
+			Partitions:  &opt0,
+			Replication: &opt1,
+			Config: aiven.GetKafkaTopicConfig{
+				FlushMs:                     "10",
+				UncleanLeaderElectionEnable: "true",
+				CleanupPolicy:               "compact",
+			},
 		}, nil)
 		if err != nil {
 			return err
@@ -102,16 +102,16 @@ func main() {
 import pulumi
 import pulumi_aiven as aiven
 
-mytesttopic = aiven.get_kafka_topic(config=aiven.GetKafkaTopicConfigArgs(
-        cleanup_policy="compact",
+mytesttopic = aiven.get_kafka_topic(project=aiven_project["myproject"]["project"],
+    service_name=aiven_service["myservice"]["service_name"],
+    topic_name="<TOPIC_NAME>",
+    partitions=3,
+    replication=1,
+    config=aiven.GetKafkaTopicConfigArgs(
         flush_ms="10",
         unclean_leader_election_enable="true",
-    ),
-    partitions=3,
-    project=aiven_project["myproject"]["project"],
-    replication=1,
-    service_name=aiven_service["myservice"]["service_name"],
-    topic_name="<TOPIC_NAME>")
+        cleanup_policy="compact",
+    ))
 ```
 
 
@@ -125,18 +125,18 @@ mytesttopic = aiven.get_kafka_topic(config=aiven.GetKafkaTopicConfigArgs(
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
-const mytesttopic = pulumi.all([aiven_project_myproject.project, aiven_service_myservice.serviceName]).apply(([project, serviceName]) => aiven.getKafkaTopic({
-    config: {
-        cleanupPolicy: "compact",
-        flushMs: "10",
-        uncleanLeaderElectionEnable: "true",
-    },
-    partitions: 3,
-    project: project,
-    replication: 1,
-    serviceName: serviceName,
+const mytesttopic = aiven.getKafkaTopic({
+    project: aiven_project.myproject.project,
+    serviceName: aiven_service.myservice.service_name,
     topicName: "<TOPIC_NAME>",
-}, { async: true }));
+    partitions: 3,
+    replication: 1,
+    config: {
+        flushMs: 10,
+        uncleanLeaderElectionEnable: true,
+        cleanupPolicy: "compact",
+    },
+});
 ```
 
 

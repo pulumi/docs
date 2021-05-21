@@ -671,6 +671,15 @@ The following output properties are available:
     <dd>{{% md %}}The IP address value that was allocated.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="iptags_csharp">
+<a href="#iptags_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assigned to the resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="ipversion_csharp">
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
 </span>
@@ -793,6 +802,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address value that was allocated.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="iptags_go">
+<a href="#iptags_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assigned to the resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipversion_go">
@@ -919,6 +937,15 @@ The following output properties are available:
     <dd>{{% md %}}The IP address value that was allocated.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="iptags_nodejs">
+<a href="#iptags_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assigned to the resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="ipversion_nodejs">
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
 </span>
@@ -1041,6 +1068,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address value that was allocated.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ip_tags_python">
+<a href="#ip_tags_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assigned to the resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ip_version_python">

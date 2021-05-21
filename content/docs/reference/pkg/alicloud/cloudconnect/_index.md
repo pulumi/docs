@@ -30,6 +30,6 @@ Explore the resources and functions of the alicloud.cloudconnect module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.2.0</dd>
 </dl>
 

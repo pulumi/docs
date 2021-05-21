@@ -33,6 +33,8 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">api_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">api_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">app_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">http_client_retry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">http_client_retry_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">validate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -56,25 +58,19 @@ construction to achieve fine-grained programmatic control over provider settings
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -86,25 +82,19 @@ construction to achieve fine-grained programmatic control over provider settings
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -116,33 +106,25 @@ construction to achieve fine-grained programmatic control over provider settings
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -154,25 +136,19 @@ construction to achieve fine-grained programmatic control over provider settings
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -204,7 +180,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The API Url. This can also be set via the DD_HOST environment variable. Note that this URL must not end with the /api/
+    <dd>{{% md %}}The API URL. This can also be set via the DD_HOST environment variable. Note that this URL must not end with the /api/
 path. For example, https://api.datadoghq.com/ is a correct value, while https://api.datadoghq.com/api/ is not. And if
 you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
 {{% /md %}}</dd><dt class="property-optional"
@@ -216,6 +192,24 @@ you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required unless validate is false) Datadog APP key. This can also be set via the DD_APP_KEY environment variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpclientretryenabled_csharp">
+<a href="#httpclientretryenabled_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Client<wbr>Retry<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables request retries on HTTP status codes 429 and 5xx.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpclientretrytimeout_csharp">
+<a href="#httpclientretrytimeout_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Client<wbr>Retry<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The HTTP request retry timeout period.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_csharp">
@@ -247,7 +241,7 @@ and app_key won't be checked.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The API Url. This can also be set via the DD_HOST environment variable. Note that this URL must not end with the /api/
+    <dd>{{% md %}}The API URL. This can also be set via the DD_HOST environment variable. Note that this URL must not end with the /api/
 path. For example, https://api.datadoghq.com/ is a correct value, while https://api.datadoghq.com/api/ is not. And if
 you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
 {{% /md %}}</dd><dt class="property-optional"
@@ -259,6 +253,24 @@ you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required unless validate is false) Datadog APP key. This can also be set via the DD_APP_KEY environment variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpclientretryenabled_go">
+<a href="#httpclientretryenabled_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Client<wbr>Retry<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables request retries on HTTP status codes 429 and 5xx.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpclientretrytimeout_go">
+<a href="#httpclientretrytimeout_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Client<wbr>Retry<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The HTTP request retry timeout period.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_go">
@@ -290,7 +302,7 @@ and app_key won't be checked.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The API Url. This can also be set via the DD_HOST environment variable. Note that this URL must not end with the /api/
+    <dd>{{% md %}}The API URL. This can also be set via the DD_HOST environment variable. Note that this URL must not end with the /api/
 path. For example, https://api.datadoghq.com/ is a correct value, while https://api.datadoghq.com/api/ is not. And if
 you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
 {{% /md %}}</dd><dt class="property-optional"
@@ -302,6 +314,24 @@ you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required unless validate is false) Datadog APP key. This can also be set via the DD_APP_KEY environment variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpclientretryenabled_nodejs">
+<a href="#httpclientretryenabled_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Client<wbr>Retry<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables request retries on HTTP status codes 429 and 5xx.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpclientretrytimeout_nodejs">
+<a href="#httpclientretrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Client<wbr>Retry<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The HTTP request retry timeout period.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_nodejs">
@@ -333,7 +363,7 @@ and app_key won't be checked.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The API Url. This can also be set via the DD_HOST environment variable. Note that this URL must not end with the /api/
+    <dd>{{% md %}}The API URL. This can also be set via the DD_HOST environment variable. Note that this URL must not end with the /api/
 path. For example, https://api.datadoghq.com/ is a correct value, while https://api.datadoghq.com/api/ is not. And if
 you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
 {{% /md %}}</dd><dt class="property-optional"
@@ -345,6 +375,24 @@ you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required unless validate is false) Datadog APP key. This can also be set via the DD_APP_KEY environment variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="http_client_retry_enabled_python">
+<a href="#http_client_retry_enabled_python" style="color: inherit; text-decoration: inherit;">http_<wbr>client_<wbr>retry_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables request retries on HTTP status codes 429 and 5xx.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="http_client_retry_timeout_python">
+<a href="#http_client_retry_timeout_python" style="color: inherit; text-decoration: inherit;">http_<wbr>client_<wbr>retry_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The HTTP request retry timeout period.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_python">

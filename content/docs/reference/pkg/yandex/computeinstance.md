@@ -220,25 +220,19 @@ const defaultComputeInstance = new yandex.ComputeInstance("default", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ComputeInstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -250,25 +244,19 @@ const defaultComputeInstance = new yandex.ComputeInstance("default", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ComputeInstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -280,33 +268,25 @@ const defaultComputeInstance = new yandex.ComputeInstance("default", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ComputeInstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -318,25 +298,19 @@ const defaultComputeInstance = new yandex.ComputeInstance("default", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ComputeInstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1031,7 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified DNS name of this instance.
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1070,7 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified DNS name of this instance.
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -1109,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified DNS name of this instance.
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1148,7 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The fully qualified DNS name of this instance.
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -1368,7 +1342,7 @@ is not provided, the default provider folder is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified DNS name of this instance.
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_csharp">
@@ -1559,7 +1533,7 @@ is not provided, the default provider folder is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified DNS name of this instance.
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_go">
@@ -1750,7 +1724,7 @@ is not provided, the default provider folder is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified DNS name of this instance.
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_nodejs">
@@ -1941,7 +1915,7 @@ is not provided, the default provider folder is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The fully qualified DNS name of this instance.
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_python">
@@ -2547,6 +2521,15 @@ interface to. The subnet must exist in the same zone where this instance will be
 created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsrecords_csharp">
+<a href="#dnsrecords_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancenetworkinterfacednsrecord">List&lt;Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Dns<wbr>Record<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv4 DNS records. The structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="index_csharp">
 <a href="#index_csharp" style="color: inherit; text-decoration: inherit;">Index</a>
 </span>
@@ -2593,6 +2576,15 @@ The address will be automatically assigned from the specified subnet.
     <dd>{{% md %}}The private IPv6 address to assign to the instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ipv6dnsrecords_csharp">
+<a href="#ipv6dnsrecords_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Dns<wbr>Records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancenetworkinterfaceipv6dnsrecord">List&lt;Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Ipv6Dns<wbr>Record<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv6 DNS records. The structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="macaddress_csharp">
 <a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
 </span>
@@ -2608,6 +2600,15 @@ The address will be automatically assigned from the specified subnet.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Provide a public address, for instance, to access the internet over NAT.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="natdnsrecords_csharp">
+<a href="#natdnsrecords_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Dns<wbr>Records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancenetworkinterfacenatdnsrecord">List&lt;Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Nat<wbr>Dns<wbr>Record<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv4 NAT DNS records. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="natipaddress_csharp">
@@ -2649,6 +2650,15 @@ The address will be automatically assigned from the specified subnet.
     <dd>{{% md %}}ID of the subnet to attach this
 interface to. The subnet must exist in the same zone where this instance will be
 created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsrecords_go">
+<a href="#dnsrecords_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancenetworkinterfacednsrecord">[]Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Dns<wbr>Record</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv4 DNS records. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="index_go">
@@ -2697,6 +2707,15 @@ The address will be automatically assigned from the specified subnet.
     <dd>{{% md %}}The private IPv6 address to assign to the instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ipv6dnsrecords_go">
+<a href="#ipv6dnsrecords_go" style="color: inherit; text-decoration: inherit;">Ipv6Dns<wbr>Records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancenetworkinterfaceipv6dnsrecord">[]Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Ipv6Dns<wbr>Record</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv6 DNS records. The structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="macaddress_go">
 <a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
 </span>
@@ -2712,6 +2731,15 @@ The address will be automatically assigned from the specified subnet.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Provide a public address, for instance, to access the internet over NAT.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="natdnsrecords_go">
+<a href="#natdnsrecords_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Dns<wbr>Records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancenetworkinterfacenatdnsrecord">[]Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Nat<wbr>Dns<wbr>Record</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv4 NAT DNS records. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="natipaddress_go">
@@ -2753,6 +2781,15 @@ The address will be automatically assigned from the specified subnet.
     <dd>{{% md %}}ID of the subnet to attach this
 interface to. The subnet must exist in the same zone where this instance will be
 created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsrecords_nodejs">
+<a href="#dnsrecords_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancenetworkinterfacednsrecord">Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Dns<wbr>Record<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv4 DNS records. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="index_nodejs">
@@ -2801,6 +2838,15 @@ The address will be automatically assigned from the specified subnet.
     <dd>{{% md %}}The private IPv6 address to assign to the instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ipv6dnsrecords_nodejs">
+<a href="#ipv6dnsrecords_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Dns<wbr>Records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancenetworkinterfaceipv6dnsrecord">Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Ipv6Dns<wbr>Record<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv6 DNS records. The structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="macaddress_nodejs">
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
 </span>
@@ -2816,6 +2862,15 @@ The address will be automatically assigned from the specified subnet.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Provide a public address, for instance, to access the internet over NAT.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="natdnsrecords_nodejs">
+<a href="#natdnsrecords_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Dns<wbr>Records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancenetworkinterfacenatdnsrecord">Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Nat<wbr>Dns<wbr>Record<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv4 NAT DNS records. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="natipaddress_nodejs">
@@ -2857,6 +2912,15 @@ The address will be automatically assigned from the specified subnet.
     <dd>{{% md %}}ID of the subnet to attach this
 interface to. The subnet must exist in the same zone where this instance will be
 created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dns_records_python">
+<a href="#dns_records_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancenetworkinterfacednsrecord">Sequence[Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Dns<wbr>Record<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv4 DNS records. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="index_python">
@@ -2905,6 +2969,15 @@ The address will be automatically assigned from the specified subnet.
     <dd>{{% md %}}The private IPv6 address to assign to the instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ipv6_dns_records_python">
+<a href="#ipv6_dns_records_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>dns_<wbr>records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancenetworkinterfaceipv6dnsrecord">Sequence[Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Ipv6Dns<wbr>Record<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv6 DNS records. The structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="mac_address_python">
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
 </span>
@@ -2920,6 +2993,15 @@ The address will be automatically assigned from the specified subnet.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Provide a public address, for instance, to access the internet over NAT.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nat_dns_records_python">
+<a href="#nat_dns_records_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>dns_<wbr>records</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancenetworkinterfacenatdnsrecord">Sequence[Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Nat<wbr>Dns<wbr>Record<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of configurations for creating ipv4 NAT DNS records. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nat_ip_address_python">
@@ -2946,6 +3028,492 @@ The address will be automatically assigned from the specified subnet.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Security group ids for network interface.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="computeinstancenetworkinterfacednsrecord">Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Dns<wbr>Record</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="fqdn_csharp">
+<a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnszoneid_csharp">
+<a href="#dnszoneid_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone used).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ptr_csharp">
+<a href="#ptr_csharp" style="color: inherit; text-decoration: inherit;">Ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a PTR DNS record.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_csharp">
+<a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="fqdn_go">
+<a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnszoneid_go">
+<a href="#dnszoneid_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone used).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ptr_go">
+<a href="#ptr_go" style="color: inherit; text-decoration: inherit;">Ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a PTR DNS record.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_go">
+<a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="fqdn_nodejs">
+<a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnszoneid_nodejs">
+<a href="#dnszoneid_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone used).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ptr_nodejs">
+<a href="#ptr_nodejs" style="color: inherit; text-decoration: inherit;">ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a PTR DNS record.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_nodejs">
+<a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="fqdn_python">
+<a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dns_zone_id_python">
+<a href="#dns_zone_id_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zone_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone used).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ptr_python">
+<a href="#ptr_python" style="color: inherit; text-decoration: inherit;">ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a PTR DNS record.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_python">
+<a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="computeinstancenetworkinterfaceipv6dnsrecord">Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Ipv6Dns<wbr>Record</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="fqdn_csharp">
+<a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnszoneid_csharp">
+<a href="#dnszoneid_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone used).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ptr_csharp">
+<a href="#ptr_csharp" style="color: inherit; text-decoration: inherit;">Ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a PTR DNS record.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_csharp">
+<a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="fqdn_go">
+<a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnszoneid_go">
+<a href="#dnszoneid_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone used).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ptr_go">
+<a href="#ptr_go" style="color: inherit; text-decoration: inherit;">Ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a PTR DNS record.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_go">
+<a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="fqdn_nodejs">
+<a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnszoneid_nodejs">
+<a href="#dnszoneid_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone used).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ptr_nodejs">
+<a href="#ptr_nodejs" style="color: inherit; text-decoration: inherit;">ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a PTR DNS record.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_nodejs">
+<a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="fqdn_python">
+<a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dns_zone_id_python">
+<a href="#dns_zone_id_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zone_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone used).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ptr_python">
+<a href="#ptr_python" style="color: inherit; text-decoration: inherit;">ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a PTR DNS record.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_python">
+<a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="computeinstancenetworkinterfacenatdnsrecord">Compute<wbr>Instance<wbr>Network<wbr>Interface<wbr>Nat<wbr>Dns<wbr>Record</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="fqdn_csharp">
+<a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnszoneid_csharp">
+<a href="#dnszoneid_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone used).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ptr_csharp">
+<a href="#ptr_csharp" style="color: inherit; text-decoration: inherit;">Ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a PTR DNS record.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_csharp">
+<a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="fqdn_go">
+<a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnszoneid_go">
+<a href="#dnszoneid_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone used).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ptr_go">
+<a href="#ptr_go" style="color: inherit; text-decoration: inherit;">Ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a PTR DNS record.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_go">
+<a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="fqdn_nodejs">
+<a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnszoneid_nodejs">
+<a href="#dnszoneid_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone used).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ptr_nodejs">
+<a href="#ptr_nodejs" style="color: inherit; text-decoration: inherit;">ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a PTR DNS record.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_nodejs">
+<a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="fqdn_python">
+<a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DNS record FQDN (must have a dot at the end).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dns_zone_id_python">
+<a href="#dns_zone_id_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zone_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DNS zone ID (if not set, private zone used).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ptr_python">
+<a href="#ptr_python" style="color: inherit; text-decoration: inherit;">ptr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, also create a PTR DNS record.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_python">
+<a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS record TTL. in seconds
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

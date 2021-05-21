@@ -14,7 +14,7 @@ A Google Cloud Memcache instance.
 
 To get more information about Instance, see:
 
-* [API documentation](https://cloud.google.com/memorystore/docs/memcached/reference/rest/v1beta2/projects.locations.instances)
+* [API documentation](https://cloud.google.com/memorystore/docs/memcached/reference/rest/v1/projects.locations.instances)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/memcache/docs/creating-instances)
 
@@ -48,9 +48,6 @@ class MyStack : Stack
             AddressType = "INTERNAL",
             PrefixLength = 16,
             Network = memcacheNetwork.Apply(memcacheNetwork => memcacheNetwork.Id),
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var privateServiceConnection = new Gcp.ServiceNetworking.Connection("privateServiceConnection", new Gcp.ServiceNetworking.ConnectionArgs
         {
@@ -60,9 +57,6 @@ class MyStack : Stack
             {
                 serviceRange.Name,
             },
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var instance = new Gcp.Memcache.Instance("instance", new Gcp.Memcache.InstanceArgs
         {
@@ -74,9 +68,6 @@ class MyStack : Stack
             },
             NodeCount = 1,
             MemcacheVersion = "MEMCACHE_1_5",
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
     }
 
@@ -112,7 +103,7 @@ func main() {
 			AddressType:  pulumi.String("INTERNAL"),
 			PrefixLength: pulumi.Int(16),
 			Network:      pulumi.String(memcacheNetwork.Id),
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -122,7 +113,7 @@ func main() {
 			ReservedPeeringRanges: pulumi.StringArray{
 				serviceRange.Name,
 			},
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -134,7 +125,7 @@ func main() {
 			},
 			NodeCount:       pulumi.Int(1),
 			MemcacheVersion: pulumi.String("MEMCACHE_1_5"),
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -158,13 +149,11 @@ service_range = gcp.compute.GlobalAddress("serviceRange",
     purpose="VPC_PEERING",
     address_type="INTERNAL",
     prefix_length=16,
-    network=memcache_network.id,
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    network=memcache_network.id)
 private_service_connection = gcp.servicenetworking.Connection("privateServiceConnection",
     network=memcache_network.id,
     service="servicenetworking.googleapis.com",
-    reserved_peering_ranges=[service_range.name],
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    reserved_peering_ranges=[service_range.name])
 instance = gcp.memcache.Instance("instance",
     authorized_network=private_service_connection.network,
     node_config=gcp.memcache.InstanceNodeConfigArgs(
@@ -172,8 +161,7 @@ instance = gcp.memcache.Instance("instance",
         memory_size_mb=1024,
     ),
     node_count=1,
-    memcache_version="MEMCACHE_1_5",
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    memcache_version="MEMCACHE_1_5")
 ```
 
 
@@ -195,15 +183,11 @@ const serviceRange = new gcp.compute.GlobalAddress("serviceRange", {
     addressType: "INTERNAL",
     prefixLength: 16,
     network: memcacheNetwork.then(memcacheNetwork => memcacheNetwork.id),
-}, {
-    provider: google_beta,
 });
 const privateServiceConnection = new gcp.servicenetworking.Connection("privateServiceConnection", {
     network: memcacheNetwork.then(memcacheNetwork => memcacheNetwork.id),
     service: "servicenetworking.googleapis.com",
     reservedPeeringRanges: [serviceRange.name],
-}, {
-    provider: google_beta,
 });
 const instance = new gcp.memcache.Instance("instance", {
     authorizedNetwork: privateServiceConnection.network,
@@ -213,8 +197,6 @@ const instance = new gcp.memcache.Instance("instance", {
     },
     nodeCount: 1,
     memcacheVersion: "MEMCACHE_1_5",
-}, {
-    provider: google_beta,
 });
 ```
 
@@ -275,25 +257,19 @@ const instance = new gcp.memcache.Instance("instance", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -305,25 +281,19 @@ const instance = new gcp.memcache.Instance("instance", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -335,33 +305,25 @@ const instance = new gcp.memcache.Instance("instance", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -373,25 +335,19 @@ const instance = new gcp.memcache.Instance("instance", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

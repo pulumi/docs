@@ -29,7 +29,10 @@ A Pulumi package for creating and managing F5 BigIP resources.
     <li><a href="commonlicensemanagebigiq" title="CommonLicenseManageBigIq"><span class="symbol resource"></span>CommonLicenseManageBigIq</a></li>
     <li><a href="do" title="Do"><span class="symbol resource"></span>Do</a></li>
     <li><a href="eventservicediscovery" title="EventServiceDiscovery"><span class="symbol resource"></span>EventServiceDiscovery</a></li>
+    <li><a href="fastapplication" title="FastApplication"><span class="symbol resource"></span>FastApplication</a></li>
+    <li><a href="fasttemplate" title="FastTemplate"><span class="symbol resource"></span>FastTemplate</a></li>
     <li><a href="ipsecpolicy" title="IpsecPolicy"><span class="symbol resource"></span>IpsecPolicy</a></li>
+    <li><a href="netikepeer" title="NetIkePeer"><span class="symbol resource"></span>NetIkePeer</a></li>
     <li><a href="nettunnel" title="NetTunnel"><span class="symbol resource"></span>NetTunnel</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="trafficselector" title="TrafficSelector"><span class="symbol resource"></span>TrafficSelector</a></li>
@@ -44,6 +47,6 @@ A Pulumi package for creating and managing F5 BigIP resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.1.0</dd>
 </dl>
 

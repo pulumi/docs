@@ -245,14 +245,6 @@ The GtmProperty resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="traffictargets_csharp">
-<a href="#traffictargets_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Targets</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gtmpropertytraffictarget">List&lt;Gtm<wbr>Property<wbr>Traffic<wbr>Target<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -445,6 +437,14 @@ The GtmProperty resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="traffictargets_csharp">
+<a href="#traffictargets_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gtmpropertytraffictarget">List&lt;Gtm<wbr>Property<wbr>Traffic<wbr>Target<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="unreachablethreshold_csharp">
 <a href="#unreachablethreshold_csharp" style="color: inherit; text-decoration: inherit;">Unreachable<wbr>Threshold</a>
 </span>
@@ -502,14 +502,6 @@ The GtmProperty resource accepts the following [input]({{< relref "/docs/intro/c
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="traffictargets_go">
-<a href="#traffictargets_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Targets</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gtmpropertytraffictarget">[]Gtm<wbr>Property<wbr>Traffic<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -705,6 +697,14 @@ The GtmProperty resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="traffictargets_go">
+<a href="#traffictargets_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gtmpropertytraffictarget">[]Gtm<wbr>Property<wbr>Traffic<wbr>Target</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="unreachablethreshold_go">
 <a href="#unreachablethreshold_go" style="color: inherit; text-decoration: inherit;">Unreachable<wbr>Threshold</a>
 </span>
@@ -762,14 +762,6 @@ The GtmProperty resource accepts the following [input]({{< relref "/docs/intro/c
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="traffictargets_nodejs">
-<a href="#traffictargets_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Targets</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gtmpropertytraffictarget">Gtm<wbr>Property<wbr>Traffic<wbr>Target<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -965,6 +957,14 @@ The GtmProperty resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="traffictargets_nodejs">
+<a href="#traffictargets_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gtmpropertytraffictarget">Gtm<wbr>Property<wbr>Traffic<wbr>Target<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="unreachablethreshold_nodejs">
 <a href="#unreachablethreshold_nodejs" style="color: inherit; text-decoration: inherit;">unreachable<wbr>Threshold</a>
 </span>
@@ -1022,14 +1022,6 @@ The GtmProperty resource accepts the following [input]({{< relref "/docs/intro/c
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="traffic_targets_python">
-<a href="#traffic_targets_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>targets</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gtmpropertytraffictarget">Sequence[Gtm<wbr>Property<wbr>Traffic<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1222,6 +1214,14 @@ The GtmProperty resource accepts the following [input]({{< relref "/docs/intro/c
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="traffic_targets_python">
+<a href="#traffic_targets_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gtmpropertytraffictarget">Sequence[Gtm<wbr>Property<wbr>Traffic<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

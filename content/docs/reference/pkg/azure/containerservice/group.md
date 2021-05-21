@@ -249,6 +249,7 @@ const exampleGroup = new azure.containerservice.Group("exampleGroup", {
           <span class="nx">diagnostics</span><span class="p">:</span> <span class="nx">Optional[GroupDiagnosticsArgs]</span> = None<span class="p">,</span>
           <span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[GroupDnsConfigArgs]</span> = None<span class="p">,</span>
           <span class="nx">dns_name_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">exposed_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupExposedPortArgs]]</span> = None<span class="p">,</span>
           <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[GroupIdentityArgs]</span> = None<span class="p">,</span>
           <span class="nx">image_registry_credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupImageRegistryCredentialArgs]]</span> = None<span class="p">,</span>
           <span class="nx">ip_address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -281,25 +282,19 @@ const exampleGroup = new azure.containerservice.Group("exampleGroup", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -311,25 +306,19 @@ const exampleGroup = new azure.containerservice.Group("exampleGroup", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -341,33 +330,25 @@ const exampleGroup = new azure.containerservice.Group("exampleGroup", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -379,25 +360,19 @@ const exampleGroup = new azure.containerservice.Group("exampleGroup", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -466,6 +441,15 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS label/name for the container groups IP. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exposedports_csharp">
+<a href="#exposedports_csharp" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupexposedport">List&lt;Group<wbr>Exposed<wbr>Port<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Zero or more `exposed_port` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
@@ -598,6 +582,15 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The DNS label/name for the container groups IP. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="exposedports_go">
+<a href="#exposedports_go" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupexposedport">[]Group<wbr>Exposed<wbr>Port</a></span>
+    </dt>
+    <dd>{{% md %}}Zero or more `exposed_port` blocks as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
@@ -728,6 +721,15 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The DNS label/name for the container groups IP. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="exposedports_nodejs">
+<a href="#exposedports_nodejs" style="color: inherit; text-decoration: inherit;">exposed<wbr>Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupexposedport">Group<wbr>Exposed<wbr>Port<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Zero or more `exposed_port` blocks as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
@@ -856,6 +858,15 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS label/name for the container groups IP. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exposed_ports_python">
+<a href="#exposed_ports_python" style="color: inherit; text-decoration: inherit;">exposed_<wbr>ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupexposedport">Sequence[Group<wbr>Exposed<wbr>Port<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Zero or more `exposed_port` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
@@ -1078,6 +1089,7 @@ Get an existing Group resource's state with the given name, ID, and optional ext
         <span class="nx">diagnostics</span><span class="p">:</span> <span class="nx">Optional[GroupDiagnosticsArgs]</span> = None<span class="p">,</span>
         <span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[GroupDnsConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">dns_name_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">exposed_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupExposedPortArgs]]</span> = None<span class="p">,</span>
         <span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[GroupIdentityArgs]</span> = None<span class="p">,</span>
         <span class="nx">image_registry_credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupImageRegistryCredentialArgs]]</span> = None<span class="p">,</span>
@@ -1238,6 +1250,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The DNS label/name for the container groups IP. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_exposedports_csharp">
+<a href="#state_exposedports_csharp" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupexposedport">List&lt;Group<wbr>Exposed<wbr>Port<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Zero or more `exposed_port` blocks as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_fqdn_csharp">
 <a href="#state_fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
 </span>
@@ -1384,6 +1405,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS label/name for the container groups IP. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_exposedports_go">
+<a href="#state_exposedports_go" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupexposedport">[]Group<wbr>Exposed<wbr>Port</a></span>
+    </dt>
+    <dd>{{% md %}}Zero or more `exposed_port` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_go">
@@ -1534,6 +1564,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The DNS label/name for the container groups IP. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_exposedports_nodejs">
+<a href="#state_exposedports_nodejs" style="color: inherit; text-decoration: inherit;">exposed<wbr>Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupexposedport">Group<wbr>Exposed<wbr>Port<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Zero or more `exposed_port` blocks as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_fqdn_nodejs">
 <a href="#state_fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
@@ -1680,6 +1719,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS label/name for the container groups IP. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_exposed_ports_python">
+<a href="#state_exposed_ports_python" style="color: inherit; text-decoration: inherit;">exposed_<wbr>ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupexposedport">Sequence[Group<wbr>Exposed<wbr>Port<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Zero or more `exposed_port` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_python">
@@ -2369,7 +2417,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupcontainerlivenessprobehttpget">List&lt;Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The definition of the httpget for this container as documented in the `httpget` block below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The definition of the http_get for this container as documented in the `http_get` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialdelayseconds_csharp">
@@ -2436,7 +2484,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupcontainerlivenessprobehttpget">[]Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get</a></span>
     </dt>
-    <dd>{{% md %}}The definition of the httpget for this container as documented in the `httpget` block below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The definition of the http_get for this container as documented in the `http_get` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialdelayseconds_go">
@@ -2503,7 +2551,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupcontainerlivenessprobehttpget">Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}The definition of the httpget for this container as documented in the `httpget` block below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The definition of the http_get for this container as documented in the `http_get` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialdelayseconds_nodejs">
@@ -2570,7 +2618,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupcontainerlivenessprobehttpget">Sequence[Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The definition of the httpget for this container as documented in the `httpget` block below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The definition of the http_get for this container as documented in the `http_get` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initial_delay_seconds_python">
@@ -2855,7 +2903,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupcontainerreadinessprobehttpget">List&lt;Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The definition of the httpget for this container as documented in the `httpget` block below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The definition of the http_get for this container as documented in the `http_get` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialdelayseconds_csharp">
@@ -2922,7 +2970,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupcontainerreadinessprobehttpget">[]Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get</a></span>
     </dt>
-    <dd>{{% md %}}The definition of the httpget for this container as documented in the `httpget` block below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The definition of the http_get for this container as documented in the `http_get` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialdelayseconds_go">
@@ -2989,7 +3037,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupcontainerreadinessprobehttpget">Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}The definition of the httpget for this container as documented in the `httpget` block below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The definition of the http_get for this container as documented in the `http_get` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialdelayseconds_nodejs">
@@ -3056,7 +3104,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupcontainerreadinessprobehttpget">Sequence[Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The definition of the httpget for this container as documented in the `httpget` block below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The definition of the http_get for this container as documented in the `http_get` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initial_delay_seconds_python">
@@ -4029,6 +4077,96 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of search domains that DNS requests will search along.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="groupexposedport">Group<wbr>Exposed<wbr>Port</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port number the container will expose. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network protocol associated with port. Possible values are `TCP` & `UDP`. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port number the container will expose. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network protocol associated with port. Possible values are `TCP` & `UDP`. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The port number the container will expose. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network protocol associated with port. Possible values are `TCP` & `UDP`. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port number the container will expose. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The network protocol associated with port. Possible values are `TCP` & `UDP`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

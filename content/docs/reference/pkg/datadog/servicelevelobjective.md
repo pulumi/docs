@@ -19,7 +19,7 @@ Provides a Datadog service level objective resource. This can be used to create 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-### Metric-Based SLO
+
 
 
 {{< example csharp >}}
@@ -32,6 +32,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        // Metric-Based SLO
         // Create a new Datadog service level objective
         var foo = new Datadog.ServiceLevelObjective("foo", new Datadog.ServiceLevelObjectiveArgs
         {
@@ -68,167 +69,7 @@ class MyStack : Stack
             },
             Type = "metric",
         });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-datadog/sdk/v3/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datadog.NewServiceLevelObjective(ctx, "foo", &datadog.ServiceLevelObjectiveArgs{
-			Description: pulumi.String("My custom metric SLO"),
-			Name:        pulumi.String("Example Metric SLO"),
-			Query: &datadog.ServiceLevelObjectiveQueryArgs{
-				Denominator: pulumi.String("sum:my.custom.count.metric{*}.as_count()"),
-				Numerator:   pulumi.String("sum:my.custom.count.metric{type:good_events}.as_count()"),
-			},
-			Tags: pulumi.StringArray{
-				pulumi.String("foo:bar"),
-				pulumi.String("baz"),
-			},
-			Thresholds: datadog.ServiceLevelObjectiveThresholdArray{
-				&datadog.ServiceLevelObjectiveThresholdArgs{
-					Target:         pulumi.Float64(99.9),
-					TargetDisplay:  pulumi.String("99.900"),
-					Timeframe:      pulumi.String("7d"),
-					Warning:        pulumi.Float64(99.99),
-					WarningDisplay: pulumi.String("99.990"),
-				},
-				&datadog.ServiceLevelObjectiveThresholdArgs{
-					Target:         pulumi.Float64(99.9),
-					TargetDisplay:  pulumi.String("99.900"),
-					Timeframe:      pulumi.String("30d"),
-					Warning:        pulumi.Float64(99.99),
-					WarningDisplay: pulumi.String("99.990"),
-				},
-			},
-			Type: pulumi.String("metric"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_datadog as datadog
-
-# Create a new Datadog service level objective
-foo = datadog.ServiceLevelObjective("foo",
-    description="My custom metric SLO",
-    name="Example Metric SLO",
-    query=datadog.ServiceLevelObjectiveQueryArgs(
-        denominator="sum:my.custom.count.metric{*}.as_count()",
-        numerator="sum:my.custom.count.metric{type:good_events}.as_count()",
-    ),
-    tags=[
-        "foo:bar",
-        "baz",
-    ],
-    thresholds=[
-        datadog.ServiceLevelObjectiveThresholdArgs(
-            target=99.9,
-            target_display="99.900",
-            timeframe="7d",
-            warning=99.99,
-            warning_display="99.990",
-        ),
-        datadog.ServiceLevelObjectiveThresholdArgs(
-            target=99.9,
-            target_display="99.900",
-            timeframe="30d",
-            warning=99.99,
-            warning_display="99.990",
-        ),
-    ],
-    type="metric")
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as datadog from "@pulumi/datadog";
-
-// Create a new Datadog service level objective
-const foo = new datadog.ServiceLevelObjective("foo", {
-    description: "My custom metric SLO",
-    name: "Example Metric SLO",
-    query: {
-        denominator: "sum:my.custom.count.metric{*}.as_count()",
-        numerator: "sum:my.custom.count.metric{type:good_events}.as_count()",
-    },
-    tags: [
-        "foo:bar",
-        "baz",
-    ],
-    thresholds: [
-        {
-            target: 99.9,
-            targetDisplay: "99.900",
-            timeframe: "7d",
-            warning: 99.99,
-            warningDisplay: "99.990",
-        },
-        {
-            target: 99.9,
-            targetDisplay: "99.900",
-            timeframe: "30d",
-            warning: 99.99,
-            warningDisplay: "99.990",
-        },
-    ],
-    type: "metric",
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-### Monitor-Based SLO
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Datadog = Pulumi.Datadog;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
+        // Monitor-Based SLO
         // Create a new Datadog service level objective
         var bar = new Datadog.ServiceLevelObjective("bar", new Datadog.ServiceLevelObjectiveArgs
         {
@@ -284,6 +125,37 @@ Coming soon!
 import pulumi
 import pulumi_datadog as datadog
 
+# Metric-Based SLO
+# Create a new Datadog service level objective
+foo = datadog.ServiceLevelObjective("foo",
+    description="My custom metric SLO",
+    name="Example Metric SLO",
+    query=datadog.ServiceLevelObjectiveQueryArgs(
+        denominator="sum:my.custom.count.metric{*}.as_count()",
+        numerator="sum:my.custom.count.metric{type:good_events}.as_count()",
+    ),
+    tags=[
+        "foo:bar",
+        "baz",
+    ],
+    thresholds=[
+        datadog.ServiceLevelObjectiveThresholdArgs(
+            target=99.9,
+            target_display="99.900",
+            timeframe="7d",
+            warning=99.99,
+            warning_display="99.990",
+        ),
+        datadog.ServiceLevelObjectiveThresholdArgs(
+            target=99.9,
+            target_display="99.900",
+            timeframe="30d",
+            warning=99.99,
+            warning_display="99.990",
+        ),
+    ],
+    type="metric")
+# Monitor-Based SLO
 # Create a new Datadog service level objective
 bar = datadog.ServiceLevelObjective("bar",
     description="My custom monitor SLO",
@@ -323,6 +195,38 @@ bar = datadog.ServiceLevelObjective("bar",
 import * as pulumi from "@pulumi/pulumi";
 import * as datadog from "@pulumi/datadog";
 
+// Metric-Based SLO
+// Create a new Datadog service level objective
+const foo = new datadog.ServiceLevelObjective("foo", {
+    description: "My custom metric SLO",
+    name: "Example Metric SLO",
+    query: {
+        denominator: "sum:my.custom.count.metric{*}.as_count()",
+        numerator: "sum:my.custom.count.metric{type:good_events}.as_count()",
+    },
+    tags: [
+        "foo:bar",
+        "baz",
+    ],
+    thresholds: [
+        {
+            target: 99.9,
+            targetDisplay: "99.900",
+            timeframe: "7d",
+            warning: 99.99,
+            warningDisplay: "99.990",
+        },
+        {
+            target: 99.9,
+            targetDisplay: "99.900",
+            timeframe: "30d",
+            warning: 99.99,
+            warningDisplay: "99.990",
+        },
+    ],
+    type: "metric",
+});
+// Monitor-Based SLO
 // Create a new Datadog service level objective
 const bar = new datadog.ServiceLevelObjective("bar", {
     description: "My custom monitor SLO",
@@ -408,25 +312,19 @@ const bar = new datadog.ServiceLevelObjective("bar", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceLevelObjectiveArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -438,25 +336,19 @@ const bar = new datadog.ServiceLevelObjective("bar", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceLevelObjectiveArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -468,33 +360,25 @@ const bar = new datadog.ServiceLevelObjective("bar", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceLevelObjectiveArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -506,25 +390,19 @@ const bar = new datadog.ServiceLevelObjective("bar", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceLevelObjectiveArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -565,10 +443,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be
-found in the Datadog API [documentation
-page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from
-are: `metric` and `monitor`.
+    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from are: `metric` and `monitor`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -587,7 +462,6 @@ are: `metric` and `monitor`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. dashboards).
--   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_csharp">
@@ -663,10 +537,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be
-found in the Datadog API [documentation
-page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from
-are: `metric` and `monitor`.
+    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from are: `metric` and `monitor`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -685,7 +556,6 @@ are: `metric` and `monitor`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. dashboards).
--   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_go">
@@ -761,10 +631,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be
-found in the Datadog API [documentation
-page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from
-are: `metric` and `monitor`.
+    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from are: `metric` and `monitor`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -783,7 +650,6 @@ are: `metric` and `monitor`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. dashboards).
--   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_nodejs">
@@ -859,10 +725,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be
-found in the Datadog API [documentation
-page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from
-are: `metric` and `monitor`.
+    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from are: `metric` and `monitor`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -881,7 +744,6 @@ are: `metric` and `monitor`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. dashboards).
--   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_python">
@@ -1139,7 +1001,6 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. dashboards).
--   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_csharp">
@@ -1202,10 +1063,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be
-found in the Datadog API [documentation
-page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from
-are: `metric` and `monitor`.
+    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from are: `metric` and `monitor`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validate_csharp">
@@ -1237,7 +1095,6 @@ are: `metric` and `monitor`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. dashboards).
--   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_go">
@@ -1300,10 +1157,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be
-found in the Datadog API [documentation
-page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from
-are: `metric` and `monitor`.
+    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from are: `metric` and `monitor`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validate_go">
@@ -1335,7 +1189,6 @@ are: `metric` and `monitor`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. dashboards).
--   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_nodejs">
@@ -1398,10 +1251,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be
-found in the Datadog API [documentation
-page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from
-are: `metric` and `monitor`.
+    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from are: `metric` and `monitor`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validate_nodejs">
@@ -1433,7 +1283,6 @@ are: `metric` and `monitor`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. dashboards).
--   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_python">
@@ -1496,10 +1345,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be
-found in the Datadog API [documentation
-page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from
-are: `metric` and `monitor`.
+    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from are: `metric` and `monitor`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validate_python">
@@ -1532,7 +1378,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The sum of the `total` events.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numerator_csharp">
 <a href="#numerator_csharp" style="color: inherit; text-decoration: inherit;">Numerator</a>
@@ -1540,7 +1387,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The sum of all the `good` events.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1552,7 +1400,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The sum of the `total` events.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numerator_go">
 <a href="#numerator_go" style="color: inherit; text-decoration: inherit;">Numerator</a>
@@ -1560,7 +1409,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The sum of all the `good` events.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1572,7 +1422,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The sum of the `total` events.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numerator_nodejs">
 <a href="#numerator_nodejs" style="color: inherit; text-decoration: inherit;">numerator</a>
@@ -1580,7 +1431,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The sum of all the `good` events.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1592,7 +1444,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The sum of the `total` events.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numerator_python">
 <a href="#numerator_python" style="color: inherit; text-decoration: inherit;">numerator</a>
@@ -1600,7 +1453,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The sum of all the `good` events.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicelevelobjectivethreshold">Service<wbr>Level<wbr>Objective<wbr>Threshold</h4>
@@ -1614,7 +1468,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The objective's target in`[0,100]`.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeframe_csharp">
 <a href="#timeframe_csharp" style="color: inherit; text-decoration: inherit;">Timeframe</a>
@@ -1622,14 +1477,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
--   `7d`
--   `30d`
--   `90d`
--   `target`: (Required) the objective's target `[0,100]`
--   `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
--   `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
--   `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
+    <dd>{{% md %}}The time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API documentation page. Available options to choose from are: `7d`, `30d`, `90d`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetdisplay_csharp">
@@ -1638,7 +1486,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A string representation of the target that indicates its precision. It uses trailing zeros to show significant decimal places (e.g. `98.00`).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_csharp">
 <a href="#warning_csharp" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -1646,7 +1495,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The objective's warning value in `[0,100]`. This must be greater than the target value.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warningdisplay_csharp">
 <a href="#warningdisplay_csharp" style="color: inherit; text-decoration: inherit;">Warning<wbr>Display</a>
@@ -1654,7 +1504,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A string representation of the warning target (see the description of the target_display field for details).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1666,7 +1517,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The objective's target in`[0,100]`.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeframe_go">
 <a href="#timeframe_go" style="color: inherit; text-decoration: inherit;">Timeframe</a>
@@ -1674,14 +1526,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
--   `7d`
--   `30d`
--   `90d`
--   `target`: (Required) the objective's target `[0,100]`
--   `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
--   `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
--   `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
+    <dd>{{% md %}}The time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API documentation page. Available options to choose from are: `7d`, `30d`, `90d`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetdisplay_go">
@@ -1690,7 +1535,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A string representation of the target that indicates its precision. It uses trailing zeros to show significant decimal places (e.g. `98.00`).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_go">
 <a href="#warning_go" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -1698,7 +1544,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The objective's warning value in `[0,100]`. This must be greater than the target value.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warningdisplay_go">
 <a href="#warningdisplay_go" style="color: inherit; text-decoration: inherit;">Warning<wbr>Display</a>
@@ -1706,7 +1553,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A string representation of the warning target (see the description of the target_display field for details).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1718,7 +1566,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The objective's target in`[0,100]`.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeframe_nodejs">
 <a href="#timeframe_nodejs" style="color: inherit; text-decoration: inherit;">timeframe</a>
@@ -1726,14 +1575,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
--   `7d`
--   `30d`
--   `90d`
--   `target`: (Required) the objective's target `[0,100]`
--   `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
--   `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
--   `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
+    <dd>{{% md %}}The time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API documentation page. Available options to choose from are: `7d`, `30d`, `90d`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetdisplay_nodejs">
@@ -1742,7 +1584,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A string representation of the target that indicates its precision. It uses trailing zeros to show significant decimal places (e.g. `98.00`).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_nodejs">
 <a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -1750,7 +1593,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The objective's warning value in `[0,100]`. This must be greater than the target value.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warningdisplay_nodejs">
 <a href="#warningdisplay_nodejs" style="color: inherit; text-decoration: inherit;">warning<wbr>Display</a>
@@ -1758,7 +1602,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A string representation of the warning target (see the description of the target_display field for details).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1770,7 +1615,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The objective's target in`[0,100]`.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeframe_python">
 <a href="#timeframe_python" style="color: inherit; text-decoration: inherit;">timeframe</a>
@@ -1778,14 +1624,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
--   `7d`
--   `30d`
--   `90d`
--   `target`: (Required) the objective's target `[0,100]`
--   `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
--   `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
--   `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
+    <dd>{{% md %}}The time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API documentation page. Available options to choose from are: `7d`, `30d`, `90d`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_display_python">
@@ -1794,7 +1633,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A string representation of the target that indicates its precision. It uses trailing zeros to show significant decimal places (e.g. `98.00`).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_python">
 <a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -1802,7 +1642,8 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The objective's warning value in `[0,100]`. This must be greater than the target value.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_display_python">
 <a href="#warning_display_python" style="color: inherit; text-decoration: inherit;">warning_<wbr>display</a>
@@ -1810,12 +1651,13 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A string representation of the warning target (see the description of the target_display field for details).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
 
-Service Level Objectives can be imported using their string ID, e.g.
+# Service Level Objectives can be imported using their string ID, e.g.
 
 ```sh
  $ pulumi import datadog:index/serviceLevelObjective:ServiceLevelObjective baz 12345678901234567890123456789012

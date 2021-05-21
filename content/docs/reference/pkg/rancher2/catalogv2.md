@@ -62,25 +62,19 @@ Provides a Rancher Catalog v2 resource. This can be used to create cluster helm 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CatalogV2Args</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -92,25 +86,19 @@ Provides a Rancher Catalog v2 resource. This can be used to create cluster helm 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CatalogV2Args</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -122,33 +110,25 @@ Provides a Rancher Catalog v2 resource. This can be used to create cluster helm 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CatalogV2Args</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -160,25 +140,19 @@ Provides a Rancher Catalog v2 resource. This can be used to create cluster helm 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CatalogV2Args</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -246,7 +220,7 @@ The CatalogV2 resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the catalog v2 repo (string)
+    <dd>{{% md %}}The url of the catalog v2 repo. Conflicts with `url` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_csharp">
@@ -318,7 +292,7 @@ The CatalogV2 resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL to an index generated by Helm (string)
+    <dd>{{% md %}}URL to an index generated by Helm. Conflicts with `git_repo` (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -376,7 +350,7 @@ The CatalogV2 resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the catalog v2 repo (string)
+    <dd>{{% md %}}The url of the catalog v2 repo. Conflicts with `url` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_go">
@@ -448,7 +422,7 @@ The CatalogV2 resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL to an index generated by Helm (string)
+    <dd>{{% md %}}URL to an index generated by Helm. Conflicts with `git_repo` (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -506,7 +480,7 @@ The CatalogV2 resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the catalog v2 repo (string)
+    <dd>{{% md %}}The url of the catalog v2 repo. Conflicts with `url` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_nodejs">
@@ -578,7 +552,7 @@ The CatalogV2 resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL to an index generated by Helm (string)
+    <dd>{{% md %}}URL to an index generated by Helm. Conflicts with `git_repo` (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -636,7 +610,7 @@ The CatalogV2 resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The url of the catalog v2 repo (string)
+    <dd>{{% md %}}The url of the catalog v2 repo. Conflicts with `url` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_python">
@@ -708,7 +682,7 @@ The CatalogV2 resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URL to an index generated by Helm (string)
+    <dd>{{% md %}}URL to an index generated by Helm. Conflicts with `git_repo` (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -997,7 +971,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the catalog v2 repo (string)
+    <dd>{{% md %}}The url of the catalog v2 repo. Conflicts with `url` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insecure_csharp">
@@ -1078,7 +1052,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL to an index generated by Helm (string)
+    <dd>{{% md %}}URL to an index generated by Helm. Conflicts with `git_repo` (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1136,7 +1110,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the catalog v2 repo (string)
+    <dd>{{% md %}}The url of the catalog v2 repo. Conflicts with `url` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insecure_go">
@@ -1217,7 +1191,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL to an index generated by Helm (string)
+    <dd>{{% md %}}URL to an index generated by Helm. Conflicts with `git_repo` (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1275,7 +1249,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the catalog v2 repo (string)
+    <dd>{{% md %}}The url of the catalog v2 repo. Conflicts with `url` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insecure_nodejs">
@@ -1356,7 +1330,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL to an index generated by Helm (string)
+    <dd>{{% md %}}URL to an index generated by Helm. Conflicts with `git_repo` (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1414,7 +1388,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The url of the catalog v2 repo (string)
+    <dd>{{% md %}}The url of the catalog v2 repo. Conflicts with `url` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insecure_python">
@@ -1495,7 +1469,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URL to an index generated by Helm (string)
+    <dd>{{% md %}}URL to an index generated by Helm. Conflicts with `git_repo` (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

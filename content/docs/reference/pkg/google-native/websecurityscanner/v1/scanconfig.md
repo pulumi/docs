@@ -31,6 +31,7 @@ Creates a new ScanConfig.
                <span class="nx">blacklist_patterns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">export_to_security_command_center</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">ignore_http_status_errors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">managed_scan</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">max_qps</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -63,25 +64,19 @@ Creates a new ScanConfig.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ScanConfigArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -93,25 +88,19 @@ Creates a new ScanConfig.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ScanConfigArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -123,33 +112,25 @@ Creates a new ScanConfig.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ScanConfigArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -161,25 +142,19 @@ Creates a new ScanConfig.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ScanConfigArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -243,6 +218,14 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Security Command Center.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ignorehttpstatuserrors_csharp">
+<a href="#ignorehttpstatuserrors_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Http<wbr>Status<wbr>Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to keep scanning even if most requests return HTTP error codes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedscan_csharp">
 <a href="#managedscan_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Scan</a>
@@ -360,6 +343,14 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Security Command Center.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ignorehttpstatuserrors_go">
+<a href="#ignorehttpstatuserrors_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Http<wbr>Status<wbr>Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to keep scanning even if most requests return HTTP error codes.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="managedscan_go">
 <a href="#managedscan_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Scan</a>
 </span>
@@ -476,6 +467,14 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Security Command Center.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ignorehttpstatuserrors_nodejs">
+<a href="#ignorehttpstatuserrors_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Http<wbr>Status<wbr>Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to keep scanning even if most requests return HTTP error codes.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="managedscan_nodejs">
 <a href="#managedscan_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Scan</a>
 </span>
@@ -591,6 +590,14 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Security Command Center.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ignore_http_status_errors_python">
+<a href="#ignore_http_status_errors_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>http_<wbr>status_<wbr>errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to keep scanning even if most requests return HTTP error codes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_scan_python">
 <a href="#managed_scan_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>scan</a>

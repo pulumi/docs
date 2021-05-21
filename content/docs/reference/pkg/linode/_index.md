@@ -33,7 +33,6 @@ A Pulumi package for creating and managing linode cloud resources.
     <li><a href="stackscript" title="StackScript"><span class="symbol resource"></span>StackScript</a></li>
     <li><a href="token" title="Token"><span class="symbol resource"></span>Token</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
-    <li><a href="vlan" title="Vlan"><span class="symbol resource"></span>Vlan</a></li>
     <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
 </ul>
 
@@ -72,6 +71,6 @@ A Pulumi package for creating and managing linode cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.1.0</dd>
 </dl>
 

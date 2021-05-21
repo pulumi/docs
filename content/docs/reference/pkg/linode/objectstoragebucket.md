@@ -173,25 +173,19 @@ const foobar = new linode.ObjectStorageBucket("foobar", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ObjectStorageBucketArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -203,25 +197,19 @@ const foobar = new linode.ObjectStorageBucket("foobar", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ObjectStorageBucketArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -233,33 +221,25 @@ const foobar = new linode.ObjectStorageBucket("foobar", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ObjectStorageBucketArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -271,25 +251,19 @@ const foobar = new linode.ObjectStorageBucket("foobar", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ObjectStorageBucketArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -330,7 +304,8 @@ The ObjectStorageBucket resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The S3 access key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_csharp">
 <a href="#acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -347,7 +322,8 @@ The ObjectStorageBucket resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cert used by this Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsenabled_csharp">
 <a href="#corsenabled_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Enabled</a>
@@ -373,7 +349,8 @@ The ObjectStorageBucket resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The S3 secret key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioning_csharp">
 <a href="#versioning_csharp" style="color: inherit; text-decoration: inherit;">Versioning</a>
@@ -412,7 +389,8 @@ The ObjectStorageBucket resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The S3 access key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_go">
 <a href="#acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -429,7 +407,8 @@ The ObjectStorageBucket resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cert used by this Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsenabled_go">
 <a href="#corsenabled_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Enabled</a>
@@ -455,7 +434,8 @@ The ObjectStorageBucket resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The S3 secret key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioning_go">
 <a href="#versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
@@ -494,7 +474,8 @@ The ObjectStorageBucket resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The S3 access key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_nodejs">
 <a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -511,7 +492,8 @@ The ObjectStorageBucket resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cert used by this Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsenabled_nodejs">
 <a href="#corsenabled_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Enabled</a>
@@ -537,7 +519,8 @@ The ObjectStorageBucket resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The S3 secret key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioning_nodejs">
 <a href="#versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
@@ -576,7 +559,8 @@ The ObjectStorageBucket resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The S3 access key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_python">
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -593,7 +577,8 @@ The ObjectStorageBucket resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cert used by this Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cors_enabled_python">
 <a href="#cors_enabled_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>enabled</a>
@@ -619,7 +604,8 @@ The ObjectStorageBucket resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The S3 secret key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioning_python">
 <a href="#versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
@@ -829,7 +815,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The S3 access key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acl_csharp">
 <a href="#state_acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -846,7 +833,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cert used by this Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_csharp">
 <a href="#state_cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
@@ -890,7 +878,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The S3 secret key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versioning_csharp">
 <a href="#state_versioning_csharp" style="color: inherit; text-decoration: inherit;">Versioning</a>
@@ -911,7 +900,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The S3 access key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acl_go">
 <a href="#state_acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -928,7 +918,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cert used by this Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_go">
 <a href="#state_cluster_go" style="color: inherit; text-decoration: inherit;">Cluster</a>
@@ -972,7 +963,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The S3 secret key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versioning_go">
 <a href="#state_versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
@@ -993,7 +985,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The S3 access key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acl_nodejs">
 <a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1010,7 +1003,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cert used by this Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_nodejs">
 <a href="#state_cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
@@ -1054,7 +1048,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The S3 secret key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versioning_nodejs">
 <a href="#state_versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
@@ -1075,7 +1070,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The S3 access key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acl_python">
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1092,7 +1088,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cert used by this Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_python">
 <a href="#state_cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
@@ -1136,7 +1133,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The S3 secret key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versioning_python">
 <a href="#state_versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>

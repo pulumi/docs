@@ -37,13 +37,13 @@ class MyStack : Stack
     {
         var myendpoint = new Aiven.ServiceIntegrationEndpoint("myendpoint", new Aiven.ServiceIntegrationEndpointArgs
         {
+            Project = aiven_project.Myproject.Project,
+            EndpointName = "<ENDPOINT_NAME>",
+            EndpointType = "datadog",
             DatadogUserConfig = new Aiven.Inputs.ServiceIntegrationEndpointDatadogUserConfigArgs
             {
                 DatadogApiKey = "<DATADOG_API_KEY>",
             },
-            EndpointName = "<ENDPOINT_NAME>",
-            EndpointType = "datadog",
-            Project = aiven_project.Myproject.Project,
         });
     }
 
@@ -67,12 +67,12 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.NewServiceIntegrationEndpoint(ctx, "myendpoint", &aiven.ServiceIntegrationEndpointArgs{
+			Project:      pulumi.Any(aiven_project.Myproject.Project),
+			EndpointName: pulumi.String("<ENDPOINT_NAME>"),
+			EndpointType: pulumi.String("datadog"),
 			DatadogUserConfig: &aiven.ServiceIntegrationEndpointDatadogUserConfigArgs{
 				DatadogApiKey: pulumi.String("<DATADOG_API_KEY>"),
 			},
-			EndpointName: pulumi.String("<ENDPOINT_NAME>"),
-			EndpointType: pulumi.String("datadog"),
-			Project:      pulumi.Any(aiven_project.Myproject.Project),
 		})
 		if err != nil {
 			return err
@@ -93,12 +93,12 @@ import pulumi
 import pulumi_aiven as aiven
 
 myendpoint = aiven.ServiceIntegrationEndpoint("myendpoint",
-    datadog_user_config=aiven.ServiceIntegrationEndpointDatadogUserConfigArgs(
-        datadog_api_key="<DATADOG_API_KEY>",
-    ),
+    project=aiven_project["myproject"]["project"],
     endpoint_name="<ENDPOINT_NAME>",
     endpoint_type="datadog",
-    project=aiven_project["myproject"]["project"])
+    datadog_user_config=aiven.ServiceIntegrationEndpointDatadogUserConfigArgs(
+        datadog_api_key="<DATADOG_API_KEY>",
+    ))
 ```
 
 
@@ -113,12 +113,12 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
 const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
+    project: aiven_project.myproject.project,
+    endpointName: "<ENDPOINT_NAME>",
+    endpointType: "datadog",
     datadogUserConfig: {
         datadogApiKey: "<DATADOG_API_KEY>",
     },
-    endpointName: "<ENDPOINT_NAME>",
-    endpointType: "datadog",
-    project: aiven_project_myproject.project,
 });
 ```
 
@@ -182,25 +182,19 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceIntegrationEndpointArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -212,25 +206,19 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceIntegrationEndpointArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -242,33 +230,25 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceIntegrationEndpointArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -280,25 +260,19 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceIntegrationEndpointArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

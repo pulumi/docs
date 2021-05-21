@@ -3919,6 +3919,17 @@ executing command for each active session.
     <dd>{{% md %}}Enables tracking of function call counts and time used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trackiotiming_csharp">
+<a href="#trackiotiming_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Io<wbr>Timing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enables timing of database I/O calls. This parameter is off by default,
+because it will repeatedly query the operating system for the current time, which may cause
+significant overhead on some platforms.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="walsendertimeout_csharp">
 <a href="#walsendertimeout_csharp" style="color: inherit; text-decoration: inherit;">Wal<wbr>Sender<wbr>Timeout</a>
 </span>
@@ -4305,6 +4316,17 @@ executing command for each active session.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables tracking of function call counts and time used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trackiotiming_go">
+<a href="#trackiotiming_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Io<wbr>Timing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enables timing of database I/O calls. This parameter is off by default,
+because it will repeatedly query the operating system for the current time, which may cause
+significant overhead on some platforms.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="walsendertimeout_go">
@@ -4695,6 +4717,17 @@ executing command for each active session.
     <dd>{{% md %}}Enables tracking of function call counts and time used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trackiotiming_nodejs">
+<a href="#trackiotiming_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Io<wbr>Timing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enables timing of database I/O calls. This parameter is off by default,
+because it will repeatedly query the operating system for the current time, which may cause
+significant overhead on some platforms.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="walsendertimeout_nodejs">
 <a href="#walsendertimeout_nodejs" style="color: inherit; text-decoration: inherit;">wal<wbr>Sender<wbr>Timeout</a>
 </span>
@@ -5081,6 +5114,17 @@ executing command for each active session.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables tracking of function call counts and time used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="track_io_timing_python">
+<a href="#track_io_timing_python" style="color: inherit; text-decoration: inherit;">track_<wbr>io_<wbr>timing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Enables timing of database I/O calls. This parameter is off by default,
+because it will repeatedly query the operating system for the current time, which may cause
+significant overhead on some platforms.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wal_sender_timeout_python">

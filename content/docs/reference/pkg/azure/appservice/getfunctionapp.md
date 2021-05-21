@@ -1294,6 +1294,15 @@ The following output properties are available:
     <dd>{{% md %}}One or more `ip_restriction` blocks as defined above.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="javaversion_csharp">
+<a href="#javaversion_csharp" style="color: inherit; text-decoration: inherit;">Java<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Java version hosted by the function app in Azure.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="linuxfxversion_csharp">
 <a href="#linuxfxversion_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Fx<wbr>Version</a>
 </span>
@@ -1429,6 +1438,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getfunctionappsiteconfigiprestriction">[]Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_restriction` blocks as defined above.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="javaversion_go">
+<a href="#javaversion_go" style="color: inherit; text-decoration: inherit;">Java<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Java version hosted by the function app in Azure.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linuxfxversion_go">
@@ -1568,6 +1586,15 @@ The following output properties are available:
     <dd>{{% md %}}One or more `ip_restriction` blocks as defined above.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="javaversion_nodejs">
+<a href="#javaversion_nodejs" style="color: inherit; text-decoration: inherit;">java<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Java version hosted by the function app in Azure.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="linuxfxversion_nodejs">
 <a href="#linuxfxversion_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Fx<wbr>Version</a>
 </span>
@@ -1703,6 +1730,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getfunctionappsiteconfigiprestriction">Sequence[Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_restriction` blocks as defined above.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="java_version_python">
+<a href="#java_version_python" style="color: inherit; text-decoration: inherit;">java_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Java version hosted by the function app in Azure.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linux_fx_version_python">

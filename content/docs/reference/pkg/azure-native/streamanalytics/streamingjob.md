@@ -46,9 +46,9 @@ class MyStack : Stack
                 new AzureNative.StreamAnalytics.Inputs.InputArgs
                 {
                     Name = "inputtest",
-                    Properties = 
+                    Properties = new AzureNative.StreamAnalytics.Inputs.StreamInputPropertiesArgs
                     {
-                        { "datasource", 
+                        Datasource = 
                         {
                             { "container", "containerName" },
                             { "pathPattern", "" },
@@ -61,13 +61,13 @@ class MyStack : Stack
                                 },
                             } },
                             { "type", "Microsoft.Storage/Blob" },
-                        } },
-                        { "serialization", 
+                        },
+                        Serialization = 
                         {
                             { "encoding", "UTF8" },
                             { "type", "Json" },
-                        } },
-                        { "type", "Stream" },
+                        },
+                        Type = "Stream",
                     },
                 },
             },
@@ -78,14 +78,14 @@ class MyStack : Stack
             {
                 new AzureNative.StreamAnalytics.Inputs.OutputArgs
                 {
-                    Datasource = 
+                    Datasource = new AzureNative.StreamAnalytics.Inputs.AzureSqlDatabaseOutputDataSourceArgs
                     {
-                        { "database", "databaseName" },
-                        { "password", "userPassword" },
-                        { "server", "serverName" },
-                        { "table", "tableName" },
-                        { "type", "Microsoft.Sql/Server/Database" },
-                        { "user", "<user>" },
+                        Database = "databaseName",
+                        Password = "userPassword",
+                        Server = "serverName",
+                        Table = "tableName",
+                        Type = "Microsoft.Sql/Server/Database",
+                        User = "<user>",
                     },
                     Name = "outputtest",
                 },
@@ -141,8 +141,8 @@ streaming_job = azure_native.streamanalytics.StreamingJob("streamingJob",
     functions=[],
     inputs=[azure_native.streamanalytics.InputArgs(
         name="inputtest",
-        properties={
-            "datasource": {
+        properties=azure_native.streamanalytics.StreamInputPropertiesArgs(
+            datasource={
                 "container": "containerName",
                 "pathPattern": "",
                 "storageAccounts": [azure_native.streamanalytics.StorageAccountArgs(
@@ -151,25 +151,25 @@ streaming_job = azure_native.streamanalytics.StreamingJob("streamingJob",
                 )],
                 "type": "Microsoft.Storage/Blob",
             },
-            "serialization": {
+            serialization={
                 "encoding": "UTF8",
                 "type": "Json",
             },
-            "type": "Stream",
-        },
+            type="Stream",
+        ),
     )],
     job_name="sj7804",
     location="West US",
     output_error_policy="Drop",
     outputs=[azure_native.streamanalytics.OutputArgs(
-        datasource={
-            "database": "databaseName",
-            "password": "userPassword",
-            "server": "serverName",
-            "table": "tableName",
-            "type": "Microsoft.Sql/Server/Database",
-            "user": "<user>",
-        },
+        datasource=azure_native.streamanalytics.AzureSqlDatabaseOutputDataSourceArgs(
+            database="databaseName",
+            password="userPassword",
+            server="serverName",
+            table="tableName",
+            type="Microsoft.Sql/Server/Database",
+            user="<user>",
+        ),
         name="outputtest",
     )],
     resource_group_name="sjrg3276",
@@ -490,25 +490,19 @@ const streamingJob = new azure_native.streamanalytics.StreamingJob("streamingJob
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StreamingJobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -520,25 +514,19 @@ const streamingJob = new azure_native.streamanalytics.StreamingJob("streamingJob
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StreamingJobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -550,33 +538,25 @@ const streamingJob = new azure_native.streamanalytics.StreamingJob("streamingJob
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StreamingJobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -588,25 +568,19 @@ const streamingJob = new azure_native.streamanalytics.StreamingJob("streamingJob
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StreamingJobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

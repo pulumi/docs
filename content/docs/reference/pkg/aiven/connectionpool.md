@@ -37,13 +37,19 @@ class MyStack : Stack
     {
         var mytestpool = new Aiven.ConnectionPool("mytestpool", new Aiven.ConnectionPoolArgs
         {
+            Project = aiven_project.Myproject.Project,
+            ServiceName = aiven_service.Myservice.Service_name,
             DatabaseName = aiven_database.Mydatabase.Database_name,
             PoolMode = "transaction",
             PoolName = "mypool",
             PoolSize = 10,
-            Project = aiven_project.Myproject.Project,
-            ServiceName = aiven_service.Myservice.Service_name,
             Username = aiven_service_user.Myserviceuser.Username,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                aiven_database.Mydatabase,
+            },
         });
     }
 
@@ -67,14 +73,16 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.NewConnectionPool(ctx, "mytestpool", &aiven.ConnectionPoolArgs{
+			Project:      pulumi.Any(aiven_project.Myproject.Project),
+			ServiceName:  pulumi.Any(aiven_service.Myservice.Service_name),
 			DatabaseName: pulumi.Any(aiven_database.Mydatabase.Database_name),
 			PoolMode:     pulumi.String("transaction"),
 			PoolName:     pulumi.String("mypool"),
 			PoolSize:     pulumi.Int(10),
-			Project:      pulumi.Any(aiven_project.Myproject.Project),
-			ServiceName:  pulumi.Any(aiven_service.Myservice.Service_name),
 			Username:     pulumi.Any(aiven_service_user.Myserviceuser.Username),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			aiven_database.Mydatabase,
+		}))
 		if err != nil {
 			return err
 		}
@@ -94,13 +102,14 @@ import pulumi
 import pulumi_aiven as aiven
 
 mytestpool = aiven.ConnectionPool("mytestpool",
+    project=aiven_project["myproject"]["project"],
+    service_name=aiven_service["myservice"]["service_name"],
     database_name=aiven_database["mydatabase"]["database_name"],
     pool_mode="transaction",
     pool_name="mypool",
     pool_size=10,
-    project=aiven_project["myproject"]["project"],
-    service_name=aiven_service["myservice"]["service_name"],
-    username=aiven_service_user["myserviceuser"]["username"])
+    username=aiven_service_user["myserviceuser"]["username"],
+    opts=pulumi.ResourceOptions(depends_on=[aiven_database["mydatabase"]]))
 ```
 
 
@@ -115,13 +124,15 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
 const mytestpool = new aiven.ConnectionPool("mytestpool", {
-    databaseName: aiven_database_mydatabase.databaseName,
+    project: aiven_project.myproject.project,
+    serviceName: aiven_service.myservice.service_name,
+    databaseName: aiven_database.mydatabase.database_name,
     poolMode: "transaction",
     poolName: "mypool",
     poolSize: 10,
-    project: aiven_project_myproject.project,
-    serviceName: aiven_service_myservice.serviceName,
-    username: aiven_service_user_myserviceuser.username,
+    username: aiven_service_user.myserviceuser.username,
+}, {
+    dependsOn: [aiven_database.mydatabase],
 });
 ```
 
@@ -178,25 +189,19 @@ const mytestpool = new aiven.ConnectionPool("mytestpool", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectionPoolArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -208,25 +213,19 @@ const mytestpool = new aiven.ConnectionPool("mytestpool", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectionPoolArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -238,33 +237,25 @@ const mytestpool = new aiven.ConnectionPool("mytestpool", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectionPoolArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -276,25 +267,19 @@ const mytestpool = new aiven.ConnectionPool("mytestpool", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectionPoolArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -367,7 +352,8 @@ be defined using reference as shown above to set up dependencies correctly.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement).
+    <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement). The
+default value for this is `transaction`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poolsize_csharp">
@@ -378,7 +364,7 @@ be defined using reference as shown above to set up dependencies correctly.
     </dt>
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
-larger number.
+larger number. The default value for this is 10.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -441,7 +427,8 @@ be defined using reference as shown above to set up dependencies correctly.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement).
+    <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement). The
+default value for this is `transaction`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poolsize_go">
@@ -452,7 +439,7 @@ be defined using reference as shown above to set up dependencies correctly.
     </dt>
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
-larger number.
+larger number. The default value for this is 10.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -515,7 +502,8 @@ be defined using reference as shown above to set up dependencies correctly.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement).
+    <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement). The
+default value for this is `transaction`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poolsize_nodejs">
@@ -526,7 +514,7 @@ be defined using reference as shown above to set up dependencies correctly.
     </dt>
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
-larger number.
+larger number. The default value for this is 10.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -589,7 +577,8 @@ be defined using reference as shown above to set up dependencies correctly.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement).
+    <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement). The
+default value for this is `transaction`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pool_size_python">
@@ -600,7 +589,7 @@ be defined using reference as shown above to set up dependencies correctly.
     </dt>
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
-larger number.
+larger number. The default value for this is 10.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -861,7 +850,8 @@ defined using reference as shown above to set up dependencies correctly.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement).
+    <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement). The
+default value for this is `transaction`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolname_csharp">
@@ -881,7 +871,7 @@ defined using reference as shown above to set up dependencies correctly.
     </dt>
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
-larger number.
+larger number. The default value for this is 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
@@ -945,7 +935,8 @@ defined using reference as shown above to set up dependencies correctly.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement).
+    <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement). The
+default value for this is `transaction`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolname_go">
@@ -965,7 +956,7 @@ defined using reference as shown above to set up dependencies correctly.
     </dt>
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
-larger number.
+larger number. The default value for this is 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
@@ -1029,7 +1020,8 @@ defined using reference as shown above to set up dependencies correctly.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement).
+    <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement). The
+default value for this is `transaction`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolname_nodejs">
@@ -1049,7 +1041,7 @@ defined using reference as shown above to set up dependencies correctly.
     </dt>
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
-larger number.
+larger number. The default value for this is 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
@@ -1113,7 +1105,8 @@ defined using reference as shown above to set up dependencies correctly.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement).
+    <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement). The
+default value for this is `transaction`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_name_python">
@@ -1133,7 +1126,7 @@ defined using reference as shown above to set up dependencies correctly.
     </dt>
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
-larger number.
+larger number. The default value for this is 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">

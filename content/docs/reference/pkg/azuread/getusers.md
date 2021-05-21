@@ -589,16 +589,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="immutableid_csharp">
 <a href="#immutableid_csharp" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(**Deprecated**) The value used to associate an on-premises Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-required"
             title="Required">
         <span id="mail_csharp">
 <a href="#mail_csharp" style="color: inherit; text-decoration: inherit;">Mail</a>
@@ -625,6 +625,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD User.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="onpremisesimmutableid_csharp">
+<a href="#onpremisesimmutableid_csharp" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Immutable<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onpremisessamaccountname_csharp">
@@ -683,16 +692,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="immutableid_go">
 <a href="#immutableid_go" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(**Deprecated**) The value used to associate an on-premises Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-required"
             title="Required">
         <span id="mail_go">
 <a href="#mail_go" style="color: inherit; text-decoration: inherit;">Mail</a>
@@ -719,6 +728,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD User.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="onpremisesimmutableid_go">
+<a href="#onpremisesimmutableid_go" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Immutable<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onpremisessamaccountname_go">
@@ -777,16 +795,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="immutableid_nodejs">
 <a href="#immutableid_nodejs" style="color: inherit; text-decoration: inherit;">immutable<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(**Deprecated**) The value used to associate an on-premises Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-required"
             title="Required">
         <span id="mail_nodejs">
 <a href="#mail_nodejs" style="color: inherit; text-decoration: inherit;">mail</a>
@@ -813,6 +831,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD User.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="onpremisesimmutableid_nodejs">
+<a href="#onpremisesimmutableid_nodejs" style="color: inherit; text-decoration: inherit;">onpremises<wbr>Immutable<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onpremisessamaccountname_nodejs">
@@ -871,16 +898,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="immutable_id_python">
 <a href="#immutable_id_python" style="color: inherit; text-decoration: inherit;">immutable_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(**Deprecated**) The value used to associate an on-premises Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-required"
             title="Required">
         <span id="mail_python">
 <a href="#mail_python" style="color: inherit; text-decoration: inherit;">mail</a>
@@ -907,6 +934,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD User.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="onpremises_immutable_id_python">
+<a href="#onpremises_immutable_id_python" style="color: inherit; text-decoration: inherit;">onpremises_<wbr>immutable_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onpremises_sam_account_name_python">
@@ -957,6 +993,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/hashicorp/terraform-provider-azuread).{{% /md %}}</dd>
 </dl>
 

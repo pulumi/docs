@@ -39,18 +39,18 @@ class MyStack : Stack
             ForceUpdateTag = "test",
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
-            RunRequest = 
+            RunRequest = new AzureNative.ContainerRegistry.Inputs.EncodedTaskRunRequestArgs
             {
-                { "credentials",  },
-                { "encodedTaskContent", "c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K" },
-                { "encodedValuesContent", "Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==" },
-                { "platform", new AzureNative.ContainerRegistry.Inputs.PlatformPropertiesArgs
+                Credentials = ,
+                EncodedTaskContent = "c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K",
+                EncodedValuesContent = "Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==",
+                Platform = new AzureNative.ContainerRegistry.Inputs.PlatformPropertiesArgs
                 {
                     Architecture = "amd64",
                     Os = "Linux",
-                } },
-                { "type", "EncodedTaskRunRequest" },
-                { "values", {} },
+                },
+                Type = "EncodedTaskRunRequest",
+                Values = {},
             },
             TaskRunName = "myRun",
         });
@@ -66,7 +66,43 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerregistry.NewTaskRun(ctx, "taskRun", &containerregistry.TaskRunArgs{
+			ForceUpdateTag:    pulumi.String("test"),
+			RegistryName:      pulumi.String("myRegistry"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			RunRequest: containerregistry.EncodedTaskRunRequest{
+				Credentials:          nil,
+				EncodedTaskContent:   "c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K",
+				EncodedValuesContent: "Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==",
+				Platform: containerregistry.PlatformProperties{
+					Architecture: "amd64",
+					Os:           "Linux",
+				},
+				Type:   "EncodedTaskRunRequest",
+				Values: []containerregistry.SetValue{},
+			},
+			TaskRunName: pulumi.String("myRun"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -82,17 +118,17 @@ task_run = azure_native.containerregistry.TaskRun("taskRun",
     force_update_tag="test",
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
-    run_request={
-        "credentials": azure_native.containerregistry.CredentialsArgs(),
-        "encodedTaskContent": "c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K",
-        "encodedValuesContent": "Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==",
-        "platform": azure_native.containerregistry.PlatformPropertiesArgs(
+    run_request=azure_native.containerregistry.EncodedTaskRunRequestArgs(
+        credentials=azure_native.containerregistry.CredentialsArgs(),
+        encoded_task_content="c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K",
+        encoded_values_content="Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==",
+        platform=azure_native.containerregistry.PlatformPropertiesArgs(
             architecture="amd64",
             os="Linux",
         ),
-        "type": "EncodedTaskRunRequest",
-        "values": [],
-    },
+        type="EncodedTaskRunRequest",
+        values=[],
+    ),
     task_run_name="myRun")
 
 ```
@@ -181,25 +217,19 @@ const taskRun = new azure_native.containerregistry.TaskRun("taskRun", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TaskRunArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -211,25 +241,19 @@ const taskRun = new azure_native.containerregistry.TaskRun("taskRun", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TaskRunArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -241,33 +265,25 @@ const taskRun = new azure_native.containerregistry.TaskRun("taskRun", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TaskRunArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -279,25 +295,19 @@ const taskRun = new azure_native.containerregistry.TaskRun("taskRun", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TaskRunArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

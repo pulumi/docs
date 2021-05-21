@@ -1549,6 +1549,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nonpersistentattrs_csharp">
+<a href="#nonpersistentattrs_csharp" style="color: inherit; text-decoration: inherit;">Non<wbr>Persistent<wbr>Attrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}If there are user fields that should not be stored in Auth0 databases due to privacy reasons, you can add them to the denylist. See [here](https://auth0.com/docs/security/denylist-user-attributes) for more info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="passwordcomplexityoptions_csharp">
 <a href="#passwordcomplexityoptions_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Complexity<wbr>Options</a>
 </span>
@@ -1645,6 +1654,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines whether the 'name', 'given_name', 'family_name', 'nickname', and 'picture' attributes can be independently updated when using the external IdP. Default is `on_each_login` and can be set to `on_first_login`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrustemailverifiedconnection_csharp">
+<a href="#shouldtrustemailverifiedconnection_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Trust<wbr>Email<wbr>Verified<wbr>Connection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines how Auth0 sets the email_verified field in the user profile. Can either be set to `never_set_emails_as_verified` or `always_set_emails_as_verified`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signinendpoint_csharp">
@@ -2155,6 +2173,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nonpersistentattrs_go">
+<a href="#nonpersistentattrs_go" style="color: inherit; text-decoration: inherit;">Non<wbr>Persistent<wbr>Attrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}If there are user fields that should not be stored in Auth0 databases due to privacy reasons, you can add them to the denylist. See [here](https://auth0.com/docs/security/denylist-user-attributes) for more info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="passwordcomplexityoptions_go">
 <a href="#passwordcomplexityoptions_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Complexity<wbr>Options</a>
 </span>
@@ -2251,6 +2278,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines whether the 'name', 'given_name', 'family_name', 'nickname', and 'picture' attributes can be independently updated when using the external IdP. Default is `on_each_login` and can be set to `on_first_login`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrustemailverifiedconnection_go">
+<a href="#shouldtrustemailverifiedconnection_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Trust<wbr>Email<wbr>Verified<wbr>Connection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines how Auth0 sets the email_verified field in the user profile. Can either be set to `never_set_emails_as_verified` or `always_set_emails_as_verified`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signinendpoint_go">
@@ -2761,6 +2797,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nonpersistentattrs_nodejs">
+<a href="#nonpersistentattrs_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Persistent<wbr>Attrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}If there are user fields that should not be stored in Auth0 databases due to privacy reasons, you can add them to the denylist. See [here](https://auth0.com/docs/security/denylist-user-attributes) for more info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="passwordcomplexityoptions_nodejs">
 <a href="#passwordcomplexityoptions_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Complexity<wbr>Options</a>
 </span>
@@ -2857,6 +2902,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines whether the 'name', 'given_name', 'family_name', 'nickname', and 'picture' attributes can be independently updated when using the external IdP. Default is `on_each_login` and can be set to `on_first_login`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrustemailverifiedconnection_nodejs">
+<a href="#shouldtrustemailverifiedconnection_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Trust<wbr>Email<wbr>Verified<wbr>Connection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines how Auth0 sets the email_verified field in the user profile. Can either be set to `never_set_emails_as_verified` or `always_set_emails_as_verified`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signinendpoint_nodejs">
@@ -3367,6 +3421,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="non_persistent_attrs_python">
+<a href="#non_persistent_attrs_python" style="color: inherit; text-decoration: inherit;">non_<wbr>persistent_<wbr>attrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}If there are user fields that should not be stored in Auth0 databases due to privacy reasons, you can add them to the denylist. See [here](https://auth0.com/docs/security/denylist-user-attributes) for more info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="password_complexity_options_python">
 <a href="#password_complexity_options_python" style="color: inherit; text-decoration: inherit;">password_<wbr>complexity_<wbr>options</a>
 </span>
@@ -3463,6 +3526,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines whether the 'name', 'given_name', 'family_name', 'nickname', and 'picture' attributes can be independently updated when using the external IdP. Default is `on_each_login` and can be set to `on_first_login`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="should_trust_email_verified_connection_python">
+<a href="#should_trust_email_verified_connection_python" style="color: inherit; text-decoration: inherit;">should_<wbr>trust_<wbr>email_<wbr>verified_<wbr>connection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Determines how Auth0 sets the email_verified field in the user profile. Can either be set to `never_set_emails_as_verified` or `always_set_emails_as_verified`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sign_in_endpoint_python">

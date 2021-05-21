@@ -22,10 +22,9 @@ jobs:
           source_branch: "pulumi/${{ github.run_id }}-${{ github.run_number }}"
           destination_branch: "master"
           pr_title: "Regen docs pulumi@${PULUMI_VERSION}"
-          pr_body: ""
+          pr_body: "Automated PR"
           pr_label: "automation/pulumi-cli-docs,automation/merge"
           github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
-
   build-pulumi-cli-docs:
     runs-on: ubuntu-18.04
     steps:
@@ -97,18 +96,21 @@ jobs:
       - name: Update version lists
         run: |
           NL=$'\n'
-          sed -e "s/<tbody>/<tbody>\\${NL}        {{< changelog-table-row version=\"${{ env.PULUMI_VERSION}}\" date=\"$(date +%Y-%m-%d)\" >}}/" -i ./content/docs/get-started/install/versions.md
+          sed -e "s/<tbody>/<tbody>\\${NL}        {{< changelog-table-row version=\"${{ env.PULUMI_VERSION}}\" date=\"$(date +%Y-%m-%d)\" showChecksum=\"true\" >}}/" -i ./content/docs/get-started/install/versions.md
         working-directory: docs
       - name: git status
         run: git status && git diff
         working-directory: docs
       - name: commit changes
-        uses: EndBug/add-and-commit@v4
-        with:
-          ref: "pulumi/${{ github.run_id }}-${{ github.run_number }}"
-          author_name: pulumi-bot
-          author_email: "bot@pulumi.com"
-          cwd: docs
+        run: |
+          git config --local user.email "bot@pulumi.com"
+          git config --local user.name "pulumi-bot"
+          git checkout -b pulumi/${{ github.run_id }}-${{ github.run_number }}
+          git add static/
+          git add content/
+          git commit -m "Regenerating docs for Pulumi@${{ env.PULUMI_VERSION}}"
+          git push origin pulumi/${{ github.run_id }}-${{ github.run_number }}
+        working-directory: docs
     strategy:
       matrix:
         dotnetversion:

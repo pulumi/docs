@@ -27,6 +27,7 @@ Explore the resources and functions of the azure.iot module.
     <li><a href="securitysolution" title="SecuritySolution"><span class="symbol resource"></span>SecuritySolution</a></li>
     <li><a href="sharedaccesspolicy" title="SharedAccessPolicy"><span class="symbol resource"></span>SharedAccessPolicy</a></li>
     <li><a href="timeseriesinsightsaccesspolicy" title="TimeSeriesInsightsAccessPolicy"><span class="symbol resource"></span>TimeSeriesInsightsAccessPolicy</a></li>
+    <li><a href="timeseriesinsightseventsourceiothub" title="TimeSeriesInsightsEventSourceIothub"><span class="symbol resource"></span>TimeSeriesInsightsEventSourceIothub</a></li>
     <li><a href="timeseriesinsightsgen2environment" title="TimeSeriesInsightsGen2Environment"><span class="symbol resource"></span>TimeSeriesInsightsGen2Environment</a></li>
     <li><a href="timeseriesinsightsreferencedataset" title="TimeSeriesInsightsReferenceDataSet"><span class="symbol resource"></span>TimeSeriesInsightsReferenceDataSet</a></li>
     <li><a href="timeseriesinsightsstandardenvironment" title="TimeSeriesInsightsStandardEnvironment"><span class="symbol resource"></span>TimeSeriesInsightsStandardEnvironment</a></li>
@@ -49,6 +50,6 @@ Explore the resources and functions of the azure.iot module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.0.0</dd>
+	<dd>4.3.0</dd>
 </dl>
 

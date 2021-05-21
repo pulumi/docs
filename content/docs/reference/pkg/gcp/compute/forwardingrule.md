@@ -1665,25 +1665,19 @@ const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingR
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ForwardingRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1695,25 +1689,19 @@ const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingR
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ForwardingRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1725,33 +1713,25 @@ const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingR
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ForwardingRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1763,25 +1743,19 @@ const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingR
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ForwardingRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1847,26 +1821,19 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
-Addresses are restricted based on the forwarding rule's load balancing
-scheme (EXTERNAL or INTERNAL) and scope (global or regional).
-When the load balancing scheme is EXTERNAL, for global forwarding
-rules, the address must be a global IP, and for regional forwarding
-rules, the address must live in the same region as the forwarding
-rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding
-rule supports IPv4 only. A global forwarding rule supports either IPv4
-or IPv6.
-When the load balancing scheme is INTERNAL, this can only be an RFC
-1918 IP address belonging to the network/subnet configured for the
-forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range
-of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE:** While
-the API allows you to specify various resource paths for an address resource
-instead, this provider requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh
-or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule serves. When a client sends
+traffic to this IP address, the forwarding rule directs the traffic to
+the target that you specify in the forwarding rule. The
+loadBalancingScheme and the forwarding rule's target determine the
+type of IP address that you can use. For detailed information, refer
+to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+An address can be specified either by a literal IP address or a
+reference to an existing Address resource. If you don't specify a
+reserved IP address, an ephemeral IP address is assigned.
+The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+that has validateForProxyless field set to true.
+For Private Service Connect forwarding rules that forward traffic to
+Google APIs, IP address must be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_csharp">
@@ -2114,26 +2081,19 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
-Addresses are restricted based on the forwarding rule's load balancing
-scheme (EXTERNAL or INTERNAL) and scope (global or regional).
-When the load balancing scheme is EXTERNAL, for global forwarding
-rules, the address must be a global IP, and for regional forwarding
-rules, the address must live in the same region as the forwarding
-rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding
-rule supports IPv4 only. A global forwarding rule supports either IPv4
-or IPv6.
-When the load balancing scheme is INTERNAL, this can only be an RFC
-1918 IP address belonging to the network/subnet configured for the
-forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range
-of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE:** While
-the API allows you to specify various resource paths for an address resource
-instead, this provider requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh
-or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule serves. When a client sends
+traffic to this IP address, the forwarding rule directs the traffic to
+the target that you specify in the forwarding rule. The
+loadBalancingScheme and the forwarding rule's target determine the
+type of IP address that you can use. For detailed information, refer
+to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+An address can be specified either by a literal IP address or a
+reference to an existing Address resource. If you don't specify a
+reserved IP address, an ephemeral IP address is assigned.
+The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+that has validateForProxyless field set to true.
+For Private Service Connect forwarding rules that forward traffic to
+Google APIs, IP address must be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_go">
@@ -2381,26 +2341,19 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
-Addresses are restricted based on the forwarding rule's load balancing
-scheme (EXTERNAL or INTERNAL) and scope (global or regional).
-When the load balancing scheme is EXTERNAL, for global forwarding
-rules, the address must be a global IP, and for regional forwarding
-rules, the address must live in the same region as the forwarding
-rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding
-rule supports IPv4 only. A global forwarding rule supports either IPv4
-or IPv6.
-When the load balancing scheme is INTERNAL, this can only be an RFC
-1918 IP address belonging to the network/subnet configured for the
-forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range
-of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE:** While
-the API allows you to specify various resource paths for an address resource
-instead, this provider requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh
-or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule serves. When a client sends
+traffic to this IP address, the forwarding rule directs the traffic to
+the target that you specify in the forwarding rule. The
+loadBalancingScheme and the forwarding rule's target determine the
+type of IP address that you can use. For detailed information, refer
+to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+An address can be specified either by a literal IP address or a
+reference to an existing Address resource. If you don't specify a
+reserved IP address, an ephemeral IP address is assigned.
+The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+that has validateForProxyless field set to true.
+For Private Service Connect forwarding rules that forward traffic to
+Google APIs, IP address must be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_nodejs">
@@ -2648,26 +2601,19 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
-Addresses are restricted based on the forwarding rule's load balancing
-scheme (EXTERNAL or INTERNAL) and scope (global or regional).
-When the load balancing scheme is EXTERNAL, for global forwarding
-rules, the address must be a global IP, and for regional forwarding
-rules, the address must live in the same region as the forwarding
-rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding
-rule supports IPv4 only. A global forwarding rule supports either IPv4
-or IPv6.
-When the load balancing scheme is INTERNAL, this can only be an RFC
-1918 IP address belonging to the network/subnet configured for the
-forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range
-of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE:** While
-the API allows you to specify various resource paths for an address resource
-instead, this provider requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh
-or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule serves. When a client sends
+traffic to this IP address, the forwarding rule directs the traffic to
+the target that you specify in the forwarding rule. The
+loadBalancingScheme and the forwarding rule's target determine the
+type of IP address that you can use. For detailed information, refer
+to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+An address can be specified either by a literal IP address or a
+reference to an existing Address resource. If you don't specify a
+reserved IP address, an ephemeral IP address is assigned.
+The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+that has validateForProxyless field set to true.
+For Private Service Connect forwarding rules that forward traffic to
+Google APIs, IP address must be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_protocol_python">
@@ -3271,26 +3217,19 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
-Addresses are restricted based on the forwarding rule's load balancing
-scheme (EXTERNAL or INTERNAL) and scope (global or regional).
-When the load balancing scheme is EXTERNAL, for global forwarding
-rules, the address must be a global IP, and for regional forwarding
-rules, the address must live in the same region as the forwarding
-rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding
-rule supports IPv4 only. A global forwarding rule supports either IPv4
-or IPv6.
-When the load balancing scheme is INTERNAL, this can only be an RFC
-1918 IP address belonging to the network/subnet configured for the
-forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range
-of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE:** While
-the API allows you to specify various resource paths for an address resource
-instead, this provider requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh
-or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule serves. When a client sends
+traffic to this IP address, the forwarding rule directs the traffic to
+the target that you specify in the forwarding rule. The
+loadBalancingScheme and the forwarding rule's target determine the
+type of IP address that you can use. For detailed information, refer
+to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+An address can be specified either by a literal IP address or a
+reference to an existing Address resource. If you don't specify a
+reserved IP address, an ephemeral IP address is assigned.
+The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+that has validateForProxyless field set to true.
+For Private Service Connect forwarding rules that forward traffic to
+Google APIs, IP address must be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipprotocol_csharp">
@@ -3574,26 +3513,19 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
-Addresses are restricted based on the forwarding rule's load balancing
-scheme (EXTERNAL or INTERNAL) and scope (global or regional).
-When the load balancing scheme is EXTERNAL, for global forwarding
-rules, the address must be a global IP, and for regional forwarding
-rules, the address must live in the same region as the forwarding
-rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding
-rule supports IPv4 only. A global forwarding rule supports either IPv4
-or IPv6.
-When the load balancing scheme is INTERNAL, this can only be an RFC
-1918 IP address belonging to the network/subnet configured for the
-forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range
-of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE:** While
-the API allows you to specify various resource paths for an address resource
-instead, this provider requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh
-or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule serves. When a client sends
+traffic to this IP address, the forwarding rule directs the traffic to
+the target that you specify in the forwarding rule. The
+loadBalancingScheme and the forwarding rule's target determine the
+type of IP address that you can use. For detailed information, refer
+to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+An address can be specified either by a literal IP address or a
+reference to an existing Address resource. If you don't specify a
+reserved IP address, an ephemeral IP address is assigned.
+The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+that has validateForProxyless field set to true.
+For Private Service Connect forwarding rules that forward traffic to
+Google APIs, IP address must be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipprotocol_go">
@@ -3877,26 +3809,19 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
-Addresses are restricted based on the forwarding rule's load balancing
-scheme (EXTERNAL or INTERNAL) and scope (global or regional).
-When the load balancing scheme is EXTERNAL, for global forwarding
-rules, the address must be a global IP, and for regional forwarding
-rules, the address must live in the same region as the forwarding
-rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding
-rule supports IPv4 only. A global forwarding rule supports either IPv4
-or IPv6.
-When the load balancing scheme is INTERNAL, this can only be an RFC
-1918 IP address belonging to the network/subnet configured for the
-forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range
-of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE:** While
-the API allows you to specify various resource paths for an address resource
-instead, this provider requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh
-or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule serves. When a client sends
+traffic to this IP address, the forwarding rule directs the traffic to
+the target that you specify in the forwarding rule. The
+loadBalancingScheme and the forwarding rule's target determine the
+type of IP address that you can use. For detailed information, refer
+to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+An address can be specified either by a literal IP address or a
+reference to an existing Address resource. If you don't specify a
+reserved IP address, an ephemeral IP address is assigned.
+The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+that has validateForProxyless field set to true.
+For Private Service Connect forwarding rules that forward traffic to
+Google APIs, IP address must be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipprotocol_nodejs">
@@ -4180,26 +4105,19 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
-Addresses are restricted based on the forwarding rule's load balancing
-scheme (EXTERNAL or INTERNAL) and scope (global or regional).
-When the load balancing scheme is EXTERNAL, for global forwarding
-rules, the address must be a global IP, and for regional forwarding
-rules, the address must live in the same region as the forwarding
-rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding
-rule supports IPv4 only. A global forwarding rule supports either IPv4
-or IPv6.
-When the load balancing scheme is INTERNAL, this can only be an RFC
-1918 IP address belonging to the network/subnet configured for the
-forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range
-of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE:** While
-the API allows you to specify various resource paths for an address resource
-instead, this provider requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh
-or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule serves. When a client sends
+traffic to this IP address, the forwarding rule directs the traffic to
+the target that you specify in the forwarding rule. The
+loadBalancingScheme and the forwarding rule's target determine the
+type of IP address that you can use. For detailed information, refer
+to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+An address can be specified either by a literal IP address or a
+reference to an existing Address resource. If you don't specify a
+reserved IP address, an ephemeral IP address is assigned.
+The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+that has validateForProxyless field set to true.
+For Private Service Connect forwarding rules that forward traffic to
+Google APIs, IP address must be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_protocol_python">

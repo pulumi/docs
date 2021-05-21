@@ -561,25 +561,19 @@ const instanceWithIp = new gcp.compute.Instance("instanceWithIp", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AddressArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -591,25 +585,19 @@ const instanceWithIp = new gcp.compute.Instance("instanceWithIp", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AddressArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -621,33 +609,25 @@ const instanceWithIp = new gcp.compute.Instance("instanceWithIp", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AddressArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -659,25 +639,19 @@ const instanceWithIp = new gcp.compute.Instance("instanceWithIp", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AddressArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -776,12 +750,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
+    <dd>{{% md %}}The purpose of this resource. Possible values include:
 * GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
 * SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
-This should only be set when using an Internal address.
-Possible values are `GCE_ENDPOINT`, `VPC_PEERING`, and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
@@ -892,12 +864,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
+    <dd>{{% md %}}The purpose of this resource. Possible values include:
 * GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
 * SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
-This should only be set when using an Internal address.
-Possible values are `GCE_ENDPOINT`, `VPC_PEERING`, and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
@@ -1008,12 +978,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
+    <dd>{{% md %}}The purpose of this resource. Possible values include:
 * GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
 * SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
-This should only be set when using an Internal address.
-Possible values are `GCE_ENDPOINT`, `VPC_PEERING`, and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
@@ -1124,12 +1092,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
+    <dd>{{% md %}}The purpose of this resource. Possible values include:
 * GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
 * SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
-This should only be set when using an Internal address.
-Possible values are `GCE_ENDPOINT`, `VPC_PEERING`, and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
@@ -1596,12 +1562,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
+    <dd>{{% md %}}The purpose of this resource. Possible values include:
 * GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
 * SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
-This should only be set when using an Internal address.
-Possible values are `GCE_ENDPOINT`, `VPC_PEERING`, and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
@@ -1748,12 +1712,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
+    <dd>{{% md %}}The purpose of this resource. Possible values include:
 * GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
 * SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
-This should only be set when using an Internal address.
-Possible values are `GCE_ENDPOINT`, `VPC_PEERING`, and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
@@ -1900,12 +1862,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
+    <dd>{{% md %}}The purpose of this resource. Possible values include:
 * GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
 * SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
-This should only be set when using an Internal address.
-Possible values are `GCE_ENDPOINT`, `VPC_PEERING`, and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
@@ -2052,12 +2012,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
+    <dd>{{% md %}}The purpose of this resource. Possible values include:
 * GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
 * SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
-This should only be set when using an Internal address.
-Possible values are `GCE_ENDPOINT`, `VPC_PEERING`, and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">

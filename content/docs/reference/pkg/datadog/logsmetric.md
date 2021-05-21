@@ -11,44 +11,6 @@ meta_desc: "Documentation for the datadog.LogsMetric resource with examples, inp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Resource for interacting with the logs_metric API
-## Schema
-
-### Required
-
-- **compute** (Block List, Min: 1, Max: 1) The compute rule to compute the log-based metric. This field can't be updated after creation. (see below for nested schema)
-- **filter** (Block List, Min: 1, Max: 1) The log-based metric filter. Logs matching this filter will be aggregated in this metric. (see below for nested schema)
-- **name** (String, Required) The name of the log-based metric. This field can't be updated after creation.
-
-### Optional
-
-- **group_by** (Block List) The rules for the group by. (see below for nested schema)
-- **id** (String, Optional) The ID of this resource.
-
-<a id="nestedblock--compute"></a>
-### Nested Schema for `compute`
-
-Required:
-
-- **aggregation_type** (String, Required) The type of aggregation to use. This field can't be updated after creation.
-
-Optional:
-
-- **path** (String, Optional) The path to the value the log-based metric will aggregate on (only used if the aggregation type is a "distribution"). This field can't be updated after creation.
-
-<a id="nestedblock--filter"></a>
-### Nested Schema for `filter`
-
-Required:
-
-- **query** (String, Required) The search query - following the log search syntax.
-
-<a id="nestedblock--group_by"></a>
-### Nested Schema for `group_by`
-
-Required:
-
-- **path** (String, Required) The path to the value the log-based metric will be aggregated over.
-- **tag_name** (String, Required) Name of the tag that gets created.
 
 {{% examples %}}
 
@@ -88,6 +50,11 @@ class MyStack : Stack
                     Path = "@status",
                     TagName = "status",
                 },
+                new Datadog.Inputs.LogsMetricGroupByArgs
+                {
+                    Path = "@version",
+                    TagName = "version",
+                },
             },
             Name = "testing.logs.metric",
         });
@@ -125,6 +92,10 @@ func main() {
 					Path:    pulumi.String("@status"),
 					TagName: pulumi.String("status"),
 				},
+				&datadog.LogsMetricGroupByArgs{
+					Path:    pulumi.String("@version"),
+					TagName: pulumi.String("version"),
+				},
 			},
 			Name: pulumi.String("testing.logs.metric"),
 		})
@@ -154,10 +125,16 @@ testing_logs_metric = datadog.LogsMetric("testingLogsMetric",
     filter=datadog.LogsMetricFilterArgs(
         query="service:test",
     ),
-    group_bies=[datadog.LogsMetricGroupByArgs(
-        path="@status",
-        tag_name="status",
-    )],
+    group_bies=[
+        datadog.LogsMetricGroupByArgs(
+            path="@status",
+            tag_name="status",
+        ),
+        datadog.LogsMetricGroupByArgs(
+            path="@version",
+            tag_name="version",
+        ),
+    ],
     name="testing.logs.metric")
 ```
 
@@ -180,10 +157,16 @@ const testingLogsMetric = new datadog.LogsMetric("testing_logs_metric", {
     filter: {
         query: "service:test",
     },
-    groupBies: [{
-        path: "@status",
-        tagName: "status",
-    }],
+    groupBies: [
+        {
+            path: "@status",
+            tagName: "status",
+        },
+        {
+            path: "@version",
+            tagName: "version",
+        },
+    ],
     name: "testing.logs.metric",
 });
 ```
@@ -238,25 +221,19 @@ const testingLogsMetric = new datadog.LogsMetric("testing_logs_metric", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LogsMetricArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -268,25 +245,19 @@ const testingLogsMetric = new datadog.LogsMetric("testing_logs_metric", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LogsMetricArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -298,33 +269,25 @@ const testingLogsMetric = new datadog.LogsMetric("testing_logs_metric", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LogsMetricArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -336,25 +299,19 @@ const testingLogsMetric = new datadog.LogsMetric("testing_logs_metric", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LogsMetricArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -892,7 +849,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of aggregation to use. This field can't be updated after creation.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -900,7 +858,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The path to the value the log-based metric will aggregate on (only used if the aggregation type is a "distribution"). This field can't be updated after creation.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -912,7 +871,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of aggregation to use. This field can't be updated after creation.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -920,7 +880,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The path to the value the log-based metric will aggregate on (only used if the aggregation type is a "distribution"). This field can't be updated after creation.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -932,7 +893,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of aggregation to use. This field can't be updated after creation.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -940,7 +902,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The path to the value the log-based metric will aggregate on (only used if the aggregation type is a "distribution"). This field can't be updated after creation.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -952,7 +915,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of aggregation to use. This field can't be updated after creation.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -960,7 +924,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The path to the value the log-based metric will aggregate on (only used if the aggregation type is a "distribution"). This field can't be updated after creation.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logsmetricfilter">Logs<wbr>Metric<wbr>Filter</h4>
@@ -974,7 +939,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The search query - following the log search syntax.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -986,7 +952,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The search query - following the log search syntax.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -998,7 +965,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The search query - following the log search syntax.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1010,7 +978,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The search query - following the log search syntax.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logsmetricgroupby">Logs<wbr>Metric<wbr>Group<wbr>By</h4>
@@ -1024,7 +993,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The path to the value the log-based metric will be aggregated over.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tagname_csharp">
 <a href="#tagname_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Name</a>
@@ -1032,7 +1002,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of the tag that gets created.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1044,7 +1015,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The path to the value the log-based metric will be aggregated over.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tagname_go">
 <a href="#tagname_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Name</a>
@@ -1052,7 +1024,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of the tag that gets created.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1064,7 +1037,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The path to the value the log-based metric will be aggregated over.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tagname_nodejs">
 <a href="#tagname_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Name</a>
@@ -1072,7 +1046,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of the tag that gets created.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1084,7 +1059,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The path to the value the log-based metric will be aggregated over.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tag_name_python">
 <a href="#tag_name_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>name</a>
@@ -1092,12 +1068,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of the tag that gets created.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
-
-Import is supported using the following syntax
 
 ```sh
  $ pulumi import datadog:index/logsMetric:LogsMetric testing_logs_metric testing.logs.metric

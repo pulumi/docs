@@ -18,6 +18,9 @@ Explore the resources and functions of the alicloud.ecs module.
     <li><a href="dedicatedhost" title="DedicatedHost"><span class="symbol resource"></span>DedicatedHost</a></li>
     <li><a href="disk" title="Disk"><span class="symbol resource"></span>Disk</a></li>
     <li><a href="diskattachment" title="DiskAttachment"><span class="symbol resource"></span>DiskAttachment</a></li>
+    <li><a href="ecsautosnapshotpolicyattachment" title="EcsAutoSnapshotPolicyAttachment"><span class="symbol resource"></span>EcsAutoSnapshotPolicyAttachment</a></li>
+    <li><a href="ecsdisk" title="EcsDisk"><span class="symbol resource"></span>EcsDisk</a></li>
+    <li><a href="ecsdiskattachment" title="EcsDiskAttachment"><span class="symbol resource"></span>EcsDiskAttachment</a></li>
     <li><a href="ecskeypair" title="EcsKeyPair"><span class="symbol resource"></span>EcsKeyPair</a></li>
     <li><a href="ecskeypairattachment" title="EcsKeyPairAttachment"><span class="symbol resource"></span>EcsKeyPairAttachment</a></li>
     <li><a href="ecslaunchtemplate" title="EcsLaunchTemplate"><span class="symbol resource"></span>EcsLaunchTemplate</a></li>
@@ -47,6 +50,7 @@ Explore the resources and functions of the alicloud.ecs module.
     <li><a href="getcommands" title="GetCommands"><span class="symbol function"></span>GetCommands</a></li>
     <li><a href="getdedicatedhosts" title="GetDedicatedHosts"><span class="symbol function"></span>GetDedicatedHosts</a></li>
     <li><a href="getdisks" title="GetDisks"><span class="symbol function"></span>GetDisks</a></li>
+    <li><a href="getecsdisks" title="GetEcsDisks"><span class="symbol function"></span>GetEcsDisks</a></li>
     <li><a href="getecskeypairs" title="GetEcsKeyPairs"><span class="symbol function"></span>GetEcsKeyPairs</a></li>
     <li><a href="getecslaunchtemplates" title="GetEcsLaunchTemplates"><span class="symbol function"></span>GetEcsLaunchTemplates</a></li>
     <li><a href="getecssnapshots" title="GetEcsSnapshots"><span class="symbol function"></span>GetEcsSnapshots</a></li>
@@ -72,6 +76,6 @@ Explore the resources and functions of the alicloud.ecs module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.2.0</dd>
 </dl>
 

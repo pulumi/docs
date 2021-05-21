@@ -40,7 +40,7 @@ class MyStack : Stack
         {
             ResourceGroupName = exampleResourceGroup.Name,
             Location = exampleResourceGroup.Location,
-            SkuName = "Edge-Standard",
+            SkuName = "EdgeP_Base-Standard",
         });
         var exampleOrder = new Azure.DataboxEdge.Order("exampleOrder", new Azure.DataboxEdge.OrderArgs
         {
@@ -99,7 +99,7 @@ func main() {
 		exampleDevice, err := databoxedge.NewDevice(ctx, "exampleDevice", &databoxedge.DeviceArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			Location:          exampleResourceGroup.Location,
-			SkuName:           pulumi.String("Edge-Standard"),
+			SkuName:           pulumi.String("EdgeP_Base-Standard"),
 		})
 		if err != nil {
 			return err
@@ -147,7 +147,7 @@ example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", locati
 example_device = azure.databoxedge.Device("exampleDevice",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
-    sku_name="Edge-Standard")
+    sku_name="EdgeP_Base-Standard")
 example_order = azure.databoxedge.Order("exampleOrder",
     resource_group_name=example_resource_group.name,
     device_name=example_device.name,
@@ -181,7 +181,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup"
 const exampleDevice = new azure.databoxedge.Device("exampleDevice", {
     resourceGroupName: exampleResourceGroup.name,
     location: exampleResourceGroup.location,
-    skuName: "Edge-Standard",
+    skuName: "EdgeP_Base-Standard",
 });
 const exampleOrder = new azure.databoxedge.Order("exampleOrder", {
     resourceGroupName: exampleResourceGroup.name,
@@ -252,25 +252,19 @@ const exampleOrder = new azure.databoxedge.Order("exampleOrder", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OrderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -282,25 +276,19 @@ const exampleOrder = new azure.databoxedge.Order("exampleOrder", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OrderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -312,33 +300,25 @@ const exampleOrder = new azure.databoxedge.Order("exampleOrder", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OrderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -350,25 +330,19 @@ const exampleOrder = new azure.databoxedge.Order("exampleOrder", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OrderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 

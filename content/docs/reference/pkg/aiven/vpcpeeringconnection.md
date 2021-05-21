@@ -27,73 +27,21 @@ The VPC Peering Connection resource allows the creation and management of Aiven 
 
 {{< example csharp >}}
 
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var mypeeringconnection = new Aiven.VpcPeeringConnection("mypeeringconnection", new Aiven.VpcPeeringConnectionArgs
-        {
-            PeerCloudAccount = "<PEER_ACCOUNT_ID>",
-            PeerRegion = "<PEER_REGION>",
-            PeerVpc = "<PEER_VPC_ID/NAME>",
-            VpcId = aiven_project_vpc.Myvpc.Id,
-        });
-    }
-
-}
-```
-
+Coming soon!
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.NewVpcPeeringConnection(ctx, "mypeeringconnection", &aiven.VpcPeeringConnectionArgs{
-			PeerCloudAccount: pulumi.String("<PEER_ACCOUNT_ID>"),
-			PeerRegion:       pulumi.String("<PEER_REGION>"),
-			PeerVpc:          pulumi.String("<PEER_VPC_ID/NAME>"),
-			VpcId:            pulumi.Any(aiven_project_vpc.Myvpc.Id),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
+Coming soon!
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-mypeeringconnection = aiven.VpcPeeringConnection("mypeeringconnection",
-    peer_cloud_account="<PEER_ACCOUNT_ID>",
-    peer_region="<PEER_REGION>",
-    peer_vpc="<PEER_VPC_ID/NAME>",
-    vpc_id=aiven_project_vpc["myvpc"]["id"])
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -106,13 +54,14 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
 const mypeeringconnection = new aiven.VpcPeeringConnection("mypeeringconnection", {
+    vpcId: aiven_project_vpc.myvpc.id,
     peerCloudAccount: "<PEER_ACCOUNT_ID>",
-    peerRegion: "<PEER_REGION>",
     peerVpc: "<PEER_VPC_ID/NAME>",
-    vpcId: aiven_project_vpc_myvpc.id,
-}, { timeouts: {
-    create: "10m",
-} });
+    peerRegion: "<PEER_REGION>",
+    timeouts: [{
+        create: "10m",
+    }],
+});
 ```
 
 
@@ -168,25 +117,19 @@ const mypeeringconnection = new aiven.VpcPeeringConnection("mypeeringconnection"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VpcPeeringConnectionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -198,25 +141,19 @@ const mypeeringconnection = new aiven.VpcPeeringConnection("mypeeringconnection"
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VpcPeeringConnectionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -228,33 +165,25 @@ const mypeeringconnection = new aiven.VpcPeeringConnection("mypeeringconnection"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VpcPeeringConnectionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -266,25 +195,19 @@ const mypeeringconnection = new aiven.VpcPeeringConnection("mypeeringconnection"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VpcPeeringConnectionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
