@@ -367,7 +367,7 @@ const _public = new digitalocean.LoadBalancer("public", {
                 <span class="nx">leaf_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">private_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[Union[str, CertificateType]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[CertificateArgs]</a></span> = None<span class="p">,</span>
@@ -390,25 +390,19 @@ const _public = new digitalocean.LoadBalancer("public", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CertificateArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -420,25 +414,19 @@ const _public = new digitalocean.LoadBalancer("public", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CertificateArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -450,33 +438,25 @@ const _public = new digitalocean.LoadBalancer("public", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CertificateArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -488,25 +468,19 @@ const _public = new digitalocean.LoadBalancer("public", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CertificateArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -578,7 +552,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#certificatetype">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Certificate<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of certificate to provision. Can be either
 `custom` or `lets_encrypt`. Defaults to `custom`.
@@ -643,7 +617,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#certificatetype">Certificate<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of certificate to provision. Can be either
 `custom` or `lets_encrypt`. Defaults to `custom`.
@@ -708,7 +682,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Certificate<wbr>Type</span>
+        <span class="property-type">string | <a href="#certificatetype">Certificate<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of certificate to provision. Can be either
 `custom` or `lets_encrypt`. Defaults to `custom`.
@@ -773,7 +747,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">str | <a href="#certificatetype">Certificate<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of certificate to provision. Can be either
 `custom` or `lets_encrypt`. Defaults to `custom`.
@@ -999,7 +973,7 @@ Get an existing Certificate resource's state with the given name, ID, and option
         <span class="nx">private_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sha1_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[Union[str, CertificateType]]</span> = None<span class="p">,</span>
         <span class="nx">uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Certificate</code></pre></div>
 {{% /choosable %}}
 
@@ -1194,7 +1168,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#certificatetype">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Certificate<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of certificate to provision. Can be either
 `custom` or `lets_encrypt`. Defaults to `custom`.
@@ -1294,7 +1268,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#certificatetype">Certificate<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of certificate to provision. Can be either
 `custom` or `lets_encrypt`. Defaults to `custom`.
@@ -1394,7 +1368,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Certificate<wbr>Type</span>
+        <span class="property-type">string | <a href="#certificatetype">Certificate<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of certificate to provision. Can be either
 `custom` or `lets_encrypt`. Defaults to `custom`.
@@ -1494,7 +1468,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">str | <a href="#certificatetype">Certificate<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of certificate to provision. Can be either
 `custom` or `lets_encrypt`. Defaults to `custom`.
@@ -1514,6 +1488,36 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="certificatetype">Certificate<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Lets<wbr>Encrypt</dt>
+    <dd>lets_encrypt</dd><dt>Custom</dt>
+    <dd>custom</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Certificate<wbr>Type<wbr>Lets<wbr>Encrypt</dt>
+    <dd>lets_encrypt</dd><dt>Certificate<wbr>Type<wbr>Custom</dt>
+    <dd>custom</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Lets<wbr>Encrypt</dt>
+    <dd>lets_encrypt</dd><dt>Custom</dt>
+    <dd>custom</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LETS_ENCRYPT</dt>
+    <dd>lets_encrypt</dd><dt>CUSTOM</dt>
+    <dd>custom</dd></dl>
+{{% /choosable %}}
 ## Import
 
 
