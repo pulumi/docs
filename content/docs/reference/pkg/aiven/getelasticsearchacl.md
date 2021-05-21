@@ -39,7 +39,7 @@ class MyStack : Stack
         var es_acls = Output.Create(Aiven.GetElasticSearchAcl.InvokeAsync(new Aiven.GetElasticSearchAclArgs
         {
             Project = aiven_project.Es_project.Project,
-            ServiceName = aiven_service.Es.Service_name,
+            ServiceName = aiven_elasticsearch.Es.Service_name,
         }));
     }
 
@@ -64,7 +64,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.LookupElasticSearchAcl(ctx, &aiven.LookupElasticSearchAclArgs{
 			Project:     aiven_project.Es - project.Project,
-			ServiceName: aiven_service.Es.Service_name,
+			ServiceName: aiven_elasticsearch.Es.Service_name,
 		}, nil)
 		if err != nil {
 			return err
@@ -85,7 +85,7 @@ import pulumi
 import pulumi_aiven as aiven
 
 es_acls = aiven.get_elastic_search_acl(project=aiven_project["es-project"]["project"],
-    service_name=aiven_service["es"]["service_name"])
+    service_name=aiven_elasticsearch["es"]["service_name"])
 ```
 
 
@@ -101,7 +101,7 @@ import * as aiven from "@pulumi/aiven";
 
 const es-acls = aiven.getElasticSearchAcl({
     project: aiven_project["es-project"].project,
-    serviceName: aiven_service.es.service_name,
+    serviceName: aiven_elasticsearch.es.service_name,
 });
 ```
 

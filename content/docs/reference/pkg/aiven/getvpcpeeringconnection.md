@@ -38,9 +38,9 @@ class MyStack : Stack
     {
         var mypeeringconnection = Output.Create(Aiven.GetVpcPeeringConnection.InvokeAsync(new Aiven.GetVpcPeeringConnectionArgs
         {
+            VpcId = aiven_project_vpc.Myvpc.Id,
             PeerCloudAccount = "<PEER_ACCOUNT_ID>",
             PeerVpc = "<PEER_VPC_ID/NAME>",
-            VpcId = aiven_project_vpc.Myvpc.Id,
         }));
     }
 
@@ -64,9 +64,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.LookupVpcPeeringConnection(ctx, &aiven.LookupVpcPeeringConnectionArgs{
+			VpcId:            aiven_project_vpc.Myvpc.Id,
 			PeerCloudAccount: "<PEER_ACCOUNT_ID>",
 			PeerVpc:          "<PEER_VPC_ID/NAME>",
-			VpcId:            aiven_project_vpc.Myvpc.Id,
 		}, nil)
 		if err != nil {
 			return err
@@ -86,9 +86,9 @@ func main() {
 import pulumi
 import pulumi_aiven as aiven
 
-mypeeringconnection = aiven.get_vpc_peering_connection(peer_cloud_account="<PEER_ACCOUNT_ID>",
-    peer_vpc="<PEER_VPC_ID/NAME>",
-    vpc_id=aiven_project_vpc["myvpc"]["id"])
+mypeeringconnection = aiven.get_vpc_peering_connection(vpc_id=aiven_project_vpc["myvpc"]["id"],
+    peer_cloud_account="<PEER_ACCOUNT_ID>",
+    peer_vpc="<PEER_VPC_ID/NAME>")
 ```
 
 
@@ -102,11 +102,11 @@ mypeeringconnection = aiven.get_vpc_peering_connection(peer_cloud_account="<PEER
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
-const mypeeringconnection = aiven_project_vpc_myvpc.id.apply(id => aiven.getVpcPeeringConnection({
+const mypeeringconnection = aiven.getVpcPeeringConnection({
+    vpcId: aiven_project_vpc.myvpc.id,
     peerCloudAccount: "<PEER_ACCOUNT_ID>",
     peerVpc: "<PEER_VPC_ID/NAME>",
-    vpcId: id,
-}, { async: true }));
+});
 ```
 
 
