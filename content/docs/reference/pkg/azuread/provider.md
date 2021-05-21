@@ -40,6 +40,8 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">msi_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">partner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">use_cli</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">use_microsoft_graph</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">use_msi</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -63,25 +65,19 @@ construction to achieve fine-grained programmatic control over provider settings
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -93,25 +89,19 @@ construction to achieve fine-grained programmatic control over provider settings
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -123,33 +113,25 @@ construction to achieve fine-grained programmatic control over provider settings
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -161,25 +143,19 @@ construction to achieve fine-grained programmatic control over provider settings
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -194,8 +170,8 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="metadatahost_csharp">
 <a href="#metadatahost_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Host</a>
 </span>
@@ -203,7 +179,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname which should be used for the Azure Metadata Service.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The `metadata_host` provider attribute is deprecated and will be removed in version 2.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepassword_csharp">
 <a href="#clientcertificatepassword_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Password</a>
@@ -257,8 +233,8 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Cloud Environment which should be used. Possible values are `public`, `usgovernment`, `german`, and `china`.
-Defaults to `public`.
+    <dd>{{% md %}}The cloud environment which should be used. Possible values are `global` (formerly `public`), `usgovernment`, `dod`,
+`germany`, and `china`. Defaults to `global`.
  It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_csharp">
@@ -289,6 +265,24 @@ automatically.
     <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except MSI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="usecli_csharp">
+<a href="#usecli_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Cli</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allow Azure CLI to be used for Authentication.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usemicrosoftgraph_csharp">
+<a href="#usemicrosoftgraph_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Microsoft<wbr>Graph</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Beta: Use the Microsoft Graph API, instead of the legacy Azure Active Directory Graph API, where supported.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usemsi_csharp">
 <a href="#usemsi_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Msi</a>
 </span>
@@ -300,8 +294,8 @@ automatically.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="metadatahost_go">
 <a href="#metadatahost_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Host</a>
 </span>
@@ -309,7 +303,7 @@ automatically.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname which should be used for the Azure Metadata Service.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The `metadata_host` provider attribute is deprecated and will be removed in version 2.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepassword_go">
 <a href="#clientcertificatepassword_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Password</a>
@@ -363,8 +357,8 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Cloud Environment which should be used. Possible values are `public`, `usgovernment`, `german`, and `china`.
-Defaults to `public`.
+    <dd>{{% md %}}The cloud environment which should be used. Possible values are `global` (formerly `public`), `usgovernment`, `dod`,
+`germany`, and `china`. Defaults to `global`.
  It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_go">
@@ -395,6 +389,24 @@ automatically.
     <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except MSI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="usecli_go">
+<a href="#usecli_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Cli</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allow Azure CLI to be used for Authentication.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usemicrosoftgraph_go">
+<a href="#usemicrosoftgraph_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Microsoft<wbr>Graph</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Beta: Use the Microsoft Graph API, instead of the legacy Azure Active Directory Graph API, where supported.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usemsi_go">
 <a href="#usemsi_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Msi</a>
 </span>
@@ -406,8 +418,8 @@ automatically.
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="metadatahost_nodejs">
 <a href="#metadatahost_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Host</a>
 </span>
@@ -415,7 +427,7 @@ automatically.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname which should be used for the Azure Metadata Service.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The `metadata_host` provider attribute is deprecated and will be removed in version 2.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepassword_nodejs">
 <a href="#clientcertificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Password</a>
@@ -469,8 +481,8 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Cloud Environment which should be used. Possible values are `public`, `usgovernment`, `german`, and `china`.
-Defaults to `public`.
+    <dd>{{% md %}}The cloud environment which should be used. Possible values are `global` (formerly `public`), `usgovernment`, `dod`,
+`germany`, and `china`. Defaults to `global`.
  It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_nodejs">
@@ -501,6 +513,24 @@ automatically.
     <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except MSI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="usecli_nodejs">
+<a href="#usecli_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Cli</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Allow Azure CLI to be used for Authentication.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usemicrosoftgraph_nodejs">
+<a href="#usemicrosoftgraph_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Microsoft<wbr>Graph</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Beta: Use the Microsoft Graph API, instead of the legacy Azure Active Directory Graph API, where supported.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usemsi_nodejs">
 <a href="#usemsi_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Msi</a>
 </span>
@@ -512,8 +542,8 @@ automatically.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="metadata_host_python">
 <a href="#metadata_host_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>host</a>
 </span>
@@ -521,7 +551,7 @@ automatically.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname which should be used for the Azure Metadata Service.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The `metadata_host` provider attribute is deprecated and will be removed in version 2.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="client_certificate_password_python">
 <a href="#client_certificate_password_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>password</a>
@@ -575,8 +605,8 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Cloud Environment which should be used. Possible values are `public`, `usgovernment`, `german`, and `china`.
-Defaults to `public`.
+    <dd>{{% md %}}The cloud environment which should be used. Possible values are `global` (formerly `public`), `usgovernment`, `dod`,
+`germany`, and `china`. Defaults to `global`.
  It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="msi_endpoint_python">
@@ -605,6 +635,24 @@ automatically.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except MSI.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="use_cli_python">
+<a href="#use_cli_python" style="color: inherit; text-decoration: inherit;">use_<wbr>cli</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allow Azure CLI to be used for Authentication.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="use_microsoft_graph_python">
+<a href="#use_microsoft_graph_python" style="color: inherit; text-decoration: inherit;">use_<wbr>microsoft_<wbr>graph</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Beta: Use the Microsoft Graph API, instead of the legacy Azure Active Directory Graph API, where supported.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_msi_python">
@@ -686,6 +734,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/hashicorp/terraform-provider-azuread).{{% /md %}}</dd>
 </dl>
 
