@@ -37,9 +37,9 @@ class MyStack : Stack
     {
         var mytestpool = Output.Create(Aiven.GetConnectionPool.InvokeAsync(new Aiven.GetConnectionPoolArgs
         {
-            PoolName = "mypool",
             Project = aiven_project.Myproject.Project,
             ServiceName = aiven_service.Myservice.Service_name,
+            PoolName = "mypool",
         }));
     }
 
@@ -63,9 +63,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.LookupConnectionPool(ctx, &aiven.LookupConnectionPoolArgs{
-			PoolName:    "mypool",
 			Project:     aiven_project.Myproject.Project,
 			ServiceName: aiven_service.Myservice.Service_name,
+			PoolName:    "mypool",
 		}, nil)
 		if err != nil {
 			return err
@@ -85,9 +85,9 @@ func main() {
 import pulumi
 import pulumi_aiven as aiven
 
-mytestpool = aiven.get_connection_pool(pool_name="mypool",
-    project=aiven_project["myproject"]["project"],
-    service_name=aiven_service["myservice"]["service_name"])
+mytestpool = aiven.get_connection_pool(project=aiven_project["myproject"]["project"],
+    service_name=aiven_service["myservice"]["service_name"],
+    pool_name="mypool")
 ```
 
 
@@ -101,11 +101,11 @@ mytestpool = aiven.get_connection_pool(pool_name="mypool",
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
-const mytestpool = pulumi.all([aiven_project_myproject.project, aiven_service_myservice.serviceName]).apply(([project, serviceName]) => aiven.getConnectionPool({
+const mytestpool = aiven.getConnectionPool({
+    project: aiven_project.myproject.project,
+    serviceName: aiven_service.myservice.service_name,
     poolName: "mypool",
-    project: project,
-    serviceName: serviceName,
-}, { async: true }));
+});
 ```
 
 

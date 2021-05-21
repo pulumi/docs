@@ -37,9 +37,9 @@ class MyStack : Stack
     {
         var mytestuser = new Aiven.ProjectUser("mytestuser", new Aiven.ProjectUserArgs
         {
+            Project = aiven_project.Myproject.Project,
             Email = "john.doe@example.com",
             MemberType = "admin",
-            Project = aiven_project.Myproject.Project,
         });
     }
 
@@ -63,9 +63,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.NewProjectUser(ctx, "mytestuser", &aiven.ProjectUserArgs{
+			Project:    pulumi.Any(aiven_project.Myproject.Project),
 			Email:      pulumi.String("john.doe@example.com"),
 			MemberType: pulumi.String("admin"),
-			Project:    pulumi.Any(aiven_project.Myproject.Project),
 		})
 		if err != nil {
 			return err
@@ -86,9 +86,9 @@ import pulumi
 import pulumi_aiven as aiven
 
 mytestuser = aiven.ProjectUser("mytestuser",
+    project=aiven_project["myproject"]["project"],
     email="john.doe@example.com",
-    member_type="admin",
-    project=aiven_project["myproject"]["project"])
+    member_type="admin")
 ```
 
 
@@ -103,9 +103,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
 const mytestuser = new aiven.ProjectUser("mytestuser", {
+    project: aiven_project.myproject.project,
     email: "john.doe@example.com",
     memberType: "admin",
-    project: aiven_project_myproject.project,
 });
 ```
 

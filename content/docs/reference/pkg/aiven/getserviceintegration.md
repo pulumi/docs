@@ -42,9 +42,9 @@ class MyStack : Stack
     {
         var myintegration = Output.Create(Aiven.GetServiceIntegration.InvokeAsync(new Aiven.GetServiceIntegrationArgs
         {
+            Project = aiven_project.Myproject.Project,
             DestinationServiceName = "<DESTINATION_SERVICE_NAME>",
             IntegrationType = "datadog",
-            Project = aiven_project.Myproject.Project,
             SourceServiceName = "<SOURCE_SERVICE_NAME>",
         }));
     }
@@ -69,9 +69,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.LookupServiceIntegration(ctx, &aiven.LookupServiceIntegrationArgs{
+			Project:                aiven_project.Myproject.Project,
 			DestinationServiceName: "<DESTINATION_SERVICE_NAME>",
 			IntegrationType:        "datadog",
-			Project:                aiven_project.Myproject.Project,
 			SourceServiceName:      "<SOURCE_SERVICE_NAME>",
 		}, nil)
 		if err != nil {
@@ -92,9 +92,9 @@ func main() {
 import pulumi
 import pulumi_aiven as aiven
 
-myintegration = aiven.get_service_integration(destination_service_name="<DESTINATION_SERVICE_NAME>",
+myintegration = aiven.get_service_integration(project=aiven_project["myproject"]["project"],
+    destination_service_name="<DESTINATION_SERVICE_NAME>",
     integration_type="datadog",
-    project=aiven_project["myproject"]["project"],
     source_service_name="<SOURCE_SERVICE_NAME>")
 ```
 
@@ -109,12 +109,12 @@ myintegration = aiven.get_service_integration(destination_service_name="<DESTINA
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
-const myintegration = aiven_project_myproject.project.apply(project => aiven.getServiceIntegration({
+const myintegration = aiven.getServiceIntegration({
+    project: aiven_project.myproject.project,
     destinationServiceName: "<DESTINATION_SERVICE_NAME>",
     integrationType: "datadog",
-    project: project,
     sourceServiceName: "<SOURCE_SERVICE_NAME>",
-}, { async: true }));
+});
 ```
 
 

@@ -37,13 +37,19 @@ class MyStack : Stack
     {
         var mytestpool = new Aiven.ConnectionPool("mytestpool", new Aiven.ConnectionPoolArgs
         {
+            Project = aiven_project.Myproject.Project,
+            ServiceName = aiven_service.Myservice.Service_name,
             DatabaseName = aiven_database.Mydatabase.Database_name,
             PoolMode = "transaction",
             PoolName = "mypool",
             PoolSize = 10,
-            Project = aiven_project.Myproject.Project,
-            ServiceName = aiven_service.Myservice.Service_name,
             Username = aiven_service_user.Myserviceuser.Username,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                aiven_database.Mydatabase,
+            },
         });
     }
 
@@ -67,14 +73,16 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.NewConnectionPool(ctx, "mytestpool", &aiven.ConnectionPoolArgs{
+			Project:      pulumi.Any(aiven_project.Myproject.Project),
+			ServiceName:  pulumi.Any(aiven_service.Myservice.Service_name),
 			DatabaseName: pulumi.Any(aiven_database.Mydatabase.Database_name),
 			PoolMode:     pulumi.String("transaction"),
 			PoolName:     pulumi.String("mypool"),
 			PoolSize:     pulumi.Int(10),
-			Project:      pulumi.Any(aiven_project.Myproject.Project),
-			ServiceName:  pulumi.Any(aiven_service.Myservice.Service_name),
 			Username:     pulumi.Any(aiven_service_user.Myserviceuser.Username),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			aiven_database.Mydatabase,
+		}))
 		if err != nil {
 			return err
 		}
@@ -94,13 +102,14 @@ import pulumi
 import pulumi_aiven as aiven
 
 mytestpool = aiven.ConnectionPool("mytestpool",
+    project=aiven_project["myproject"]["project"],
+    service_name=aiven_service["myservice"]["service_name"],
     database_name=aiven_database["mydatabase"]["database_name"],
     pool_mode="transaction",
     pool_name="mypool",
     pool_size=10,
-    project=aiven_project["myproject"]["project"],
-    service_name=aiven_service["myservice"]["service_name"],
-    username=aiven_service_user["myserviceuser"]["username"])
+    username=aiven_service_user["myserviceuser"]["username"],
+    opts=pulumi.ResourceOptions(depends_on=[aiven_database["mydatabase"]]))
 ```
 
 
@@ -115,13 +124,15 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
 const mytestpool = new aiven.ConnectionPool("mytestpool", {
-    databaseName: aiven_database_mydatabase.databaseName,
+    project: aiven_project.myproject.project,
+    serviceName: aiven_service.myservice.service_name,
+    databaseName: aiven_database.mydatabase.database_name,
     poolMode: "transaction",
     poolName: "mypool",
     poolSize: 10,
-    project: aiven_project_myproject.project,
-    serviceName: aiven_service_myservice.serviceName,
-    username: aiven_service_user_myserviceuser.username,
+    username: aiven_service_user.myserviceuser.username,
+}, {
+    dependsOn: [aiven_database.mydatabase],
 });
 ```
 

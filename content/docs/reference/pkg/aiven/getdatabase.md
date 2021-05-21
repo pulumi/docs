@@ -37,9 +37,9 @@ class MyStack : Stack
     {
         var mydatabase = Output.Create(Aiven.GetDatabase.InvokeAsync(new Aiven.GetDatabaseArgs
         {
-            DatabaseName = "<DATABASE_NAME>",
             Project = aiven_project.Myproject.Project,
             ServiceName = aiven_service.Myservice.Service_name,
+            DatabaseName = "<DATABASE_NAME>",
         }));
     }
 
@@ -63,9 +63,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.LookupDatabase(ctx, &aiven.LookupDatabaseArgs{
-			DatabaseName: "<DATABASE_NAME>",
 			Project:      aiven_project.Myproject.Project,
 			ServiceName:  aiven_service.Myservice.Service_name,
+			DatabaseName: "<DATABASE_NAME>",
 		}, nil)
 		if err != nil {
 			return err
@@ -85,9 +85,9 @@ func main() {
 import pulumi
 import pulumi_aiven as aiven
 
-mydatabase = aiven.get_database(database_name="<DATABASE_NAME>",
-    project=aiven_project["myproject"]["project"],
-    service_name=aiven_service["myservice"]["service_name"])
+mydatabase = aiven.get_database(project=aiven_project["myproject"]["project"],
+    service_name=aiven_service["myservice"]["service_name"],
+    database_name="<DATABASE_NAME>")
 ```
 
 
@@ -101,11 +101,11 @@ mydatabase = aiven.get_database(database_name="<DATABASE_NAME>",
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
-const mydatabase = pulumi.all([aiven_project_myproject.project, aiven_service_myservice.serviceName]).apply(([project, serviceName]) => aiven.getDatabase({
+const mydatabase = aiven.getDatabase({
+    project: aiven_project.myproject.project,
+    serviceName: aiven_service.myservice.service_name,
     databaseName: "<DATABASE_NAME>",
-    project: project,
-    serviceName: serviceName,
-}, { async: true }));
+});
 ```
 
 

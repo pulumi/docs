@@ -38,10 +38,10 @@ class MyStack : Stack
     {
         var mytestacl = Output.Create(Aiven.GetKafkaAcl.InvokeAsync(new Aiven.GetKafkaAclArgs
         {
-            Permission = "admin",
             Project = aiven_project.Myproject.Project,
             ServiceName = aiven_service.Myservice.Service_name,
             Topic = "<TOPIC_NAME_PATTERN>",
+            Permission = "admin",
             Username = "<USERNAME_PATTERN>",
         }));
     }
@@ -66,10 +66,10 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.LookupKafkaAcl(ctx, &aiven.LookupKafkaAclArgs{
-			Permission:  "admin",
 			Project:     aiven_project.Myproject.Project,
 			ServiceName: aiven_service.Myservice.Service_name,
 			Topic:       "<TOPIC_NAME_PATTERN>",
+			Permission:  "admin",
 			Username:    "<USERNAME_PATTERN>",
 		}, nil)
 		if err != nil {
@@ -90,10 +90,10 @@ func main() {
 import pulumi
 import pulumi_aiven as aiven
 
-mytestacl = aiven.get_kafka_acl(permission="admin",
-    project=aiven_project["myproject"]["project"],
+mytestacl = aiven.get_kafka_acl(project=aiven_project["myproject"]["project"],
     service_name=aiven_service["myservice"]["service_name"],
     topic="<TOPIC_NAME_PATTERN>",
+    permission="admin",
     username="<USERNAME_PATTERN>")
 ```
 
@@ -108,13 +108,13 @@ mytestacl = aiven.get_kafka_acl(permission="admin",
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
-const mytestacl = pulumi.all([aiven_project_myproject.project, aiven_service_myservice.serviceName]).apply(([project, serviceName]) => aiven.getKafkaAcl({
-    permission: "admin",
-    project: project,
-    serviceName: serviceName,
+const mytestacl = aiven.getKafkaAcl({
+    project: aiven_project.myproject.project,
+    serviceName: aiven_service.myservice.service_name,
     topic: "<TOPIC_NAME_PATTERN>",
+    permission: "admin",
     username: "<USERNAME_PATTERN>",
-}, { async: true }));
+});
 ```
 
 

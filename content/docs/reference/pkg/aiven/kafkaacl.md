@@ -37,10 +37,10 @@ class MyStack : Stack
     {
         var mytestacl = new Aiven.KafkaAcl("mytestacl", new Aiven.KafkaAclArgs
         {
-            Permission = "admin",
             Project = aiven_project.Myproject.Project,
-            ServiceName = aiven_service.Myservice.Service_name,
+            ServiceName = aiven_kafka.Myservice.Service_name,
             Topic = "<TOPIC_NAME_PATTERN>",
+            Permission = "admin",
             Username = "<USERNAME_PATTERN>",
         });
     }
@@ -65,10 +65,10 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.NewKafkaAcl(ctx, "mytestacl", &aiven.KafkaAclArgs{
-			Permission:  pulumi.String("admin"),
 			Project:     pulumi.Any(aiven_project.Myproject.Project),
-			ServiceName: pulumi.Any(aiven_service.Myservice.Service_name),
+			ServiceName: pulumi.Any(aiven_kafka.Myservice.Service_name),
 			Topic:       pulumi.String("<TOPIC_NAME_PATTERN>"),
+			Permission:  pulumi.String("admin"),
 			Username:    pulumi.String("<USERNAME_PATTERN>"),
 		})
 		if err != nil {
@@ -90,10 +90,10 @@ import pulumi
 import pulumi_aiven as aiven
 
 mytestacl = aiven.KafkaAcl("mytestacl",
-    permission="admin",
     project=aiven_project["myproject"]["project"],
-    service_name=aiven_service["myservice"]["service_name"],
+    service_name=aiven_kafka["myservice"]["service_name"],
     topic="<TOPIC_NAME_PATTERN>",
+    permission="admin",
     username="<USERNAME_PATTERN>")
 ```
 
@@ -109,10 +109,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
 const mytestacl = new aiven.KafkaAcl("mytestacl", {
-    permission: "admin",
-    project: aiven_project_myproject.project,
-    serviceName: aiven_service_myservice.serviceName,
+    project: aiven_project.myproject.project,
+    serviceName: aiven_kafka.myservice.service_name,
     topic: "<TOPIC_NAME_PATTERN>",
+    permission: "admin",
     username: "<USERNAME_PATTERN>",
 });
 ```

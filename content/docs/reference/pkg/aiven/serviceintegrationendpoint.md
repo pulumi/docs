@@ -37,13 +37,13 @@ class MyStack : Stack
     {
         var myendpoint = new Aiven.ServiceIntegrationEndpoint("myendpoint", new Aiven.ServiceIntegrationEndpointArgs
         {
+            Project = aiven_project.Myproject.Project,
+            EndpointName = "<ENDPOINT_NAME>",
+            EndpointType = "datadog",
             DatadogUserConfig = new Aiven.Inputs.ServiceIntegrationEndpointDatadogUserConfigArgs
             {
                 DatadogApiKey = "<DATADOG_API_KEY>",
             },
-            EndpointName = "<ENDPOINT_NAME>",
-            EndpointType = "datadog",
-            Project = aiven_project.Myproject.Project,
         });
     }
 
@@ -67,12 +67,12 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.NewServiceIntegrationEndpoint(ctx, "myendpoint", &aiven.ServiceIntegrationEndpointArgs{
+			Project:      pulumi.Any(aiven_project.Myproject.Project),
+			EndpointName: pulumi.String("<ENDPOINT_NAME>"),
+			EndpointType: pulumi.String("datadog"),
 			DatadogUserConfig: &aiven.ServiceIntegrationEndpointDatadogUserConfigArgs{
 				DatadogApiKey: pulumi.String("<DATADOG_API_KEY>"),
 			},
-			EndpointName: pulumi.String("<ENDPOINT_NAME>"),
-			EndpointType: pulumi.String("datadog"),
-			Project:      pulumi.Any(aiven_project.Myproject.Project),
 		})
 		if err != nil {
 			return err
@@ -93,12 +93,12 @@ import pulumi
 import pulumi_aiven as aiven
 
 myendpoint = aiven.ServiceIntegrationEndpoint("myendpoint",
-    datadog_user_config=aiven.ServiceIntegrationEndpointDatadogUserConfigArgs(
-        datadog_api_key="<DATADOG_API_KEY>",
-    ),
+    project=aiven_project["myproject"]["project"],
     endpoint_name="<ENDPOINT_NAME>",
     endpoint_type="datadog",
-    project=aiven_project["myproject"]["project"])
+    datadog_user_config=aiven.ServiceIntegrationEndpointDatadogUserConfigArgs(
+        datadog_api_key="<DATADOG_API_KEY>",
+    ))
 ```
 
 
@@ -113,12 +113,12 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
 const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
+    project: aiven_project.myproject.project,
+    endpointName: "<ENDPOINT_NAME>",
+    endpointType: "datadog",
     datadogUserConfig: {
         datadogApiKey: "<DATADOG_API_KEY>",
     },
-    endpointName: "<ENDPOINT_NAME>",
-    endpointType: "datadog",
-    project: aiven_project_myproject.project,
 });
 ```
 

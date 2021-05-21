@@ -37,9 +37,9 @@ class MyStack : Stack
     {
         var mydatabase = new Aiven.Database("mydatabase", new Aiven.DatabaseArgs
         {
-            DatabaseName = "<DATABASE_NAME>",
             Project = aiven_project.Myproject.Project,
             ServiceName = aiven_service.Myservice.Service_name,
+            DatabaseName = "<DATABASE_NAME>",
         });
     }
 
@@ -63,9 +63,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.NewDatabase(ctx, "mydatabase", &aiven.DatabaseArgs{
-			DatabaseName: pulumi.String("<DATABASE_NAME>"),
 			Project:      pulumi.Any(aiven_project.Myproject.Project),
 			ServiceName:  pulumi.Any(aiven_service.Myservice.Service_name),
+			DatabaseName: pulumi.String("<DATABASE_NAME>"),
 		})
 		if err != nil {
 			return err
@@ -86,9 +86,9 @@ import pulumi
 import pulumi_aiven as aiven
 
 mydatabase = aiven.Database("mydatabase",
-    database_name="<DATABASE_NAME>",
     project=aiven_project["myproject"]["project"],
-    service_name=aiven_service["myservice"]["service_name"])
+    service_name=aiven_service["myservice"]["service_name"],
+    database_name="<DATABASE_NAME>")
 ```
 
 
@@ -103,9 +103,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
 const mydatabase = new aiven.Database("mydatabase", {
+    project: aiven_project.myproject.project,
+    serviceName: aiven_service.myservice.service_name,
     databaseName: "<DATABASE_NAME>",
-    project: aiven_project_myproject.project,
-    serviceName: aiven_service_myservice.serviceName,
 });
 ```
 
