@@ -36,6 +36,7 @@ on their documentation site for guidance.
                    <span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeBlobstorageloggingArgs]]</span> = None<span class="p">,</span>
                    <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">dictionaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeDictionaryArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">directors</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeDirectorArgs]]</span> = None<span class="p">,</span>
                    <span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeDomainArgs]]</span> = None<span class="p">,</span>
                    <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                    <span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeGcsloggingArgs]]</span> = None<span class="p">,</span>
@@ -260,6 +261,14 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecomputedictionary">List&lt;Service<wbr>Compute<wbr>Dictionary<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="directors_csharp">
+<a href="#directors_csharp" style="color: inherit; text-decoration: inherit;">Directors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicecomputedirector">List&lt;Service<wbr>Compute<wbr>Director<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,6 +571,14 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="directors_go">
+<a href="#directors_go" style="color: inherit; text-decoration: inherit;">Directors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicecomputedirector">[]Service<wbr>Compute<wbr>Director</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="forcedestroy_go">
 <a href="#forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
 </span>
@@ -861,6 +878,14 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="directors_nodejs">
+<a href="#directors_nodejs" style="color: inherit; text-decoration: inherit;">directors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicecomputedirector">Service<wbr>Compute<wbr>Director<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="forcedestroy_nodejs">
 <a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
 </span>
@@ -1157,6 +1182,14 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecomputedictionary">Sequence[Service<wbr>Compute<wbr>Dictionary<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="directors_python">
+<a href="#directors_python" style="color: inherit; text-decoration: inherit;">directors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicecomputedirector">Sequence[Service<wbr>Compute<wbr>Director<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1539,6 +1572,7 @@ Get an existing ServiceCompute resource's state with the given name, ID, and opt
         <span class="nx">cloned_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">dictionaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeDictionaryArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">directors</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeDirectorArgs]]</span> = None<span class="p">,</span>
         <span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeDomainArgs]]</span> = None<span class="p">,</span>
         <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeGcsloggingArgs]]</span> = None<span class="p">,</span>
@@ -1746,6 +1780,14 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecomputedictionary">List&lt;Service<wbr>Compute<wbr>Dictionary<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_directors_csharp">
+<a href="#state_directors_csharp" style="color: inherit; text-decoration: inherit;">Directors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicecomputedirector">List&lt;Service<wbr>Compute<wbr>Director<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2066,6 +2108,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_directors_go">
+<a href="#state_directors_go" style="color: inherit; text-decoration: inherit;">Directors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicecomputedirector">[]Service<wbr>Compute<wbr>Director</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_domains_go">
 <a href="#state_domains_go" style="color: inherit; text-decoration: inherit;">Domains</a>
 </span>
@@ -2383,6 +2433,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_directors_nodejs">
+<a href="#state_directors_nodejs" style="color: inherit; text-decoration: inherit;">directors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicecomputedirector">Service<wbr>Compute<wbr>Director<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_domains_nodejs">
 <a href="#state_domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
@@ -2697,6 +2755,14 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecomputedictionary">Sequence[Service<wbr>Compute<wbr>Dictionary<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_directors_python">
+<a href="#state_directors_python" style="color: inherit; text-decoration: inherit;">directors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicecomputedirector">Sequence[Service<wbr>Compute<wbr>Director<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4716,6 +4782,312 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, the dictionary is a private dictionary, and items are not readable in the UI or via API. Default is `false`. It is important to note that changing this attribute will delete and recreate the dictionary, and discard the current items in the dictionary. Using a write-only/private dictionary should only be done if the items are managed outside of this provider
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="servicecomputedirector">Service<wbr>Compute<wbr>Director</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backends_csharp">
+<a href="#backends_csharp" style="color: inherit; text-decoration: inherit;">Backends</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Names of defined backends to map the director to. Example: `[ "origin1", "origin2" ]`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique name for this Director. It is important to note that changing this attribute will delete and recreate the resource
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_csharp">
+<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Load balancing weight for the backends. Default `100`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="comment_csharp">
+<a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional comment about the Director
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="quorum_csharp">
+<a href="#quorum_csharp" style="color: inherit; text-decoration: inherit;">Quorum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Percentage of capacity that needs to be up for the director itself to be considered up. Default `75`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retries_csharp">
+<a href="#retries_csharp" style="color: inherit; text-decoration: inherit;">Retries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How many backends to search if it fails. Default `5`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shield_csharp">
+<a href="#shield_csharp" style="color: inherit; text-decoration: inherit;">Shield</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Selected POP to serve as a "shield" for backends. Valid values for `shield` are included in the [`GET /datacenters`](https://developer.fastly.com/reference/api/utils/datacenter/) API response
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Type of load balance group to use. Integer, 1 to 4. Values: `1` (random), `3` (hash), `4` (client). Default `1`
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backends_go">
+<a href="#backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Names of defined backends to map the director to. Example: `[ "origin1", "origin2" ]`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique name for this Director. It is important to note that changing this attribute will delete and recreate the resource
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_go">
+<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Load balancing weight for the backends. Default `100`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="comment_go">
+<a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional comment about the Director
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="quorum_go">
+<a href="#quorum_go" style="color: inherit; text-decoration: inherit;">Quorum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Percentage of capacity that needs to be up for the director itself to be considered up. Default `75`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retries_go">
+<a href="#retries_go" style="color: inherit; text-decoration: inherit;">Retries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How many backends to search if it fails. Default `5`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shield_go">
+<a href="#shield_go" style="color: inherit; text-decoration: inherit;">Shield</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Selected POP to serve as a "shield" for backends. Valid values for `shield` are included in the [`GET /datacenters`](https://developer.fastly.com/reference/api/utils/datacenter/) API response
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Type of load balance group to use. Integer, 1 to 4. Values: `1` (random), `3` (hash), `4` (client). Default `1`
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backends_nodejs">
+<a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Names of defined backends to map the director to. Example: `[ "origin1", "origin2" ]`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique name for this Director. It is important to note that changing this attribute will delete and recreate the resource
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_nodejs">
+<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Load balancing weight for the backends. Default `100`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="comment_nodejs">
+<a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional comment about the Director
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="quorum_nodejs">
+<a href="#quorum_nodejs" style="color: inherit; text-decoration: inherit;">quorum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Percentage of capacity that needs to be up for the director itself to be considered up. Default `75`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retries_nodejs">
+<a href="#retries_nodejs" style="color: inherit; text-decoration: inherit;">retries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}How many backends to search if it fails. Default `5`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shield_nodejs">
+<a href="#shield_nodejs" style="color: inherit; text-decoration: inherit;">shield</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Selected POP to serve as a "shield" for backends. Valid values for `shield` are included in the [`GET /datacenters`](https://developer.fastly.com/reference/api/utils/datacenter/) API response
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Type of load balance group to use. Integer, 1 to 4. Values: `1` (random), `3` (hash), `4` (client). Default `1`
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backends_python">
+<a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Names of defined backends to map the director to. Example: `[ "origin1", "origin2" ]`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Unique name for this Director. It is important to note that changing this attribute will delete and recreate the resource
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_python">
+<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Load balancing weight for the backends. Default `100`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="comment_python">
+<a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional comment about the Director
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="quorum_python">
+<a href="#quorum_python" style="color: inherit; text-decoration: inherit;">quorum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Percentage of capacity that needs to be up for the director itself to be considered up. Default `75`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retries_python">
+<a href="#retries_python" style="color: inherit; text-decoration: inherit;">retries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How many backends to search if it fails. Default `5`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shield_python">
+<a href="#shield_python" style="color: inherit; text-decoration: inherit;">shield</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Selected POP to serve as a "shield" for backends. Valid values for `shield` are included in the [`GET /datacenters`](https://developer.fastly.com/reference/api/utils/datacenter/) API response
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Type of load balance group to use. Integer, 1 to 4. Values: `1` (random), `3` (hash), `4` (client). Default `1`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
