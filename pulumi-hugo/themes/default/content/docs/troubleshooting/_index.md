@@ -76,6 +76,23 @@ $ PULUMI_DEBUG_COMMANDS=1 pulumi view-trace ./up.trace
 Displaying trace at http://localhost:8008
 ```
 
+Pulumi also supports [Zipkin](https://zipkin.io) compatible tracing.
+To collect a trace to a local
+[Jaeger](https://www.jaegertracing.io/docs/1.22/getting-started/)
+server:
+
+```
+$ docker run -d --name jaeger \
+  -e COLLECTOR_ZIPKIN_HOST_PORT=:9411 \
+  -p 16686:16686 \
+  -p 9411:9411 \
+  jaegertracing/all-in-one:1.22
+
+$ pulumi up --tracing http://localhost:9411/api/v1/spans
+```
+
+To view a trace locally navigate to the [Jaeger UI](http://localhost:16686/search).
+
 ## Common Problems
 
 This section covers a few problems that can arise when working with Pulumi.
