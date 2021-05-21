@@ -56,6 +56,6 @@ A Pulumi package for creating and managing New Relic resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.1.0</dd>
+	<dd>4.1.1</dd>
 </dl>
 
