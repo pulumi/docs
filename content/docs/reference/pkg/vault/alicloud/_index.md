@@ -23,6 +23,6 @@ Explore the resources and functions of the vault.alicloud module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.0.1</dd>
+	<dd>4.1.0</dd>
 </dl>
 
