@@ -520,16 +520,15 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="vmprotectionenabled_csharp">
 <a href="#vmprotectionenabled_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Protection<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable VM protection for all the subnets in this Virtual Network. Defaults to `false`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This is deprecated in favor of `ddos_protection_plan`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -614,16 +613,15 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="vmprotectionenabled_go">
 <a href="#vmprotectionenabled_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Protection<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable VM protection for all the subnets in this Virtual Network. Defaults to `false`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This is deprecated in favor of `ddos_protection_plan`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -708,16 +706,15 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="vmprotectionenabled_nodejs">
 <a href="#vmprotectionenabled_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Protection<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to enable VM protection for all the subnets in this Virtual Network. Defaults to `false`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This is deprecated in favor of `ddos_protection_plan`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -802,16 +799,15 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="vm_protection_enabled_python">
 <a href="#vm_protection_enabled_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>protection_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable VM protection for all the subnets in this Virtual Network. Defaults to `false`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This is deprecated in favor of `ddos_protection_plan`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -1132,16 +1128,15 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_vmprotectionenabled_csharp">
 <a href="#state_vmprotectionenabled_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Protection<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable VM protection for all the subnets in this Virtual Network. Defaults to `false`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This is deprecated in favor of `ddos_protection_plan`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1235,16 +1230,15 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_vmprotectionenabled_go">
 <a href="#state_vmprotectionenabled_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Protection<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable VM protection for all the subnets in this Virtual Network. Defaults to `false`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This is deprecated in favor of `ddos_protection_plan`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1338,16 +1332,15 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_vmprotectionenabled_nodejs">
 <a href="#state_vmprotectionenabled_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Protection<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to enable VM protection for all the subnets in this Virtual Network. Defaults to `false`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This is deprecated in favor of `ddos_protection_plan`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1441,16 +1434,15 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_vm_protection_enabled_python">
 <a href="#state_vm_protection_enabled_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>protection_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable VM protection for all the subnets in this Virtual Network. Defaults to `false`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This is deprecated in favor of `ddos_protection_plan`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 

@@ -202,6 +202,7 @@ const exampleCache = new azure.redis.Cache("exampleCache", {
           <span class="nx">private_static_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
           <span class="nx">redis_configuration</span><span class="p">:</span> <span class="nx">Optional[CacheRedisConfigurationArgs]</span> = None<span class="p">,</span>
+          <span class="nx">replicas_per_master</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">shard_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -447,6 +448,15 @@ new resource to be created.
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="replicaspermaster_csharp">
+<a href="#replicaspermaster_csharp" style="color: inherit; text-decoration: inherit;">Replicas<wbr>Per<wbr>Master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="shardcount_csharp">
 <a href="#shardcount_csharp" style="color: inherit; text-decoration: inherit;">Shard<wbr>Count</a>
 </span>
@@ -595,6 +605,15 @@ new resource to be created.
         <span class="property-type"><a href="#cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicaspermaster_go">
+<a href="#replicaspermaster_go" style="color: inherit; text-decoration: inherit;">Replicas<wbr>Per<wbr>Master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shardcount_go">
@@ -747,6 +766,15 @@ new resource to be created.
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="replicaspermaster_nodejs">
+<a href="#replicaspermaster_nodejs" style="color: inherit; text-decoration: inherit;">replicas<wbr>Per<wbr>Master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="shardcount_nodejs">
 <a href="#shardcount_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Count</a>
 </span>
@@ -895,6 +923,15 @@ new resource to be created.
         <span class="property-type"><a href="#cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicas_per_master_python">
+<a href="#replicas_per_master_python" style="color: inherit; text-decoration: inherit;">replicas_<wbr>per_<wbr>master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shard_count_python">
@@ -1271,6 +1308,7 @@ Get an existing Cache resource's state with the given name, ID, and optional ext
         <span class="nx">private_static_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">redis_configuration</span><span class="p">:</span> <span class="nx">Optional[CacheRedisConfigurationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">replicas_per_master</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">secondary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">secondary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1519,6 +1557,15 @@ new resource to be created.
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_replicaspermaster_csharp">
+<a href="#state_replicaspermaster_csharp" style="color: inherit; text-decoration: inherit;">Replicas<wbr>Per<wbr>Master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1730,6 +1777,15 @@ new resource to be created.
         <span class="property-type"><a href="#cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_replicaspermaster_go">
+<a href="#state_replicaspermaster_go" style="color: inherit; text-decoration: inherit;">Replicas<wbr>Per<wbr>Master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
@@ -1945,6 +2001,15 @@ new resource to be created.
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_replicaspermaster_nodejs">
+<a href="#state_replicaspermaster_nodejs" style="color: inherit; text-decoration: inherit;">replicas<wbr>Per<wbr>Master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -2158,6 +2223,15 @@ new resource to be created.
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_replicas_per_master_python">
+<a href="#state_replicas_per_master_python" style="color: inherit; text-decoration: inherit;">replicas_<wbr>per_<wbr>master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -2343,7 +2417,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable or disable AOF persistence for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aofstorageconnectionstring0_csharp">
 <a href="#aofstorageconnectionstring0_csharp" style="color: inherit; text-decoration: inherit;">Aof<wbr>Storage<wbr>Connection<wbr>String0</a>
@@ -2351,7 +2426,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}First Storage Account connection string for AOF persistence.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aofstorageconnectionstring1_csharp">
 <a href="#aofstorageconnectionstring1_csharp" style="color: inherit; text-decoration: inherit;">Aof<wbr>Storage<wbr>Connection<wbr>String1</a>
@@ -2359,7 +2435,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Second Storage Account connection string for AOF persistence.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableauthentication_csharp">
 <a href="#enableauthentication_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Authentication</a>
@@ -2470,7 +2547,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable or disable AOF persistence for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aofstorageconnectionstring0_go">
 <a href="#aofstorageconnectionstring0_go" style="color: inherit; text-decoration: inherit;">Aof<wbr>Storage<wbr>Connection<wbr>String0</a>
@@ -2478,7 +2556,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}First Storage Account connection string for AOF persistence.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aofstorageconnectionstring1_go">
 <a href="#aofstorageconnectionstring1_go" style="color: inherit; text-decoration: inherit;">Aof<wbr>Storage<wbr>Connection<wbr>String1</a>
@@ -2486,7 +2565,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Second Storage Account connection string for AOF persistence.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableauthentication_go">
 <a href="#enableauthentication_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Authentication</a>
@@ -2597,7 +2677,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable or disable AOF persistence for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aofstorageconnectionstring0_nodejs">
 <a href="#aofstorageconnectionstring0_nodejs" style="color: inherit; text-decoration: inherit;">aof<wbr>Storage<wbr>Connection<wbr>String0</a>
@@ -2605,7 +2686,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}First Storage Account connection string for AOF persistence.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aofstorageconnectionstring1_nodejs">
 <a href="#aofstorageconnectionstring1_nodejs" style="color: inherit; text-decoration: inherit;">aof<wbr>Storage<wbr>Connection<wbr>String1</a>
@@ -2613,7 +2695,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Second Storage Account connection string for AOF persistence.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableauthentication_nodejs">
 <a href="#enableauthentication_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Authentication</a>
@@ -2724,7 +2807,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable or disable AOF persistence for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aof_storage_connection_string0_python">
 <a href="#aof_storage_connection_string0_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>storage_<wbr>connection_<wbr>string0</a>
@@ -2732,7 +2816,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}First Storage Account connection string for AOF persistence.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aof_storage_connection_string1_python">
 <a href="#aof_storage_connection_string1_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>storage_<wbr>connection_<wbr>string1</a>
@@ -2740,7 +2825,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Second Storage Account connection string for AOF persistence.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_authentication_python">
 <a href="#enable_authentication_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>authentication</a>

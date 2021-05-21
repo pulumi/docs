@@ -190,6 +190,7 @@ const exampleServiceAccount = new azure.media.ServiceAccount("exampleServiceAcco
 <span class="k">def </span><span class="nx">ServiceAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                    <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ServiceAccountIdentityArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">key_delivery_access_control</span><span class="p">:</span> <span class="nx">Optional[ServiceAccountKeyDeliveryAccessControlArgs]</span> = None<span class="p">,</span>
                    <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -352,6 +353,15 @@ The ServiceAccount resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keydeliveryaccesscontrol_csharp">
+<a href="#keydeliveryaccesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Delivery<wbr>Access<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceaccountkeydeliveryaccesscontrol">Service<wbr>Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `key_delivery_access_control` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -387,7 +397,6 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -419,6 +428,15 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#serviceaccountidentity">Service<wbr>Account<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keydeliveryaccesscontrol_go">
+<a href="#keydeliveryaccesscontrol_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Delivery<wbr>Access<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceaccountkeydeliveryaccesscontrol">Service<wbr>Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control</a></span>
+    </dt>
+    <dd>{{% md %}}An `key_delivery_access_control` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -456,7 +474,6 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -488,6 +505,15 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#serviceaccountidentity">Service<wbr>Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keydeliveryaccesscontrol_nodejs">
+<a href="#keydeliveryaccesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Delivery<wbr>Access<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceaccountkeydeliveryaccesscontrol">Service<wbr>Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `key_delivery_access_control` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -525,7 +551,6 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -557,6 +582,15 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#serviceaccountidentity">Service<wbr>Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_delivery_access_control_python">
+<a href="#key_delivery_access_control_python" style="color: inherit; text-decoration: inherit;">key_<wbr>delivery_<wbr>access_<wbr>control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceaccountkeydeliveryaccesscontrol">Service<wbr>Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `key_delivery_access_control` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -594,7 +628,6 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -670,6 +703,7 @@ Get an existing ServiceAccount resource's state with the given name, ID, and opt
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ServiceAccountIdentityArgs]</span> = None<span class="p">,</span>
+        <span class="nx">key_delivery_access_control</span><span class="p">:</span> <span class="nx">Optional[ServiceAccountKeyDeliveryAccessControlArgs]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -797,6 +831,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_keydeliveryaccesscontrol_csharp">
+<a href="#state_keydeliveryaccesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Delivery<wbr>Access<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceaccountkeydeliveryaccesscontrol">Service<wbr>Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `key_delivery_access_control` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -850,7 +893,6 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -864,6 +906,15 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#serviceaccountidentity">Service<wbr>Account<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_keydeliveryaccesscontrol_go">
+<a href="#state_keydeliveryaccesscontrol_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Delivery<wbr>Access<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceaccountkeydeliveryaccesscontrol">Service<wbr>Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control</a></span>
+    </dt>
+    <dd>{{% md %}}An `key_delivery_access_control` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -919,7 +970,6 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -933,6 +983,15 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#serviceaccountidentity">Service<wbr>Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_keydeliveryaccesscontrol_nodejs">
+<a href="#state_keydeliveryaccesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Delivery<wbr>Access<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceaccountkeydeliveryaccesscontrol">Service<wbr>Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `key_delivery_access_control` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
@@ -988,7 +1047,6 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1002,6 +1060,15 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#serviceaccountidentity">Service<wbr>Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_key_delivery_access_control_python">
+<a href="#state_key_delivery_access_control_python" style="color: inherit; text-decoration: inherit;">key_<wbr>delivery_<wbr>access_<wbr>control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceaccountkeydeliveryaccesscontrol">Service<wbr>Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `key_delivery_access_control` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
@@ -1057,7 +1124,6 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1193,6 +1259,96 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this Media Services Account. Possible value is  `SystemAssigned`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceaccountkeydeliveryaccesscontrol">Service<wbr>Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultaction_csharp">
+<a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Default Action to use when no rules match from `ip_allow_list`. Possible values are `Allow` and `Deny`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipallowlists_csharp">
+<a href="#ipallowlists_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allow<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}One or more IP Addresses, or CIDR Blocks which should be able to access the Key Delivery.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultaction_go">
+<a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Default Action to use when no rules match from `ip_allow_list`. Possible values are `Allow` and `Deny`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipallowlists_go">
+<a href="#ipallowlists_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allow<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}One or more IP Addresses, or CIDR Blocks which should be able to access the Key Delivery.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultaction_nodejs">
+<a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Default Action to use when no rules match from `ip_allow_list`. Possible values are `Allow` and `Deny`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipallowlists_nodejs">
+<a href="#ipallowlists_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allow<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}One or more IP Addresses, or CIDR Blocks which should be able to access the Key Delivery.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="default_action_python">
+<a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Default Action to use when no rules match from `ip_allow_list`. Possible values are `Allow` and `Deny`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ip_allow_lists_python">
+<a href="#ip_allow_lists_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allow_<wbr>lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}One or more IP Addresses, or CIDR Blocks which should be able to access the Key Delivery.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
