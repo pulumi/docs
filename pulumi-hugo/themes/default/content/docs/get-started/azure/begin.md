@@ -80,6 +80,6 @@ The Azure CLI, and thus Pulumi, will use the default subscription for the accoun
 
 For additional information on authenticating with Azure, or to login with a service principal, see [Azure Setup]({{< relref "/docs/intro/cloud-providers/azure/setup" >}}).
 
-Next, you'll create a new project.
+Next, you'll create a new Pulumi project.
 
 {{< get-started-stepper >}}

@@ -95,6 +95,6 @@ $ export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
 
 For additional information on setting and using AWS credentials, see [AWS Setup]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}).
 
-Next, you'll create a new project.
+Next, you'll create a new Pulumi project.
 
 {{< get-started-stepper >}}
