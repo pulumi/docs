@@ -13,11 +13,11 @@ async function getCommitsBetween(base, head) {
         auth: githubToken,
     });
 
-    const commits = await octokit.repos.compareCommits({
-        owner,
-        repo,
-        base,
-        head,
+    const commits = await octokit.rest.repos.compareCommits({
+      owner,
+      repo,
+      base,
+      head,
     });
 
     console.log(`${commits.data.commits.map(commit => `* ${commit.html_url}`).join("\n")}`);
