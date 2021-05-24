@@ -52,7 +52,6 @@ aliases: ["/docs/reference/clouds/"]
 * [RKE]({{< relref "./rke" >}})
 * [Spotinst]({{< relref "./spotinst" >}})
 * [Splunk]({{< relref "./splunk" >}})
-* [SumoLogic]({{< relref "./sumologic" >}})
 * [Vault]({{< relref "./vault" >}})
 * [Venafi]({{< relref "./venafi" >}})
 
@@ -66,6 +65,7 @@ aliases: ["/docs/reference/clouds/"]
 * [Datadog]({{< relref "./datadog" >}})
 * [New Relic]({{< relref "./newrelic" >}})
 * [SignalFx]({{< relref "./signalfx" >}})
+* [SumoLogic]({{< relref "./sumologic" >}})
 * [Wavefront]({{< relref "./wavefront" >}})
 
 ## Network Providers
