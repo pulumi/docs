@@ -1,0 +1,3 @@
+{
+    "versions": {{ .Site.Data.versions | jsonify (dict "indent" "    " "prefix" "    ") }}
+}
