@@ -113,6 +113,7 @@ bucketObject, err := storage.NewBucketObject(ctx, "index.html", &storage.BucketO
     Bucket: bucket.Name,
     Source: pulumi.NewFileAsset("index.html"),
 })
+bucketEndpoint := pulumi.Sprintf("http://storage.googleapis.com/%s/%s", bucket.Name, bucketObject.Name)
 if err != nil {
     return err
 }
