@@ -108,7 +108,7 @@ export const nodesubnetId = cluster.core.subnetIds;
 ```
 
 Configure the Public subnets in the console as defined in
-[this guide](https://kubernetes-sigs.github.io/aws-load-balancer-controller/guide/controller/subnet_discovery/).
+[this guide](https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/deploy/subnet_discovery/).
 
 ## Step 3: Deploy AWS ALB Ingress Controller
 
