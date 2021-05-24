@@ -301,6 +301,15 @@ The following output properties are available:
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="requirednetworktrafficrules_csharp">
+<a href="#requirednetworktrafficrules_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Network<wbr>Traffic<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getspringcloudservicerequirednetworktrafficrule">List&lt;Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -365,6 +374,15 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="requirednetworktrafficrules_go">
+<a href="#requirednetworktrafficrules_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Network<wbr>Traffic<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getspringcloudservicerequirednetworktrafficrule">[]Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_go">
@@ -433,6 +451,15 @@ The following output properties are available:
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="requirednetworktrafficrules_nodejs">
+<a href="#requirednetworktrafficrules_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Network<wbr>Traffic<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getspringcloudservicerequirednetworktrafficrule">Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -497,6 +524,15 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="required_network_traffic_rules_python">
+<a href="#required_network_traffic_rules_python" style="color: inherit; text-decoration: inherit;">required_<wbr>network_<wbr>traffic_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getspringcloudservicerequirednetworktrafficrule">Sequence[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_group_name_python">
@@ -1540,6 +1576,202 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Config Server instance will fail to start if the host_key does not match.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getspringcloudservicerequirednetworktrafficrule">Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="direction_csharp">
+<a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The direction of required traffic. Possible values are `Inbound`, `Outbound`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdns_csharp">
+<a href="#fqdns_csharp" style="color: inherit; text-decoration: inherit;">Fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The FQDN list of required traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipaddresses_csharp">
+<a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port of required traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of required traffic.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="direction_go">
+<a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The direction of required traffic. Possible values are `Inbound`, `Outbound`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdns_go">
+<a href="#fqdns_go" style="color: inherit; text-decoration: inherit;">Fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The FQDN list of required traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipaddresses_go">
+<a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port of required traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of required traffic.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="direction_nodejs">
+<a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The direction of required traffic. Possible values are `Inbound`, `Outbound`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdns_nodejs">
+<a href="#fqdns_nodejs" style="color: inherit; text-decoration: inherit;">fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The FQDN list of required traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipaddresses_nodejs">
+<a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The port of required traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of required traffic.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="direction_python">
+<a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The direction of required traffic. Possible values are `Inbound`, `Outbound`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdns_python">
+<a href="#fqdns_python" style="color: inherit; text-decoration: inherit;">fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The FQDN list of required traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ip_addresses_python">
+<a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port of required traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The protocol of required traffic.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -336,6 +336,7 @@ const exampleKafkaCluster = new azure.hdinsight.KafkaCluster("exampleKafkaCluste
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                  <span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterComponentVersionArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">encryption_in_transit_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterGatewayArgs]</span> = None<span class="p">,</span>
                  <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterMetastoresArgs]</span> = None<span class="p">,</span>
@@ -532,6 +533,15 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possible values are `Standard` or `Premium`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptionintransitenabled_csharp">
+<a href="#encryptionintransitenabled_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>In<wbr>Transit<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether encryption in transit is enabled for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -668,6 +678,15 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possible values are `Standard` or `Premium`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryptionintransitenabled_go">
+<a href="#encryptionintransitenabled_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>In<wbr>Transit<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether encryption in transit is enabled for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -808,6 +827,15 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possible values are `Standard` or `Premium`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptionintransitenabled_nodejs">
+<a href="#encryptionintransitenabled_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>In<wbr>Transit<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether encryption in transit is enabled for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -944,6 +972,15 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possible values are `Standard` or `Premium`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryption_in_transit_enabled_python">
+<a href="#encryption_in_transit_enabled_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>in_<wbr>transit_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether encryption in transit is enabled for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -1208,6 +1245,7 @@ Get an existing KafkaCluster resource's state with the given name, ID, and optio
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterComponentVersionArgs]</span> = None<span class="p">,</span>
+        <span class="nx">encryption_in_transit_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterGatewayArgs]</span> = None<span class="p">,</span>
         <span class="nx">https_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">kafka_rest_proxy_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1352,6 +1390,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kafkaclustercomponentversion">Kafka<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_encryptionintransitenabled_csharp">
+<a href="#state_encryptionintransitenabled_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>In<wbr>Transit<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether encryption in transit is enabled for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_csharp">
@@ -1519,6 +1566,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryptionintransitenabled_go">
+<a href="#state_encryptionintransitenabled_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>In<wbr>Transit<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether encryption in transit is enabled for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_gateway_go">
 <a href="#state_gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
 </span>
@@ -1684,6 +1740,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryptionintransitenabled_nodejs">
+<a href="#state_encryptionintransitenabled_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>In<wbr>Transit<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether encryption in transit is enabled for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_gateway_nodejs">
 <a href="#state_gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
@@ -1847,6 +1912,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kafkaclustercomponentversion">Kafka<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_encryption_in_transit_enabled_python">
+<a href="#state_encryption_in_transit_enabled_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>in_<wbr>transit_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether encryption in transit is enabled for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_python">

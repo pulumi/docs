@@ -694,6 +694,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="requirednetworktrafficrules_csharp">
+<a href="#requirednetworktrafficrules_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Network<wbr>Traffic<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicerequirednetworktrafficrule">List&lt;Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -715,6 +724,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="requirednetworktrafficrules_go">
+<a href="#requirednetworktrafficrules_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Network<wbr>Traffic<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicerequirednetworktrafficrule">[]Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -736,6 +754,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="requirednetworktrafficrules_nodejs">
+<a href="#requirednetworktrafficrules_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Network<wbr>Traffic<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicerequirednetworktrafficrule">Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -757,6 +784,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="required_network_traffic_rules_python">
+<a href="#required_network_traffic_rules_python" style="color: inherit; text-decoration: inherit;">required_<wbr>network_<wbr>traffic_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicerequirednetworktrafficrule">Sequence[Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -781,6 +817,7 @@ Get an existing SpringCloudService resource's state with the given name, ID, and
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceNetworkArgs]</span> = None<span class="p">,</span>
         <span class="nx">outbound_public_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">required_network_traffic_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpringCloudServiceRequiredNetworkTrafficRuleArgs]]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -942,6 +979,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_requirednetworktrafficrules_csharp">
+<a href="#state_requirednetworktrafficrules_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Network<wbr>Traffic<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicerequirednetworktrafficrule">List&lt;Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1025,6 +1071,15 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_requirednetworktrafficrules_go">
+<a href="#state_requirednetworktrafficrules_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Network<wbr>Traffic<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicerequirednetworktrafficrule">[]Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
@@ -1112,6 +1167,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_requirednetworktrafficrules_nodejs">
+<a href="#state_requirednetworktrafficrules_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Network<wbr>Traffic<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicerequirednetworktrafficrule">Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1195,6 +1259,15 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_required_network_traffic_rules_python">
+<a href="#state_required_network_traffic_rules_python" style="color: inherit; text-decoration: inherit;">required_<wbr>network_<wbr>traffic_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicerequirednetworktrafficrule">Sequence[Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
@@ -2446,6 +2519,200 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Name of the resource group containing network resources of Azure Spring Cloud Service Runtime. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="springcloudservicerequirednetworktrafficrule">Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="direction_csharp">
+<a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The direction of required traffic. Possible values are `Inbound`, `Outbound`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fqdns_csharp">
+<a href="#fqdns_csharp" style="color: inherit; text-decoration: inherit;">Fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The FQDN list of required traffic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipaddresses_csharp">
+<a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port of required traffic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of required traffic.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="direction_go">
+<a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The direction of required traffic. Possible values are `Inbound`, `Outbound`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fqdns_go">
+<a href="#fqdns_go" style="color: inherit; text-decoration: inherit;">Fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The FQDN list of required traffic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipaddresses_go">
+<a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port of required traffic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of required traffic.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="direction_nodejs">
+<a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The direction of required traffic. Possible values are `Inbound`, `Outbound`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fqdns_nodejs">
+<a href="#fqdns_nodejs" style="color: inherit; text-decoration: inherit;">fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The FQDN list of required traffic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipaddresses_nodejs">
+<a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The port of required traffic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of required traffic.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="direction_python">
+<a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The direction of required traffic. Possible values are `Inbound`, `Outbound`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fqdns_python">
+<a href="#fqdns_python" style="color: inherit; text-decoration: inherit;">fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The FQDN list of required traffic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ip_addresses_python">
+<a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port of required traffic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The protocol of required traffic.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

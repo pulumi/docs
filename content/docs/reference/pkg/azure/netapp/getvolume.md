@@ -101,6 +101,7 @@ func main() {
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">security_style</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVolumeResult</code></pre></div>
 {{% /choosable %}}
 
@@ -161,6 +162,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the NetApp Volume exists.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securitystyle_csharp">
+<a href="#securitystyle_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume security style
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -201,6 +211,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the NetApp Volume exists.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securitystyle_go">
+<a href="#securitystyle_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume security style
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -241,6 +260,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the NetApp Volume exists.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securitystyle_nodejs">
+<a href="#securitystyle_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume security style
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -281,6 +309,15 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the NetApp Volume exists.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="security_style_python">
+<a href="#security_style_python" style="color: inherit; text-decoration: inherit;">security_<wbr>style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Volume security style
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -310,7 +347,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvolumedataprotectionreplication">List&lt;Get<wbr>Volume<wbr>Data<wbr>Protection<wbr>Replication&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A `data_protection_replication` block as defined below.
+    <dd>{{% md %}}Volume data protection block
+*
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -362,7 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of protocol types.
+    <dd>{{% md %}}A list of protocol types enabled on volume.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_csharp">
@@ -407,6 +445,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique file path of the volume.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="securitystyle_csharp">
+<a href="#securitystyle_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume security style
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -427,7 +474,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvolumedataprotectionreplication">[]Get<wbr>Volume<wbr>Data<wbr>Protection<wbr>Replication</a></span>
     </dt>
-    <dd>{{% md %}}A `data_protection_replication` block as defined below.
+    <dd>{{% md %}}Volume data protection block
+*
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -479,7 +527,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of protocol types.
+    <dd>{{% md %}}A list of protocol types enabled on volume.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_go">
@@ -524,6 +572,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique file path of the volume.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="securitystyle_go">
+<a href="#securitystyle_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume security style
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -544,7 +601,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvolumedataprotectionreplication">Get<wbr>Volume<wbr>Data<wbr>Protection<wbr>Replication[]</a></span>
     </dt>
-    <dd>{{% md %}}A `data_protection_replication` block as defined below.
+    <dd>{{% md %}}Volume data protection block
+*
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -596,7 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of protocol types.
+    <dd>{{% md %}}A list of protocol types enabled on volume.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_nodejs">
@@ -641,6 +699,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique file path of the volume.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="securitystyle_nodejs">
+<a href="#securitystyle_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume security style
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -661,7 +728,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvolumedataprotectionreplication">Sequence[Get<wbr>Volume<wbr>Data<wbr>Protection<wbr>Replication]</a></span>
     </dt>
-    <dd>{{% md %}}A `data_protection_replication` block as defined below.
+    <dd>{{% md %}}Volume data protection block
+*
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -713,7 +781,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of protocol types.
+    <dd>{{% md %}}A list of protocol types enabled on volume.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_group_name_python">
@@ -758,6 +826,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique file path of the volume.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="security_style_python">
+<a href="#security_style_python" style="color: inherit; text-decoration: inherit;">security_<wbr>style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Volume security style
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

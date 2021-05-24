@@ -45,7 +45,7 @@ class MyStack : Stack
             AccountTier = "Standard",
             AccountReplicationType = "LRS",
         });
-        var exampleSqlServer = new Azure.Sql.SqlServer("exampleSqlServer", new Azure.Sql.SqlServerArgs
+        var exampleServer = new Azure.MSSql.Server("exampleServer", new Azure.MSSql.ServerArgs
         {
             ResourceGroupName = exampleResourceGroup.Name,
             Location = exampleResourceGroup.Location,
@@ -55,7 +55,7 @@ class MyStack : Stack
         });
         var test = new Azure.MSSql.Database("test", new Azure.MSSql.DatabaseArgs
         {
-            ServerId = exampleSqlServer.Id,
+            ServerId = exampleServer.Id,
             Collation = "SQL_Latin1_General_CP1_CI_AS",
             LicenseType = "LicenseIncluded",
             MaxSizeGb = 4,
@@ -91,7 +91,6 @@ package main
 import (
 	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
 	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/mssql"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/sql"
 	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -113,7 +112,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleSqlServer, err := sql.NewSqlServer(ctx, "exampleSqlServer", &sql.SqlServerArgs{
+		exampleServer, err := mssql.NewServer(ctx, "exampleServer", &mssql.ServerArgs{
 			ResourceGroupName:          exampleResourceGroup.Name,
 			Location:                   exampleResourceGroup.Location,
 			Version:                    pulumi.String("12.0"),
@@ -124,7 +123,7 @@ func main() {
 			return err
 		}
 		_, err = mssql.NewDatabase(ctx, "test", &mssql.DatabaseArgs{
-			ServerId:      exampleSqlServer.ID(),
+			ServerId:      exampleServer.ID(),
 			Collation:     pulumi.String("SQL_Latin1_General_CP1_CI_AS"),
 			LicenseType:   pulumi.String("LicenseIncluded"),
 			MaxSizeGb:     pulumi.Int(4),
@@ -165,14 +164,14 @@ example_account = azure.storage.Account("exampleAccount",
     location=example_resource_group.location,
     account_tier="Standard",
     account_replication_type="LRS")
-example_sql_server = azure.sql.SqlServer("exampleSqlServer",
+example_server = azure.mssql.Server("exampleServer",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
     version="12.0",
     administrator_login="4dm1n157r470r",
     administrator_login_password="4-v3ry-53cr37-p455w0rd")
 test = azure.mssql.Database("test",
-    server_id=example_sql_server.id,
+    server_id=example_server.id,
     collation="SQL_Latin1_General_CP1_CI_AS",
     license_type="LicenseIncluded",
     max_size_gb=4,
@@ -208,7 +207,7 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
     accountTier: "Standard",
     accountReplicationType: "LRS",
 });
-const exampleSqlServer = new azure.sql.SqlServer("exampleSqlServer", {
+const exampleServer = new azure.mssql.Server("exampleServer", {
     resourceGroupName: exampleResourceGroup.name,
     location: exampleResourceGroup.location,
     version: "12.0",
@@ -216,7 +215,7 @@ const exampleSqlServer = new azure.sql.SqlServer("exampleSqlServer", {
     administratorLoginPassword: "4-v3ry-53cr37-p455w0rd",
 });
 const test = new azure.mssql.Database("test", {
-    serverId: exampleSqlServer.id,
+    serverId: exampleServer.id,
     collation: "SQL_Latin1_General_CP1_CI_AS",
     licenseType: "LicenseIncluded",
     maxSizeGb: 4,
