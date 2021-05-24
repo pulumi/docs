@@ -89,6 +89,10 @@ jobs:
         run: |
           echo -n "${{ env.PULUMI_VERSION }}" > ./static/latest-version
         working-directory: docs
+      - name: Update versions
+        run: node scripts/get-versions.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
       - name: Update version lists
         run: |
           NL=$'\n'

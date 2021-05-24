@@ -7,7 +7,8 @@
     "lint-links": "node ./scripts/link_linter.js"
   },
   "dependencies": {
-    "@octokit/rest": "^18.0.6",
+    "@octokit/auth-action": "^1.3.2",
+    "@octokit/graphql": "^4.6.2",
     "@sentry/cli": "^1.55.1",
     "@slack/web-api": "^5.12.0",
     "broken-link-checker": "^0.7.8",
