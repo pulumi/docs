@@ -12,17 +12,8 @@ menu:
 aliases: ["/docs/quickstart/gcp/create-project/"]
 ---
 
-Now that you have set up your environment by installing Pulumi, installing your preferred language runtime, and configuring your Google Cloud credentials, let's get started with creating your first Pulumi program.
-
-In this guide you will:
-
-- Create a new Pulumi project.
-- Provision a new Google Cloud Storage bucket.
-- Add an `index.html` file to your bucket.
-- Serve the `index.html` as a static website.
-- Destroy the resources you've provisioned.
-
-To get started, first create a new directory and project.
+Now that you have set up your environment by installing Pulumi, installing your preferred language runtime,
+and configuring your Google Cloud credentials, let's create your first Pulumi program.
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 

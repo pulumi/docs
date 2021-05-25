@@ -12,17 +12,8 @@ menu:
 aliases: ["/docs/quickstart/azure/create-project/"]
 ---
 
-Now that you have set up your environment by installing Pulumi, installing your preferred language runtime, and configuring your Azure credentials, let's get started with creating your first Pulumi program.
-
-In this guide you will:
-
-- Create a new Pulumi project.
-- Provision a new Blob storage container.
-- Add an `index.html` file to your container.
-- Serve the `index.html` as a static website.
-- Destroy the resources you've provisioned.
-
-To get started, first create a new directory and project.
+Now that you have set up your environment by installing Pulumi, installing your preferred language runtime,
+and configuring your Azure credentials, let's create your first Pulumi program.
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
