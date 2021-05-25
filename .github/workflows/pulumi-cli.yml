@@ -93,6 +93,7 @@ jobs:
         run: node scripts/get-versions.js
         env:
           GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
+        working-directory: docs
       - name: Update version lists
         run: |
           NL=$'\n'
