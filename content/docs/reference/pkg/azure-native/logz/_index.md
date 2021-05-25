@@ -24,7 +24,10 @@ Explore the resources and functions of the azure-native.logz module.
     <li><a href="getsubaccounttagrule" title="GetSubAccountTagRule"><span class="symbol function"></span>GetSubAccountTagRule</a></li>
     <li><a href="gettagrule" title="GetTagRule"><span class="symbol function"></span>GetTagRule</a></li>
     <li><a href="listmonitormonitoredresources" title="ListMonitorMonitoredResources"><span class="symbol function"></span>ListMonitorMonitoredResources</a></li>
+    <li><a href="listmonitoruserroles" title="ListMonitorUserRoles"><span class="symbol function"></span>ListMonitorUserRoles</a></li>
+    <li><a href="listmonitorvmhosts" title="ListMonitorVMHosts"><span class="symbol function"></span>ListMonitorVMHosts</a></li>
     <li><a href="listsubaccountmonitoredresources" title="ListSubAccountMonitoredResources"><span class="symbol function"></span>ListSubAccountMonitoredResources</a></li>
+    <li><a href="listsubaccountvmhosts" title="ListSubAccountVMHosts"><span class="symbol function"></span>ListSubAccountVMHosts</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -34,6 +37,6 @@ Explore the resources and functions of the azure-native.logz module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.7.0</dd>
+	<dd>1.8.0</dd>
 </dl>
 

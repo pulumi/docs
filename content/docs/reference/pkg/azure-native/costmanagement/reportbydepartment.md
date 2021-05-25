@@ -174,8 +174,8 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 report_by_department = azure_native.costmanagement.ReportByDepartment("reportByDepartment",
-    definition={
-        "dataset": {
+    definition=azure_native.costmanagement.ReportDefinitionArgs(
+        dataset={
             "aggregation": {
                 "costSum": azure_native.costmanagement.ReportAggregationArgs(
                     function="Sum",
@@ -191,8 +191,8 @@ report_by_department = azure_native.costmanagement.ReportByDepartment("reportByD
                     "PreTaxCost",
                 ],
             ),
-            "filter": {
-                "and": [
+            "filter": azure_native.costmanagement.ReportFilterArgs(
+                and_=[
                     {
                         "or": [
                             azure_native.costmanagement.ReportFilterArgs(
@@ -225,7 +225,7 @@ report_by_department = azure_native.costmanagement.ReportByDepartment("reportByD
                         ),
                     ),
                 ],
-            },
+            ),
             "granularity": "Daily",
             "grouping": [
                 azure_native.costmanagement.ReportGroupingArgs(
@@ -238,9 +238,9 @@ report_by_department = azure_native.costmanagement.ReportByDepartment("reportByD
                 ),
             ],
         },
-        "timeframe": "MonthToDate",
-        "type": "Usage",
-    },
+        timeframe="MonthToDate",
+        type="Usage",
+    ),
     delivery_info=azure_native.costmanagement.ReportDeliveryInfoArgs(
         destination=azure_native.costmanagement.ReportDeliveryDestinationArgs(
             container="reports",
@@ -3671,7 +3671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:costmanagement:ReportByDepartment TestReport providers/Microsoft.Billing/departments/{department-Id}/providers/Microsoft.CostManagement/reports/TestReport 
+$ pulumi import azure-native:costmanagement:ReportByDepartment TestReport providers/Microsoft.Billing/departments/{department-id}/providers/Microsoft.CostManagement/reports/TestReport 
 ```
 
 

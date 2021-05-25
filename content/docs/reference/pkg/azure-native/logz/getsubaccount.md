@@ -596,7 +596,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="singlesignonurl_csharp">
+<a href="#singlesignonurl_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Sign<wbr>On<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The login URL specific to this Logz Organization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -624,7 +632,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="singlesignonurl_go">
+<a href="#singlesignonurl_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Sign<wbr>On<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The login URL specific to this Logz Organization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -652,7 +668,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="singlesignonurl_nodejs">
+<a href="#singlesignonurl_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Sign<wbr>On<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The login URL specific to this Logz Organization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -680,7 +704,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="single_sign_on_url_python">
+<a href="#single_sign_on_url_python" style="color: inherit; text-decoration: inherit;">single_<wbr>sign_<wbr>on_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The login URL specific to this Logz Organization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monitorpropertiesresponse">Monitor<wbr>Properties<wbr>Response</h4>
@@ -712,7 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Flag specifying if the resource provisioning state as tracked by ARM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logzorganizationproperties_csharp">
 <a href="#logzorganizationproperties_csharp" style="color: inherit; text-decoration: inherit;">Logz<wbr>Organization<wbr>Properties</a>
@@ -780,7 +812,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Flag specifying if the resource provisioning state as tracked by ARM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logzorganizationproperties_go">
 <a href="#logzorganizationproperties_go" style="color: inherit; text-decoration: inherit;">Logz<wbr>Organization<wbr>Properties</a>
@@ -848,7 +880,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Flag specifying if the resource provisioning state as tracked by ARM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logzorganizationproperties_nodejs">
 <a href="#logzorganizationproperties_nodejs" style="color: inherit; text-decoration: inherit;">logz<wbr>Organization<wbr>Properties</a>
@@ -916,7 +948,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Flag specifying if the resource provisioning state as tracked by ARM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logz_organization_properties_python">
 <a href="#logz_organization_properties_python" style="color: inherit; text-decoration: inherit;">logz_<wbr>organization_<wbr>properties</a>
