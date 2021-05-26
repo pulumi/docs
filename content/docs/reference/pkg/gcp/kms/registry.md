@@ -11,381 +11,6 @@ meta_desc: "Documentation for the gcp.kms.Registry resource with examples, input
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 <p class="resource-deprecated">Deprecated: {{% md %}}gcp.kms.Registry has been deprecated in favor of gcp.iot.Registry{{% /md %}}</p>
 
-A Google Cloud IoT Core device registry.
-
-To get more information about DeviceRegistry, see:
-
-* [API documentation](https://cloud.google.com/iot/docs/reference/cloudiot/rest/)
-* How-to Guides
-    * [Official Documentation](https://cloud.google.com/iot/docs/)
-
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-### Cloudiot Device Registry Basic
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var test_registry = new Gcp.Iot.Registry("test-registry", new Gcp.Iot.RegistryArgs
-        {
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/iot"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := iot.NewRegistry(ctx, "test_registry", nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-test_registry = gcp.iot.Registry("test-registry")
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const test_registry = new gcp.iot.Registry("test-registry", {});
-```
-
-
-{{< /example >}}
-
-
-
-
-### Cloudiot Device Registry Single Event Notification Configs
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var default_telemetry = new Gcp.PubSub.Topic("default-telemetry", new Gcp.PubSub.TopicArgs
-        {
-        });
-        var test_registry = new Gcp.Iot.Registry("test-registry", new Gcp.Iot.RegistryArgs
-        {
-            EventNotificationConfigs = 
-            {
-                new Gcp.Iot.Inputs.RegistryEventNotificationConfigItemArgs
-                {
-                    PubsubTopicName = default_telemetry.Id,
-                    SubfolderMatches = "",
-                },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/iot"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/pubsub"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := pubsub.NewTopic(ctx, "default_telemetry", nil)
-		if err != nil {
-			return err
-		}
-		_, err = iot.NewRegistry(ctx, "test_registry", &iot.RegistryArgs{
-			EventNotificationConfigs: iot.RegistryEventNotificationConfigItemArray{
-				&iot.RegistryEventNotificationConfigItemArgs{
-					PubsubTopicName:  default_telemetry.ID(),
-					SubfolderMatches: pulumi.String(""),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default_telemetry = gcp.pubsub.Topic("default-telemetry")
-test_registry = gcp.iot.Registry("test-registry", event_notification_configs=[gcp.iot.RegistryEventNotificationConfigItemArgs(
-    pubsub_topic_name=default_telemetry.id,
-    subfolder_matches="",
-)])
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const default_telemetry = new gcp.pubsub.Topic("default-telemetry", {});
-const test_registry = new gcp.iot.Registry("test-registry", {eventNotificationConfigs: [{
-    pubsubTopicName: default_telemetry.id,
-    subfolderMatches: "",
-}]});
-```
-
-
-{{< /example >}}
-
-
-
-
-### Cloudiot Device Registry Full
-
-
-{{< example csharp >}}
-
-```csharp
-using System.IO;
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var default_devicestatus = new Gcp.PubSub.Topic("default-devicestatus", new Gcp.PubSub.TopicArgs
-        {
-        });
-        var default_telemetry = new Gcp.PubSub.Topic("default-telemetry", new Gcp.PubSub.TopicArgs
-        {
-        });
-        var additional_telemetry = new Gcp.PubSub.Topic("additional-telemetry", new Gcp.PubSub.TopicArgs
-        {
-        });
-        var test_registry = new Gcp.Iot.Registry("test-registry", new Gcp.Iot.RegistryArgs
-        {
-            EventNotificationConfigs = 
-            {
-                new Gcp.Iot.Inputs.RegistryEventNotificationConfigItemArgs
-                {
-                    PubsubTopicName = additional_telemetry.Id,
-                    SubfolderMatches = "test/path",
-                },
-                new Gcp.Iot.Inputs.RegistryEventNotificationConfigItemArgs
-                {
-                    PubsubTopicName = default_telemetry.Id,
-                    SubfolderMatches = "",
-                },
-            },
-            StateNotificationConfig = 
-            {
-                { "pubsub_topic_name", default_devicestatus.Id },
-            },
-            MqttConfig = 
-            {
-                { "mqtt_enabled_state", "MQTT_ENABLED" },
-            },
-            HttpConfig = 
-            {
-                { "http_enabled_state", "HTTP_ENABLED" },
-            },
-            LogLevel = "INFO",
-            Credentials = 
-            {
-                new Gcp.Iot.Inputs.RegistryCredentialArgs
-                {
-                    PublicKeyCertificate = 
-                    {
-                        { "format", "X509_CERTIFICATE_PEM" },
-                        { "certificate", File.ReadAllText("test-fixtures/rsa_cert.pem") },
-                    },
-                },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default_devicestatus = gcp.pubsub.Topic("default-devicestatus")
-default_telemetry = gcp.pubsub.Topic("default-telemetry")
-additional_telemetry = gcp.pubsub.Topic("additional-telemetry")
-test_registry = gcp.iot.Registry("test-registry",
-    event_notification_configs=[
-        gcp.iot.RegistryEventNotificationConfigItemArgs(
-            pubsub_topic_name=additional_telemetry.id,
-            subfolder_matches="test/path",
-        ),
-        gcp.iot.RegistryEventNotificationConfigItemArgs(
-            pubsub_topic_name=default_telemetry.id,
-            subfolder_matches="",
-        ),
-    ],
-    state_notification_config={
-        "pubsub_topic_name": default_devicestatus.id,
-    },
-    mqtt_config={
-        "mqtt_enabled_state": "MQTT_ENABLED",
-    },
-    http_config={
-        "http_enabled_state": "HTTP_ENABLED",
-    },
-    log_level="INFO",
-    credentials=[gcp.iot.RegistryCredentialArgs(
-        public_key_certificate={
-            "format": "X509_CERTIFICATE_PEM",
-            "certificate": (lambda path: open(path).read())("test-fixtures/rsa_cert.pem"),
-        },
-    )])
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-import * from "fs";
-
-const default_devicestatus = new gcp.pubsub.Topic("default-devicestatus", {});
-const default_telemetry = new gcp.pubsub.Topic("default-telemetry", {});
-const additional_telemetry = new gcp.pubsub.Topic("additional-telemetry", {});
-const test_registry = new gcp.iot.Registry("test-registry", {
-    eventNotificationConfigs: [
-        {
-            pubsubTopicName: additional_telemetry.id,
-            subfolderMatches: "test/path",
-        },
-        {
-            pubsubTopicName: default_telemetry.id,
-            subfolderMatches: "",
-        },
-    ],
-    stateNotificationConfig: {
-        pubsub_topic_name: default_devicestatus.id,
-    },
-    mqttConfig: {
-        mqtt_enabled_state: "MQTT_ENABLED",
-    },
-    httpConfig: {
-        http_enabled_state: "HTTP_ENABLED",
-    },
-    logLevel: "INFO",
-    credentials: [{
-        publicKeyCertificate: {
-            format: "X509_CERTIFICATE_PEM",
-            certificate: fs.readFileSync("test-fixtures/rsa_cert.pem"),
-        },
-    }],
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
 
 
 
@@ -546,7 +171,6 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#registrycredential">List&lt;Registry<wbr>Credential<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventnotificationconfigs_csharp">
@@ -555,9 +179,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryeventnotificationconfigitem">List&lt;Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
-to publish device events to.
-Structure is documented below.
+    <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics to publish device events to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpconfig_csharp">
@@ -567,7 +189,6 @@ Structure is documented below.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_csharp">
@@ -576,13 +197,10 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default logging verbosity for activity from devices in this
-registry. Specifies which events should be written to logs. For
-example, if the LogLevel is ERROR, only events that terminate in
-errors will be logged. LogLevel is inclusive; enabling INFO logging
-will also enable ERROR logging.
-Default value is `NONE`.
-Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
+    <dd>{{% md %}}The default logging verbosity for activity from devices in this registry. Specifies which events should be written to
+logs. For example, if the LogLevel is ERROR, only events that terminate in errors will be logged. LogLevel is inclusive;
+enabling INFO logging will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", "ERROR", "INFO",
+"DEBUG"]
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mqttconfig_csharp">
@@ -592,7 +210,6 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -610,9 +227,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -620,8 +235,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region in which the created registry should reside.
-If it is not provided, the provider region is used.
+    <dd>{{% md %}}The region in which the created registry should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statenotificationconfig_csharp">
@@ -631,7 +245,6 @@ If it is not provided, the provider region is used.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
-The structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -645,7 +258,6 @@ The structure is documented below.
         <span class="property-type"><a href="#registrycredential">[]Registry<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventnotificationconfigs_go">
@@ -654,9 +266,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryeventnotificationconfigitem">[]Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
-to publish device events to.
-Structure is documented below.
+    <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics to publish device events to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpconfig_go">
@@ -666,7 +276,6 @@ Structure is documented below.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_go">
@@ -675,13 +284,10 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default logging verbosity for activity from devices in this
-registry. Specifies which events should be written to logs. For
-example, if the LogLevel is ERROR, only events that terminate in
-errors will be logged. LogLevel is inclusive; enabling INFO logging
-will also enable ERROR logging.
-Default value is `NONE`.
-Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
+    <dd>{{% md %}}The default logging verbosity for activity from devices in this registry. Specifies which events should be written to
+logs. For example, if the LogLevel is ERROR, only events that terminate in errors will be logged. LogLevel is inclusive;
+enabling INFO logging will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", "ERROR", "INFO",
+"DEBUG"]
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mqttconfig_go">
@@ -691,7 +297,6 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -709,9 +314,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -719,8 +322,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region in which the created registry should reside.
-If it is not provided, the provider region is used.
+    <dd>{{% md %}}The region in which the created registry should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statenotificationconfig_go">
@@ -730,7 +332,6 @@ If it is not provided, the provider region is used.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
-The structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -744,7 +345,6 @@ The structure is documented below.
         <span class="property-type"><a href="#registrycredential">Registry<wbr>Credential<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventnotificationconfigs_nodejs">
@@ -753,9 +353,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryeventnotificationconfigitem">Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
-to publish device events to.
-Structure is documented below.
+    <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics to publish device events to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpconfig_nodejs">
@@ -765,7 +363,6 @@ Structure is documented below.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_nodejs">
@@ -774,13 +371,10 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default logging verbosity for activity from devices in this
-registry. Specifies which events should be written to logs. For
-example, if the LogLevel is ERROR, only events that terminate in
-errors will be logged. LogLevel is inclusive; enabling INFO logging
-will also enable ERROR logging.
-Default value is `NONE`.
-Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
+    <dd>{{% md %}}The default logging verbosity for activity from devices in this registry. Specifies which events should be written to
+logs. For example, if the LogLevel is ERROR, only events that terminate in errors will be logged. LogLevel is inclusive;
+enabling INFO logging will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", "ERROR", "INFO",
+"DEBUG"]
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mqttconfig_nodejs">
@@ -790,7 +384,6 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -808,9 +401,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -818,8 +409,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region in which the created registry should reside.
-If it is not provided, the provider region is used.
+    <dd>{{% md %}}The region in which the created registry should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statenotificationconfig_nodejs">
@@ -829,7 +419,6 @@ If it is not provided, the provider region is used.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
-The structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -843,7 +432,6 @@ The structure is documented below.
         <span class="property-type"><a href="#registrycredential">Sequence[Registry<wbr>Credential<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_notification_configs_python">
@@ -852,9 +440,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryeventnotificationconfigitem">Sequence[Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
-to publish device events to.
-Structure is documented below.
+    <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics to publish device events to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_config_python">
@@ -864,7 +450,6 @@ Structure is documented below.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_level_python">
@@ -873,13 +458,10 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The default logging verbosity for activity from devices in this
-registry. Specifies which events should be written to logs. For
-example, if the LogLevel is ERROR, only events that terminate in
-errors will be logged. LogLevel is inclusive; enabling INFO logging
-will also enable ERROR logging.
-Default value is `NONE`.
-Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
+    <dd>{{% md %}}The default logging verbosity for activity from devices in this registry. Specifies which events should be written to
+logs. For example, if the LogLevel is ERROR, only events that terminate in errors will be logged. LogLevel is inclusive;
+enabling INFO logging will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", "ERROR", "INFO",
+"DEBUG"]
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mqtt_config_python">
@@ -889,7 +471,6 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -907,9 +488,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -917,8 +496,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The region in which the created registry should reside.
-If it is not provided, the provider region is used.
+    <dd>{{% md %}}The region in which the created registry should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notification_config_python">
@@ -928,7 +506,6 @@ If it is not provided, the provider region is used.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
-The structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1131,7 +708,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrycredential">List&lt;Registry<wbr>Credential<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventnotificationconfigs_csharp">
@@ -1140,9 +716,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryeventnotificationconfigitem">List&lt;Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
-to publish device events to.
-Structure is documented below.
+    <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics to publish device events to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpconfig_csharp">
@@ -1152,7 +726,6 @@ Structure is documented below.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loglevel_csharp">
@@ -1161,13 +734,10 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default logging verbosity for activity from devices in this
-registry. Specifies which events should be written to logs. For
-example, if the LogLevel is ERROR, only events that terminate in
-errors will be logged. LogLevel is inclusive; enabling INFO logging
-will also enable ERROR logging.
-Default value is `NONE`.
-Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
+    <dd>{{% md %}}The default logging verbosity for activity from devices in this registry. Specifies which events should be written to
+logs. For example, if the LogLevel is ERROR, only events that terminate in errors will be logged. LogLevel is inclusive;
+enabling INFO logging will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", "ERROR", "INFO",
+"DEBUG"]
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mqttconfig_csharp">
@@ -1177,7 +747,6 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1195,9 +764,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1205,8 +772,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region in which the created registry should reside.
-If it is not provided, the provider region is used.
+    <dd>{{% md %}}The region in which the created registry should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statenotificationconfig_csharp">
@@ -1216,7 +782,6 @@ If it is not provided, the provider region is used.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
-The structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1230,7 +795,6 @@ The structure is documented below.
         <span class="property-type"><a href="#registrycredential">[]Registry<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventnotificationconfigs_go">
@@ -1239,9 +803,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryeventnotificationconfigitem">[]Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
-to publish device events to.
-Structure is documented below.
+    <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics to publish device events to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpconfig_go">
@@ -1251,7 +813,6 @@ Structure is documented below.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loglevel_go">
@@ -1260,13 +821,10 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default logging verbosity for activity from devices in this
-registry. Specifies which events should be written to logs. For
-example, if the LogLevel is ERROR, only events that terminate in
-errors will be logged. LogLevel is inclusive; enabling INFO logging
-will also enable ERROR logging.
-Default value is `NONE`.
-Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
+    <dd>{{% md %}}The default logging verbosity for activity from devices in this registry. Specifies which events should be written to
+logs. For example, if the LogLevel is ERROR, only events that terminate in errors will be logged. LogLevel is inclusive;
+enabling INFO logging will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", "ERROR", "INFO",
+"DEBUG"]
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mqttconfig_go">
@@ -1276,7 +834,6 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1294,9 +851,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1304,8 +859,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region in which the created registry should reside.
-If it is not provided, the provider region is used.
+    <dd>{{% md %}}The region in which the created registry should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statenotificationconfig_go">
@@ -1315,7 +869,6 @@ If it is not provided, the provider region is used.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
-The structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1329,7 +882,6 @@ The structure is documented below.
         <span class="property-type"><a href="#registrycredential">Registry<wbr>Credential<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventnotificationconfigs_nodejs">
@@ -1338,9 +890,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryeventnotificationconfigitem">Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
-to publish device events to.
-Structure is documented below.
+    <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics to publish device events to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpconfig_nodejs">
@@ -1350,7 +900,6 @@ Structure is documented below.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loglevel_nodejs">
@@ -1359,13 +908,10 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default logging verbosity for activity from devices in this
-registry. Specifies which events should be written to logs. For
-example, if the LogLevel is ERROR, only events that terminate in
-errors will be logged. LogLevel is inclusive; enabling INFO logging
-will also enable ERROR logging.
-Default value is `NONE`.
-Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
+    <dd>{{% md %}}The default logging verbosity for activity from devices in this registry. Specifies which events should be written to
+logs. For example, if the LogLevel is ERROR, only events that terminate in errors will be logged. LogLevel is inclusive;
+enabling INFO logging will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", "ERROR", "INFO",
+"DEBUG"]
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mqttconfig_nodejs">
@@ -1375,7 +921,6 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1393,9 +938,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1403,8 +946,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region in which the created registry should reside.
-If it is not provided, the provider region is used.
+    <dd>{{% md %}}The region in which the created registry should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statenotificationconfig_nodejs">
@@ -1414,7 +956,6 @@ If it is not provided, the provider region is used.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
-The structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1428,7 +969,6 @@ The structure is documented below.
         <span class="property-type"><a href="#registrycredential">Sequence[Registry<wbr>Credential<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_notification_configs_python">
@@ -1437,9 +977,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryeventnotificationconfigitem">Sequence[Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
-to publish device events to.
-Structure is documented below.
+    <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics to publish device events to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http_config_python">
@@ -1449,7 +987,6 @@ Structure is documented below.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_level_python">
@@ -1458,13 +995,10 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The default logging verbosity for activity from devices in this
-registry. Specifies which events should be written to logs. For
-example, if the LogLevel is ERROR, only events that terminate in
-errors will be logged. LogLevel is inclusive; enabling INFO logging
-will also enable ERROR logging.
-Default value is `NONE`.
-Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
+    <dd>{{% md %}}The default logging verbosity for activity from devices in this registry. Specifies which events should be written to
+logs. For example, if the LogLevel is ERROR, only events that terminate in errors will be logged. LogLevel is inclusive;
+enabling INFO logging will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", "ERROR", "INFO",
+"DEBUG"]
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mqtt_config_python">
@@ -1474,7 +1008,6 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
-The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -1492,9 +1025,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1502,8 +1033,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The region in which the created registry should reside.
-If it is not provided, the provider region is used.
+    <dd>{{% md %}}The region in which the created registry should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_notification_config_python">
@@ -1513,7 +1043,6 @@ If it is not provided, the provider region is used.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
-The structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1537,8 +1066,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A public key certificate format and data.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1550,8 +1078,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A public key certificate format and data.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1563,8 +1090,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A public key certificate format and data.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1576,8 +1102,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A public key certificate format and data.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="registryeventnotificationconfigitem">Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item</h4>
@@ -1591,8 +1116,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PubSub topic name to publish device events.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subfoldermatches_csharp">
 <a href="#subfoldermatches_csharp" style="color: inherit; text-decoration: inherit;">Subfolder<wbr>Matches</a>
@@ -1600,12 +1124,7 @@ The structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If the subfolder name matches this string exactly, this
-configuration will be used. The string must not include the
-leading '/' character. If empty, all strings are matched. Empty
-value can only be used for the last `event_notification_configs`
-item.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1617,8 +1136,7 @@ item.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PubSub topic name to publish device events.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subfoldermatches_go">
 <a href="#subfoldermatches_go" style="color: inherit; text-decoration: inherit;">Subfolder<wbr>Matches</a>
@@ -1626,12 +1144,7 @@ item.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If the subfolder name matches this string exactly, this
-configuration will be used. The string must not include the
-leading '/' character. If empty, all strings are matched. Empty
-value can only be used for the last `event_notification_configs`
-item.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1643,8 +1156,7 @@ item.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PubSub topic name to publish device events.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subfoldermatches_nodejs">
 <a href="#subfoldermatches_nodejs" style="color: inherit; text-decoration: inherit;">subfolder<wbr>Matches</a>
@@ -1652,12 +1164,7 @@ item.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If the subfolder name matches this string exactly, this
-configuration will be used. The string must not include the
-leading '/' character. If empty, all strings are matched. Empty
-value can only be used for the last `event_notification_configs`
-item.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1669,8 +1176,7 @@ item.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}PubSub topic name to publish device events.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subfolder_matches_python">
 <a href="#subfolder_matches_python" style="color: inherit; text-decoration: inherit;">subfolder_<wbr>matches</a>
@@ -1678,35 +1184,8 @@ item.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If the subfolder name matches this string exactly, this
-configuration will be used. The string must not include the
-leading '/' character. If empty, all strings are matched. Empty
-value can only be used for the last `event_notification_configs`
-item.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
-## Import
-
-
-DeviceRegistry can be imported using any of these accepted formats
-
-```sh
- $ pulumi import gcp:kms/registry:Registry default {{project}}/locations/{{region}}/registries/{{name}}
-```
-
-```sh
- $ pulumi import gcp:kms/registry:Registry default {{project}}/{{region}}/{{name}}
-```
-
-```sh
- $ pulumi import gcp:kms/registry:Registry default {{region}}/{{name}}
-```
-
-```sh
- $ pulumi import gcp:kms/registry:Registry default {{name}}
-```
-
-
 
 
 <h2 id="package-details">Package Details</h2>

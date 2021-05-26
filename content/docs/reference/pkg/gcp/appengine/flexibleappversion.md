@@ -624,7 +624,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AppEngine service resource
+    <dd>{{% md %}}AppEngine service resource. Can contain numbers, letters, and hyphens.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiconfig_csharp">
@@ -903,7 +903,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AppEngine service resource
+    <dd>{{% md %}}AppEngine service resource. Can contain numbers, letters, and hyphens.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiconfig_go">
@@ -1182,7 +1182,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AppEngine service resource
+    <dd>{{% md %}}AppEngine service resource. Can contain numbers, letters, and hyphens.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiconfig_nodejs">
@@ -1461,7 +1461,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}AppEngine service resource
+    <dd>{{% md %}}AppEngine service resource. Can contain numbers, letters, and hyphens.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_config_python">
@@ -2200,7 +2200,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AppEngine service resource
+    <dd>{{% md %}}AppEngine service resource. Can contain numbers, letters, and hyphens.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servingstatus_csharp">
@@ -2488,7 +2488,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AppEngine service resource
+    <dd>{{% md %}}AppEngine service resource. Can contain numbers, letters, and hyphens.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servingstatus_go">
@@ -2776,7 +2776,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AppEngine service resource
+    <dd>{{% md %}}AppEngine service resource. Can contain numbers, letters, and hyphens.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servingstatus_nodejs">
@@ -3064,7 +3064,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}AppEngine service resource
+    <dd>{{% md %}}AppEngine service resource. Can contain numbers, letters, and hyphens.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serving_status_python">

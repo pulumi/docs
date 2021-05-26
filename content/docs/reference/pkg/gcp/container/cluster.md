@@ -980,7 +980,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+    <dd>{{% md %}}) Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podsecuritypolicyconfig_csharp">
@@ -989,7 +989,8 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the
+    <dd>{{% md %}}) Configuration for the
+>>>>>>> v3.69.0
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1527,7 +1528,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+    <dd>{{% md %}}) Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podsecuritypolicyconfig_go">
@@ -1536,7 +1537,8 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the
+    <dd>{{% md %}}) Configuration for the
+>>>>>>> v3.69.0
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2074,7 +2076,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+    <dd>{{% md %}}) Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podsecuritypolicyconfig_nodejs">
@@ -2083,7 +2085,8 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the
+    <dd>{{% md %}}) Configuration for the
+>>>>>>> v3.69.0
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2621,7 +2624,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+    <dd>{{% md %}}) Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pod_security_policy_config_python">
@@ -2630,7 +2633,8 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the
+    <dd>{{% md %}}) Configuration for the
+>>>>>>> v3.69.0
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3759,7 +3763,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+    <dd>{{% md %}}) Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operation_csharp">
@@ -3776,7 +3780,8 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the
+    <dd>{{% md %}}) Configuration for the
+>>>>>>> v3.69.0
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4385,7 +4390,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+    <dd>{{% md %}}) Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operation_go">
@@ -4402,7 +4407,8 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the
+    <dd>{{% md %}}) Configuration for the
+>>>>>>> v3.69.0
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5011,7 +5017,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+    <dd>{{% md %}}) Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operation_nodejs">
@@ -5028,7 +5034,8 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the
+    <dd>{{% md %}}) Configuration for the
+>>>>>>> v3.69.0
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5637,7 +5644,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+    <dd>{{% md %}}) Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operation_python">
@@ -5654,7 +5661,8 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the
+    <dd>{{% md %}}) Configuration for the
+>>>>>>> v3.69.0
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12753,7 +12761,8 @@ Accepted values are:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The pubsub config for the cluster's upgrade notifications.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -12765,7 +12774,8 @@ Accepted values are:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The pubsub config for the cluster's upgrade notifications.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -12777,7 +12787,8 @@ Accepted values are:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The pubsub config for the cluster's upgrade notifications.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -12789,7 +12800,8 @@ Accepted values are:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The pubsub config for the cluster's upgrade notifications.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub</h4>
@@ -12813,7 +12825,8 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The pubsub topic to push upgrade notifications to. Must be in the same project as the cluster. Must be in the format: `projects/{project}/topics/{topic}`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -12835,7 +12848,8 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The pubsub topic to push upgrade notifications to. Must be in the same project as the cluster. Must be in the format: `projects/{project}/topics/{topic}`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -12857,7 +12871,8 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The pubsub topic to push upgrade notifications to. Must be in the same project as the cluster. Must be in the format: `projects/{project}/topics/{topic}`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -12879,7 +12894,8 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The pubsub topic to push upgrade notifications to. Must be in the same project as the cluster. Must be in the format: `projects/{project}/topics/{topic}`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config</h4>

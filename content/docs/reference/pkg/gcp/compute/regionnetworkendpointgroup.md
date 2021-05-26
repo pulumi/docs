@@ -406,7 +406,7 @@ class MyStack : Stack
         var appengineNegFlexibleAppVersion = new Gcp.AppEngine.FlexibleAppVersion("appengineNegFlexibleAppVersion", new Gcp.AppEngine.FlexibleAppVersionArgs
         {
             VersionId = "v1",
-            Service = "default",
+            Service = "appengine-network-endpoint-group",
             Runtime = "nodejs",
             Entrypoint = new Gcp.AppEngine.Inputs.FlexibleAppVersionEntrypointArgs
             {
@@ -510,7 +510,7 @@ func main() {
 		}
 		appengineNegFlexibleAppVersion, err := appengine.NewFlexibleAppVersion(ctx, "appengineNegFlexibleAppVersion", &appengine.FlexibleAppVersionArgs{
 			VersionId: pulumi.String("v1"),
-			Service:   pulumi.String("default"),
+			Service:   pulumi.String("appengine-network-endpoint-group"),
 			Runtime:   pulumi.String("nodejs"),
 			Entrypoint: &appengine.FlexibleAppVersionEntrypointArgs{
 				Shell: pulumi.String("node ./app.js"),
@@ -588,7 +588,7 @@ appengine_neg_bucket_object = gcp.storage.BucketObject("appengineNegBucketObject
     source=pulumi.FileAsset("./test-fixtures/appengine/hello-world.zip"))
 appengine_neg_flexible_app_version = gcp.appengine.FlexibleAppVersion("appengineNegFlexibleAppVersion",
     version_id="v1",
-    service="default",
+    service="appengine-network-endpoint-group",
     runtime="nodejs",
     entrypoint=gcp.appengine.FlexibleAppVersionEntrypointArgs(
         shell="node ./app.js",
@@ -652,7 +652,7 @@ const appengineNegBucketObject = new gcp.storage.BucketObject("appengineNegBucke
 });
 const appengineNegFlexibleAppVersion = new gcp.appengine.FlexibleAppVersion("appengineNegFlexibleAppVersion", {
     versionId: "v1",
-    service: "default",
+    service: "appengine-network-endpoint-group",
     runtime: "nodejs",
     entrypoint: {
         shell: "node ./app.js",

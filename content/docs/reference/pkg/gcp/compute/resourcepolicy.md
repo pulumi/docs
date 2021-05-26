@@ -408,6 +408,134 @@ const baz = new gcp.compute.ResourcePolicy("baz", {
 
 
 
+### Resource Policy Instance Schedule Policy
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hourly = new Gcp.Compute.ResourcePolicy("hourly", new Gcp.Compute.ResourcePolicyArgs
+        {
+            Description = "Start and stop instances",
+            InstanceSchedulePolicy = new Gcp.Compute.Inputs.ResourcePolicyInstanceSchedulePolicyArgs
+            {
+                TimeZone = "US/Central",
+                VmStartSchedule = new Gcp.Compute.Inputs.ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs
+                {
+                    Schedule = "0 * * * *",
+                },
+                VmStopSchedule = new Gcp.Compute.Inputs.ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs
+                {
+                    Schedule = "15 * * * *",
+                },
+            },
+            Region = "us-central1",
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewResourcePolicy(ctx, "hourly", &compute.ResourcePolicyArgs{
+			Description: pulumi.String("Start and stop instances"),
+			InstanceSchedulePolicy: &compute.ResourcePolicyInstanceSchedulePolicyArgs{
+				TimeZone: pulumi.String("US/Central"),
+				VmStartSchedule: &compute.ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs{
+					Schedule: pulumi.String("0 * * * *"),
+				},
+				VmStopSchedule: &compute.ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs{
+					Schedule: pulumi.String("15 * * * *"),
+				},
+			},
+			Region: pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+hourly = gcp.compute.ResourcePolicy("hourly",
+    description="Start and stop instances",
+    instance_schedule_policy=gcp.compute.ResourcePolicyInstanceSchedulePolicyArgs(
+        time_zone="US/Central",
+        vm_start_schedule=gcp.compute.ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs(
+            schedule="0 * * * *",
+        ),
+        vm_stop_schedule=gcp.compute.ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs(
+            schedule="15 * * * *",
+        ),
+    ),
+    region="us-central1")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const hourly = new gcp.compute.ResourcePolicy("hourly", {
+    description: "Start and stop instances",
+    instanceSchedulePolicy: {
+        timeZone: "US/Central",
+        vmStartSchedule: {
+            schedule: "0 * * * *",
+        },
+        vmStopSchedule: {
+            schedule: "15 * * * *",
+        },
+    },
+    region: "us-central1",
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -426,7 +554,9 @@ const baz = new gcp.compute.ResourcePolicy("baz", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ResourcePolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">group_placement_policy</span><span class="p">:</span> <span class="nx">Optional[ResourcePolicyGroupPlacementPolicyArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">instance_schedule_policy</span><span class="p">:</span> <span class="nx">Optional[ResourcePolicyInstanceSchedulePolicyArgs]</span> = None<span class="p">,</span>
                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -560,6 +690,15 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="groupplacementpolicy_csharp">
 <a href="#groupplacementpolicy_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policy</a>
 </span>
@@ -567,6 +706,16 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource policy for instances used for placement configuration.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instanceschedulepolicy_csharp">
+<a href="#instanceschedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Schedule<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicy">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Resource policy for scheduling instance operations.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -618,6 +767,15 @@ Structure is documented below.
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="groupplacementpolicy_go">
 <a href="#groupplacementpolicy_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policy</a>
 </span>
@@ -625,6 +783,16 @@ Structure is documented below.
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Resource policy for instances used for placement configuration.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instanceschedulepolicy_go">
+<a href="#instanceschedulepolicy_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Schedule<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicy">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Resource policy for scheduling instance operations.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -676,6 +844,15 @@ Structure is documented below.
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="groupplacementpolicy_nodejs">
 <a href="#groupplacementpolicy_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Placement<wbr>Policy</a>
 </span>
@@ -683,6 +860,16 @@ Structure is documented below.
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource policy for instances used for placement configuration.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instanceschedulepolicy_nodejs">
+<a href="#instanceschedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Schedule<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicy">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Resource policy for scheduling instance operations.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,6 +921,15 @@ Structure is documented below.
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="group_placement_policy_python">
 <a href="#group_placement_policy_python" style="color: inherit; text-decoration: inherit;">group_<wbr>placement_<wbr>policy</a>
 </span>
@@ -741,6 +937,16 @@ Structure is documented below.
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource policy for instances used for placement configuration.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instance_schedule_policy_python">
+<a href="#instance_schedule_policy_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>schedule_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicy">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Resource policy for scheduling instance operations.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -896,7 +1102,9 @@ Get an existing ResourcePolicy resource's state with the given name, ID, and opt
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">group_placement_policy</span><span class="p">:</span> <span class="nx">Optional[ResourcePolicyGroupPlacementPolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">instance_schedule_policy</span><span class="p">:</span> <span class="nx">Optional[ResourcePolicyInstanceSchedulePolicyArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1014,6 +1222,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_groupplacementpolicy_csharp">
 <a href="#state_groupplacementpolicy_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policy</a>
 </span>
@@ -1021,6 +1238,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource policy for instances used for placement configuration.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_instanceschedulepolicy_csharp">
+<a href="#state_instanceschedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Schedule<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicy">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Resource policy for scheduling instance operations.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1081,6 +1308,15 @@ Structure is documented below.
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_groupplacementpolicy_go">
 <a href="#state_groupplacementpolicy_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policy</a>
 </span>
@@ -1088,6 +1324,16 @@ Structure is documented below.
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Resource policy for instances used for placement configuration.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_instanceschedulepolicy_go">
+<a href="#state_instanceschedulepolicy_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Schedule<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicy">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Resource policy for scheduling instance operations.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1148,6 +1394,15 @@ Structure is documented below.
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_groupplacementpolicy_nodejs">
 <a href="#state_groupplacementpolicy_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Placement<wbr>Policy</a>
 </span>
@@ -1155,6 +1410,16 @@ Structure is documented below.
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource policy for instances used for placement configuration.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_instanceschedulepolicy_nodejs">
+<a href="#state_instanceschedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Schedule<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicy">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Resource policy for scheduling instance operations.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1215,6 +1480,15 @@ Structure is documented below.
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_group_placement_policy_python">
 <a href="#state_group_placement_policy_python" style="color: inherit; text-decoration: inherit;">group_<wbr>placement_<wbr>policy</a>
 </span>
@@ -1222,6 +1496,16 @@ Structure is documented below.
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource policy for instances used for placement configuration.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_instance_schedule_policy_python">
+<a href="#state_instance_schedule_policy_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>schedule_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicy">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Resource policy for scheduling instance operations.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1434,6 +1718,324 @@ Possible values are `COLLOCATED`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="resourcepolicyinstanceschedulepolicy">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="timezone_csharp">
+<a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the time zone to be used in interpreting the schedule. The value of this field must be a time zone name
+from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expirationtime_csharp">
+<a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The expiration time of the schedule. The timestamp is an RFC3339 string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="starttime_csharp">
+<a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmstartschedule_csharp">
+<a href="#vmstartschedule_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Start<wbr>Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstartschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Start<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the schedule for starting instances.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmstopschedule_csharp">
+<a href="#vmstopschedule_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Stop<wbr>Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstopschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Stop<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the schedule for stopping instances.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="timezone_go">
+<a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the time zone to be used in interpreting the schedule. The value of this field must be a time zone name
+from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expirationtime_go">
+<a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The expiration time of the schedule. The timestamp is an RFC3339 string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="starttime_go">
+<a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmstartschedule_go">
+<a href="#vmstartschedule_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Start<wbr>Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstartschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Start<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the schedule for starting instances.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmstopschedule_go">
+<a href="#vmstopschedule_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Stop<wbr>Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstopschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Stop<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the schedule for stopping instances.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="timezone_nodejs">
+<a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the time zone to be used in interpreting the schedule. The value of this field must be a time zone name
+from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expirationtime_nodejs">
+<a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The expiration time of the schedule. The timestamp is an RFC3339 string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="starttime_nodejs">
+<a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmstartschedule_nodejs">
+<a href="#vmstartschedule_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Start<wbr>Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstartschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Start<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the schedule for starting instances.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmstopschedule_nodejs">
+<a href="#vmstopschedule_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Stop<wbr>Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstopschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Stop<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the schedule for stopping instances.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="time_zone_python">
+<a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the time zone to be used in interpreting the schedule. The value of this field must be a time zone name
+from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expiration_time_python">
+<a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The expiration time of the schedule. The timestamp is an RFC3339 string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vm_start_schedule_python">
+<a href="#vm_start_schedule_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>start_<wbr>schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstartschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Start<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the schedule for starting instances.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vm_stop_schedule_python">
+<a href="#vm_stop_schedule_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>stop_<wbr>schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstopschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Stop<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the schedule for stopping instances.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourcepolicyinstanceschedulepolicyvmstartschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Start<wbr>Schedule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedule_csharp">
+<a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the frequency for the operation, using the unix-cron format.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedule_go">
+<a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the frequency for the operation, using the unix-cron format.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedule_nodejs">
+<a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the frequency for the operation, using the unix-cron format.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedule_python">
+<a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the frequency for the operation, using the unix-cron format.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourcepolicyinstanceschedulepolicyvmstopschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Stop<wbr>Schedule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedule_csharp">
+<a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the frequency for the operation, using the unix-cron format.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedule_go">
+<a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the frequency for the operation, using the unix-cron format.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedule_nodejs">
+<a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the frequency for the operation, using the unix-cron format.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedule_python">
+<a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the frequency for the operation, using the unix-cron format.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
@@ -1445,8 +2047,7 @@ Possible values are `COLLOCATED`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.
-Structure is documented below.
+    <dd>{{% md %}}Specifies the frequency for the operation, using the unix-cron format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_csharp">
@@ -1479,8 +2080,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.
-Structure is documented below.
+    <dd>{{% md %}}Specifies the frequency for the operation, using the unix-cron format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_go">
@@ -1513,8 +2113,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.
-Structure is documented below.
+    <dd>{{% md %}}Specifies the frequency for the operation, using the unix-cron format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_nodejs">
@@ -1547,8 +2146,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.
-Structure is documented below.
+    <dd>{{% md %}}Specifies the frequency for the operation, using the unix-cron format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_policy_python">
@@ -1832,8 +2430,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time within the window to start the operations.
-It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+    <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1855,8 +2452,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time within the window to start the operations.
-It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+    <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1878,8 +2474,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time within the window to start the operations.
-It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+    <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1901,8 +2496,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time within the window to start the operations.
-It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+    <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1926,8 +2520,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time within the window to start the operations.
-It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+    <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1949,8 +2542,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time within the window to start the operations.
-It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+    <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1972,8 +2564,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time within the window to start the operations.
-It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+    <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1995,8 +2586,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time within the window to start the operations.
-It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+    <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2079,8 +2669,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time within the window to start the operations.
-It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+    <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2103,8 +2692,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time within the window to start the operations.
-It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+    <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2127,8 +2715,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time within the window to start the operations.
-It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+    <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2151,8 +2738,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time within the window to start the operations.
-It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+    <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

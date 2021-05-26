@@ -356,6 +356,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="encryptedinterconnectrouter_csharp">
+<a href="#encryptedinterconnectrouter_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Interconnect<wbr>Router</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -430,6 +438,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="encryptedinterconnectrouter_go">
+<a href="#encryptedinterconnectrouter_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Interconnect<wbr>Router</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -510,6 +526,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="encryptedinterconnectrouter_nodejs">
+<a href="#encryptedinterconnectrouter_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Interconnect<wbr>Router</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -584,6 +608,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="encrypted_interconnect_router_python">
+<a href="#encrypted_interconnect_router_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>interconnect_<wbr>router</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">

@@ -183,6 +183,132 @@ const foobarRouter = new gcp.compute.Router("foobarRouter", {
 
 
 
+### Compute Router Encrypted Interconnect
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network = new Gcp.Compute.Network("network", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var encrypted_interconnect_router = new Gcp.Compute.Router("encrypted-interconnect-router", new Gcp.Compute.RouterArgs
+        {
+            Network = network.Name,
+            EncryptedInterconnectRouter = true,
+            Bgp = new Gcp.Compute.Inputs.RouterBgpArgs
+            {
+                Asn = 64514,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		network, err := compute.NewNetwork(ctx, "network", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRouter(ctx, "encrypted_interconnect_router", &compute.RouterArgs{
+			Network:                     network.Name,
+			EncryptedInterconnectRouter: pulumi.Bool(true),
+			Bgp: &compute.RouterBgpArgs{
+				Asn: pulumi.Int(64514),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network = gcp.compute.Network("network", auto_create_subnetworks=False,
+opts=pulumi.ResourceOptions(provider=google_beta))
+encrypted_interconnect_router = gcp.compute.Router("encrypted-interconnect-router",
+    network=network.name,
+    encrypted_interconnect_router=True,
+    bgp=gcp.compute.RouterBgpArgs(
+        asn=64514,
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false}, {
+    provider: google_beta,
+});
+const encrypted_interconnect_router = new gcp.compute.Router("encrypted-interconnect-router", {
+    network: network.name,
+    encryptedInterconnectRouter: true,
+    bgp: {
+        asn: 64514,
+    },
+}, {
+    provider: google_beta,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -203,6 +329,7 @@ const foobarRouter = new gcp.compute.Router("foobarRouter", {
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
            <span class="nx">bgp</span><span class="p">:</span> <span class="nx">Optional[RouterBgpArgs]</span> = None<span class="p">,</span>
            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">encrypted_interconnect_router</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -364,6 +491,16 @@ Structure is documented below.
     <dd>{{% md %}}User-specified description for the IP range.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptedinterconnectrouter_csharp">
+<a href="#encryptedinterconnectrouter_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Interconnect<wbr>Router</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud
+Interconnect feature). Not currently available publicly.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -427,6 +564,16 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-specified description for the IP range.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryptedinterconnectrouter_go">
+<a href="#encryptedinterconnectrouter_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Interconnect<wbr>Router</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud
+Interconnect feature). Not currently available publicly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -494,6 +641,16 @@ Structure is documented below.
     <dd>{{% md %}}User-specified description for the IP range.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptedinterconnectrouter_nodejs">
+<a href="#encryptedinterconnectrouter_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Interconnect<wbr>Router</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud
+Interconnect feature). Not currently available publicly.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -557,6 +714,16 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-specified description for the IP range.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_interconnect_router_python">
+<a href="#encrypted_interconnect_router_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>interconnect_<wbr>router</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud
+Interconnect feature). Not currently available publicly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -739,6 +906,7 @@ Get an existing Router resource's state with the given name, ID, and optional ex
         <span class="nx">bgp</span><span class="p">:</span> <span class="nx">Optional[RouterBgpArgs]</span> = None<span class="p">,</span>
         <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">encrypted_interconnect_router</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -884,6 +1052,16 @@ Structure is documented below.
     <dd>{{% md %}}User-specified description for the IP range.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryptedinterconnectrouter_csharp">
+<a href="#state_encryptedinterconnectrouter_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Interconnect<wbr>Router</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud
+Interconnect feature). Not currently available publicly.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -965,6 +1143,16 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-specified description for the IP range.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_encryptedinterconnectrouter_go">
+<a href="#state_encryptedinterconnectrouter_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Interconnect<wbr>Router</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud
+Interconnect feature). Not currently available publicly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1050,6 +1238,16 @@ Structure is documented below.
     <dd>{{% md %}}User-specified description for the IP range.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryptedinterconnectrouter_nodejs">
+<a href="#state_encryptedinterconnectrouter_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Interconnect<wbr>Router</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud
+Interconnect feature). Not currently available publicly.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1131,6 +1329,16 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-specified description for the IP range.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_encrypted_interconnect_router_python">
+<a href="#state_encrypted_interconnect_router_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>interconnect_<wbr>router</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud
+Interconnect feature). Not currently available publicly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">

@@ -173,7 +173,8 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
+    <dd>{{% md %}}Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}.
+When changing api configs please ensure the new config is a new resource and the lifecycle rule `create_before_destroy` is set.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gatewayid_csharp">
@@ -232,7 +233,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
+    <dd>{{% md %}}Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}.
+When changing api configs please ensure the new config is a new resource and the lifecycle rule `create_before_destroy` is set.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gatewayid_go">
@@ -291,7 +293,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
+    <dd>{{% md %}}Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}.
+When changing api configs please ensure the new config is a new resource and the lifecycle rule `create_before_destroy` is set.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gatewayid_nodejs">
@@ -350,7 +353,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
+    <dd>{{% md %}}Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}.
+When changing api configs please ensure the new config is a new resource and the lifecycle rule `create_before_destroy` is set.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gateway_id_python">
@@ -669,7 +673,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
+    <dd>{{% md %}}Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}.
+When changing api configs please ensure the new config is a new resource and the lifecycle rule `create_before_destroy` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulthostname_csharp">
@@ -746,7 +751,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
+    <dd>{{% md %}}Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}.
+When changing api configs please ensure the new config is a new resource and the lifecycle rule `create_before_destroy` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulthostname_go">
@@ -823,7 +829,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
+    <dd>{{% md %}}Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}.
+When changing api configs please ensure the new config is a new resource and the lifecycle rule `create_before_destroy` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulthostname_nodejs">
@@ -900,7 +907,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
+    <dd>{{% md %}}Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}.
+When changing api configs please ensure the new config is a new resource and the lifecycle rule `create_before_destroy` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_hostname_python">

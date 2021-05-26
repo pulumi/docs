@@ -811,6 +811,354 @@ const router2Peer2 = new gcp.compute.RouterPeer("router2Peer2", {
 
 
 
+### Compute Ha Vpn Gateway Encrypted Interconnect
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network = new Gcp.Compute.Network("network", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var address1 = new Gcp.Compute.Address("address1", new Gcp.Compute.AddressArgs
+        {
+            AddressType = "INTERNAL",
+            Purpose = "IPSEC_INTERCONNECT",
+            Address = "192.168.1.0",
+            PrefixLength = 29,
+            Network = network.SelfLink,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var router = new Gcp.Compute.Router("router", new Gcp.Compute.RouterArgs
+        {
+            Network = network.Name,
+            EncryptedInterconnectRouter = true,
+            Bgp = new Gcp.Compute.Inputs.RouterBgpArgs
+            {
+                Asn = 16550,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var attachment1 = new Gcp.Compute.InterconnectAttachment("attachment1", new Gcp.Compute.InterconnectAttachmentArgs
+        {
+            EdgeAvailabilityDomain = "AVAILABILITY_DOMAIN_1",
+            Type = "PARTNER",
+            Router = router.Id,
+            Encryption = "IPSEC",
+            IpsecInternalAddresses = 
+            {
+                address1.SelfLink,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var address2 = new Gcp.Compute.Address("address2", new Gcp.Compute.AddressArgs
+        {
+            AddressType = "INTERNAL",
+            Purpose = "IPSEC_INTERCONNECT",
+            Address = "192.168.2.0",
+            PrefixLength = 29,
+            Network = network.SelfLink,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var attachment2 = new Gcp.Compute.InterconnectAttachment("attachment2", new Gcp.Compute.InterconnectAttachmentArgs
+        {
+            EdgeAvailabilityDomain = "AVAILABILITY_DOMAIN_2",
+            Type = "PARTNER",
+            Router = router.Id,
+            Encryption = "IPSEC",
+            IpsecInternalAddresses = 
+            {
+                address2.SelfLink,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var vpn_gateway = new Gcp.Compute.HaVpnGateway("vpn-gateway", new Gcp.Compute.HaVpnGatewayArgs
+        {
+            Network = network.Id,
+            VpnInterfaces = 
+            {
+                new Gcp.Compute.Inputs.HaVpnGatewayVpnInterfaceArgs
+                {
+                    Id = 0,
+                    InterconnectAttachment = attachment1.SelfLink,
+                },
+                new Gcp.Compute.Inputs.HaVpnGatewayVpnInterfaceArgs
+                {
+                    Id = 1,
+                    InterconnectAttachment = attachment2.SelfLink,
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		network, err := compute.NewNetwork(ctx, "network", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		address1, err := compute.NewAddress(ctx, "address1", &compute.AddressArgs{
+			AddressType:  pulumi.String("INTERNAL"),
+			Purpose:      pulumi.String("IPSEC_INTERCONNECT"),
+			Address:      pulumi.String("192.168.1.0"),
+			PrefixLength: pulumi.Int(29),
+			Network:      network.SelfLink,
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		router, err := compute.NewRouter(ctx, "router", &compute.RouterArgs{
+			Network:                     network.Name,
+			EncryptedInterconnectRouter: pulumi.Bool(true),
+			Bgp: &compute.RouterBgpArgs{
+				Asn: pulumi.Int(16550),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		attachment1, err := compute.NewInterconnectAttachment(ctx, "attachment1", &compute.InterconnectAttachmentArgs{
+			EdgeAvailabilityDomain: pulumi.String("AVAILABILITY_DOMAIN_1"),
+			Type:                   pulumi.String("PARTNER"),
+			Router:                 router.ID(),
+			Encryption:             pulumi.String("IPSEC"),
+			IpsecInternalAddresses: pulumi.StringArray{
+				address1.SelfLink,
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		address2, err := compute.NewAddress(ctx, "address2", &compute.AddressArgs{
+			AddressType:  pulumi.String("INTERNAL"),
+			Purpose:      pulumi.String("IPSEC_INTERCONNECT"),
+			Address:      pulumi.String("192.168.2.0"),
+			PrefixLength: pulumi.Int(29),
+			Network:      network.SelfLink,
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		attachment2, err := compute.NewInterconnectAttachment(ctx, "attachment2", &compute.InterconnectAttachmentArgs{
+			EdgeAvailabilityDomain: pulumi.String("AVAILABILITY_DOMAIN_2"),
+			Type:                   pulumi.String("PARTNER"),
+			Router:                 router.ID(),
+			Encryption:             pulumi.String("IPSEC"),
+			IpsecInternalAddresses: pulumi.StringArray{
+				address2.SelfLink,
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewHaVpnGateway(ctx, "vpn_gateway", &compute.HaVpnGatewayArgs{
+			Network: network.ID(),
+			VpnInterfaces: compute.HaVpnGatewayVpnInterfaceArray{
+				&compute.HaVpnGatewayVpnInterfaceArgs{
+					Id:                     pulumi.Int(0),
+					InterconnectAttachment: attachment1.SelfLink,
+				},
+				&compute.HaVpnGatewayVpnInterfaceArgs{
+					Id:                     pulumi.Int(1),
+					InterconnectAttachment: attachment2.SelfLink,
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network = gcp.compute.Network("network", auto_create_subnetworks=False,
+opts=pulumi.ResourceOptions(provider=google_beta))
+address1 = gcp.compute.Address("address1",
+    address_type="INTERNAL",
+    purpose="IPSEC_INTERCONNECT",
+    address="192.168.1.0",
+    prefix_length=29,
+    network=network.self_link,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+router = gcp.compute.Router("router",
+    network=network.name,
+    encrypted_interconnect_router=True,
+    bgp=gcp.compute.RouterBgpArgs(
+        asn=16550,
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
+attachment1 = gcp.compute.InterconnectAttachment("attachment1",
+    edge_availability_domain="AVAILABILITY_DOMAIN_1",
+    type="PARTNER",
+    router=router.id,
+    encryption="IPSEC",
+    ipsec_internal_addresses=[address1.self_link],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+address2 = gcp.compute.Address("address2",
+    address_type="INTERNAL",
+    purpose="IPSEC_INTERCONNECT",
+    address="192.168.2.0",
+    prefix_length=29,
+    network=network.self_link,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+attachment2 = gcp.compute.InterconnectAttachment("attachment2",
+    edge_availability_domain="AVAILABILITY_DOMAIN_2",
+    type="PARTNER",
+    router=router.id,
+    encryption="IPSEC",
+    ipsec_internal_addresses=[address2.self_link],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+vpn_gateway = gcp.compute.HaVpnGateway("vpn-gateway",
+    network=network.id,
+    vpn_interfaces=[
+        gcp.compute.HaVpnGatewayVpnInterfaceArgs(
+            id=0,
+            interconnect_attachment=attachment1.self_link,
+        ),
+        gcp.compute.HaVpnGatewayVpnInterfaceArgs(
+            id=1,
+            interconnect_attachment=attachment2.self_link,
+        ),
+    ],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false}, {
+    provider: google_beta,
+});
+const address1 = new gcp.compute.Address("address1", {
+    addressType: "INTERNAL",
+    purpose: "IPSEC_INTERCONNECT",
+    address: "192.168.1.0",
+    prefixLength: 29,
+    network: network.selfLink,
+}, {
+    provider: google_beta,
+});
+const router = new gcp.compute.Router("router", {
+    network: network.name,
+    encryptedInterconnectRouter: true,
+    bgp: {
+        asn: 16550,
+    },
+}, {
+    provider: google_beta,
+});
+const attachment1 = new gcp.compute.InterconnectAttachment("attachment1", {
+    edgeAvailabilityDomain: "AVAILABILITY_DOMAIN_1",
+    type: "PARTNER",
+    router: router.id,
+    encryption: "IPSEC",
+    ipsecInternalAddresses: [address1.selfLink],
+}, {
+    provider: google_beta,
+});
+const address2 = new gcp.compute.Address("address2", {
+    addressType: "INTERNAL",
+    purpose: "IPSEC_INTERCONNECT",
+    address: "192.168.2.0",
+    prefixLength: 29,
+    network: network.selfLink,
+}, {
+    provider: google_beta,
+});
+const attachment2 = new gcp.compute.InterconnectAttachment("attachment2", {
+    edgeAvailabilityDomain: "AVAILABILITY_DOMAIN_2",
+    type: "PARTNER",
+    router: router.id,
+    encryption: "IPSEC",
+    ipsecInternalAddresses: [address2.selfLink],
+}, {
+    provider: google_beta,
+});
+const vpn_gateway = new gcp.compute.HaVpnGateway("vpn-gateway", {
+    network: network.id,
+    vpnInterfaces: [
+        {
+            id: 0,
+            interconnectAttachment: attachment1.selfLink,
+        },
+        {
+            id: 1,
+            interconnectAttachment: attachment2.selfLink,
+        },
+    ],
+}, {
+    provider: google_beta,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -833,7 +1181,8 @@ const router2Peer2 = new gcp.compute.RouterPeer("router2Peer2", {
                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                 <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">vpn_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[HaVpnGatewayVpnInterfaceArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">HaVpnGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HaVpnGatewayArgs</a></span><span class="p">,</span>
@@ -1013,6 +1362,16 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region this gateway should sit in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpninterfaces_csharp">
+<a href="#vpninterfaces_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#havpngatewayvpninterface">List&lt;Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of interfaces on this VPN gateway.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1069,6 +1428,16 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region this gateway should sit in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpninterfaces_go">
+<a href="#vpninterfaces_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#havpngatewayvpninterface">[]Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface</a></span>
+    </dt>
+    <dd>{{% md %}}A list of interfaces on this VPN gateway.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1125,6 +1494,16 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region this gateway should sit in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpninterfaces_nodejs">
+<a href="#vpninterfaces_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#havpngatewayvpninterface">Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of interfaces on this VPN gateway.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1181,6 +1560,16 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region this gateway should sit in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpn_interfaces_python">
+<a href="#vpn_interfaces_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#havpngatewayvpninterface">Sequence[Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of interfaces on this VPN gateway.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1209,15 +1598,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="vpninterfaces_csharp">
-<a href="#vpninterfaces_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Interfaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#havpngatewayvpninterface">List&lt;Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of interfaces on this VPN gateway.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1239,15 +1619,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="vpninterfaces_go">
-<a href="#vpninterfaces_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Interfaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#havpngatewayvpninterface">[]Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface</a></span>
-    </dt>
-    <dd>{{% md %}}A list of interfaces on this VPN gateway.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1269,15 +1640,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="vpninterfaces_nodejs">
-<a href="#vpninterfaces_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Interfaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#havpngatewayvpninterface">Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface[]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of interfaces on this VPN gateway.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1299,15 +1661,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="vpn_interfaces_python">
-<a href="#vpn_interfaces_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>interfaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#havpngatewayvpninterface">Sequence[Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of interfaces on this VPN gateway.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1514,6 +1867,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#havpngatewayvpninterface">List&lt;Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of interfaces on this VPN gateway.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1588,6 +1942,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#havpngatewayvpninterface">[]Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}A list of interfaces on this VPN gateway.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1662,6 +2017,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#havpngatewayvpninterface">Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of interfaces on this VPN gateway.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1736,6 +2092,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#havpngatewayvpninterface">Sequence[Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of interfaces on this VPN gateway.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1759,8 +2116,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}an identifier for the resource with format `projects/{{project}}/regions/{{region}}/vpnGateways/{{name}}`
+    <dd>{{% md %}}The numeric ID of this VPN gateway interface.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interconnectattachment_csharp">
+<a href="#interconnectattachment_csharp" style="color: inherit; text-decoration: inherit;">Interconnect<wbr>Attachment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1768,7 +2133,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}-
+The external IP address for this VPN gateway interface.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1780,8 +2147,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}an identifier for the resource with format `projects/{{project}}/regions/{{region}}/vpnGateways/{{name}}`
+    <dd>{{% md %}}The numeric ID of this VPN gateway interface.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interconnectattachment_go">
+<a href="#interconnectattachment_go" style="color: inherit; text-decoration: inherit;">Interconnect<wbr>Attachment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1789,7 +2164,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}-
+The external IP address for this VPN gateway interface.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1801,8 +2178,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}an identifier for the resource with format `projects/{{project}}/regions/{{region}}/vpnGateways/{{name}}`
+    <dd>{{% md %}}The numeric ID of this VPN gateway interface.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interconnectattachment_nodejs">
+<a href="#interconnectattachment_nodejs" style="color: inherit; text-decoration: inherit;">interconnect<wbr>Attachment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -1810,7 +2195,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}-
+The external IP address for this VPN gateway interface.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1822,8 +2209,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}an identifier for the resource with format `projects/{{project}}/regions/{{region}}/vpnGateways/{{name}}`
+    <dd>{{% md %}}The numeric ID of this VPN gateway interface.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interconnect_attachment_python">
+<a href="#interconnect_attachment_python" style="color: inherit; text-decoration: inherit;">interconnect_<wbr>attachment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -1831,7 +2226,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}-
+The external IP address for this VPN gateway interface.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

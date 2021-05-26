@@ -511,6 +511,131 @@ const instanceWithIp = new gcp.compute.Instance("instanceWithIp", {
 
 
 
+### Compute Address Ipsec Interconnect
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network = new Gcp.Compute.Network("network", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var ipsec_interconnect_address = new Gcp.Compute.Address("ipsec-interconnect-address", new Gcp.Compute.AddressArgs
+        {
+            AddressType = "INTERNAL",
+            Purpose = "IPSEC_INTERCONNECT",
+            Address = "192.168.1.0",
+            PrefixLength = 29,
+            Network = network.SelfLink,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		network, err := compute.NewNetwork(ctx, "network", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewAddress(ctx, "ipsec_interconnect_address", &compute.AddressArgs{
+			AddressType:  pulumi.String("INTERNAL"),
+			Purpose:      pulumi.String("IPSEC_INTERCONNECT"),
+			Address:      pulumi.String("192.168.1.0"),
+			PrefixLength: pulumi.Int(29),
+			Network:      network.SelfLink,
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network = gcp.compute.Network("network", auto_create_subnetworks=False,
+opts=pulumi.ResourceOptions(provider=google_beta))
+ipsec_interconnect_address = gcp.compute.Address("ipsec-interconnect-address",
+    address_type="INTERNAL",
+    purpose="IPSEC_INTERCONNECT",
+    address="192.168.1.0",
+    prefix_length=29,
+    network=network.self_link,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false}, {
+    provider: google_beta,
+});
+const ipsec_interconnect_address = new gcp.compute.Address("ipsec-interconnect-address", {
+    addressType: "INTERNAL",
+    purpose: "IPSEC_INTERCONNECT",
+    address: "192.168.1.0",
+    prefixLength: 29,
+    network: network.selfLink,
+}, {
+    provider: google_beta,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -534,7 +659,9 @@ const instanceWithIp = new gcp.compute.Instance("instanceWithIp", {
             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">network_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">prefix_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -723,6 +850,16 @@ following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="network_csharp">
+<a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of the network in which to reserve the address. This field can only be used with INTERNAL type with the
+VPC_PEERING and IPSEC_INTERCONNECT purposes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="networktier_csharp">
 <a href="#networktier_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
 </span>
@@ -732,6 +869,15 @@ except the last character, which cannot be a dash.
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 Possible values are `PREMIUM` and `STANDARD`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefixlength_csharp">
+<a href="#prefixlength_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The prefix length if the resource represents an IP range.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
@@ -750,10 +896,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The purpose of this resource. Possible values include:
-* GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
-* SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
+    <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
+* GCE_ENDPOINT for addresses that are used by VM instances, alias IP
+ranges, internal load balancers, and similar resources.
+* SHARED_LOADBALANCER_VIP for an address that can be used by multiple
+internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
+* IPSEC_INTERCONNECT (Beta only) for addresses created from a private IP range
+that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
+Interconnect configuration. These addresses are regional resources.
+This should only be set when using an Internal address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
@@ -837,6 +989,16 @@ following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="network_go">
+<a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of the network in which to reserve the address. This field can only be used with INTERNAL type with the
+VPC_PEERING and IPSEC_INTERCONNECT purposes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="networktier_go">
 <a href="#networktier_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
 </span>
@@ -846,6 +1008,15 @@ except the last character, which cannot be a dash.
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 Possible values are `PREMIUM` and `STANDARD`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefixlength_go">
+<a href="#prefixlength_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The prefix length if the resource represents an IP range.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
@@ -864,10 +1035,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The purpose of this resource. Possible values include:
-* GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
-* SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
+    <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
+* GCE_ENDPOINT for addresses that are used by VM instances, alias IP
+ranges, internal load balancers, and similar resources.
+* SHARED_LOADBALANCER_VIP for an address that can be used by multiple
+internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
+* IPSEC_INTERCONNECT (Beta only) for addresses created from a private IP range
+that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
+Interconnect configuration. These addresses are regional resources.
+This should only be set when using an Internal address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
@@ -951,6 +1128,16 @@ following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="network_nodejs">
+<a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of the network in which to reserve the address. This field can only be used with INTERNAL type with the
+VPC_PEERING and IPSEC_INTERCONNECT purposes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="networktier_nodejs">
 <a href="#networktier_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Tier</a>
 </span>
@@ -960,6 +1147,15 @@ except the last character, which cannot be a dash.
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 Possible values are `PREMIUM` and `STANDARD`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefixlength_nodejs">
+<a href="#prefixlength_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The prefix length if the resource represents an IP range.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
@@ -978,10 +1174,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The purpose of this resource. Possible values include:
-* GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
-* SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
+    <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
+* GCE_ENDPOINT for addresses that are used by VM instances, alias IP
+ranges, internal load balancers, and similar resources.
+* SHARED_LOADBALANCER_VIP for an address that can be used by multiple
+internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
+* IPSEC_INTERCONNECT (Beta only) for addresses created from a private IP range
+that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
+Interconnect configuration. These addresses are regional resources.
+This should only be set when using an Internal address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
@@ -1065,6 +1267,16 @@ following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="network_python">
+<a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL of the network in which to reserve the address. This field can only be used with INTERNAL type with the
+VPC_PEERING and IPSEC_INTERCONNECT purposes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="network_tier_python">
 <a href="#network_tier_python" style="color: inherit; text-decoration: inherit;">network_<wbr>tier</a>
 </span>
@@ -1074,6 +1286,15 @@ except the last character, which cannot be a dash.
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 Possible values are `PREMIUM` and `STANDARD`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_length_python">
+<a href="#prefix_length_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The prefix length if the resource represents an IP range.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
@@ -1092,10 +1313,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The purpose of this resource. Possible values include:
-* GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
-* SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
+    <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
+* GCE_ENDPOINT for addresses that are used by VM instances, alias IP
+ranges, internal load balancers, and similar resources.
+* SHARED_LOADBALANCER_VIP for an address that can be used by multiple
+internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
+* IPSEC_INTERCONNECT (Beta only) for addresses created from a private IP range
+that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
+Interconnect configuration. These addresses are regional resources.
+This should only be set when using an Internal address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
@@ -1343,7 +1570,9 @@ Get an existing Address resource's state with the given name, ID, and optional e
         <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">prefix_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1535,6 +1764,16 @@ following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_network_csharp">
+<a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of the network in which to reserve the address. This field can only be used with INTERNAL type with the
+VPC_PEERING and IPSEC_INTERCONNECT purposes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_networktier_csharp">
 <a href="#state_networktier_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
 </span>
@@ -1544,6 +1783,15 @@ except the last character, which cannot be a dash.
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 Possible values are `PREMIUM` and `STANDARD`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_prefixlength_csharp">
+<a href="#state_prefixlength_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The prefix length if the resource represents an IP range.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
@@ -1562,10 +1810,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The purpose of this resource. Possible values include:
-* GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
-* SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
+    <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
+* GCE_ENDPOINT for addresses that are used by VM instances, alias IP
+ranges, internal load balancers, and similar resources.
+* SHARED_LOADBALANCER_VIP for an address that can be used by multiple
+internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
+* IPSEC_INTERCONNECT (Beta only) for addresses created from a private IP range
+that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
+Interconnect configuration. These addresses are regional resources.
+This should only be set when using an Internal address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
@@ -1685,6 +1939,16 @@ following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_network_go">
+<a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of the network in which to reserve the address. This field can only be used with INTERNAL type with the
+VPC_PEERING and IPSEC_INTERCONNECT purposes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_networktier_go">
 <a href="#state_networktier_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
 </span>
@@ -1694,6 +1958,15 @@ except the last character, which cannot be a dash.
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 Possible values are `PREMIUM` and `STANDARD`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_prefixlength_go">
+<a href="#state_prefixlength_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The prefix length if the resource represents an IP range.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
@@ -1712,10 +1985,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The purpose of this resource. Possible values include:
-* GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
-* SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
+    <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
+* GCE_ENDPOINT for addresses that are used by VM instances, alias IP
+ranges, internal load balancers, and similar resources.
+* SHARED_LOADBALANCER_VIP for an address that can be used by multiple
+internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
+* IPSEC_INTERCONNECT (Beta only) for addresses created from a private IP range
+that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
+Interconnect configuration. These addresses are regional resources.
+This should only be set when using an Internal address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
@@ -1835,6 +2114,16 @@ following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_network_nodejs">
+<a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of the network in which to reserve the address. This field can only be used with INTERNAL type with the
+VPC_PEERING and IPSEC_INTERCONNECT purposes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_networktier_nodejs">
 <a href="#state_networktier_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Tier</a>
 </span>
@@ -1844,6 +2133,15 @@ except the last character, which cannot be a dash.
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 Possible values are `PREMIUM` and `STANDARD`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_prefixlength_nodejs">
+<a href="#state_prefixlength_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The prefix length if the resource represents an IP range.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
@@ -1862,10 +2160,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The purpose of this resource. Possible values include:
-* GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
-* SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
+    <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
+* GCE_ENDPOINT for addresses that are used by VM instances, alias IP
+ranges, internal load balancers, and similar resources.
+* SHARED_LOADBALANCER_VIP for an address that can be used by multiple
+internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
+* IPSEC_INTERCONNECT (Beta only) for addresses created from a private IP range
+that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
+Interconnect configuration. These addresses are regional resources.
+This should only be set when using an Internal address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
@@ -1985,6 +2289,16 @@ following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_network_python">
+<a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL of the network in which to reserve the address. This field can only be used with INTERNAL type with the
+VPC_PEERING and IPSEC_INTERCONNECT purposes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_network_tier_python">
 <a href="#state_network_tier_python" style="color: inherit; text-decoration: inherit;">network_<wbr>tier</a>
 </span>
@@ -1994,6 +2308,15 @@ except the last character, which cannot be a dash.
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 Possible values are `PREMIUM` and `STANDARD`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_prefix_length_python">
+<a href="#state_prefix_length_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The prefix length if the resource represents an IP range.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
@@ -2012,10 +2335,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The purpose of this resource. Possible values include:
-* GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
-* SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
+    <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
+* GCE_ENDPOINT for addresses that are used by VM instances, alias IP
+ranges, internal load balancers, and similar resources.
+* SHARED_LOADBALANCER_VIP for an address that can be used by multiple
+internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
+* IPSEC_INTERCONNECT (Beta only) for addresses created from a private IP range
+that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
+Interconnect configuration. These addresses are regional resources.
+This should only be set when using an Internal address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
