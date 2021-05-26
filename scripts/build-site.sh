@@ -4,6 +4,8 @@ set -o errexit -o pipefail
 
 source ./scripts/common.sh
 
+export NODE_ENV="production"
+
 # URL to the Pulumi conversion service.
 export PULUMI_CONVERT_URL="${PULUMI_CONVERT_URL:-$(pulumi stack output --stack pulumi/tf2pulumi-service/production url)}"
 
