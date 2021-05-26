@@ -19,6 +19,7 @@ Explore the resources and functions of the azure-native.web module.
     <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
     <li><a href="connectiongateway" title="ConnectionGateway"><span class="symbol resource"></span>ConnectionGateway</a></li>
     <li><a href="customapi" title="CustomApi"><span class="symbol resource"></span>CustomApi</a></li>
+    <li><a href="kubeenvironment" title="KubeEnvironment"><span class="symbol resource"></span>KubeEnvironment</a></li>
     <li><a href="staticsite" title="StaticSite"><span class="symbol resource"></span>StaticSite</a></li>
     <li><a href="staticsitecustomdomain" title="StaticSiteCustomDomain"><span class="symbol resource"></span>StaticSiteCustomDomain</a></li>
     <li><a href="staticsiteprivateendpointconnection" title="StaticSitePrivateEndpointConnection"><span class="symbol resource"></span>StaticSitePrivateEndpointConnection</a></li>
@@ -81,6 +82,7 @@ Explore the resources and functions of the azure-native.web module.
     <li><a href="getconnection" title="GetConnection"><span class="symbol function"></span>GetConnection</a></li>
     <li><a href="getconnectiongateway" title="GetConnectionGateway"><span class="symbol function"></span>GetConnectionGateway</a></li>
     <li><a href="getcustomapi" title="GetCustomApi"><span class="symbol function"></span>GetCustomApi</a></li>
+    <li><a href="getkubeenvironment" title="GetKubeEnvironment"><span class="symbol function"></span>GetKubeEnvironment</a></li>
     <li><a href="getstaticsite" title="GetStaticSite"><span class="symbol function"></span>GetStaticSite</a></li>
     <li><a href="getstaticsitecustomdomain" title="GetStaticSiteCustomDomain"><span class="symbol function"></span>GetStaticSiteCustomDomain</a></li>
     <li><a href="getstaticsiteprivateendpointconnection" title="GetStaticSitePrivateEndpointConnection"><span class="symbol function"></span>GetStaticSitePrivateEndpointConnection</a></li>
@@ -167,6 +169,6 @@ Explore the resources and functions of the azure-native.web module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.7.0</dd>
+	<dd>1.8.0</dd>
 </dl>
 

@@ -56,6 +56,6 @@ Explore the resources and functions of the azure-native.machinelearningservices 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.7.0</dd>
+	<dd>1.8.0</dd>
 </dl>
 

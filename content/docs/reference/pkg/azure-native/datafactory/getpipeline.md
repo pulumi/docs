@@ -975,6 +975,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -1026,6 +1034,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -1079,6 +1095,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -1130,6 +1154,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -1186,6 +1218,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -1247,6 +1287,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -1307,6 +1355,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -1366,6 +1422,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -1430,6 +1494,14 @@ The following output properties are available:
         <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepartitiondiscovery_csharp">
 <a href="#enablepartitiondiscovery_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
@@ -1523,6 +1595,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_go">
 <a href="#enablepartitiondiscovery_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -1615,6 +1695,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_nodejs">
 <a href="#enablepartitiondiscovery_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -1706,6 +1794,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_partition_discovery_python">
 <a href="#enable_partition_discovery_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>partition_<wbr>discovery</a>
@@ -1803,6 +1899,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_csharp">
 <a href="#enablepartitiondiscovery_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -1894,6 +1998,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepartitiondiscovery_go">
 <a href="#enablepartitiondiscovery_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
@@ -1987,6 +2099,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_nodejs">
 <a href="#enablepartitiondiscovery_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -2078,6 +2198,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_partition_discovery_python">
 <a href="#enable_partition_discovery_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>partition_<wbr>discovery</a>
@@ -2379,6 +2507,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="formatsettings_csharp">
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
@@ -2438,6 +2574,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="formatsettings_go">
 <a href="#formatsettings_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
@@ -2499,6 +2643,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="formatsettings_nodejs">
 <a href="#formatsettings_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Settings</a>
 </span>
@@ -2558,6 +2710,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_settings_python">
 <a href="#format_settings_python" style="color: inherit; text-decoration: inherit;">format_<wbr>settings</a>
@@ -2631,6 +2791,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -2674,6 +2842,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -2719,6 +2895,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -2762,6 +2946,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -2959,6 +3151,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_csharp">
 <a href="#enablepartitiondiscovery_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -3042,6 +3242,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepartitiondiscovery_go">
 <a href="#enablepartitiondiscovery_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
@@ -3127,6 +3335,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_nodejs">
 <a href="#enablepartitiondiscovery_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -3210,6 +3426,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_partition_discovery_python">
 <a href="#enable_partition_discovery_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>partition_<wbr>discovery</a>
@@ -3299,6 +3523,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -3306,6 +3538,14 @@ The following output properties are available:
         <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metadataitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Metadata<wbr>Item<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specify the custom metadata to be added to sink data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sinkretrycount_csharp">
 <a href="#sinkretrycount_csharp" style="color: inherit; text-decoration: inherit;">Sink<wbr>Retry<wbr>Count</a>
@@ -3351,6 +3591,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -3358,6 +3606,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metadataitemresponse">[]Metadata<wbr>Item<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specify the custom metadata to be added to sink data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sinkretrycount_go">
 <a href="#sinkretrycount_go" style="color: inherit; text-decoration: inherit;">Sink<wbr>Retry<wbr>Count</a>
@@ -3403,6 +3659,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -3410,6 +3674,14 @@ The following output properties are available:
         <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metadataitemresponse">Metadata<wbr>Item<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specify the custom metadata to be added to sink data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sinkretrycount_nodejs">
 <a href="#sinkretrycount_nodejs" style="color: inherit; text-decoration: inherit;">sink<wbr>Retry<wbr>Count</a>
@@ -3455,6 +3727,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -3462,6 +3742,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metadataitemresponse">Sequence[Metadata<wbr>Item<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Specify the custom metadata to be added to sink data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sink_retry_count_python">
 <a href="#sink_retry_count_python" style="color: inherit; text-decoration: inherit;">sink_<wbr>retry_<wbr>count</a>
@@ -3502,6 +3790,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -3555,6 +3851,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -3607,6 +3911,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -3658,6 +3970,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -3731,6 +4051,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -3758,6 +4086,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -3787,6 +4123,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -3815,6 +4159,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -3838,6 +4190,14 @@ The following output properties are available:
         <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepartitiondiscovery_csharp">
 <a href="#enablepartitiondiscovery_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
@@ -3931,6 +4291,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_go">
 <a href="#enablepartitiondiscovery_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -4023,6 +4391,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_nodejs">
 <a href="#enablepartitiondiscovery_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -4114,6 +4490,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_partition_discovery_python">
 <a href="#enable_partition_discovery_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>partition_<wbr>discovery</a>
@@ -4219,6 +4603,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -4246,6 +4638,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -4275,6 +4675,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -4302,6 +4710,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -4595,6 +5011,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="flushimmediately_csharp">
 <a href="#flushimmediately_csharp" style="color: inherit; text-decoration: inherit;">Flush<wbr>Immediately</a>
 </span>
@@ -4662,6 +5086,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flushimmediately_go">
 <a href="#flushimmediately_go" style="color: inherit; text-decoration: inherit;">Flush<wbr>Immediately</a>
@@ -4731,6 +5163,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="flushimmediately_nodejs">
 <a href="#flushimmediately_nodejs" style="color: inherit; text-decoration: inherit;">flush<wbr>Immediately</a>
 </span>
@@ -4798,6 +5238,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flush_immediately_python">
 <a href="#flush_immediately_python" style="color: inherit; text-decoration: inherit;">flush_<wbr>immediately</a>
@@ -4887,6 +5335,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -4946,6 +5402,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -5007,6 +5471,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -5067,6 +5539,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -5122,6 +5602,14 @@ The following output properties are available:
         <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepartitiondiscovery_csharp">
 <a href="#enablepartitiondiscovery_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
@@ -5223,6 +5711,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_go">
 <a href="#enablepartitiondiscovery_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -5323,6 +5819,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_nodejs">
 <a href="#enablepartitiondiscovery_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -5422,6 +5926,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_partition_discovery_python">
 <a href="#enable_partition_discovery_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>partition_<wbr>discovery</a>
@@ -5527,6 +6039,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enableadlssinglefileparallel_csharp">
 <a href="#enableadlssinglefileparallel_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Adls<wbr>Single<wbr>File<wbr>Parallel</a>
 </span>
@@ -5586,6 +6106,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableadlssinglefileparallel_go">
 <a href="#enableadlssinglefileparallel_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Adls<wbr>Single<wbr>File<wbr>Parallel</a>
@@ -5647,6 +6175,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enableadlssinglefileparallel_nodejs">
 <a href="#enableadlssinglefileparallel_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Adls<wbr>Single<wbr>File<wbr>Parallel</a>
 </span>
@@ -5707,6 +6243,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enable_adls_single_file_parallel_python">
 <a href="#enable_adls_single_file_parallel_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>adls_<wbr>single_<wbr>file_<wbr>parallel</a>
 </span>
@@ -5763,6 +6307,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -5798,6 +6350,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -5835,6 +6395,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -5870,6 +6438,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -5919,6 +6495,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="expirydatetime_csharp">
 <a href="#expirydatetime_csharp" style="color: inherit; text-decoration: inherit;">Expiry<wbr>Date<wbr>Time</a>
 </span>
@@ -5946,6 +6530,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirydatetime_go">
 <a href="#expirydatetime_go" style="color: inherit; text-decoration: inherit;">Expiry<wbr>Date<wbr>Time</a>
@@ -5975,6 +6567,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="expirydatetime_nodejs">
 <a href="#expirydatetime_nodejs" style="color: inherit; text-decoration: inherit;">expiry<wbr>Date<wbr>Time</a>
 </span>
@@ -6002,6 +6602,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiry_date_time_python">
 <a href="#expiry_date_time_python" style="color: inherit; text-decoration: inherit;">expiry_<wbr>date_<wbr>time</a>
@@ -6195,6 +6803,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="importsettings_csharp">
 <a href="#importsettings_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Settings</a>
 </span>
@@ -6254,6 +6870,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importsettings_go">
 <a href="#importsettings_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Settings</a>
@@ -6315,6 +6939,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="importsettings_nodejs">
 <a href="#importsettings_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Settings</a>
 </span>
@@ -6374,6 +7006,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="import_settings_python">
 <a href="#import_settings_python" style="color: inherit; text-decoration: inherit;">import_<wbr>settings</a>
@@ -6439,6 +7079,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="exportsettings_csharp">
 <a href="#exportsettings_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Settings</a>
 </span>
@@ -6482,6 +7130,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportsettings_go">
 <a href="#exportsettings_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Settings</a>
@@ -6527,6 +7183,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="exportsettings_nodejs">
 <a href="#exportsettings_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Settings</a>
 </span>
@@ -6570,6 +7234,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="export_settings_python">
 <a href="#export_settings_python" style="color: inherit; text-decoration: inherit;">export_<wbr>settings</a>
@@ -6626,6 +7298,14 @@ The following output properties are available:
         <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepartitiondiscovery_csharp">
 <a href="#enablepartitiondiscovery_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
@@ -6719,6 +7399,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_go">
 <a href="#enablepartitiondiscovery_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -6811,6 +7499,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_nodejs">
 <a href="#enablepartitiondiscovery_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -6902,6 +7598,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_partition_discovery_python">
 <a href="#enable_partition_discovery_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>partition_<wbr>discovery</a>
@@ -6999,6 +7703,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -7018,6 +7730,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -7039,6 +7759,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -7058,6 +7786,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -8707,6 +9443,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -8758,6 +9502,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -8811,6 +9563,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -8863,6 +9623,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -8910,6 +9678,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -8963,6 +9739,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -9015,6 +9799,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -9066,6 +9858,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -9131,6 +9931,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -9182,6 +9990,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -9235,6 +10051,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -9287,6 +10111,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -9334,6 +10166,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -9387,6 +10227,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -9439,6 +10287,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -9490,6 +10346,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -9555,6 +10419,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -9606,6 +10478,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -9659,6 +10539,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -9711,6 +10599,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -9759,6 +10655,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -9802,6 +10706,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -9847,6 +10759,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -9890,6 +10810,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -9938,6 +10866,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -9991,6 +10927,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -10043,6 +10987,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -10094,6 +11046,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -10150,6 +11110,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -10243,6 +11211,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -10335,6 +11311,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -10426,6 +11410,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -10531,6 +11523,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -10622,6 +11622,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -10715,6 +11723,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -10806,6 +11822,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -10927,6 +11951,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Azure Table row key name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -11002,6 +12034,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Azure Table row key name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -11079,6 +12119,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Azure Table row key name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -11155,6 +12203,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Azure Table row key name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -11227,6 +12283,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Azure Table source query. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -11286,6 +12350,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Azure Table source query. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -11347,6 +12419,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Azure Table source query. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -11406,6 +12486,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Azure Table source query. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -11499,6 +12587,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -11550,6 +12646,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -11603,6 +12707,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -11654,6 +12766,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -11711,6 +12831,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="formatsettings_csharp">
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
@@ -11754,6 +12882,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="formatsettings_go">
 <a href="#formatsettings_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
@@ -11799,6 +12935,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="formatsettings_nodejs">
 <a href="#formatsettings_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Settings</a>
 </span>
@@ -11842,6 +12986,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_settings_python">
 <a href="#format_settings_python" style="color: inherit; text-decoration: inherit;">format_<wbr>settings</a>
@@ -11923,6 +13075,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -11930,6 +13090,14 @@ The following output properties are available:
         <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metadataitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Metadata<wbr>Item<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specify the custom metadata to be added to sink data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sinkretrycount_csharp">
 <a href="#sinkretrycount_csharp" style="color: inherit; text-decoration: inherit;">Sink<wbr>Retry<wbr>Count</a>
@@ -11999,6 +13167,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -12006,6 +13182,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metadataitemresponse">[]Metadata<wbr>Item<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specify the custom metadata to be added to sink data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sinkretrycount_go">
 <a href="#sinkretrycount_go" style="color: inherit; text-decoration: inherit;">Sink<wbr>Retry<wbr>Count</a>
@@ -12075,6 +13259,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -12082,6 +13274,14 @@ The following output properties are available:
         <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metadataitemresponse">Metadata<wbr>Item<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specify the custom metadata to be added to sink data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sinkretrycount_nodejs">
 <a href="#sinkretrycount_nodejs" style="color: inherit; text-decoration: inherit;">sink<wbr>Retry<wbr>Count</a>
@@ -12151,6 +13351,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -12158,6 +13366,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metadataitemresponse">Sequence[Metadata<wbr>Item<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Specify the custom metadata to be added to sink data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sink_retry_count_python">
 <a href="#sink_retry_count_python" style="color: inherit; text-decoration: inherit;">sink_<wbr>retry_<wbr>count</a>
@@ -12198,6 +13414,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -12251,6 +13475,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -12303,6 +13535,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -12354,6 +13594,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -12427,6 +13675,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The consistency level specifies how many Cassandra servers must respond to a read request before returning data to the client application. Cassandra checks the specified number of Cassandra servers for data to satisfy the read request. Must be one of cassandraSourceReadConsistencyLevels. The default value is 'ONE'. It is case-insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -12486,6 +13742,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The consistency level specifies how many Cassandra servers must respond to a read request before returning data to the client application. Cassandra checks the specified number of Cassandra servers for data to satisfy the read request. Must be one of cassandraSourceReadConsistencyLevels. The default value is 'ONE'. It is case-insensitive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -12547,6 +13811,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The consistency level specifies how many Cassandra servers must respond to a read request before returning data to the client application. Cassandra checks the specified number of Cassandra servers for data to satisfy the read request. Must be one of cassandraSourceReadConsistencyLevels. The default value is 'ONE'. It is case-insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -12606,6 +13878,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The consistency level specifies how many Cassandra servers must respond to a read request before returning data to the client application. Cassandra checks the specified number of Cassandra servers for data to satisfy the read request. Must be one of cassandraSourceReadConsistencyLevels. The default value is 'ONE'. It is case-insensitive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -12670,6 +13950,14 @@ The following output properties are available:
         <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorenullvalues_csharp">
 <a href="#ignorenullvalues_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Null<wbr>Values</a>
@@ -12739,6 +14027,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ignorenullvalues_go">
 <a href="#ignorenullvalues_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Null<wbr>Values</a>
 </span>
@@ -12806,6 +14102,14 @@ The following output properties are available:
         <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorenullvalues_nodejs">
 <a href="#ignorenullvalues_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Null<wbr>Values</a>
@@ -12875,6 +14179,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ignore_null_values_python">
 <a href="#ignore_null_values_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>null_<wbr>values</a>
 </span>
@@ -12939,6 +14251,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -12982,6 +14302,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -13027,6 +14355,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -13070,6 +14406,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -13118,6 +14462,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -13171,6 +14523,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -13223,6 +14583,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -13274,6 +14642,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -14311,6 +15687,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -14362,6 +15746,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -14415,6 +15807,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -14466,6 +15866,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -14547,6 +15955,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
@@ -14614,6 +16030,14 @@ The following output properties are available:
         <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -14683,6 +16107,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
@@ -14751,6 +16183,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
@@ -14798,6 +16238,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -14851,6 +16299,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -14903,6 +16359,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -14954,6 +16418,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -15027,6 +16499,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether detect primitive values as datetime values. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -15094,6 +16574,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Whether detect primitive values as datetime values. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -15163,6 +16651,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether detect primitive values as datetime values. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -15231,6 +16727,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether detect primitive values as datetime values. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -15295,6 +16799,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -15346,6 +16858,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -15399,6 +16919,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -15450,6 +16978,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -17871,6 +19407,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -17922,6 +19466,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -17975,6 +19527,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -18026,6 +19586,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -18563,6 +20131,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="formatsettings_csharp">
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
@@ -18622,6 +20198,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="formatsettings_go">
 <a href="#formatsettings_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
@@ -18683,6 +20267,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="formatsettings_nodejs">
 <a href="#formatsettings_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Settings</a>
 </span>
@@ -18742,6 +20334,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_settings_python">
 <a href="#format_settings_python" style="color: inherit; text-decoration: inherit;">format_<wbr>settings</a>
@@ -18815,6 +20415,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="formatsettings_csharp">
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
@@ -18866,6 +20474,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="formatsettings_go">
 <a href="#formatsettings_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
@@ -18919,6 +20535,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="formatsettings_nodejs">
 <a href="#formatsettings_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Settings</a>
 </span>
@@ -18970,6 +20594,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_settings_python">
 <a href="#format_settings_python" style="color: inherit; text-decoration: inherit;">format_<wbr>settings</a>
@@ -19283,6 +20915,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -19342,6 +20982,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -19403,6 +21051,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -19462,6 +21118,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -19535,6 +21199,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -19594,6 +21266,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -19655,6 +21335,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -19714,6 +21402,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -19779,6 +21475,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -19830,6 +21534,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -19883,6 +21595,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -19934,6 +21654,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -19990,6 +21718,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httprequesttimeout_csharp">
 <a href="#httprequesttimeout_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Request<wbr>Timeout</a>
@@ -20051,6 +21787,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httprequesttimeout_go">
 <a href="#httprequesttimeout_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Request<wbr>Timeout</a>
 </span>
@@ -20111,6 +21855,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httprequesttimeout_nodejs">
 <a href="#httprequesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Request<wbr>Timeout</a>
 </span>
@@ -20170,6 +21922,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_request_timeout_python">
 <a href="#http_request_timeout_python" style="color: inherit; text-decoration: inherit;">http_<wbr>request_<wbr>timeout</a>
@@ -20243,6 +22003,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ignorenullvalues_csharp">
 <a href="#ignorenullvalues_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Null<wbr>Values</a>
 </span>
@@ -20310,6 +22078,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorenullvalues_go">
 <a href="#ignorenullvalues_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Null<wbr>Values</a>
@@ -20379,6 +22155,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ignorenullvalues_nodejs">
 <a href="#ignorenullvalues_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Null<wbr>Values</a>
 </span>
@@ -20446,6 +22230,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_null_values_python">
 <a href="#ignore_null_values_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>null_<wbr>values</a>
@@ -20511,6 +22303,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -20554,6 +22354,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -20599,6 +22407,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -20642,6 +22458,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -20698,6 +22522,14 @@ The following output properties are available:
         <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorenullvalues_csharp">
 <a href="#ignorenullvalues_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Null<wbr>Values</a>
@@ -20767,6 +22599,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ignorenullvalues_go">
 <a href="#ignorenullvalues_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Null<wbr>Values</a>
 </span>
@@ -20834,6 +22674,14 @@ The following output properties are available:
         <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorenullvalues_nodejs">
 <a href="#ignorenullvalues_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Null<wbr>Values</a>
@@ -20903,6 +22751,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ignore_null_values_python">
 <a href="#ignore_null_values_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>null_<wbr>values</a>
 </span>
@@ -20967,6 +22823,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -21010,6 +22874,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -21055,6 +22927,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -21098,6 +22978,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -21146,6 +23034,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -21199,6 +23095,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -21251,6 +23155,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -21302,6 +23214,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -21359,6 +23279,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -21402,6 +23330,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -21447,6 +23383,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -21490,6 +23434,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -23195,6 +25147,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_csharp">
 <a href="#enablepartitiondiscovery_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -23286,6 +25246,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepartitiondiscovery_go">
 <a href="#enablepartitiondiscovery_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
@@ -23379,6 +25347,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_nodejs">
 <a href="#enablepartitiondiscovery_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -23470,6 +25446,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_partition_discovery_python">
 <a href="#enable_partition_discovery_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>partition_<wbr>discovery</a>
@@ -23567,6 +25551,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -23586,6 +25578,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -23607,6 +25607,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -23626,6 +25634,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -23650,6 +25666,14 @@ The following output properties are available:
         <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -23703,6 +25727,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -23755,6 +25787,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -23806,6 +25846,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -23863,6 +25911,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -23906,6 +25962,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -23951,6 +26015,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -23994,6 +26066,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -24531,6 +26611,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_csharp">
 <a href="#enablepartitiondiscovery_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -24606,6 +26694,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepartitiondiscovery_go">
 <a href="#enablepartitiondiscovery_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
@@ -24683,6 +26779,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_nodejs">
 <a href="#enablepartitiondiscovery_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -24758,6 +26862,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_partition_discovery_python">
 <a href="#enable_partition_discovery_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>partition_<wbr>discovery</a>
@@ -25179,6 +27291,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -25230,6 +27350,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -25283,6 +27411,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -25334,6 +27470,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -25391,6 +27535,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -25442,6 +27594,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -25495,6 +27655,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -25546,6 +27714,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -25602,6 +27778,14 @@ The following output properties are available:
         <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepartitiondiscovery_csharp">
 <a href="#enablepartitiondiscovery_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
@@ -25695,6 +27879,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_go">
 <a href="#enablepartitiondiscovery_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -25787,6 +27979,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_nodejs">
 <a href="#enablepartitiondiscovery_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -25878,6 +28078,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_partition_discovery_python">
 <a href="#enable_partition_discovery_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>partition_<wbr>discovery</a>
@@ -25975,6 +28183,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -26026,6 +28242,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -26079,6 +28303,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -26130,6 +28362,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -26187,6 +28427,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -26238,6 +28486,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -26291,6 +28547,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -26342,6 +28606,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -28803,6 +31075,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="distcpsettings_csharp">
 <a href="#distcpsettings_csharp" style="color: inherit; text-decoration: inherit;">Distcp<wbr>Settings</a>
 </span>
@@ -28894,6 +31174,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distcpsettings_go">
 <a href="#distcpsettings_go" style="color: inherit; text-decoration: inherit;">Distcp<wbr>Settings</a>
@@ -28987,6 +31275,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="distcpsettings_nodejs">
 <a href="#distcpsettings_nodejs" style="color: inherit; text-decoration: inherit;">distcp<wbr>Settings</a>
 </span>
@@ -29079,6 +31375,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="distcp_settings_python">
 <a href="#distcp_settings_python" style="color: inherit; text-decoration: inherit;">distcp_<wbr>settings</a>
 </span>
@@ -29167,6 +31471,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="distcpsettings_csharp">
 <a href="#distcpsettings_csharp" style="color: inherit; text-decoration: inherit;">Distcp<wbr>Settings</a>
 </span>
@@ -29210,6 +31522,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distcpsettings_go">
 <a href="#distcpsettings_go" style="color: inherit; text-decoration: inherit;">Distcp<wbr>Settings</a>
@@ -29255,6 +31575,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="distcpsettings_nodejs">
 <a href="#distcpsettings_nodejs" style="color: inherit; text-decoration: inherit;">distcp<wbr>Settings</a>
 </span>
@@ -29298,6 +31626,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distcp_settings_python">
 <a href="#distcp_settings_python" style="color: inherit; text-decoration: inherit;">distcp_<wbr>settings</a>
@@ -29355,6 +31691,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -29406,6 +31750,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -29459,6 +31811,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -29510,6 +31870,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -29566,6 +31934,14 @@ The following output properties are available:
         <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepartitiondiscovery_csharp">
 <a href="#enablepartitiondiscovery_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
@@ -29627,6 +32003,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_go">
 <a href="#enablepartitiondiscovery_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -29686,6 +32070,14 @@ The following output properties are available:
         <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepartitiondiscovery_nodejs">
 <a href="#enablepartitiondiscovery_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Partition<wbr>Discovery</a>
@@ -29747,6 +32139,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enable_partition_discovery_python">
 <a href="#enable_partition_discovery_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>partition_<wbr>discovery</a>
 </span>
@@ -29803,6 +32203,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httprequesttimeout_csharp">
 <a href="#httprequesttimeout_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Request<wbr>Timeout</a>
 </span>
@@ -29838,6 +32246,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httprequesttimeout_go">
 <a href="#httprequesttimeout_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Request<wbr>Timeout</a>
@@ -29875,6 +32291,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httprequesttimeout_nodejs">
 <a href="#httprequesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Request<wbr>Timeout</a>
 </span>
@@ -29910,6 +32334,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_request_timeout_python">
 <a href="#http_request_timeout_python" style="color: inherit; text-decoration: inherit;">http_<wbr>request_<wbr>timeout</a>
@@ -29958,6 +32390,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -30011,6 +32451,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -30063,6 +32511,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -30114,6 +32570,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -30415,6 +32879,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -30466,6 +32938,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -30519,6 +32999,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -30571,6 +33059,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -30618,6 +33114,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -30671,6 +33175,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -30723,6 +33235,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -30774,6 +33294,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -30839,6 +33367,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -30890,6 +33426,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -30943,6 +33487,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -30994,6 +33546,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -31167,6 +33727,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -31218,6 +33786,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -31271,6 +33847,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -31322,6 +33906,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -31423,6 +34015,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="formatsettings_csharp">
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
@@ -31482,6 +34082,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="formatsettings_go">
 <a href="#formatsettings_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
@@ -31543,6 +34151,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="formatsettings_nodejs">
 <a href="#formatsettings_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Settings</a>
 </span>
@@ -31602,6 +34218,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_settings_python">
 <a href="#format_settings_python" style="color: inherit; text-decoration: inherit;">format_<wbr>settings</a>
@@ -31675,6 +34299,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="formatsettings_csharp">
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
@@ -31726,6 +34358,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="formatsettings_go">
 <a href="#formatsettings_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
@@ -31779,6 +34419,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="formatsettings_nodejs">
 <a href="#formatsettings_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Settings</a>
 </span>
@@ -31830,6 +34478,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_settings_python">
 <a href="#format_settings_python" style="color: inherit; text-decoration: inherit;">format_<wbr>settings</a>
@@ -32711,6 +35367,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -32762,6 +35426,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -32815,6 +35487,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -32866,6 +35546,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -32923,6 +35611,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -32974,6 +35670,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -33027,6 +35731,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -33078,6 +35790,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -33135,6 +35855,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -33186,6 +35914,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -33239,6 +35975,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -33291,6 +36035,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -33332,12 +36084,104 @@ The following output properties are available:
     <dd>{{% md %}}Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="metadataitemresponse">Metadata<wbr>Item<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Metadata item key name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Metadata item value. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Metadata item key name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Metadata item value. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Metadata item key name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Metadata item value. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Metadata item key name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Metadata item value. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="microsoftaccesssinkresponse">Microsoft<wbr>Access<wbr>Sink<wbr>Response</h4>
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -33391,6 +36235,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -33443,6 +36295,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -33494,6 +36354,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -33559,6 +36427,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -33602,6 +36478,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -33647,6 +36531,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -33691,6 +36583,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -33730,6 +36630,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -33783,6 +36691,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -33835,6 +36751,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -33886,6 +36810,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -33967,6 +36899,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
@@ -34034,6 +36974,14 @@ The following output properties are available:
         <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -34103,6 +37051,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
@@ -34170,6 +37126,14 @@ The following output properties are available:
         <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -34375,6 +37339,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -34418,6 +37390,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -34463,6 +37443,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -34507,6 +37495,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -34546,6 +37542,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -34599,6 +37603,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -34651,6 +37663,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -34702,6 +37722,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -34783,6 +37811,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
@@ -34850,6 +37886,14 @@ The following output properties are available:
         <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -34919,6 +37963,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
@@ -34987,6 +38039,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
@@ -35043,6 +38103,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -35094,6 +38162,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -35147,6 +38223,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -35198,6 +38282,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -35371,6 +38463,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -35438,6 +38538,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -35507,6 +38615,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -35574,6 +38690,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -35647,6 +38771,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httprequesttimeout_csharp">
 <a href="#httprequesttimeout_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Request<wbr>Timeout</a>
 </span>
@@ -35698,6 +38830,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httprequesttimeout_go">
 <a href="#httprequesttimeout_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Request<wbr>Timeout</a>
@@ -35751,6 +38891,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httprequesttimeout_nodejs">
 <a href="#httprequesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Request<wbr>Timeout</a>
 </span>
@@ -35803,6 +38951,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="http_request_timeout_python">
 <a href="#http_request_timeout_python" style="color: inherit; text-decoration: inherit;">http_<wbr>request_<wbr>timeout</a>
 </span>
@@ -35850,6 +39006,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -35903,6 +39067,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -35955,6 +39127,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -36006,6 +39186,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -36071,6 +39259,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -36122,6 +39318,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -36175,6 +39379,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -36226,6 +39438,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -36290,6 +39510,14 @@ The following output properties are available:
         <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The Column to apply the <paramref name="StartTime"/> and <paramref name="EndTime"/>. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -36367,6 +39595,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Column to apply the <paramref name="StartTime"/> and <paramref name="EndTime"/>. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
 </span>
@@ -36442,6 +39678,14 @@ The following output properties are available:
         <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The Column to apply the <paramref name="StartTime"/> and <paramref name="EndTime"/>. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -36519,6 +39763,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Column to apply the <paramref name="StartTime"/> and <paramref name="EndTime"/>. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
@@ -36590,6 +39842,14 @@ The following output properties are available:
         <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepartitiondiscovery_csharp">
 <a href="#enablepartitiondiscovery_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
@@ -36683,6 +39943,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_go">
 <a href="#enablepartitiondiscovery_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -36775,6 +40043,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_nodejs">
 <a href="#enablepartitiondiscovery_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -36866,6 +40142,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_partition_discovery_python">
 <a href="#enable_partition_discovery_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>partition_<wbr>discovery</a>
@@ -37111,6 +40395,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -37162,6 +40454,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -37215,6 +40515,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -37267,6 +40575,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -37314,6 +40630,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -37367,6 +40691,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -37419,6 +40751,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -37470,6 +40810,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -37534,6 +40882,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -37603,6 +40959,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -37670,6 +41034,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
@@ -37739,6 +41111,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -37803,6 +41183,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="formatsettings_csharp">
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
@@ -37862,6 +41250,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="formatsettings_go">
 <a href="#formatsettings_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
@@ -37923,6 +41319,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="formatsettings_nodejs">
 <a href="#formatsettings_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Settings</a>
 </span>
@@ -37982,6 +41386,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_settings_python">
 <a href="#format_settings_python" style="color: inherit; text-decoration: inherit;">format_<wbr>settings</a>
@@ -38055,6 +41467,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -38098,6 +41518,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -38143,6 +41571,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -38186,6 +41622,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -38395,6 +41839,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="formatsettings_csharp">
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
@@ -38454,6 +41906,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="formatsettings_go">
 <a href="#formatsettings_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
@@ -38515,6 +41975,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="formatsettings_nodejs">
 <a href="#formatsettings_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Settings</a>
 </span>
@@ -38574,6 +42042,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_settings_python">
 <a href="#format_settings_python" style="color: inherit; text-decoration: inherit;">format_<wbr>settings</a>
@@ -38647,6 +42123,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -38690,6 +42174,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -38735,6 +42227,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -38778,6 +42278,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -38911,6 +42419,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -38962,6 +42478,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -39015,6 +42539,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -39066,6 +42598,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -39123,6 +42663,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -39174,6 +42722,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -39227,6 +42783,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -39278,6 +42842,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -39755,6 +43327,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -39806,6 +43386,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -39859,6 +43447,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -39910,6 +43506,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -39967,6 +43571,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -40018,6 +43630,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -40071,6 +43691,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -40122,6 +43750,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -40179,6 +43815,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -40230,6 +43874,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -40283,6 +43935,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -40334,6 +43994,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -40559,6 +44227,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -40602,6 +44278,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -40647,6 +44331,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -40690,6 +44382,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -40738,6 +44438,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -40791,6 +44499,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -40843,6 +44559,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -40894,6 +44618,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -40950,6 +44682,14 @@ The following output properties are available:
         <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpcompressiontype_csharp">
 <a href="#httpcompressiontype_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Compression<wbr>Type</a>
@@ -41035,6 +44775,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httpcompressiontype_go">
 <a href="#httpcompressiontype_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Compression<wbr>Type</a>
 </span>
@@ -41119,6 +44867,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httpcompressiontype_nodejs">
 <a href="#httpcompressiontype_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Compression<wbr>Type</a>
 </span>
@@ -41202,6 +44958,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_compression_type_python">
 <a href="#http_compression_type_python" style="color: inherit; text-decoration: inherit;">http_<wbr>compression_<wbr>type</a>
@@ -41299,6 +45063,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httprequesttimeout_csharp">
 <a href="#httprequesttimeout_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Request<wbr>Timeout</a>
 </span>
@@ -41382,6 +45154,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httprequesttimeout_go">
 <a href="#httprequesttimeout_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Request<wbr>Timeout</a>
@@ -41467,6 +45247,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httprequesttimeout_nodejs">
 <a href="#httprequesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Request<wbr>Timeout</a>
 </span>
@@ -41550,6 +45338,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_request_timeout_python">
 <a href="#http_request_timeout_python" style="color: inherit; text-decoration: inherit;">http_<wbr>request_<wbr>timeout</a>
@@ -42635,6 +46431,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -42686,6 +46490,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -42739,6 +46551,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -42791,6 +46611,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -42838,6 +46666,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalidfieldname_csharp">
 <a href="#externalidfieldname_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Id<wbr>Field<wbr>Name</a>
@@ -42907,6 +46743,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="externalidfieldname_go">
 <a href="#externalidfieldname_go" style="color: inherit; text-decoration: inherit;">External<wbr>Id<wbr>Field<wbr>Name</a>
 </span>
@@ -42975,6 +46819,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="externalidfieldname_nodejs">
 <a href="#externalidfieldname_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id<wbr>Field<wbr>Name</a>
 </span>
@@ -43042,6 +46894,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_id_field_name_python">
 <a href="#external_id_field_name_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id_<wbr>field_<wbr>name</a>
@@ -43123,6 +46983,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -43174,6 +47042,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -43227,6 +47103,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -43279,6 +47163,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -43326,6 +47218,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalidfieldname_csharp">
 <a href="#externalidfieldname_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Id<wbr>Field<wbr>Name</a>
@@ -43395,6 +47295,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="externalidfieldname_go">
 <a href="#externalidfieldname_go" style="color: inherit; text-decoration: inherit;">External<wbr>Id<wbr>Field<wbr>Name</a>
 </span>
@@ -43463,6 +47371,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="externalidfieldname_nodejs">
 <a href="#externalidfieldname_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id<wbr>Field<wbr>Name</a>
 </span>
@@ -43530,6 +47446,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_id_field_name_python">
 <a href="#external_id_field_name_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id_<wbr>field_<wbr>name</a>
@@ -43611,6 +47535,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -43670,6 +47602,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -43731,6 +47671,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -43790,6 +47738,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -43855,6 +47811,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -43906,6 +47870,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -43959,6 +47931,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -44011,6 +47991,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -44058,6 +48046,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httprequesttimeout_csharp">
 <a href="#httprequesttimeout_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Request<wbr>Timeout</a>
@@ -44119,6 +48115,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httprequesttimeout_go">
 <a href="#httprequesttimeout_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Request<wbr>Timeout</a>
 </span>
@@ -44179,6 +48183,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httprequesttimeout_nodejs">
 <a href="#httprequesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Request<wbr>Timeout</a>
 </span>
@@ -44238,6 +48250,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_request_timeout_python">
 <a href="#http_request_timeout_python" style="color: inherit; text-decoration: inherit;">http_<wbr>request_<wbr>timeout</a>
@@ -44311,6 +48331,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httprequesttimeout_csharp">
 <a href="#httprequesttimeout_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Request<wbr>Timeout</a>
 </span>
@@ -44370,6 +48398,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httprequesttimeout_go">
 <a href="#httprequesttimeout_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Request<wbr>Timeout</a>
@@ -44431,6 +48467,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httprequesttimeout_nodejs">
 <a href="#httprequesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Request<wbr>Timeout</a>
 </span>
@@ -44490,6 +48534,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_request_timeout_python">
 <a href="#http_request_timeout_python" style="color: inherit; text-decoration: inherit;">http_<wbr>request_<wbr>timeout</a>
@@ -44555,6 +48607,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httprequesttimeout_csharp">
 <a href="#httprequesttimeout_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Request<wbr>Timeout</a>
 </span>
@@ -44614,6 +48674,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httprequesttimeout_go">
 <a href="#httprequesttimeout_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Request<wbr>Timeout</a>
@@ -44675,6 +48743,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httprequesttimeout_nodejs">
 <a href="#httprequesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Request<wbr>Timeout</a>
 </span>
@@ -44734,6 +48810,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_request_timeout_python">
 <a href="#http_request_timeout_python" style="color: inherit; text-decoration: inherit;">http_<wbr>request_<wbr>timeout</a>
@@ -44851,6 +48935,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -44926,6 +49018,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -45003,6 +49103,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -45078,6 +49186,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -45175,6 +49291,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="excludelastrequest_csharp">
 <a href="#excludelastrequest_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Last<wbr>Request</a>
 </span>
@@ -45250,6 +49374,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludelastrequest_go">
 <a href="#excludelastrequest_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Last<wbr>Request</a>
@@ -45327,6 +49459,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="excludelastrequest_nodejs">
 <a href="#excludelastrequest_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Last<wbr>Request</a>
 </span>
@@ -45402,6 +49542,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclude_last_request_python">
 <a href="#exclude_last_request_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>last_<wbr>request</a>
@@ -45631,6 +49779,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -45746,6 +49902,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -45863,6 +50027,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -45978,6 +50150,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -46135,6 +50315,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -46186,6 +50374,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -46239,6 +50435,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -46290,6 +50494,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -46559,6 +50771,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_csharp">
 <a href="#enablepartitiondiscovery_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -46642,6 +50862,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepartitiondiscovery_go">
 <a href="#enablepartitiondiscovery_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
@@ -46727,6 +50955,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepartitiondiscovery_nodejs">
 <a href="#enablepartitiondiscovery_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Partition<wbr>Discovery</a>
 </span>
@@ -46810,6 +51046,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_partition_discovery_python">
 <a href="#enable_partition_discovery_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>partition_<wbr>discovery</a>
@@ -46899,6 +51143,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -46934,6 +51186,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -46971,6 +51231,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -47007,6 +51275,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of copy behavior for copy sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -47038,6 +51314,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httprequesttimeout_csharp">
 <a href="#httprequesttimeout_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Request<wbr>Timeout</a>
@@ -47083,6 +51367,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httprequesttimeout_go">
 <a href="#httprequesttimeout_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Request<wbr>Timeout</a>
 </span>
@@ -47127,6 +51419,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httprequesttimeout_nodejs">
 <a href="#httprequesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Request<wbr>Timeout</a>
 </span>
@@ -47170,6 +51470,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_request_timeout_python">
 <a href="#http_request_timeout_python" style="color: inherit; text-decoration: inherit;">http_<wbr>request_<wbr>timeout</a>
@@ -47227,6 +51535,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -47278,6 +51594,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -47331,6 +51655,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -47382,6 +51714,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -47683,6 +52023,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="importsettings_csharp">
 <a href="#importsettings_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Settings</a>
 </span>
@@ -47742,6 +52090,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importsettings_go">
 <a href="#importsettings_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Settings</a>
@@ -47803,6 +52159,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="importsettings_nodejs">
 <a href="#importsettings_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Settings</a>
 </span>
@@ -47862,6 +52226,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="import_settings_python">
 <a href="#import_settings_python" style="color: inherit; text-decoration: inherit;">import_<wbr>settings</a>
@@ -47927,6 +52299,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="exportsettings_csharp">
 <a href="#exportsettings_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Settings</a>
 </span>
@@ -47970,6 +52350,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportsettings_go">
 <a href="#exportsettings_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Settings</a>
@@ -48015,6 +52403,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="exportsettings_nodejs">
 <a href="#exportsettings_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Settings</a>
 </span>
@@ -48058,6 +52454,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="export_settings_python">
 <a href="#export_settings_python" style="color: inherit; text-decoration: inherit;">export_<wbr>settings</a>
@@ -48115,6 +52519,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -48166,6 +52578,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -48219,6 +52639,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -48270,6 +52698,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -48342,6 +52778,14 @@ The following output properties are available:
         <span class="property-type"><a href="#dwcopycommandsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>DWCopy<wbr>Command<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies Copy Command related settings when allowCopyCommand is true.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -48435,6 +52879,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies Copy Command related settings when allowCopyCommand is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -48526,6 +52978,14 @@ The following output properties are available:
         <span class="property-type"><a href="#dwcopycommandsettingsresponse">DWCopy<wbr>Command<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies Copy Command related settings when allowCopyCommand is true.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
@@ -48619,6 +53079,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies Copy Command related settings when allowCopyCommand is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -48698,6 +53166,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -48783,6 +53259,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -48866,6 +53350,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
@@ -48951,6 +53443,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
 </span>
@@ -49030,6 +53530,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -49123,6 +53631,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -49215,6 +53731,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -49306,6 +53830,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -49411,6 +53943,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -49502,6 +54042,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -49595,6 +54143,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -49686,6 +54242,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -49891,6 +54455,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -49982,6 +54554,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -50075,6 +54655,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -50166,6 +54754,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -50271,6 +54867,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -50362,6 +54966,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -50455,6 +55067,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -50546,6 +55166,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -50911,6 +55539,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -51002,6 +55638,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -51095,6 +55739,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -51186,6 +55838,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -51291,6 +55951,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="isolationlevel_csharp">
 <a href="#isolationlevel_csharp" style="color: inherit; text-decoration: inherit;">Isolation<wbr>Level</a>
 </span>
@@ -51382,6 +56050,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isolationlevel_go">
 <a href="#isolationlevel_go" style="color: inherit; text-decoration: inherit;">Isolation<wbr>Level</a>
@@ -51475,6 +56151,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="isolationlevel_nodejs">
 <a href="#isolationlevel_nodejs" style="color: inherit; text-decoration: inherit;">isolation<wbr>Level</a>
 </span>
@@ -51566,6 +56250,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isolation_level_python">
 <a href="#isolation_level_python" style="color: inherit; text-decoration: inherit;">isolation_<wbr>level</a>
@@ -51663,6 +56355,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -51714,6 +56414,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -51767,6 +56475,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -51818,6 +56534,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -52403,6 +57127,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -52454,6 +57186,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -52507,6 +57247,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -52558,6 +57306,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -52615,6 +57371,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -52658,6 +57422,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -52703,6 +57475,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -52746,6 +57526,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -53015,6 +57803,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -53082,6 +57878,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -53151,6 +57955,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -53218,6 +58030,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -54011,6 +58831,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -54062,6 +58890,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -54115,6 +58951,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -54166,6 +59010,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -55455,6 +60307,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -55490,6 +60350,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -55527,6 +60395,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -55562,6 +60438,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -55602,6 +60486,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -55655,6 +60547,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -55707,6 +60607,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -55758,6 +60666,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
@@ -55995,6 +60911,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="formatsettings_csharp">
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
@@ -56046,6 +60970,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="formatsettings_go">
 <a href="#formatsettings_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
@@ -56099,6 +61031,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="formatsettings_nodejs">
 <a href="#formatsettings_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Settings</a>
 </span>
@@ -56150,6 +61090,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_settings_python">
 <a href="#format_settings_python" style="color: inherit; text-decoration: inherit;">format_<wbr>settings</a>
@@ -56259,6 +61207,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_csharp">
+<a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_csharp">
 <a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -56310,6 +61266,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablemetricscollection_go">
+<a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentconnections_go">
 <a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
@@ -56363,6 +61327,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablemetricscollection_nodejs">
+<a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxconcurrentconnections_nodejs">
 <a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
 </span>
@@ -56414,6 +61386,14 @@ The following output properties are available:
         <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_metrics_collection_python">
+<a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_connections_python">
 <a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
