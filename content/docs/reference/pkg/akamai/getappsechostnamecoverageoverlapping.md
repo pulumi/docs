@@ -103,7 +103,7 @@ const test = pulumi.output(akamai.getAppSecHostnameCoverageOverlapping({
     configId: 43253,
     hostname: "example.com",
     version: 7,
-}, { async: true }));
+}));
 ```
 
 

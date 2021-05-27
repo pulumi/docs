@@ -104,7 +104,7 @@ const apiEndpoints = pulumi.output(akamai.getAppSecApiEndpoints({
     apiName: "TestEndpoint",
     configId: 43253,
     version: 7,
-}, { async: true }));
+}));
 ```
 
 
