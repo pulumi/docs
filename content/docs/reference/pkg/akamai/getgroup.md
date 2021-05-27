@@ -78,10 +78,10 @@ const exampleGroup = pulumi.output(akamai.getGroup({
     contractId: "",
     "data.akamai_contract.example.id": [{}],
     groupName: "example group name",
-}, { async: true }));
+}));
 const exampleContract = pulumi.output(akamai.getContract({
     groupName: "example group name",
-}, { async: true }));
+}));
 const exampleProperty = new akamai.Property("example", {
     "data.akamai_group.example.id": [{}],
     groupId: "",

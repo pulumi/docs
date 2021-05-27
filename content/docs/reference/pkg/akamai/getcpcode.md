@@ -123,7 +123,7 @@ const example = pulumi.output(akamai.getCpCode({
     contractId: "ctr_1-AB123",
     groupId: "grp_123",
     name: "my cpcode name",
-}, { async: true }));
+}));
 ```
 
 

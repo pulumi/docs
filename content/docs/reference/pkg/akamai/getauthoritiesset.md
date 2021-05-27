@@ -106,7 +106,7 @@ import * as akamai from "@pulumi/akamai";
 
 const example = pulumi.output(akamai.getAuthoritiesSet({
     contract: "ctr_1-AB123",
-}, { async: true }));
+}));
 ```
 
 

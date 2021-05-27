@@ -103,7 +103,7 @@ const matchTargets = pulumi.output(akamai.getAppSecHostnameCoverageMatchTargets(
     configId: 43253,
     hostname: "example.com",
     version: 7,
-}, { async: true }));
+}));
 ```
 
 
