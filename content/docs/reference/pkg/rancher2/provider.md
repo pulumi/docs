@@ -37,6 +37,7 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">insecure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">secret_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">token_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -210,8 +211,8 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow insecure connections to Rancher. Mandatory if self signed tls and not ca_certs provided
- It can also be sourced from the following environment variable: `RANCHER_INSECURE`{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+ It can also be sourced from the following environment variable: `RANCHER_INSECURE`{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="retries_csharp">
 <a href="#retries_csharp" style="color: inherit; text-decoration: inherit;">Retries</a>
 </span>
@@ -219,7 +220,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Rancher connection retries
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use timeout instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_csharp">
 <a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -228,6 +229,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API secret used to authenticate with the rancher server
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Rancher connection timeout (retry every 5s). Golang duration format, ex: "60s"
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenkey_csharp">
@@ -286,8 +296,8 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow insecure connections to Rancher. Mandatory if self signed tls and not ca_certs provided
- It can also be sourced from the following environment variable: `RANCHER_INSECURE`{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+ It can also be sourced from the following environment variable: `RANCHER_INSECURE`{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="retries_go">
 <a href="#retries_go" style="color: inherit; text-decoration: inherit;">Retries</a>
 </span>
@@ -295,7 +305,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Rancher connection retries
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use timeout instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_go">
 <a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -304,6 +314,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API secret used to authenticate with the rancher server
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Rancher connection timeout (retry every 5s). Golang duration format, ex: "60s"
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenkey_go">
@@ -362,8 +381,8 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow insecure connections to Rancher. Mandatory if self signed tls and not ca_certs provided
- It can also be sourced from the following environment variable: `RANCHER_INSECURE`{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+ It can also be sourced from the following environment variable: `RANCHER_INSECURE`{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="retries_nodejs">
 <a href="#retries_nodejs" style="color: inherit; text-decoration: inherit;">retries</a>
 </span>
@@ -371,7 +390,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Rancher connection retries
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use timeout instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_nodejs">
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
@@ -380,6 +399,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API secret used to authenticate with the rancher server
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Rancher connection timeout (retry every 5s). Golang duration format, ex: "60s"
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenkey_nodejs">
@@ -438,8 +466,8 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow insecure connections to Rancher. Mandatory if self signed tls and not ca_certs provided
- It can also be sourced from the following environment variable: `RANCHER_INSECURE`{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+ It can also be sourced from the following environment variable: `RANCHER_INSECURE`{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="retries_python">
 <a href="#retries_python" style="color: inherit; text-decoration: inherit;">retries</a>
 </span>
@@ -447,7 +475,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Rancher connection retries
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use timeout instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="secret_key_python">
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
@@ -456,6 +484,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API secret used to authenticate with the rancher server
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Rancher connection timeout (retry every 5s). Golang duration format, ex: "60s"
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_key_python">

@@ -2135,6 +2135,7 @@ const fooCluster = new rancher2.Cluster("fooCluster", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">agent_env_vars</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterAgentEnvVarArgs]]</span> = None<span class="p">,</span>
             <span class="nx">aks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAksConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
             <span class="nx">cluster_auth_endpoint</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAuthEndpointArgs]</span> = None<span class="p">,</span>
@@ -2292,6 +2293,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="agentenvvars_csharp">
+<a href="#agentenvvars_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Env<wbr>Vars</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusteragentenvvar">List&lt;Cluster<wbr>Agent<wbr>Env<wbr>Var<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Optional Agent Env Vars for Rancher agent. Just for Rancher v2.5.6 and above (list)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aksconfig_csharp">
 <a href="#aksconfig_csharp" style="color: inherit; text-decoration: inherit;">Aks<wbr>Config</a>
@@ -2558,6 +2568,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="agentenvvars_go">
+<a href="#agentenvvars_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Env<wbr>Vars</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusteragentenvvar">[]Cluster<wbr>Agent<wbr>Env<wbr>Var</a></span>
+    </dt>
+    <dd>{{% md %}}Optional Agent Env Vars for Rancher agent. Just for Rancher v2.5.6 and above (list)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="aksconfig_go">
 <a href="#aksconfig_go" style="color: inherit; text-decoration: inherit;">Aks<wbr>Config</a>
 </span>
@@ -2823,6 +2842,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="agentenvvars_nodejs">
+<a href="#agentenvvars_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Env<wbr>Vars</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusteragentenvvar">Cluster<wbr>Agent<wbr>Env<wbr>Var<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Optional Agent Env Vars for Rancher agent. Just for Rancher v2.5.6 and above (list)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="aksconfig_nodejs">
 <a href="#aksconfig_nodejs" style="color: inherit; text-decoration: inherit;">aks<wbr>Config</a>
 </span>
@@ -3087,6 +3115,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="agent_env_vars_python">
+<a href="#agent_env_vars_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>env_<wbr>vars</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusteragentenvvar">Sequence[Cluster<wbr>Agent<wbr>Env<wbr>Var<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Optional Agent Env Vars for Rancher agent. Just for Rancher v2.5.6 and above (list)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aks_config_python">
 <a href="#aks_config_python" style="color: inherit; text-decoration: inherit;">aks_<wbr>config</a>
@@ -3673,6 +3710,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">agent_env_vars</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterAgentEnvVarArgs]]</span> = None<span class="p">,</span>
         <span class="nx">aks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAksConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
         <span class="nx">ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -3820,6 +3858,15 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_agentenvvars_csharp">
+<a href="#state_agentenvvars_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Env<wbr>Vars</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusteragentenvvar">List&lt;Cluster<wbr>Agent<wbr>Env<wbr>Var<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Optional Agent Env Vars for Rancher agent. Just for Rancher v2.5.6 and above (list)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aksconfig_csharp">
 <a href="#state_aksconfig_csharp" style="color: inherit; text-decoration: inherit;">Aks<wbr>Config</a>
@@ -4149,6 +4196,15 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_agentenvvars_go">
+<a href="#state_agentenvvars_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Env<wbr>Vars</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusteragentenvvar">[]Cluster<wbr>Agent<wbr>Env<wbr>Var</a></span>
+    </dt>
+    <dd>{{% md %}}Optional Agent Env Vars for Rancher agent. Just for Rancher v2.5.6 and above (list)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_aksconfig_go">
 <a href="#state_aksconfig_go" style="color: inherit; text-decoration: inherit;">Aks<wbr>Config</a>
 </span>
@@ -4477,6 +4533,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_agentenvvars_nodejs">
+<a href="#state_agentenvvars_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Env<wbr>Vars</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusteragentenvvar">Cluster<wbr>Agent<wbr>Env<wbr>Var<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Optional Agent Env Vars for Rancher agent. Just for Rancher v2.5.6 and above (list)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_aksconfig_nodejs">
 <a href="#state_aksconfig_nodejs" style="color: inherit; text-decoration: inherit;">aks<wbr>Config</a>
 </span>
@@ -4804,6 +4869,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_agent_env_vars_python">
+<a href="#state_agent_env_vars_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>env_<wbr>vars</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusteragentenvvar">Sequence[Cluster<wbr>Agent<wbr>Env<wbr>Var<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Optional Agent Env Vars for Rancher agent. Just for Rancher v2.5.6 and above (list)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aks_config_python">
 <a href="#state_aks_config_python" style="color: inherit; text-decoration: inherit;">aks_<wbr>config</a>
@@ -5139,6 +5213,96 @@ The following state arguments are supported:
 
 
 
+<h4 id="clusteragentenvvar">Cluster<wbr>Agent<wbr>Env<wbr>Var</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE taint value (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE taint value (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GKE taint value (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GKE taint value (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="clusteraksconfig">Cluster<wbr>Aks<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -5465,7 +5629,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign Kubernetes Pod IPs when \"network plugin\" is specified in \"kubenet\". Default `172.244.0.0/16` (string)
+    <dd>{{% md %}}A CIDR IP range from which to assign Kubernetes Pod IPs (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicecidr_csharp">
@@ -5474,16 +5638,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign Kubernetes Service cluster IPs. It must not overlap with any Subnet IP ranges. Default `10.0.0.0/16` (string)
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}A CIDR IP range from which to assign Kubernetes Service IPs (string)
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="tag_csharp">
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags for Kubernetes cluster. For example, foo=bar (map)
+    <dd>{{% md %}}Use `tags` argument instead as []string
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use tags argument instead as []string{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster tags (map)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5811,7 +5984,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign Kubernetes Pod IPs when \"network plugin\" is specified in \"kubenet\". Default `172.244.0.0/16` (string)
+    <dd>{{% md %}}A CIDR IP range from which to assign Kubernetes Pod IPs (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicecidr_go">
@@ -5820,16 +5993,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign Kubernetes Service cluster IPs. It must not overlap with any Subnet IP ranges. Default `10.0.0.0/16` (string)
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}A CIDR IP range from which to assign Kubernetes Service IPs (string)
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="tag_go">
 <a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Tags for Kubernetes cluster. For example, foo=bar (map)
+    <dd>{{% md %}}Use `tags` argument instead as []string
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use tags argument instead as []string{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster tags (map)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6157,7 +6339,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign Kubernetes Pod IPs when \"network plugin\" is specified in \"kubenet\". Default `172.244.0.0/16` (string)
+    <dd>{{% md %}}A CIDR IP range from which to assign Kubernetes Pod IPs (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicecidr_nodejs">
@@ -6166,16 +6348,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign Kubernetes Service cluster IPs. It must not overlap with any Subnet IP ranges. Default `10.0.0.0/16` (string)
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}A CIDR IP range from which to assign Kubernetes Service IPs (string)
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Tags for Kubernetes cluster. For example, foo=bar (map)
+    <dd>{{% md %}}Use `tags` argument instead as []string
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use tags argument instead as []string{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster tags (map)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6503,7 +6694,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign Kubernetes Pod IPs when \"network plugin\" is specified in \"kubenet\". Default `172.244.0.0/16` (string)
+    <dd>{{% md %}}A CIDR IP range from which to assign Kubernetes Pod IPs (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_cidr_python">
@@ -6512,16 +6703,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign Kubernetes Service cluster IPs. It must not overlap with any Subnet IP ranges. Default `10.0.0.0/16` (string)
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}A CIDR IP range from which to assign Kubernetes Service IPs (string)
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="tag_python">
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Tags for Kubernetes cluster. For example, foo=bar (map)
+    <dd>{{% md %}}Use `tags` argument instead as []string
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use tags argument instead as []string{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster tags (map)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -14428,6 +14628,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The contents of the SSH public key file to use for the nodes (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="podcidr_csharp">
+<a href="#podcidr_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A CIDR IP range from which to assign Kubernetes Pod IPs (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="privatekeypassphrase_csharp">
 <a href="#privatekeypassphrase_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Passphrase</a>
 </span>
@@ -14453,6 +14662,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of OKE worker nodes in each subnet / availability domain. Default `1` (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicecidr_csharp">
+<a href="#servicecidr_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A CIDR IP range from which to assign Kubernetes Service IPs (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicednsdomainname_csharp">
@@ -14684,6 +14902,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The contents of the SSH public key file to use for the nodes (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="podcidr_go">
+<a href="#podcidr_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A CIDR IP range from which to assign Kubernetes Pod IPs (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="privatekeypassphrase_go">
 <a href="#privatekeypassphrase_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Passphrase</a>
 </span>
@@ -14709,6 +14936,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of OKE worker nodes in each subnet / availability domain. Default `1` (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicecidr_go">
+<a href="#servicecidr_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A CIDR IP range from which to assign Kubernetes Service IPs (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicednsdomainname_go">
@@ -14940,6 +15176,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The contents of the SSH public key file to use for the nodes (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="podcidr_nodejs">
+<a href="#podcidr_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A CIDR IP range from which to assign Kubernetes Pod IPs (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="privatekeypassphrase_nodejs">
 <a href="#privatekeypassphrase_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Passphrase</a>
 </span>
@@ -14965,6 +15210,15 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of OKE worker nodes in each subnet / availability domain. Default `1` (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicecidr_nodejs">
+<a href="#servicecidr_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A CIDR IP range from which to assign Kubernetes Service IPs (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicednsdomainname_nodejs">
@@ -15196,6 +15450,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The contents of the SSH public key file to use for the nodes (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="pod_cidr_python">
+<a href="#pod_cidr_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A CIDR IP range from which to assign Kubernetes Pod IPs (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="private_key_passphrase_python">
 <a href="#private_key_passphrase_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>passphrase</a>
 </span>
@@ -15221,6 +15484,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of OKE worker nodes in each subnet / availability domain. Default `1` (int)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_cidr_python">
+<a href="#service_cidr_python" style="color: inherit; text-decoration: inherit;">service_<wbr>cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A CIDR IP range from which to assign Kubernetes Service IPs (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_dns_domain_name_python">
