@@ -156,25 +156,25 @@ import * as azuredevops from "@pulumi/azuredevops";
 // Load single user by using it's principal name
 const user = pulumi.output(azuredevops.getUsers({
     principalName: "contoso-user@contoso.onmicrosoft.com",
-}, { async: true }));
+}));
 // Load all users know inside an organization
-const all_users = pulumi.output(azuredevops.getUsers({ async: true }));
+const all_users = pulumi.output(azuredevops.getUsers());
 // Load all users know inside an organization originating from a specific source (origin)
 const all_from_origin = pulumi.output(azuredevops.getUsers({
     origin: "aad",
-}, { async: true }));
+}));
 // Load all users know inside an organization filtered by their subject types
 const all_from_subject_types = pulumi.output(azuredevops.getUsers({
     subjectTypes: [
         "aad",
         "msa",
     ],
-}, { async: true }));
+}));
 // Load a single user by origin and origin ID
 const all_from_origin_id = pulumi.output(azuredevops.getUsers({
     origin: "aad",
     originId: "a7ead982-8438-4cd2-b9e3-c3aa51a7b675",
-}, { async: true }));
+}));
 ```
 
 
