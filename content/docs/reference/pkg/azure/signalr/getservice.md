@@ -99,7 +99,7 @@ import * as azure from "@pulumi/azure";
 const example = pulumi.output(azure.signalr.getService({
     name: "test-signalr",
     resourceGroupName: "signalr-resource-group",
-}, { async: true }));
+}));
 ```
 
 

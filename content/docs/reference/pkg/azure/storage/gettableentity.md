@@ -107,7 +107,7 @@ const example = pulumi.output(azure.storage.getTableEntity({
     rowKey: "example-row-key",
     storageAccountName: "example-storage-account-name",
     tableName: "example-table-name",
-}, { async: true }));
+}));
 ```
 
 

@@ -99,7 +99,7 @@ import * as azure from "@pulumi/azure";
 const example = pulumi.output(azure.network.getRouteTable({
     name: "myroutetable",
     resourceGroupName: "some-resource-group",
-}, { async: true }));
+}));
 ```
 
 

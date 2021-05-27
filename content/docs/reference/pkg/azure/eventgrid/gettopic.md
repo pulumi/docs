@@ -99,7 +99,7 @@ import * as azure from "@pulumi/azure";
 const example = pulumi.output(azure.eventgrid.getTopic({
     name: "my-eventgrid-topic",
     resourceGroupName: "example-resources",
-}, { async: true }));
+}));
 ```
 
 

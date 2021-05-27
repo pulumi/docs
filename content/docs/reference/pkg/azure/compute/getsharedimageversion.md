@@ -107,7 +107,7 @@ const example = pulumi.output(azure.compute.getSharedImageVersion({
     imageName: "my-image",
     name: "1.0.0",
     resourceGroupName: "example-resources",
-}, { async: true }));
+}));
 ```
 
 

@@ -103,7 +103,7 @@ const policy = pulumi.output(azure.backup.getPolicyVM({
     name: "policy",
     recoveryVaultName: "recovery_vault",
     resourceGroupName: "resource_group",
-}, { async: true }));
+}));
 ```
 
 

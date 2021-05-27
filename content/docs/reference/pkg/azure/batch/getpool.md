@@ -103,7 +103,7 @@ const example = pulumi.output(azure.batch.getPool({
     accountName: "testbatchaccount",
     name: "testbatchpool",
     resourceGroupName: "test",
-}, { async: true }));
+}));
 ```
 
 
