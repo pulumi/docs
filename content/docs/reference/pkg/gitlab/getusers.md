@@ -110,7 +110,7 @@ const example = pulumi.output(gitlab.getUsers({
     createdBefore: "2019-01-01",
     orderBy: "name",
     sort: "desc",
-}, { async: true }));
+}));
 ```
 
 

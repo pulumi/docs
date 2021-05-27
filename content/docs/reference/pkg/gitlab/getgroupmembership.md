@@ -98,7 +98,7 @@ import * as gitlab from "@pulumi/gitlab";
 
 const example = pulumi.output(gitlab.getGroupMembership({
     groupId: 123,
-}, { async: true }));
+}));
 ```
 
 
