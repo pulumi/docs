@@ -209,6 +209,15 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="agentenvvars_csharp">
+<a href="#agentenvvars_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Env<wbr>Vars</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}(Computed) Optional Agent Env Vars for Rancher agent. Just for Rancher v2.5.6 and above (list)
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="aksconfig_csharp">
 <a href="#aksconfig_csharp" style="color: inherit; text-decoration: inherit;">Aks<wbr>Config</a>
 </span>
@@ -225,6 +234,15 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for Node Pool object (map)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="cacert_csharp">
+<a href="#cacert_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) K8s cluster ca cert (string)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterauthendpoint_csharp">
@@ -480,6 +498,15 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="agentenvvars_go">
+<a href="#agentenvvars_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Env<wbr>Vars</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) Optional Agent Env Vars for Rancher agent. Just for Rancher v2.5.6 and above (list)
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="aksconfig_go">
 <a href="#aksconfig_go" style="color: inherit; text-decoration: inherit;">Aks<wbr>Config</a>
 </span>
@@ -496,6 +523,15 @@ The following output properties are available:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for Node Pool object (map)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="cacert_go">
+<a href="#cacert_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) K8s cluster ca cert (string)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterauthendpoint_go">
@@ -751,6 +787,15 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="agentenvvars_nodejs">
+<a href="#agentenvvars_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Env<wbr>Vars</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}(Computed) Optional Agent Env Vars for Rancher agent. Just for Rancher v2.5.6 and above (list)
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="aksconfig_nodejs">
 <a href="#aksconfig_nodejs" style="color: inherit; text-decoration: inherit;">aks<wbr>Config</a>
 </span>
@@ -767,6 +812,15 @@ The following output properties are available:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for Node Pool object (map)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="cacert_nodejs">
+<a href="#cacert_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed) K8s cluster ca cert (string)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterauthendpoint_nodejs">
@@ -1022,6 +1076,15 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="agent_env_vars_python">
+<a href="#agent_env_vars_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>env_<wbr>vars</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}(Computed) Optional Agent Env Vars for Rancher agent. Just for Rancher v2.5.6 and above (list)
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="aks_config_python">
 <a href="#aks_config_python" style="color: inherit; text-decoration: inherit;">aks_<wbr>config</a>
 </span>
@@ -1038,6 +1101,15 @@ The following output properties are available:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for Node Pool object (map)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ca_cert_python">
+<a href="#ca_cert_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Computed) K8s cluster ca cert (string)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cluster_auth_endpoint_python">
@@ -1381,13 +1453,21 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="tag_csharp">
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use tags argument instead as []string{{% /md %}}</p></dd><dt class="property-required"
+            title="Required">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1689,13 +1769,21 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="tag_go">
 <a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use tags argument instead as []string{{% /md %}}</p></dd><dt class="property-required"
+            title="Required">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1997,13 +2085,21 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use tags argument instead as []string{{% /md %}}</p></dd><dt class="property-required"
+            title="Required">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2305,13 +2401,21 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="tag_python">
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use tags argument instead as []string{{% /md %}}</p></dd><dt class="property-required"
+            title="Required">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9720,6 +9824,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="podcidr_csharp">
+<a href="#podcidr_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="privatekeypassphrase_csharp">
 <a href="#privatekeypassphrase_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Passphrase</a>
 </span>
@@ -9741,6 +9853,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicecidr_csharp">
+<a href="#servicecidr_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9949,6 +10069,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="podcidr_go">
+<a href="#podcidr_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="privatekeypassphrase_go">
 <a href="#privatekeypassphrase_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Passphrase</a>
 </span>
@@ -9970,6 +10098,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicecidr_go">
+<a href="#servicecidr_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10178,6 +10314,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="podcidr_nodejs">
+<a href="#podcidr_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="privatekeypassphrase_nodejs">
 <a href="#privatekeypassphrase_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Passphrase</a>
 </span>
@@ -10199,6 +10343,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicecidr_nodejs">
+<a href="#servicecidr_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10407,6 +10559,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="pod_cidr_python">
+<a href="#pod_cidr_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="private_key_passphrase_python">
 <a href="#private_key_passphrase_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>passphrase</a>
 </span>
@@ -10428,6 +10588,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_cidr_python">
+<a href="#service_cidr_python" style="color: inherit; text-decoration: inherit;">service_<wbr>cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
