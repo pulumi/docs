@@ -97,7 +97,7 @@ import * as aiven from "@pulumi/aiven";
 
 const myproject = pulumi.output(aiven.getProject({
     project: "<PROJECT_NAME>",
-}, { async: true }));
+}));
 ```
 
 
