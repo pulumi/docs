@@ -105,7 +105,7 @@ const centos = pulumi.output(aws.ssm.getPatchBaseline({
     namePrefix: "AWS-",
     operatingSystem: "CENTOS",
     owner: "AWS",
-}, { async: true }));
+}));
 ```
 
 

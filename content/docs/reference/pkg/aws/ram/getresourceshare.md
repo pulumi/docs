@@ -24,7 +24,7 @@ const tagFilter = pulumi.output(aws.ram.getResourceShare({
     }],
     name: "MyResourceName",
     resourceOwner: "SELF",
-}, { async: true }));
+}));
 ```
 ```python
 import pulumi
@@ -182,7 +182,7 @@ import * as aws from "@pulumi/aws";
 const example = pulumi.output(aws.ram.getResourceShare({
     name: "example",
     resourceOwner: "SELF",
-}, { async: true }));
+}));
 ```
 
 

@@ -98,7 +98,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.route53.getResolverEndpoint({
     resolverEndpointId: "rslvr-in-1abc2345ef678g91h",
-}, { async: true }));
+}));
 ```
 
 

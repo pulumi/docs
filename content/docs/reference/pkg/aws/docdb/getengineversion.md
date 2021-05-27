@@ -96,7 +96,7 @@ import * as aws from "@pulumi/aws";
 
 const test = pulumi.output(aws.docdb.getEngineVersion({
     version: "3.6.0",
-}, { async: true }));
+}));
 ```
 
 

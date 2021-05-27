@@ -100,7 +100,7 @@ import * as aws from "@pulumi/aws";
 const flowerTypes = pulumi.output(aws.lex.getSlotType({
     name: "FlowerTypes",
     version: "1",
-}, { async: true }));
+}));
 ```
 
 

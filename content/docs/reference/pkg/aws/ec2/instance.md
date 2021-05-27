@@ -265,6 +265,7 @@ const fooInstance = new aws.ec2.Instance("fooInstance", {
              <span class="nx">ami</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">capacity_reservation_specification</span><span class="p">:</span> <span class="nx">Optional[InstanceCapacityReservationSpecificationArgs]</span> = None<span class="p">,</span>
              <span class="nx">cpu_core_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">cpu_threads_per_core</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[InstanceCreditSpecificationArgs]</span> = None<span class="p">,</span>
@@ -462,6 +463,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AZ to start the instance in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationspecification_csharp">
+<a href="#capacityreservationspecification_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucorecount_csharp">
@@ -704,7 +714,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_csharp">
@@ -799,6 +809,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AZ to start the instance in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationspecification_go">
+<a href="#capacityreservationspecification_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucorecount_go">
@@ -1041,7 +1060,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_go">
@@ -1136,6 +1155,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AZ to start the instance in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationspecification_nodejs">
+<a href="#capacityreservationspecification_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucorecount_nodejs">
@@ -1378,7 +1406,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_nodejs">
@@ -1473,6 +1501,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AZ to start the instance in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_reservation_specification_python">
+<a href="#capacity_reservation_specification_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_core_count_python">
@@ -1715,7 +1752,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_all_python">
@@ -2136,6 +2173,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">capacity_reservation_specification</span><span class="p">:</span> <span class="nx">Optional[InstanceCapacityReservationSpecificationArgs]</span> = None<span class="p">,</span>
         <span class="nx">cpu_core_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">cpu_threads_per_core</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[InstanceCreditSpecificationArgs]</span> = None<span class="p">,</span>
@@ -2323,6 +2361,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AZ to start the instance in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_capacityreservationspecification_csharp">
+<a href="#state_capacityreservationspecification_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpucorecount_csharp">
@@ -2637,7 +2684,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_csharp">
@@ -2732,6 +2779,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AZ to start the instance in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_capacityreservationspecification_go">
+<a href="#state_capacityreservationspecification_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpucorecount_go">
@@ -3046,7 +3102,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_go">
@@ -3141,6 +3197,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AZ to start the instance in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_capacityreservationspecification_nodejs">
+<a href="#state_capacityreservationspecification_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpucorecount_nodejs">
@@ -3455,7 +3520,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_nodejs">
@@ -3550,6 +3615,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AZ to start the instance in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_capacity_reservation_specification_python">
+<a href="#state_capacity_reservation_specification_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpu_core_count_python">
@@ -3864,7 +3938,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_all_python">
@@ -3930,6 +4004,150 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationpreference_csharp">
+<a href="#capacityreservationpreference_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the instance's Capacity Reservation preferences. Can be `"open"` or `"none"`. (Default: `"open"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationtarget_csharp">
+<a href="#capacityreservationtarget_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecificationcapacityreservationtarget">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationpreference_go">
+<a href="#capacityreservationpreference_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the instance's Capacity Reservation preferences. Can be `"open"` or `"none"`. (Default: `"open"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationtarget_go">
+<a href="#capacityreservationtarget_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecificationcapacityreservationtarget">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationpreference_nodejs">
+<a href="#capacityreservationpreference_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the instance's Capacity Reservation preferences. Can be `"open"` or `"none"`. (Default: `"open"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationtarget_nodejs">
+<a href="#capacityreservationtarget_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecificationcapacityreservationtarget">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_reservation_preference_python">
+<a href="#capacity_reservation_preference_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates the instance's Capacity Reservation preferences. Can be `"open"` or `"none"`. (Default: `"open"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_reservation_target_python">
+<a href="#capacity_reservation_target_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecificationcapacityreservationtarget">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancecapacityreservationspecificationcapacityreservationtarget">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationid_csharp">
+<a href="#capacityreservationid_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Capacity Reservation in which to run the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationid_go">
+<a href="#capacityreservationid_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Capacity Reservation in which to run the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationid_nodejs">
+<a href="#capacityreservationid_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Capacity Reservation in which to run the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_reservation_id_python">
+<a href="#capacity_reservation_id_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Capacity Reservation in which to run the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="instancecreditspecification">Instance<wbr>Credit<wbr>Specification</h4>
 

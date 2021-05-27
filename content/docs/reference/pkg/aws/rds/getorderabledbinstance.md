@@ -131,7 +131,7 @@ const test = pulumi.output(aws.rds.getOrderableDbInstance({
         "db.t3.small",
     ],
     storageType: "standard",
-}, { async: true }));
+}));
 ```
 
 

@@ -1486,7 +1486,7 @@ class MyStack : Stack
                     Type = "Group",
                     Permissions = 
                     {
-                        "READ",
+                        "READ_ACP",
                         "WRITE",
                     },
                     Uri = "http://acs.amazonaws.com/groups/s3/LogDelivery",
@@ -1530,7 +1530,7 @@ func main() {
 				&s3.BucketGrantArgs{
 					Type: pulumi.String("Group"),
 					Permissions: pulumi.StringArray{
-						pulumi.String("READ"),
+						pulumi.String("READ_ACP"),
 						pulumi.String("WRITE"),
 					},
 					Uri: pulumi.String("http://acs.amazonaws.com/groups/s3/LogDelivery"),
@@ -1565,7 +1565,7 @@ bucket = aws.s3.Bucket("bucket", grants=[
     aws.s3.BucketGrantArgs(
         type="Group",
         permissions=[
-            "READ",
+            "READ_ACP",
             "WRITE",
         ],
         uri="http://acs.amazonaws.com/groups/s3/LogDelivery",
@@ -1594,7 +1594,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
     {
         type: "Group",
         permissions: [
-            "READ",
+            "READ_ACP",
             "WRITE",
         ],
         uri: "http://acs.amazonaws.com/groups/s3/LogDelivery",

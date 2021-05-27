@@ -172,6 +172,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
                         <span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                         <span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">block_duration_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                        <span class="nx">capacity_reservation_specification</span><span class="p">:</span> <span class="nx">Optional[SpotInstanceRequestCapacityReservationSpecificationArgs]</span> = None<span class="p">,</span>
                         <span class="nx">cpu_core_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                         <span class="nx">cpu_threads_per_core</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                         <span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[SpotInstanceRequestCreditSpecificationArgs]</span> = None<span class="p">,</span>
@@ -387,6 +388,15 @@ The SpotInstanceRequest resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
 Note that you can't specify an Availability Zone group or a launch group if you specify a duration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationspecification_csharp">
+<a href="#capacityreservationspecification_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotinstancerequestcapacityreservationspecification">Spot<wbr>Instance<wbr>Request<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucorecount_csharp">
@@ -667,7 +677,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_csharp">
@@ -802,6 +812,15 @@ timeout of 10m is reached.
     <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
 Note that you can't specify an Availability Zone group or a launch group if you specify a duration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationspecification_go">
+<a href="#capacityreservationspecification_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotinstancerequestcapacityreservationspecification">Spot<wbr>Instance<wbr>Request<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucorecount_go">
@@ -1082,7 +1101,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_go">
@@ -1217,6 +1236,15 @@ timeout of 10m is reached.
     <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
 Note that you can't specify an Availability Zone group or a launch group if you specify a duration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationspecification_nodejs">
+<a href="#capacityreservationspecification_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotinstancerequestcapacityreservationspecification">Spot<wbr>Instance<wbr>Request<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucorecount_nodejs">
@@ -1497,7 +1525,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_nodejs">
@@ -1632,6 +1660,15 @@ timeout of 10m is reached.
     <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
 Note that you can't specify an Availability Zone group or a launch group if you specify a duration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_reservation_specification_python">
+<a href="#capacity_reservation_specification_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotinstancerequestcapacityreservationspecification">Spot<wbr>Instance<wbr>Request<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_core_count_python">
@@ -1912,7 +1949,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_all_python">
@@ -2483,6 +2520,7 @@ Get an existing SpotInstanceRequest resource's state with the given name, ID, an
         <span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">block_duration_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">capacity_reservation_specification</span><span class="p">:</span> <span class="nx">Optional[SpotInstanceRequestCapacityReservationSpecificationArgs]</span> = None<span class="p">,</span>
         <span class="nx">cpu_core_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">cpu_threads_per_core</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[SpotInstanceRequestCreditSpecificationArgs]</span> = None<span class="p">,</span>
@@ -2690,6 +2728,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
 Note that you can't specify an Availability Zone group or a launch group if you specify a duration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_capacityreservationspecification_csharp">
+<a href="#state_capacityreservationspecification_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotinstancerequestcapacityreservationspecification">Spot<wbr>Instance<wbr>Request<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpucorecount_csharp">
@@ -3073,7 +3120,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_csharp">
@@ -3207,6 +3254,15 @@ timeout of 10m is reached.
     <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
 Note that you can't specify an Availability Zone group or a launch group if you specify a duration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_capacityreservationspecification_go">
+<a href="#state_capacityreservationspecification_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotinstancerequestcapacityreservationspecification">Spot<wbr>Instance<wbr>Request<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpucorecount_go">
@@ -3590,7 +3646,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_go">
@@ -3724,6 +3780,15 @@ timeout of 10m is reached.
     <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
 Note that you can't specify an Availability Zone group or a launch group if you specify a duration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_capacityreservationspecification_nodejs">
+<a href="#state_capacityreservationspecification_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotinstancerequestcapacityreservationspecification">Spot<wbr>Instance<wbr>Request<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpucorecount_nodejs">
@@ -4107,7 +4172,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_nodejs">
@@ -4241,6 +4306,15 @@ timeout of 10m is reached.
     <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
 Note that you can't specify an Availability Zone group or a launch group if you specify a duration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_capacity_reservation_specification_python">
+<a href="#state_capacity_reservation_specification_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotinstancerequestcapacityreservationspecification">Spot<wbr>Instance<wbr>Request<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpu_core_count_python">
@@ -4624,7 +4698,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_all_python">
@@ -4719,6 +4793,150 @@ timeout of 10m is reached.
 ## Supporting Types
 
 
+
+<h4 id="spotinstancerequestcapacityreservationspecification">Spot<wbr>Instance<wbr>Request<wbr>Capacity<wbr>Reservation<wbr>Specification</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationpreference_csharp">
+<a href="#capacityreservationpreference_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the instance's Capacity Reservation preferences. Can be `"open"` or `"none"`. (Default: `"open"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationtarget_csharp">
+<a href="#capacityreservationtarget_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotinstancerequestcapacityreservationspecificationcapacityreservationtarget">Spot<wbr>Instance<wbr>Request<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationpreference_go">
+<a href="#capacityreservationpreference_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the instance's Capacity Reservation preferences. Can be `"open"` or `"none"`. (Default: `"open"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationtarget_go">
+<a href="#capacityreservationtarget_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotinstancerequestcapacityreservationspecificationcapacityreservationtarget">Spot<wbr>Instance<wbr>Request<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationpreference_nodejs">
+<a href="#capacityreservationpreference_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the instance's Capacity Reservation preferences. Can be `"open"` or `"none"`. (Default: `"open"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationtarget_nodejs">
+<a href="#capacityreservationtarget_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotinstancerequestcapacityreservationspecificationcapacityreservationtarget">Spot<wbr>Instance<wbr>Request<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_reservation_preference_python">
+<a href="#capacity_reservation_preference_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates the instance's Capacity Reservation preferences. Can be `"open"` or `"none"`. (Default: `"open"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_reservation_target_python">
+<a href="#capacity_reservation_target_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotinstancerequestcapacityreservationspecificationcapacityreservationtarget">Spot<wbr>Instance<wbr>Request<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="spotinstancerequestcapacityreservationspecificationcapacityreservationtarget">Spot<wbr>Instance<wbr>Request<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationid_csharp">
+<a href="#capacityreservationid_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Capacity Reservation in which to run the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationid_go">
+<a href="#capacityreservationid_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Capacity Reservation in which to run the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationid_nodejs">
+<a href="#capacityreservationid_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Capacity Reservation in which to run the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_reservation_id_python">
+<a href="#capacity_reservation_id_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Capacity Reservation in which to run the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</h4>
 

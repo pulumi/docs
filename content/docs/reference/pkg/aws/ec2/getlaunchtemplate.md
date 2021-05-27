@@ -96,7 +96,7 @@ import * as aws from "@pulumi/aws";
 
 const defaultLaunchTemplate = pulumi.output(aws.ec2.getLaunchTemplate({
     name: "my-launch-template",
-}, { async: true }));
+}));
 ```
 
 
@@ -203,7 +203,7 @@ const test = pulumi.output(aws.ec2.getLaunchTemplate({
         name: "launch-template-name",
         values: ["some-template"],
     }],
-}, { async: true }));
+}));
 ```
 
 

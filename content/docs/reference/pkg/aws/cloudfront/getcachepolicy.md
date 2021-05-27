@@ -95,7 +95,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.cloudfront.getCachePolicy({
     name: "example-policy",
-}, { async: true }));
+}));
 ```
 
 

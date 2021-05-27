@@ -116,7 +116,7 @@ const test = new aws.ec2.DedicatedHost("test", {
 });
 const testData = test.id.apply(id => aws.ec2.getDedicatedHost({
     hostId: id,
-}, { async: true }));
+}));
 ```
 
 

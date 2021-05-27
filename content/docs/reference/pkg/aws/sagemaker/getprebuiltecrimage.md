@@ -102,7 +102,7 @@ import * as aws from "@pulumi/aws";
 const test = pulumi.output(aws.sagemaker.getPrebuiltEcrImage({
     imageTag: "2.2-1.0.11.0",
     repositoryName: "sagemaker-scikit-learn",
-}, { async: true }));
+}));
 ```
 
 

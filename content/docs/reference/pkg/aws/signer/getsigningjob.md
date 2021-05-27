@@ -95,7 +95,7 @@ import * as aws from "@pulumi/aws";
 
 const buildSigningJob = pulumi.output(aws.signer.getSigningJob({
     jobId: "9ed7e5c3-b8d4-4da0-8459-44e0b068f7ee",
-}, { async: true }));
+}));
 ```
 
 

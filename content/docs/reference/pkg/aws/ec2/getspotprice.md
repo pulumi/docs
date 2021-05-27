@@ -128,7 +128,7 @@ const example = pulumi.output(aws.ec2.getSpotPrice({
         values: ["Linux/UNIX"],
     }],
     instanceType: "t3.medium",
-}, { async: true }));
+}));
 ```
 
 

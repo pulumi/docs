@@ -116,7 +116,7 @@ const test = pulumi.output(aws.rds.getEngineVersion({
         "5.7.19",
         "5.7.17",
     ],
-}, { async: true }));
+}));
 ```
 
 

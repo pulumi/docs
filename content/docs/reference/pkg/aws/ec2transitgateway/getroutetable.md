@@ -62,7 +62,7 @@ const example = pulumi.output(aws.ec2transitgateway.getRouteTable({
             values: ["tgw-12345678"],
         },
     ],
-}, { async: true }));
+}));
 ```
 
 
@@ -147,7 +147,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.ec2transitgateway.getRouteTable({
     id: "tgw-rtb-12345678",
-}, { async: true }));
+}));
 ```
 
 

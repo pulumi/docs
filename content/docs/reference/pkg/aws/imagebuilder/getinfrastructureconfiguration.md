@@ -95,7 +95,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.imagebuilder.getInfrastructureConfiguration({
     arn: "arn:aws:imagebuilder:us-west-2:aws:infrastructure-configuration/example",
-}, { async: true }));
+}));
 ```
 
 

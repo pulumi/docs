@@ -99,7 +99,7 @@ import * as aws from "@pulumi/aws";
 const example = pulumi.output(aws.wafv2.getRuleGroup({
     name: "some-rule-group",
     scope: "REGIONAL",
-}, { async: true }));
+}));
 ```
 
 

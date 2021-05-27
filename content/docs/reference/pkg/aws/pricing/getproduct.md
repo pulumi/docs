@@ -224,7 +224,7 @@ const example = pulumi.output(aws.pricing.getProduct({
         },
     ],
     serviceCode: "AmazonEC2",
-}, { async: true }));
+}));
 ```
 
 

@@ -95,7 +95,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.directconnect.getGateway({
     name: "example",
-}, { async: true }));
+}));
 ```
 
 

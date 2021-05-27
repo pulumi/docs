@@ -64,7 +64,7 @@ const ebsVolume = pulumi.output(aws.ebs.getSnapshot({
     ],
     mostRecent: true,
     owners: ["self"],
-}, { async: true }));
+}));
 ```
 
 

@@ -95,7 +95,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.lakeformation.getResource({
     arn: "arn:aws:s3:::tf-acc-test-9151654063908211878",
-}, { async: true }));
+}));
 ```
 
 

@@ -118,7 +118,7 @@ const example = pulumi.output(aws.ec2transitgateway.getPeeringAttachment({
         name: "transit-gateway-attachment-id",
         values: ["tgw-attach-12345678"],
     }],
-}, { async: true }));
+}));
 ```
 
 
@@ -203,7 +203,7 @@ import * as aws from "@pulumi/aws";
 
 const attachment = pulumi.output(aws.ec2transitgateway.getPeeringAttachment({
     id: "tgw-attach-12345678",
-}, { async: true }));
+}));
 ```
 
 

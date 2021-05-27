@@ -192,6 +192,7 @@ const bat = new aws.autoscaling.Policy("bat", {
            <span class="nx">min_adjustment_magnitude</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">predictive_scaling_configuration</span><span class="p">:</span> <span class="nx">Optional[PolicyPredictiveScalingConfigurationArgs]</span> = None<span class="p">,</span>
            <span class="nx">scaling_adjustment</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
            <span class="nx">step_adjustments</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyStepAdjustmentArgs]]</span> = None<span class="p">,</span>
            <span class="nx">target_tracking_configuration</span><span class="p">:</span> <span class="nx">Optional[PolicyTargetTrackingConfigurationArgs]</span> = None<span class="p">)</span>
@@ -393,7 +394,16 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
+    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling", "TargetTrackingScaling", or "PredictiveScaling". If this value isn't provided, AWS will default to "SimpleScaling."
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predictivescalingconfiguration_csharp">
+<a href="#predictivescalingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Predictive<wbr>Scaling<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfiguration">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingadjustment_csharp">
@@ -499,7 +509,16 @@ group scaling. These have the following structure:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
+    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling", "TargetTrackingScaling", or "PredictiveScaling". If this value isn't provided, AWS will default to "SimpleScaling."
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predictivescalingconfiguration_go">
+<a href="#predictivescalingconfiguration_go" style="color: inherit; text-decoration: inherit;">Predictive<wbr>Scaling<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfiguration">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingadjustment_go">
@@ -605,7 +624,16 @@ group scaling. These have the following structure:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
+    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling", "TargetTrackingScaling", or "PredictiveScaling". If this value isn't provided, AWS will default to "SimpleScaling."
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predictivescalingconfiguration_nodejs">
+<a href="#predictivescalingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">predictive<wbr>Scaling<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfiguration">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingadjustment_nodejs">
@@ -711,7 +739,16 @@ group scaling. These have the following structure:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
+    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling", "TargetTrackingScaling", or "PredictiveScaling". If this value isn't provided, AWS will default to "SimpleScaling."
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predictive_scaling_configuration_python">
+<a href="#predictive_scaling_configuration_python" style="color: inherit; text-decoration: inherit;">predictive_<wbr>scaling_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfiguration">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaling_adjustment_python">
@@ -861,6 +898,7 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
         <span class="nx">min_adjustment_magnitude</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">predictive_scaling_configuration</span><span class="p">:</span> <span class="nx">Optional[PolicyPredictiveScalingConfigurationArgs]</span> = None<span class="p">,</span>
         <span class="nx">scaling_adjustment</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">step_adjustments</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyStepAdjustmentArgs]]</span> = None<span class="p">,</span>
         <span class="nx">target_tracking_configuration</span><span class="p">:</span> <span class="nx">Optional[PolicyTargetTrackingConfigurationArgs]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
@@ -1054,7 +1092,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
+    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling", "TargetTrackingScaling", or "PredictiveScaling". If this value isn't provided, AWS will default to "SimpleScaling."
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_predictivescalingconfiguration_csharp">
+<a href="#state_predictivescalingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Predictive<wbr>Scaling<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfiguration">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingadjustment_csharp">
@@ -1169,7 +1216,16 @@ group scaling. These have the following structure:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
+    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling", "TargetTrackingScaling", or "PredictiveScaling". If this value isn't provided, AWS will default to "SimpleScaling."
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_predictivescalingconfiguration_go">
+<a href="#state_predictivescalingconfiguration_go" style="color: inherit; text-decoration: inherit;">Predictive<wbr>Scaling<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfiguration">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingadjustment_go">
@@ -1284,7 +1340,16 @@ group scaling. These have the following structure:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
+    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling", "TargetTrackingScaling", or "PredictiveScaling". If this value isn't provided, AWS will default to "SimpleScaling."
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_predictivescalingconfiguration_nodejs">
+<a href="#state_predictivescalingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">predictive<wbr>Scaling<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfiguration">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingadjustment_nodejs">
@@ -1399,7 +1464,16 @@ group scaling. These have the following structure:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
+    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling", "TargetTrackingScaling", or "PredictiveScaling". If this value isn't provided, AWS will default to "SimpleScaling."
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_predictive_scaling_configuration_python">
+<a href="#state_predictive_scaling_configuration_python" style="color: inherit; text-decoration: inherit;">predictive_<wbr>scaling_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfiguration">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scaling_adjustment_python">
@@ -1441,6 +1515,636 @@ group scaling. These have the following structure:
 ## Supporting Types
 
 
+
+<h4 id="policypredictivescalingconfiguration">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="metricspecification_csharp">
+<a href="#metricspecification_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This structure includes the metrics and target utilization to use for predictive scaling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxcapacitybreachbehavior_csharp">
+<a href="#maxcapacitybreachbehavior_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity<wbr>Breach<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity of the Auto Scaling group. Valid values are `HonorMaxCapacity` or `IncreaseMaxCapacity`. Default is `HonorMaxCapacity`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxcapacitybuffer_csharp">
+<a href="#maxcapacitybuffer_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity<wbr>Buffer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity. Valid range is `0` to `100`. If set to `0`, Amazon EC2 Auto Scaling may scale capacity higher than the maximum capacity to equal but not exceed forecast capacity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The predictive scaling mode. Valid values are `ForecastAndScale` and `ForecastOnly`. Default is `ForecastOnly`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schedulingbuffertime_csharp">
+<a href="#schedulingbuffertime_csharp" style="color: inherit; text-decoration: inherit;">Scheduling<wbr>Buffer<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, by which the instance launch time can be advanced. Minimum is `0`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="metricspecification_go">
+<a href="#metricspecification_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}This structure includes the metrics and target utilization to use for predictive scaling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxcapacitybreachbehavior_go">
+<a href="#maxcapacitybreachbehavior_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity<wbr>Breach<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity of the Auto Scaling group. Valid values are `HonorMaxCapacity` or `IncreaseMaxCapacity`. Default is `HonorMaxCapacity`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxcapacitybuffer_go">
+<a href="#maxcapacitybuffer_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity<wbr>Buffer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity. Valid range is `0` to `100`. If set to `0`, Amazon EC2 Auto Scaling may scale capacity higher than the maximum capacity to equal but not exceed forecast capacity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The predictive scaling mode. Valid values are `ForecastAndScale` and `ForecastOnly`. Default is `ForecastOnly`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schedulingbuffertime_go">
+<a href="#schedulingbuffertime_go" style="color: inherit; text-decoration: inherit;">Scheduling<wbr>Buffer<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, by which the instance launch time can be advanced. Minimum is `0`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="metricspecification_nodejs">
+<a href="#metricspecification_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This structure includes the metrics and target utilization to use for predictive scaling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxcapacitybreachbehavior_nodejs">
+<a href="#maxcapacitybreachbehavior_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity<wbr>Breach<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity of the Auto Scaling group. Valid values are `HonorMaxCapacity` or `IncreaseMaxCapacity`. Default is `HonorMaxCapacity`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxcapacitybuffer_nodejs">
+<a href="#maxcapacitybuffer_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity<wbr>Buffer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity. Valid range is `0` to `100`. If set to `0`, Amazon EC2 Auto Scaling may scale capacity higher than the maximum capacity to equal but not exceed forecast capacity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The predictive scaling mode. Valid values are `ForecastAndScale` and `ForecastOnly`. Default is `ForecastOnly`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schedulingbuffertime_nodejs">
+<a href="#schedulingbuffertime_nodejs" style="color: inherit; text-decoration: inherit;">scheduling<wbr>Buffer<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, by which the instance launch time can be advanced. Minimum is `0`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="metric_specification_python">
+<a href="#metric_specification_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This structure includes the metrics and target utilization to use for predictive scaling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_capacity_breach_behavior_python">
+<a href="#max_capacity_breach_behavior_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity_<wbr>breach_<wbr>behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity of the Auto Scaling group. Valid values are `HonorMaxCapacity` or `IncreaseMaxCapacity`. Default is `HonorMaxCapacity`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_capacity_buffer_python">
+<a href="#max_capacity_buffer_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity_<wbr>buffer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity. Valid range is `0` to `100`. If set to `0`, Amazon EC2 Auto Scaling may scale capacity higher than the maximum capacity to equal but not exceed forecast capacity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The predictive scaling mode. Valid values are `ForecastAndScale` and `ForecastOnly`. Default is `ForecastOnly`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scheduling_buffer_time_python">
+<a href="#scheduling_buffer_time_python" style="color: inherit; text-decoration: inherit;">scheduling_<wbr>buffer_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, by which the instance launch time can be advanced. Minimum is `0`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="policypredictivescalingconfigurationmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="targetvalue_csharp">
+<a href="#targetvalue_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The target value for the metric.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefinedloadmetricspecification_csharp">
+<a href="#predefinedloadmetricspecification_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Load<wbr>Metric<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedloadmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The load metric specification.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefinedmetricpairspecification_csharp">
+<a href="#predefinedmetricpairspecification_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Metric<wbr>Pair<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedmetricpairspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Metric<wbr>Pair<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling metric and load metric to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefinedscalingmetricspecification_csharp">
+<a href="#predefinedscalingmetricspecification_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Scaling<wbr>Metric<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedscalingmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The scaling metric specification.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="targetvalue_go">
+<a href="#targetvalue_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The target value for the metric.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefinedloadmetricspecification_go">
+<a href="#predefinedloadmetricspecification_go" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Load<wbr>Metric<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedloadmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}The load metric specification.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefinedmetricpairspecification_go">
+<a href="#predefinedmetricpairspecification_go" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Metric<wbr>Pair<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedmetricpairspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Metric<wbr>Pair<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}The metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling metric and load metric to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefinedscalingmetricspecification_go">
+<a href="#predefinedscalingmetricspecification_go" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Scaling<wbr>Metric<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedscalingmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}The scaling metric specification.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="targetvalue_nodejs">
+<a href="#targetvalue_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The target value for the metric.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefinedloadmetricspecification_nodejs">
+<a href="#predefinedloadmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Load<wbr>Metric<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedloadmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The load metric specification.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefinedmetricpairspecification_nodejs">
+<a href="#predefinedmetricpairspecification_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Metric<wbr>Pair<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedmetricpairspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Metric<wbr>Pair<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling metric and load metric to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefinedscalingmetricspecification_nodejs">
+<a href="#predefinedscalingmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Scaling<wbr>Metric<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedscalingmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The scaling metric specification.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="target_value_python">
+<a href="#target_value_python" style="color: inherit; text-decoration: inherit;">target_<wbr>value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The target value for the metric.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefined_load_metric_specification_python">
+<a href="#predefined_load_metric_specification_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>load_<wbr>metric_<wbr>specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedloadmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The load metric specification.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefined_metric_pair_specification_python">
+<a href="#predefined_metric_pair_specification_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>metric_<wbr>pair_<wbr>specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedmetricpairspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Metric<wbr>Pair<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling metric and load metric to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predefined_scaling_metric_specification_python">
+<a href="#predefined_scaling_metric_specification_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>scaling_<wbr>metric_<wbr>specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedscalingmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The scaling metric specification.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="policypredictivescalingconfigurationmetricspecificationpredefinedloadmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="predefinedmetrictype_csharp">
+<a href="#predefinedmetrictype_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Metric<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcelabel_csharp">
+<a href="#resourcelabel_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="predefinedmetrictype_go">
+<a href="#predefinedmetrictype_go" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Metric<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcelabel_go">
+<a href="#resourcelabel_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="predefinedmetrictype_nodejs">
+<a href="#predefinedmetrictype_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Metric<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcelabel_nodejs">
+<a href="#resourcelabel_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="predefined_metric_type_python">
+<a href="#predefined_metric_type_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>metric_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resource_label_python">
+<a href="#resource_label_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="policypredictivescalingconfigurationmetricspecificationpredefinedmetricpairspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Metric<wbr>Pair<wbr>Specification</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="predefinedmetrictype_csharp">
+<a href="#predefinedmetrictype_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Metric<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcelabel_csharp">
+<a href="#resourcelabel_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="predefinedmetrictype_go">
+<a href="#predefinedmetrictype_go" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Metric<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcelabel_go">
+<a href="#resourcelabel_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="predefinedmetrictype_nodejs">
+<a href="#predefinedmetrictype_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Metric<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcelabel_nodejs">
+<a href="#resourcelabel_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="predefined_metric_type_python">
+<a href="#predefined_metric_type_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>metric_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resource_label_python">
+<a href="#resource_label_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="policypredictivescalingconfigurationmetricspecificationpredefinedscalingmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="predefinedmetrictype_csharp">
+<a href="#predefinedmetrictype_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Metric<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcelabel_csharp">
+<a href="#resourcelabel_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="predefinedmetrictype_go">
+<a href="#predefinedmetrictype_go" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Metric<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcelabel_go">
+<a href="#resourcelabel_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="predefinedmetrictype_nodejs">
+<a href="#predefinedmetrictype_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Metric<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcelabel_nodejs">
+<a href="#resourcelabel_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="predefined_metric_type_python">
+<a href="#predefined_metric_type_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>metric_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resource_label_python">
+<a href="#resource_label_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="policystepadjustment">Policy<wbr>Step<wbr>Adjustment</h4>
 
@@ -2057,7 +2761,7 @@ must be greater than the lower bound.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The metric type.
+    <dd>{{% md %}}Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelabel_csharp">
@@ -2066,7 +2770,7 @@ must be greater than the lower bound.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the resource associated with the metric type.
+    <dd>{{% md %}}A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2079,7 +2783,7 @@ must be greater than the lower bound.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The metric type.
+    <dd>{{% md %}}Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelabel_go">
@@ -2088,7 +2792,7 @@ must be greater than the lower bound.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the resource associated with the metric type.
+    <dd>{{% md %}}A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2101,7 +2805,7 @@ must be greater than the lower bound.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The metric type.
+    <dd>{{% md %}}Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelabel_nodejs">
@@ -2110,7 +2814,7 @@ must be greater than the lower bound.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the resource associated with the metric type.
+    <dd>{{% md %}}A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2123,7 +2827,7 @@ must be greater than the lower bound.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The metric type.
+    <dd>{{% md %}}Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_label_python">
@@ -2132,7 +2836,7 @@ must be greater than the lower bound.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifies the resource associated with the metric type.
+    <dd>{{% md %}}A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

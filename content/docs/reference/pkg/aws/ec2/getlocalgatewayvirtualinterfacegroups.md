@@ -88,7 +88,7 @@ all = aws.ec2.get_local_gateway_virtual_interface_groups()
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const all = pulumi.output(aws.ec2.getLocalGatewayVirtualInterfaceGroups({ async: true }));
+const all = pulumi.output(aws.ec2.getLocalGatewayVirtualInterfaceGroups());
 ```
 
 

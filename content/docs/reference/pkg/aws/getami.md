@@ -72,7 +72,7 @@ const example = pulumi.output(aws.ec2.getAmi({
     mostRecent: true,
     nameRegex: "^myami-\\d{3}",
     owners: ["self"],
-}, { async: true }));
+}));
 ```
 
 

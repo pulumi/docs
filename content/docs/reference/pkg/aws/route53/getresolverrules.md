@@ -106,7 +106,7 @@ const example = pulumi.output(aws.route53.getResolverRules({
     ownerId: "Route 53 Resolver",
     ruleType: "RECURSIVE",
     shareStatus: "NOT_SHARED",
-}, { async: true }));
+}));
 ```
 
 

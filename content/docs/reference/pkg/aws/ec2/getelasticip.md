@@ -96,7 +96,7 @@ import * as aws from "@pulumi/aws";
 
 const byAllocationId = pulumi.output(aws.ec2.getElasticIp({
     id: "eipalloc-12345678",
-}, { async: true }));
+}));
 ```
 
 
@@ -203,7 +203,7 @@ const byFilter = pulumi.output(aws.ec2.getElasticIp({
         name: "tag:Name",
         values: ["exampleNameTagValue"],
     }],
-}, { async: true }));
+}));
 ```
 
 
@@ -288,7 +288,7 @@ import * as aws from "@pulumi/aws";
 
 const byPublicIp = pulumi.output(aws.ec2.getElasticIp({
     publicIp: "1.2.3.4",
-}, { async: true }));
+}));
 ```
 
 
@@ -381,7 +381,7 @@ const byTags = pulumi.output(aws.ec2.getElasticIp({
     tags: {
         Name: "exampleNameTagValue",
     },
-}, { async: true }));
+}));
 ```
 
 

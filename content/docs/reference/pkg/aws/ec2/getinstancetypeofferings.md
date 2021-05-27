@@ -66,7 +66,7 @@ const example = pulumi.output(aws.ec2.getInstanceTypeOfferings({
         },
     ],
     locationType: "availability-zone-id",
-}, { async: true }));
+}));
 ```
 
 

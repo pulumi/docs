@@ -101,7 +101,7 @@ import * as aws from "@pulumi/aws";
 const example = pulumi.output(aws.cloudformation.getCloudFormationType({
     type: "RESOURCE",
     typeName: "AWS::Athena::WorkGroup",
-}, { async: true }));
+}));
 ```
 
 

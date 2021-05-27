@@ -99,7 +99,7 @@ import * as aws from "@pulumi/aws";
 const orderFlowersProd = pulumi.output(aws.lex.getBotAlias({
     botName: "OrderFlowers",
     name: "OrderFlowersProd",
-}, { async: true }));
+}));
 ```
 
 

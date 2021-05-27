@@ -95,7 +95,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.ec2.getInstanceType({
     instanceType: "t2.micro",
-}, { async: true }));
+}));
 ```
 
 

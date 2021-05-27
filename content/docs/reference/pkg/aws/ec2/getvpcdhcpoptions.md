@@ -96,7 +96,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.ec2.getVpcDhcpOptions({
     dhcpOptionsId: "dopts-12345678",
-}, { async: true }));
+}));
 ```
 
 
@@ -147,7 +147,7 @@ const example = pulumi.output(aws.ec2.getVpcDhcpOptions({
             values: ["example.com"],
         },
     ],
-}, { async: true }));
+}));
 ```
 
 

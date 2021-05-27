@@ -95,7 +95,7 @@ import * as aws from "@pulumi/aws";
 
 const database = pulumi.output(aws.rds.getSubnetGroup({
     name: "my-test-database-subnet-group",
-}, { async: true }));
+}));
 ```
 
 

@@ -95,7 +95,7 @@ import * as aws from "@pulumi/aws";
 
 const test = pulumi.output(aws.efs.getAccessPoints({
     fileSystemId: "fs-12345678",
-}, { async: true }));
+}));
 ```
 
 

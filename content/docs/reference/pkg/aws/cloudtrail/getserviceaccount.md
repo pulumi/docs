@@ -160,7 +160,7 @@ bucket = aws.s3.Bucket("bucket",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const main = pulumi.output(aws.cloudtrail.getServiceAccount({ async: true }));
+const main = pulumi.output(aws.cloudtrail.getServiceAccount());
 const bucket = new aws.s3.Bucket("bucket", {
     forceDestroy: true,
     policy: pulumi.interpolate`{

@@ -95,7 +95,7 @@ import * as aws from "@pulumi/aws";
 
 const service = pulumi.output(aws.ecr.getRepository({
     name: "ecr-repository",
-}, { async: true }));
+}));
 ```
 
 

@@ -112,7 +112,7 @@ const test = pulumi.output(aws.neptune.getEngineVersion({
         "1.0.2.2",
         "1.0.2.1",
     ],
-}, { async: true }));
+}));
 ```
 
 
