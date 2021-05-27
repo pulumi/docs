@@ -98,7 +98,7 @@ import * as azuread from "@pulumi/azuread";
 
 const example = pulumi.output(azuread.getServicePrincipal({
     displayName: "my-awesome-application",
-}, { async: true }));
+}));
 ```
 
 
@@ -183,7 +183,7 @@ import * as azuread from "@pulumi/azuread";
 
 const example = pulumi.output(azuread.getServicePrincipal({
     applicationId: "00000000-0000-0000-0000-000000000000",
-}, { async: true }));
+}));
 ```
 
 
@@ -268,7 +268,7 @@ import * as azuread from "@pulumi/azuread";
 
 const example = pulumi.output(azuread.getServicePrincipal({
     objectId: "00000000-0000-0000-0000-000000000000",
-}, { async: true }));
+}));
 ```
 
 
