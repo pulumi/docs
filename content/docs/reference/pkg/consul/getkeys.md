@@ -146,7 +146,7 @@ const appKeys = pulumi.output(consul.getKeys({
         path: "service/app/launch_ami",
     }],
     token: "abcd",
-}, { async: true }));
+}));
 // Start our instance with the dynamic ami value
 const appInstance = new aws.ec2.Instance("app", {
     ami: appKeys.var.ami,

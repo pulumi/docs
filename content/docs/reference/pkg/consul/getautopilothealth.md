@@ -95,7 +95,7 @@ pulumi.export("health", read.healthy)
 import * as pulumi from "@pulumi/pulumi";
 import * as consul from "@pulumi/consul";
 
-const read = pulumi.output(consul.getAutopilotHealth({ async: true }));
+const read = pulumi.output(consul.getAutopilotHealth());
 
 export const health = read.healthy;
 ```

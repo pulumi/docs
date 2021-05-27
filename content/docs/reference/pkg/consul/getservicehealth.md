@@ -61,7 +61,7 @@ import * as vault from "@pulumi/vault";
 const vaultServiceHealth = pulumi.output(consul.getServiceHealth({
     passing: true,
     service: "vault",
-}, { async: true }));
+}));
 ```
 
 
