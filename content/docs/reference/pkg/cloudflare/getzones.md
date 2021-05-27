@@ -107,7 +107,7 @@ const example = pulumi.output(cloudflare.getZones({
     filter: {
         name: "example.com",
     },
-}, { async: true }));
+}));
 ```
 
 

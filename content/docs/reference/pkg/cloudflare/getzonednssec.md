@@ -95,7 +95,7 @@ import * as cloudflare from "@pulumi/cloudflare";
 
 const example = pulumi.output(cloudflare.getZoneDnssec({
     zoneId: "<zone_id>",
-}, { async: true }));
+}));
 ```
 
 
