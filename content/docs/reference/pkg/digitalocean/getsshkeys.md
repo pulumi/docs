@@ -119,7 +119,7 @@ const keys = pulumi.output(digitalocean.getSshKeys({
         direction: "asc",
         key: "name",
     }],
-}, { async: true }));
+}));
 ```
 
 

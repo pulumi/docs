@@ -131,7 +131,7 @@ const examples = pulumi.output(digitalocean.getDomains({
         matchBy: "re",
         values: ["example\\.com$"],
     }],
-}, { async: true }));
+}));
 ```
 
 

@@ -88,7 +88,7 @@ example = digitalocean.get_account()
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const example = pulumi.output(digitalocean.getAccount({ async: true }));
+const example = pulumi.output(digitalocean.getAccount());
 ```
 
 

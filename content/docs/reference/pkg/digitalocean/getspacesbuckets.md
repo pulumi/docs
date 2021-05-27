@@ -122,7 +122,7 @@ const nyc3 = pulumi.output(digitalocean.getSpacesBuckets({
         key: "region",
         values: ["nyc3"],
     }],
-}, { async: true }));
+}));
 ```
 
 

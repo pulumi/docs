@@ -124,7 +124,7 @@ const staging = pulumi.output(digitalocean.getProjects({
         key: "environment",
         values: ["Staging"],
     }],
-}, { async: true }));
+}));
 ```
 
 

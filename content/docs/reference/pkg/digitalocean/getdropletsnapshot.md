@@ -108,7 +108,7 @@ const web_snapshot = pulumi.output(digitalocean.getDropletSnapshot({
     mostRecent: true,
     nameRegex: "^web",
     region: "nyc3",
-}, { async: true }));
+}));
 ```
 
 

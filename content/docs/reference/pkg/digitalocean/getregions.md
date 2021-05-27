@@ -122,7 +122,7 @@ const available = pulumi.output(digitalocean.getRegions({
         key: "available",
         values: ["true"],
     }],
-}, { async: true }));
+}));
 ```
 
 
