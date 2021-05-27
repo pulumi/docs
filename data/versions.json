@@ -1562,6 +1562,7 @@
   },
   {
     "version": "v0.17.6",
+    "date": "2019-04-11T11:54:39-06:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.17.6-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.17.6-linux-arm64.tar.gz",
@@ -1741,6 +1742,7 @@
   },
   {
     "version": "v0.16.11",
+    "date": "2019-01-16T16:54:53-08:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.11-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.11-linux-arm64.tar.gz",
@@ -1764,6 +1766,7 @@
   },
   {
     "version": "v0.16.9",
+    "date": "2018-12-24T20:26:43-08:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.9-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.9-linux-arm64.tar.gz",
@@ -1775,6 +1778,7 @@
   },
   {
     "version": "v0.16.8",
+    "date": "2018-12-14T14:19:37-08:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.8-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.8-linux-arm64.tar.gz",
@@ -1786,6 +1790,7 @@
   },
   {
     "version": "v0.16.7",
+    "date": "2018-12-05T14:33:00-08:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.7-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.7-linux-arm64.tar.gz",
@@ -1809,6 +1814,7 @@
   },
   {
     "version": "v0.16.5",
+    "date": "2018-11-16T20:08:28-08:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.5-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.5-linux-arm64.tar.gz",
@@ -1820,6 +1826,7 @@
   },
   {
     "version": "v0.16.5-dev",
+    "date": "2018-11-13T10:49:34-08:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.5-dev-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.5-dev-linux-arm64.tar.gz",
@@ -1831,6 +1838,7 @@
   },
   {
     "version": "v0.16.4",
+    "date": "2018-11-13T10:49:23-08:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.4-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.4-linux-arm64.tar.gz",
@@ -1842,6 +1850,7 @@
   },
   {
     "version": "v0.16.4-dev",
+    "date": "2018-11-07T16:28:29-08:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.4-dev-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.4-dev-linux-arm64.tar.gz",
@@ -1853,6 +1862,7 @@
   },
   {
     "version": "v0.16.3",
+    "date": "2018-11-06T13:24:08-08:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.3-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.3-linux-arm64.tar.gz",
@@ -1864,6 +1874,7 @@
   },
   {
     "version": "v0.16.3-rc2",
+    "date": "2018-11-05T18:57:59-08:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.3-rc2-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.3-rc2-linux-arm64.tar.gz",
@@ -1875,6 +1886,7 @@
   },
   {
     "version": "v0.16.3-rc1",
+    "date": "2018-11-02T17:28:36-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.3-rc1-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.3-rc1-linux-arm64.tar.gz",
@@ -1886,6 +1898,7 @@
   },
   {
     "version": "v0.16.3-dev",
+    "date": "2018-10-29T12:29:05-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.3-dev-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.3-dev-linux-arm64.tar.gz",
@@ -1897,6 +1910,7 @@
   },
   {
     "version": "v0.16.2",
+    "date": "2018-10-29T12:28:46-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.2-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.2-linux-arm64.tar.gz",
@@ -1908,6 +1922,7 @@
   },
   {
     "version": "v0.16.2-dev",
+    "date": "2018-10-21T17:25:11-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.2-dev-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.2-dev-linux-arm64.tar.gz",
@@ -1919,6 +1934,7 @@
   },
   {
     "version": "v0.16.1",
+    "date": "2018-10-21T17:25:02-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.1-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.1-linux-arm64.tar.gz",
@@ -1930,6 +1946,7 @@
   },
   {
     "version": "v0.16.1-dev",
+    "date": "2018-10-12T10:33:58-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.1-dev-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.1-dev-linux-arm64.tar.gz",
@@ -1941,6 +1958,7 @@
   },
   {
     "version": "v0.16.0",
+    "date": "2018-10-12T10:32:49-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.0-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.0-linux-arm64.tar.gz",
@@ -1952,6 +1970,7 @@
   },
   {
     "version": "v0.16.0-rc1",
+    "date": "2018-10-10T15:59:40-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.0-rc1-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.16.0-rc1-linux-arm64.tar.gz",
@@ -1963,6 +1982,7 @@
   },
   {
     "version": "v0.15.5-dev",
+    "date": "2018-09-28T13:21:19-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.5-dev-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.5-dev-linux-arm64.tar.gz",
@@ -1974,6 +1994,7 @@
   },
   {
     "version": "v0.15.4",
+    "date": "2018-09-28T13:21:46-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.4-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.4-linux-arm64.tar.gz",
@@ -1985,6 +2006,7 @@
   },
   {
     "version": "v0.15.4-dev",
+    "date": "2018-09-19T17:00:14-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.4-dev-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.4-dev-linux-arm64.tar.gz",
@@ -1996,6 +2018,7 @@
   },
   {
     "version": "v0.15.3",
+    "date": "2018-09-18T12:47:57-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.3-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.3-linux-arm64.tar.gz",
@@ -2007,6 +2030,7 @@
   },
   {
     "version": "v0.15.3-dev",
+    "date": "2018-09-11T17:48:01-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.3-dev-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.3-dev-linux-arm64.tar.gz",
@@ -2018,6 +2042,7 @@
   },
   {
     "version": "v0.15.2",
+    "date": "2018-09-11T17:32:33-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.2-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.2-linux-arm64.tar.gz",
@@ -2029,6 +2054,7 @@
   },
   {
     "version": "v0.15.2-dev",
+    "date": "2018-09-06T12:05:45-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.2-dev-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.2-dev-linux-arm64.tar.gz",
@@ -2040,6 +2066,7 @@
   },
   {
     "version": "v0.15.1",
+    "date": "2018-09-10T21:50:35-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.1-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.1-linux-arm64.tar.gz",
@@ -2051,6 +2078,7 @@
   },
   {
     "version": "v0.15.1-rc2",
+    "date": "2018-09-07T14:25:44-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.1-rc2-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.1-rc2-linux-arm64.tar.gz",
@@ -2062,6 +2090,7 @@
   },
   {
     "version": "v0.15.1-rc1",
+    "date": "2018-09-06T12:09:25-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.1-rc1-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.1-rc1-linux-arm64.tar.gz",
@@ -2073,6 +2102,7 @@
   },
   {
     "version": "v0.15.1-dev",
+    "date": "2018-08-09T10:39:04-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.1-dev-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.1-dev-linux-arm64.tar.gz",
@@ -2084,6 +2114,7 @@
   },
   {
     "version": "v0.15.0",
+    "date": "2018-08-13T22:47:30-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.0-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.0-linux-arm64.tar.gz",
@@ -2095,6 +2126,7 @@
   },
   {
     "version": "v0.15.0-rc4",
+    "date": "2018-08-13T18:30:13-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.0-rc4-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.0-rc4-linux-arm64.tar.gz",
@@ -2106,6 +2138,7 @@
   },
   {
     "version": "v0.15.0-rc3",
+    "date": "2018-08-13T14:51:52-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.0-rc3-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.0-rc3-linux-arm64.tar.gz",
@@ -2117,6 +2150,7 @@
   },
   {
     "version": "v0.15.0-rc2",
+    "date": "2018-08-10T22:51:11-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.0-rc2-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.0-rc2-linux-arm64.tar.gz",
@@ -2128,6 +2162,7 @@
   },
   {
     "version": "v0.15.0-rc1",
+    "date": "2018-08-09T10:38:15-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.0-rc1-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.15.0-rc1-linux-arm64.tar.gz",
@@ -2139,6 +2174,7 @@
   },
   {
     "version": "v0.14.4-dev",
+    "date": "2018-07-20T10:13:29-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.14.4-dev-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.14.4-dev-linux-arm64.tar.gz",
@@ -2150,6 +2186,7 @@
   },
   {
     "version": "v0.14.3",
+    "date": "2018-07-20T10:13:09-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.14.3-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.14.3-linux-arm64.tar.gz",
@@ -2161,6 +2198,7 @@
   },
   {
     "version": "v0.14.3-dev",
+    "date": "2018-07-03T10:44:03-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.14.3-dev-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.14.3-dev-linux-arm64.tar.gz",
@@ -2172,6 +2210,7 @@
   },
   {
     "version": "v0.14.2",
+    "date": "2018-07-03T11:03:59-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.14.2-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.14.2-linux-arm64.tar.gz",
@@ -2183,6 +2222,7 @@
   },
   {
     "version": "v0.14.2-dev",
+    "date": "2018-06-29T10:34:12-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.14.2-dev-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.14.2-dev-linux-arm64.tar.gz",
@@ -2194,6 +2234,7 @@
   },
   {
     "version": "v0.14.1",
+    "date": "2018-06-29T10:36:22-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.14.1-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.14.1-linux-arm64.tar.gz",
@@ -2205,6 +2246,7 @@
   },
   {
     "version": "v0.14.1-dev",
+    "date": "2018-06-12T14:37:26-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.14.1-dev-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.14.1-dev-linux-arm64.tar.gz",
@@ -2216,6 +2258,7 @@
   },
   {
     "version": "v0.14.0",
+    "date": "2018-06-15T14:33:40-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.14.0-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.14.0-linux-arm64.tar.gz",
@@ -2227,6 +2270,7 @@
   },
   {
     "version": "v0.14.0-rc1",
+    "date": "2018-06-12T14:35:11-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.14.0-rc1-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.14.0-rc1-linux-arm64.tar.gz",
@@ -2238,6 +2282,7 @@
   },
   {
     "version": "v0.12.4-dev",
+    "date": "2018-06-05T11:17:20-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.4-dev-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.4-dev-linux-arm64.tar.gz",
@@ -2249,6 +2294,7 @@
   },
   {
     "version": "v0.12.3",
+    "date": "2018-06-05T11:18:40-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.3-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.3-linux-arm64.tar.gz",
@@ -2260,6 +2306,7 @@
   },
   {
     "version": "v0.12.3-dev",
+    "date": "2018-05-17T17:40:19-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.3-dev-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.3-dev-linux-arm64.tar.gz",
@@ -2271,6 +2318,7 @@
   },
   {
     "version": "v0.12.2",
+    "date": "2018-05-18T14:56:19-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.2-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.2-linux-arm64.tar.gz",
@@ -2282,6 +2330,7 @@
   },
   {
     "version": "v0.12.2-rc1",
+    "date": "2018-05-17T17:42:04-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.2-rc1-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.2-rc1-linux-arm64.tar.gz",
@@ -2293,6 +2342,7 @@
   },
   {
     "version": "v0.12.2-dev",
+    "date": "2018-05-08T11:10:31-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.2-dev-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.2-dev-linux-arm64.tar.gz",
@@ -2304,6 +2354,7 @@
   },
   {
     "version": "v0.12.1",
+    "date": "2018-05-09T00:29:18-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.1-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.1-linux-arm64.tar.gz",
@@ -2315,6 +2366,7 @@
   },
   {
     "version": "v0.12.1-rc4",
+    "date": "2018-05-08T21:44:16-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.1-rc4-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.1-rc4-linux-arm64.tar.gz",
@@ -2326,6 +2378,7 @@
   },
   {
     "version": "v0.12.1-rc3",
+    "date": "2018-05-08T13:02:37-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.1-rc3-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.1-rc3-linux-arm64.tar.gz",
@@ -2337,6 +2390,7 @@
   },
   {
     "version": "v0.12.1-rc2",
+    "date": "2018-05-08T11:12:30-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.1-rc2-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.1-rc2-linux-arm64.tar.gz",
@@ -2348,6 +2402,7 @@
   },
   {
     "version": "v0.12.1-rc",
+    "date": "2018-05-03T10:41:56-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.1-rc-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.1-rc-linux-arm64.tar.gz",
@@ -2359,6 +2414,7 @@
   },
   {
     "version": "v0.12.1-dev",
+    "date": "2018-04-23T16:18:41-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.1-dev-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.1-dev-linux-arm64.tar.gz",
@@ -2370,6 +2426,7 @@
   },
   {
     "version": "v0.12.0",
+    "date": "2018-04-25T13:42:48-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.0-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.0-linux-arm64.tar.gz",
@@ -2381,6 +2438,7 @@
   },
   {
     "version": "v0.12.0-rc2",
+    "date": "2018-04-24T13:17:44-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.0-rc2-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.0-rc2-linux-arm64.tar.gz",
@@ -2392,6 +2450,7 @@
   },
   {
     "version": "v0.12.0-rc1",
+    "date": "2018-04-23T14:10:21-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.0-rc1-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.12.0-rc1-linux-arm64.tar.gz",
@@ -2403,6 +2462,7 @@
   },
   {
     "version": "v0.11.4-dev",
+    "date": "2018-04-12T12:11:16-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.4-dev-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.4-dev-linux-arm64.tar.gz",
@@ -2414,6 +2474,7 @@
   },
   {
     "version": "v0.11.3",
+    "date": "2018-04-13T16:57:20-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.3-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.3-linux-arm64.tar.gz",
@@ -2425,6 +2486,7 @@
   },
   {
     "version": "v0.11.3-rc4",
+    "date": "2018-04-13T15:04:09-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.3-rc4-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.3-rc4-linux-arm64.tar.gz",
@@ -2436,6 +2498,7 @@
   },
   {
     "version": "v0.11.3-rc3",
+    "date": "2018-04-12T20:41:55-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.3-rc3-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.3-rc3-linux-arm64.tar.gz",
@@ -2447,6 +2510,7 @@
   },
   {
     "version": "v0.11.3-rc2",
+    "date": "2018-04-12T17:45:52-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.3-rc2-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.3-rc2-linux-arm64.tar.gz",
@@ -2458,6 +2522,7 @@
   },
   {
     "version": "v0.11.3-rc1",
+    "date": "2018-04-12T12:08:43-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.3-rc1-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.3-rc1-linux-arm64.tar.gz",
@@ -2469,6 +2534,7 @@
   },
   {
     "version": "v0.11.2",
+    "date": "2018-04-06T09:06:15-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.2-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.2-linux-arm64.tar.gz",
@@ -2480,6 +2546,7 @@
   },
   {
     "version": "v0.11.2-rc2",
+    "date": "2018-04-05T16:04:31-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.2-rc2-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.2-rc2-linux-arm64.tar.gz",
@@ -2491,6 +2558,7 @@
   },
   {
     "version": "v0.11.2-rc1",
+    "date": "2018-04-05T11:00:44-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.2-rc1-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.2-rc1-linux-arm64.tar.gz",
@@ -2502,6 +2570,7 @@
   },
   {
     "version": "v0.11.1",
+    "date": "2018-03-30T22:45:04-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.1-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.1-linux-arm64.tar.gz",
@@ -2513,6 +2582,7 @@
   },
   {
     "version": "v0.11.1-rc1",
+    "date": "2018-03-30T10:50:24-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.1-rc1-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.1-rc1-linux-arm64.tar.gz",
@@ -2536,6 +2606,7 @@
   },
   {
     "version": "v0.11.0",
+    "date": "2018-03-19T12:24:28-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.0-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.0-linux-arm64.tar.gz",
@@ -2547,6 +2618,7 @@
   },
   {
     "version": "v0.11.0-rc2",
+    "date": "2018-03-14T14:49:13-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.0-rc2-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.0-rc2-linux-arm64.tar.gz",
@@ -2558,6 +2630,7 @@
   },
   {
     "version": "v0.11.0-rc1",
+    "date": "2018-03-11T19:12:01-07:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.0-rc1-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.11.0-rc1-linux-arm64.tar.gz",
@@ -2581,6 +2654,7 @@
   },
   {
     "version": "v0.10.0",
+    "date": "2018-02-27T11:30:15-08:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.10.0-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.10.0-linux-arm64.tar.gz",
@@ -2604,6 +2678,7 @@
   },
   {
     "version": "v0.10.0-rc5",
+    "date": "2018-02-21T12:45:30-08:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.10.0-rc5-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.10.0-rc5-linux-arm64.tar.gz",
@@ -2783,6 +2858,7 @@
   },
   {
     "version": "v0.9.3",
+    "date": "2017-12-14T11:41:26-08:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.9.3-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.9.3-linux-arm64.tar.gz",
@@ -2806,6 +2882,7 @@
   },
   {
     "version": "v0.9.1",
+    "date": "2017-12-11T17:55:37-08:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.9.1-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.9.1-linux-arm64.tar.gz",
@@ -2817,6 +2894,7 @@
   },
   {
     "version": "v0.9.0",
+    "date": "2017-12-10T17:59:31-08:00",
     "downloads": {
       "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v0.9.0-linux-x64.tar.gz",
       "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v0.9.0-linux-arm64.tar.gz",

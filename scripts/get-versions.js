@@ -17,6 +17,11 @@ const query = `
         nodes {
           name
           target {
+            ... on Tag {
+              tagger {
+                date
+              }
+            }
             ... on Commit {
               committedDate
             }
@@ -68,7 +73,7 @@ const main = async () => {
     .filter((tag) => !tag.name.match(/sdk|pkg/))
     .map((tag) => ({
       version: tag.name,
-      date: tag.target.committedDate,
+      date: tag.target?.committedDate || tag.target?.tagger?.date,
       downloads: createDownloadLinks(tag.name),
       checksums: `${baseUrl}/pulumi-${tag.name.slice(1)}-checksums.txt`,
       latest: latestVersion === tag.name.slice(1) ? true : undefined,
