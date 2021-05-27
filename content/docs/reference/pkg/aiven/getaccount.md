@@ -97,7 +97,7 @@ import * as aiven from "@pulumi/aiven";
 
 const account1 = pulumi.output(aiven.getAccount({
     name: "<ACCOUNT_NAME>",
-}, { async: true }));
+}));
 ```
 
 
