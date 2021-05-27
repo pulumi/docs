@@ -110,7 +110,7 @@ const groups = pulumi.output(azuread.getGroups({
         "group-a",
         "group-b",
     ],
-}, { async: true }));
+}));
 ```
 
 

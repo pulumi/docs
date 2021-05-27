@@ -103,7 +103,7 @@ import * as azuread from "@pulumi/azuread";
 const example = pulumi.output(azuread.getGroup({
     displayName: "MyGroupName",
     securityEnabled: true,
-}, { async: true }));
+}));
 ```
 
 

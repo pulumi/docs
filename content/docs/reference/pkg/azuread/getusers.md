@@ -110,7 +110,7 @@ const users = pulumi.output(azuread.getUsers({
         "kat@hashicorp.com",
         "byte@hashicorp.com",
     ],
-}, { async: true }));
+}));
 ```
 
 
