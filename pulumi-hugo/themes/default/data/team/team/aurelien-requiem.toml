@@ -1,0 +1,11 @@
+id = "aurelien-requiem"
+name = "Aurélien Requiem"
+title = "Customer Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "aureq"
+twitter = "aureq"
+linkedin = "aurelienrequiem"
