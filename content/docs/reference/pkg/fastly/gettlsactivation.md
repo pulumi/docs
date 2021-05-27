@@ -102,7 +102,7 @@ import * as fastly from "@pulumi/fastly";
 
 const example = pulumi.output(fastly.getTlsActivation({
     domain: "example.com",
-}, { async: true }));
+}));
 ```
 
 

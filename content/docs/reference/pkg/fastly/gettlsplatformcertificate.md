@@ -106,7 +106,7 @@ import * as fastly from "@pulumi/fastly";
 
 const example = pulumi.output(fastly.getTlsPlatformCertificate({
     domains: ["example.com"],
-}, { async: true }));
+}));
 ```
 
 

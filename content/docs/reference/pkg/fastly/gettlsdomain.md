@@ -95,7 +95,7 @@ import * as fastly from "@pulumi/fastly";
 
 const domain = pulumi.output(fastly.getTlsDomain({
     domain: "example.com",
-}, { async: true }));
+}));
 ```
 
 
