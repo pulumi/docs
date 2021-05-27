@@ -105,7 +105,7 @@ import * as datadog from "@pulumi/datadog";
 const test = pulumi.output(datadog.getMonitor({
     monitorTagsFilters: ["foo:bar"],
     nameFilter: "My awesome monitor",
-}, { async: true }));
+}));
 ```
 
 

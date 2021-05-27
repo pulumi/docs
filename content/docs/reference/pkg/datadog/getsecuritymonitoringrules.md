@@ -110,7 +110,7 @@ const test = pulumi.output(datadog.getSecurityMonitoringRules({
     defaultOnlyFilter: true,
     nameFilter: "attack",
     tagsFilters: ["foo:bar"],
-}, { async: true }));
+}));
 ```
 
 

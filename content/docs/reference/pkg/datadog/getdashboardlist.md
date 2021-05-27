@@ -95,7 +95,7 @@ import * as datadog from "@pulumi/datadog";
 
 const test = pulumi.output(datadog.getDashboardList({
     name: "My super list",
-}, { async: true }));
+}));
 ```
 
 
