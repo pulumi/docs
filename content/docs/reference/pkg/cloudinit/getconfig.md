@@ -138,7 +138,7 @@ const foo = pulumi.output(cloudinit.getConfig({
         contentType: "text/x-shellscript",
         filename: "foobar.sh",
     }],
-}, { async: true }));
+}));
 ```
 
 
