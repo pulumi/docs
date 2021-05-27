@@ -99,7 +99,7 @@ import * as azure from "@pulumi/azure";
 const example = pulumi.output(azure.containerservice.getKubernetesCluster({
     name: "myakscluster",
     resourceGroupName: "my-example-resource-group",
-}, { async: true }));
+}));
 ```
 
 

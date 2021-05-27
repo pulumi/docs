@@ -99,7 +99,7 @@ import * as azure from "@pulumi/azure";
 const vault = pulumi.output(azure.recoveryservices.getVault({
     name: "tfex-recovery_vault",
     resourceGroupName: "tfex-resource_group",
-}, { async: true }));
+}));
 ```
 
 

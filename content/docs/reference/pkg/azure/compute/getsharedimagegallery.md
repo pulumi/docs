@@ -99,7 +99,7 @@ import * as azure from "@pulumi/azure";
 const example = pulumi.output(azure.compute.getSharedImageGallery({
     name: "my-image-gallery",
     resourceGroupName: "example-resources",
-}, { async: true }));
+}));
 ```
 
 

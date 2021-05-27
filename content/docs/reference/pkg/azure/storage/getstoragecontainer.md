@@ -99,7 +99,7 @@ import * as azure from "@pulumi/azure";
 const example = pulumi.output(azure.storage.getStorageContainer({
     name: "example-container-name",
     storageAccountName: "example-storage-account-name",
-}, { async: true }));
+}));
 ```
 
 

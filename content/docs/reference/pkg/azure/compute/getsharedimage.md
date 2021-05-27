@@ -103,7 +103,7 @@ const example = pulumi.output(azure.compute.getSharedImage({
     galleryName: "my-image-gallery",
     name: "my-image",
     resourceGroupName: "example-resources",
-}, { async: true }));
+}));
 ```
 
 

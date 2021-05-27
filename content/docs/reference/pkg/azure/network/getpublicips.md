@@ -100,7 +100,7 @@ import * as azure from "@pulumi/azure";
 const example = pulumi.output(azure.network.getPublicIPs({
     attached: false,
     resourceGroupName: "pip-test",
-}, { async: true }));
+}));
 ```
 
 

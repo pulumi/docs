@@ -108,7 +108,7 @@ const example = pulumi.output(azure.databasemigration.getProject({
     name: "example-dbms-project",
     resourceGroupName: "example-rg",
     serviceName: "example-dbms",
-}, { async: true }));
+}));
 
 export const name = example.name;
 ```

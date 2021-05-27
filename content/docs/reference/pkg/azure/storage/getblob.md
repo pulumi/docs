@@ -103,7 +103,7 @@ const example = pulumi.output(azure.storage.getBlob({
     name: "example-blob-name",
     storageAccountName: "example-storage-account-name",
     storageContainerName: "example-storage-container-name",
-}, { async: true }));
+}));
 ```
 
 

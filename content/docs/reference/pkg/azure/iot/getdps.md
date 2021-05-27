@@ -99,7 +99,7 @@ import * as azure from "@pulumi/azure";
 const example = pulumi.output(azure.iot.getDps({
     name: "iot_hub_dps_test",
     resourceGroupName: "iothub_dps_rg",
-}, { async: true }));
+}));
 ```
 
 

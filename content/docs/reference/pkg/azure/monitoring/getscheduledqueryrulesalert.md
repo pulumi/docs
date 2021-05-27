@@ -104,7 +104,7 @@ import * as azure from "@pulumi/azure";
 const example = pulumi.output(azure.monitoring.getScheduledQueryRulesAlert({
     name: "tfex-queryrule",
     resourceGroupName: "example-rg",
-}, { async: true }));
+}));
 
 export const queryRuleId = example.id;
 ```

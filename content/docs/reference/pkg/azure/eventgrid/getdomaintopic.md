@@ -54,7 +54,7 @@ import * as azure from "@pulumi/azure";
 const example = pulumi.output(azure.eventgrid.getDomainTopic({
     name: "my-eventgrid-domain-topic",
     resourceGroupName: "example-resources",
-}, { async: true }));
+}));
 ```
 
 

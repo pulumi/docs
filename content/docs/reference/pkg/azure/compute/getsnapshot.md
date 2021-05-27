@@ -99,7 +99,7 @@ import * as azure from "@pulumi/azure";
 const example = pulumi.output(azure.compute.getSnapshot({
     name: "my-snapshot",
     resourceGroupName: "my-resource-group",
-}, { async: true }));
+}));
 ```
 
 

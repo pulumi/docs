@@ -95,7 +95,7 @@ import * as azure from "@pulumi/azure";
 
 const example = pulumi.output(azure.compute.getImages({
     resourceGroupName: "example-resources",
-}, { async: true }));
+}));
 ```
 
 
