@@ -317,6 +317,8 @@ pulumi refresh -y
 
 And then you can tear down all your infrastructure with the usual `pulumi destroy`.
 
+You can see this code in its entirety in our [examples repository on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-ecs-anywhere).
+
 ## Summary
 
 ECS Anywhere is an excellent addition to Amazon Web Services’ suite of container orchestration services. I can see many companies using it to run containers in their private infrastructure but don’t necessarily have the means, know-how, or drive to set up and run their Kubernetes cluster or another such tool.
