@@ -7,7 +7,7 @@ aliases: ["/docs/reference/tutorials/aws/tutorial-service/"]
 
 <!--To-Do: Update github-buttons shortcode to check for existence of examples-->
 <p class="mb-4 flex">
-    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white h-8" href="https://github.com/pulumi/examples/tree/master/aws-ts-containers" target="_blank">
+    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-nowrap hover:text-white h-8" href="https://github.com/pulumi/examples/tree/master/aws-ts-containers" target="_blank">
       <span><i class="fab fa-github pr-2"></i> View TS Code</span>
     </a>
 </p>

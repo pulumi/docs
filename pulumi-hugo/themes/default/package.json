@@ -7,27 +7,25 @@
     "test": "yarn run test-components",
     "watch": "yarn run concurrently 'yarn run watch-css' 'yarn run watch-js' 'yarn run watch-components'",
     "build": "yarn run build-css && yarn run build-js && yarn run build-components",
-
     "test-components": "yarn --cwd components run test",
-
     "watch-css": "yarn run chokidar 'assets/sass/**/*.scss' -c \"yarn run --silent node-sass assets/sass/styles.scss | yarn run postcss --config assets/config --output ${CSS_BUNDLE}\"",
     "watch-js": "yarn run tsc --watch --preserveWatchOutput --outFile ${JS_BUNDLE}",
     "watch-components": "yarn --cwd components run start",
-
-    "build-css": "yarn run --silent node-sass assets/sass/styles.scss | yarn run postcss --config assets/config --output ${CSS_BUNDLE}",
+    "build-css": "yarn run --silent node-sass assets/sass/styles.scss | yarn run postcss --config assets/config --output ${CSS_BUNDLE} --no-map",
     "build-js": "yarn run tsc --outFile ${JS_BUNDLE}",
     "build-components": "yarn --cwd components run build"
   },
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^2.0.6",
-    "autoprefixer": "^9.6.0",
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "autoprefixer": "^10.2.5",
     "chokidar-cli": "^2.1.0",
     "clipboard-polyfill": "^2.8.1",
     "concurrently": "^5.2.0",
-    "cssnano": "^4.1.10",
+    "cssnano": "^5.0.3",
     "node-sass": "^4.14.1",
-    "postcss-cli": "^6.1.3",
-    "tailwindcss": "^1.0.4",
+    "postcss": "^8.2.15",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.1.2",
     "typescript": "^3.9.6"
   }
 }

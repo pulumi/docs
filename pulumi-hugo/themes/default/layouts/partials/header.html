@@ -1,12 +1,12 @@
 <nav class="top-nav-bar transition-all">
-    <div class="top-nav-container lg:container">
+    <div class="top-nav-container lg:container lg:px-4">
         {{ partial "banner" . }}
         <ul class="hidden w-full lg:flex lg:w-1/2 justify-end items-center order-first lg:order-last">
             <li class="github-widget mr-8">
                 <a data-track="header-github-pulumi" class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
             </li>
             <li class="mr-8"><a data-track="header-github" href="{{ relref . "/docs" }}">
-                <i class="fas fa-book"></i>
+                <i class="fas fa-book mr-0.5"></i>
                 Docs
             </a></li>
             <li class="mr-8"><a data-track="header-slack" href="https://slack.pulumi.com/" target="_blank">
@@ -22,77 +22,72 @@
 </nav>
 
 <div class="header-container">
-    <nav class="lg:container lg:mx-auto">
+    <nav class="lg:container lg:mx-auto lg:px-4">
         <header>
-            <div class="flex flex-wrap lg:flex-nowrap w-full">
+            <div class="flex flex-col lg:flex-row">
                 <div class="logo-container">
                     <a data-track="header-pulumi-logo" class="block" href="/">
-                        <img class="h-8 block" src="/images/logo/logo-on-white.svg" alt="Pulumi logo">
+                        <img class="h-8" src="/images/logo/logo-on-white.svg" alt="Pulumi logo">
                     </a>
                 </div>
-
                 <ul class="desktop-menu">
                     <li class="header-nav-item-drop-down">
-                        <span class="dropdown-title">Cloud Engineering</span>
+                        <span class="dropdown-title whitespace-nowrap">Cloud Engineering</span>
                         <span class="dropdown-menu-caret"></span>
                         <div class="header-nav-drop-down-menu">
                             <ul>
-                                <a href="{{ relref . "/cloud-engineering" }}">
-                                    <li class="header-dropdown-item mb-3">
+                                <li>
+                                    <a href="{{ relref . "/cloud-engineering" }}">
                                         Overview
-                                    </li>
-                                </a>
-                                <a href="{{ relref . "/solutions" }}">
-                                    <li class="header-dropdown-item my-3">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ relref . "/solutions" }}">
                                         Solutions
-                                    </li>
-                                </a>
-                                <a href="{{ relref . "/case-studies" }}">
-                                    <li class="header-dropdown-item mt-3">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ relref . "/case-studies" }}">
                                         Case Studies
-                                    </li>
-                                </a>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </li>
-
                     <li>
                         <a href="{{ relref . "/product" }}">Products</a>
                     </li>
-
                     <li>
                         <a href="{{ relref . "/pricing" }}">Pricing</a>
                     </li>
-
                     <li>
                         <a href="{{ relref . "/docs" }}">Docs</a>
                     </li>
-
                     <li class="header-nav-item-drop-down">
                         <span class="dropdown-title">Learn</span>
                         <span class="dropdown-menu-caret"></span>
-                        <div class="header-nav-drop-down-menu learn-menu">
+                        <div class="header-nav-drop-down-menu">
                             <ul>
-                                <a href="{{ relref . "/blog" }}">
-                                    <li class="header-dropdown-item mb-3">
+                                <li>
+                                    <a href="{{ relref . "/blog" }}">
                                         Blog
-                                    </li>
-                                </a>
-                                <a href="{{ relref . "/resources" }}">
-                                    <li class="header-dropdown-item my-3">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ relref . "/resources" }}">
                                         Resources
-                                    </li>
-                                </a>
-                                <a href="{{ relref . "/docs/tutorials" }}">
-                                    <li class="header-dropdown-item my-3">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ relref . "/docs/tutorials" }}">
                                         Tutorials
-                                    </li>
-                                </a>
-                                <a href="{{ relref . "/resources#upcoming" }}">
-                                    <li class="header-dropdown-item mt-3">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ relref . "/resources#upcoming" }}">
                                         Workshops
-                                    </li>
-                                </a>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </li>
@@ -110,7 +105,7 @@
 
                 <ul class="mobile-menu">
                     <ul>
-                        <li class="mobile-menu-item"><a href="{{ relref . "/cloud-engineering" }}">Cloud Engineering</a></li>
+                        <li class="mobile-menu-item whitespace-nowrap"><a href="{{ relref . "/cloud-engineering" }}">Cloud Engineering</a></li>
                         <li class="mobile-menu-subitem"><a href="{{ relref . "/cloud-engineering" }}">Overview</a></li>
                         <li class="mobile-menu-subitem"><a href="{{ relref . "/solutions" }}">Solutions</a></li>
                         <li class="mobile-menu-subitem"><a href="{{ relref . "/case-studies" }}">Case Studies</a></li>
@@ -127,34 +122,21 @@
                         <li class="mobile-menu-subitem"><a href="{{ relref . "/docs/tutorials" }}">Tutorials</a></li>
                         <li class="mobile-menu-subitem"><a href="{{ relref . "/resources#upcoming" }}">Workshops</a></li>
                     </ul>
-                    <div class="flex border-t-2">
-                        <div class="w-1/4 text-center">
-                            <p>Github</p>
-                        </div>
-
-                        <div class="w-1/4 text-center">
-                            <p>Docs</p>
-                        </div>
-
-                        <div class="w-1/4 text-center">
-                            <p>Slack</p>
-                        </div>
-
-                        <div class="w-1/4 text-center">
-                            <p>Sign In</p>
-                        </div>
+                    <div class="flex items-center justify-between py-4 px-2 border-t my-4 mx-2 border-gray-200">
+                        <a href="https://github.com/pulumi/pulumi">GitHub</a>
+                        <a href="{{ relref . "/docs" }}">Docs</a>
+                        <a href="https://slack.pulumi.com/">Slack</a>
+                        <a href="https://app.pulumi.com/">Sign In</a>
                     </div>
-                    <div class="text-center bg-violet-500 text-white py-4">
-                        Get Started
+                    <div class="text-center bg-violet-600 text-white py-4">
+                         <a class="block" data-track="header-get-started-mobile" href="{{ relref . "/docs/get-started" }}" title="Get started with Pulumi by creating your first project">
+                            Get Started
+                        </a>
                     </div>
                 </ul>
 
                 <div class="cta-container">
-                    <a class="header-btn-primary"
-                        data-track="header-get-started"
-                        href="{{ relref . "/docs/get-started" }}"
-                        title="Get started with Pulumi by creating your first project"
-                    >
+                    <a class="header-btn-primary" data-track="header-get-started" href="{{ relref . "/docs/get-started" }}" title="Get started with Pulumi by creating your first project">
                         Get Started
                     </a>
                 </div>

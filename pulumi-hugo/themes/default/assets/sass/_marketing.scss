@@ -5,7 +5,7 @@
 }
 
 body:not(.section-docs):not(.section-blog):not(.section-authors):not(.section-tags):not(.section-legal) {
-    overflow-x: hidden;
+    @apply overflow-x-hidden;
 
     h1 {
         @apply text-5xl;
@@ -26,15 +26,21 @@ body:not(.section-docs):not(.section-blog):not(.section-authors):not(.section-ta
         @apply text-base;
     }
 
+    h1, h2, h3, h4, h5, h6 {
+        // Tailwind v2 makes some changes to line-heights, one of which is that headings
+        // now get line-heights of 1. This is generally a good thing, but it makes the
+        // headings in our marketing pages lose some intentional vertical spacing. So we
+        // override it here to avoid having to sprinkle `leading-*` utilities everywhere.
+        @apply leading-snug #{!important};
+    }
+
     p {
         @apply text-gray-700;
 
         &.text-white {
-            @apply text-white;
-        }
-
-        &.text-black {
-            @apply text-black;
+            // NB: Don't even try changing this to `@apply text-white`, unless you love
+            // debugging memory leaks.
+            color: $white !important;
         }
     }
 
@@ -44,6 +50,7 @@ body:not(.section-docs):not(.section-blog):not(.section-authors):not(.section-ta
 
     .description a, a.link {
         @apply text-black font-semibold;
+
         &:hover {
             @apply underline;
         }
@@ -98,8 +105,7 @@ body:not(.section-docs):not(.section-blog):not(.section-authors):not(.section-ta
 
     @screen md {
         h1 {
-            // We need upgrade tailwind to use `text-7xl`
-            font-size: 5.25rem;
+            @apply text-7xl;
 
             &.small-title {
                 @apply text-5xl;

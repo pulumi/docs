@@ -119,7 +119,7 @@ pulumi-convert {
                     }
 
                     .label {
-                        @apply mx-2 font-body text-gray-500 whitespace-no-wrap overflow-hidden;
+                        @apply mx-2 font-body text-gray-500 whitespace-nowrap overflow-hidden;
                     }
 
                     .indicator {

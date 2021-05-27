@@ -73,7 +73,7 @@
                         {{ if $multipleSessions }}
                             <pulumi-webinar-form-select
                                 label-class="block mb-2 font-normal text-sm"
-                                select-class="w-full px-2 py-1 text-sm rounded block text-gray-700 border border-gray-300 rounded bg-white focus:outline-none focus:shadow-outline"
+                                select-class="w-full px-2 py-1 text-sm rounded block text-gray-700 border border-gray-300 rounded bg-white focus:outline-none focus:ring"
                                 sessions="{{ .Params.multiple | jsonify }}"
                             ></pulumi-webinar-form-select>
                         {{ else }}

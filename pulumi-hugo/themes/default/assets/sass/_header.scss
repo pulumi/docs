@@ -24,10 +24,10 @@
             }
 
             .top-nav-banner-cta {
-                @apply px-3 py-2 rounded text-left;
+                @apply px-3 py-2 text-left;
 
                 @screen lg {
-                    @apply inline-block;
+                    @apply rounded inline-block;
                 }
 
                 // TODO: update color
@@ -55,12 +55,10 @@
     }
 
     .logo-container {
-        @apply w-1/2 pl-6;
+        @apply px-4 pb-2;
 
         @screen lg {
             @apply flex items-center justify-start pl-0;
-
-            width: calc(100% / 7);
         }
     }
 
@@ -68,8 +66,7 @@
         @apply hidden;
 
         @screen lg {
-            @apply flex items-center justify-center;
-            width: calc(100% / 7);
+            @apply flex items-center justify-end;
         }
 
         .header-btn-primary {
@@ -86,12 +83,24 @@
         @apply hidden;
 
         @screen lg {
-            @apply flex list-none justify-center;
-            width: calc((100% / 7) * 5);
+            @apply flex items-center flex-grow justify-evenly mx-8;
+
+            li {
+                a {
+                    @apply block w-full;
+                }
+            }
 
             li:not(.header-dropdown-item) {
-                @apply flex items-center justify-center text-center;
-                width: calc(100% / 5);
+                @apply flex items-center ;
+
+                a {
+                    @apply block px-4 my-1 transition-all;
+                }
+
+                .dropdown-title {
+                    @apply pl-4 pr-8;
+                }
 
                 &:hover {
                     a, .dropdown-title {
@@ -103,27 +112,26 @@
                     @apply relative cursor-pointer;
 
                     .header-nav-drop-down-menu {
-                        @apply w-full absolute hidden pt-8 top-0 mt-3;
+                        @apply w-full absolute hidden min-w-max pt-6 top-0;
 
                         ul {
-                            @apply bg-white p-6 text-left rounded shadow-xl;
-                            white-space: nowrap;
+                            @apply bg-white text-left rounded shadow-xl py-2 whitespace-nowrap;
+
+                            li {
+                                @apply my-1;
+                            }
 
                             a {
                                 &:hover {
-                                    @apply opacity-75;
+                                    @apply opacity-100;
                                 }
                             }
                         }
                     }
 
                     .dropdown-menu-caret {
-                        content: '';
-                        margin-left: 0.5rem;
-
-                        width: 0;
-                        height: 0;
-
+                        @apply w-0 h-0 m-1 absolute right-2;
+                        content: "";
                         border-left: 5px solid transparent;
                         border-right: 5px solid transparent;
                         border-top: 5px solid black;
@@ -132,7 +140,7 @@
                     &:hover {
                         .dropdown-menu-caret {
                             transform: rotate(180deg);
-                            opacity: 0.5;
+                            @apply opacity-50;
                         }
 
                         .header-nav-drop-down-menu {
@@ -166,18 +174,28 @@
         }
 
         ul {
-            @apply pt-8 ml-4;
+            @apply m-4;
 
             li {
-                @apply mb-4;
+                a {
+                    @apply block;
+                }
             }
 
             .mobile-menu-item {
-                @apply text-2xl font-medium text-black;
+                @apply text-xl font-display text-gray-800;
+
+                &:not(:first-of-type) {
+                    @apply mt-6;
+                }
             }
 
             .mobile-menu-subitem {
-                @apply ml-4 text-lg;
+                @apply ml-6 mt-4 text-base;
+
+                a {
+                    @apply text-gray-700;
+                }
             }
         }
     }
@@ -191,8 +209,7 @@
     }
 
     .mobile-menu-icon {
-        @apply absolute;
-        right: 1rem;
+        @apply absolute right-4;
 
         @screen lg {
             @apply hidden;

@@ -21,13 +21,6 @@
   "dependencies": {
     "@stencil/core": "^2.0.1",
     "@stencil/redux": "^0.2.0",
-    "redux": "^4.1.0",
-    "redux-devtools-extension": "^2.13.9",
-    "redux-thunk": "^2.3.0",
-    "swiper": "^6.5.6",
-    "uuid": "^8.1.0"
-  },
-  "devDependencies": {
     "@stencil/sass": "^1.4.1",
     "@types/codemirror": "^0.0.98",
     "@types/file-saver": "^2.0.1",
@@ -37,6 +30,11 @@
     "@types/uuid": "^8.0.0",
     "jest": "^26.6.3",
     "jest-cli": "^26.6.3",
-    "puppeteer": "^9.1.1"
+    "puppeteer": "^9.1.1",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
+    "swiper": "^6.5.6",
+    "uuid": "^8.1.0"
   }
 }

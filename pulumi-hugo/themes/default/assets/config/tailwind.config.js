@@ -20,8 +20,19 @@ const brand = {
 
 const white = defaultTheme.colors.white;
 const black = defaultTheme.colors.black;
-const red = defaultTheme.colors.red;
 const transparent = defaultTheme.colors.transparent;
+
+const red = {
+    100: "#fff5f5",
+    200: "#fed7d7",
+    300: "#feb2b2",
+    400: "#fc8181",
+    500: "#f56565",
+    600: "#e53e3e",
+    700: "#c53030",
+    800: "#9b2c2c",
+    900: "#742a2a",
+};
 
 const gray = {
     100: "#f9f9fa",
@@ -65,7 +76,7 @@ const fuchsia = {
     300: "#e5b7ce",
     400: "#d794b6",
     500: "#ca709d",
-    600: brand.fuschia,
+    600: brand.fuchsia,
     700: "#973d6a",
     800: "#712e50",
     900: "#4c1e35",
@@ -132,6 +143,7 @@ const green = {
 }
 
 module.exports = {
+    purge: false,
     theme: {
         extend: {
             fontFamily: {
@@ -165,22 +177,16 @@ module.exports = {
             violet,
         },
         maxHeight: {
-            '25': '25vh',
-            '50': '50vh',
-            '75': '75vh',
-            '100': '100vh',
-        }
+            "25": "25vh",
+            "50": "50vh",
+            "75": "75vh",
+            "100": "100vh",
+        },
+        screens: {
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+        },
     },
-
-    variants: {
-        margin: [
-            "responsive",
-            "hover",
-        ],
-        padding: [
-            "responsive",
-            "group-hover",
-            "hover",
-        ],
-    }
-}
+};

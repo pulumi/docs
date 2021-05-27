@@ -1,0 +1,19 @@
+/* purgecss start ignore */
+@mixin container-2xl {
+    @media(min-width: 1536px) {
+        max-width: 1536px;
+    }
+}
+
+.container-2xl {
+    @include container-2xl();
+}
+
+.section-docs {
+    .container,
+    .top-nav-bar .top-nav-container,
+    .header-container nav {
+       @include container-2xl();
+    }
+}
+/* purgecss end ignore */

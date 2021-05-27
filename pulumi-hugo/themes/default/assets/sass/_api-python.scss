@@ -58,7 +58,7 @@ div.section[id]:not([id=""]) {
 
         dt {
             // Use the same styling as our `pre` tags for definitions.
-            @apply font-mono bg-gray-100 py-4 px-5 rounded border border-gray-200 scrolling-auto overflow-scroll my-4 leading-normal text-sm;
+            @apply font-mono bg-gray-100 py-4 px-5 rounded border border-gray-200 overflow-scroll my-4 leading-normal text-sm;
 
             // Remove italics in these definitions.
             em {
