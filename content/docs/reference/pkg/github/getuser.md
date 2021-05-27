@@ -112,11 +112,11 @@ import * as github from "@pulumi/github";
 // Retrieve information about a GitHub user.
 const example = pulumi.output(github.getUser({
     username: "example",
-}, { async: true }));
+}));
 // Retrieve information about the currently authenticated user.
 const current = pulumi.output(github.getUser({
     username: "",
-}, { async: true }));
+}));
 
 export const currentGithubLogin = current.login;
 ```

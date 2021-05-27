@@ -95,7 +95,7 @@ import * as github from "@pulumi/github";
 
 const example = pulumi.output(github.getTeam({
     slug: "example",
-}, { async: true }));
+}));
 ```
 
 

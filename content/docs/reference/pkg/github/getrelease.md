@@ -103,7 +103,7 @@ const example = pulumi.output(github.getRelease({
     owner: "example-owner",
     repository: "example-repository",
     retrieveBy: "latest",
-}, { async: true }));
+}));
 ```
 
 

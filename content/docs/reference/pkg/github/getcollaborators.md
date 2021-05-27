@@ -99,7 +99,7 @@ import * as github from "@pulumi/github";
 const test = pulumi.output(github.getCollaborators({
     owner: "example_owner",
     repository: "example_repository",
-}, { async: true }));
+}));
 ```
 
 

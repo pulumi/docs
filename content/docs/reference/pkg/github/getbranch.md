@@ -99,7 +99,7 @@ import * as github from "@pulumi/github";
 const development = pulumi.output(github.getBranch({
     branch: "development",
     repository: "example",
-}, { async: true }));
+}));
 ```
 
 

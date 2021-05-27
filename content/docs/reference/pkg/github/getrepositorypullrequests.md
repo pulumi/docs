@@ -115,7 +115,7 @@ const example = pulumi.output(github.getRepositoryPullRequests({
     sortBy: "updated",
     sortDirection: "desc",
     state: "open",
-}, { async: true }));
+}));
 ```
 
 

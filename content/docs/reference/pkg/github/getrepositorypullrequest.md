@@ -99,7 +99,7 @@ import * as github from "@pulumi/github";
 const example = pulumi.output(github.getRepositoryPullRequest({
     baseRepository: "example_repository",
     number: 1,
-}, { async: true }));
+}));
 ```
 
 
