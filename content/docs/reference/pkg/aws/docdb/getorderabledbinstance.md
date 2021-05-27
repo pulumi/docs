@@ -127,7 +127,7 @@ const test = pulumi.output(aws.docdb.getOrderableDbInstance({
         "db.r4.large",
         "db.t3.medium",
     ],
-}, { async: true }));
+}));
 ```
 
 

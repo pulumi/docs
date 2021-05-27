@@ -96,7 +96,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.apigatewayv2.getApis({
     protocolType: "HTTP",
-}, { async: true }));
+}));
 ```
 
 

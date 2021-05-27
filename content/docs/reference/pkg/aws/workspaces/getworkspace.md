@@ -96,7 +96,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.workspaces.getWorkspace({
     workspaceId: "ws-cj5xcxsz5",
-}, { async: true }));
+}));
 ```
 
 
@@ -186,7 +186,7 @@ import * as aws from "@pulumi/aws";
 const example = pulumi.output(aws.workspaces.getWorkspace({
     directoryId: "d-9967252f57",
     userName: "Example",
-}, { async: true }));
+}));
 ```
 
 

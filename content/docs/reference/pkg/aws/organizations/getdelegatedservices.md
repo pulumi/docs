@@ -95,7 +95,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.organizations.getDelegatedServices({
     accountId: "AWS ACCOUNT ID",
-}, { async: true }));
+}));
 ```
 
 

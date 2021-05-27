@@ -95,7 +95,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.imagebuilder.getImageRecipe({
     arn: "arn:aws:imagebuilder:us-east-1:aws:image-recipe/example/1.0.0",
-}, { async: true }));
+}));
 ```
 
 

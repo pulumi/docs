@@ -95,7 +95,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.workspaces.getDirectory({
     directoryId: "d-9067783251",
-}, { async: true }));
+}));
 ```
 
 

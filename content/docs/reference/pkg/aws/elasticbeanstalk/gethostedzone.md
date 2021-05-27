@@ -88,7 +88,7 @@ current = aws.elasticbeanstalk.get_hosted_zone()
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = pulumi.output(aws.elasticbeanstalk.getHostedZone({ async: true }));
+const current = pulumi.output(aws.elasticbeanstalk.getHostedZone());
 ```
 
 

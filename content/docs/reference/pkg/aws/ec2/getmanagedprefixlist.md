@@ -104,10 +104,10 @@ example = aws.ec2.get_managed_prefix_list(name=f"com.amazonaws.{current.name}.dy
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = pulumi.output(aws.getRegion({ async: true }));
+const current = pulumi.output(aws.getRegion());
 const example = current.apply(current => aws.ec2.getManagedPrefixList({
     name: `com.amazonaws.${current.name!}.dynamodb`,
-}, { async: true }));
+}));
 ```
 
 
@@ -214,7 +214,7 @@ const example = pulumi.output(aws.ec2.getManagedPrefixList({
         name: "prefix-list-name",
         values: ["my-prefix-list"],
     }],
-}, { async: true }));
+}));
 ```
 
 

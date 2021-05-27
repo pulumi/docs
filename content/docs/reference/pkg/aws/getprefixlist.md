@@ -279,7 +279,7 @@ const test = pulumi.output(aws.ec2.getPrefixList({
         name: "prefix-list-id",
         values: ["pl-68a54001"],
     }],
-}, { async: true }));
+}));
 ```
 
 

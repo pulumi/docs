@@ -95,7 +95,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.workspaces.getImage({
     imageId: "wsi-ten5h0y19",
-}, { async: true }));
+}));
 ```
 
 

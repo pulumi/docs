@@ -254,7 +254,7 @@ const example = pulumi.output(aws.getAvailabilityZones({
             "opted-in",
         ],
     }],
-}, { async: true }));
+}));
 ```
 
 

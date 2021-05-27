@@ -113,7 +113,7 @@ const test = pulumi.output(aws.redshift.getOrderableCluster({
         "dc2.large",
         "ds2.xlarge",
     ],
-}, { async: true }));
+}));
 ```
 
 

@@ -210,7 +210,7 @@ const test = pulumi.output(aws.ec2transitgateway.getVpnAttachment({
         name: "resource-id",
         values: ["some-resource"],
     }],
-}, { async: true }));
+}));
 ```
 
 

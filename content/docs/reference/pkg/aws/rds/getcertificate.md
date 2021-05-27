@@ -96,7 +96,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.rds.getCertificate({
     latestValidTill: true,
-}, { async: true }));
+}));
 ```
 
 

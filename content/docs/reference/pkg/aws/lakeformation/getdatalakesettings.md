@@ -96,7 +96,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.lakeformation.getDataLakeSettings({
     catalogId: "14916253649",
-}, { async: true }));
+}));
 ```
 
 

@@ -88,7 +88,7 @@ test = aws.resourcegroupstaggingapi.get_resources()
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const test = pulumi.output(aws.resourcegroupstaggingapi.getResources({ async: true }));
+const test = pulumi.output(aws.resourcegroupstaggingapi.getResources());
 ```
 
 
@@ -203,7 +203,7 @@ const test = pulumi.output(aws.resourcegroupstaggingapi.getResources({
             "tag-value-2",
         ],
     }],
-}, { async: true }));
+}));
 ```
 
 
@@ -292,7 +292,7 @@ import * as aws from "@pulumi/aws";
 
 const test = pulumi.output(aws.resourcegroupstaggingapi.getResources({
     resourceTypeFilters: ["ec2:instance"],
-}, { async: true }));
+}));
 ```
 
 

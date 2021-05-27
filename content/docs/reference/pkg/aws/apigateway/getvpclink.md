@@ -98,7 +98,7 @@ import * as aws from "@pulumi/aws";
 
 const myApiGatewayVpcLink = pulumi.output(aws.apigateway.getVpcLink({
     name: "my-vpc-link",
-}, { async: true }));
+}));
 ```
 
 

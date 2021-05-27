@@ -95,7 +95,7 @@ import * as aws from "@pulumi/aws";
 
 const productionSigningProfile = pulumi.output(aws.signer.getSigningProfile({
     name: "prod_profile_DdW3Mk1foYL88fajut4mTVFGpuwfd4ACO6ANL0D1uIj7lrn8adK",
-}, { async: true }));
+}));
 ```
 
 

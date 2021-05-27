@@ -143,7 +143,7 @@ const example = pulumi.output(aws.ec2.getInstanceTypeOffering({
         "t3.micro",
         "t2.micro",
     ],
-}, { async: true }));
+}));
 ```
 
 

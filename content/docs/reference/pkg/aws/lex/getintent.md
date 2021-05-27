@@ -102,7 +102,7 @@ import * as aws from "@pulumi/aws";
 const orderFlowers = pulumi.output(aws.lex.getIntent({
     name: "OrderFlowers",
     version: "$LATEST",
-}, { async: true }));
+}));
 ```
 
 

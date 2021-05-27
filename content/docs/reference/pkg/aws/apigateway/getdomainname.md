@@ -95,7 +95,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.apigateway.getDomainName({
     domainName: "api.example.com",
-}, { async: true }));
+}));
 ```
 
 

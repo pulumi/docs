@@ -98,7 +98,7 @@ import * as aws from "@pulumi/aws";
 
 const examplepartner = pulumi.output(aws.cloudwatch.getEventSource({
     namePrefix: "aws.partner/examplepartner.com",
-}, { async: true }));
+}));
 ```
 
 

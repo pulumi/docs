@@ -264,7 +264,7 @@ const selected = pulumi.output(aws.ec2.getSubnet({
         name: "tag:Name",
         values: ["yakdriver"],
     }],
-}, { async: true }));
+}));
 ```
 
 

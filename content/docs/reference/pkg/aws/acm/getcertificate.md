@@ -149,18 +149,18 @@ import * as aws from "@pulumi/aws";
 const issued = pulumi.output(aws.acm.getCertificate({
     domain: "tf.example.com",
     statuses: ["ISSUED"],
-}, { async: true }));
+}));
 // Find a certificate issued by (not imported into) ACM
 const amazonIssued = pulumi.output(aws.acm.getCertificate({
     domain: "tf.example.com",
     mostRecent: true,
     types: ["AMAZON_ISSUED"],
-}, { async: true }));
+}));
 // Find a RSA 4096 bit certificate
 const rsa4096 = pulumi.output(aws.acm.getCertificate({
     domain: "tf.example.com",
     keyTypes: ["RSA_4096"],
-}, { async: true }));
+}));
 ```
 
 

@@ -128,7 +128,7 @@ const ubuntu = pulumi.output(aws.ec2.getAmiIds({
         values: ["ubuntu/images/ubuntu-*-*-amd64-server-*"],
     }],
     owners: ["099720109477"],
-}, { async: true }));
+}));
 ```
 
 

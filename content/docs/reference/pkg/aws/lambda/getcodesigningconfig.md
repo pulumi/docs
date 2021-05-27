@@ -99,7 +99,7 @@ import * as aws from "@pulumi/aws";
 
 const existingCsc = pulumi.output(aws.lambda.getCodeSigningConfig({
     arn: `arn:aws:lambda:${var_aws_region}:${var_aws_account}:code-signing-config:csc-0f6c334abcdea4d8b`,
-}, { async: true }));
+}));
 ```
 
 

@@ -95,7 +95,7 @@ import * as aws from "@pulumi/aws";
 
 const foo = pulumi.output(aws.autoscaling.getGroup({
     name: "foo",
-}, { async: true }));
+}));
 ```
 
 

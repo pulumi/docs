@@ -118,7 +118,7 @@ const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
         name: "options.amazon-side-asn",
         values: ["64512"],
     }],
-}, { async: true }));
+}));
 ```
 
 
@@ -203,7 +203,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
     id: "tgw-12345678",
-}, { async: true }));
+}));
 ```
 
 

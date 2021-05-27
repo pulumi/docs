@@ -95,7 +95,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.imagebuilder.getDistributionConfiguration({
     arn: "arn:aws:imagebuilder:us-west-2:aws:distribution-configuration/example",
-}, { async: true }));
+}));
 ```
 
 

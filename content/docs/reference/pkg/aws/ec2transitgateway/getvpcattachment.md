@@ -118,7 +118,7 @@ const example = pulumi.output(aws.ec2transitgateway.getVpcAttachment({
         name: "vpc-id",
         values: ["vpc-12345678"],
     }],
-}, { async: true }));
+}));
 ```
 
 
@@ -203,7 +203,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.ec2transitgateway.getVpcAttachment({
     id: "tgw-attach-12345678",
-}, { async: true }));
+}));
 ```
 
 

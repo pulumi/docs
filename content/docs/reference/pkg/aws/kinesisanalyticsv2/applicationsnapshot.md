@@ -264,7 +264,7 @@ The ApplicationSnapshot resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of an existing  [Kinesis Analytics v2 Application](https://www.terraform.io/docs/providers/aws/r/kinesisanalyticsv2_application.html). Note that the application must be running for a snapshot to be created.
+    <dd>{{% md %}}The name of an existing  Kinesis Analytics v2 Application. Note that the application must be running for a snapshot to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotname_csharp">
@@ -286,7 +286,7 @@ The ApplicationSnapshot resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of an existing  [Kinesis Analytics v2 Application](https://www.terraform.io/docs/providers/aws/r/kinesisanalyticsv2_application.html). Note that the application must be running for a snapshot to be created.
+    <dd>{{% md %}}The name of an existing  Kinesis Analytics v2 Application. Note that the application must be running for a snapshot to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotname_go">
@@ -308,7 +308,7 @@ The ApplicationSnapshot resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of an existing  [Kinesis Analytics v2 Application](https://www.terraform.io/docs/providers/aws/r/kinesisanalyticsv2_application.html). Note that the application must be running for a snapshot to be created.
+    <dd>{{% md %}}The name of an existing  Kinesis Analytics v2 Application. Note that the application must be running for a snapshot to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotname_nodejs">
@@ -330,7 +330,7 @@ The ApplicationSnapshot resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of an existing  [Kinesis Analytics v2 Application](https://www.terraform.io/docs/providers/aws/r/kinesisanalyticsv2_application.html). Note that the application must be running for a snapshot to be created.
+    <dd>{{% md %}}The name of an existing  Kinesis Analytics v2 Application. Note that the application must be running for a snapshot to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshot_name_python">
@@ -608,7 +608,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of an existing  [Kinesis Analytics v2 Application](https://www.terraform.io/docs/providers/aws/r/kinesisanalyticsv2_application.html). Note that the application must be running for a snapshot to be created.
+    <dd>{{% md %}}The name of an existing  Kinesis Analytics v2 Application. Note that the application must be running for a snapshot to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_applicationversionid_csharp">
@@ -648,7 +648,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of an existing  [Kinesis Analytics v2 Application](https://www.terraform.io/docs/providers/aws/r/kinesisanalyticsv2_application.html). Note that the application must be running for a snapshot to be created.
+    <dd>{{% md %}}The name of an existing  Kinesis Analytics v2 Application. Note that the application must be running for a snapshot to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_applicationversionid_go">
@@ -688,7 +688,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of an existing  [Kinesis Analytics v2 Application](https://www.terraform.io/docs/providers/aws/r/kinesisanalyticsv2_application.html). Note that the application must be running for a snapshot to be created.
+    <dd>{{% md %}}The name of an existing  Kinesis Analytics v2 Application. Note that the application must be running for a snapshot to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_applicationversionid_nodejs">
@@ -728,7 +728,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of an existing  [Kinesis Analytics v2 Application](https://www.terraform.io/docs/providers/aws/r/kinesisanalyticsv2_application.html). Note that the application must be running for a snapshot to be created.
+    <dd>{{% md %}}The name of an existing  Kinesis Analytics v2 Application. Note that the application must be running for a snapshot to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_application_version_id_python">

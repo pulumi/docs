@@ -96,7 +96,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.organizations.getDelegatedAdministrators({
     servicePrincipal: "SERVICE PRINCIPAL",
-}, { async: true }));
+}));
 ```
 
 

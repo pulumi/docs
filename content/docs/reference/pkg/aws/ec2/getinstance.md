@@ -64,7 +64,7 @@ const foo = pulumi.output(aws.ec2.getInstance({
         },
     ],
     instanceId: "i-instanceid",
-}, { async: true }));
+}));
 ```
 
 
