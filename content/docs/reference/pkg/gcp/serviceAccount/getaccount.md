@@ -96,7 +96,7 @@ import * as gcp from "@pulumi/gcp";
 
 const objectViewer = pulumi.output(gcp.serviceAccount.getAccount({
     accountId: "object-viewer",
-}, { async: true }));
+}));
 ```
 
 

@@ -95,7 +95,7 @@ import * as gcp from "@pulumi/gcp";
 
 const my_network = pulumi.output(gcp.compute.getNetwork({
     name: "default-us-east1",
-}, { async: true }));
+}));
 ```
 
 

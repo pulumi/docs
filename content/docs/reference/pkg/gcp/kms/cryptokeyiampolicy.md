@@ -161,7 +161,7 @@ const admin = pulumi.output(gcp.organizations.getIAMPolicy({
         members: ["user:jane@example.com"],
         role: "roles/cloudkms.cryptoKeyEncrypter",
     }],
-}, { async: true }));
+}));
 ```
 ```python
 import pulumi

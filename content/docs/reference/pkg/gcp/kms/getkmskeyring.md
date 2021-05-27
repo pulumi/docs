@@ -105,7 +105,7 @@ import * as gcp from "@pulumi/gcp";
 const myKeyRing = pulumi.output(gcp.kms.getKMSKeyRing({
     location: "us-central1",
     name: "my-key-ring",
-}, { async: true }));
+}));
 ```
 
 

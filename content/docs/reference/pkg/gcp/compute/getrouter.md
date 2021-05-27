@@ -99,7 +99,7 @@ import * as gcp from "@pulumi/gcp";
 const my_router = pulumi.output(gcp.compute.getRouter({
     name: "myrouter-us-east1",
     network: "my-network",
-}, { async: true }));
+}));
 ```
 
 

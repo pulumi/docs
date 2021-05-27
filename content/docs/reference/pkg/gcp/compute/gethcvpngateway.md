@@ -95,7 +95,7 @@ import * as gcp from "@pulumi/gcp";
 
 const gateway = pulumi.output(gcp.compute.getHcVpnGateway({
     name: "foobar",
-}, { async: true }));
+}));
 ```
 
 

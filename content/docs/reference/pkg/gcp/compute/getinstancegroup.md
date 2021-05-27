@@ -21,7 +21,7 @@ import * as gcp from "@pulumi/gcp";
 const all = pulumi.output(gcp.compute.getInstanceGroup({
     name: "instance-group-name",
     zone: "us-central1-a",
-}, { async: true }));
+}));
 ```
 ```python
 import pulumi

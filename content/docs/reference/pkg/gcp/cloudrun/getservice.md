@@ -101,7 +101,7 @@ import * as gcp from "@pulumi/gcp";
 const run_service = pulumi.output(gcp.cloudrun.getService({
     location: "us-central1",
     name: "my-service",
-}, { async: true }));
+}));
 ```
 
 

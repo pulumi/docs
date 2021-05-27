@@ -120,7 +120,7 @@ const defaultClusterIstioService = pulumi.output(gcp.monitoring.getClusterIstioS
     location: "us-west2-a",
     serviceName: "istio-policy",
     serviceNamespace: "istio-system",
-}, { async: true }));
+}));
 ```
 
 

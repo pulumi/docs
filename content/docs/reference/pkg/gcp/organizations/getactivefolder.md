@@ -99,7 +99,7 @@ import * as gcp from "@pulumi/gcp";
 const department1 = pulumi.output(gcp.organizations.getActiveFolder({
     displayName: "Department 1",
     parent: "organizations/1234567",
-}, { async: true }));
+}));
 ```
 
 

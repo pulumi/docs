@@ -95,7 +95,7 @@ import * as gcp from "@pulumi/gcp";
 
 const healthChceck = pulumi.output(gcp.compute.getHealthCheck({
     name: "my-hc",
-}, { async: true }));
+}));
 ```
 
 

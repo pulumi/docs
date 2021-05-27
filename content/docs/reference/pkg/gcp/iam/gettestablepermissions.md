@@ -112,7 +112,7 @@ const perms = pulumi.output(gcp.iam.getTestablePermissions({
         "GA",
         "BETA",
     ],
-}, { async: true }));
+}));
 ```
 
 

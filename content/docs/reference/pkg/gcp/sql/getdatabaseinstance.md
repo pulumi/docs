@@ -95,7 +95,7 @@ import * as gcp from "@pulumi/gcp";
 
 const qa = pulumi.output(gcp.sql.getDatabaseInstance({
     name: "test-sql-instance",
-}, { async: true }));
+}));
 ```
 
 

@@ -94,7 +94,7 @@ available = gcp.cloudrun.get_locations()
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const available = pulumi.output(gcp.cloudrun.getLocations({ async: true }));
+const available = pulumi.output(gcp.cloudrun.getLocations());
 ```
 
 

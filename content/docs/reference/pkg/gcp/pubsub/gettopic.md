@@ -97,7 +97,7 @@ import * as gcp from "@pulumi/gcp";
 
 const my_pubsub_topic = pulumi.output(gcp.pubsub.getTopic({
     name: "my-pubsub-topic",
-}, { async: true }));
+}));
 ```
 
 

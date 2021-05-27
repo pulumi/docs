@@ -96,7 +96,7 @@ import * as gcp from "@pulumi/gcp";
 
 const my_ssl_policy = pulumi.output(gcp.compute.getSSLPolicy({
     name: "production-ssl-policy",
-}, { async: true }));
+}));
 ```
 
 
