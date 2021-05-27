@@ -95,7 +95,7 @@ import * as gcp from "@pulumi/gcp";
 
 const my_backend_bucket = pulumi.output(gcp.compute.getBackendBucket({
     name: "my-backend",
-}, { async: true }));
+}));
 ```
 
 

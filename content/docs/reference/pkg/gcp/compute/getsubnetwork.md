@@ -101,7 +101,7 @@ import * as gcp from "@pulumi/gcp";
 const my_subnetwork = pulumi.output(gcp.compute.getSubnetwork({
     name: "default-us-east1",
     region: "us-east1",
-}, { async: true }));
+}));
 ```
 
 

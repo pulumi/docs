@@ -99,7 +99,7 @@ import * as gcp from "@pulumi/gcp";
 const foo = pulumi.output(gcp.iam.getWorkloadIdentityPoolProvider({
     workloadIdentityPoolId: "foo-pool",
     workloadIdentityPoolProviderId: "bar-provider",
-}, { async: true }));
+}));
 ```
 
 

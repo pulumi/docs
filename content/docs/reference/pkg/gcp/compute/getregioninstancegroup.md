@@ -19,7 +19,7 @@ import * as gcp from "@pulumi/gcp";
 
 const group = pulumi.output(gcp.compute.getRegionInstanceGroup({
     name: "instance-group-name",
-}, { async: true }));
+}));
 ```
 ```python
 import pulumi

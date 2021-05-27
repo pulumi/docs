@@ -116,7 +116,7 @@ const defaultIstioCanonicalService = pulumi.output(gcp.monitoring.getIstioCanoni
     canonicalService: "prometheus",
     canonicalServiceNamespace: "istio-system",
     meshUid: "proj-573164786102",
-}, { async: true }));
+}));
 ```
 
 

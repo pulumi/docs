@@ -88,7 +88,7 @@ available = gcp.tpu.get_tensorflow_versions()
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const available = pulumi.output(gcp.tpu.getTensorflowVersions({ async: true }));
+const available = pulumi.output(gcp.tpu.getTensorflowVersions());
 ```
 
 

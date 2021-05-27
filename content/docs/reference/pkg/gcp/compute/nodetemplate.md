@@ -227,7 +227,7 @@ import * as gcp from "@pulumi/gcp";
 
 const central1a = pulumi.output(gcp.compute.getNodeTypes({
     zone: "us-central1-a",
-}, { async: true }));
+}));
 const template = new gcp.compute.NodeTemplate("template", {
     nodeAffinityLabels: {
         foo: "baz",

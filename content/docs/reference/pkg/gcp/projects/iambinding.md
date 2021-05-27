@@ -146,7 +146,7 @@ const admin = pulumi.output(gcp.organizations.getIAMPolicy({
         members: ["user:jane@example.com"],
         role: "roles/compute.admin",
     }],
-}, { async: true }));
+}));
 const project = new gcp.projects.IAMPolicy("project", {
     policyData: admin.policyData,
     project: "your-project-id",

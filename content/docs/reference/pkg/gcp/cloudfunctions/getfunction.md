@@ -97,7 +97,7 @@ import * as gcp from "@pulumi/gcp";
 
 const my_function = pulumi.output(gcp.cloudfunctions.getFunction({
     name: "function",
-}, { async: true }));
+}));
 ```
 
 

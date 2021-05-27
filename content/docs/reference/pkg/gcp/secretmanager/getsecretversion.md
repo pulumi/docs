@@ -95,7 +95,7 @@ import * as gcp from "@pulumi/gcp";
 
 const basic = pulumi.output(gcp.secretmanager.getSecretVersion({
     secret: "my-secret",
-}, { async: true }));
+}));
 ```
 
 

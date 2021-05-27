@@ -99,7 +99,7 @@ import * as gcp from "@pulumi/gcp";
 
 const run_service = pulumi.output(gcp.runtimeconfig.getConfig({
     name: "my-service",
-}, { async: true }));
+}));
 ```
 
 

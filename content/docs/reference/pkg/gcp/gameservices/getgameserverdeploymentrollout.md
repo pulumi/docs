@@ -97,7 +97,7 @@ import * as gcp from "@pulumi/gcp";
 
 const qa = pulumi.output(gcp.gameservices.getGameServerDeploymentRollout({
     deploymentId: "tf-test-deployment-s8sn12jt2c",
-}, { async: true }));
+}));
 ```
 
 

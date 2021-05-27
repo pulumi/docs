@@ -95,7 +95,7 @@ import * as gcp from "@pulumi/gcp";
 
 const my_forwarding_rule = pulumi.output(gcp.compute.getGlobalForwardingRule({
     name: "forwarding-rule-global",
-}, { async: true }));
+}));
 ```
 
 

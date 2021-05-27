@@ -97,7 +97,7 @@ import * as gcp from "@pulumi/gcp";
 
 const groups = pulumi.output(gcp.cloudidentity.getGroups({
     parent: "customers/A01b123xz",
-}, { async: true }));
+}));
 ```
 
 

@@ -95,7 +95,7 @@ import * as gcp from "@pulumi/gcp";
 
 const foo = pulumi.output(gcp.iam.getWorkloadIdentityPool({
     workloadIdentityPoolId: "foo-pool",
-}, { async: true }));
+}));
 ```
 
 

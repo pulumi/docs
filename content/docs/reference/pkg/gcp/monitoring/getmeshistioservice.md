@@ -116,7 +116,7 @@ const defaultMeshIstioService = pulumi.output(gcp.monitoring.getMeshIstioService
     meshUid: "proj-573164786102",
     serviceName: "prometheus",
     serviceNamespace: "istio-system",
-}, { async: true }));
+}));
 ```
 
 

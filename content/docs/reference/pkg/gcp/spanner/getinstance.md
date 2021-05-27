@@ -95,7 +95,7 @@ import * as gcp from "@pulumi/gcp";
 
 const foo = pulumi.output(gcp.spanner.getInstance({
     name: "bar",
-}, { async: true }));
+}));
 ```
 
 

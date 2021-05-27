@@ -57,12 +57,12 @@ import * as gcp from "@pulumi/gcp";
 // by name
 const generic = pulumi.output(gcp.compute.getInstanceTemplate({
     name: "generic-tpl-20200107",
-}, { async: true }));
+}));
 // using a filter
 const generic_regex = pulumi.output(gcp.compute.getInstanceTemplate({
     filter: "name != generic-tpl-20200107",
     mostRecent: true,
-}, { async: true }));
+}));
 ```
 
 

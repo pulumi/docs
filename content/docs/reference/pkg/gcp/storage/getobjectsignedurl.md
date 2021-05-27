@@ -169,7 +169,7 @@ import * as gcp from "@pulumi/gcp";
 const artifact = pulumi.output(gcp.storage.getObjectSignedUrl({
     bucket: "install_binaries",
     path: "path/to/install_file.bin",
-}, { async: true }));
+}));
 const vm = new gcp.compute.Instance("vm", {});
 ```
 

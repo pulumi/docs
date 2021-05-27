@@ -97,7 +97,7 @@ import * as gcp from "@pulumi/gcp";
 
 const members = pulumi.output(gcp.cloudidentity.getGroupMemberships({
     group: "groups/123eab45c6defghi",
-}, { async: true }));
+}));
 ```
 
 
