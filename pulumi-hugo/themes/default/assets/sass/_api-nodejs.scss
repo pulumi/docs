@@ -46,8 +46,11 @@ ul.api {
         @apply truncate mt-0;
 
         a {
-            @apply btn truncate bg-transparent inline-block p-1 max-w-full;
+            @apply truncate bg-none inline-block p-1 max-w-full;
 
+            &:hover {
+                @apply underline;
+            }
         }
 
         .symbol {
