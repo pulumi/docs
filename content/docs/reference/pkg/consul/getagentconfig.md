@@ -99,7 +99,7 @@ pulumi.export("consulVersion", remote_agent.version)
 import * as pulumi from "@pulumi/pulumi";
 import * as consul from "@pulumi/consul";
 
-const remoteAgent = pulumi.output(consul.getAgentConfig({ async: true }));
+const remoteAgent = pulumi.output(consul.getAgentConfig());
 
 export const consulVersion = remoteAgent.version;
 ```

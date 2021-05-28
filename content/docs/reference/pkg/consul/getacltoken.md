@@ -104,7 +104,7 @@ import * as consul from "@pulumi/consul";
 
 const test = pulumi.output(consul.getAclToken({
     accessorId: "00000000-0000-0000-0000-000000000002",
-}, { async: true }));
+}));
 
 export const consulAclPolicies = test.policies!;
 ```
