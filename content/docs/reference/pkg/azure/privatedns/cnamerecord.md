@@ -318,7 +318,8 @@ The CnameRecord resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Time To Live (TTL) of the DNS record in seconds.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zonename_csharp">
 <a href="#zonename_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Name</a>
@@ -375,7 +376,8 @@ The CnameRecord resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Time To Live (TTL) of the DNS record in seconds.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zonename_go">
 <a href="#zonename_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Name</a>
@@ -432,7 +434,8 @@ The CnameRecord resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Time To Live (TTL) of the DNS record in seconds.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zonename_nodejs">
 <a href="#zonename_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Name</a>
@@ -489,7 +492,8 @@ The CnameRecord resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Time To Live (TTL) of the DNS record in seconds.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_name_python">
 <a href="#zone_name_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>name</a>
@@ -796,7 +800,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Time To Live (TTL) of the DNS record in seconds.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zonename_csharp">
 <a href="#state_zonename_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Name</a>
@@ -862,7 +867,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Time To Live (TTL) of the DNS record in seconds.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zonename_go">
 <a href="#state_zonename_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Name</a>
@@ -928,7 +934,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Time To Live (TTL) of the DNS record in seconds.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zonename_nodejs">
 <a href="#state_zonename_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Name</a>
@@ -994,7 +1001,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Time To Live (TTL) of the DNS record in seconds.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_name_python">
 <a href="#state_zone_name_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>name</a>

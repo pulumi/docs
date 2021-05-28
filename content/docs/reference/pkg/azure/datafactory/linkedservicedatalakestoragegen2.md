@@ -411,7 +411,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account. Required if `use_managed_identity` is true.
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipalkey_csharp">
@@ -420,7 +420,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.  Required if `use_managed_identity` is true.
+    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_csharp">
@@ -533,7 +533,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account. Required if `use_managed_identity` is true.
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipalkey_go">
@@ -542,7 +542,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.  Required if `use_managed_identity` is true.
+    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_go">
@@ -655,7 +655,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account. Required if `use_managed_identity` is true.
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipalkey_nodejs">
@@ -664,7 +664,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.  Required if `use_managed_identity` is true.
+    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_nodejs">
@@ -777,7 +777,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account. Required if `use_managed_identity` is true.
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_principal_key_python">
@@ -786,7 +786,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.  Required if `use_managed_identity` is true.
+    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_python">
@@ -1083,7 +1083,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account. Required if `use_managed_identity` is true.
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceprincipalkey_csharp">
@@ -1092,7 +1092,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.  Required if `use_managed_identity` is true.
+    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_csharp">
@@ -1205,7 +1205,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account. Required if `use_managed_identity` is true.
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceprincipalkey_go">
@@ -1214,7 +1214,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.  Required if `use_managed_identity` is true.
+    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_go">
@@ -1327,7 +1327,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account. Required if `use_managed_identity` is true.
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceprincipalkey_nodejs">
@@ -1336,7 +1336,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.  Required if `use_managed_identity` is true.
+    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_nodejs">
@@ -1449,7 +1449,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account. Required if `use_managed_identity` is true.
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_principal_key_python">
@@ -1458,7 +1458,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.  Required if `use_managed_identity` is true.
+    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_python">

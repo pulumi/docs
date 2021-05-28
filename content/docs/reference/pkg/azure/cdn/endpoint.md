@@ -303,7 +303,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
+    <dd>{{% md %}}The host header CDN provider will send along with content requests to origins.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originpath_csharp">
@@ -469,7 +469,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
+    <dd>{{% md %}}The host header CDN provider will send along with content requests to origins.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originpath_go">
@@ -635,7 +635,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
+    <dd>{{% md %}}The host header CDN provider will send along with content requests to origins.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originpath_nodejs">
@@ -801,7 +801,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
+    <dd>{{% md %}}The host header CDN provider will send along with content requests to origins.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origin_path_python">
@@ -1184,7 +1184,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
+    <dd>{{% md %}}The host header CDN provider will send along with content requests to origins.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_originpath_csharp">
@@ -1359,7 +1359,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
+    <dd>{{% md %}}The host header CDN provider will send along with content requests to origins.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_originpath_go">
@@ -1534,7 +1534,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
+    <dd>{{% md %}}The host header CDN provider will send along with content requests to origins.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_originpath_nodejs">
@@ -1709,7 +1709,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
+    <dd>{{% md %}}The host header CDN provider will send along with content requests to origins.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_origin_path_python">

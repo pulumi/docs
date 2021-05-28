@@ -1413,6 +1413,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipshutdownandforcedelete_csharp">
+<a href="#skipshutdownandforcedelete_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Shutdown<wbr>And<wbr>Force<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1429,6 +1437,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="gracefulshutdown_go">
 <a href="#gracefulshutdown_go" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Shutdown</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipshutdownandforcedelete_go">
+<a href="#skipshutdownandforcedelete_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Shutdown<wbr>And<wbr>Force<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -1453,6 +1469,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipshutdownandforcedelete_nodejs">
+<a href="#skipshutdownandforcedelete_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Shutdown<wbr>And<wbr>Force<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1473,6 +1497,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skip_shutdown_and_force_delete_python">
+<a href="#skip_shutdown_and_force_delete_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>shutdown_<wbr>and_<wbr>force_<wbr>delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1483,6 +1515,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="rollinstanceswhenrequired_csharp">
 <a href="#rollinstanceswhenrequired_csharp" style="color: inherit; text-decoration: inherit;">Roll<wbr>Instances<wbr>When<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forcedelete_csharp">
+<a href="#forcedelete_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -1499,6 +1539,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forcedelete_go">
+<a href="#forcedelete_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1511,6 +1559,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forcedelete_nodejs">
+<a href="#forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1519,6 +1575,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="roll_instances_when_required_python">
 <a href="#roll_instances_when_required_python" style="color: inherit; text-decoration: inherit;">roll_<wbr>instances_<wbr>when_<wbr>required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="force_delete_python">
+<a href="#force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>

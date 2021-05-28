@@ -184,12 +184,14 @@ const exampleLinkedServiceSftp = new azure.datafactory.LinkedServiceSftp("exampl
                       <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">host_key_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                       <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                       <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">skip_host_key_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                       <span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">LinkedServiceSftp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -410,6 +412,15 @@ The LinkedServiceSftp resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}The description for the Data Factory Linked Service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hostkeyfingerprint_csharp">
+<a href="#hostkeyfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Key<wbr>Fingerprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The host key fingerprint of the SFTP server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="integrationruntimename_csharp">
 <a href="#integrationruntimename_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime<wbr>Name</a>
 </span>
@@ -436,6 +447,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skiphostkeyvalidation_csharp">
+<a href="#skiphostkeyvalidation_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Host<wbr>Key<wbr>Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to validate host key fingerprint while connecting. If set to `false`, `host_key_fingerprint` must also be set.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -532,6 +552,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     <dd>{{% md %}}The description for the Data Factory Linked Service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hostkeyfingerprint_go">
+<a href="#hostkeyfingerprint_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Key<wbr>Fingerprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The host key fingerprint of the SFTP server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="integrationruntimename_go">
 <a href="#integrationruntimename_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime<wbr>Name</a>
 </span>
@@ -558,6 +587,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skiphostkeyvalidation_go">
+<a href="#skiphostkeyvalidation_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Host<wbr>Key<wbr>Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to validate host key fingerprint while connecting. If set to `false`, `host_key_fingerprint` must also be set.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -654,6 +692,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     <dd>{{% md %}}The description for the Data Factory Linked Service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hostkeyfingerprint_nodejs">
+<a href="#hostkeyfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Key<wbr>Fingerprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The host key fingerprint of the SFTP server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="integrationruntimename_nodejs">
 <a href="#integrationruntimename_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Runtime<wbr>Name</a>
 </span>
@@ -680,6 +727,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skiphostkeyvalidation_nodejs">
+<a href="#skiphostkeyvalidation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Host<wbr>Key<wbr>Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to validate host key fingerprint while connecting. If set to `false`, `host_key_fingerprint` must also be set.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -776,6 +832,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     <dd>{{% md %}}The description for the Data Factory Linked Service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="host_key_fingerprint_python">
+<a href="#host_key_fingerprint_python" style="color: inherit; text-decoration: inherit;">host_<wbr>key_<wbr>fingerprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The host key fingerprint of the SFTP server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="integration_runtime_name_python">
 <a href="#integration_runtime_name_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>runtime_<wbr>name</a>
 </span>
@@ -802,6 +867,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skip_host_key_validation_python">
+<a href="#skip_host_key_validation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>host_<wbr>key_<wbr>validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to validate host key fingerprint while connecting. If set to `false`, `host_key_fingerprint` must also be set.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -882,12 +956,14 @@ Get an existing LinkedServiceSftp resource's state with the given name, ID, and 
         <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">host_key_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">skip_host_key_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LinkedServiceSftp</code></pre></div>
 {{% /choosable %}}
 
@@ -1055,6 +1131,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The SFTP server hostname.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_hostkeyfingerprint_csharp">
+<a href="#state_hostkeyfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Key<wbr>Fingerprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The host key fingerprint of the SFTP server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_integrationruntimename_csharp">
 <a href="#state_integrationruntimename_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime<wbr>Name</a>
 </span>
@@ -1108,6 +1193,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service. Changing this forces a new resource
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skiphostkeyvalidation_csharp">
+<a href="#state_skiphostkeyvalidation_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Host<wbr>Key<wbr>Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to validate host key fingerprint while connecting. If set to `false`, `host_key_fingerprint` must also be set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
@@ -1177,6 +1271,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     <dd>{{% md %}}The SFTP server hostname.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_hostkeyfingerprint_go">
+<a href="#state_hostkeyfingerprint_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Key<wbr>Fingerprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The host key fingerprint of the SFTP server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_integrationruntimename_go">
 <a href="#state_integrationruntimename_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime<wbr>Name</a>
 </span>
@@ -1230,6 +1333,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service. Changing this forces a new resource
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skiphostkeyvalidation_go">
+<a href="#state_skiphostkeyvalidation_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Host<wbr>Key<wbr>Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to validate host key fingerprint while connecting. If set to `false`, `host_key_fingerprint` must also be set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
@@ -1299,6 +1411,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     <dd>{{% md %}}The SFTP server hostname.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_hostkeyfingerprint_nodejs">
+<a href="#state_hostkeyfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Key<wbr>Fingerprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The host key fingerprint of the SFTP server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_integrationruntimename_nodejs">
 <a href="#state_integrationruntimename_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Runtime<wbr>Name</a>
 </span>
@@ -1352,6 +1473,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service. Changing this forces a new resource
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skiphostkeyvalidation_nodejs">
+<a href="#state_skiphostkeyvalidation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Host<wbr>Key<wbr>Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to validate host key fingerprint while connecting. If set to `false`, `host_key_fingerprint` must also be set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
@@ -1421,6 +1551,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     <dd>{{% md %}}The SFTP server hostname.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_host_key_fingerprint_python">
+<a href="#state_host_key_fingerprint_python" style="color: inherit; text-decoration: inherit;">host_<wbr>key_<wbr>fingerprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The host key fingerprint of the SFTP server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_integration_runtime_name_python">
 <a href="#state_integration_runtime_name_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>runtime_<wbr>name</a>
 </span>
@@ -1474,6 +1613,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service. Changing this forces a new resource
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skip_host_key_validation_python">
+<a href="#state_skip_host_key_validation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>host_<wbr>key_<wbr>validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to validate host key fingerprint while connecting. If set to `false`, `host_key_fingerprint` must also be set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_python">
