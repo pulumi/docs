@@ -101,10 +101,10 @@ staging = digitalocean.get_project(name="My Staging Project")
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const defaultProject = pulumi.output(digitalocean.getProject({ async: true }));
+const defaultProject = pulumi.output(digitalocean.getProject());
 const staging = pulumi.output(digitalocean.getProject({
     name: "My Staging Project",
-}, { async: true }));
+}));
 ```
 
 

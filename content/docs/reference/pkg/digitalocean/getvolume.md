@@ -105,7 +105,7 @@ import * as digitalocean from "@pulumi/digitalocean";
 const example = pulumi.output(digitalocean.getVolume({
     name: "app-data",
     region: "nyc3",
-}, { async: true }));
+}));
 ```
 
 

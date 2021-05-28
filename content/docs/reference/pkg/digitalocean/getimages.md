@@ -126,7 +126,7 @@ const ubuntu = pulumi.output(digitalocean.getImages({
         key: "distribution",
         values: ["Ubuntu"],
     }],
-}, { async: true }));
+}));
 ```
 
 

@@ -100,7 +100,7 @@ import * as digitalocean from "@pulumi/digitalocean";
 
 const example = pulumi.output(digitalocean.getContainerRegistry({
     name: "example",
-}, { async: true }));
+}));
 ```
 
 

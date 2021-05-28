@@ -103,7 +103,7 @@ import * as digitalocean from "@pulumi/digitalocean";
 
 const example = pulumi.output(digitalocean.getVpc({
     name: "example-network",
-}, { async: true }));
+}));
 ```
 
 

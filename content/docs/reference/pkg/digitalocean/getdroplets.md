@@ -125,7 +125,7 @@ const small = pulumi.output(digitalocean.getDroplets({
         key: "size",
         values: ["s-1vcpu-1gb"],
     }],
-}, { async: true }));
+}));
 ```
 
 

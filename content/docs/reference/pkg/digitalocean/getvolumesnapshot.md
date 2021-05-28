@@ -108,7 +108,7 @@ const snapshot = pulumi.output(digitalocean.getVolumeSnapshot({
     mostRecent: true,
     nameRegex: "^web",
     region: "nyc3",
-}, { async: true }));
+}));
 ```
 
 

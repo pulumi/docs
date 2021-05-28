@@ -101,7 +101,7 @@ import * as digitalocean from "@pulumi/digitalocean";
 
 const example1 = pulumi.output(digitalocean.getImage({
     name: "example-1.0.0",
-}, { async: true }));
+}));
 ```
 
 
