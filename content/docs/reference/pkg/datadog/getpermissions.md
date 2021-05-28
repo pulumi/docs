@@ -88,7 +88,7 @@ permissions = datadog.get_permissions()
 import * as pulumi from "@pulumi/pulumi";
 import * as datadog from "@pulumi/datadog";
 
-const permissions = pulumi.output(datadog.getPermissions({ async: true }));
+const permissions = pulumi.output(datadog.getPermissions());
 ```
 
 

@@ -96,7 +96,7 @@ import * as datadog from "@pulumi/datadog";
 
 const ftFooSlos = pulumi.output(datadog.getServiceLevelObjectives({
     tagsQuery: "owner:ft-foo",
-}, { async: true }));
+}));
 ```
 
 
