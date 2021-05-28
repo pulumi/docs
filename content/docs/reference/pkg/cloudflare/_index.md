@@ -86,6 +86,6 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.1.0</dd>
 </dl>
 
