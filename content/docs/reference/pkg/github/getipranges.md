@@ -88,7 +88,7 @@ test = github.get_ip_ranges()
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
 
-const test = pulumi.output(github.getIpRanges({ async: true }));
+const test = pulumi.output(github.getIpRanges());
 ```
 
 
@@ -144,6 +144,22 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="actions_csharp">
+<a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dependabots_csharp">
+<a href="#dependabots_csharp" style="color: inherit; text-decoration: inherit;">Dependabots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="gits_csharp">
 <a href="#gits_csharp" style="color: inherit; text-decoration: inherit;">Gits</a>
 </span>
@@ -192,6 +208,22 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="actions_go">
+<a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dependabots_go">
+<a href="#dependabots_go" style="color: inherit; text-decoration: inherit;">Dependabots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gits_go">
 <a href="#gits_go" style="color: inherit; text-decoration: inherit;">Gits</a>
@@ -242,6 +274,22 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="actions_nodejs">
+<a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dependabots_nodejs">
+<a href="#dependabots_nodejs" style="color: inherit; text-decoration: inherit;">dependabots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="gits_nodejs">
 <a href="#gits_nodejs" style="color: inherit; text-decoration: inherit;">gits</a>
 </span>
@@ -290,6 +338,22 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="actions_python">
+<a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dependabots_python">
+<a href="#dependabots_python" style="color: inherit; text-decoration: inherit;">dependabots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gits_python">
 <a href="#gits_python" style="color: inherit; text-decoration: inherit;">gits</a>

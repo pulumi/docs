@@ -96,7 +96,7 @@ import * as github from "@pulumi/github";
 
 const example = pulumi.output(github.getActionsPublicKey({
     repository: "example_repo",
-}, { async: true }));
+}));
 ```
 
 

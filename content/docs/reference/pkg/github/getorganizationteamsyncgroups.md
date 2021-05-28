@@ -88,7 +88,7 @@ test = github.get_organization_team_sync_groups()
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
 
-const test = pulumi.output(github.getOrganizationTeamSyncGroups({ async: true }));
+const test = pulumi.output(github.getOrganizationTeamSyncGroups());
 ```
 
 

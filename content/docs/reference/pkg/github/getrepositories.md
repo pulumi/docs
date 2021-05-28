@@ -98,7 +98,7 @@ import * as github from "@pulumi/github";
 
 const example = pulumi.output(github.getRepositories({
     query: "org:hashicorp language:Go",
-}, { async: true }));
+}));
 ```
 
 

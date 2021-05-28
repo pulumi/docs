@@ -95,7 +95,7 @@ import * as github from "@pulumi/github";
 
 const test = pulumi.output(github.getOrganization({
     name: "github",
-}, { async: true }));
+}));
 ```
 
 

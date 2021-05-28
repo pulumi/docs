@@ -103,7 +103,7 @@ const example = pulumi.output(github.getRepositoryMilestone({
     number: 1,
     owner: "example-owner",
     repository: "example-repository",
-}, { async: true }));
+}));
 ```
 
 

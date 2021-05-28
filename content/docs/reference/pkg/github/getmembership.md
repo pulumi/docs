@@ -98,7 +98,7 @@ import * as github from "@pulumi/github";
 
 const membershipForSomeUser = pulumi.output(github.getMembership({
     username: "SomeUser",
-}, { async: true }));
+}));
 ```
 
 

@@ -88,7 +88,7 @@ all = github.get_organization_teams()
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
 
-const all = pulumi.output(github.getOrganizationTeams({ async: true }));
+const all = pulumi.output(github.getOrganizationTeams());
 ```
 
 
