@@ -35,7 +35,7 @@ class MyStack : Stack
     {
         var example = Output.Create(Azure.Network.GetNetworkSecurityGroup.InvokeAsync(new Azure.Network.GetNetworkSecurityGroupArgs
         {
-            Name = azurerm_network_security_group.Example.Name,
+            Name = "example",
             ResourceGroupName = azurerm_resource_group.Example.Name,
         }));
         this.Location = example.Apply(example => example.Location);
@@ -63,7 +63,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		example, err := network.LookupNetworkSecurityGroup(ctx, &network.LookupNetworkSecurityGroupArgs{
-			Name:              azurerm_network_security_group.Example.Name,
+			Name:              "example",
 			ResourceGroupName: azurerm_resource_group.Example.Name,
 		}, nil)
 		if err != nil {
@@ -85,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example = azure.network.get_network_security_group(name=azurerm_network_security_group["example"]["name"],
+example = azure.network.get_network_security_group(name="example",
     resource_group_name=azurerm_resource_group["example"]["name"])
 pulumi.export("location", example.location)
 ```
@@ -102,7 +102,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
 const example = azure.network.getNetworkSecurityGroup({
-    name: azurerm_network_security_group.example.name,
+    name: "example",
     resourceGroupName: azurerm_resource_group.example.name,
 });
 export const location = example.then(example => example.location);

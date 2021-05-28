@@ -1084,7 +1084,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the `azure.privatelink.Endpoint` of the resource access rule.
+    <dd>{{% md %}}The resource id of the resource access rule to be granted access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointtenantid_csharp">
@@ -1093,7 +1093,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant id of the `azure.privatelink.Endpoint` of the resource access rule. Defaults to the current tenant id.
+    <dd>{{% md %}}The tenant id of the resource of the resource access rule to be granted access. Defaults to the current tenant id.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1106,7 +1106,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the `azure.privatelink.Endpoint` of the resource access rule.
+    <dd>{{% md %}}The resource id of the resource access rule to be granted access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointtenantid_go">
@@ -1115,7 +1115,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant id of the `azure.privatelink.Endpoint` of the resource access rule. Defaults to the current tenant id.
+    <dd>{{% md %}}The tenant id of the resource of the resource access rule to be granted access. Defaults to the current tenant id.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1128,7 +1128,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the `azure.privatelink.Endpoint` of the resource access rule.
+    <dd>{{% md %}}The resource id of the resource access rule to be granted access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointtenantid_nodejs">
@@ -1137,7 +1137,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant id of the `azure.privatelink.Endpoint` of the resource access rule. Defaults to the current tenant id.
+    <dd>{{% md %}}The tenant id of the resource of the resource access rule to be granted access. Defaults to the current tenant id.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1150,7 +1150,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource id of the `azure.privatelink.Endpoint` of the resource access rule.
+    <dd>{{% md %}}The resource id of the resource access rule to be granted access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_tenant_id_python">
@@ -1159,7 +1159,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenant id of the `azure.privatelink.Endpoint` of the resource access rule. Defaults to the current tenant id.
+    <dd>{{% md %}}The tenant id of the resource of the resource access rule to be granted access. Defaults to the current tenant id.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

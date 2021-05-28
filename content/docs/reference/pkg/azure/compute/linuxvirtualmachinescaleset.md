@@ -4094,7 +4094,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should automatic rollbacks be disabled? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should automatic rollbacks be disabled?
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enableautomaticosupgrade_csharp">
@@ -4103,7 +4103,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available?
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4116,7 +4116,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should automatic rollbacks be disabled? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should automatic rollbacks be disabled?
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enableautomaticosupgrade_go">
@@ -4125,7 +4125,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available?
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4138,7 +4138,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Should automatic rollbacks be disabled? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should automatic rollbacks be disabled?
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enableautomaticosupgrade_nodejs">
@@ -4147,7 +4147,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available?
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4160,7 +4160,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should automatic rollbacks be disabled? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should automatic rollbacks be disabled?
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_automatic_os_upgrade_python">
@@ -4169,7 +4169,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available?
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

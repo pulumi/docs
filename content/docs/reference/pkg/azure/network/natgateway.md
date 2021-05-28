@@ -423,7 +423,7 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Public IP Address ID's which should be associated with the NAT Gateway resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` resource. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` pluginsdk. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="publicipprefixids_csharp">
 <a href="#publicipprefixids_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Prefix<wbr>Ids</a>
@@ -508,7 +508,7 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Public IP Address ID's which should be associated with the NAT Gateway resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` resource. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` pluginsdk. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="publicipprefixids_go">
 <a href="#publicipprefixids_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Prefix<wbr>Ids</a>
@@ -593,7 +593,7 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Public IP Address ID's which should be associated with the NAT Gateway resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` resource. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` pluginsdk. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="publicipprefixids_nodejs">
 <a href="#publicipprefixids_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Prefix<wbr>Ids</a>
@@ -678,7 +678,7 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Public IP Address ID's which should be associated with the NAT Gateway resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` resource. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` pluginsdk. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="public_ip_prefix_ids_python">
 <a href="#public_ip_prefix_ids_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefix_<wbr>ids</a>
@@ -980,7 +980,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Public IP Address ID's which should be associated with the NAT Gateway resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` resource. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` pluginsdk. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicipprefixids_csharp">
 <a href="#state_publicipprefixids_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Prefix<wbr>Ids</a>
@@ -1074,7 +1074,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Public IP Address ID's which should be associated with the NAT Gateway resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` resource. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` pluginsdk. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicipprefixids_go">
 <a href="#state_publicipprefixids_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Prefix<wbr>Ids</a>
@@ -1168,7 +1168,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Public IP Address ID's which should be associated with the NAT Gateway resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` resource. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` pluginsdk. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicipprefixids_nodejs">
 <a href="#state_publicipprefixids_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Prefix<wbr>Ids</a>
@@ -1262,7 +1262,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Public IP Address ID's which should be associated with the NAT Gateway resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` resource. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` pluginsdk. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_ip_prefix_ids_python">
 <a href="#state_public_ip_prefix_ids_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefix_<wbr>ids</a>

@@ -24,7 +24,98 @@ Manages a Resource Group Consumption Budget.
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "eastus",
+        });
+        var test = new Azure.Monitoring.ActionGroup("test", new Azure.Monitoring.ActionGroupArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            ShortName = "example",
+        });
+        var exampleBudgetResourceGroup = new Azure.Consumption.BudgetResourceGroup("exampleBudgetResourceGroup", new Azure.Consumption.BudgetResourceGroupArgs
+        {
+            ResourceGroupId = exampleResourceGroup.Id,
+            Amount = 1000,
+            TimeGrain = "Monthly",
+            TimePeriod = new Azure.Consumption.Inputs.BudgetResourceGroupTimePeriodArgs
+            {
+                StartDate = "2020-11-01T00:00:00Z",
+                EndDate = "2020-12-01T00:00:00Z",
+            },
+            Filter = new Azure.Consumption.Inputs.BudgetResourceGroupFilterArgs
+            {
+                Dimensions = 
+                {
+                    new Azure.Consumption.Inputs.BudgetResourceGroupFilterDimensionArgs
+                    {
+                        Name = "ResourceId",
+                        Values = 
+                        {
+                            azurerm_monitor_action_group.Example.Id,
+                        },
+                    },
+                },
+                Tags = 
+                {
+                    new Azure.Consumption.Inputs.BudgetResourceGroupFilterTagArgs
+                    {
+                        Name = "foo",
+                        Values = 
+                        {
+                            "bar",
+                            "baz",
+                        },
+                    },
+                },
+            },
+            Notifications = 
+            {
+                new Azure.Consumption.Inputs.BudgetResourceGroupNotificationArgs
+                {
+                    Enabled = true,
+                    Threshold = 90,
+                    Operator = "EqualTo",
+                    ContactEmails = 
+                    {
+                        "foo@example.com",
+                        "bar@example.com",
+                    },
+                    ContactGroups = 
+                    {
+                        azurerm_monitor_action_group.Example.Id,
+                    },
+                    ContactRoles = 
+                    {
+                        "Owner",
+                    },
+                },
+                new Azure.Consumption.Inputs.BudgetResourceGroupNotificationArgs
+                {
+                    Enabled = false,
+                    Threshold = 100,
+                    Operator = "GreaterThan",
+                    ContactEmails = 
+                    {
+                        "foo@example.com",
+                        "bar@example.com",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
 
 {{< /example >}}
 
@@ -38,7 +129,59 @@ Coming soon!
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="eastus")
+test = azure.monitoring.ActionGroup("test",
+    resource_group_name=example_resource_group.name,
+    short_name="example")
+example_budget_resource_group = azure.consumption.BudgetResourceGroup("exampleBudgetResourceGroup",
+    resource_group_id=example_resource_group.id,
+    amount=1000,
+    time_grain="Monthly",
+    time_period=azure.consumption.BudgetResourceGroupTimePeriodArgs(
+        start_date="2020-11-01T00:00:00Z",
+        end_date="2020-12-01T00:00:00Z",
+    ),
+    filter=azure.consumption.BudgetResourceGroupFilterArgs(
+        dimensions=[azure.consumption.BudgetResourceGroupFilterDimensionArgs(
+            name="ResourceId",
+            values=[azurerm_monitor_action_group["example"]["id"]],
+        )],
+        tags=[azure.consumption.BudgetResourceGroupFilterTagArgs(
+            name="foo",
+            values=[
+                "bar",
+                "baz",
+            ],
+        )],
+    ),
+    notifications=[
+        azure.consumption.BudgetResourceGroupNotificationArgs(
+            enabled=True,
+            threshold=90,
+            operator="EqualTo",
+            contact_emails=[
+                "foo@example.com",
+                "bar@example.com",
+            ],
+            contact_groups=[azurerm_monitor_action_group["example"]["id"]],
+            contact_roles=["Owner"],
+        ),
+        azure.consumption.BudgetResourceGroupNotificationArgs(
+            enabled=False,
+            threshold=100,
+            operator="GreaterThan",
+            contact_emails=[
+                "foo@example.com",
+                "bar@example.com",
+            ],
+        ),
+    ])
+```
+
 
 {{< /example >}}
 
@@ -50,14 +193,12 @@ Coming soon!
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const current = azure.core.getSubscription({});
 const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "eastus"});
 const test = new azure.monitoring.ActionGroup("test", {
     resourceGroupName: exampleResourceGroup.name,
     shortName: "example",
 });
 const exampleBudgetResourceGroup = new azure.consumption.BudgetResourceGroup("exampleBudgetResourceGroup", {
-    subscriptionId: current.then(current => current.subscriptionId),
     resourceGroupId: exampleResourceGroup.id,
     amount: 1000,
     timeGrain: "Monthly",

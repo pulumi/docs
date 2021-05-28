@@ -313,6 +313,15 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="certificatescount_csharp">
+<a href="#certificatescount_csharp" style="color: inherit; text-decoration: inherit;">Certificates<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of certificates in the chain in case Key Vault Certificate is a bundle (e.g. has an intermediate certificate).
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="expires_csharp">
 <a href="#expires_csharp" style="color: inherit; text-decoration: inherit;">Expires</a>
 </span>
@@ -394,6 +403,15 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="certificatescount_go">
+<a href="#certificatescount_go" style="color: inherit; text-decoration: inherit;">Certificates<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of certificates in the chain in case Key Vault Certificate is a bundle (e.g. has an intermediate certificate).
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expires_go">
 <a href="#expires_go" style="color: inherit; text-decoration: inherit;">Expires</a>
@@ -477,6 +495,15 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="certificatescount_nodejs">
+<a href="#certificatescount_nodejs" style="color: inherit; text-decoration: inherit;">certificates<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Amount of certificates in the chain in case Key Vault Certificate is a bundle (e.g. has an intermediate certificate).
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="expires_nodejs">
 <a href="#expires_nodejs" style="color: inherit; text-decoration: inherit;">expires</a>
 </span>
@@ -558,6 +585,15 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="certificates_count_python">
+<a href="#certificates_count_python" style="color: inherit; text-decoration: inherit;">certificates_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of certificates in the chain in case Key Vault Certificate is a bundle (e.g. has an intermediate certificate).
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expires_python">
 <a href="#expires_python" style="color: inherit; text-decoration: inherit;">expires</a>
