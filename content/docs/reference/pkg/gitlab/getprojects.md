@@ -220,7 +220,7 @@ import * as gitlab from "@pulumi/gitlab";
 const projects = pulumi.output(gitlab.getProjects({
     search: "postgresql",
     visibility: "private",
-}, { async: true }));
+}));
 ```
 
 
