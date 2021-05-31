@@ -29,11 +29,13 @@ Explore the resources and functions of the azure-native.securityinsights module.
     <li><a href="incidentrelation" title="IncidentRelation"><span class="symbol resource"></span>IncidentRelation</a></li>
     <li><a href="mcasdataconnector" title="MCASDataConnector"><span class="symbol resource"></span>MCASDataConnector</a></li>
     <li><a href="mdatpdataconnector" title="MDATPDataConnector"><span class="symbol resource"></span>MDATPDataConnector</a></li>
+    <li><a href="metadata" title="Metadata"><span class="symbol resource"></span>Metadata</a></li>
     <li><a href="microsoftsecurityincidentcreationalertrule" title="MicrosoftSecurityIncidentCreationAlertRule"><span class="symbol resource"></span>MicrosoftSecurityIncidentCreationAlertRule</a></li>
     <li><a href="officedataconnector" title="OfficeDataConnector"><span class="symbol resource"></span>OfficeDataConnector</a></li>
     <li><a href="productsetting" title="ProductSetting"><span class="symbol resource"></span>ProductSetting</a></li>
     <li><a href="scheduledalertrule" title="ScheduledAlertRule"><span class="symbol resource"></span>ScheduledAlertRule</a></li>
     <li><a href="sentinelonboardingstate" title="SentinelOnboardingState"><span class="symbol resource"></span>SentinelOnboardingState</a></li>
+    <li><a href="sourcecontrol" title="SourceControl"><span class="symbol resource"></span>SourceControl</a></li>
     <li><a href="tidataconnector" title="TIDataConnector"><span class="symbol resource"></span>TIDataConnector</a></li>
     <li><a href="threatintelligenceindicator" title="ThreatIntelligenceIndicator"><span class="symbol resource"></span>ThreatIntelligenceIndicator</a></li>
     <li><a href="ueba" title="Ueba"><span class="symbol resource"></span>Ueba</a></li>
@@ -63,16 +65,19 @@ Explore the resources and functions of the azure-native.securityinsights module.
     <li><a href="getincidentrelation" title="GetIncidentRelation"><span class="symbol function"></span>GetIncidentRelation</a></li>
     <li><a href="getmcasdataconnector" title="GetMCASDataConnector"><span class="symbol function"></span>GetMCASDataConnector</a></li>
     <li><a href="getmdatpdataconnector" title="GetMDATPDataConnector"><span class="symbol function"></span>GetMDATPDataConnector</a></li>
+    <li><a href="getmetadata" title="GetMetadata"><span class="symbol function"></span>GetMetadata</a></li>
     <li><a href="getmicrosoftsecurityincidentcreationalertrule" title="GetMicrosoftSecurityIncidentCreationAlertRule"><span class="symbol function"></span>GetMicrosoftSecurityIncidentCreationAlertRule</a></li>
     <li><a href="getofficedataconnector" title="GetOfficeDataConnector"><span class="symbol function"></span>GetOfficeDataConnector</a></li>
     <li><a href="getproductsetting" title="GetProductSetting"><span class="symbol function"></span>GetProductSetting</a></li>
     <li><a href="getscheduledalertrule" title="GetScheduledAlertRule"><span class="symbol function"></span>GetScheduledAlertRule</a></li>
     <li><a href="getsentinelonboardingstate" title="GetSentinelOnboardingState"><span class="symbol function"></span>GetSentinelOnboardingState</a></li>
+    <li><a href="getsourcecontrol" title="GetSourceControl"><span class="symbol function"></span>GetSourceControl</a></li>
     <li><a href="gettidataconnector" title="GetTIDataConnector"><span class="symbol function"></span>GetTIDataConnector</a></li>
     <li><a href="getthreatintelligenceindicator" title="GetThreatIntelligenceIndicator"><span class="symbol function"></span>GetThreatIntelligenceIndicator</a></li>
     <li><a href="getueba" title="GetUeba"><span class="symbol function"></span>GetUeba</a></li>
     <li><a href="getwatchlist" title="GetWatchlist"><span class="symbol function"></span>GetWatchlist</a></li>
     <li><a href="getwatchlistitem" title="GetWatchlistItem"><span class="symbol function"></span>GetWatchlistItem</a></li>
+    <li><a href="listsourcecontrolrepositories" title="ListSourceControlRepositories"><span class="symbol function"></span>ListSourceControlRepositories</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -82,6 +87,6 @@ Explore the resources and functions of the azure-native.securityinsights module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.8.0</dd>
+	<dd>1.9.0</dd>
 </dl>
 

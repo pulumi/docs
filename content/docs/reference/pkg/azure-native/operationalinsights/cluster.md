@@ -320,7 +320,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#billingtype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Operational<wbr>Insights.<wbr>Billing<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Configures whether billing will be only on the cluster or each workspace will be billed by its proportional use. This does not change the overall billing, only how it will be distributed. Default value is 'Cluster'{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cluster's billing type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -404,7 +404,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#billingtype">Billing<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Configures whether billing will be only on the cluster or each workspace will be billed by its proportional use. This does not change the overall billing, only how it will be distributed. Default value is 'Cluster'{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cluster's billing type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -488,7 +488,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#billingtype">Billing<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Configures whether billing will be only on the cluster or each workspace will be billed by its proportional use. This does not change the overall billing, only how it will be distributed. Default value is 'Cluster'{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cluster's billing type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -572,7 +572,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#billingtype">Billing<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Configures whether billing will be only on the cluster or each workspace will be billed by its proportional use. This does not change the overall billing, only how it will be distributed. Default value is 'Cluster'{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cluster's billing type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>

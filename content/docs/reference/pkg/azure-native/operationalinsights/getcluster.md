@@ -222,7 +222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configures whether billing will be only on the cluster or each workspace will be billed by its proportional use. This does not change the overall billing, only how it will be distributed. Default value is 'Cluster'{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The cluster's billing type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="capacityreservationproperties_csharp">
 <a href="#capacityreservationproperties_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Properties</a>
@@ -354,7 +354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configures whether billing will be only on the cluster or each workspace will be billed by its proportional use. This does not change the overall billing, only how it will be distributed. Default value is 'Cluster'{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The cluster's billing type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="capacityreservationproperties_go">
 <a href="#capacityreservationproperties_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Properties</a>
@@ -486,7 +486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configures whether billing will be only on the cluster or each workspace will be billed by its proportional use. This does not change the overall billing, only how it will be distributed. Default value is 'Cluster'{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The cluster's billing type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="capacityreservationproperties_nodejs">
 <a href="#capacityreservationproperties_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Properties</a>
@@ -618,7 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Configures whether billing will be only on the cluster or each workspace will be billed by its proportional use. This does not change the overall billing, only how it will be distributed. Default value is 'Cluster'{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The cluster's billing type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="capacity_reservation_properties_python">
 <a href="#capacity_reservation_properties_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>properties</a>

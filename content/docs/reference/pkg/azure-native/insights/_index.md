@@ -19,6 +19,7 @@ Explore the resources and functions of the azure-native.insights module.
     <li><a href="component" title="Component"><span class="symbol resource"></span>Component</a></li>
     <li><a href="componentcurrentbillingfeature" title="ComponentCurrentBillingFeature"><span class="symbol resource"></span>ComponentCurrentBillingFeature</a></li>
     <li><a href="componentlinkedstorageaccount" title="ComponentLinkedStorageAccount"><span class="symbol resource"></span>ComponentLinkedStorageAccount</a></li>
+    <li><a href="datacollectionendpoint" title="DataCollectionEndpoint"><span class="symbol resource"></span>DataCollectionEndpoint</a></li>
     <li><a href="datacollectionrule" title="DataCollectionRule"><span class="symbol resource"></span>DataCollectionRule</a></li>
     <li><a href="datacollectionruleassociation" title="DataCollectionRuleAssociation"><span class="symbol resource"></span>DataCollectionRuleAssociation</a></li>
     <li><a href="diagnosticsetting" title="DiagnosticSetting"><span class="symbol resource"></span>DiagnosticSetting</a></li>
@@ -51,6 +52,7 @@ Explore the resources and functions of the azure-native.insights module.
     <li><a href="getcomponent" title="GetComponent"><span class="symbol function"></span>GetComponent</a></li>
     <li><a href="getcomponentcurrentbillingfeature" title="GetComponentCurrentBillingFeature"><span class="symbol function"></span>GetComponentCurrentBillingFeature</a></li>
     <li><a href="getcomponentlinkedstorageaccount" title="GetComponentLinkedStorageAccount"><span class="symbol function"></span>GetComponentLinkedStorageAccount</a></li>
+    <li><a href="getdatacollectionendpoint" title="GetDataCollectionEndpoint"><span class="symbol function"></span>GetDataCollectionEndpoint</a></li>
     <li><a href="getdatacollectionrule" title="GetDataCollectionRule"><span class="symbol function"></span>GetDataCollectionRule</a></li>
     <li><a href="getdatacollectionruleassociation" title="GetDataCollectionRuleAssociation"><span class="symbol function"></span>GetDataCollectionRuleAssociation</a></li>
     <li><a href="getdiagnosticsetting" title="GetDiagnosticSetting"><span class="symbol function"></span>GetDiagnosticSetting</a></li>
@@ -82,6 +84,6 @@ Explore the resources and functions of the azure-native.insights module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.8.0</dd>
+	<dd>1.9.0</dd>
 </dl>
 

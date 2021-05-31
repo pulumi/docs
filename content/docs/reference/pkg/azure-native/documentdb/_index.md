@@ -22,6 +22,7 @@ Explore the resources and functions of the azure-native.documentdb module.
     <li><a href="mongodbresourcemongodbdatabase" title="MongoDBResourceMongoDBDatabase"><span class="symbol resource"></span>MongoDBResourceMongoDBDatabase</a></li>
     <li><a href="notebookworkspace" title="NotebookWorkspace"><span class="symbol resource"></span>NotebookWorkspace</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
     <li><a href="sqlresourcesqlcontainer" title="SqlResourceSqlContainer"><span class="symbol resource"></span>SqlResourceSqlContainer</a></li>
     <li><a href="sqlresourcesqldatabase" title="SqlResourceSqlDatabase"><span class="symbol resource"></span>SqlResourceSqlDatabase</a></li>
     <li><a href="sqlresourcesqlroleassignment" title="SqlResourceSqlRoleAssignment"><span class="symbol resource"></span>SqlResourceSqlRoleAssignment</a></li>
@@ -45,6 +46,7 @@ Explore the resources and functions of the azure-native.documentdb module.
     <li><a href="getmongodbresourcemongodbdatabase" title="GetMongoDBResourceMongoDBDatabase"><span class="symbol function"></span>GetMongoDBResourceMongoDBDatabase</a></li>
     <li><a href="getnotebookworkspace" title="GetNotebookWorkspace"><span class="symbol function"></span>GetNotebookWorkspace</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
     <li><a href="getsqlresourcesqlcontainer" title="GetSqlResourceSqlContainer"><span class="symbol function"></span>GetSqlResourceSqlContainer</a></li>
     <li><a href="getsqlresourcesqldatabase" title="GetSqlResourceSqlDatabase"><span class="symbol function"></span>GetSqlResourceSqlDatabase</a></li>
     <li><a href="getsqlresourcesqlroleassignment" title="GetSqlResourceSqlRoleAssignment"><span class="symbol function"></span>GetSqlResourceSqlRoleAssignment</a></li>
@@ -65,6 +67,6 @@ Explore the resources and functions of the azure-native.documentdb module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.8.0</dd>
+	<dd>1.9.0</dd>
 </dl>
 

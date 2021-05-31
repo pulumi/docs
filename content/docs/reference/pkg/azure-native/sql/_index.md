@@ -43,6 +43,7 @@ Explore the resources and functions of the azure-native.sql module.
     <li><a href="managedinstancekey" title="ManagedInstanceKey"><span class="symbol resource"></span>ManagedInstanceKey</a></li>
     <li><a href="managedinstanceprivateendpointconnection" title="ManagedInstancePrivateEndpointConnection"><span class="symbol resource"></span>ManagedInstancePrivateEndpointConnection</a></li>
     <li><a href="managedinstancevulnerabilityassessment" title="ManagedInstanceVulnerabilityAssessment"><span class="symbol resource"></span>ManagedInstanceVulnerabilityAssessment</a></li>
+    <li><a href="outboundfirewallrule" title="OutboundFirewallRule"><span class="symbol resource"></span>OutboundFirewallRule</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="sensitivitylabel" title="SensitivityLabel"><span class="symbol resource"></span>SensitivityLabel</a></li>
     <li><a href="server" title="Server"><span class="symbol resource"></span>Server</a></li>
@@ -98,6 +99,7 @@ Explore the resources and functions of the azure-native.sql module.
     <li><a href="getmanagedinstancekey" title="GetManagedInstanceKey"><span class="symbol function"></span>GetManagedInstanceKey</a></li>
     <li><a href="getmanagedinstanceprivateendpointconnection" title="GetManagedInstancePrivateEndpointConnection"><span class="symbol function"></span>GetManagedInstancePrivateEndpointConnection</a></li>
     <li><a href="getmanagedinstancevulnerabilityassessment" title="GetManagedInstanceVulnerabilityAssessment"><span class="symbol function"></span>GetManagedInstanceVulnerabilityAssessment</a></li>
+    <li><a href="getoutboundfirewallrule" title="GetOutboundFirewallRule"><span class="symbol function"></span>GetOutboundFirewallRule</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getsensitivitylabel" title="GetSensitivityLabel"><span class="symbol function"></span>GetSensitivityLabel</a></li>
     <li><a href="getserver" title="GetServer"><span class="symbol function"></span>GetServer</a></li>
@@ -126,6 +128,6 @@ Explore the resources and functions of the azure-native.sql module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.8.0</dd>
+	<dd>1.9.0</dd>
 </dl>
 
