@@ -388,7 +388,7 @@ const server = new aws.ec2.Instance("webserver-www", {
 ```python
 ...
 
-group = ec2.SecurityGroup('webserver-secgrp',
+group = aws.ec2.SecurityGroup('webserver-secgrp',
     description='Enable HTTP access',
     ingress=[
         { 'protocol': 'tcp', 'from_port': 22, 'to_port': 22, 'cidr_blocks': ['0.0.0.0/0'] },
@@ -403,7 +403,7 @@ nohup python -m SimpleHTTPServer 80 &
 """
 # ^-- ADD THIS DEFINITION
 
-server = ec2.Instance('webserver-www',
+server = aws.ec2.Instance('webserver-www',
     instance_type=size,
     vpc_security_group_ids=[group.id], # reference security group from above
     user_data=user_data, # <-- ADD THIS LINE
