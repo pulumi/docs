@@ -107,6 +107,16 @@ When a pull request is merged into the default branch of this repository, a foll
 
 Interested in writing a blog post? See the [blogging README](BLOGGING.md) for details.
 
+## Writing Docs
+
+The following are guidelines to follow when authoring docs:
+
+* When directing the user to interact with a button on a page, use "select" instead of "click" so that is not
+  pointer-specific (for ex: for mobile phones, screen readers etc.)
+* Try to use "navigate" instead of "go to"
+* Avoid directional words, as folks that use screen readers do not have the same information about where things are
+  placed on the page directionally.
+
 ## Shortcodes and web components
 
 We use number of Hugo shortcodes and web components in our pages. You can read more about many of them in the [components README](themes/default/components).

@@ -125,6 +125,30 @@ If you need help configuring or would like us to officially support another SAML
 provider,
 please [contact us]({{< relref "/about#contact-us" >}}).
 
+## Changing Membership Requirements
+
+Every organization is backed by an identity. The identity governs the membership to your org.
+By default, when you add a new org to Pulumi, it uses the Pulumi identity. This means the membership is
+_only_ governed by a user having a Pulumi account and no additional identity requirements are placed on members.
+
+{{% notes %}}
+Regardless of the identity your org uses, org membership is always invite-only. Only the creator of the org gets automatic access. Everyone else must be invited by an admin to be admitted into the org.
+{{% /notes %}}
+
+However, if you want your org to mirror an org on a third party identity service such as GitHub, GitLab, or Bitbucket, you can
+change the backing identity. Enterprises can also choose SAML as the backing identity provider for an org as discussed in [SAML Single Sign-on](#saml-single-sign-on-sso). Changing your org's backing identity essentially changes the membership requirements you place
+on your members.
+
+Before you change your org's backing identity, ensure that all of its current members can satisfy the membership
+requirement of the org in the new identity service. That is, if you are switching from a GitHub-backed to a GitLab-backed
+org, ensure that all of your members are actually a member of the corresponding GitLab Group which your org would be
+changed to inherit from.
+
+To switch an organization's backing identity you must be an organization admin.
+Navigate to the organization's **Settings** page. Then navigate to **Access Management**
+and select the **Membership Requirements** button to get started with changing your
+organization's identity.
+
 ## Switching Organizations
 
 The Organization drop-down list displays all of the organizations your account is
