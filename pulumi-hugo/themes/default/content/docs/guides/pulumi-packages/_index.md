@@ -31,6 +31,8 @@ Regardless of the type of Pulumi Package you want to author, there are a few key
 
 ![A graphic representation of the steps listed above](img/pulumi-package-concepts.png)
 
+All Pulumi Packages must include a [schema]({{<relref "/docs/guides/pulumi-packages/schema">}}), which defines the resources and functions exposed by the package, and is used to drive the generation of language-specific SDKs and documentation.
+
 ## Get started
 
 To get started, create a repository from your component from the appropriate template repository:
