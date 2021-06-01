@@ -103,14 +103,16 @@
     <!-- Our CSS bundle. -->
     <link rel="stylesheet" href="{{ getenv "REL_CSS_BUNDLE" }}">
 
-    <script src="https://browser.sentry-cdn.com/5.20.1/bundle.min.js" integrity="sha384-O8HdAJg1h8RARFowXd2J/r5fIWuinSBtjhwQoPesfVILeXzGpJxvyY/77OaPPXUo" crossorigin="anonymous"></script>
+    <!-- Lazy-load Sentry.  -->
+    <script src='https://js.sentry-cdn.com/02614bf2f18e4615a73218b810563ced.min.js' crossorigin="anonymous"></script>
     <script>
-        Sentry.init({
-            dsn: "https://02614bf2f18e4615a73218b810563ced@o433463.ingest.sentry.io/5388693",
-            environment: "{{ hugo.Environment }}",
-            {{ if in "preview production" hugo.Environment }}
-                release: "{{ getenv "ASSET_BUNDLE_ID" }}",
-            {{ end }}
+        Sentry.onLoad(function() {
+            Sentry.init({
+                environment: "{{ hugo.Environment }}",
+                {{ if in "preview production" hugo.Environment }}
+                    release: "{{ getenv "ASSET_BUNDLE_ID" }}",
+                {{ end }}
+            });
         });
     </script>
 
