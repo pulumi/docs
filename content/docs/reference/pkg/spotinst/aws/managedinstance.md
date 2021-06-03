@@ -86,6 +86,7 @@ const default_managed_instance = new spotinst.aws.ManagedInstance("default-manag
     ],
     keyPair: "labs-oregon",
     lifeCycle: "on_demand",
+    minimumInstanceLifetime: 1,
     optimizationWindows: ["Mon:03:00-Wed:02:20"],
     orientation: "balanced",
     persistBlockDevices: true,
@@ -162,6 +163,7 @@ const default_managed_instance = new spotinst.aws.ManagedInstance("default-manag
                     <span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">life_cycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceLoadBalancerArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">minimum_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">optimization_windows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -206,25 +208,19 @@ const default_managed_instance = new spotinst.aws.ManagedInstance("default-manag
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ManagedInstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -236,25 +232,19 @@ const default_managed_instance = new spotinst.aws.ManagedInstance("default-manag
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ManagedInstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -266,33 +256,25 @@ const default_managed_instance = new spotinst.aws.ManagedInstance("default-manag
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ManagedInstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -304,25 +286,19 @@ const default_managed_instance = new spotinst.aws.ManagedInstance("default-manag
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ManagedInstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -548,6 +524,14 @@ Default `"spot"`.
     </dt>
     <dd>{{% md %}}List of load balancers configs.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimuminstancelifetime_csharp">
+<a href="#minimuminstancelifetime_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Instance<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -925,6 +909,14 @@ Default `"spot"`.
     <dd>{{% md %}}List of load balancers configs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minimuminstancelifetime_go">
+<a href="#minimuminstancelifetime_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Instance<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1300,6 +1292,14 @@ Default `"spot"`.
     </dt>
     <dd>{{% md %}}List of load balancers configs.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimuminstancelifetime_nodejs">
+<a href="#minimuminstancelifetime_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Instance<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1677,6 +1677,14 @@ Default `"spot"`.
     <dd>{{% md %}}List of load balancers configs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minimum_instance_lifetime_python">
+<a href="#minimum_instance_lifetime_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>instance_<wbr>lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1930,6 +1938,7 @@ Get an existing ManagedInstance resource's state with the given name, ID, and op
         <span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">life_cycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceLoadBalancerArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">minimum_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
         <span class="nx">optimization_windows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -2238,6 +2247,14 @@ Default `"spot"`.
     </dt>
     <dd>{{% md %}}List of load balancers configs.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_minimuminstancelifetime_csharp">
+<a href="#state_minimuminstancelifetime_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Instance<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2615,6 +2632,14 @@ Default `"spot"`.
     <dd>{{% md %}}List of load balancers configs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_minimuminstancelifetime_go">
+<a href="#state_minimuminstancelifetime_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Instance<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -2991,6 +3016,14 @@ Default `"spot"`.
     <dd>{{% md %}}List of load balancers configs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_minimuminstancelifetime_nodejs">
+<a href="#state_minimuminstancelifetime_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Instance<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -3366,6 +3399,14 @@ Default `"spot"`.
     </dt>
     <dd>{{% md %}}List of load balancers configs.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_minimum_instance_lifetime_python">
+<a href="#state_minimum_instance_lifetime_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>instance_<wbr>lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>

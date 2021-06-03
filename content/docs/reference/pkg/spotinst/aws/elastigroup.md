@@ -235,6 +235,7 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
                 <span class="nx">signals</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupSignalArgs]]</span> = None<span class="p">,</span>
                 <span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                 <span class="nx">stateful_deallocation</span><span class="p">:</span> <span class="nx">Optional[ElastigroupStatefulDeallocationArgs]</span> = None<span class="p">,</span>
+                <span class="nx">stateful_instance_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupStatefulInstanceActionArgs]]</span> = None<span class="p">,</span>
                 <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupTagArgs]]</span> = None<span class="p">,</span>
                 <span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -266,25 +267,19 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ElastigroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -296,25 +291,19 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ElastigroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -326,33 +315,25 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ElastigroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -364,25 +345,19 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ElastigroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -975,6 +950,14 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupstatefuldeallocation">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Stateful<wbr>Deallocation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statefulinstanceactions_csharp">
+<a href="#statefulinstanceactions_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Instance<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupstatefulinstanceaction">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Stateful<wbr>Instance<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1641,6 +1624,14 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="statefulinstanceactions_go">
+<a href="#statefulinstanceactions_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Instance<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupstatefulinstanceaction">[]Elastigroup<wbr>Stateful<wbr>Instance<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="subnetids_go">
 <a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
 </span>
@@ -2301,6 +2292,14 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupstatefuldeallocation">Elastigroup<wbr>Stateful<wbr>Deallocation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statefulinstanceactions_nodejs">
+<a href="#statefulinstanceactions_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Instance<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupstatefulinstanceaction">Elastigroup<wbr>Stateful<wbr>Instance<wbr>Action<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2967,6 +2966,14 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="stateful_instance_actions_python">
+<a href="#stateful_instance_actions_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>instance_<wbr>actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupstatefulinstanceaction">Sequence[Elastigroup<wbr>Stateful<wbr>Instance<wbr>Action<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="subnet_ids_python">
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span>
@@ -3184,6 +3191,7 @@ Get an existing Elastigroup resource's state with the given name, ID, and option
         <span class="nx">signals</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupSignalArgs]]</span> = None<span class="p">,</span>
         <span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">stateful_deallocation</span><span class="p">:</span> <span class="nx">Optional[ElastigroupStatefulDeallocationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">stateful_instance_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupStatefulInstanceActionArgs]]</span> = None<span class="p">,</span>
         <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupTagArgs]]</span> = None<span class="p">,</span>
         <span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -3884,6 +3892,14 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_statefulinstanceactions_csharp">
+<a href="#state_statefulinstanceactions_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Instance<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupstatefulinstanceaction">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Stateful<wbr>Instance<wbr>Action<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_subnetids_csharp">
 <a href="#state_subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
 </span>
@@ -4544,6 +4560,14 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupstatefuldeallocation">Elastigroup<wbr>Stateful<wbr>Deallocation</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_statefulinstanceactions_go">
+<a href="#state_statefulinstanceactions_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Instance<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupstatefulinstanceaction">[]Elastigroup<wbr>Stateful<wbr>Instance<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5210,6 +5234,14 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_statefulinstanceactions_nodejs">
+<a href="#state_statefulinstanceactions_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Instance<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupstatefulinstanceaction">Elastigroup<wbr>Stateful<wbr>Instance<wbr>Action<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_subnetids_nodejs">
 <a href="#state_subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
 </span>
@@ -5870,6 +5902,14 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupstatefuldeallocation">Elastigroup<wbr>Stateful<wbr>Deallocation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_stateful_instance_actions_python">
+<a href="#state_stateful_instance_actions_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>instance_<wbr>actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupstatefulinstanceaction">Sequence[Elastigroup<wbr>Stateful<wbr>Instance<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14038,6 +14078,96 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stateful groups: remove persistent volumes.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="elastigroupstatefulinstanceaction">Elastigroup<wbr>Stateful<wbr>Instance<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="statefulinstanceid_csharp">
+<a href="#statefulinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Instance<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String, Stateful Instance ID on which the action should be performed.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`, `deallocate`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="statefulinstanceid_go">
+<a href="#statefulinstanceid_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Instance<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String, Stateful Instance ID on which the action should be performed.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`, `deallocate`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="statefulinstanceid_nodejs">
+<a href="#statefulinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Instance<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String, Stateful Instance ID on which the action should be performed.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`, `deallocate`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="stateful_instance_id_python">
+<a href="#stateful_instance_id_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>instance_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}String, Stateful Instance ID on which the action should be performed.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`, `deallocate`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -67,6 +67,10 @@ class MyStack : Stack
                     },
                 },
             },
+            CreateOptions = new SpotInst.Aws.Inputs.OceanLaunchSpecCreateOptionsArgs
+            {
+                InitialNodes = 1,
+            },
             ElasticIpPools = 
             {
                 new SpotInst.Aws.Inputs.OceanLaunchSpecElasticIpPoolArgs
@@ -187,6 +191,9 @@ func main() {
 					},
 				},
 			},
+			CreateOptions: &aws.OceanLaunchSpecCreateOptionsArgs{
+				InitialNodes: pulumi.Int(1),
+			},
 			ElasticIpPools: aws.OceanLaunchSpecElasticIpPoolArray{
 				&aws.OceanLaunchSpecElasticIpPoolArgs{
 					TagSelector: &aws.OceanLaunchSpecElasticIpPoolTagSelectorArgs{
@@ -284,6 +291,9 @@ example = spotinst.aws.OceanLaunchSpec("example",
             volume_type="gp2",
         ),
     )],
+    create_options=spotinst.aws.OceanLaunchSpecCreateOptionsArgs(
+        initial_nodes=1,
+    ),
     elastic_ip_pools=[spotinst.aws.OceanLaunchSpecElasticIpPoolArgs(
         tag_selector=spotinst.aws.OceanLaunchSpecElasticIpPoolTagSelectorArgs(
             tag_key="key",
@@ -359,6 +369,9 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
             volumeType: "gp2",
         },
     }],
+    createOptions: {
+        initialNodes: 1,
+    },
     elasticIpPools: [{
         tagSelector: {
             tagKey: "key",
@@ -428,6 +441,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
                     <span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                     <span class="nx">autoscale_headrooms</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecAutoscaleHeadroomArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecBlockDeviceMappingArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">create_options</span><span class="p">:</span> <span class="nx">Optional[OceanLaunchSpecCreateOptionsArgs]</span> = None<span class="p">,</span>
                     <span class="nx">elastic_ip_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecElasticIpPoolArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -466,25 +480,19 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OceanLaunchSpecArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -496,25 +504,19 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OceanLaunchSpecArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -526,33 +528,25 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OceanLaunchSpecArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -564,25 +558,19 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OceanLaunchSpecArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -634,6 +622,14 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createoptions_csharp">
+<a href="#createoptions_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspeccreateoptions">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Create<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticippools_csharp">
 <a href="#elasticippools_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Ip<wbr>Pools</a>
@@ -808,6 +804,14 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="createoptions_go">
+<a href="#createoptions_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspeccreateoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Create<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="elasticippools_go">
 <a href="#elasticippools_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Ip<wbr>Pools</a>
 </span>
@@ -981,6 +985,14 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="createoptions_nodejs">
+<a href="#createoptions_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspeccreateoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Create<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="elasticippools_nodejs">
 <a href="#elasticippools_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Ip<wbr>Pools</a>
 </span>
@@ -1153,6 +1165,14 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="create_options_python">
+<a href="#create_options_python" style="color: inherit; text-decoration: inherit;">create_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspeccreateoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Create<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elastic_ip_pools_python">
 <a href="#elastic_ip_pools_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>ip_<wbr>pools</a>
@@ -1362,6 +1382,7 @@ Get an existing OceanLaunchSpec resource's state with the given name, ID, and op
         <span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">autoscale_headrooms</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecAutoscaleHeadroomArgs]]</span> = None<span class="p">,</span>
         <span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecBlockDeviceMappingArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">create_options</span><span class="p">:</span> <span class="nx">Optional[OceanLaunchSpecCreateOptionsArgs]</span> = None<span class="p">,</span>
         <span class="nx">elastic_ip_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecElasticIpPoolArgs]]</span> = None<span class="p">,</span>
         <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1516,6 +1537,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_createoptions_csharp">
+<a href="#state_createoptions_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspeccreateoptions">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Create<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elasticippools_csharp">
 <a href="#state_elasticippools_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Ip<wbr>Pools</a>
@@ -1690,6 +1719,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_createoptions_go">
+<a href="#state_createoptions_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspeccreateoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Create<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_elasticippools_go">
 <a href="#state_elasticippools_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Ip<wbr>Pools</a>
 </span>
@@ -1863,6 +1900,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_createoptions_nodejs">
+<a href="#state_createoptions_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspeccreateoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Create<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_elasticippools_nodejs">
 <a href="#state_elasticippools_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Ip<wbr>Pools</a>
 </span>
@@ -2035,6 +2080,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_create_options_python">
+<a href="#state_create_options_python" style="color: inherit; text-decoration: inherit;">create_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspeccreateoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Create<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elastic_ip_pools_python">
 <a href="#state_elastic_ip_pools_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>ip_<wbr>pools</a>
@@ -2973,6 +3026,60 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Int. Additional size (in GB) per resource unit. (Example: `baseSize=50`, `sizePerResourceUnit=20`, and instance with 2 CPU is launched; its total disk size will be: 90GB)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="oceanlaunchspeccreateoptions">Ocean<wbr>Launch<wbr>Spec<wbr>Create<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="initialnodes_csharp">
+<a href="#initialnodes_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}When set to an integer greater than 0, a corresponding amount of nodes will be launched from the created virtual node group.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="initialnodes_go">
+<a href="#initialnodes_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}When set to an integer greater than 0, a corresponding amount of nodes will be launched from the created virtual node group.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="initialnodes_nodejs">
+<a href="#initialnodes_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}When set to an integer greater than 0, a corresponding amount of nodes will be launched from the created virtual node group.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="initial_nodes_python">
+<a href="#initial_nodes_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}When set to an integer greater than 0, a corresponding amount of nodes will be launched from the created virtual node group.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
