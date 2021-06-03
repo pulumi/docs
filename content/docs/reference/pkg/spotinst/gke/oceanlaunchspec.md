@@ -64,6 +64,13 @@ class MyStack : Stack
             OceanId = "o-123456",
             RestrictScaleDown = true,
             SourceImage = "image",
+            Strategies = 
+            {
+                new SpotInst.Gke.Inputs.OceanLaunchSpecStrategyArgs
+                {
+                    PreemptiblePercentage = 30,
+                },
+            },
             Taints = 
             {
                 new SpotInst.Gke.Inputs.OceanLaunchSpecTaintArgs
@@ -119,6 +126,11 @@ func main() {
 			OceanId:           pulumi.String("o-123456"),
 			RestrictScaleDown: pulumi.Bool(true),
 			SourceImage:       pulumi.String("image"),
+			Strategies: gke.OceanLaunchSpecStrategyArray{
+				&gke.OceanLaunchSpecStrategyArgs{
+					PreemptiblePercentage: pulumi.Int(30),
+				},
+			},
 			Taints: gke.OceanLaunchSpecTaintArray{
 				&gke.OceanLaunchSpecTaintArgs{
 					Effect: pulumi.String("taintEffect"),
@@ -163,6 +175,9 @@ example = spotinst.gke.OceanLaunchSpec("example",
     ocean_id="o-123456",
     restrict_scale_down=True,
     source_image="image",
+    strategies=[spotinst.gke.OceanLaunchSpecStrategyArgs(
+        preemptible_percentage=30,
+    )],
     taints=[spotinst.gke.OceanLaunchSpecTaintArgs(
         effect="taintEffect",
         key="taintKey",
@@ -199,6 +214,9 @@ const example = new spotinst.gke.OceanLaunchSpec("example", {
     oceanId: "o-123456",
     restrictScaleDown: true,
     sourceImage: "image",
+    strategies: [{
+        preemptiblePercentage: 30,
+    }],
     taints: [{
         effect: "taintEffect",
         key: "taintKey",
@@ -237,6 +255,7 @@ const example = new spotinst.gke.OceanLaunchSpec("example", {
                     <span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">restrict_scale_down</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                     <span class="nx">source_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecStrategyArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecTaintArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">OceanLaunchSpec</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -260,25 +279,19 @@ const example = new spotinst.gke.OceanLaunchSpec("example", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OceanLaunchSpecArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -290,25 +303,19 @@ const example = new spotinst.gke.OceanLaunchSpec("example", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OceanLaunchSpecArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -320,33 +327,25 @@ const example = new spotinst.gke.OceanLaunchSpec("example", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OceanLaunchSpecArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -358,25 +357,19 @@ const example = new spotinst.gke.OceanLaunchSpec("example", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OceanLaunchSpecArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -408,7 +401,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create.
+    <dd>{{% md %}}The Ocean cluster ID.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceimage_csharp">
@@ -447,6 +440,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Boolean. When set to `true`, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="strategies_csharp">
+<a href="#strategies_csharp" style="color: inherit; text-decoration: inherit;">Strategies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecstrategy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Strategy<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean Launch Spec Strategy object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="taints_csharp">
 <a href="#taints_csharp" style="color: inherit; text-decoration: inherit;">Taints</a>
 </span>
@@ -475,7 +477,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create.
+    <dd>{{% md %}}The Ocean cluster ID.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceimage_go">
@@ -514,6 +516,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Boolean. When set to `true`, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="strategies_go">
+<a href="#strategies_go" style="color: inherit; text-decoration: inherit;">Strategies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecstrategy">[]Ocean<wbr>Launch<wbr>Spec<wbr>Strategy</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean Launch Spec Strategy object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="taints_go">
 <a href="#taints_go" style="color: inherit; text-decoration: inherit;">Taints</a>
 </span>
@@ -542,7 +553,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create.
+    <dd>{{% md %}}The Ocean cluster ID.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceimage_nodejs">
@@ -581,6 +592,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Boolean. When set to `true`, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="strategies_nodejs">
+<a href="#strategies_nodejs" style="color: inherit; text-decoration: inherit;">strategies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecstrategy">Ocean<wbr>Launch<wbr>Spec<wbr>Strategy<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean Launch Spec Strategy object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="taints_nodejs">
 <a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
@@ -609,7 +629,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create.
+    <dd>{{% md %}}The Ocean cluster ID.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_image_python">
@@ -646,6 +666,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. When set to `true`, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="strategies_python">
+<a href="#strategies_python" style="color: inherit; text-decoration: inherit;">strategies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecstrategy">Sequence[Ocean<wbr>Launch<wbr>Spec<wbr>Strategy<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean Launch Spec Strategy object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taints_python">
@@ -735,6 +764,7 @@ Get an existing OceanLaunchSpec resource's state with the given name, ID, and op
         <span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">restrict_scale_down</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">source_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecStrategyArgs]]</span> = None<span class="p">,</span>
         <span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecTaintArgs]]</span> = None<span class="p">) -&gt;</span> OceanLaunchSpec</code></pre></div>
 {{% /choosable %}}
 
@@ -881,7 +911,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create.
+    <dd>{{% md %}}The Ocean cluster ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictscaledown_csharp">
@@ -900,6 +930,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Image URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_strategies_csharp">
+<a href="#state_strategies_csharp" style="color: inherit; text-decoration: inherit;">Strategies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecstrategy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Strategy<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean Launch Spec Strategy object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taints_csharp">
@@ -948,7 +987,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create.
+    <dd>{{% md %}}The Ocean cluster ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictscaledown_go">
@@ -967,6 +1006,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Image URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_strategies_go">
+<a href="#state_strategies_go" style="color: inherit; text-decoration: inherit;">Strategies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecstrategy">[]Ocean<wbr>Launch<wbr>Spec<wbr>Strategy</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean Launch Spec Strategy object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taints_go">
@@ -1015,7 +1063,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create.
+    <dd>{{% md %}}The Ocean cluster ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictscaledown_nodejs">
@@ -1034,6 +1082,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Image URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_strategies_nodejs">
+<a href="#state_strategies_nodejs" style="color: inherit; text-decoration: inherit;">strategies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecstrategy">Ocean<wbr>Launch<wbr>Spec<wbr>Strategy<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean Launch Spec Strategy object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taints_nodejs">
@@ -1082,7 +1139,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Ocean cluster ID required for launchSpec create.
+    <dd>{{% md %}}The Ocean cluster ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrict_scale_down_python">
@@ -1101,6 +1158,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Image URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_strategies_python">
+<a href="#state_strategies_python" style="color: inherit; text-decoration: inherit;">strategies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecstrategy">Sequence[Ocean<wbr>Launch<wbr>Spec<wbr>Strategy<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean Launch Spec Strategy object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taints_python">
@@ -1461,6 +1527,60 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The label value.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="oceanlaunchspecstrategy">Ocean<wbr>Launch<wbr>Spec<wbr>Strategy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="preemptiblepercentage_csharp">
+<a href="#preemptiblepercentage_csharp" style="color: inherit; text-decoration: inherit;">Preemptible<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Defines the desired preemptible percentage for this launch specification.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="preemptiblepercentage_go">
+<a href="#preemptiblepercentage_go" style="color: inherit; text-decoration: inherit;">Preemptible<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Defines the desired preemptible percentage for this launch specification.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="preemptiblepercentage_nodejs">
+<a href="#preemptiblepercentage_nodejs" style="color: inherit; text-decoration: inherit;">preemptible<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Defines the desired preemptible percentage for this launch specification.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="preemptible_percentage_python">
+<a href="#preemptible_percentage_python" style="color: inherit; text-decoration: inherit;">preemptible_<wbr>percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Defines the desired preemptible percentage for this launch specification.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
