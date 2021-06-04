@@ -18,7 +18,7 @@ Once obtained, there are two ways to communicate your authorization tokens to Pu
 1. Set the environment variable `GITHUB_TOKEN`.
 
     ```bash
-    $ export GITHUB_OWNER=YYYYYYYYYYYYYY
+    $ export GITHUB_TOKEN=YYYYYYYYYYYYYY
     ```
 
 2. Set the token value using `pulumi config`. This stores your token alongside your Pulumi stack for easy multi-user access.
