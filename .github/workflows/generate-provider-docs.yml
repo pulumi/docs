@@ -42,11 +42,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: docs
-      - name: checkout pulumi repo
-        uses: actions/checkout@v2
-        with:
-          repository: pulumi/pulumi
-          path: pulumi
       - name: checkout tfgen provider
         uses: actions/checkout@v2
         with:
