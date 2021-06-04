@@ -64,7 +64,7 @@ project = gitlab.Project("my-project",
 ```go
 import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-	gitlab "github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab"
+	gitlab "github.com/pulumi/pulumi-gitlab/sdk/v4/go/gitlab"
 )
 
 func main() {
