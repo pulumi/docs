@@ -1117,7 +1117,7 @@ it doesn't exist, or the configuration value is not a legal JSON string, an erro
 <pre class="highlight"><code><span class='kd'>public </span>requireSecret&lt;K&gt;(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='#StringConfigOptions'>StringConfigOptions</a>&lt;K&gt;): <a href='#Output'>Output</a>&lt;K&gt;</code></pre>
 
 
-require loads a configuration value by its given key, marking it as a secet.  If it doesn't exist, an error
+require loads a configuration value by its given key, marking it as a secret.  If it doesn't exist, an error
 is thrown.
 
 <h4 class="pdoc-member-header" id="Config-requireSecretBoolean">
