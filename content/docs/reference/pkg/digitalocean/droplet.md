@@ -372,10 +372,12 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of SSH IDs or fingerprints to enable in
-the format `[12345, 123456]`. To retrieve this info, use a tool such
-as `curl` with the [DigitalOcean API](https://developers.digitalocean.com/documentation/v2/#ssh-keys),
-to retrieve them.
+    <dd>{{% md %}}A list of SSH key IDs or fingerprints to enable in
+the format `[12345, 123456]`. To retrieve this info, use the
+[DigitalOcean API](https://docs.digitalocean.com/reference/api/api-reference/#tag/SSH-Keys)
+or CLI (`doctl compute ssh-key list`). Once a Droplet is created keys can not
+be added or removed via this provider. Modifying this field will prompt you
+to destroy and recreate the Droplet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -513,10 +515,12 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of SSH IDs or fingerprints to enable in
-the format `[12345, 123456]`. To retrieve this info, use a tool such
-as `curl` with the [DigitalOcean API](https://developers.digitalocean.com/documentation/v2/#ssh-keys),
-to retrieve them.
+    <dd>{{% md %}}A list of SSH key IDs or fingerprints to enable in
+the format `[12345, 123456]`. To retrieve this info, use the
+[DigitalOcean API](https://docs.digitalocean.com/reference/api/api-reference/#tag/SSH-Keys)
+or CLI (`doctl compute ssh-key list`). Once a Droplet is created keys can not
+be added or removed via this provider. Modifying this field will prompt you
+to destroy and recreate the Droplet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -654,10 +658,12 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of SSH IDs or fingerprints to enable in
-the format `[12345, 123456]`. To retrieve this info, use a tool such
-as `curl` with the [DigitalOcean API](https://developers.digitalocean.com/documentation/v2/#ssh-keys),
-to retrieve them.
+    <dd>{{% md %}}A list of SSH key IDs or fingerprints to enable in
+the format `[12345, 123456]`. To retrieve this info, use the
+[DigitalOcean API](https://docs.digitalocean.com/reference/api/api-reference/#tag/SSH-Keys)
+or CLI (`doctl compute ssh-key list`). Once a Droplet is created keys can not
+be added or removed via this provider. Modifying this field will prompt you
+to destroy and recreate the Droplet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -795,10 +801,12 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of SSH IDs or fingerprints to enable in
-the format `[12345, 123456]`. To retrieve this info, use a tool such
-as `curl` with the [DigitalOcean API](https://developers.digitalocean.com/documentation/v2/#ssh-keys),
-to retrieve them.
+    <dd>{{% md %}}A list of SSH key IDs or fingerprints to enable in
+the format `[12345, 123456]`. To retrieve this info, use the
+[DigitalOcean API](https://docs.digitalocean.com/reference/api/api-reference/#tag/SSH-Keys)
+or CLI (`doctl compute ssh-key list`). Once a Droplet is created keys can not
+be added or removed via this provider. Modifying this field will prompt you
+to destroy and recreate the Droplet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -1659,10 +1667,12 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of SSH IDs or fingerprints to enable in
-the format `[12345, 123456]`. To retrieve this info, use a tool such
-as `curl` with the [DigitalOcean API](https://developers.digitalocean.com/documentation/v2/#ssh-keys),
-to retrieve them.
+    <dd>{{% md %}}A list of SSH key IDs or fingerprints to enable in
+the format `[12345, 123456]`. To retrieve this info, use the
+[DigitalOcean API](https://docs.digitalocean.com/reference/api/api-reference/#tag/SSH-Keys)
+or CLI (`doctl compute ssh-key list`). Once a Droplet is created keys can not
+be added or removed via this provider. Modifying this field will prompt you
+to destroy and recreate the Droplet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
@@ -1907,10 +1917,12 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of SSH IDs or fingerprints to enable in
-the format `[12345, 123456]`. To retrieve this info, use a tool such
-as `curl` with the [DigitalOcean API](https://developers.digitalocean.com/documentation/v2/#ssh-keys),
-to retrieve them.
+    <dd>{{% md %}}A list of SSH key IDs or fingerprints to enable in
+the format `[12345, 123456]`. To retrieve this info, use the
+[DigitalOcean API](https://docs.digitalocean.com/reference/api/api-reference/#tag/SSH-Keys)
+or CLI (`doctl compute ssh-key list`). Once a Droplet is created keys can not
+be added or removed via this provider. Modifying this field will prompt you
+to destroy and recreate the Droplet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
@@ -2155,10 +2167,12 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of SSH IDs or fingerprints to enable in
-the format `[12345, 123456]`. To retrieve this info, use a tool such
-as `curl` with the [DigitalOcean API](https://developers.digitalocean.com/documentation/v2/#ssh-keys),
-to retrieve them.
+    <dd>{{% md %}}A list of SSH key IDs or fingerprints to enable in
+the format `[12345, 123456]`. To retrieve this info, use the
+[DigitalOcean API](https://docs.digitalocean.com/reference/api/api-reference/#tag/SSH-Keys)
+or CLI (`doctl compute ssh-key list`). Once a Droplet is created keys can not
+be added or removed via this provider. Modifying this field will prompt you
+to destroy and recreate the Droplet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
@@ -2403,10 +2417,12 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of SSH IDs or fingerprints to enable in
-the format `[12345, 123456]`. To retrieve this info, use a tool such
-as `curl` with the [DigitalOcean API](https://developers.digitalocean.com/documentation/v2/#ssh-keys),
-to retrieve them.
+    <dd>{{% md %}}A list of SSH key IDs or fingerprints to enable in
+the format `[12345, 123456]`. To retrieve this info, use the
+[DigitalOcean API](https://docs.digitalocean.com/reference/api/api-reference/#tag/SSH-Keys)
+or CLI (`doctl compute ssh-key list`). Once a Droplet is created keys can not
+be added or removed via this provider. Modifying this field will prompt you
+to destroy and recreate the Droplet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
