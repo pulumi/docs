@@ -276,6 +276,15 @@ The following output properties are available:
     <dd>{{% md %}}The date and time when the node was last updated.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="urn_csharp">
+<a href="#urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name (URN) for the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
@@ -430,6 +439,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the node was last updated.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="urn_go">
+<a href="#urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name (URN) for the Kubernetes cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
@@ -588,6 +606,15 @@ The following output properties are available:
     <dd>{{% md %}}The date and time when the node was last updated.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="urn_nodejs">
+<a href="#urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name (URN) for the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
@@ -742,6 +769,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date and time when the node was last updated.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="urn_python">
+<a href="#urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name (URN) for the Kubernetes cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_python">

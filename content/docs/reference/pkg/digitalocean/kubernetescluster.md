@@ -558,6 +558,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the node was last updated.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="urn_csharp">
+<a href="#urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name (URN) for the Kubernetes cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -641,6 +650,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the node was last updated.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="urn_go">
+<a href="#urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name (URN) for the Kubernetes cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -724,6 +742,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the node was last updated.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="urn_nodejs">
+<a href="#urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name (URN) for the Kubernetes cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -807,6 +834,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date and time when the node was last updated.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="urn_python">
+<a href="#urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name (URN) for the Kubernetes cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -840,6 +876,7 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
         <span class="nx">surge_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">updated_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">urn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">vpc_uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KubernetesCluster</code></pre></div>
 {{% /choosable %}}
@@ -1079,6 +1116,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The date and time when the node was last updated.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_urn_csharp">
+<a href="#state_urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name (URN) for the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
@@ -1224,6 +1270,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the node was last updated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_urn_go">
+<a href="#state_urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name (URN) for the Kubernetes cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
@@ -1373,6 +1428,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The date and time when the node was last updated.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_urn_nodejs">
+<a href="#state_urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name (URN) for the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
@@ -1518,6 +1582,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date and time when the node was last updated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_urn_python">
+<a href="#state_urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name (URN) for the Kubernetes cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
