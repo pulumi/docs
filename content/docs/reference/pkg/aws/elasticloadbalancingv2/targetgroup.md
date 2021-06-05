@@ -510,7 +510,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
+    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancingalgorithmtype_csharp">
@@ -667,7 +667,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
+    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancingalgorithmtype_go">
@@ -824,7 +824,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
+    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancingalgorithmtype_nodejs">
@@ -981,7 +981,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
+    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_balancing_algorithm_type_python">
@@ -1427,7 +1427,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
+    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancingalgorithmtype_csharp">
@@ -1602,7 +1602,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
+    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancingalgorithmtype_go">
@@ -1777,7 +1777,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
+    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancingalgorithmtype_nodejs">
@@ -1952,7 +1952,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
+    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancing_algorithm_type_python">

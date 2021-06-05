@@ -1454,6 +1454,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="chime_csharp">
+<a href="#chime_csharp" style="color: inherit; text-decoration: inherit;">Chime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cloud9_csharp">
 <a href="#cloud9_csharp" style="color: inherit; text-decoration: inherit;">Cloud9</a>
 </span>
@@ -2038,6 +2046,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="macie_csharp">
 <a href="#macie_csharp" style="color: inherit; text-decoration: inherit;">Macie</a>
 </span>
@@ -2312,6 +2328,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="sagemaker_csharp">
 <a href="#sagemaker_csharp" style="color: inherit; text-decoration: inherit;">Sagemaker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schemas_csharp">
+<a href="#schemas_csharp" style="color: inherit; text-decoration: inherit;">Schemas</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2692,6 +2716,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="budgets_go">
 <a href="#budgets_go" style="color: inherit; text-decoration: inherit;">Budgets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="chime_go">
+<a href="#chime_go" style="color: inherit; text-decoration: inherit;">Chime</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3282,6 +3314,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="macie_go">
 <a href="#macie_go" style="color: inherit; text-decoration: inherit;">Macie</a>
 </span>
@@ -3556,6 +3596,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="sagemaker_go">
 <a href="#sagemaker_go" style="color: inherit; text-decoration: inherit;">Sagemaker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schemas_go">
+<a href="#schemas_go" style="color: inherit; text-decoration: inherit;">Schemas</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3936,6 +3984,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="budgets_nodejs">
 <a href="#budgets_nodejs" style="color: inherit; text-decoration: inherit;">budgets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="chime_nodejs">
+<a href="#chime_nodejs" style="color: inherit; text-decoration: inherit;">chime</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -4526,6 +4582,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="macie_nodejs">
 <a href="#macie_nodejs" style="color: inherit; text-decoration: inherit;">macie</a>
 </span>
@@ -4800,6 +4864,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="sagemaker_nodejs">
 <a href="#sagemaker_nodejs" style="color: inherit; text-decoration: inherit;">sagemaker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schemas_nodejs">
+<a href="#schemas_nodejs" style="color: inherit; text-decoration: inherit;">schemas</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -5180,6 +5252,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="budgets_python">
 <a href="#budgets_python" style="color: inherit; text-decoration: inherit;">budgets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="chime_python">
+<a href="#chime_python" style="color: inherit; text-decoration: inherit;">chime</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -5770,6 +5850,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="macie_python">
 <a href="#macie_python" style="color: inherit; text-decoration: inherit;">macie</a>
 </span>
@@ -6044,6 +6132,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="sagemaker_python">
 <a href="#sagemaker_python" style="color: inherit; text-decoration: inherit;">sagemaker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schemas_python">
+<a href="#schemas_python" style="color: inherit; text-decoration: inherit;">schemas</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

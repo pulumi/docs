@@ -449,6 +449,7 @@ const example_AmazonEC2ContainerRegistryReadOnly = new aws.iam.RolePolicyAttachm
               <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
               <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+              <span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodeGroupTaintArgs]]</span> = None<span class="p">,</span>
               <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">NodeGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -720,7 +721,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider defaultTags present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_csharp">
@@ -730,6 +731,15 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="taints_csharp">
+<a href="#taints_csharp" style="color: inherit; text-decoration: inherit;">Taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegrouptaint">List&lt;Node<wbr>Group<wbr>Taint<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
@@ -886,7 +896,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider defaultTags present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_go">
@@ -896,6 +906,15 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="taints_go">
+<a href="#taints_go" style="color: inherit; text-decoration: inherit;">Taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegrouptaint">[]Node<wbr>Group<wbr>Taint</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
@@ -1052,7 +1071,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider defaultTags present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_nodejs">
@@ -1062,6 +1081,15 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="taints_nodejs">
+<a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegrouptaint">Node<wbr>Group<wbr>Taint<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
@@ -1218,7 +1246,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider defaultTags present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_all_python">
@@ -1228,6 +1256,15 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="taints_python">
+<a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegrouptaint">Sequence[Node<wbr>Group<wbr>Taint<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
@@ -1439,6 +1476,7 @@ Get an existing NodeGroup resource's state with the given name, ID, and optional
         <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodeGroupTaintArgs]]</span> = None<span class="p">,</span>
         <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NodeGroup</code></pre></div>
 {{% /choosable %}}
 
@@ -1720,7 +1758,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider defaultTags present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_csharp">
@@ -1730,6 +1768,15 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_taints_csharp">
+<a href="#state_taints_csharp" style="color: inherit; text-decoration: inherit;">Taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegrouptaint">List&lt;Node<wbr>Group<wbr>Taint<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
@@ -1913,7 +1960,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider defaultTags present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_go">
@@ -1923,6 +1970,15 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_taints_go">
+<a href="#state_taints_go" style="color: inherit; text-decoration: inherit;">Taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegrouptaint">[]Node<wbr>Group<wbr>Taint</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
@@ -2106,7 +2162,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider defaultTags present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_nodejs">
@@ -2116,6 +2172,15 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_taints_nodejs">
+<a href="#state_taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegrouptaint">Node<wbr>Group<wbr>Taint<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
@@ -2299,7 +2364,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider defaultTags present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_all_python">
@@ -2309,6 +2374,15 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_taints_python">
+<a href="#state_taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegrouptaint">Sequence[Node<wbr>Group<wbr>Taint<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
@@ -2813,6 +2887,132 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of worker nodes.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="nodegrouptaint">Node<wbr>Group<wbr>Taint</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effect_csharp">
+<a href="#effect_csharp" style="color: inherit; text-decoration: inherit;">Effect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The effect of the taint. Valid values: `NO_SCHEDULE`, `NO_EXECUTE`, `PREFER_NO_SCHEDULE`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key of the taint. Maximum length of 63.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the taint. Maximum length of 63.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effect_go">
+<a href="#effect_go" style="color: inherit; text-decoration: inherit;">Effect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The effect of the taint. Valid values: `NO_SCHEDULE`, `NO_EXECUTE`, `PREFER_NO_SCHEDULE`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key of the taint. Maximum length of 63.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the taint. Maximum length of 63.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effect_nodejs">
+<a href="#effect_nodejs" style="color: inherit; text-decoration: inherit;">effect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The effect of the taint. Valid values: `NO_SCHEDULE`, `NO_EXECUTE`, `PREFER_NO_SCHEDULE`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key of the taint. Maximum length of 63.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the taint. Maximum length of 63.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effect_python">
+<a href="#effect_python" style="color: inherit; text-decoration: inherit;">effect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The effect of the taint. Valid values: `NO_SCHEDULE`, `NO_EXECUTE`, `PREFER_NO_SCHEDULE`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The key of the taint. Maximum length of 63.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value of the taint. Maximum length of 63.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

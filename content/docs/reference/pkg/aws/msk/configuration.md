@@ -274,15 +274,6 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="kafkaversions_csharp">
-<a href="#kafkaversions_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Versions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}List of Apache Kafka versions which can use this configuration.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="serverproperties_csharp">
 <a href="#serverproperties_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Properties</a>
 </span>
@@ -301,6 +292,15 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Description of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="kafkaversions_csharp">
+<a href="#kafkaversions_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of Apache Kafka versions which can use this configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -313,15 +313,6 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="kafkaversions_go">
-<a href="#kafkaversions_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Versions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of Apache Kafka versions which can use this configuration.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serverproperties_go">
 <a href="#serverproperties_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Properties</a>
@@ -341,6 +332,15 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Description of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="kafkaversions_go">
+<a href="#kafkaversions_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of Apache Kafka versions which can use this configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -353,15 +353,6 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="kafkaversions_nodejs">
-<a href="#kafkaversions_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Versions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}List of Apache Kafka versions which can use this configuration.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serverproperties_nodejs">
 <a href="#serverproperties_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Properties</a>
@@ -381,6 +372,15 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Description of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="kafkaversions_nodejs">
+<a href="#kafkaversions_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of Apache Kafka versions which can use this configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -393,15 +393,6 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="kafka_versions_python">
-<a href="#kafka_versions_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>versions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}List of Apache Kafka versions which can use this configuration.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="server_properties_python">
 <a href="#server_properties_python" style="color: inherit; text-decoration: inherit;">server_<wbr>properties</a>
@@ -419,6 +410,15 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kafka_versions_python">
+<a href="#kafka_versions_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of Apache Kafka versions which can use this configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">

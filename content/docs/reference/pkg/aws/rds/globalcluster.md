@@ -21,7 +21,264 @@ More information about Aurora global databases can be found in the [Aurora User 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-### New Global Cluster
+### New MySQL Global Cluster
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Rds.GlobalCluster("example", new Aws.Rds.GlobalClusterArgs
+        {
+            GlobalClusterIdentifier = "global-test",
+            Engine = "aurora",
+            EngineVersion = "5.6.mysql_aurora.1.22.2",
+            DatabaseName = "example_db",
+        });
+        var primaryCluster = new Aws.Rds.Cluster("primaryCluster", new Aws.Rds.ClusterArgs
+        {
+            Engine = example.Engine,
+            EngineVersion = example.EngineVersion,
+            ClusterIdentifier = "test-primary-cluster",
+            MasterUsername = "username",
+            MasterPassword = "somepass123",
+            DatabaseName = "example_db",
+            GlobalClusterIdentifier = example.Id,
+            DbSubnetGroupName = "default",
+        }, new CustomResourceOptions
+        {
+            Provider = aws.Primary,
+        });
+        var primaryClusterInstance = new Aws.Rds.ClusterInstance("primaryClusterInstance", new Aws.Rds.ClusterInstanceArgs
+        {
+            Identifier = "test-primary-cluster-instance",
+            ClusterIdentifier = primaryCluster.Id,
+            InstanceClass = "db.r4.large",
+            DbSubnetGroupName = "default",
+        }, new CustomResourceOptions
+        {
+            Provider = aws.Primary,
+        });
+        var secondaryCluster = new Aws.Rds.Cluster("secondaryCluster", new Aws.Rds.ClusterArgs
+        {
+            Engine = example.Engine,
+            EngineVersion = example.EngineVersion,
+            ClusterIdentifier = "test-secondary-cluster",
+            GlobalClusterIdentifier = example.Id,
+            DbSubnetGroupName = "default",
+        }, new CustomResourceOptions
+        {
+            Provider = aws.Secondary,
+        });
+        var secondaryClusterInstance = new Aws.Rds.ClusterInstance("secondaryClusterInstance", new Aws.Rds.ClusterInstanceArgs
+        {
+            Identifier = "test-secondary-cluster-instance",
+            ClusterIdentifier = secondaryCluster.Id,
+            InstanceClass = "db.r4.large",
+            DbSubnetGroupName = "default",
+        }, new CustomResourceOptions
+        {
+            Provider = aws.Secondary,
+            DependsOn = 
+            {
+                primaryClusterInstance,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := rds.NewGlobalCluster(ctx, "example", &rds.GlobalClusterArgs{
+			GlobalClusterIdentifier: pulumi.String("global-test"),
+			Engine:                  pulumi.String("aurora"),
+			EngineVersion:           pulumi.String("5.6.mysql_aurora.1.22.2"),
+			DatabaseName:            pulumi.String("example_db"),
+		})
+		if err != nil {
+			return err
+		}
+		primaryCluster, err := rds.NewCluster(ctx, "primaryCluster", &rds.ClusterArgs{
+			Engine:                  example.Engine,
+			EngineVersion:           example.EngineVersion,
+			ClusterIdentifier:       pulumi.String("test-primary-cluster"),
+			MasterUsername:          pulumi.String("username"),
+			MasterPassword:          pulumi.String("somepass123"),
+			DatabaseName:            pulumi.String("example_db"),
+			GlobalClusterIdentifier: example.ID(),
+			DbSubnetGroupName:       pulumi.String("default"),
+		}, pulumi.Provider(aws.Primary))
+		if err != nil {
+			return err
+		}
+		primaryClusterInstance, err := rds.NewClusterInstance(ctx, "primaryClusterInstance", &rds.ClusterInstanceArgs{
+			Identifier:        pulumi.String("test-primary-cluster-instance"),
+			ClusterIdentifier: primaryCluster.ID(),
+			InstanceClass:     pulumi.String("db.r4.large"),
+			DbSubnetGroupName: pulumi.String("default"),
+		}, pulumi.Provider(aws.Primary))
+		if err != nil {
+			return err
+		}
+		secondaryCluster, err := rds.NewCluster(ctx, "secondaryCluster", &rds.ClusterArgs{
+			Engine:                  example.Engine,
+			EngineVersion:           example.EngineVersion,
+			ClusterIdentifier:       pulumi.String("test-secondary-cluster"),
+			GlobalClusterIdentifier: example.ID(),
+			DbSubnetGroupName:       pulumi.String("default"),
+		}, pulumi.Provider(aws.Secondary))
+		if err != nil {
+			return err
+		}
+		_, err = rds.NewClusterInstance(ctx, "secondaryClusterInstance", &rds.ClusterInstanceArgs{
+			Identifier:        pulumi.String("test-secondary-cluster-instance"),
+			ClusterIdentifier: secondaryCluster.ID(),
+			InstanceClass:     pulumi.String("db.r4.large"),
+			DbSubnetGroupName: pulumi.String("default"),
+		}, pulumi.Provider(aws.Secondary), pulumi.DependsOn([]pulumi.Resource{
+			primaryClusterInstance,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.rds.GlobalCluster("example",
+    global_cluster_identifier="global-test",
+    engine="aurora",
+    engine_version="5.6.mysql_aurora.1.22.2",
+    database_name="example_db")
+primary_cluster = aws.rds.Cluster("primaryCluster",
+    engine=example.engine,
+    engine_version=example.engine_version,
+    cluster_identifier="test-primary-cluster",
+    master_username="username",
+    master_password="somepass123",
+    database_name="example_db",
+    global_cluster_identifier=example.id,
+    db_subnet_group_name="default",
+    opts=pulumi.ResourceOptions(provider=aws["primary"]))
+primary_cluster_instance = aws.rds.ClusterInstance("primaryClusterInstance",
+    identifier="test-primary-cluster-instance",
+    cluster_identifier=primary_cluster.id,
+    instance_class="db.r4.large",
+    db_subnet_group_name="default",
+    opts=pulumi.ResourceOptions(provider=aws["primary"]))
+secondary_cluster = aws.rds.Cluster("secondaryCluster",
+    engine=example.engine,
+    engine_version=example.engine_version,
+    cluster_identifier="test-secondary-cluster",
+    global_cluster_identifier=example.id,
+    db_subnet_group_name="default",
+    opts=pulumi.ResourceOptions(provider=aws["secondary"]))
+secondary_cluster_instance = aws.rds.ClusterInstance("secondaryClusterInstance",
+    identifier="test-secondary-cluster-instance",
+    cluster_identifier=secondary_cluster.id,
+    instance_class="db.r4.large",
+    db_subnet_group_name="default",
+    opts=pulumi.ResourceOptions(provider=aws["secondary"],
+        depends_on=[primary_cluster_instance]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.rds.GlobalCluster("example", {
+    globalClusterIdentifier: "global-test",
+    engine: "aurora",
+    engineVersion: "5.6.mysql_aurora.1.22.2",
+    databaseName: "example_db",
+});
+const primaryCluster = new aws.rds.Cluster("primaryCluster", {
+    engine: example.engine,
+    engineVersion: example.engineVersion,
+    clusterIdentifier: "test-primary-cluster",
+    masterUsername: "username",
+    masterPassword: "somepass123",
+    databaseName: "example_db",
+    globalClusterIdentifier: example.id,
+    dbSubnetGroupName: "default",
+}, {
+    provider: aws.primary,
+});
+const primaryClusterInstance = new aws.rds.ClusterInstance("primaryClusterInstance", {
+    identifier: "test-primary-cluster-instance",
+    clusterIdentifier: primaryCluster.id,
+    instanceClass: "db.r4.large",
+    dbSubnetGroupName: "default",
+}, {
+    provider: aws.primary,
+});
+const secondaryCluster = new aws.rds.Cluster("secondaryCluster", {
+    engine: example.engine,
+    engineVersion: example.engineVersion,
+    clusterIdentifier: "test-secondary-cluster",
+    globalClusterIdentifier: example.id,
+    dbSubnetGroupName: "default",
+}, {
+    provider: aws.secondary,
+});
+const secondaryClusterInstance = new aws.rds.ClusterInstance("secondaryClusterInstance", {
+    identifier: "test-secondary-cluster-instance",
+    clusterIdentifier: secondaryCluster.id,
+    instanceClass: "db.r4.large",
+    dbSubnetGroupName: "default",
+}, {
+    provider: aws.secondary,
+    dependsOn: [primaryClusterInstance],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### New PostgreSQL Global Cluster
 
 
 {{< example csharp >}}
@@ -40,32 +297,49 @@ class MyStack : Stack
         });
         var secondary = new Aws.Provider("secondary", new Aws.ProviderArgs
         {
-            Region = "us-west-2",
+            Region = "us-east-1",
         });
         var example = new Aws.Rds.GlobalCluster("example", new Aws.Rds.GlobalClusterArgs
         {
-            GlobalClusterIdentifier = "example",
-        }, new CustomResourceOptions
-        {
-            Provider = aws.Primary,
+            GlobalClusterIdentifier = "global-test",
+            Engine = "aurora-postgresql",
+            EngineVersion = "11.9",
+            DatabaseName = "example_db",
         });
         var primaryCluster = new Aws.Rds.Cluster("primaryCluster", new Aws.Rds.ClusterArgs
         {
+            Engine = example.Engine,
+            EngineVersion = example.EngineVersion,
+            ClusterIdentifier = "test-primary-cluster",
+            MasterUsername = "username",
+            MasterPassword = "somepass123",
+            DatabaseName = "example_db",
             GlobalClusterIdentifier = example.Id,
+            DbSubnetGroupName = "default",
         }, new CustomResourceOptions
         {
             Provider = aws.Primary,
         });
         var primaryClusterInstance = new Aws.Rds.ClusterInstance("primaryClusterInstance", new Aws.Rds.ClusterInstanceArgs
         {
+            Engine = example.Engine,
+            EngineVersion = example.EngineVersion,
+            Identifier = "test-primary-cluster-instance",
             ClusterIdentifier = primaryCluster.Id,
+            InstanceClass = "db.r4.large",
+            DbSubnetGroupName = "default",
         }, new CustomResourceOptions
         {
             Provider = aws.Primary,
         });
         var secondaryCluster = new Aws.Rds.Cluster("secondaryCluster", new Aws.Rds.ClusterArgs
         {
+            Engine = example.Engine,
+            EngineVersion = example.EngineVersion,
+            ClusterIdentifier = "test-secondary-cluster",
             GlobalClusterIdentifier = example.Id,
+            SkipFinalSnapshot = true,
+            DbSubnetGroupName = "default",
         }, new CustomResourceOptions
         {
             Provider = aws.Secondary,
@@ -76,7 +350,12 @@ class MyStack : Stack
         });
         var secondaryClusterInstance = new Aws.Rds.ClusterInstance("secondaryClusterInstance", new Aws.Rds.ClusterInstanceArgs
         {
+            Engine = example.Engine,
+            EngineVersion = example.EngineVersion,
+            Identifier = "test-secondary-cluster-instance",
             ClusterIdentifier = secondaryCluster.Id,
+            InstanceClass = "db.r4.large",
+            DbSubnetGroupName = "default",
         }, new CustomResourceOptions
         {
             Provider = aws.Secondary,
@@ -110,31 +389,51 @@ func main() {
 			return err
 		}
 		_, err = providers.Newaws(ctx, "secondary", &providers.awsArgs{
-			Region: pulumi.String("us-west-2"),
+			Region: pulumi.String("us-east-1"),
 		})
 		if err != nil {
 			return err
 		}
 		example, err := rds.NewGlobalCluster(ctx, "example", &rds.GlobalClusterArgs{
-			GlobalClusterIdentifier: pulumi.String("example"),
-		}, pulumi.Provider(aws.Primary))
+			GlobalClusterIdentifier: pulumi.String("global-test"),
+			Engine:                  pulumi.String("aurora-postgresql"),
+			EngineVersion:           pulumi.String("11.9"),
+			DatabaseName:            pulumi.String("example_db"),
+		})
 		if err != nil {
 			return err
 		}
 		primaryCluster, err := rds.NewCluster(ctx, "primaryCluster", &rds.ClusterArgs{
+			Engine:                  example.Engine,
+			EngineVersion:           example.EngineVersion,
+			ClusterIdentifier:       pulumi.String("test-primary-cluster"),
+			MasterUsername:          pulumi.String("username"),
+			MasterPassword:          pulumi.String("somepass123"),
+			DatabaseName:            pulumi.String("example_db"),
 			GlobalClusterIdentifier: example.ID(),
+			DbSubnetGroupName:       pulumi.String("default"),
 		}, pulumi.Provider(aws.Primary))
 		if err != nil {
 			return err
 		}
 		primaryClusterInstance, err := rds.NewClusterInstance(ctx, "primaryClusterInstance", &rds.ClusterInstanceArgs{
+			Engine:            example.Engine,
+			EngineVersion:     example.EngineVersion,
+			Identifier:        pulumi.String("test-primary-cluster-instance"),
 			ClusterIdentifier: primaryCluster.ID(),
+			InstanceClass:     pulumi.String("db.r4.large"),
+			DbSubnetGroupName: pulumi.String("default"),
 		}, pulumi.Provider(aws.Primary))
 		if err != nil {
 			return err
 		}
 		secondaryCluster, err := rds.NewCluster(ctx, "secondaryCluster", &rds.ClusterArgs{
+			Engine:                  example.Engine,
+			EngineVersion:           example.EngineVersion,
+			ClusterIdentifier:       pulumi.String("test-secondary-cluster"),
 			GlobalClusterIdentifier: example.ID(),
+			SkipFinalSnapshot:       pulumi.Bool(true),
+			DbSubnetGroupName:       pulumi.String("default"),
 		}, pulumi.Provider(aws.Secondary), pulumi.DependsOn([]pulumi.Resource{
 			primaryClusterInstance,
 		}))
@@ -142,7 +441,12 @@ func main() {
 			return err
 		}
 		_, err = rds.NewClusterInstance(ctx, "secondaryClusterInstance", &rds.ClusterInstanceArgs{
+			Engine:            example.Engine,
+			EngineVersion:     example.EngineVersion,
+			Identifier:        pulumi.String("test-secondary-cluster-instance"),
 			ClusterIdentifier: secondaryCluster.ID(),
+			InstanceClass:     pulumi.String("db.r4.large"),
+			DbSubnetGroupName: pulumi.String("default"),
 		}, pulumi.Provider(aws.Secondary))
 		if err != nil {
 			return err
@@ -164,18 +468,47 @@ import pulumi_aws as aws
 import pulumi_pulumi as pulumi
 
 primary = pulumi.providers.Aws("primary", region="us-east-2")
-secondary = pulumi.providers.Aws("secondary", region="us-west-2")
-example = aws.rds.GlobalCluster("example", global_cluster_identifier="example",
-opts=pulumi.ResourceOptions(provider=aws["primary"]))
-primary_cluster = aws.rds.Cluster("primaryCluster", global_cluster_identifier=example.id,
-opts=pulumi.ResourceOptions(provider=aws["primary"]))
-primary_cluster_instance = aws.rds.ClusterInstance("primaryClusterInstance", cluster_identifier=primary_cluster.id,
-opts=pulumi.ResourceOptions(provider=aws["primary"]))
-secondary_cluster = aws.rds.Cluster("secondaryCluster", global_cluster_identifier=example.id,
-opts=pulumi.ResourceOptions(provider=aws["secondary"],
-    depends_on=[primary_cluster_instance]))
-secondary_cluster_instance = aws.rds.ClusterInstance("secondaryClusterInstance", cluster_identifier=secondary_cluster.id,
-opts=pulumi.ResourceOptions(provider=aws["secondary"]))
+secondary = pulumi.providers.Aws("secondary", region="us-east-1")
+example = aws.rds.GlobalCluster("example",
+    global_cluster_identifier="global-test",
+    engine="aurora-postgresql",
+    engine_version="11.9",
+    database_name="example_db")
+primary_cluster = aws.rds.Cluster("primaryCluster",
+    engine=example.engine,
+    engine_version=example.engine_version,
+    cluster_identifier="test-primary-cluster",
+    master_username="username",
+    master_password="somepass123",
+    database_name="example_db",
+    global_cluster_identifier=example.id,
+    db_subnet_group_name="default",
+    opts=pulumi.ResourceOptions(provider=aws["primary"]))
+primary_cluster_instance = aws.rds.ClusterInstance("primaryClusterInstance",
+    engine=example.engine,
+    engine_version=example.engine_version,
+    identifier="test-primary-cluster-instance",
+    cluster_identifier=primary_cluster.id,
+    instance_class="db.r4.large",
+    db_subnet_group_name="default",
+    opts=pulumi.ResourceOptions(provider=aws["primary"]))
+secondary_cluster = aws.rds.Cluster("secondaryCluster",
+    engine=example.engine,
+    engine_version=example.engine_version,
+    cluster_identifier="test-secondary-cluster",
+    global_cluster_identifier=example.id,
+    skip_final_snapshot=True,
+    db_subnet_group_name="default",
+    opts=pulumi.ResourceOptions(provider=aws["secondary"],
+        depends_on=[primary_cluster_instance]))
+secondary_cluster_instance = aws.rds.ClusterInstance("secondaryClusterInstance",
+    engine=example.engine,
+    engine_version=example.engine_version,
+    identifier="test-secondary-cluster-instance",
+    cluster_identifier=secondary_cluster.id,
+    instance_class="db.r4.large",
+    db_subnet_group_name="default",
+    opts=pulumi.ResourceOptions(provider=aws["secondary"]))
 ```
 
 
@@ -190,21 +523,54 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const primary = new aws.Provider("primary", {region: "us-east-2"});
-const secondary = new aws.Provider("secondary", {region: "us-west-2"});
-const example = new aws.rds.GlobalCluster("example", {globalClusterIdentifier: "example"}, {
+const secondary = new aws.Provider("secondary", {region: "us-east-1"});
+const example = new aws.rds.GlobalCluster("example", {
+    globalClusterIdentifier: "global-test",
+    engine: "aurora-postgresql",
+    engineVersion: "11.9",
+    databaseName: "example_db",
+});
+const primaryCluster = new aws.rds.Cluster("primaryCluster", {
+    engine: example.engine,
+    engineVersion: example.engineVersion,
+    clusterIdentifier: "test-primary-cluster",
+    masterUsername: "username",
+    masterPassword: "somepass123",
+    databaseName: "example_db",
+    globalClusterIdentifier: example.id,
+    dbSubnetGroupName: "default",
+}, {
     provider: aws.primary,
 });
-const primaryCluster = new aws.rds.Cluster("primaryCluster", {globalClusterIdentifier: example.id}, {
+const primaryClusterInstance = new aws.rds.ClusterInstance("primaryClusterInstance", {
+    engine: example.engine,
+    engineVersion: example.engineVersion,
+    identifier: "test-primary-cluster-instance",
+    clusterIdentifier: primaryCluster.id,
+    instanceClass: "db.r4.large",
+    dbSubnetGroupName: "default",
+}, {
     provider: aws.primary,
 });
-const primaryClusterInstance = new aws.rds.ClusterInstance("primaryClusterInstance", {clusterIdentifier: primaryCluster.id}, {
-    provider: aws.primary,
-});
-const secondaryCluster = new aws.rds.Cluster("secondaryCluster", {globalClusterIdentifier: example.id}, {
+const secondaryCluster = new aws.rds.Cluster("secondaryCluster", {
+    engine: example.engine,
+    engineVersion: example.engineVersion,
+    clusterIdentifier: "test-secondary-cluster",
+    globalClusterIdentifier: example.id,
+    skipFinalSnapshot: true,
+    dbSubnetGroupName: "default",
+}, {
     provider: aws.secondary,
     dependsOn: [primaryClusterInstance],
 });
-const secondaryClusterInstance = new aws.rds.ClusterInstance("secondaryClusterInstance", {clusterIdentifier: secondaryCluster.id}, {
+const secondaryClusterInstance = new aws.rds.ClusterInstance("secondaryClusterInstance", {
+    engine: example.engine,
+    engineVersion: example.engineVersion,
+    identifier: "test-secondary-cluster-instance",
+    clusterIdentifier: secondaryCluster.id,
+    instanceClass: "db.r4.large",
+    dbSubnetGroupName: "default",
+}, {
     provider: aws.secondary,
 });
 ```

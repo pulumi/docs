@@ -825,8 +825,7 @@ one).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origins_csharp">
@@ -1036,8 +1035,7 @@ one).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origins_go">
@@ -1247,8 +1245,7 @@ one).
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origins_nodejs">
@@ -1458,8 +1455,7 @@ one).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origins_python">
@@ -2347,8 +2343,7 @@ web site of your custom origin.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
@@ -2658,8 +2653,7 @@ web site of your custom origin.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
@@ -2969,8 +2963,7 @@ web site of your custom origin.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
@@ -3280,8 +3273,7 @@ web site of your custom origin.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
@@ -6493,6 +6485,24 @@ web site of your custom origin.
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="connectionattempts_csharp">
+<a href="#connectionattempts_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Attempts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of times that CloudFront attempts to connect to the origin. Must be between 1-3. Defaults to 3.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectiontimeout_csharp">
+<a href="#connectiontimeout_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds that CloudFront waits when trying to establish a connection to the origin. Must be between 1-10. Defaults to 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="customheaders_csharp">
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
 </span>
@@ -6524,6 +6534,16 @@ origin is required, use `s3_origin_config` instead.
     <dd>{{% md %}}An optional element that causes CloudFront to
 request your content from a directory in your Amazon S3 bucket or your
 custom origin.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="originshield_csharp">
+<a href="#originshield_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Shield</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionoriginoriginshield">Distribution<wbr>Origin<wbr>Origin<wbr>Shield<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudFront Origin Shield
+configuration information. Using Origin Shield can help reduce the load on your origin. For more information, see [Using Origin Shield](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html) in the Amazon CloudFront Developer Guide.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3originconfig_csharp">
@@ -6560,6 +6580,24 @@ web site of your custom origin.
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="connectionattempts_go">
+<a href="#connectionattempts_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Attempts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of times that CloudFront attempts to connect to the origin. Must be between 1-3. Defaults to 3.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectiontimeout_go">
+<a href="#connectiontimeout_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds that CloudFront waits when trying to establish a connection to the origin. Must be between 1-10. Defaults to 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="customheaders_go">
 <a href="#customheaders_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
 </span>
@@ -6591,6 +6629,16 @@ origin is required, use `s3_origin_config` instead.
     <dd>{{% md %}}An optional element that causes CloudFront to
 request your content from a directory in your Amazon S3 bucket or your
 custom origin.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="originshield_go">
+<a href="#originshield_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Shield</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionoriginoriginshield">Distribution<wbr>Origin<wbr>Origin<wbr>Shield</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudFront Origin Shield
+configuration information. Using Origin Shield can help reduce the load on your origin. For more information, see [Using Origin Shield](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html) in the Amazon CloudFront Developer Guide.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3originconfig_go">
@@ -6627,6 +6675,24 @@ web site of your custom origin.
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="connectionattempts_nodejs">
+<a href="#connectionattempts_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Attempts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of times that CloudFront attempts to connect to the origin. Must be between 1-3. Defaults to 3.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectiontimeout_nodejs">
+<a href="#connectiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds that CloudFront waits when trying to establish a connection to the origin. Must be between 1-10. Defaults to 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="customheaders_nodejs">
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
@@ -6658,6 +6724,16 @@ origin is required, use `s3_origin_config` instead.
     <dd>{{% md %}}An optional element that causes CloudFront to
 request your content from a directory in your Amazon S3 bucket or your
 custom origin.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="originshield_nodejs">
+<a href="#originshield_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Shield</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionoriginoriginshield">Distribution<wbr>Origin<wbr>Origin<wbr>Shield<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudFront Origin Shield
+configuration information. Using Origin Shield can help reduce the load on your origin. For more information, see [Using Origin Shield](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html) in the Amazon CloudFront Developer Guide.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3originconfig_nodejs">
@@ -6694,6 +6770,24 @@ web site of your custom origin.
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="connection_attempts_python">
+<a href="#connection_attempts_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>attempts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of times that CloudFront attempts to connect to the origin. Must be between 1-3. Defaults to 3.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connection_timeout_python">
+<a href="#connection_timeout_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds that CloudFront waits when trying to establish a connection to the origin. Must be between 1-10. Defaults to 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="custom_headers_python">
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span>
@@ -6725,6 +6819,16 @@ origin is required, use `s3_origin_config` instead.
     <dd>{{% md %}}An optional element that causes CloudFront to
 request your content from a directory in your Amazon S3 bucket or your
 custom origin.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="origin_shield_python">
+<a href="#origin_shield_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>shield</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionoriginoriginshield">Distribution<wbr>Origin<wbr>Origin<wbr>Shield<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudFront Origin Shield
+configuration information. Using Origin Shield can help reduce the load on your origin. For more information, see [Using Origin Shield](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html) in the Amazon CloudFront Developer Guide.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3_origin_config_python">
@@ -7301,6 +7405,96 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="distributionoriginoriginshield">Distribution<wbr>Origin<wbr>Origin<wbr>Shield</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="originshieldregion_csharp">
+<a href="#originshieldregion_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Shield<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Region for Origin Shield. To specify a region, use the region code, not the region name. For example, specify the US East (Ohio) region as us-east-2.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="originshieldregion_go">
+<a href="#originshieldregion_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Shield<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Region for Origin Shield. To specify a region, use the region code, not the region name. For example, specify the US East (Ohio) region as us-east-2.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="originshieldregion_nodejs">
+<a href="#originshieldregion_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Shield<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Region for Origin Shield. To specify a region, use the region code, not the region name. For example, specify the US East (Ohio) region as us-east-2.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="origin_shield_region_python">
+<a href="#origin_shield_region_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>shield_<wbr>region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS Region for Origin Shield. To specify a region, use the region code, not the region name. For example, specify the US East (Ohio) region as us-east-2.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="distributionorigins3originconfig">Distribution<wbr>Origin<wbr>S3Origin<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -7526,8 +7720,7 @@ distribute your content (`blacklist`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_csharp">
@@ -7549,8 +7742,7 @@ user requests for content.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_go">
@@ -7572,8 +7764,7 @@ user requests for content.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_nodejs">
@@ -7595,8 +7786,7 @@ user requests for content.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_python">
@@ -7710,8 +7900,7 @@ user requests for content.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_csharp">
@@ -7733,8 +7922,7 @@ user requests for content.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_go">
@@ -7756,8 +7944,7 @@ user requests for content.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_nodejs">
@@ -7779,8 +7966,7 @@ user requests for content.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
+    <dd>{{% md %}}A flag that specifies whether Origin Shield is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_python">

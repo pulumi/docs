@@ -1009,6 +1009,15 @@ The following output properties are available:
     <dd>{{% md %}}The Snapshot ID of the mount.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="throughput_csharp">
+<a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The Throughput of the volume.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="volumesize_csharp">
 <a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
 </span>
@@ -1083,6 +1092,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID of the mount.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="throughput_go">
+<a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The Throughput of the volume.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumesize_go">
@@ -1161,6 +1179,15 @@ The following output properties are available:
     <dd>{{% md %}}The Snapshot ID of the mount.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="throughput_nodejs">
+<a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The Throughput of the volume.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="volumesize_nodejs">
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
 </span>
@@ -1235,6 +1262,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID of the mount.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="throughput_python">
+<a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The Throughput of the volume.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_size_python">
@@ -1510,6 +1546,15 @@ The following output properties are available:
     <dd>{{% md %}}The provisioned IOPs of the volume.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="throughput_csharp">
+<a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The Throughput of the volume.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="volumesize_csharp">
 <a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
 </span>
@@ -1557,6 +1602,15 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The provisioned IOPs of the volume.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="throughput_go">
+<a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The Throughput of the volume.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumesize_go">
@@ -1608,6 +1662,15 @@ The following output properties are available:
     <dd>{{% md %}}The provisioned IOPs of the volume.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="throughput_nodejs">
+<a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The Throughput of the volume.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="volumesize_nodejs">
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
 </span>
@@ -1655,6 +1718,15 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The provisioned IOPs of the volume.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="throughput_python">
+<a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The Throughput of the volume.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_size_python">

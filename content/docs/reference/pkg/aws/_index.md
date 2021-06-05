@@ -19,6 +19,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="acmpca/" title="acmpca"><span class="symbol module"></span>acmpca</a></li>
     <li><a href="alb/" title="alb"><span class="symbol module"></span>alb</a></li>
     <li><a href="amp/" title="amp"><span class="symbol module"></span>amp</a></li>
+    <li><a href="amplify/" title="amplify"><span class="symbol module"></span>amplify</a></li>
     <li><a href="apigateway/" title="apigateway"><span class="symbol module"></span>apigateway</a></li>
     <li><a href="apigatewayv2/" title="apigatewayv2"><span class="symbol module"></span>apigatewayv2</a></li>
     <li><a href="appautoscaling/" title="appautoscaling"><span class="symbol module"></span>appautoscaling</a></li>
@@ -123,6 +124,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="s3control/" title="s3control"><span class="symbol module"></span>s3control</a></li>
     <li><a href="s3outposts/" title="s3outposts"><span class="symbol module"></span>s3outposts</a></li>
     <li><a href="sagemaker/" title="sagemaker"><span class="symbol module"></span>sagemaker</a></li>
+    <li><a href="schemas/" title="schemas"><span class="symbol module"></span>schemas</a></li>
     <li><a href="secretsmanager/" title="secretsmanager"><span class="symbol module"></span>secretsmanager</a></li>
     <li><a href="securityhub/" title="securityhub"><span class="symbol module"></span>securityhub</a></li>
     <li><a href="serverlessrepository/" title="serverlessrepository"><span class="symbol module"></span>serverlessrepository</a></li>
@@ -167,6 +169,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="getbillingserviceaccount" title="GetBillingServiceAccount"><span class="symbol function"></span>GetBillingServiceAccount</a></li>
     <li><a href="getcalleridentity" title="GetCallerIdentity"><span class="symbol function"></span>GetCallerIdentity</a></li>
     <li><a href="getcanonicaluserid" title="GetCanonicalUserId"><span class="symbol function"></span>GetCanonicalUserId</a></li>
+    <li><a href="getdefaulttags" title="GetDefaultTags"><span class="symbol function"></span>GetDefaultTags</a></li>
     <li><a href="getelasticip" title="GetElasticIp"><span class="symbol function"></span>GetElasticIp</a></li>
     <li><a href="getipranges" title="GetIpRanges"><span class="symbol function"></span>GetIpRanges</a></li>
     <li><a href="getpartition" title="GetPartition"><span class="symbol function"></span>GetPartition</a></li>
@@ -184,6 +187,6 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.6.0</dd>
+	<dd>4.7.0</dd>
 </dl>
 

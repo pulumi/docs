@@ -345,6 +345,9 @@ const userUpdates = new aws.sns.Topic("user_updates", {});
           <span class="nx">delivery_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">fifo_topic</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">firehose_failure_feedback_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">firehose_success_feedback_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">firehose_success_feedback_sample_rate</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">http_failure_feedback_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">http_success_feedback_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">http_success_feedback_sample_rate</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -552,6 +555,33 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Boolean indicating whether or not to create a FIFO (first-in-first-out) topic (default is `false`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="firehosefailurefeedbackrolearn_csharp">
+<a href="#firehosefailurefeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Firehose<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IAM role for failure feedback
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="firehosesuccessfeedbackrolearn_csharp">
+<a href="#firehosesuccessfeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Firehose<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="firehosesuccessfeedbacksamplerate_csharp">
+<a href="#firehosesuccessfeedbacksamplerate_csharp" style="color: inherit; text-decoration: inherit;">Firehose<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Percentage of success to sample
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httpfailurefeedbackrolearn_csharp">
 <a href="#httpfailurefeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
@@ -675,7 +705,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Key-value map of resource tags. .If configured with a provider `defaultTags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_csharp">
@@ -752,6 +782,33 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating whether or not to create a FIFO (first-in-first-out) topic (default is `false`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="firehosefailurefeedbackrolearn_go">
+<a href="#firehosefailurefeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Firehose<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IAM role for failure feedback
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="firehosesuccessfeedbackrolearn_go">
+<a href="#firehosesuccessfeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Firehose<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="firehosesuccessfeedbacksamplerate_go">
+<a href="#firehosesuccessfeedbacksamplerate_go" style="color: inherit; text-decoration: inherit;">Firehose<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpfailurefeedbackrolearn_go">
@@ -877,7 +934,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Key-value map of resource tags. .If configured with a provider `defaultTags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_go">
@@ -954,6 +1011,33 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean indicating whether or not to create a FIFO (first-in-first-out) topic (default is `false`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="firehosefailurefeedbackrolearn_nodejs">
+<a href="#firehosefailurefeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">firehose<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IAM role for failure feedback
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="firehosesuccessfeedbackrolearn_nodejs">
+<a href="#firehosesuccessfeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">firehose<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="firehosesuccessfeedbacksamplerate_nodejs">
+<a href="#firehosesuccessfeedbacksamplerate_nodejs" style="color: inherit; text-decoration: inherit;">firehose<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpfailurefeedbackrolearn_nodejs">
@@ -1079,7 +1163,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Key-value map of resource tags. .If configured with a provider `defaultTags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_nodejs">
@@ -1156,6 +1240,33 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating whether or not to create a FIFO (first-in-first-out) topic (default is `false`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="firehose_failure_feedback_role_arn_python">
+<a href="#firehose_failure_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">firehose_<wbr>failure_<wbr>feedback_<wbr>role_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}IAM role for failure feedback
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="firehose_success_feedback_role_arn_python">
+<a href="#firehose_success_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">firehose_<wbr>success_<wbr>feedback_<wbr>role_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="firehose_success_feedback_sample_rate_python">
+<a href="#firehose_success_feedback_sample_rate_python" style="color: inherit; text-decoration: inherit;">firehose_<wbr>success_<wbr>feedback_<wbr>sample_<wbr>rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_failure_feedback_role_arn_python">
@@ -1281,7 +1392,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Key-value map of resource tags. .If configured with a provider `defaultTags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_all_python">
@@ -1319,7 +1430,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="owner_csharp">
+<a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Account ID of the SNS topic owner
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1340,7 +1460,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="owner_go">
+<a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Account ID of the SNS topic owner
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1361,7 +1490,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="owner_nodejs">
+<a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Account ID of the SNS topic owner
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1382,7 +1520,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="owner_python">
+<a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS Account ID of the SNS topic owner
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1409,6 +1556,9 @@ Get an existing Topic resource's state with the given name, ID, and optional ext
         <span class="nx">delivery_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">fifo_topic</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">firehose_failure_feedback_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">firehose_success_feedback_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">firehose_success_feedback_sample_rate</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">http_failure_feedback_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">http_success_feedback_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">http_success_feedback_sample_rate</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -1418,6 +1568,7 @@ Get an existing Topic resource's state with the given name, ID, and optional ext
         <span class="nx">lambda_success_feedback_sample_rate</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sqs_failure_feedback_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sqs_success_feedback_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1608,6 +1759,33 @@ The following state arguments are supported:
     <dd>{{% md %}}Boolean indicating whether or not to create a FIFO (first-in-first-out) topic (default is `false`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_firehosefailurefeedbackrolearn_csharp">
+<a href="#state_firehosefailurefeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Firehose<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IAM role for failure feedback
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_firehosesuccessfeedbackrolearn_csharp">
+<a href="#state_firehosesuccessfeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Firehose<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_firehosesuccessfeedbacksamplerate_csharp">
+<a href="#state_firehosesuccessfeedbacksamplerate_csharp" style="color: inherit; text-decoration: inherit;">Firehose<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Percentage of success to sample
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_httpfailurefeedbackrolearn_csharp">
 <a href="#state_httpfailurefeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
@@ -1689,6 +1867,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_owner_csharp">
+<a href="#state_owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Account ID of the SNS topic owner
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_policy_csharp">
 <a href="#state_policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
@@ -1731,7 +1918,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Key-value map of resource tags. .If configured with a provider `defaultTags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_csharp">
@@ -1819,6 +2006,33 @@ The following state arguments are supported:
     <dd>{{% md %}}Boolean indicating whether or not to create a FIFO (first-in-first-out) topic (default is `false`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_firehosefailurefeedbackrolearn_go">
+<a href="#state_firehosefailurefeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Firehose<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IAM role for failure feedback
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_firehosesuccessfeedbackrolearn_go">
+<a href="#state_firehosesuccessfeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Firehose<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_firehosesuccessfeedbacksamplerate_go">
+<a href="#state_firehosesuccessfeedbacksamplerate_go" style="color: inherit; text-decoration: inherit;">Firehose<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Percentage of success to sample
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_httpfailurefeedbackrolearn_go">
 <a href="#state_httpfailurefeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
@@ -1900,6 +2114,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_owner_go">
+<a href="#state_owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Account ID of the SNS topic owner
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_policy_go">
 <a href="#state_policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
@@ -1942,7 +2165,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Key-value map of resource tags. .If configured with a provider `defaultTags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_go">
@@ -2030,6 +2253,33 @@ The following state arguments are supported:
     <dd>{{% md %}}Boolean indicating whether or not to create a FIFO (first-in-first-out) topic (default is `false`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_firehosefailurefeedbackrolearn_nodejs">
+<a href="#state_firehosefailurefeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">firehose<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IAM role for failure feedback
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_firehosesuccessfeedbackrolearn_nodejs">
+<a href="#state_firehosesuccessfeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">firehose<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_firehosesuccessfeedbacksamplerate_nodejs">
+<a href="#state_firehosesuccessfeedbacksamplerate_nodejs" style="color: inherit; text-decoration: inherit;">firehose<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Percentage of success to sample
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_httpfailurefeedbackrolearn_nodejs">
 <a href="#state_httpfailurefeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
@@ -2111,6 +2361,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_owner_nodejs">
+<a href="#state_owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Account ID of the SNS topic owner
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_policy_nodejs">
 <a href="#state_policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
@@ -2153,7 +2412,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Key-value map of resource tags. .If configured with a provider `defaultTags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_nodejs">
@@ -2241,6 +2500,33 @@ The following state arguments are supported:
     <dd>{{% md %}}Boolean indicating whether or not to create a FIFO (first-in-first-out) topic (default is `false`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_firehose_failure_feedback_role_arn_python">
+<a href="#state_firehose_failure_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">firehose_<wbr>failure_<wbr>feedback_<wbr>role_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}IAM role for failure feedback
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_firehose_success_feedback_role_arn_python">
+<a href="#state_firehose_success_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">firehose_<wbr>success_<wbr>feedback_<wbr>role_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_firehose_success_feedback_sample_rate_python">
+<a href="#state_firehose_success_feedback_sample_rate_python" style="color: inherit; text-decoration: inherit;">firehose_<wbr>success_<wbr>feedback_<wbr>sample_<wbr>rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Percentage of success to sample
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_http_failure_feedback_role_arn_python">
 <a href="#state_http_failure_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">http_<wbr>failure_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
@@ -2322,6 +2608,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_owner_python">
+<a href="#state_owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS Account ID of the SNS topic owner
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_policy_python">
 <a href="#state_policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
@@ -2364,7 +2659,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Key-value map of resource tags. .If configured with a provider `defaultTags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_all_python">

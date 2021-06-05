@@ -845,7 +845,16 @@ for extracting metric data out of ingested log events.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value to emit when a filter pattern does not match a log event.
+    <dd>{{% md %}}The value to emit when a filter pattern does not match a log event. Conflicts with `dimensions`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_csharp">
+<a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Map of fields to use as dimensions for the metric. Up to 3 dimensions are allowed. Conflicts with `default_value`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -885,7 +894,16 @@ for extracting metric data out of ingested log events.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value to emit when a filter pattern does not match a log event.
+    <dd>{{% md %}}The value to emit when a filter pattern does not match a log event. Conflicts with `dimensions`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_go">
+<a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Map of fields to use as dimensions for the metric. Up to 3 dimensions are allowed. Conflicts with `default_value`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -925,7 +943,16 @@ for extracting metric data out of ingested log events.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value to emit when a filter pattern does not match a log event.
+    <dd>{{% md %}}The value to emit when a filter pattern does not match a log event. Conflicts with `dimensions`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_nodejs">
+<a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Map of fields to use as dimensions for the metric. Up to 3 dimensions are allowed. Conflicts with `default_value`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -965,7 +992,16 @@ for extracting metric data out of ingested log events.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value to emit when a filter pattern does not match a log event.
+    <dd>{{% md %}}The value to emit when a filter pattern does not match a log event. Conflicts with `dimensions`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_python">
+<a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Map of fields to use as dimensions for the metric. Up to 3 dimensions are allowed. Conflicts with `default_value`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

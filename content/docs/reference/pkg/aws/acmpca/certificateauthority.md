@@ -2569,6 +2569,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket that contains the CRL. If you do not provide a value for the `custom_cname` argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket. Must be less than or equal to 255 characters in length.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3objectacl_csharp">
+<a href="#s3objectacl_csharp" style="color: inherit; text-decoration: inherit;">S3Object<wbr>Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the CRL will be publicly readable or privately held in the CRL Amazon S3 bucket. Defaults to `PUBLIC_READ`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2609,6 +2618,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket that contains the CRL. If you do not provide a value for the `custom_cname` argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket. Must be less than or equal to 255 characters in length.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3objectacl_go">
+<a href="#s3objectacl_go" style="color: inherit; text-decoration: inherit;">S3Object<wbr>Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the CRL will be publicly readable or privately held in the CRL Amazon S3 bucket. Defaults to `PUBLIC_READ`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2649,6 +2667,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket that contains the CRL. If you do not provide a value for the `custom_cname` argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket. Must be less than or equal to 255 characters in length.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3objectacl_nodejs">
+<a href="#s3objectacl_nodejs" style="color: inherit; text-decoration: inherit;">s3Object<wbr>Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the CRL will be publicly readable or privately held in the CRL Amazon S3 bucket. Defaults to `PUBLIC_READ`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2689,6 +2716,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket that contains the CRL. If you do not provide a value for the `custom_cname` argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket. Must be less than or equal to 255 characters in length.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3_object_acl_python">
+<a href="#s3_object_acl_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>object_<wbr>acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the CRL will be publicly readable or privately held in the CRL Amazon S3 bucket. Defaults to `PUBLIC_READ`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
