@@ -3502,6 +3502,14 @@ when crash-safe replication flags are enabled.
     <dd>{{% md %}}Configuration to increase storage size automatically.  Note that future `pulumi apply` calls will attempt to resize the disk to the value specified in `disk_size` - if this is set, do not set `disk_size`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="diskautoresizelimit_csharp">
+<a href="#diskautoresizelimit_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Autoresize<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="disksize_csharp">
 <a href="#disksize_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size</a>
 </span>
@@ -3676,6 +3684,14 @@ when crash-safe replication flags are enabled.
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.  Note that future `pulumi apply` calls will attempt to resize the disk to the value specified in `disk_size` - if this is set, do not set `disk_size`.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="diskautoresizelimit_go">
+<a href="#diskautoresizelimit_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Autoresize<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksize_go">
 <a href="#disksize_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size</a>
@@ -3852,6 +3868,14 @@ when crash-safe replication flags are enabled.
     <dd>{{% md %}}Configuration to increase storage size automatically.  Note that future `pulumi apply` calls will attempt to resize the disk to the value specified in `disk_size` - if this is set, do not set `disk_size`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="diskautoresizelimit_nodejs">
+<a href="#diskautoresizelimit_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Autoresize<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="disksize_nodejs">
 <a href="#disksize_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size</a>
 </span>
@@ -4026,6 +4050,14 @@ when crash-safe replication flags are enabled.
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.  Note that future `pulumi apply` calls will attempt to resize the disk to the value specified in `disk_size` - if this is set, do not set `disk_size`.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disk_autoresize_limit_python">
+<a href="#disk_autoresize_limit_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>autoresize_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_size_python">
 <a href="#disk_size_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size</a>

@@ -1999,6 +1999,15 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
     <dd>{{% md %}}Configuration to increase storage size automatically.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="diskautoresizelimit_csharp">
+<a href="#diskautoresizelimit_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Autoresize<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size, in GB, to which storage capacity can be automatically increased.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="disksize_csharp">
 <a href="#disksize_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size</a>
 </span>
@@ -2163,6 +2172,15 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="diskautoresizelimit_go">
+<a href="#diskautoresizelimit_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Autoresize<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size, in GB, to which storage capacity can be automatically increased.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disksize_go">
@@ -2331,6 +2349,15 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
     <dd>{{% md %}}Configuration to increase storage size automatically.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="diskautoresizelimit_nodejs">
+<a href="#diskautoresizelimit_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Autoresize<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum size, in GB, to which storage capacity can be automatically increased.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="disksize_nodejs">
 <a href="#disksize_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size</a>
 </span>
@@ -2495,6 +2522,15 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="disk_autoresize_limit_python">
+<a href="#disk_autoresize_limit_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>autoresize_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size, in GB, to which storage capacity can be automatically increased.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_size_python">
