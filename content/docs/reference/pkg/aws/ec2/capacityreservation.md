@@ -143,6 +143,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
                         <span class="nx">instance_match_criteria</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">instance_platform</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstancePlatform]]</span> = None<span class="p">,</span>
                         <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstanceType]]</span> = None<span class="p">,</span>
+                        <span class="nx">outpost_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                         <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                         <span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[Union[str, Tenancy]]</span> = None<span class="p">)</span>
@@ -356,6 +357,15 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="outpostarn_csharp">
+<a href="#outpostarn_csharp" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost on which to create the Capacity Reservation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -464,6 +474,15 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="outpostarn_go">
+<a href="#outpostarn_go" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost on which to create the Capacity Reservation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -576,6 +595,15 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="outpostarn_nodejs">
+<a href="#outpostarn_nodejs" style="color: inherit; text-decoration: inherit;">outpost<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost on which to create the Capacity Reservation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -684,6 +712,15 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="outpost_arn_python">
+<a href="#outpost_arn_python" style="color: inherit; text-decoration: inherit;">outpost_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost on which to create the Capacity Reservation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -865,6 +902,7 @@ Get an existing CapacityReservation resource's state with the given name, ID, an
         <span class="nx">instance_match_criteria</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">instance_platform</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstancePlatform]]</span> = None<span class="p">,</span>
         <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstanceType]]</span> = None<span class="p">,</span>
+        <span class="nx">outpost_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -1071,6 +1109,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The instance type for which to reserve capacity.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_outpostarn_csharp">
+<a href="#state_outpostarn_csharp" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost on which to create the Capacity Reservation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ownerid_csharp">
 <a href="#state_ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
 </span>
@@ -1197,6 +1244,15 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The instance type for which to reserve capacity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_outpostarn_go">
+<a href="#state_outpostarn_go" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost on which to create the Capacity Reservation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownerid_go">
@@ -1327,6 +1383,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The instance type for which to reserve capacity.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_outpostarn_nodejs">
+<a href="#state_outpostarn_nodejs" style="color: inherit; text-decoration: inherit;">outpost<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost on which to create the Capacity Reservation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ownerid_nodejs">
 <a href="#state_ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
 </span>
@@ -1453,6 +1518,15 @@ The following state arguments are supported:
         <span class="property-type">str | <a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The instance type for which to reserve capacity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_outpost_arn_python">
+<a href="#state_outpost_arn_python" style="color: inherit; text-decoration: inherit;">outpost_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost on which to create the Capacity Reservation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_owner_id_python">

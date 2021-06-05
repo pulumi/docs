@@ -310,6 +310,186 @@ const example = new aws.lambda.EventSourceMapping("example", {
 
 
 
+### Self Managed Apache Kafka
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Lambda.EventSourceMapping("example", new Aws.Lambda.EventSourceMappingArgs
+        {
+            FunctionName = aws_lambda_function.Example.Arn,
+            Topics = 
+            {
+                "Example",
+            },
+            StartingPosition = "TRIM_HORIZON",
+            SelfManagedEventSource = new Aws.Lambda.Inputs.EventSourceMappingSelfManagedEventSourceArgs
+            {
+                Endpoints = 
+                {
+                    { "KAFKA_BOOTSTRAP_SERVERS", "kafka1.example.com:9092,kafka2.example.com:9092" },
+                },
+            },
+            SourceAccessConfigurations = 
+            {
+                new Aws.Lambda.Inputs.EventSourceMappingSourceAccessConfigurationArgs
+                {
+                    Type = "VPC_SUBNET",
+                    Uri = "subnet:subnet-example1",
+                },
+                new Aws.Lambda.Inputs.EventSourceMappingSourceAccessConfigurationArgs
+                {
+                    Type = "VPC_SUBNET",
+                    Uri = "subnet:subnet-example2",
+                },
+                new Aws.Lambda.Inputs.EventSourceMappingSourceAccessConfigurationArgs
+                {
+                    Type = "VPC_SECURITY_GROUP",
+                    Uri = "security_group:sg-example",
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := lambda.NewEventSourceMapping(ctx, "example", &lambda.EventSourceMappingArgs{
+			FunctionName: pulumi.Any(aws_lambda_function.Example.Arn),
+			Topics: pulumi.StringArray{
+				pulumi.String("Example"),
+			},
+			StartingPosition: pulumi.String("TRIM_HORIZON"),
+			SelfManagedEventSource: &lambda.EventSourceMappingSelfManagedEventSourceArgs{
+				Endpoints: pulumi.StringMap{
+					"KAFKA_BOOTSTRAP_SERVERS": pulumi.String("kafka1.example.com:9092,kafka2.example.com:9092"),
+				},
+			},
+			SourceAccessConfigurations: lambda.EventSourceMappingSourceAccessConfigurationArray{
+				&lambda.EventSourceMappingSourceAccessConfigurationArgs{
+					Type: pulumi.String("VPC_SUBNET"),
+					Uri:  pulumi.String("subnet:subnet-example1"),
+				},
+				&lambda.EventSourceMappingSourceAccessConfigurationArgs{
+					Type: pulumi.String("VPC_SUBNET"),
+					Uri:  pulumi.String("subnet:subnet-example2"),
+				},
+				&lambda.EventSourceMappingSourceAccessConfigurationArgs{
+					Type: pulumi.String("VPC_SECURITY_GROUP"),
+					Uri:  pulumi.String("security_group:sg-example"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.lambda_.EventSourceMapping("example",
+    function_name=aws_lambda_function["example"]["arn"],
+    topics=["Example"],
+    starting_position="TRIM_HORIZON",
+    self_managed_event_source=aws.lambda..EventSourceMappingSelfManagedEventSourceArgs(
+        endpoints={
+            "KAFKA_BOOTSTRAP_SERVERS": "kafka1.example.com:9092,kafka2.example.com:9092",
+        },
+    ),
+    source_access_configurations=[
+        aws.lambda..EventSourceMappingSourceAccessConfigurationArgs(
+            type="VPC_SUBNET",
+            uri="subnet:subnet-example1",
+        ),
+        aws.lambda..EventSourceMappingSourceAccessConfigurationArgs(
+            type="VPC_SUBNET",
+            uri="subnet:subnet-example2",
+        ),
+        aws.lambda..EventSourceMappingSourceAccessConfigurationArgs(
+            type="VPC_SECURITY_GROUP",
+            uri="security_group:sg-example",
+        ),
+    ])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.lambda.EventSourceMapping("example", {
+    functionName: aws_lambda_function.example.arn,
+    topics: ["Example"],
+    startingPosition: "TRIM_HORIZON",
+    selfManagedEventSource: {
+        endpoints: {
+            KAFKA_BOOTSTRAP_SERVERS: "kafka1.example.com:9092,kafka2.example.com:9092",
+        },
+    },
+    sourceAccessConfigurations: [
+        {
+            type: "VPC_SUBNET",
+            uri: "subnet:subnet-example1",
+        },
+        {
+            type: "VPC_SUBNET",
+            uri: "subnet:subnet-example2",
+        },
+        {
+            type: "VPC_SECURITY_GROUP",
+            uri: "security_group:sg-example",
+        },
+    ],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 ### SQS
 
 
@@ -525,13 +705,18 @@ const example = new aws.lambda.EventSourceMapping("example", {
                        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                        <span class="nx">event_source_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">function_response_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                        <span class="nx">maximum_batching_window_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                        <span class="nx">maximum_record_age_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                        <span class="nx">maximum_retry_attempts</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                        <span class="nx">parallelization_factor</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                       <span class="nx">queues</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">self_managed_event_source</span><span class="p">:</span> <span class="nx">Optional[_lambda_.EventSourceMappingSelfManagedEventSourceArgs]</span> = None<span class="p">,</span>
+                       <span class="nx">source_access_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[_lambda_.EventSourceMappingSourceAccessConfigurationArgs]]</span> = None<span class="p">,</span>
                        <span class="nx">starting_position</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">starting_position_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+                       <span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">tumbling_window_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">EventSourceMapping</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventSourceMappingArgs</a></span><span class="p">,</span>
@@ -661,15 +846,6 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="eventsourcearn_csharp">
-<a href="#eventsourcearn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Source<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The event source ARN - can be a Kinesis stream, DynamoDB stream, SQS queue or MSK cluster.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="functionname_csharp">
 <a href="#functionname_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
 </span>
@@ -685,7 +861,9 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis and MSK, `10` for SQS.
+    <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis, MQ and MSK, `10` for SQS.
+* `bisect_batch_on_function_error`: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to `false`.
+* `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bisectbatchonfunctionerror_csharp">
@@ -713,6 +891,24 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Determines if the mapping will be enabled on creation. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="eventsourcearn_csharp">
+<a href="#eventsourcearn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Source<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The event source ARN - this is required for Kinesis stream, DynamoDB stream, SQS queue, MQ broker or MSK cluster.  It is incompatible with a Self Managed Kafka source.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="functionresponsetypes_csharp">
+<a href="#functionresponsetypes_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Response<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of current response type enums applied to the event source mapping for [AWS Lambda checkpointing](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html#services-ddb-batchfailurereporting). Only available for stream sources (DynamoDB and Kinesis). Valid values: `ReportBatchItemFailures`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maximumbatchingwindowinseconds_csharp">
 <a href="#maximumbatchingwindowinseconds_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Batching<wbr>Window<wbr>In<wbr>Seconds</a>
 </span>
@@ -720,6 +916,9 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.
+* `maximum_record_age_in_seconds`: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).
+* `maximum_retry_attempts`: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.
+* `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumrecordageinseconds_csharp">
@@ -746,6 +945,33 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="queues_csharp">
+<a href="#queues_csharp" style="color: inherit; text-decoration: inherit;">Queues</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. A single queue name must be specified.
+* `self_managed_event_source`: - (Optional) For Self Managed Kafka sources, the location of the self managed cluster. If set, configuration must also include `source_access_configuration`. Detailed below.
+* `source_access_configuration`: (Optional) For Self Managed Kafka sources, the access configuration for the source. If set, configuration must also include `self_managed_event_source`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="selfmanagedeventsource_csharp">
+<a href="#selfmanagedeventsource_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Managed<wbr>Event<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsourcemappingselfmanagedeventsource">Event<wbr>Source<wbr>Mapping<wbr>Self<wbr>Managed<wbr>Event<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceaccessconfigurations_csharp">
+<a href="#sourceaccessconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Access<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsourcemappingsourceaccessconfiguration">List&lt;Event<wbr>Source<wbr>Mapping<wbr>Source<wbr>Access<wbr>Configuration<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="startingposition_csharp">
 <a href="#startingposition_csharp" style="color: inherit; text-decoration: inherit;">Starting<wbr>Position</a>
 </span>
@@ -762,10 +988,6 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of the data record which to start reading when using `starting_position` set to `AT_TIMESTAMP`. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
-* `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
-* `maximum_retry_attempts`: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.
-* `maximum_record_age_in_seconds`: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).
-* `bisect_batch_on_function_error`: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_csharp">
@@ -775,21 +997,20 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.
-* `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tumblingwindowinseconds_csharp">
+<a href="#tumblingwindowinseconds_csharp" style="color: inherit; text-decoration: inherit;">Tumbling<wbr>Window<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The duration in seconds of a processing window for [AWS Lambda streaming analytics](https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html#services-kinesis-windows). The range is between 1 second up to 900 seconds. Only available for stream sources (DynamoDB and Kinesis).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="eventsourcearn_go">
-<a href="#eventsourcearn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Source<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The event source ARN - can be a Kinesis stream, DynamoDB stream, SQS queue or MSK cluster.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="functionname_go">
 <a href="#functionname_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
@@ -806,7 +1027,9 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis and MSK, `10` for SQS.
+    <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis, MQ and MSK, `10` for SQS.
+* `bisect_batch_on_function_error`: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to `false`.
+* `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bisectbatchonfunctionerror_go">
@@ -834,6 +1057,24 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Determines if the mapping will be enabled on creation. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="eventsourcearn_go">
+<a href="#eventsourcearn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Source<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The event source ARN - this is required for Kinesis stream, DynamoDB stream, SQS queue, MQ broker or MSK cluster.  It is incompatible with a Self Managed Kafka source.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="functionresponsetypes_go">
+<a href="#functionresponsetypes_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Response<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of current response type enums applied to the event source mapping for [AWS Lambda checkpointing](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html#services-ddb-batchfailurereporting). Only available for stream sources (DynamoDB and Kinesis). Valid values: `ReportBatchItemFailures`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maximumbatchingwindowinseconds_go">
 <a href="#maximumbatchingwindowinseconds_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Batching<wbr>Window<wbr>In<wbr>Seconds</a>
 </span>
@@ -841,6 +1082,9 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.
+* `maximum_record_age_in_seconds`: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).
+* `maximum_retry_attempts`: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.
+* `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumrecordageinseconds_go">
@@ -867,6 +1111,33 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="queues_go">
+<a href="#queues_go" style="color: inherit; text-decoration: inherit;">Queues</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. A single queue name must be specified.
+* `self_managed_event_source`: - (Optional) For Self Managed Kafka sources, the location of the self managed cluster. If set, configuration must also include `source_access_configuration`. Detailed below.
+* `source_access_configuration`: (Optional) For Self Managed Kafka sources, the access configuration for the source. If set, configuration must also include `self_managed_event_source`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="selfmanagedeventsource_go">
+<a href="#selfmanagedeventsource_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Managed<wbr>Event<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsourcemappingselfmanagedeventsource">Event<wbr>Source<wbr>Mapping<wbr>Self<wbr>Managed<wbr>Event<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceaccessconfigurations_go">
+<a href="#sourceaccessconfigurations_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Access<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsourcemappingsourceaccessconfiguration">[]Event<wbr>Source<wbr>Mapping<wbr>Source<wbr>Access<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="startingposition_go">
 <a href="#startingposition_go" style="color: inherit; text-decoration: inherit;">Starting<wbr>Position</a>
 </span>
@@ -883,10 +1154,6 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of the data record which to start reading when using `starting_position` set to `AT_TIMESTAMP`. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
-* `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
-* `maximum_retry_attempts`: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.
-* `maximum_record_age_in_seconds`: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).
-* `bisect_batch_on_function_error`: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_go">
@@ -896,21 +1163,20 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.
-* `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tumblingwindowinseconds_go">
+<a href="#tumblingwindowinseconds_go" style="color: inherit; text-decoration: inherit;">Tumbling<wbr>Window<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The duration in seconds of a processing window for [AWS Lambda streaming analytics](https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html#services-kinesis-windows). The range is between 1 second up to 900 seconds. Only available for stream sources (DynamoDB and Kinesis).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="eventsourcearn_nodejs">
-<a href="#eventsourcearn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Source<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The event source ARN - can be a Kinesis stream, DynamoDB stream, SQS queue or MSK cluster.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="functionname_nodejs">
 <a href="#functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
@@ -927,7 +1193,9 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis and MSK, `10` for SQS.
+    <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis, MQ and MSK, `10` for SQS.
+* `bisect_batch_on_function_error`: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to `false`.
+* `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bisectbatchonfunctionerror_nodejs">
@@ -955,6 +1223,24 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Determines if the mapping will be enabled on creation. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="eventsourcearn_nodejs">
+<a href="#eventsourcearn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Source<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The event source ARN - this is required for Kinesis stream, DynamoDB stream, SQS queue, MQ broker or MSK cluster.  It is incompatible with a Self Managed Kafka source.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="functionresponsetypes_nodejs">
+<a href="#functionresponsetypes_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Response<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of current response type enums applied to the event source mapping for [AWS Lambda checkpointing](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html#services-ddb-batchfailurereporting). Only available for stream sources (DynamoDB and Kinesis). Valid values: `ReportBatchItemFailures`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maximumbatchingwindowinseconds_nodejs">
 <a href="#maximumbatchingwindowinseconds_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Batching<wbr>Window<wbr>In<wbr>Seconds</a>
 </span>
@@ -962,6 +1248,9 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.
+* `maximum_record_age_in_seconds`: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).
+* `maximum_retry_attempts`: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.
+* `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumrecordageinseconds_nodejs">
@@ -988,6 +1277,33 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="queues_nodejs">
+<a href="#queues_nodejs" style="color: inherit; text-decoration: inherit;">queues</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. A single queue name must be specified.
+* `self_managed_event_source`: - (Optional) For Self Managed Kafka sources, the location of the self managed cluster. If set, configuration must also include `source_access_configuration`. Detailed below.
+* `source_access_configuration`: (Optional) For Self Managed Kafka sources, the access configuration for the source. If set, configuration must also include `self_managed_event_source`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="selfmanagedeventsource_nodejs">
+<a href="#selfmanagedeventsource_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Managed<wbr>Event<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsourcemappingselfmanagedeventsource">Event<wbr>Source<wbr>Mapping<wbr>Self<wbr>Managed<wbr>Event<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceaccessconfigurations_nodejs">
+<a href="#sourceaccessconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Access<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsourcemappingsourceaccessconfiguration">Event<wbr>Source<wbr>Mapping<wbr>Source<wbr>Access<wbr>Configuration<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="startingposition_nodejs">
 <a href="#startingposition_nodejs" style="color: inherit; text-decoration: inherit;">starting<wbr>Position</a>
 </span>
@@ -1004,10 +1320,6 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of the data record which to start reading when using `starting_position` set to `AT_TIMESTAMP`. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
-* `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
-* `maximum_retry_attempts`: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.
-* `maximum_record_age_in_seconds`: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).
-* `bisect_batch_on_function_error`: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_nodejs">
@@ -1017,21 +1329,20 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.
-* `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tumblingwindowinseconds_nodejs">
+<a href="#tumblingwindowinseconds_nodejs" style="color: inherit; text-decoration: inherit;">tumbling<wbr>Window<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The duration in seconds of a processing window for [AWS Lambda streaming analytics](https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html#services-kinesis-windows). The range is between 1 second up to 900 seconds. Only available for stream sources (DynamoDB and Kinesis).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="event_source_arn_python">
-<a href="#event_source_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>source_<wbr>arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The event source ARN - can be a Kinesis stream, DynamoDB stream, SQS queue or MSK cluster.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="function_name_python">
 <a href="#function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
@@ -1048,7 +1359,9 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis and MSK, `10` for SQS.
+    <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis, MQ and MSK, `10` for SQS.
+* `bisect_batch_on_function_error`: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to `false`.
+* `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bisect_batch_on_function_error_python">
@@ -1076,6 +1389,24 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Determines if the mapping will be enabled on creation. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="event_source_arn_python">
+<a href="#event_source_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>source_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The event source ARN - this is required for Kinesis stream, DynamoDB stream, SQS queue, MQ broker or MSK cluster.  It is incompatible with a Self Managed Kafka source.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="function_response_types_python">
+<a href="#function_response_types_python" style="color: inherit; text-decoration: inherit;">function_<wbr>response_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of current response type enums applied to the event source mapping for [AWS Lambda checkpointing](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html#services-ddb-batchfailurereporting). Only available for stream sources (DynamoDB and Kinesis). Valid values: `ReportBatchItemFailures`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maximum_batching_window_in_seconds_python">
 <a href="#maximum_batching_window_in_seconds_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>batching_<wbr>window_<wbr>in_<wbr>seconds</a>
 </span>
@@ -1083,6 +1414,9 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.
+* `maximum_record_age_in_seconds`: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).
+* `maximum_retry_attempts`: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.
+* `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_record_age_in_seconds_python">
@@ -1109,6 +1443,33 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="queues_python">
+<a href="#queues_python" style="color: inherit; text-decoration: inherit;">queues</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. A single queue name must be specified.
+* `self_managed_event_source`: - (Optional) For Self Managed Kafka sources, the location of the self managed cluster. If set, configuration must also include `source_access_configuration`. Detailed below.
+* `source_access_configuration`: (Optional) For Self Managed Kafka sources, the access configuration for the source. If set, configuration must also include `self_managed_event_source`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="self_managed_event_source_python">
+<a href="#self_managed_event_source_python" style="color: inherit; text-decoration: inherit;">self_<wbr>managed_<wbr>event_<wbr>source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsourcemappingselfmanagedeventsource">Event<wbr>Source<wbr>Mapping<wbr>Self<wbr>Managed<wbr>Event<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="source_access_configurations_python">
+<a href="#source_access_configurations_python" style="color: inherit; text-decoration: inherit;">source_<wbr>access_<wbr>configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsourcemappingsourceaccessconfiguration">Event<wbr>Source<wbr>Mapping<wbr>Source<wbr>Access<wbr>Configuration<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="starting_position_python">
 <a href="#starting_position_python" style="color: inherit; text-decoration: inherit;">starting_<wbr>position</a>
 </span>
@@ -1125,10 +1486,6 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of the data record which to start reading when using `starting_position` set to `AT_TIMESTAMP`. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
-* `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
-* `maximum_retry_attempts`: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.
-* `maximum_record_age_in_seconds`: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).
-* `bisect_batch_on_function_error`: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_python">
@@ -1138,7 +1495,15 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.
-* `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tumbling_window_in_seconds_python">
+<a href="#tumbling_window_in_seconds_python" style="color: inherit; text-decoration: inherit;">tumbling_<wbr>window_<wbr>in_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The duration in seconds of a processing window for [AWS Lambda streaming analytics](https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html#services-kinesis-windows). The range is between 1 second up to 900 seconds. Only available for stream sources (DynamoDB and Kinesis).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1436,17 +1801,22 @@ Get an existing EventSourceMapping resource's state with the given name, ID, and
         <span class="nx">event_source_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">function_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">function_response_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">last_modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">last_processing_result</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">maximum_batching_window_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">maximum_record_age_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">maximum_retry_attempts</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">parallelization_factor</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">queues</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">self_managed_event_source</span><span class="p">:</span> <span class="nx">Optional[_lambda_.EventSourceMappingSelfManagedEventSourceArgs]</span> = None<span class="p">,</span>
+        <span class="nx">source_access_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[_lambda_.EventSourceMappingSourceAccessConfigurationArgs]]</span> = None<span class="p">,</span>
         <span class="nx">starting_position</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">starting_position_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">state_transition_reason</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tumbling_window_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EventSourceMapping</code></pre></div>
 {{% /choosable %}}
 
@@ -1566,7 +1936,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis and MSK, `10` for SQS.
+    <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis, MQ and MSK, `10` for SQS.
+* `bisect_batch_on_function_error`: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to `false`.
+* `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bisectbatchonfunctionerror_csharp">
@@ -1600,7 +1972,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event source ARN - can be a Kinesis stream, DynamoDB stream, SQS queue or MSK cluster.
+    <dd>{{% md %}}The event source ARN - this is required for Kinesis stream, DynamoDB stream, SQS queue, MQ broker or MSK cluster.  It is incompatible with a Self Managed Kafka source.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_functionarn_csharp">
@@ -1619,6 +1991,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or the ARN of the Lambda function that will be subscribing to events.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_functionresponsetypes_csharp">
+<a href="#state_functionresponsetypes_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Response<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of current response type enums applied to the event source mapping for [AWS Lambda checkpointing](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html#services-ddb-batchfailurereporting). Only available for stream sources (DynamoDB and Kinesis). Valid values: `ReportBatchItemFailures`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodified_csharp">
@@ -1646,6 +2027,9 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.
+* `maximum_record_age_in_seconds`: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).
+* `maximum_retry_attempts`: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.
+* `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximumrecordageinseconds_csharp">
@@ -1672,6 +2056,33 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_queues_csharp">
+<a href="#state_queues_csharp" style="color: inherit; text-decoration: inherit;">Queues</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. A single queue name must be specified.
+* `self_managed_event_source`: - (Optional) For Self Managed Kafka sources, the location of the self managed cluster. If set, configuration must also include `source_access_configuration`. Detailed below.
+* `source_access_configuration`: (Optional) For Self Managed Kafka sources, the access configuration for the source. If set, configuration must also include `self_managed_event_source`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_selfmanagedeventsource_csharp">
+<a href="#state_selfmanagedeventsource_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Managed<wbr>Event<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsourcemappingselfmanagedeventsource">Event<wbr>Source<wbr>Mapping<wbr>Self<wbr>Managed<wbr>Event<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sourceaccessconfigurations_csharp">
+<a href="#state_sourceaccessconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Access<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsourcemappingsourceaccessconfiguration">List&lt;Event<wbr>Source<wbr>Mapping<wbr>Source<wbr>Access<wbr>Configuration<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_startingposition_csharp">
 <a href="#state_startingposition_csharp" style="color: inherit; text-decoration: inherit;">Starting<wbr>Position</a>
 </span>
@@ -1688,10 +2099,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of the data record which to start reading when using `starting_position` set to `AT_TIMESTAMP`. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
-* `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
-* `maximum_retry_attempts`: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.
-* `maximum_record_age_in_seconds`: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).
-* `bisect_batch_on_function_error`: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
@@ -1719,7 +2126,15 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.
-* `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tumblingwindowinseconds_csharp">
+<a href="#state_tumblingwindowinseconds_csharp" style="color: inherit; text-decoration: inherit;">Tumbling<wbr>Window<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The duration in seconds of a processing window for [AWS Lambda streaming analytics](https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html#services-kinesis-windows). The range is between 1 second up to 900 seconds. Only available for stream sources (DynamoDB and Kinesis).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uuid_csharp">
@@ -1741,7 +2156,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis and MSK, `10` for SQS.
+    <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis, MQ and MSK, `10` for SQS.
+* `bisect_batch_on_function_error`: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to `false`.
+* `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bisectbatchonfunctionerror_go">
@@ -1775,7 +2192,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event source ARN - can be a Kinesis stream, DynamoDB stream, SQS queue or MSK cluster.
+    <dd>{{% md %}}The event source ARN - this is required for Kinesis stream, DynamoDB stream, SQS queue, MQ broker or MSK cluster.  It is incompatible with a Self Managed Kafka source.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_functionarn_go">
@@ -1794,6 +2211,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or the ARN of the Lambda function that will be subscribing to events.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_functionresponsetypes_go">
+<a href="#state_functionresponsetypes_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Response<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of current response type enums applied to the event source mapping for [AWS Lambda checkpointing](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html#services-ddb-batchfailurereporting). Only available for stream sources (DynamoDB and Kinesis). Valid values: `ReportBatchItemFailures`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodified_go">
@@ -1821,6 +2247,9 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.
+* `maximum_record_age_in_seconds`: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).
+* `maximum_retry_attempts`: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.
+* `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximumrecordageinseconds_go">
@@ -1847,6 +2276,33 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_queues_go">
+<a href="#state_queues_go" style="color: inherit; text-decoration: inherit;">Queues</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. A single queue name must be specified.
+* `self_managed_event_source`: - (Optional) For Self Managed Kafka sources, the location of the self managed cluster. If set, configuration must also include `source_access_configuration`. Detailed below.
+* `source_access_configuration`: (Optional) For Self Managed Kafka sources, the access configuration for the source. If set, configuration must also include `self_managed_event_source`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_selfmanagedeventsource_go">
+<a href="#state_selfmanagedeventsource_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Managed<wbr>Event<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsourcemappingselfmanagedeventsource">Event<wbr>Source<wbr>Mapping<wbr>Self<wbr>Managed<wbr>Event<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sourceaccessconfigurations_go">
+<a href="#state_sourceaccessconfigurations_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Access<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsourcemappingsourceaccessconfiguration">[]Event<wbr>Source<wbr>Mapping<wbr>Source<wbr>Access<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_startingposition_go">
 <a href="#state_startingposition_go" style="color: inherit; text-decoration: inherit;">Starting<wbr>Position</a>
 </span>
@@ -1863,10 +2319,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of the data record which to start reading when using `starting_position` set to `AT_TIMESTAMP`. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
-* `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
-* `maximum_retry_attempts`: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.
-* `maximum_record_age_in_seconds`: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).
-* `bisect_batch_on_function_error`: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
@@ -1894,7 +2346,15 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.
-* `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tumblingwindowinseconds_go">
+<a href="#state_tumblingwindowinseconds_go" style="color: inherit; text-decoration: inherit;">Tumbling<wbr>Window<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The duration in seconds of a processing window for [AWS Lambda streaming analytics](https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html#services-kinesis-windows). The range is between 1 second up to 900 seconds. Only available for stream sources (DynamoDB and Kinesis).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uuid_go">
@@ -1916,7 +2376,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis and MSK, `10` for SQS.
+    <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis, MQ and MSK, `10` for SQS.
+* `bisect_batch_on_function_error`: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to `false`.
+* `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bisectbatchonfunctionerror_nodejs">
@@ -1950,7 +2412,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event source ARN - can be a Kinesis stream, DynamoDB stream, SQS queue or MSK cluster.
+    <dd>{{% md %}}The event source ARN - this is required for Kinesis stream, DynamoDB stream, SQS queue, MQ broker or MSK cluster.  It is incompatible with a Self Managed Kafka source.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_functionarn_nodejs">
@@ -1969,6 +2431,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or the ARN of the Lambda function that will be subscribing to events.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_functionresponsetypes_nodejs">
+<a href="#state_functionresponsetypes_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Response<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of current response type enums applied to the event source mapping for [AWS Lambda checkpointing](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html#services-ddb-batchfailurereporting). Only available for stream sources (DynamoDB and Kinesis). Valid values: `ReportBatchItemFailures`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodified_nodejs">
@@ -1996,6 +2467,9 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.
+* `maximum_record_age_in_seconds`: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).
+* `maximum_retry_attempts`: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.
+* `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximumrecordageinseconds_nodejs">
@@ -2022,6 +2496,33 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_queues_nodejs">
+<a href="#state_queues_nodejs" style="color: inherit; text-decoration: inherit;">queues</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. A single queue name must be specified.
+* `self_managed_event_source`: - (Optional) For Self Managed Kafka sources, the location of the self managed cluster. If set, configuration must also include `source_access_configuration`. Detailed below.
+* `source_access_configuration`: (Optional) For Self Managed Kafka sources, the access configuration for the source. If set, configuration must also include `self_managed_event_source`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_selfmanagedeventsource_nodejs">
+<a href="#state_selfmanagedeventsource_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Managed<wbr>Event<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsourcemappingselfmanagedeventsource">Event<wbr>Source<wbr>Mapping<wbr>Self<wbr>Managed<wbr>Event<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sourceaccessconfigurations_nodejs">
+<a href="#state_sourceaccessconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Access<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsourcemappingsourceaccessconfiguration">Event<wbr>Source<wbr>Mapping<wbr>Source<wbr>Access<wbr>Configuration<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_startingposition_nodejs">
 <a href="#state_startingposition_nodejs" style="color: inherit; text-decoration: inherit;">starting<wbr>Position</a>
 </span>
@@ -2038,10 +2539,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of the data record which to start reading when using `starting_position` set to `AT_TIMESTAMP`. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
-* `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
-* `maximum_retry_attempts`: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.
-* `maximum_record_age_in_seconds`: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).
-* `bisect_batch_on_function_error`: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
@@ -2069,7 +2566,15 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.
-* `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tumblingwindowinseconds_nodejs">
+<a href="#state_tumblingwindowinseconds_nodejs" style="color: inherit; text-decoration: inherit;">tumbling<wbr>Window<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The duration in seconds of a processing window for [AWS Lambda streaming analytics](https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html#services-kinesis-windows). The range is between 1 second up to 900 seconds. Only available for stream sources (DynamoDB and Kinesis).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uuid_nodejs">
@@ -2091,7 +2596,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis and MSK, `10` for SQS.
+    <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis, MQ and MSK, `10` for SQS.
+* `bisect_batch_on_function_error`: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to `false`.
+* `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bisect_batch_on_function_error_python">
@@ -2125,7 +2632,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The event source ARN - can be a Kinesis stream, DynamoDB stream, SQS queue or MSK cluster.
+    <dd>{{% md %}}The event source ARN - this is required for Kinesis stream, DynamoDB stream, SQS queue, MQ broker or MSK cluster.  It is incompatible with a Self Managed Kafka source.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_function_arn_python">
@@ -2144,6 +2651,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or the ARN of the Lambda function that will be subscribing to events.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_function_response_types_python">
+<a href="#state_function_response_types_python" style="color: inherit; text-decoration: inherit;">function_<wbr>response_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of current response type enums applied to the event source mapping for [AWS Lambda checkpointing](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html#services-ddb-batchfailurereporting). Only available for stream sources (DynamoDB and Kinesis). Valid values: `ReportBatchItemFailures`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_modified_python">
@@ -2171,6 +2687,9 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.
+* `maximum_record_age_in_seconds`: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).
+* `maximum_retry_attempts`: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.
+* `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximum_record_age_in_seconds_python">
@@ -2197,6 +2716,33 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_queues_python">
+<a href="#state_queues_python" style="color: inherit; text-decoration: inherit;">queues</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. A single queue name must be specified.
+* `self_managed_event_source`: - (Optional) For Self Managed Kafka sources, the location of the self managed cluster. If set, configuration must also include `source_access_configuration`. Detailed below.
+* `source_access_configuration`: (Optional) For Self Managed Kafka sources, the access configuration for the source. If set, configuration must also include `self_managed_event_source`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_self_managed_event_source_python">
+<a href="#state_self_managed_event_source_python" style="color: inherit; text-decoration: inherit;">self_<wbr>managed_<wbr>event_<wbr>source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsourcemappingselfmanagedeventsource">Event<wbr>Source<wbr>Mapping<wbr>Self<wbr>Managed<wbr>Event<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_source_access_configurations_python">
+<a href="#state_source_access_configurations_python" style="color: inherit; text-decoration: inherit;">source_<wbr>access_<wbr>configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsourcemappingsourceaccessconfiguration">Event<wbr>Source<wbr>Mapping<wbr>Source<wbr>Access<wbr>Configuration<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_starting_position_python">
 <a href="#state_starting_position_python" style="color: inherit; text-decoration: inherit;">starting_<wbr>position</a>
 </span>
@@ -2213,10 +2759,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of the data record which to start reading when using `starting_position` set to `AT_TIMESTAMP`. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
-* `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
-* `maximum_retry_attempts`: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.
-* `maximum_record_age_in_seconds`: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).
-* `bisect_batch_on_function_error`: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
@@ -2244,7 +2786,15 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.
-* `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tumbling_window_in_seconds_python">
+<a href="#state_tumbling_window_in_seconds_python" style="color: inherit; text-decoration: inherit;">tumbling_<wbr>window_<wbr>in_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The duration in seconds of a processing window for [AWS Lambda streaming analytics](https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html#services-kinesis-windows). The range is between 1 second up to 900 seconds. Only available for stream sources (DynamoDB and Kinesis).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uuid_python">
@@ -2371,6 +2921,150 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the destination resource.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="eventsourcemappingselfmanagedeventsource">Event<wbr>Source<wbr>Mapping<wbr>Self<wbr>Managed<wbr>Event<wbr>Source</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="endpoints_csharp">
+<a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of endpoints for the self managed source.  For Kafka self-managed sources, the key should be `KAFKA_BOOTSTRAP_SERVERS` and the value should be a string with a comma separated list of broker endpoints.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="endpoints_go">
+<a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of endpoints for the self managed source.  For Kafka self-managed sources, the key should be `KAFKA_BOOTSTRAP_SERVERS` and the value should be a string with a comma separated list of broker endpoints.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="endpoints_nodejs">
+<a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of endpoints for the self managed source.  For Kafka self-managed sources, the key should be `KAFKA_BOOTSTRAP_SERVERS` and the value should be a string with a comma separated list of broker endpoints.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="endpoints_python">
+<a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of endpoints for the self managed source.  For Kafka self-managed sources, the key should be `KAFKA_BOOTSTRAP_SERVERS` and the value should be a string with a comma separated list of broker endpoints.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="eventsourcemappingsourceaccessconfiguration">Event<wbr>Source<wbr>Mapping<wbr>Source<wbr>Access<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of this configuration.  For Self Managed Kafka you will need to supply blocks for type `VPC_SUBNET` and `VPC_SECURITY_GROUP`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_csharp">
+<a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI for this configuration.  For type `VPC_SUBNET` the value should be `subnet:subnet_id` where `subnet_id` is the value you would find in an aws.ec2.Subnet resource's id attribute.  For type `VPC_SECURITY_GROUP` the value should be `security_group:security_group_id` where `security_group_id` is the value you would find in an aws.ec2.SecurityGroup resource's id attribute.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of this configuration.  For Self Managed Kafka you will need to supply blocks for type `VPC_SUBNET` and `VPC_SECURITY_GROUP`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_go">
+<a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI for this configuration.  For type `VPC_SUBNET` the value should be `subnet:subnet_id` where `subnet_id` is the value you would find in an aws.ec2.Subnet resource's id attribute.  For type `VPC_SECURITY_GROUP` the value should be `security_group:security_group_id` where `security_group_id` is the value you would find in an aws.ec2.SecurityGroup resource's id attribute.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of this configuration.  For Self Managed Kafka you will need to supply blocks for type `VPC_SUBNET` and `VPC_SECURITY_GROUP`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_nodejs">
+<a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI for this configuration.  For type `VPC_SUBNET` the value should be `subnet:subnet_id` where `subnet_id` is the value you would find in an aws.ec2.Subnet resource's id attribute.  For type `VPC_SECURITY_GROUP` the value should be `security_group:security_group_id` where `security_group_id` is the value you would find in an aws.ec2.SecurityGroup resource's id attribute.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of this configuration.  For Self Managed Kafka you will need to supply blocks for type `VPC_SUBNET` and `VPC_SECURITY_GROUP`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_python">
+<a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URI for this configuration.  For type `VPC_SUBNET` the value should be `subnet:subnet_id` where `subnet_id` is the value you would find in an aws.ec2.Subnet resource's id attribute.  For type `VPC_SECURITY_GROUP` the value should be `security_group:security_group_id` where `security_group_id` is the value you would find in an aws.ec2.SecurityGroup resource's id attribute.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

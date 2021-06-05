@@ -13,8 +13,10 @@ Explore the resources and functions of the aws.cloudwatch module.
 <ul class="api">
     <li><a href="compositealarm" title="CompositeAlarm"><span class="symbol resource"></span>CompositeAlarm</a></li>
     <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
+    <li><a href="eventapidestination" title="EventApiDestination"><span class="symbol resource"></span>EventApiDestination</a></li>
     <li><a href="eventarchive" title="EventArchive"><span class="symbol resource"></span>EventArchive</a></li>
     <li><a href="eventbus" title="EventBus"><span class="symbol resource"></span>EventBus</a></li>
+    <li><a href="eventconnection" title="EventConnection"><span class="symbol resource"></span>EventConnection</a></li>
     <li><a href="eventpermission" title="EventPermission"><span class="symbol resource"></span>EventPermission</a></li>
     <li><a href="eventrule" title="EventRule"><span class="symbol resource"></span>EventRule</a></li>
     <li><a href="eventtarget" title="EventTarget"><span class="symbol resource"></span>EventTarget</a></li>
@@ -32,6 +34,7 @@ Explore the resources and functions of the aws.cloudwatch module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="geteventconnection" title="GetEventConnection"><span class="symbol function"></span>GetEventConnection</a></li>
     <li><a href="geteventsource" title="GetEventSource"><span class="symbol function"></span>GetEventSource</a></li>
     <li><a href="getloggroup" title="GetLogGroup"><span class="symbol function"></span>GetLogGroup</a></li>
 </ul>
@@ -45,6 +48,6 @@ Explore the resources and functions of the aws.cloudwatch module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.6.0</dd>
+	<dd>4.7.0</dd>
 </dl>
 

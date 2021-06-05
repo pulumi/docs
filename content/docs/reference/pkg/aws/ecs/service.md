@@ -764,7 +764,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
+    <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2`, `FARGATE`, and `EXTERNAL`. Defaults to `EC2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_csharp">
@@ -1001,7 +1001,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
+    <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2`, `FARGATE`, and `EXTERNAL`. Defaults to `EC2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_go">
@@ -1238,7 +1238,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
+    <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2`, `FARGATE`, and `EXTERNAL`. Defaults to `EC2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_nodejs">
@@ -1475,7 +1475,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
+    <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2`, `FARGATE`, and `EXTERNAL`. Defaults to `EC2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_balancers_python">
@@ -1918,7 +1918,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
+    <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2`, `FARGATE`, and `EXTERNAL`. Defaults to `EC2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_csharp">
@@ -2155,7 +2155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
+    <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2`, `FARGATE`, and `EXTERNAL`. Defaults to `EC2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_go">
@@ -2392,7 +2392,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
+    <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2`, `FARGATE`, and `EXTERNAL`. Defaults to `EC2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_nodejs">
@@ -2629,7 +2629,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
+    <dd>{{% md %}}Launch type on which to run your service. The valid values are `EC2`, `FARGATE`, and `EXTERNAL`. Defaults to `EC2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancers_python">

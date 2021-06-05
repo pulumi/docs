@@ -646,7 +646,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A friendly name of the rule group.
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
@@ -722,7 +722,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A friendly name of the rule group.
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_go">
@@ -798,7 +798,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A friendly name of the rule group.
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
@@ -874,7 +874,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A friendly name of the rule group.
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_python">
@@ -1207,7 +1207,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A friendly name of the rule group.
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_csharp">
@@ -1300,7 +1300,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A friendly name of the rule group.
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_go">
@@ -1393,7 +1393,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A friendly name of the rule group.
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_nodejs">
@@ -1486,7 +1486,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A friendly name of the rule group.
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_python">
@@ -1753,7 +1753,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegroupruleactionallow">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Instructs AWS WAF to allow the web request.
+    <dd>{{% md %}}Instructs AWS WAF to allow the web request. See Allow below for details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="block_csharp">
@@ -1762,7 +1762,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegroupruleactionblock">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Instructs AWS WAF to block the web request.
+    <dd>{{% md %}}Instructs AWS WAF to block the web request. See Block below for details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_csharp">
@@ -1771,7 +1771,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegroupruleactioncount">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Instructs AWS WAF to count the web request and allow it.
+    <dd>{{% md %}}Instructs AWS WAF to count the web request and allow it. See Count below for details.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1784,7 +1784,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegroupruleactionallow">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow</a></span>
     </dt>
-    <dd>{{% md %}}Instructs AWS WAF to allow the web request.
+    <dd>{{% md %}}Instructs AWS WAF to allow the web request. See Allow below for details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="block_go">
@@ -1793,7 +1793,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegroupruleactionblock">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block</a></span>
     </dt>
-    <dd>{{% md %}}Instructs AWS WAF to block the web request.
+    <dd>{{% md %}}Instructs AWS WAF to block the web request. See Block below for details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_go">
@@ -1802,7 +1802,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegroupruleactioncount">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count</a></span>
     </dt>
-    <dd>{{% md %}}Instructs AWS WAF to count the web request and allow it.
+    <dd>{{% md %}}Instructs AWS WAF to count the web request and allow it. See Count below for details.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1815,7 +1815,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegroupruleactionallow">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Instructs AWS WAF to allow the web request.
+    <dd>{{% md %}}Instructs AWS WAF to allow the web request. See Allow below for details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="block_nodejs">
@@ -1824,7 +1824,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegroupruleactionblock">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Instructs AWS WAF to block the web request.
+    <dd>{{% md %}}Instructs AWS WAF to block the web request. See Block below for details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_nodejs">
@@ -1833,7 +1833,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegroupruleactioncount">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Instructs AWS WAF to count the web request and allow it.
+    <dd>{{% md %}}Instructs AWS WAF to count the web request and allow it. See Count below for details.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1846,7 +1846,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegroupruleactionallow">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Instructs AWS WAF to allow the web request.
+    <dd>{{% md %}}Instructs AWS WAF to allow the web request. See Allow below for details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="block_python">
@@ -1855,7 +1855,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegroupruleactionblock">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Instructs AWS WAF to block the web request.
+    <dd>{{% md %}}Instructs AWS WAF to block the web request. See Block below for details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_python">
@@ -1864,7 +1864,637 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegroupruleactioncount">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Instructs AWS WAF to count the web request and allow it.
+    <dd>{{% md %}}Instructs AWS WAF to count the web request and allow it. See Count below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rulegroupruleactionallow">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customrequesthandling_csharp">
+<a href="#customrequesthandling_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Request<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactionallowcustomrequesthandling">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow<wbr>Custom<wbr>Request<wbr>Handling<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines custom handling for the web request. See Custom Request Handling below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customrequesthandling_go">
+<a href="#customrequesthandling_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Request<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactionallowcustomrequesthandling">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow<wbr>Custom<wbr>Request<wbr>Handling</a></span>
+    </dt>
+    <dd>{{% md %}}Defines custom handling for the web request. See Custom Request Handling below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customrequesthandling_nodejs">
+<a href="#customrequesthandling_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Request<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactionallowcustomrequesthandling">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow<wbr>Custom<wbr>Request<wbr>Handling<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines custom handling for the web request. See Custom Request Handling below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="custom_request_handling_python">
+<a href="#custom_request_handling_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>request_<wbr>handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactionallowcustomrequesthandling">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow<wbr>Custom<wbr>Request<wbr>Handling<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines custom handling for the web request. See Custom Request Handling below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rulegroupruleactionallowcustomrequesthandling">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow<wbr>Custom<wbr>Request<wbr>Handling</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="insertheaders_csharp">
+<a href="#insertheaders_csharp" style="color: inherit; text-decoration: inherit;">Insert<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactionallowcustomrequesthandlinginsertheader">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow<wbr>Custom<wbr>Request<wbr>Handling<wbr>Insert<wbr>Header<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="insertheaders_go">
+<a href="#insertheaders_go" style="color: inherit; text-decoration: inherit;">Insert<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactionallowcustomrequesthandlinginsertheader">[]Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow<wbr>Custom<wbr>Request<wbr>Handling<wbr>Insert<wbr>Header</a></span>
+    </dt>
+    <dd>{{% md %}}The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="insertheaders_nodejs">
+<a href="#insertheaders_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactionallowcustomrequesthandlinginsertheader">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow<wbr>Custom<wbr>Request<wbr>Handling<wbr>Insert<wbr>Header<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="insert_headers_python">
+<a href="#insert_headers_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactionallowcustomrequesthandlinginsertheader">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow<wbr>Custom<wbr>Request<wbr>Handling<wbr>Insert<wbr>Header<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rulegroupruleactionallowcustomrequesthandlinginsertheader">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow<wbr>Custom<wbr>Request<wbr>Handling<wbr>Insert<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the custom header.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the custom header.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the custom header.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value of the custom header.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rulegroupruleactionblock">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customresponse_csharp">
+<a href="#customresponse_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Response</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactionblockcustomresponse">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block<wbr>Custom<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a custom response for the web request. See Custom Response below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customresponse_go">
+<a href="#customresponse_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Response</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactionblockcustomresponse">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block<wbr>Custom<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a custom response for the web request. See Custom Response below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customresponse_nodejs">
+<a href="#customresponse_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Response</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactionblockcustomresponse">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block<wbr>Custom<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a custom response for the web request. See Custom Response below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="custom_response_python">
+<a href="#custom_response_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>response</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactionblockcustomresponse">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block<wbr>Custom<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a custom response for the web request. See Custom Response below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rulegroupruleactionblockcustomresponse">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block<wbr>Custom<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="responsecode_csharp">
+<a href="#responsecode_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The HTTP status code to return to the client.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="responseheaders_csharp">
+<a href="#responseheaders_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactionblockcustomresponseresponseheader">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block<wbr>Custom<wbr>Response<wbr>Response<wbr>Header<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The `response_header` blocks used to define the HTTP response headers added to the response. See Custom HTTP Header below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="responsecode_go">
+<a href="#responsecode_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The HTTP status code to return to the client.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="responseheaders_go">
+<a href="#responseheaders_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactionblockcustomresponseresponseheader">[]Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block<wbr>Custom<wbr>Response<wbr>Response<wbr>Header</a></span>
+    </dt>
+    <dd>{{% md %}}The `response_header` blocks used to define the HTTP response headers added to the response. See Custom HTTP Header below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="responsecode_nodejs">
+<a href="#responsecode_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The HTTP status code to return to the client.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="responseheaders_nodejs">
+<a href="#responseheaders_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactionblockcustomresponseresponseheader">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block<wbr>Custom<wbr>Response<wbr>Response<wbr>Header<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The `response_header` blocks used to define the HTTP response headers added to the response. See Custom HTTP Header below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="response_code_python">
+<a href="#response_code_python" style="color: inherit; text-decoration: inherit;">response_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The HTTP status code to return to the client.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="response_headers_python">
+<a href="#response_headers_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactionblockcustomresponseresponseheader">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block<wbr>Custom<wbr>Response<wbr>Response<wbr>Header<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The `response_header` blocks used to define the HTTP response headers added to the response. See Custom HTTP Header below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rulegroupruleactionblockcustomresponseresponseheader">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block<wbr>Custom<wbr>Response<wbr>Response<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the custom header.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the custom header.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the custom header.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value of the custom header.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rulegroupruleactioncount">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customrequesthandling_csharp">
+<a href="#customrequesthandling_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Request<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactioncountcustomrequesthandling">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count<wbr>Custom<wbr>Request<wbr>Handling<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines custom handling for the web request. See Custom Request Handling below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customrequesthandling_go">
+<a href="#customrequesthandling_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Request<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactioncountcustomrequesthandling">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count<wbr>Custom<wbr>Request<wbr>Handling</a></span>
+    </dt>
+    <dd>{{% md %}}Defines custom handling for the web request. See Custom Request Handling below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customrequesthandling_nodejs">
+<a href="#customrequesthandling_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Request<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactioncountcustomrequesthandling">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count<wbr>Custom<wbr>Request<wbr>Handling<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines custom handling for the web request. See Custom Request Handling below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="custom_request_handling_python">
+<a href="#custom_request_handling_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>request_<wbr>handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactioncountcustomrequesthandling">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count<wbr>Custom<wbr>Request<wbr>Handling<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines custom handling for the web request. See Custom Request Handling below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rulegroupruleactioncountcustomrequesthandling">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count<wbr>Custom<wbr>Request<wbr>Handling</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="insertheaders_csharp">
+<a href="#insertheaders_csharp" style="color: inherit; text-decoration: inherit;">Insert<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactioncountcustomrequesthandlinginsertheader">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count<wbr>Custom<wbr>Request<wbr>Handling<wbr>Insert<wbr>Header<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="insertheaders_go">
+<a href="#insertheaders_go" style="color: inherit; text-decoration: inherit;">Insert<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactioncountcustomrequesthandlinginsertheader">[]Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count<wbr>Custom<wbr>Request<wbr>Handling<wbr>Insert<wbr>Header</a></span>
+    </dt>
+    <dd>{{% md %}}The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="insertheaders_nodejs">
+<a href="#insertheaders_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactioncountcustomrequesthandlinginsertheader">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count<wbr>Custom<wbr>Request<wbr>Handling<wbr>Insert<wbr>Header<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="insert_headers_python">
+<a href="#insert_headers_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleactioncountcustomrequesthandlinginsertheader">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count<wbr>Custom<wbr>Request<wbr>Handling<wbr>Insert<wbr>Header<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rulegroupruleactioncountcustomrequesthandlinginsertheader">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count<wbr>Custom<wbr>Request<wbr>Handling<wbr>Insert<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the custom header.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the custom header.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the custom header.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the custom header. For custom request header insertion, when AWS WAF inserts the header into the request, it prefixes this name `x-amzn-waf-`, to avoid confusion with the headers that are already in the request. For example, for the header name `sample`, AWS WAF inserts the header `x-amzn-waf-sample`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value of the custom header.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
