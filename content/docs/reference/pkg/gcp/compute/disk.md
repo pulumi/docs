@@ -179,6 +179,7 @@ const defaultDisk = new gcp.compute.Disk("default", {
          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">physical_block_size_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
          <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">provisioned_iops</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
          <span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
          <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
          <span class="nx">snapshot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -427,6 +428,15 @@ the supported values for the caller's project.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="provisionediops_csharp">
+<a href="#provisionediops_csharp" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Iops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Indicates how many IOPS must be provisioned for the disk.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resourcepolicies_csharp">
 <a href="#resourcepolicies_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
 </span>
@@ -632,6 +642,15 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisionediops_go">
+<a href="#provisionediops_go" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Iops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Indicates how many IOPS must be provisioned for the disk.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcepolicies_go">
@@ -841,6 +860,15 @@ the supported values for the caller's project.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="provisionediops_nodejs">
+<a href="#provisionediops_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Iops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Indicates how many IOPS must be provisioned for the disk.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resourcepolicies_nodejs">
 <a href="#resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
 </span>
@@ -1046,6 +1074,15 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioned_iops_python">
+<a href="#provisioned_iops_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>iops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Indicates how many IOPS must be provisioned for the disk.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_policies_python">
@@ -1528,6 +1565,7 @@ Get an existing Disk resource's state with the given name, ID, and optional extr
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">physical_block_size_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">provisioned_iops</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -1797,6 +1835,15 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_provisionediops_csharp">
+<a href="#state_provisionediops_csharp" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Iops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Indicates how many IOPS must be provisioned for the disk.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcepolicies_csharp">
@@ -2082,6 +2129,15 @@ the supported values for the caller's project.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_provisionediops_go">
+<a href="#state_provisionediops_go" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Iops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Indicates how many IOPS must be provisioned for the disk.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcepolicies_go">
 <a href="#state_resourcepolicies_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
 </span>
@@ -2365,6 +2421,15 @@ the supported values for the caller's project.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_provisionediops_nodejs">
+<a href="#state_provisionediops_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Iops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Indicates how many IOPS must be provisioned for the disk.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcepolicies_nodejs">
 <a href="#state_resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
 </span>
@@ -2646,6 +2711,15 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_provisioned_iops_python">
+<a href="#state_provisioned_iops_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>iops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Indicates how many IOPS must be provisioned for the disk.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_policies_python">
