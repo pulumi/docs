@@ -83,7 +83,7 @@ generate_docs() {
 
     echo "Running docs generator from schema for ${provider}..."
     pushd ${TOOL_RESDOCGEN}
-    go mod download
+    go mod tidy
     go run . -logtostderr "${ABSOLUTEPACKDIR}/${provider}" "${SCHEMA_FILE}" "${plugin_version}" "${OVERLAY_SCHEMA_FILE}" || exit 3
     popd
 
