@@ -1,0 +1,9 @@
+id = "liqin-mo"
+name = "Liqin Mo"
+title = "Director of Finance"
+weight = 1
+
+status = "active"
+
+[social]
+linkedin = "liqin-mo-121b762"
