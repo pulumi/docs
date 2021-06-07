@@ -437,7 +437,7 @@ codepipeline = aws.codepipeline.Pipeline("codepipeline",
     ])
 codepipeline_policy = aws.iam.RolePolicy("codepipelinePolicy",
     role=codepipeline_role.id,
-    policy=pulumi.Output.all(codepipeline_bucket.arn, codepipeline_bucket.arn, example.arn).apply(lambda codepipelineBucketArn, codepipelineBucketArn1, exampleArn: f"""{{
+    policy=pulumi.Output.all(codepipeline_bucket_arn=codepipeline_bucket.arn, example_arn=example.arn).apply(lambda x: f"""{{
   "Version": "2012-10-17",
   "Statement": [
     {{
@@ -450,8 +450,8 @@ codepipeline_policy = aws.iam.RolePolicy("codepipelinePolicy",
         "s3:PutObject"
       ],
       "Resource": [
-        "{codepipeline_bucket_arn}",
-        "{codepipeline_bucket_arn1}/*"
+        "{x['codepipeline_bucket_arn']}",
+        "{x['codepipeline_bucket_arn']}/*"
       ]
     }},
     {{
@@ -459,7 +459,7 @@ codepipeline_policy = aws.iam.RolePolicy("codepipelinePolicy",
       "Action": [
         "codestar-connections:UseConnection"
       ],
-      "Resource": "{example_arn}"
+      "Resource": "{x['example_arn']}"
     }},
     {{
       "Effect": "Allow",
