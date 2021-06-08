@@ -481,6 +481,14 @@ resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="reservationaffinities_csharp">
+<a href="#reservationaffinities_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatereservationaffinity">List&lt;Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="schedulings_csharp">
 <a href="#schedulings_csharp" style="color: inherit; text-decoration: inherit;">Schedulings</a>
 </span>
@@ -748,6 +756,14 @@ region where that resource resides. For example, a custom `subnetwork`
 resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="reservationaffinities_go">
+<a href="#reservationaffinities_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatereservationaffinity">[]Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedulings_go">
 <a href="#schedulings_go" style="color: inherit; text-decoration: inherit;">Schedulings</a>
@@ -1017,6 +1033,14 @@ resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="reservationaffinities_nodejs">
+<a href="#reservationaffinities_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Affinities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatereservationaffinity">Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="schedulings_nodejs">
 <a href="#schedulings_nodejs" style="color: inherit; text-decoration: inherit;">schedulings</a>
 </span>
@@ -1284,6 +1308,14 @@ region where that resource resides. For example, a custom `subnetwork`
 resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="reservation_affinities_python">
+<a href="#reservation_affinities_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>affinities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatereservationaffinity">Sequence[Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedulings_python">
 <a href="#schedulings_python" style="color: inherit; text-decoration: inherit;">schedulings</a>
@@ -2784,6 +2816,182 @@ error.
 the secondary range from which to allocate the IP CIDR range for this alias IP
 range. If left unspecified, the primary range of the subnetwork will be used.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getinstancetemplatereservationaffinity">Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="specificreservations_csharp">
+<a href="#specificreservations_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatereservationaffinityspecificreservation">List&lt;Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="specificreservations_go">
+<a href="#specificreservations_go" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatereservationaffinityspecificreservation">[]Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="specificreservations_nodejs">
+<a href="#specificreservations_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatereservationaffinityspecificreservation">Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="specific_reservations_python">
+<a href="#specific_reservations_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatereservationaffinityspecificreservation">Sequence[Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getinstancetemplatereservationaffinityspecificreservation">Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key for the node affinity label.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key for the node affinity label.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key for the node affinity label.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The key for the node affinity label.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancetemplatescheduling">Get<wbr>Instance<wbr>Template<wbr>Scheduling</h4>

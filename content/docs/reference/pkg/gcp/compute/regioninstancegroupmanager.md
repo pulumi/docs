@@ -364,7 +364,8 @@ const appserver = new gcp.compute.RegionInstanceGroupManager("appserver", {
                                <span class="nx">target_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                                <span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[RegionInstanceGroupManagerUpdatePolicyArgs]</span> = None<span class="p">,</span>
                                <span class="nx">versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionInstanceGroupManagerVersionArgs]]</span> = None<span class="p">,</span>
-                               <span class="nx">wait_for_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+                               <span class="nx">wait_for_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                               <span class="nx">wait_for_instances_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">RegionInstanceGroupManager</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegionInstanceGroupManagerArgs</a></span><span class="p">,</span>
@@ -643,6 +644,18 @@ not affect existing instances.
     <dd>{{% md %}}Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, the provider will
 continue trying until it times out.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="waitforinstancesstatus_csharp">
+<a href="#waitforinstancesstatus_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Instances<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When used with `wait_for_instances` it specifies the status to wait for.
+When `STABLE` is specified this resource will wait until the instances are stable before returning. When `UPDATED` is
+set, it will wait for the version target to be reached and any per instance configs to be effective as well as all
+instances to be stable before returning. The possible values are `STABLE` and `UPDATED`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -798,6 +811,18 @@ not affect existing instances.
     <dd>{{% md %}}Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, the provider will
 continue trying until it times out.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="waitforinstancesstatus_go">
+<a href="#waitforinstancesstatus_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Instances<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When used with `wait_for_instances` it specifies the status to wait for.
+When `STABLE` is specified this resource will wait until the instances are stable before returning. When `UPDATED` is
+set, it will wait for the version target to be reached and any per instance configs to be effective as well as all
+instances to be stable before returning. The possible values are `STABLE` and `UPDATED`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -953,6 +978,18 @@ not affect existing instances.
     <dd>{{% md %}}Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, the provider will
 continue trying until it times out.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="waitforinstancesstatus_nodejs">
+<a href="#waitforinstancesstatus_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Instances<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When used with `wait_for_instances` it specifies the status to wait for.
+When `STABLE` is specified this resource will wait until the instances are stable before returning. When `UPDATED` is
+set, it will wait for the version target to be reached and any per instance configs to be effective as well as all
+instances to be stable before returning. The possible values are `STABLE` and `UPDATED`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1108,6 +1145,18 @@ not affect existing instances.
     <dd>{{% md %}}Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, the provider will
 continue trying until it times out.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wait_for_instances_status_python">
+<a href="#wait_for_instances_status_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>instances_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}When used with `wait_for_instances` it specifies the status to wait for.
+When `STABLE` is specified this resource will wait until the instances are stable before returning. When `UPDATED` is
+set, it will wait for the version target to be reached and any per instance configs to be effective as well as all
+instances to be stable before returning. The possible values are `STABLE` and `UPDATED`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1154,6 +1203,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the created resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="statuses_csharp">
+<a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatus">List&lt;Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The status of this managed instance group.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1193,6 +1251,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the created resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="statuses_go">
+<a href="#statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatus">[]Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}The status of this managed instance group.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1232,6 +1299,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the created resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="statuses_nodejs">
+<a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatus">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status[]</a></span>
+    </dt>
+    <dd>{{% md %}}The status of this managed instance group.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1271,6 +1347,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the created resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="statuses_python">
+<a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatus">Sequence[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status]</a></span>
+    </dt>
+    <dd>{{% md %}}The status of this managed instance group.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1303,11 +1388,13 @@ Get an existing RegionInstanceGroupManager resource's state with the given name,
         <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">stateful_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionInstanceGroupManagerStatefulDiskArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionInstanceGroupManagerStatusArgs]]</span> = None<span class="p">,</span>
         <span class="nx">target_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">target_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[RegionInstanceGroupManagerUpdatePolicyArgs]</span> = None<span class="p">,</span>
         <span class="nx">versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionInstanceGroupManagerVersionArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">wait_for_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> RegionInstanceGroupManager</code></pre></div>
+        <span class="nx">wait_for_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">wait_for_instances_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RegionInstanceGroupManager</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1547,6 +1634,15 @@ is not provided, the provider project is used.
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_statuses_csharp">
+<a href="#state_statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatus">List&lt;Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The status of this managed instance group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_targetpools_csharp">
 <a href="#state_targetpools_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Pools</a>
 </span>
@@ -1596,6 +1692,18 @@ Structure is documented below.
     <dd>{{% md %}}Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, the provider will
 continue trying until it times out.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_waitforinstancesstatus_csharp">
+<a href="#state_waitforinstancesstatus_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Instances<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When used with `wait_for_instances` it specifies the status to wait for.
+When `STABLE` is specified this resource will wait until the instances are stable before returning. When `UPDATED` is
+set, it will wait for the version target to be reached and any per instance configs to be effective as well as all
+instances to be stable before returning. The possible values are `STABLE` and `UPDATED`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1729,6 +1837,15 @@ is not provided, the provider project is used.
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_statuses_go">
+<a href="#state_statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatus">[]Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}The status of this managed instance group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_targetpools_go">
 <a href="#state_targetpools_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Pools</a>
 </span>
@@ -1778,6 +1895,18 @@ Structure is documented below.
     <dd>{{% md %}}Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, the provider will
 continue trying until it times out.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_waitforinstancesstatus_go">
+<a href="#state_waitforinstancesstatus_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Instances<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When used with `wait_for_instances` it specifies the status to wait for.
+When `STABLE` is specified this resource will wait until the instances are stable before returning. When `UPDATED` is
+set, it will wait for the version target to be reached and any per instance configs to be effective as well as all
+instances to be stable before returning. The possible values are `STABLE` and `UPDATED`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1911,6 +2040,15 @@ is not provided, the provider project is used.
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_statuses_nodejs">
+<a href="#state_statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatus">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The status of this managed instance group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_targetpools_nodejs">
 <a href="#state_targetpools_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Pools</a>
 </span>
@@ -1960,6 +2098,18 @@ Structure is documented below.
     <dd>{{% md %}}Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, the provider will
 continue trying until it times out.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_waitforinstancesstatus_nodejs">
+<a href="#state_waitforinstancesstatus_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Instances<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When used with `wait_for_instances` it specifies the status to wait for.
+When `STABLE` is specified this resource will wait until the instances are stable before returning. When `UPDATED` is
+set, it will wait for the version target to be reached and any per instance configs to be effective as well as all
+instances to be stable before returning. The possible values are `STABLE` and `UPDATED`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2093,6 +2243,15 @@ is not provided, the provider project is used.
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_statuses_python">
+<a href="#state_statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatus">Sequence[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The status of this managed instance group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_target_pools_python">
 <a href="#state_target_pools_python" style="color: inherit; text-decoration: inherit;">target_<wbr>pools</a>
 </span>
@@ -2142,6 +2301,18 @@ Structure is documented below.
     <dd>{{% md %}}Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, the provider will
 continue trying until it times out.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_wait_for_instances_status_python">
+<a href="#state_wait_for_instances_status_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>instances_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}When used with `wait_for_instances` it specifies the status to wait for.
+When `STABLE` is specified this resource will wait until the instances are stable before returning. When `UPDATED` is
+set, it will wait for the version target to be reached and any per instance configs to be effective as well as all
+instances to be stable before returning. The possible values are `STABLE` and `UPDATED`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2430,6 +2601,326 @@ it applies autohealing policies to new instances or recently recreated instances
     </dt>
     <dd>{{% md %}}, A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`. `NEVER` - detach the disk when the VM is deleted, but do not delete the disk. `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently deleted from the instance group. The default is `NEVER`.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="regioninstancegroupmanagerstatus">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="isstable_csharp">
+<a href="#isstable_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Stable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statefuls_csharp">
+<a href="#statefuls_csharp" style="color: inherit; text-decoration: inherit;">Statefuls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatusstateful">List&lt;Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Stateful status of the given Instance Group Manager.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versiontargets_csharp">
+<a href="#versiontargets_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatusversiontarget">List&lt;Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Version<wbr>Target<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="isstable_go">
+<a href="#isstable_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Stable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statefuls_go">
+<a href="#statefuls_go" style="color: inherit; text-decoration: inherit;">Statefuls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatusstateful">[]Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful</a></span>
+    </dt>
+    <dd>{{% md %}}Stateful status of the given Instance Group Manager.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versiontargets_go">
+<a href="#versiontargets_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatusversiontarget">[]Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Version<wbr>Target</a></span>
+    </dt>
+    <dd>{{% md %}}A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="isstable_nodejs">
+<a href="#isstable_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Stable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statefuls_nodejs">
+<a href="#statefuls_nodejs" style="color: inherit; text-decoration: inherit;">statefuls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatusstateful">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Stateful status of the given Instance Group Manager.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versiontargets_nodejs">
+<a href="#versiontargets_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatusversiontarget">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Version<wbr>Target<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="is_stable_python">
+<a href="#is_stable_python" style="color: inherit; text-decoration: inherit;">is_<wbr>stable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statefuls_python">
+<a href="#statefuls_python" style="color: inherit; text-decoration: inherit;">statefuls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatusstateful">Sequence[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Stateful status of the given Instance Group Manager.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_targets_python">
+<a href="#version_targets_python" style="color: inherit; text-decoration: inherit;">version_<wbr>targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatusversiontarget">Sequence[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Version<wbr>Target<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="regioninstancegroupmanagerstatusstateful">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="hasstatefulconfig_csharp">
+<a href="#hasstatefulconfig_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Stateful<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="perinstanceconfigs_csharp">
+<a href="#perinstanceconfigs_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Instance<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatusstatefulperinstanceconfig">List&lt;Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Per<wbr>Instance<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Status of per-instance configs on the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="hasstatefulconfig_go">
+<a href="#hasstatefulconfig_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Stateful<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="perinstanceconfigs_go">
+<a href="#perinstanceconfigs_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Instance<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatusstatefulperinstanceconfig">[]Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Per<wbr>Instance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Status of per-instance configs on the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="hasstatefulconfig_nodejs">
+<a href="#hasstatefulconfig_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Stateful<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="perinstanceconfigs_nodejs">
+<a href="#perinstanceconfigs_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Instance<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatusstatefulperinstanceconfig">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Per<wbr>Instance<wbr>Config<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Status of per-instance configs on the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="has_stateful_config_python">
+<a href="#has_stateful_config_python" style="color: inherit; text-decoration: inherit;">has_<wbr>stateful_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="per_instance_configs_python">
+<a href="#per_instance_configs_python" style="color: inherit; text-decoration: inherit;">per_<wbr>instance_<wbr>configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatusstatefulperinstanceconfig">Sequence[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Per<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Status of per-instance configs on the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="regioninstancegroupmanagerstatusstatefulperinstanceconfig">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Per<wbr>Instance<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="alleffective_csharp">
+<a href="#alleffective_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Effective</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A bit indicating if all of the group's per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status `EFFECTIVE` or there are no per-instance-configs.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="alleffective_go">
+<a href="#alleffective_go" style="color: inherit; text-decoration: inherit;">All<wbr>Effective</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A bit indicating if all of the group's per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status `EFFECTIVE` or there are no per-instance-configs.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="alleffective_nodejs">
+<a href="#alleffective_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Effective</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A bit indicating if all of the group's per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status `EFFECTIVE` or there are no per-instance-configs.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="all_effective_python">
+<a href="#all_effective_python" style="color: inherit; text-decoration: inherit;">all_<wbr>effective</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A bit indicating if all of the group's per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status `EFFECTIVE` or there are no per-instance-configs.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="regioninstancegroupmanagerstatusversiontarget">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Version<wbr>Target</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="isreached_csharp">
+<a href="#isreached_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Reached</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="isreached_go">
+<a href="#isreached_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Reached</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="isreached_nodejs">
+<a href="#isreached_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Reached</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="is_reached_python">
+<a href="#is_reached_python" style="color: inherit; text-decoration: inherit;">is_<wbr>reached</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="regioninstancegroupmanagerupdatepolicy">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy</h4>

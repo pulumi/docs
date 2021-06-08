@@ -457,7 +457,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
+    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 300.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstances_csharp">
@@ -561,7 +561,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
+    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 300.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstances_go">
@@ -665,7 +665,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
+    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 300.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstances_nodejs">
@@ -769,7 +769,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
+    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 300.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_instances_python">
@@ -1138,7 +1138,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
+    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 300.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mininstances_csharp">
@@ -1260,7 +1260,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
+    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 300.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mininstances_go">
@@ -1382,7 +1382,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
+    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 300.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mininstances_nodejs">
@@ -1504,7 +1504,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
+    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 300.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_instances_python">
