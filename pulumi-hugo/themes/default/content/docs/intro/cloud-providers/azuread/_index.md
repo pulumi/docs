@@ -17,7 +17,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/azuread" >}}) f
 
 ## Setup
 
-The AzureAD provider supports several options for providing access to Azure credentials.  See the [Azure setup page]({{< relref "/docs/intro/cloud-providers/azure/setup" >}}) for details.
+The AzureAD provider supports several options for providing access to Azure credentials.  See the [Azure setup page]({{< relref "/docs/intro/cloud-providers/azure-classic/setup" >}}) for details.
 
 ## Example
 
