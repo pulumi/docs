@@ -15,6 +15,7 @@ Explore the resources and functions of the azure-native.securityinsights module.
     <li><a href="aatpdataconnector" title="AATPDataConnector"><span class="symbol resource"></span>AATPDataConnector</a></li>
     <li><a href="ascdataconnector" title="ASCDataConnector"><span class="symbol resource"></span>ASCDataConnector</a></li>
     <li><a href="action" title="Action"><span class="symbol resource"></span>Action</a></li>
+    <li><a href="activitycustomentityquery" title="ActivityCustomEntityQuery"><span class="symbol resource"></span>ActivityCustomEntityQuery</a></li>
     <li><a href="alertrule" title="AlertRule"><span class="symbol resource"></span>AlertRule</a></li>
     <li><a href="automationrule" title="AutomationRule"><span class="symbol resource"></span>AutomationRule</a></li>
     <li><a href="awscloudtraildataconnector" title="AwsCloudTrailDataConnector"><span class="symbol resource"></span>AwsCloudTrailDataConnector</a></li>
@@ -22,6 +23,7 @@ Explore the resources and functions of the azure-native.securityinsights module.
     <li><a href="bookmarkrelation" title="BookmarkRelation"><span class="symbol resource"></span>BookmarkRelation</a></li>
     <li><a href="dataconnector" title="DataConnector"><span class="symbol resource"></span>DataConnector</a></li>
     <li><a href="entityanalytics" title="EntityAnalytics"><span class="symbol resource"></span>EntityAnalytics</a></li>
+    <li><a href="entityquery" title="EntityQuery"><span class="symbol resource"></span>EntityQuery</a></li>
     <li><a href="eyeson" title="EyesOn"><span class="symbol resource"></span>EyesOn</a></li>
     <li><a href="fusionalertrule" title="FusionAlertRule"><span class="symbol resource"></span>FusionAlertRule</a></li>
     <li><a href="incident" title="Incident"><span class="symbol resource"></span>Incident</a></li>
@@ -49,6 +51,7 @@ Explore the resources and functions of the azure-native.securityinsights module.
     <li><a href="getaatpdataconnector" title="GetAATPDataConnector"><span class="symbol function"></span>GetAATPDataConnector</a></li>
     <li><a href="getascdataconnector" title="GetASCDataConnector"><span class="symbol function"></span>GetASCDataConnector</a></li>
     <li><a href="getaction" title="GetAction"><span class="symbol function"></span>GetAction</a></li>
+    <li><a href="getactivitycustomentityquery" title="GetActivityCustomEntityQuery"><span class="symbol function"></span>GetActivityCustomEntityQuery</a></li>
     <li><a href="getalertrule" title="GetAlertRule"><span class="symbol function"></span>GetAlertRule</a></li>
     <li><a href="getautomationrule" title="GetAutomationRule"><span class="symbol function"></span>GetAutomationRule</a></li>
     <li><a href="getawscloudtraildataconnector" title="GetAwsCloudTrailDataConnector"><span class="symbol function"></span>GetAwsCloudTrailDataConnector</a></li>
@@ -58,6 +61,7 @@ Explore the resources and functions of the azure-native.securityinsights module.
     <li><a href="getentitiesgettimeline" title="GetEntitiesGetTimeline"><span class="symbol function"></span>GetEntitiesGetTimeline</a></li>
     <li><a href="getentityanalytics" title="GetEntityAnalytics"><span class="symbol function"></span>GetEntityAnalytics</a></li>
     <li><a href="getentityinsights" title="GetEntityInsights"><span class="symbol function"></span>GetEntityInsights</a></li>
+    <li><a href="getentityquery" title="GetEntityQuery"><span class="symbol function"></span>GetEntityQuery</a></li>
     <li><a href="geteyeson" title="GetEyesOn"><span class="symbol function"></span>GetEyesOn</a></li>
     <li><a href="getfusionalertrule" title="GetFusionAlertRule"><span class="symbol function"></span>GetFusionAlertRule</a></li>
     <li><a href="getincident" title="GetIncident"><span class="symbol function"></span>GetIncident</a></li>
@@ -87,6 +91,6 @@ Explore the resources and functions of the azure-native.securityinsights module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.9.0</dd>
+	<dd>1.10.0</dd>
 </dl>
 

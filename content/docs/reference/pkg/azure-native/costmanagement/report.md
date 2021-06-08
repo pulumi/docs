@@ -173,15 +173,15 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 report = azure_native.costmanagement.Report("report",
-    definition={
-        "dataset": {
-            "aggregation": {
+    definition=azure_native.costmanagement.ReportDefinitionArgs(
+        dataset=azure_native.costmanagement.ReportDatasetArgs(
+            aggregation={
                 "costSum": azure_native.costmanagement.ReportAggregationArgs(
                     function="Sum",
                     name="PreTaxCost",
                 ),
             },
-            "configuration": azure_native.costmanagement.ReportDatasetConfigurationArgs(
+            configuration=azure_native.costmanagement.ReportDatasetConfigurationArgs(
                 columns=[
                     "Date",
                     "MeterId",
@@ -190,8 +190,8 @@ report = azure_native.costmanagement.Report("report",
                     "PreTaxCost",
                 ],
             ),
-            "filter": {
-                "and": [
+            filter=azure_native.costmanagement.ReportFilterArgs(
+                and_=[
                     {
                         "or": [
                             azure_native.costmanagement.ReportFilterArgs(
@@ -224,9 +224,9 @@ report = azure_native.costmanagement.Report("report",
                         ),
                     ),
                 ],
-            },
-            "granularity": "Daily",
-            "grouping": [
+            ),
+            granularity="Daily",
+            grouping=[
                 azure_native.costmanagement.ReportGroupingArgs(
                     name="SubscriptionName",
                     type="Dimension",
@@ -236,10 +236,10 @@ report = azure_native.costmanagement.Report("report",
                     type="Tag",
                 ),
             ],
-        },
-        "timeframe": "MonthToDate",
-        "type": "Usage",
-    },
+        ),
+        timeframe="MonthToDate",
+        type="Usage",
+    ),
     delivery_info=azure_native.costmanagement.ReportDeliveryInfoArgs(
         destination=azure_native.costmanagement.ReportDeliveryDestinationArgs(
             container="reports",
@@ -877,22 +877,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="functiontype">Function<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular"><dt>Sum</dt>
+<dl class="tabular"><dt>Avg</dt>
+    <dd>Avg</dd><dt>Max</dt>
+    <dd>Max</dd><dt>Min</dt>
+    <dd>Min</dd><dt>Sum</dt>
     <dd>Sum</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Function<wbr>Type<wbr>Sum</dt>
+<dl class="tabular"><dt>Function<wbr>Type<wbr>Avg</dt>
+    <dd>Avg</dd><dt>Function<wbr>Type<wbr>Max</dt>
+    <dd>Max</dd><dt>Function<wbr>Type<wbr>Min</dt>
+    <dd>Min</dd><dt>Function<wbr>Type<wbr>Sum</dt>
     <dd>Sum</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular"><dt>Sum</dt>
+<dl class="tabular"><dt>Avg</dt>
+    <dd>Avg</dd><dt>Max</dt>
+    <dd>Max</dd><dt>Min</dt>
+    <dd>Min</dd><dt>Sum</dt>
     <dd>Sum</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular"><dt>SUM</dt>
+<dl class="tabular"><dt>AVG</dt>
+    <dd>Avg</dd><dt>MAX</dt>
+    <dd>Max</dd><dt>MIN</dt>
+    <dd>Min</dd><dt>SUM</dt>
     <dd>Sum</dd></dl>
 {{% /choosable %}}
 

@@ -11,11 +11,15 @@ Explore the resources and functions of the azure-native.marketplace module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="privatestorecollection" title="PrivateStoreCollection"><span class="symbol resource"></span>PrivateStoreCollection</a></li>
+    <li><a href="privatestorecollectionoffer" title="PrivateStoreCollectionOffer"><span class="symbol resource"></span>PrivateStoreCollectionOffer</a></li>
     <li><a href="privatestoreoffer" title="PrivateStoreOffer"><span class="symbol resource"></span>PrivateStoreOffer</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getprivatestorecollection" title="GetPrivateStoreCollection"><span class="symbol function"></span>GetPrivateStoreCollection</a></li>
+    <li><a href="getprivatestorecollectionoffer" title="GetPrivateStoreCollectionOffer"><span class="symbol function"></span>GetPrivateStoreCollectionOffer</a></li>
     <li><a href="getprivatestoreoffer" title="GetPrivateStoreOffer"><span class="symbol function"></span>GetPrivateStoreOffer</a></li>
 </ul>
 
@@ -26,6 +30,6 @@ Explore the resources and functions of the azure-native.marketplace module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.9.0</dd>
+	<dd>1.10.0</dd>
 </dl>
 

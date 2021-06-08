@@ -11,6 +11,7 @@ Explore the resources and functions of the azure-native.testbase module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="customerevent" title="CustomerEvent"><span class="symbol resource"></span>CustomerEvent</a></li>
     <li><a href="favoriteprocess" title="FavoriteProcess"><span class="symbol resource"></span>FavoriteProcess</a></li>
     <li><a href="package" title="Package"><span class="symbol resource"></span>Package</a></li>
     <li><a href="testbaseaccount" title="TestBaseAccount"><span class="symbol resource"></span>TestBaseAccount</a></li>
@@ -18,6 +19,7 @@ Explore the resources and functions of the azure-native.testbase module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getcustomerevent" title="GetCustomerEvent"><span class="symbol function"></span>GetCustomerEvent</a></li>
     <li><a href="getfavoriteprocess" title="GetFavoriteProcess"><span class="symbol function"></span>GetFavoriteProcess</a></li>
     <li><a href="getpackage" title="GetPackage"><span class="symbol function"></span>GetPackage</a></li>
     <li><a href="getpackagedownloadurl" title="GetPackageDownloadURL"><span class="symbol function"></span>GetPackageDownloadURL</a></li>
@@ -34,6 +36,6 @@ Explore the resources and functions of the azure-native.testbase module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.9.0</dd>
+	<dd>1.10.0</dd>
 </dl>
 

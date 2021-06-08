@@ -39,8 +39,8 @@ class MyStack : Stack
             ResourceGroupName = "contoso-rg1",
             Sku = new AzureNative.TestBase.Inputs.TestBaseAccountSKUArgs
             {
-                Name = "B0",
-                Tier = "Basic",
+                Name = "S0",
+                Tier = "Standard",
             },
             TestBaseAccountName = "contoso-testBaseAccount1",
         });
@@ -71,8 +71,8 @@ func main() {
 			Location:          pulumi.String("westus"),
 			ResourceGroupName: pulumi.String("contoso-rg1"),
 			Sku: &testbase.TestBaseAccountSKUArgs{
-				Name: pulumi.String("B0"),
-				Tier: pulumi.String("Basic"),
+				Name: pulumi.String("S0"),
+				Tier: pulumi.String("Standard"),
 			},
 			TestBaseAccountName: pulumi.String("contoso-testBaseAccount1"),
 		})
@@ -100,8 +100,8 @@ test_base_account = azure_native.testbase.TestBaseAccount("testBaseAccount",
     location="westus",
     resource_group_name="contoso-rg1",
     sku=azure_native.testbase.TestBaseAccountSKUArgs(
-        name="B0",
-        tier="Basic",
+        name="S0",
+        tier="Standard",
     ),
     test_base_account_name="contoso-testBaseAccount1")
 
@@ -122,8 +122,8 @@ const testBaseAccount = new azure_native.testbase.TestBaseAccount("testBaseAccou
     location: "westus",
     resourceGroupName: "contoso-rg1",
     sku: {
-        name: "B0",
-        tier: "Basic",
+        name: "S0",
+        tier: "Standard",
     },
     testBaseAccountName: "contoso-testBaseAccount1",
 });
@@ -1370,26 +1370,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="tier">Tier</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular"><dt>Basic</dt>
-    <dd>Basic</dd><dt>Standard</dt>
+<dl class="tabular"><dt>Standard</dt>
     <dd>Standard</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Tier<wbr>Basic</dt>
-    <dd>Basic</dd><dt>Tier<wbr>Standard</dt>
+<dl class="tabular"><dt>Tier<wbr>Standard</dt>
     <dd>Standard</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular"><dt>Basic</dt>
-    <dd>Basic</dd><dt>Standard</dt>
+<dl class="tabular"><dt>Standard</dt>
     <dd>Standard</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular"><dt>BASIC</dt>
-    <dd>Basic</dd><dt>STANDARD</dt>
+<dl class="tabular"><dt>STANDARD</dt>
     <dd>Standard</dd></dl>
 {{% /choosable %}}
 ## Import
