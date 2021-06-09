@@ -560,7 +560,23 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Only retrieves the version which keys has value that matches
 one of the values provided here.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="all_csharp">
+<a href="#all_csharp" style="color: inherit; text-decoration: inherit;">All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchby_csharp">
+<a href="#matchby_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -584,7 +600,23 @@ one of the values provided here.
     </dt>
     <dd>{{% md %}}Only retrieves the version which keys has value that matches
 one of the values provided here.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="all_go">
+<a href="#all_go" style="color: inherit; text-decoration: inherit;">All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchby_go">
+<a href="#matchby_go" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -608,7 +640,23 @@ one of the values provided here.
     </dt>
     <dd>{{% md %}}Only retrieves the version which keys has value that matches
 one of the values provided here.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="all_nodejs">
+<a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchby_nodejs">
+<a href="#matchby_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -632,7 +680,23 @@ one of the values provided here.
     </dt>
     <dd>{{% md %}}Only retrieves the version which keys has value that matches
 one of the values provided here.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="all_python">
+<a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="match_by_python">
+<a href="#match_by_python" style="color: inherit; text-decoration: inherit;">match_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesversionsort">Get<wbr>Kubernetes<wbr>Version<wbr>Sort</h4>

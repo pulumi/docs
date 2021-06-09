@@ -36,7 +36,9 @@ Then the Kubernetes cluster can be imported using the cluster's `id`, e.g.
                       <span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">num_target_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                      <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">target_nodes_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -61,25 +63,19 @@ Then the Kubernetes cluster can be imported using the cluster's `id`, e.g.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -91,25 +87,19 @@ Then the Kubernetes cluster can be imported using the cluster's `id`, e.g.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -121,33 +111,25 @@ Then the Kubernetes cluster can be imported using the cluster's `id`, e.g.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -159,25 +141,19 @@ Then the Kubernetes cluster can be imported using the cluster's `id`, e.g.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -221,6 +197,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}A name for the Kubernetes cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="networkid_csharp">
+<a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network for the cluster, if not declare we use the default one
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="numtargetnodes_csharp">
 <a href="#numtargetnodes_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Target<wbr>Nodes</a>
 </span>
@@ -228,6 +213,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -245,7 +239,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of each node (The default is currently g2.small)
+    <dd>{{% md %}}The size of each node (The default is currently g3.k3s.small)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -279,6 +273,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}A name for the Kubernetes cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="networkid_go">
+<a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network for the cluster, if not declare we use the default one
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="numtargetnodes_go">
 <a href="#numtargetnodes_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Target<wbr>Nodes</a>
 </span>
@@ -286,6 +289,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -303,7 +315,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of each node (The default is currently g2.small)
+    <dd>{{% md %}}The size of each node (The default is currently g3.k3s.small)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -337,6 +349,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}A name for the Kubernetes cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="networkid_nodejs">
+<a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network for the cluster, if not declare we use the default one
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="numtargetnodes_nodejs">
 <a href="#numtargetnodes_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Target<wbr>Nodes</a>
 </span>
@@ -344,6 +365,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -361,7 +391,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of each node (The default is currently g2.small)
+    <dd>{{% md %}}The size of each node (The default is currently g3.k3s.small)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -395,6 +425,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}A name for the Kubernetes cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="network_id_python">
+<a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The network for the cluster, if not declare we use the default one
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="num_target_nodes_python">
 <a href="#num_target_nodes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>target_<wbr>nodes</a>
 </span>
@@ -402,6 +441,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -419,7 +467,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The size of each node (The default is currently g2.small)
+    <dd>{{% md %}}The size of each node (The default is currently g3.k3s.small)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -492,7 +540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterinstance">List&lt;Kubernetes<wbr>Cluster<wbr>Instance&gt;</a></span>
     </dt>
-    <dd>{{% md %}}In addition to the arguments provided, these additional attributes about the cluster's default node instance are exported.
+    <dd>{{% md %}}A list of instance inside the pool
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfig_csharp">
@@ -511,6 +559,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Ip of the Kubernetes master node.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pools_csharp">
+<a href="#pools_csharp" style="color: inherit; text-decoration: inherit;">Pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterpool">List&lt;Kubernetes<wbr>Cluster<wbr>Pool&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of node pools associated with the cluster. Each node pool exports the following attributes:
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ready_csharp">
@@ -594,7 +651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterinstance">[]Kubernetes<wbr>Cluster<wbr>Instance</a></span>
     </dt>
-    <dd>{{% md %}}In addition to the arguments provided, these additional attributes about the cluster's default node instance are exported.
+    <dd>{{% md %}}A list of instance inside the pool
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfig_go">
@@ -613,6 +670,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Ip of the Kubernetes master node.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pools_go">
+<a href="#pools_go" style="color: inherit; text-decoration: inherit;">Pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterpool">[]Kubernetes<wbr>Cluster<wbr>Pool</a></span>
+    </dt>
+    <dd>{{% md %}}A list of node pools associated with the cluster. Each node pool exports the following attributes:
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ready_go">
@@ -696,7 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterinstance">Kubernetes<wbr>Cluster<wbr>Instance[]</a></span>
     </dt>
-    <dd>{{% md %}}In addition to the arguments provided, these additional attributes about the cluster's default node instance are exported.
+    <dd>{{% md %}}A list of instance inside the pool
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfig_nodejs">
@@ -715,6 +781,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Ip of the Kubernetes master node.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pools_nodejs">
+<a href="#pools_nodejs" style="color: inherit; text-decoration: inherit;">pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterpool">Kubernetes<wbr>Cluster<wbr>Pool[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of node pools associated with the cluster. Each node pool exports the following attributes:
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ready_nodejs">
@@ -798,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterinstance">Sequence[Kubernetes<wbr>Cluster<wbr>Instance]</a></span>
     </dt>
-    <dd>{{% md %}}In addition to the arguments provided, these additional attributes about the cluster's default node instance are exported.
+    <dd>{{% md %}}A list of instance inside the pool
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfig_python">
@@ -817,6 +892,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Ip of the Kubernetes master node.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pools_python">
+<a href="#pools_python" style="color: inherit; text-decoration: inherit;">pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterpool">Sequence[Kubernetes<wbr>Cluster<wbr>Pool]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of node pools associated with the cluster. Each node pool exports the following attributes:
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ready_python">
@@ -865,8 +949,11 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
         <span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">master_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">num_target_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesClusterPoolArgs]]</span> = None<span class="p">,</span>
         <span class="nx">ready</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">target_nodes_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KubernetesCluster</code></pre></div>
@@ -1042,7 +1129,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterinstance">List&lt;Kubernetes<wbr>Cluster<wbr>Instance<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}In addition to the arguments provided, these additional attributes about the cluster's default node instance are exported.
+    <dd>{{% md %}}A list of instance inside the pool
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubeconfig_csharp">
@@ -1081,6 +1168,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A name for the Kubernetes cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_networkid_csharp">
+<a href="#state_networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network for the cluster, if not declare we use the default one
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_numtargetnodes_csharp">
 <a href="#state_numtargetnodes_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Target<wbr>Nodes</a>
 </span>
@@ -1090,6 +1186,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_pools_csharp">
+<a href="#state_pools_csharp" style="color: inherit; text-decoration: inherit;">Pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterpool">List&lt;Kubernetes<wbr>Cluster<wbr>Pool<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of node pools associated with the cluster. Each node pool exports the following attributes:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ready_csharp">
 <a href="#state_ready_csharp" style="color: inherit; text-decoration: inherit;">Ready</a>
 </span>
@@ -1097,6 +1202,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region for the cluster.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1123,7 +1237,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of each node (The default is currently g2.small)
+    <dd>{{% md %}}The size of each node (The default is currently g3.k3s.small)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1190,7 +1304,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterinstance">[]Kubernetes<wbr>Cluster<wbr>Instance</a></span>
     </dt>
-    <dd>{{% md %}}In addition to the arguments provided, these additional attributes about the cluster's default node instance are exported.
+    <dd>{{% md %}}A list of instance inside the pool
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubeconfig_go">
@@ -1229,6 +1343,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A name for the Kubernetes cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_networkid_go">
+<a href="#state_networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network for the cluster, if not declare we use the default one
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_numtargetnodes_go">
 <a href="#state_numtargetnodes_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Target<wbr>Nodes</a>
 </span>
@@ -1238,6 +1361,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_pools_go">
+<a href="#state_pools_go" style="color: inherit; text-decoration: inherit;">Pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterpool">[]Kubernetes<wbr>Cluster<wbr>Pool</a></span>
+    </dt>
+    <dd>{{% md %}}A list of node pools associated with the cluster. Each node pool exports the following attributes:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ready_go">
 <a href="#state_ready_go" style="color: inherit; text-decoration: inherit;">Ready</a>
 </span>
@@ -1245,6 +1377,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region for the cluster.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1271,7 +1412,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of each node (The default is currently g2.small)
+    <dd>{{% md %}}The size of each node (The default is currently g3.k3s.small)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1338,7 +1479,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterinstance">Kubernetes<wbr>Cluster<wbr>Instance<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}In addition to the arguments provided, these additional attributes about the cluster's default node instance are exported.
+    <dd>{{% md %}}A list of instance inside the pool
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubeconfig_nodejs">
@@ -1377,6 +1518,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A name for the Kubernetes cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_networkid_nodejs">
+<a href="#state_networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network for the cluster, if not declare we use the default one
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_numtargetnodes_nodejs">
 <a href="#state_numtargetnodes_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Target<wbr>Nodes</a>
 </span>
@@ -1386,6 +1536,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_pools_nodejs">
+<a href="#state_pools_nodejs" style="color: inherit; text-decoration: inherit;">pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterpool">Kubernetes<wbr>Cluster<wbr>Pool<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of node pools associated with the cluster. Each node pool exports the following attributes:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ready_nodejs">
 <a href="#state_ready_nodejs" style="color: inherit; text-decoration: inherit;">ready</a>
 </span>
@@ -1393,6 +1552,15 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region for the cluster.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1419,7 +1587,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of each node (The default is currently g2.small)
+    <dd>{{% md %}}The size of each node (The default is currently g3.k3s.small)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1486,7 +1654,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterinstance">Sequence[Kubernetes<wbr>Cluster<wbr>Instance<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}In addition to the arguments provided, these additional attributes about the cluster's default node instance are exported.
+    <dd>{{% md %}}A list of instance inside the pool
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubeconfig_python">
@@ -1525,6 +1693,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A name for the Kubernetes cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_network_id_python">
+<a href="#state_network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The network for the cluster, if not declare we use the default one
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_num_target_nodes_python">
 <a href="#state_num_target_nodes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>target_<wbr>nodes</a>
 </span>
@@ -1534,6 +1711,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_pools_python">
+<a href="#state_pools_python" style="color: inherit; text-decoration: inherit;">pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterpool">Sequence[Kubernetes<wbr>Cluster<wbr>Pool<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of node pools associated with the cluster. Each node pool exports the following attributes:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ready_python">
 <a href="#state_ready_python" style="color: inherit; text-decoration: inherit;">ready</a>
 </span>
@@ -1541,6 +1727,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region for the cluster.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1567,7 +1762,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The size of each node (The default is currently g2.small)
+    <dd>{{% md %}}The size of each node (The default is currently g3.k3s.small)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1756,15 +1951,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Total cpu of the inatance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="createdat_csharp">
-<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was create.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="diskgb_csharp">
 <a href="#diskgb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Gb</a>
 </span>
@@ -1772,15 +1958,6 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="firewallid_csharp">
-<a href="#firewallid_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The firewall id assigned to the instance
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_csharp">
@@ -1792,31 +1969,13 @@ The following state arguments are supported:
     <dd>{{% md %}}The hostname of the instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="publicip_csharp">
-<a href="#publicip_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The public ip of the instances, only available if the instances is the master
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="rammb_csharp">
 <a href="#rammb_csharp" style="color: inherit; text-decoration: inherit;">Ram<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Total ram of the instance.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="region_csharp">
-<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region where instance are.
+    <dd>{{% md %}}Total ram of the instance
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_csharp">
@@ -1860,15 +2019,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Total cpu of the inatance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="createdat_go">
-<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was create.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="diskgb_go">
 <a href="#diskgb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Gb</a>
 </span>
@@ -1876,15 +2026,6 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="firewallid_go">
-<a href="#firewallid_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The firewall id assigned to the instance
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_go">
@@ -1896,31 +2037,13 @@ The following state arguments are supported:
     <dd>{{% md %}}The hostname of the instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="publicip_go">
-<a href="#publicip_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The public ip of the instances, only available if the instances is the master
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="rammb_go">
 <a href="#rammb_go" style="color: inherit; text-decoration: inherit;">Ram<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Total ram of the instance.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="region_go">
-<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region where instance are.
+    <dd>{{% md %}}Total ram of the instance
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_go">
@@ -1964,15 +2087,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Total cpu of the inatance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="createdat_nodejs">
-<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was create.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="diskgb_nodejs">
 <a href="#diskgb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Gb</a>
 </span>
@@ -1980,15 +2094,6 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the disk.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="firewallid_nodejs">
-<a href="#firewallid_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The firewall id assigned to the instance
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_nodejs">
@@ -2000,31 +2105,13 @@ The following state arguments are supported:
     <dd>{{% md %}}The hostname of the instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="publicip_nodejs">
-<a href="#publicip_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The public ip of the instances, only available if the instances is the master
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="rammb_nodejs">
 <a href="#rammb_nodejs" style="color: inherit; text-decoration: inherit;">ram<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Total ram of the instance.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="region_nodejs">
-<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region where instance are.
+    <dd>{{% md %}}Total ram of the instance
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_nodejs">
@@ -2068,15 +2155,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Total cpu of the inatance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="created_at_python">
-<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was create.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="disk_gb_python">
 <a href="#disk_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>gb</a>
 </span>
@@ -2084,15 +2162,6 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="firewall_id_python">
-<a href="#firewall_id_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The firewall id assigned to the instance
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_python">
@@ -2104,13 +2173,476 @@ The following state arguments are supported:
     <dd>{{% md %}}The hostname of the instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="public_ip_python">
-<a href="#public_ip_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip</a>
+        <span id="ram_mb_python">
+<a href="#ram_mb_python" style="color: inherit; text-decoration: inherit;">ram_<wbr>mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Total ram of the instance
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The public ip of the instances, only available if the instances is the master
+    <dd>{{% md %}}The size of the instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of Kubernetes cluster.
+* `ready` -If the Kubernetes cluster is ready.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A space separated list of tags, to be used freely as required.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="kubernetesclusterpool">Kubernetes<wbr>Cluster<wbr>Pool</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="count_csharp">
+<a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the pool
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the pool
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancenames_csharp">
+<a href="#instancenames_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of the instance in the pool
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instances_csharp">
+<a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterpoolinstance">List&lt;Kubernetes<wbr>Cluster<wbr>Pool<wbr>Instance<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of instance inside the pool
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="count_go">
+<a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the pool
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the pool
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancenames_go">
+<a href="#instancenames_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of the instance in the pool
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instances_go">
+<a href="#instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterpoolinstance">[]Kubernetes<wbr>Cluster<wbr>Pool<wbr>Instance</a></span>
+    </dt>
+    <dd>{{% md %}}A list of instance inside the pool
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="count_nodejs">
+<a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The size of the pool
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the pool
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancenames_nodejs">
+<a href="#instancenames_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of the instance in the pool
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instances_nodejs">
+<a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterpoolinstance">Kubernetes<wbr>Cluster<wbr>Pool<wbr>Instance<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of instance inside the pool
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="count_python">
+<a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the pool
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the pool
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instance_names_python">
+<a href="#instance_names_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of the instance in the pool
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instances_python">
+<a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterpoolinstance">Sequence[Kubernetes<wbr>Cluster<wbr>Pool<wbr>Instance<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of instance inside the pool
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The size of the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="kubernetesclusterpoolinstance">Kubernetes<wbr>Cluster<wbr>Pool<wbr>Instance</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpucores_csharp">
+<a href="#cpucores_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Total cpu of the inatance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="diskgb_csharp">
+<a href="#diskgb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the disk.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hostname_csharp">
+<a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hostname of the instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rammb_csharp">
+<a href="#rammb_csharp" style="color: inherit; text-decoration: inherit;">Ram<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Total ram of the instance
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of Kubernetes cluster.
+* `ready` -If the Kubernetes cluster is ready.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A space separated list of tags, to be used freely as required.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpucores_go">
+<a href="#cpucores_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Total cpu of the inatance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="diskgb_go">
+<a href="#diskgb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the disk.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hostname_go">
+<a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hostname of the instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rammb_go">
+<a href="#rammb_go" style="color: inherit; text-decoration: inherit;">Ram<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Total ram of the instance
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of Kubernetes cluster.
+* `ready` -If the Kubernetes cluster is ready.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A space separated list of tags, to be used freely as required.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpucores_nodejs">
+<a href="#cpucores_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Total cpu of the inatance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="diskgb_nodejs">
+<a href="#diskgb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The size of the disk.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hostname_nodejs">
+<a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hostname of the instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rammb_nodejs">
+<a href="#rammb_nodejs" style="color: inherit; text-decoration: inherit;">ram<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Total ram of the instance
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of Kubernetes cluster.
+* `ready` -If the Kubernetes cluster is ready.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A space separated list of tags, to be used freely as required.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_cores_python">
+<a href="#cpu_cores_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Total cpu of the inatance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disk_gb_python">
+<a href="#disk_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the disk.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hostname_python">
+<a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The hostname of the instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ram_mb_python">
@@ -2119,16 +2651,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Total ram of the instance.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="region_python">
-<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region where instance are.
+    <dd>{{% md %}}Total ram of the instance
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_python">
