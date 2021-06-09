@@ -131,7 +131,7 @@ meta_desc: A list of different environment variables the Pulumi CLI supports.
     </dt>
     <dd>
         <p>
-            Set this environment variable to use a specified backend instead of the default backend.  See [State and Backends]({{< relref "/docs/intro/concepts/state" >}}) for details on valid backend URLs.
+            Set this environment variable to use a specified backend instead of the default backend.  See <a href="/docs/intro/concepts/state">State and Backends</a> for details on valid backend URLs.
         </p>
         <pre><code class="text-xs">PULUMI_BACKEND_URL=s3://your-pulumi-state-bucket</code></pre>
     </dd>
