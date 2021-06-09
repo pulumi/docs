@@ -1,18 +1,18 @@
 {{ define "main" }}
     <div class="container mx-auto px-4 py-8">
-        <div class="md:flex">
+        <div class="lg:flex">
 
-            <div class="md:w-3/12 pr-8">
+            <div class="lg:w-3/12 pr-8">
                 {{ partial "blog/sidebar.html" . }}
             </div>
 
-            <div class="md:w-7/12">
+            <div class="lg:w-7/12">
                 {{ $authorData := index $.Site.Data.team.team .Data.Term }}
                 {{ $paginator := .Paginate .Data.Pages.ByDate.Reverse }}
 
                 <header>
                     <div class="flex items-top">
-                        <span class="rounded-full mr-4 md:mr-6">
+                        <span class="rounded-full mr-4 lg:mr-6">
                             <img class="rounded-full w-32 bg-blue-200 p-1" src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}">
                         </span>
                         <div>
@@ -52,7 +52,7 @@
                 {{ partial "blog/paginator.html" . }}
             </div>
 
-            <div class="md:w-2/12 pl-8">
+            <div class="lg:w-2/12 pl-8">
 
             </div>
         </div>

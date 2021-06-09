@@ -1,11 +1,11 @@
 {{ define "main" }}
     <div class="container mx-auto px-4 py-8">
-        <div class="md:flex">
-            <div class="md:w-3/12 pr-8">
+        <div class="lg:flex">
+            <div class="lg:w-3/12 pr-8">
                 {{ partial "blog/sidebar.html" . }}
             </div>
 
-            <div class="md:w-7/12">
+            <div class="lg:w-7/12">
                 <article class="mb-8 pb-8 border-b border-gray-200">
 
                     {{ if and (.Params.h1) (not .Params.notitle) }}
@@ -39,7 +39,7 @@
                 </article>
             </div>
 
-            <div class="md:w-3/12 md:pl-8">
+            <div class="lg:w-3/12 lg:pl-8">
                 <div class="sticky-sidebar">
                     {{ partial "blog/right-nav.html" . }}
                     {{ partial "right-nav-ad.html" }}

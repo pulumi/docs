@@ -1,12 +1,12 @@
 {{ define "main" }}
     <div class="container mx-auto px-4 pb-8 mt-8">
-        <div class="md:flex">
+        <div class="lg:flex">
 
-            <div class="md:w-3/12 pr-8">
+            <div class="lg:w-3/12 pr-8">
                 {{ partial "blog/sidebar.html" . }}
             </div>
 
-            <div class="md:w-7/12">
+            <div class="lg:w-7/12">
                 {{ $paginator := .Paginate (where .Pages "Type" "blog").ByDate.Reverse }}
                 {{ range $paginator.Pages }}
                     <article class="mb-8 pb-8 border-b border-gray-200">
@@ -30,7 +30,7 @@
                 {{ partial "blog/paginator.html" . }}
             </div>
 
-            <div class="md:w-2/12 pl-8">
+            <div class="lg:w-2/12 pl-8">
 
             </div>
         </div>
