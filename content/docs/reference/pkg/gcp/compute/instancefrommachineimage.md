@@ -174,6 +174,7 @@ const tpl = new gcp.compute.InstanceFromMachineImage("tpl", {
                              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                              <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromMachineImageNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
                              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">reservation_affinity</span><span class="p">:</span> <span class="nx">Optional[InstanceFromMachineImageReservationAffinityArgs]</span> = None<span class="p">,</span>
                              <span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                              <span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[InstanceFromMachineImageSchedulingArgs]</span> = None<span class="p">,</span>
                              <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[InstanceFromMachineImageServiceAccountArgs]</span> = None<span class="p">,</span>
@@ -479,6 +480,15 @@ Changing this forces a new resource to be created.
 self_link nor project are provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="reservationaffinity_csharp">
+<a href="#reservationaffinity_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefrommachineimagereservationaffinity">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the reservations that this instance can consume from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resourcepolicies_csharp">
 <a href="#resourcepolicies_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
 </span>
@@ -706,6 +716,15 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
 self_link nor project are provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reservationaffinity_go">
+<a href="#reservationaffinity_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefrommachineimagereservationaffinity">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the reservations that this instance can consume from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcepolicies_go">
@@ -937,6 +956,15 @@ Changing this forces a new resource to be created.
 self_link nor project are provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="reservationaffinity_nodejs">
+<a href="#reservationaffinity_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefrommachineimagereservationaffinity">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the reservations that this instance can consume from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resourcepolicies_nodejs">
 <a href="#resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
 </span>
@@ -1164,6 +1192,15 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
 self_link nor project are provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reservation_affinity_python">
+<a href="#reservation_affinity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefrommachineimagereservationaffinity">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the reservations that this instance can consume from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_policies_python">
@@ -1678,6 +1715,7 @@ Get an existing InstanceFromMachineImage resource's state with the given name, I
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromMachineImageNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">reservation_affinity</span><span class="p">:</span> <span class="nx">Optional[InstanceFromMachineImageReservationAffinityArgs]</span> = None<span class="p">,</span>
         <span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[InstanceFromMachineImageSchedulingArgs]</span> = None<span class="p">,</span>
         <span class="nx">scratch_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromMachineImageScratchDiskArgs]]</span> = None<span class="p">,</span>
@@ -2022,6 +2060,15 @@ Changing this forces a new resource to be created.
 self_link nor project are provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_reservationaffinity_csharp">
+<a href="#state_reservationaffinity_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefrommachineimagereservationaffinity">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the reservations that this instance can consume from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcepolicies_csharp">
 <a href="#state_resourcepolicies_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
 </span>
@@ -2339,6 +2386,15 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
 self_link nor project are provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_reservationaffinity_go">
+<a href="#state_reservationaffinity_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefrommachineimagereservationaffinity">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the reservations that this instance can consume from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcepolicies_go">
@@ -2660,6 +2716,15 @@ Changing this forces a new resource to be created.
 self_link nor project are provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_reservationaffinity_nodejs">
+<a href="#state_reservationaffinity_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefrommachineimagereservationaffinity">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the reservations that this instance can consume from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcepolicies_nodejs">
 <a href="#state_resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
 </span>
@@ -2977,6 +3042,15 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
 self_link nor project are provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_reservation_affinity_python">
+<a href="#state_reservation_affinity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefrommachineimagereservationaffinity">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the reservations that this instance can consume from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_policies_python">
@@ -4318,6 +4392,170 @@ Changing this forces a new resource to be created.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancefrommachineimagereservationaffinity">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="specificreservation_csharp">
+<a href="#specificreservation_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefrommachineimagereservationaffinityspecificreservation">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="specificreservation_go">
+<a href="#specificreservation_go" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefrommachineimagereservationaffinityspecificreservation">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="specificreservation_nodejs">
+<a href="#specificreservation_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefrommachineimagereservationaffinityspecificreservation">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="specific_reservation_python">
+<a href="#specific_reservation_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefrommachineimagereservationaffinityspecificreservation">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancefrommachineimagereservationaffinityspecificreservation">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

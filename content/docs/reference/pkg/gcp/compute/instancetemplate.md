@@ -660,6 +660,7 @@ const defaultInstanceTemplate = new gcp.compute.InstanceTemplate("defaultInstanc
                      <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceTemplateNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
                      <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">reservation_affinity</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateReservationAffinityArgs]</span> = None<span class="p">,</span>
                      <span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateSchedulingArgs]</span> = None<span class="p">,</span>
                      <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateServiceAccountArgs]</span> = None<span class="p">,</span>
                      <span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateShieldedInstanceConfigArgs]</span> = None<span class="p">,</span>
@@ -967,6 +968,15 @@ resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="reservationaffinity_csharp">
+<a href="#reservationaffinity_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the reservations that this instance can consume from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="scheduling_csharp">
 <a href="#scheduling_csharp" style="color: inherit; text-decoration: inherit;">Scheduling</a>
 </span>
@@ -1181,6 +1191,15 @@ resources in an instance template, which restricts the template to the
 region where that resource resides. For example, a custom `subnetwork`
 resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reservationaffinity_go">
+<a href="#reservationaffinity_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the reservations that this instance can consume from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduling_go">
@@ -1399,6 +1418,15 @@ resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="reservationaffinity_nodejs">
+<a href="#reservationaffinity_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the reservations that this instance can consume from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="scheduling_nodejs">
 <a href="#scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
@@ -1613,6 +1641,15 @@ resources in an instance template, which restricts the template to the
 region where that resource resides. For example, a custom `subnetwork`
 resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reservation_affinity_python">
+<a href="#reservation_affinity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the reservations that this instance can consume from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduling_python">
@@ -1851,6 +1888,7 @@ Get an existing InstanceTemplate resource's state with the given name, ID, and o
         <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceTemplateNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">reservation_affinity</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateReservationAffinityArgs]</span> = None<span class="p">,</span>
         <span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateSchedulingArgs]</span> = None<span class="p">,</span>
         <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateServiceAccountArgs]</span> = None<span class="p">,</span>
@@ -2152,6 +2190,15 @@ resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_reservationaffinity_csharp">
+<a href="#state_reservationaffinity_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the reservations that this instance can consume from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_scheduling_csharp">
 <a href="#state_scheduling_csharp" style="color: inherit; text-decoration: inherit;">Scheduling</a>
 </span>
@@ -2393,6 +2440,15 @@ resources in an instance template, which restricts the template to the
 region where that resource resides. For example, a custom `subnetwork`
 resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_reservationaffinity_go">
+<a href="#state_reservationaffinity_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the reservations that this instance can consume from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduling_go">
@@ -2638,6 +2694,15 @@ resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_reservationaffinity_nodejs">
+<a href="#state_reservationaffinity_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the reservations that this instance can consume from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_scheduling_nodejs">
 <a href="#state_scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
@@ -2879,6 +2944,15 @@ resources in an instance template, which restricts the template to the
 region where that resource resides. For example, a custom `subnetwork`
 resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_reservation_affinity_python">
+<a href="#state_reservation_affinity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the reservations that this instance can consume from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduling_python">
@@ -4359,6 +4433,178 @@ error.
 the secondary range from which to allocate the IP CIDR range for this alias IP
 range. If left unspecified, the primary range of the subnetwork will be used.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="specificreservation_csharp">
+<a href="#specificreservation_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatereservationaffinityspecificreservation">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="specificreservation_go">
+<a href="#specificreservation_go" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatereservationaffinityspecificreservation">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="specificreservation_nodejs">
+<a href="#specificreservation_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatereservationaffinityspecificreservation">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="specific_reservation_python">
+<a href="#specific_reservation_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatereservationaffinityspecificreservation">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancetemplatereservationaffinityspecificreservation">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key for the node affinity label.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key for the node affinity label.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key for the node affinity label.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The key for the node affinity label.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancetemplatescheduling">Instance<wbr>Template<wbr>Scheduling</h4>

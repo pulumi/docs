@@ -1778,7 +1778,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionhealthchecklogconfig">Region<wbr>Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
+    <dd>{{% md %}}Configure logging on this health check.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -1937,7 +1938,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionhealthchecklogconfig">Region<wbr>Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
+    <dd>{{% md %}}Configure logging on this health check.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -2096,7 +2098,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionhealthchecklogconfig">Region<wbr>Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
+    <dd>{{% md %}}Configure logging on this health check.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -2255,7 +2258,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionhealthchecklogconfig">Region<wbr>Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
+    <dd>{{% md %}}Configure logging on this health check.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -2729,7 +2733,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionhealthchecklogconfig">Region<wbr>Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
+    <dd>{{% md %}}Configure logging on this health check.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -2915,7 +2920,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionhealthchecklogconfig">Region<wbr>Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
+    <dd>{{% md %}}Configure logging on this health check.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -3101,7 +3107,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionhealthchecklogconfig">Region<wbr>Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
+    <dd>{{% md %}}Configure logging on this health check.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -3287,7 +3294,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionhealthchecklogconfig">Region<wbr>Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
+    <dd>{{% md %}}Configure logging on this health check.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
