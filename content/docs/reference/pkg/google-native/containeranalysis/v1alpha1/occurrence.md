@@ -37,8 +37,7 @@ Creates a new `Occurrence`. Use this method to create `Occurrences` for a resour
                <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">note_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">occurrences_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">remediation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">resource</span><span class="p">:</span> <span class="nx">Optional[_containeranalysis_v1alpha1.ResourceArgs]</span> = None<span class="p">,</span>
                <span class="nx">resource_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -174,16 +173,8 @@ The Occurrence resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="occurrencesid_csharp">
-<a href="#occurrencesid_csharp" style="color: inherit; text-decoration: inherit;">Occurrences<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectsid_csharp">
-<a href="#projectsid_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -322,16 +313,8 @@ The Occurrence resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="occurrencesid_go">
-<a href="#occurrencesid_go" style="color: inherit; text-decoration: inherit;">Occurrences<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectsid_go">
-<a href="#projectsid_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -470,16 +453,8 @@ The Occurrence resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="occurrencesid_nodejs">
-<a href="#occurrencesid_nodejs" style="color: inherit; text-decoration: inherit;">occurrences<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectsid_nodejs">
-<a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -618,16 +593,8 @@ The Occurrence resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="occurrences_id_python">
-<a href="#occurrences_id_python" style="color: inherit; text-decoration: inherit;">occurrences_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projects_id_python">
-<a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -849,14 +816,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Artifact ID, if any; for container images, this will be a URL by digest like gcr.io/projectID/imagename@sha256:123456{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the artifact. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. This field is deprecated in favor of the plural `names` field; it continues to exist here to allow existing BuildProvenance serialized to json in google.devtools.containeranalysis.v1alpha1.BuildDetails.provenance_bytes to deserialize back into proto.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
 </span>
@@ -884,14 +843,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Artifact ID, if any; for container images, this will be a URL by digest like gcr.io/projectID/imagename@sha256:123456{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the artifact. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. This field is deprecated in favor of the plural `names` field; it continues to exist here to allow existing BuildProvenance serialized to json in google.devtools.containeranalysis.v1alpha1.BuildDetails.provenance_bytes to deserialize back into proto.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
@@ -921,14 +872,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Artifact ID, if any; for container images, this will be a URL by digest like gcr.io/projectID/imagename@sha256:123456{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the artifact. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. This field is deprecated in favor of the plural `names` field; it continues to exist here to allow existing BuildProvenance serialized to json in google.devtools.containeranalysis.v1alpha1.BuildDetails.provenance_bytes to deserialize back into proto.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
@@ -957,14 +900,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Artifact ID, if any; for container images, this will be a URL by digest like gcr.io/projectID/imagename@sha256:123456{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the artifact. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. This field is deprecated in favor of the plural `names` field; it continues to exist here to allow existing BuildProvenance serialized to json in google.devtools.containeranalysis.v1alpha1.BuildDetails.provenance_bytes to deserialize back into proto.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
@@ -987,14 +922,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Hash or checksum value of a binary, or Docker Registry 2.0 digest of a container.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the artifact. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. This field is deprecated in favor of the plural `names` field; it continues to exist here to allow existing BuildProvenance serialized to json in google.devtools.containeranalysis.v1alpha1.BuildDetails.provenance_bytes to deserialize back into proto.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
 </span>
@@ -1014,14 +941,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hash or checksum value of a binary, or Docker Registry 2.0 digest of a container.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the artifact. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. This field is deprecated in favor of the plural `names` field; it continues to exist here to allow existing BuildProvenance serialized to json in google.devtools.containeranalysis.v1alpha1.BuildDetails.provenance_bytes to deserialize back into proto.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
@@ -1043,14 +962,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Hash or checksum value of a binary, or Docker Registry 2.0 digest of a container.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the artifact. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. This field is deprecated in favor of the plural `names` field; it continues to exist here to allow existing BuildProvenance serialized to json in google.devtools.containeranalysis.v1alpha1.BuildDetails.provenance_bytes to deserialize back into proto.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
@@ -1070,14 +981,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hash or checksum value of a binary, or Docker Registry 2.0 digest of a container.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the artifact. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. This field is deprecated in favor of the plural `names` field; it continues to exist here to allow existing BuildProvenance serialized to json in google.devtools.containeranalysis.v1alpha1.BuildDetails.provenance_bytes to deserialize back into proto.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
@@ -1429,8 +1332,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket where logs were written.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1537,8 +1440,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket where logs were written.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1645,8 +1548,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket where logs were written.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1753,8 +1656,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket where logs were written.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1855,8 +1758,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket where logs were written.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1955,8 +1858,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket where logs were written.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2055,8 +1958,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket where logs were written.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2155,8 +2058,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket where logs were written.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3387,15 +3290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CPE of the resource being scanned.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="operation_csharp">
-<a href="#operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operation">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Operation<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}An operation that indicates the status of the current scan. This field is deprecated, do not use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The CPE of the resource being scanned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3431,15 +3326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CPE of the resource being scanned.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="operation_go">
-<a href="#operation_go" style="color: inherit; text-decoration: inherit;">Operation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operation">Operation</a></span>
-    </dt>
-    <dd>{{% md %}}An operation that indicates the status of the current scan. This field is deprecated, do not use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The CPE of the resource being scanned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3475,15 +3362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CPE of the resource being scanned.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="operation_nodejs">
-<a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operation">Operation<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}An operation that indicates the status of the current scan. This field is deprecated, do not use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The CPE of the resource being scanned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3519,15 +3398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The CPE of the resource being scanned.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="operation_python">
-<a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operation">Operation<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}An operation that indicates the status of the current scan. This field is deprecated, do not use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The CPE of the resource being scanned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="discoveredresponse">Discovered<wbr>Response</h4>
@@ -3565,15 +3436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CPE of the resource being scanned.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="operation_csharp">
-<a href="#operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Operation<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}An operation that indicates the status of the current scan. This field is deprecated, do not use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The CPE of the resource being scanned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3609,15 +3472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CPE of the resource being scanned.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="operation_go">
-<a href="#operation_go" style="color: inherit; text-decoration: inherit;">Operation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationresponse">Operation<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}An operation that indicates the status of the current scan. This field is deprecated, do not use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The CPE of the resource being scanned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3653,15 +3508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CPE of the resource being scanned.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="operation_nodejs">
-<a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationresponse">Operation<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}An operation that indicates the status of the current scan. This field is deprecated, do not use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The CPE of the resource being scanned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3697,15 +3544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The CPE of the resource being scanned.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="operation_python">
-<a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationresponse">Operation<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}An operation that indicates the status of the current scan. This field is deprecated, do not use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The CPE of the resource being scanned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="fingerprint">Fingerprint</h4>
@@ -4789,8 +4628,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -4809,8 +4648,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -4829,8 +4668,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -4849,8 +4688,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -4871,8 +4710,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -4891,8 +4730,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -4911,8 +4750,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -4931,8 +4770,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -6124,362 +5963,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The version installed at this location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="operation">Operation</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="done_csharp">
-<a href="#done_csharp" style="color: inherit; text-decoration: inherit;">Done</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="error_csharp">
-<a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#status">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Status<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The error result of the operation in case of failure or cancellation.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="metadata_csharp">
-<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="response_csharp">
-<a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="done_go">
-<a href="#done_go" style="color: inherit; text-decoration: inherit;">Done</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="error_go">
-<a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#status">Status</a></span>
-    </dt>
-    <dd>{{% md %}}The error result of the operation in case of failure or cancellation.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="metadata_go">
-<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="response_go">
-<a href="#response_go" style="color: inherit; text-decoration: inherit;">Response</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="done_nodejs">
-<a href="#done_nodejs" style="color: inherit; text-decoration: inherit;">done</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="error_nodejs">
-<a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#status">Status<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The error result of the operation in case of failure or cancellation.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="metadata_nodejs">
-<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="response_nodejs">
-<a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="done_python">
-<a href="#done_python" style="color: inherit; text-decoration: inherit;">done</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="error_python">
-<a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#status">Status<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The error result of the operation in case of failure or cancellation.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="metadata_python">
-<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="response_python">
-<a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="operationresponse">Operation<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="done_csharp">
-<a href="#done_csharp" style="color: inherit; text-decoration: inherit;">Done</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="error_csharp">
-<a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Status<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The error result of the operation in case of failure or cancellation.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="metadata_csharp">
-<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="response_csharp">
-<a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="done_go">
-<a href="#done_go" style="color: inherit; text-decoration: inherit;">Done</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="error_go">
-<a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusresponse">Status<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The error result of the operation in case of failure or cancellation.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="metadata_go">
-<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="response_go">
-<a href="#response_go" style="color: inherit; text-decoration: inherit;">Response</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="done_nodejs">
-<a href="#done_nodejs" style="color: inherit; text-decoration: inherit;">done</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="error_nodejs">
-<a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusresponse">Status<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The error result of the operation in case of failure or cancellation.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="metadata_nodejs">
-<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="response_nodejs">
-<a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="done_python">
-<a href="#done_python" style="color: inherit; text-decoration: inherit;">done</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="error_python">
-<a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusresponse">Status<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The error result of the operation in case of failure or cancellation.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="metadata_python">
-<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="response_python">
-<a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="packageissue">Package<wbr>Issue</h4>
 
 {{% choosable language csharp %}}
@@ -6957,8 +6440,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Explicit commit SHA to build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -7001,8 +6484,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Explicit commit SHA to build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -7045,8 +6528,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Explicit commit SHA to build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -7089,8 +6572,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Explicit commit SHA to build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -7135,8 +6618,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Explicit commit SHA to build.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -7179,8 +6662,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Explicit commit SHA to build.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -7223,8 +6706,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Explicit commit SHA to build.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -7267,8 +6750,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Explicit commit SHA to build.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

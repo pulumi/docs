@@ -29,7 +29,6 @@ Creates a new bucket.
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
            <span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[Sequence[_storage_v1.BucketAccessControlArgs]]</span> = None<span class="p">,</span>
            <span class="nx">billing</span><span class="p">:</span> <span class="nx">Optional[_storage_v1.BucketBillingArgs]</span> = None<span class="p">,</span>
-           <span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[_storage_v1.BucketCorsItemArgs]]</span> = None<span class="p">,</span>
            <span class="nx">default_event_based_hold</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">default_object_acl</span><span class="p">:</span> <span class="nx">Optional[Sequence[_storage_v1.ObjectAccessControlArgs]]</span> = None<span class="p">,</span>
@@ -190,14 +189,6 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="bucket_csharp">
-<a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -475,14 +466,6 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="bucket_go">
-<a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -759,14 +742,6 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="bucket_nodejs">
-<a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -1042,14 +1017,6 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="bucket_python">
-<a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>

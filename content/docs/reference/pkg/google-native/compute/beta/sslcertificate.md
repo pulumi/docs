@@ -41,7 +41,6 @@ Creates a SslCertificate resource in the specified project using the data includ
                    <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">self_managed</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.SslCertificateSelfManagedSslCertificateArgs]</span> = None<span class="p">,</span>
-                   <span class="nx">ssl_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">subject_alternative_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                    <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -179,14 +178,6 @@ The SslCertificate resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sslcertificate_csharp">
-<a href="#sslcertificate_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
@@ -315,14 +306,6 @@ The SslCertificate resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sslcertificate_go">
-<a href="#sslcertificate_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -459,14 +442,6 @@ The SslCertificate resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sslcertificate_nodejs">
-<a href="#sslcertificate_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Certificate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
@@ -595,14 +570,6 @@ The SslCertificate resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ssl_certificate_python">
-<a href="#ssl_certificate_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

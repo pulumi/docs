@@ -36,7 +36,6 @@ Creates an image in the specified project using the data included in the request
           <span class="nx">force_create</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">guest_os_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.GuestOsFeatureArgs]]</span> = None<span class="p">,</span>
           <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-          <span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">image_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
           <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -192,14 +191,6 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="image_csharp">
-<a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -517,14 +508,6 @@ In order to create an image, you must provide the full or partial URL of one of 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="image_go">
-<a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -841,14 +824,6 @@ In order to create an image, you must provide the full or partial URL of one of 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="image_nodejs">
-<a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -1164,14 +1139,6 @@ In order to create an image, you must provide the full or partial URL of one of 
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="image_python">
-<a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2644,14 +2611,6 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
     </dt>
     <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="sha1checksum_csharp">
-<a href="#sha1checksum_csharp" style="color: inherit; text-decoration: inherit;">Sha1Checksum</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
@@ -2671,14 +2630,6 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sha1checksum_go">
-<a href="#sha1checksum_go" style="color: inherit; text-decoration: inherit;">Sha1Checksum</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2700,14 +2651,6 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
     </dt>
     <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="sha1checksum_nodejs">
-<a href="#sha1checksum_nodejs" style="color: inherit; text-decoration: inherit;">sha1Checksum</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
@@ -2727,14 +2670,6 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sha1_checksum_python">
-<a href="#sha1_checksum_python" style="color: inherit; text-decoration: inherit;">sha1_<wbr>checksum</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2758,14 +2693,6 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
     </dt>
     <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="sha1checksum_csharp">
-<a href="#sha1checksum_csharp" style="color: inherit; text-decoration: inherit;">Sha1Checksum</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
@@ -2785,14 +2712,6 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sha1checksum_go">
-<a href="#sha1checksum_go" style="color: inherit; text-decoration: inherit;">Sha1Checksum</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2814,14 +2733,6 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
     </dt>
     <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="sha1checksum_nodejs">
-<a href="#sha1checksum_nodejs" style="color: inherit; text-decoration: inherit;">sha1Checksum</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
@@ -2841,14 +2752,6 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sha1_checksum_python">
-<a href="#sha1_checksum_python" style="color: inherit; text-decoration: inherit;">sha1_<wbr>checksum</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>

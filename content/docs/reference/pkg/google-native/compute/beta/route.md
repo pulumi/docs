@@ -45,7 +45,6 @@ Creates a Route resource in the specified project using the data included in the
           <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-          <span class="nx">route</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
           <span class="nx">warnings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.RouteWarningsItemArgs]]</span> = None<span class="p">)</span>
@@ -180,14 +179,6 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="route_csharp">
-<a href="#route_csharp" style="color: inherit; text-decoration: inherit;">Route</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -368,14 +359,6 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="route_go">
-<a href="#route_go" style="color: inherit; text-decoration: inherit;">Route</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_go">
@@ -552,14 +535,6 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="route_nodejs">
-<a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_nodejs">
@@ -732,14 +707,6 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="route_python">
-<a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

@@ -43,8 +43,7 @@ Creates a UrlMap resource in the specified project using the data included in th
            <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-           <span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.UrlMapTestArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">url_map</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+           <span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.UrlMapTestArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">UrlMap</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UrlMapArgs</a></span><span class="p">,</span>
@@ -176,14 +175,6 @@ The UrlMap resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="urlmap_csharp">
-<a href="#urlmap_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -341,14 +332,6 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="urlmap_go">
-<a href="#urlmap_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Map</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_go">
@@ -502,14 +485,6 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="urlmap_nodejs">
-<a href="#urlmap_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Map</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_nodejs">
@@ -659,14 +634,6 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="url_map_python">
-<a href="#url_map_python" style="color: inherit; text-decoration: inherit;">url_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -8649,14 +8616,6 @@ expectedOutputUrl is optional when service is specified.{{% /md %}}</dd><dt clas
     <dd>{{% md %}}For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer's redirect response.
 expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="expectedurlredirect_csharp">
-<a href="#expectedurlredirect_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Url<wbr>Redirect</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
@@ -8729,14 +8688,6 @@ expectedOutputUrl is optional when service is specified.{{% /md %}}</dd><dt clas
     </dt>
     <dd>{{% md %}}For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer's redirect response.
 expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="expectedurlredirect_go">
-<a href="#expectedurlredirect_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Url<wbr>Redirect</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -8811,14 +8762,6 @@ expectedOutputUrl is optional when service is specified.{{% /md %}}</dd><dt clas
     <dd>{{% md %}}For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer's redirect response.
 expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="expectedurlredirect_nodejs">
-<a href="#expectedurlredirect_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Url<wbr>Redirect</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
@@ -8891,14 +8834,6 @@ expectedOutputUrl is optional when service is specified.{{% /md %}}</dd><dt clas
     </dt>
     <dd>{{% md %}}For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer's redirect response.
 expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="expected_url_redirect_python">
-<a href="#expected_url_redirect_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>url_<wbr>redirect</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -9139,14 +9074,6 @@ expectedOutputUrl is optional when service is specified.{{% /md %}}</dd><dt clas
     <dd>{{% md %}}For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer's redirect response.
 expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="expectedurlredirect_csharp">
-<a href="#expectedurlredirect_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Url<wbr>Redirect</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
@@ -9219,14 +9146,6 @@ expectedOutputUrl is optional when service is specified.{{% /md %}}</dd><dt clas
     </dt>
     <dd>{{% md %}}For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer's redirect response.
 expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="expectedurlredirect_go">
-<a href="#expectedurlredirect_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Url<wbr>Redirect</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -9301,14 +9220,6 @@ expectedOutputUrl is optional when service is specified.{{% /md %}}</dd><dt clas
     <dd>{{% md %}}For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer's redirect response.
 expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="expectedurlredirect_nodejs">
-<a href="#expectedurlredirect_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Url<wbr>Redirect</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
@@ -9381,14 +9292,6 @@ expectedOutputUrl is optional when service is specified.{{% /md %}}</dd><dt clas
     </dt>
     <dd>{{% md %}}For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer's redirect response.
 expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="expected_url_redirect_python">
-<a href="#expected_url_redirect_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>url_<wbr>redirect</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>

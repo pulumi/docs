@@ -15,10 +15,6 @@ Explore the resources and functions of the google-native.dlp/v2 module.
     <li><a href="dlpjob" title="DlpJob"><span class="symbol resource"></span>DlpJob</a></li>
     <li><a href="inspecttemplate" title="InspectTemplate"><span class="symbol resource"></span>InspectTemplate</a></li>
     <li><a href="jobtrigger" title="JobTrigger"><span class="symbol resource"></span>JobTrigger</a></li>
-    <li><a href="organizationdeidentifytemplate" title="OrganizationDeidentifyTemplate"><span class="symbol resource"></span>OrganizationDeidentifyTemplate</a></li>
-    <li><a href="organizationinspecttemplate" title="OrganizationInspectTemplate"><span class="symbol resource"></span>OrganizationInspectTemplate</a></li>
-    <li><a href="organizationjobtrigger" title="OrganizationJobTrigger"><span class="symbol resource"></span>OrganizationJobTrigger</a></li>
-    <li><a href="organizationstoredinfotype" title="OrganizationStoredInfoType"><span class="symbol resource"></span>OrganizationStoredInfoType</a></li>
     <li><a href="storedinfotype" title="StoredInfoType"><span class="symbol resource"></span>StoredInfoType</a></li>
 </ul>
 
@@ -29,6 +25,6 @@ Explore the resources and functions of the google-native.dlp/v2 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

@@ -29,8 +29,8 @@ Sets the access control policy on the specified resource. Replaces any existing 
                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                      <span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_managedidentities_v1alpha1.BindingArgs]]</span> = None<span class="p">,</span>
                      <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">peerings_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">peering_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">PeeringIamPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -161,16 +161,16 @@ The PeeringIamPolicy resource accepts the following [input]({{< relref "/docs/in
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="peeringsid_csharp">
-<a href="#peeringsid_csharp" style="color: inherit; text-decoration: inherit;">Peerings<wbr>Id</a>
+        <span id="peeringid_csharp">
+<a href="#peeringid_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_csharp">
-<a href="#projectsid_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -205,16 +205,16 @@ The PeeringIamPolicy resource accepts the following [input]({{< relref "/docs/in
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="peeringsid_go">
-<a href="#peeringsid_go" style="color: inherit; text-decoration: inherit;">Peerings<wbr>Id</a>
+        <span id="peeringid_go">
+<a href="#peeringid_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_go">
-<a href="#projectsid_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -249,16 +249,16 @@ The PeeringIamPolicy resource accepts the following [input]({{< relref "/docs/in
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="peeringsid_nodejs">
-<a href="#peeringsid_nodejs" style="color: inherit; text-decoration: inherit;">peerings<wbr>Id</a>
+        <span id="peeringid_nodejs">
+<a href="#peeringid_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_nodejs">
-<a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -293,16 +293,16 @@ The PeeringIamPolicy resource accepts the following [input]({{< relref "/docs/in
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="peerings_id_python">
-<a href="#peerings_id_python" style="color: inherit; text-decoration: inherit;">peerings_<wbr>id</a>
+        <span id="peering_id_python">
+<a href="#peering_id_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projects_id_python">
-<a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

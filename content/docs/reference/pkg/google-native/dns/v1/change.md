@@ -28,7 +28,6 @@ Atomically updates the ResourceRecordSet collection.
 <span class="k">def </span><span class="nx">Change</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
            <span class="nx">additions</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dns_v1.ResourceRecordSetArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">change_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">client_operation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">deletions</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dns_v1.ResourceRecordSetArgs]]</span> = None<span class="p">,</span>
            <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -167,14 +166,6 @@ The Change resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="changeid_csharp">
-<a href="#changeid_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="managedzone_csharp">
 <a href="#managedzone_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Zone</a>
 </span>
@@ -258,14 +249,6 @@ The Change resource accepts the following [input]({{< relref "/docs/intro/concep
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="changeid_go">
-<a href="#changeid_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managedzone_go">
 <a href="#managedzone_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Zone</a>
@@ -351,14 +334,6 @@ The Change resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="changeid_nodejs">
-<a href="#changeid_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="managedzone_nodejs">
 <a href="#managedzone_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Zone</a>
 </span>
@@ -442,14 +417,6 @@ The Change resource accepts the following [input]({{< relref "/docs/intro/concep
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="change_id_python">
-<a href="#change_id_python" style="color: inherit; text-decoration: inherit;">change_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managed_zone_python">
 <a href="#managed_zone_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>zone</a>

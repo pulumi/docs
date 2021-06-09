@@ -38,8 +38,7 @@ Creates a TargetSslProxy resource in the specified project using the data includ
                    <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">ssl_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">target_ssl_proxy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                   <span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TargetSslProxy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TargetSslProxyArgs</a></span><span class="p">,</span>
@@ -175,14 +174,6 @@ The TargetSslProxy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targetsslproxy_csharp">
-<a href="#targetsslproxy_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Ssl<wbr>Proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_csharp">
@@ -279,14 +270,6 @@ The TargetSslProxy resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targetsslproxy_go">
-<a href="#targetsslproxy_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Ssl<wbr>Proxy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -391,14 +374,6 @@ The TargetSslProxy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targetsslproxy_nodejs">
-<a href="#targetsslproxy_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Ssl<wbr>Proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_nodejs">
@@ -495,14 +470,6 @@ The TargetSslProxy resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="target_ssl_proxy_python">
-<a href="#target_ssl_proxy_python" style="color: inherit; text-decoration: inherit;">target_<wbr>ssl_<wbr>proxy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

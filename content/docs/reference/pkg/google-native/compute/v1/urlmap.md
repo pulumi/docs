@@ -43,8 +43,7 @@ Creates a UrlMap resource in the specified project using the data included in th
            <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-           <span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_v1.UrlMapTestArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">url_map</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+           <span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_v1.UrlMapTestArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">UrlMap</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UrlMapArgs</a></span><span class="p">,</span>
@@ -176,14 +175,6 @@ The UrlMap resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="urlmap_csharp">
-<a href="#urlmap_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -341,14 +332,6 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="urlmap_go">
-<a href="#urlmap_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Map</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_go">
@@ -502,14 +485,6 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="urlmap_nodejs">
-<a href="#urlmap_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Map</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_nodejs">
@@ -659,14 +634,6 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="url_map_python">
-<a href="#url_map_python" style="color: inherit; text-decoration: inherit;">url_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

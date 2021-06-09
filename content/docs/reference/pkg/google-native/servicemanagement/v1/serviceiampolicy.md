@@ -30,7 +30,7 @@ Sets the access control policy on the specified resource. Replaces any existing 
                      <span class="nx">audit_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_servicemanagement_v1.AuditConfigArgs]]</span> = None<span class="p">,</span>
                      <span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_servicemanagement_v1.BindingArgs]]</span> = None<span class="p">,</span>
                      <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">services_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">update_mask</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -162,8 +162,8 @@ The ServiceIamPolicy resource accepts the following [input]({{< relref "/docs/in
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="servicesid_csharp">
-<a href="#servicesid_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Id</a>
+        <span id="serviceid_csharp">
+<a href="#serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -214,8 +214,8 @@ The ServiceIamPolicy resource accepts the following [input]({{< relref "/docs/in
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="servicesid_go">
-<a href="#servicesid_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Id</a>
+        <span id="serviceid_go">
+<a href="#serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -266,8 +266,8 @@ The ServiceIamPolicy resource accepts the following [input]({{< relref "/docs/in
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="servicesid_nodejs">
-<a href="#servicesid_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Id</a>
+        <span id="serviceid_nodejs">
+<a href="#serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -318,8 +318,8 @@ The ServiceIamPolicy resource accepts the following [input]({{< relref "/docs/in
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="services_id_python">
-<a href="#services_id_python" style="color: inherit; text-decoration: inherit;">services_<wbr>id</a>
+        <span id="service_id_python">
+<a href="#service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

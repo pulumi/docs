@@ -13,8 +13,8 @@ Explore the resources and functions of the google-native.datalabeling/v1beta1 mo
 <ul class="api">
     <li><a href="annotationspecset" title="AnnotationSpecSet"><span class="symbol resource"></span>AnnotationSpecSet</a></li>
     <li><a href="dataset" title="Dataset"><span class="symbol resource"></span>Dataset</a></li>
-    <li><a href="datasetannotateddatasetfeedbackthreadfeedbackmessage" title="DatasetAnnotatedDatasetFeedbackThreadFeedbackMessage"><span class="symbol resource"></span>DatasetAnnotatedDatasetFeedbackThreadFeedbackMessage</a></li>
     <li><a href="evaluationjob" title="EvaluationJob"><span class="symbol resource"></span>EvaluationJob</a></li>
+    <li><a href="feedbackmessage" title="FeedbackMessage"><span class="symbol resource"></span>FeedbackMessage</a></li>
     <li><a href="instruction" title="Instruction"><span class="symbol resource"></span>Instruction</a></li>
 </ul>
 
@@ -25,6 +25,6 @@ Explore the resources and functions of the google-native.datalabeling/v1beta1 mo
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

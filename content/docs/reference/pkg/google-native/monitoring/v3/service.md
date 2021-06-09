@@ -36,7 +36,6 @@ Create a Service.
             <span class="nx">mesh_istio</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.MeshIstioArgs]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">services_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">telemetry</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.TelemetryArgs]</span> = None<span class="p">,</span>
             <span class="nx">v3_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">v3_id1</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -169,14 +168,6 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="servicesid_csharp">
-<a href="#servicesid_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="v3id_csharp">
 <a href="#v3id_csharp" style="color: inherit; text-decoration: inherit;">V3Id</a>
 </span>
@@ -276,14 +267,6 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="servicesid_go">
-<a href="#servicesid_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="v3id_go">
 <a href="#v3id_go" style="color: inherit; text-decoration: inherit;">V3Id</a>
@@ -385,14 +368,6 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="servicesid_nodejs">
-<a href="#servicesid_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="v3id_nodejs">
 <a href="#v3id_nodejs" style="color: inherit; text-decoration: inherit;">v3Id</a>
 </span>
@@ -492,14 +467,6 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="services_id_python">
-<a href="#services_id_python" style="color: inherit; text-decoration: inherit;">services_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="v3_id_python">
 <a href="#v3_id_python" style="color: inherit; text-decoration: inherit;">v3_<wbr>id</a>

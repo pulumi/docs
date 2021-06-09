@@ -11,7 +11,7 @@ Explore the resources and functions of the google-native.workflowexecutions/v1be
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="workflowexecution" title="WorkflowExecution"><span class="symbol resource"></span>WorkflowExecution</a></li>
+    <li><a href="execution" title="Execution"><span class="symbol resource"></span>Execution</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -21,6 +21,6 @@ Explore the resources and functions of the google-native.workflowexecutions/v1be
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

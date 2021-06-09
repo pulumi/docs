@@ -34,7 +34,6 @@ Creates a new Response Policy Rule.
                        <span class="nx">local_data</span><span class="p">:</span> <span class="nx">Optional[_dns_v1beta2.ResponsePolicyRuleLocalDataArgs]</span> = None<span class="p">,</span>
                        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">response_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">response_policy_rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ResponsePolicyRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -179,14 +178,6 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="responsepolicyrule_csharp">
-<a href="#responsepolicyrule_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Policy<wbr>Rule</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="behavior_csharp">
@@ -251,14 +242,6 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="responsepolicy_go">
 <a href="#responsepolicy_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="responsepolicyrule_go">
-<a href="#responsepolicyrule_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Policy<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -331,14 +314,6 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="responsepolicyrule_nodejs">
-<a href="#responsepolicyrule_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Policy<wbr>Rule</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="behavior_nodejs">
@@ -403,14 +378,6 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="response_policy_python">
 <a href="#response_policy_python" style="color: inherit; text-decoration: inherit;">response_<wbr>policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="response_policy_rule_python">
-<a href="#response_policy_rule_python" style="color: inherit; text-decoration: inherit;">response_<wbr>policy_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

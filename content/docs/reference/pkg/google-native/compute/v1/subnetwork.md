@@ -48,8 +48,7 @@ Creates a subnetwork in the specified project using the data included in the req
                <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">secondary_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_v1.SubnetworkSecondaryRangeArgs]]</span> = None<span class="p">,</span>
                <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+               <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Subnetwork</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SubnetworkArgs</a></span><span class="p">,</span>
@@ -193,15 +192,7 @@ The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL of the region where the Subnetwork resides. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnetwork_csharp">
-<a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}URL of the region where the Subnetwork resides. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -385,15 +376,7 @@ This field can be both set at resource creation time and updated using patch.{{%
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL of the region where the Subnetwork resides. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnetwork_go">
-<a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}URL of the region where the Subnetwork resides. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -577,15 +560,7 @@ This field can be both set at resource creation time and updated using patch.{{%
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL of the region where the Subnetwork resides. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnetwork_nodejs">
-<a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}URL of the region where the Subnetwork resides. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -769,15 +744,7 @@ This field can be both set at resource creation time and updated using patch.{{%
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URL of the region where the Subnetwork resides. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnetwork_python">
-<a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}URL of the region where the Subnetwork resides. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>

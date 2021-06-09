@@ -32,9 +32,8 @@ Creates a new custom Role.
                      <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">included_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">organization_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">role_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">roles_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">stage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -166,16 +165,8 @@ The OrganizationRole resource accepts the following [input]({{< relref "/docs/in
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="organizationsid_csharp">
-<a href="#organizationsid_csharp" style="color: inherit; text-decoration: inherit;">Organizations<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rolesid_csharp">
-<a href="#rolesid_csharp" style="color: inherit; text-decoration: inherit;">Roles<wbr>Id</a>
+        <span id="organizationid_csharp">
+<a href="#organizationid_csharp" style="color: inherit; text-decoration: inherit;">Organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -250,16 +241,8 @@ The OrganizationRole resource accepts the following [input]({{< relref "/docs/in
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="organizationsid_go">
-<a href="#organizationsid_go" style="color: inherit; text-decoration: inherit;">Organizations<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rolesid_go">
-<a href="#rolesid_go" style="color: inherit; text-decoration: inherit;">Roles<wbr>Id</a>
+        <span id="organizationid_go">
+<a href="#organizationid_go" style="color: inherit; text-decoration: inherit;">Organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -334,16 +317,8 @@ The OrganizationRole resource accepts the following [input]({{< relref "/docs/in
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="organizationsid_nodejs">
-<a href="#organizationsid_nodejs" style="color: inherit; text-decoration: inherit;">organizations<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rolesid_nodejs">
-<a href="#rolesid_nodejs" style="color: inherit; text-decoration: inherit;">roles<wbr>Id</a>
+        <span id="organizationid_nodejs">
+<a href="#organizationid_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -418,16 +393,8 @@ The OrganizationRole resource accepts the following [input]({{< relref "/docs/in
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="organizations_id_python">
-<a href="#organizations_id_python" style="color: inherit; text-decoration: inherit;">organizations_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="roles_id_python">
-<a href="#roles_id_python" style="color: inherit; text-decoration: inherit;">roles_<wbr>id</a>
+        <span id="organization_id_python">
+<a href="#organization_id_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

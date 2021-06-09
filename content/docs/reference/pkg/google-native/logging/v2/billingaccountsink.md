@@ -28,7 +28,7 @@ Creates a sink that exports specified log entries to a destination. The export o
 <span class="k">def </span><span class="nx">BillingAccountSink</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                        <span class="nx">bigquery_options</span><span class="p">:</span> <span class="nx">Optional[_logging_v2.BigQueryOptionsArgs]</span> = None<span class="p">,</span>
-                       <span class="nx">billing_accounts_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">billing_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -36,7 +36,6 @@ Creates a sink that exports specified log entries to a destination. The export o
                        <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">include_children</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">sinks_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">unique_writer_identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">BillingAccountSink</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -167,16 +166,8 @@ The BillingAccountSink resource accepts the following [input]({{< relref "/docs/
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billingaccountsid_csharp">
-<a href="#billingaccountsid_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Accounts<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sinksid_csharp">
-<a href="#sinksid_csharp" style="color: inherit; text-decoration: inherit;">Sinks<wbr>Id</a>
+        <span id="billingaccountid_csharp">
+<a href="#billingaccountid_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -259,16 +250,8 @@ The BillingAccountSink resource accepts the following [input]({{< relref "/docs/
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billingaccountsid_go">
-<a href="#billingaccountsid_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Accounts<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sinksid_go">
-<a href="#sinksid_go" style="color: inherit; text-decoration: inherit;">Sinks<wbr>Id</a>
+        <span id="billingaccountid_go">
+<a href="#billingaccountid_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -351,16 +334,8 @@ The BillingAccountSink resource accepts the following [input]({{< relref "/docs/
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billingaccountsid_nodejs">
-<a href="#billingaccountsid_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Accounts<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sinksid_nodejs">
-<a href="#sinksid_nodejs" style="color: inherit; text-decoration: inherit;">sinks<wbr>Id</a>
+        <span id="billingaccountid_nodejs">
+<a href="#billingaccountid_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -443,16 +418,8 @@ The BillingAccountSink resource accepts the following [input]({{< relref "/docs/
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billing_accounts_id_python">
-<a href="#billing_accounts_id_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>accounts_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sinks_id_python">
-<a href="#sinks_id_python" style="color: inherit; text-decoration: inherit;">sinks_<wbr>id</a>
+        <span id="billing_account_id_python">
+<a href="#billing_account_id_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

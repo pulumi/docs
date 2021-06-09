@@ -11,7 +11,7 @@ Explore the resources and functions of the google-native.recommendationengine/v1
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="catalogcatalogitem" title="CatalogCatalogItem"><span class="symbol resource"></span>CatalogCatalogItem</a></li>
+    <li><a href="catalogitem" title="CatalogItem"><span class="symbol resource"></span>CatalogItem</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -21,6 +21,6 @@ Explore the resources and functions of the google-native.recommendationengine/v1
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

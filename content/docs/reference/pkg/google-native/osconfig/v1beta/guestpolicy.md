@@ -30,12 +30,11 @@ Create an OS Config guest policy.
                 <span class="nx">assignment</span><span class="p">:</span> <span class="nx">Optional[_osconfig_v1beta.AssignmentArgs]</span> = None<span class="p">,</span>
                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">guest_policies_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">guest_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">package_repositories</span><span class="p">:</span> <span class="nx">Optional[Sequence[_osconfig_v1beta.PackageRepositoryArgs]]</span> = None<span class="p">,</span>
                 <span class="nx">packages</span><span class="p">:</span> <span class="nx">Optional[Sequence[_osconfig_v1beta.PackageArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">recipes</span><span class="p">:</span> <span class="nx">Optional[Sequence[_osconfig_v1beta.SoftwareRecipeArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">GuestPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -166,14 +165,6 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="guestpoliciesid_csharp">
-<a href="#guestpoliciesid_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Policies<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="guestpolicyid_csharp">
 <a href="#guestpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Policy<wbr>Id</a>
 </span>
@@ -182,8 +173,8 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_csharp">
-<a href="#projectsid_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -250,14 +241,6 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="guestpoliciesid_go">
-<a href="#guestpoliciesid_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Policies<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="guestpolicyid_go">
 <a href="#guestpolicyid_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Policy<wbr>Id</a>
 </span>
@@ -266,8 +249,8 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_go">
-<a href="#projectsid_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -334,14 +317,6 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="guestpoliciesid_nodejs">
-<a href="#guestpoliciesid_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Policies<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="guestpolicyid_nodejs">
 <a href="#guestpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Policy<wbr>Id</a>
 </span>
@@ -350,8 +325,8 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_nodejs">
-<a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -418,14 +393,6 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="guest_policies_id_python">
-<a href="#guest_policies_id_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>policies_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="guest_policy_id_python">
 <a href="#guest_policy_id_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>policy_<wbr>id</a>
 </span>
@@ -434,8 +401,8 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projects_id_python">
-<a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

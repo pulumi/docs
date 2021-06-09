@@ -39,7 +39,6 @@ A managed instance group can have up to 1000 VM instances per group. Please cont
                          <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">instance_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">instance_group_manager</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">instance_lifecycle_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.InstanceGroupManagerInstanceLifecyclePolicyArgs]</span> = None<span class="p">,</span>
                          <span class="nx">instance_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -188,14 +187,6 @@ The InstanceGroupManager resource accepts the following [input]({{< relref "/doc
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="instancegroupmanager_csharp">
-<a href="#instancegroupmanager_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group<wbr>Manager</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -449,14 +440,6 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="instancegroupmanager_go">
-<a href="#instancegroupmanager_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group<wbr>Manager</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -709,14 +692,6 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="instancegroupmanager_nodejs">
-<a href="#instancegroupmanager_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Group<wbr>Manager</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -968,14 +943,6 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="instance_group_manager_python">
-<a href="#instance_group_manager_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>manager</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -3480,14 +3447,6 @@ If metadataBasedReadinessSignal.timeoutSec is unset, the Instance Group Manager 
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="isstateful_csharp">
-<a href="#isstateful_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Stateful</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions. This field is deprecated in favor of has_stateful_config.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="perinstanceconfigs_csharp">
 <a href="#perinstanceconfigs_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Instance<wbr>Configs</a>
 </span>
@@ -3507,14 +3466,6 @@ If metadataBasedReadinessSignal.timeoutSec is unset, the Instance Group Manager 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="isstateful_go">
-<a href="#isstateful_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Stateful</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions. This field is deprecated in favor of has_stateful_config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="perinstanceconfigs_go">
 <a href="#perinstanceconfigs_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Instance<wbr>Configs</a>
@@ -3536,14 +3487,6 @@ If metadataBasedReadinessSignal.timeoutSec is unset, the Instance Group Manager 
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="isstateful_nodejs">
-<a href="#isstateful_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Stateful</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions. This field is deprecated in favor of has_stateful_config.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="perinstanceconfigs_nodejs">
 <a href="#perinstanceconfigs_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Instance<wbr>Configs</a>
 </span>
@@ -3563,14 +3506,6 @@ If metadataBasedReadinessSignal.timeoutSec is unset, the Instance Group Manager 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="is_stateful_python">
-<a href="#is_stateful_python" style="color: inherit; text-decoration: inherit;">is_<wbr>stateful</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions. This field is deprecated in favor of has_stateful_config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="per_instance_configs_python">
 <a href="#per_instance_configs_python" style="color: inherit; text-decoration: inherit;">per_<wbr>instance_<wbr>configs</a>
@@ -3694,14 +3629,6 @@ If metadataBasedReadinessSignal.timeoutSec is unset, the Instance Group Manager 
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="isstateful_csharp">
-<a href="#isstateful_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Stateful</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions. This field is deprecated in favor of has_stateful_config.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="perinstanceconfigs_csharp">
 <a href="#perinstanceconfigs_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Instance<wbr>Configs</a>
 </span>
@@ -3721,14 +3648,6 @@ If metadataBasedReadinessSignal.timeoutSec is unset, the Instance Group Manager 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="isstateful_go">
-<a href="#isstateful_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Stateful</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions. This field is deprecated in favor of has_stateful_config.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="perinstanceconfigs_go">
 <a href="#perinstanceconfigs_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Instance<wbr>Configs</a>
@@ -3750,14 +3669,6 @@ If metadataBasedReadinessSignal.timeoutSec is unset, the Instance Group Manager 
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="isstateful_nodejs">
-<a href="#isstateful_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Stateful</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions. This field is deprecated in favor of has_stateful_config.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="perinstanceconfigs_nodejs">
 <a href="#perinstanceconfigs_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Instance<wbr>Configs</a>
 </span>
@@ -3777,14 +3688,6 @@ If metadataBasedReadinessSignal.timeoutSec is unset, the Instance Group Manager 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="is_stateful_python">
-<a href="#is_stateful_python" style="color: inherit; text-decoration: inherit;">is_<wbr>stateful</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions. This field is deprecated in favor of has_stateful_config.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="per_instance_configs_python">
 <a href="#per_instance_configs_python" style="color: inherit; text-decoration: inherit;">per_<wbr>instance_<wbr>configs</a>
@@ -4544,14 +4447,6 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
     </dt>
     <dd>{{% md %}}Name of the version. Unique among all versions in the scope of this managed instance group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tag_csharp">
-<a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of 'name'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="targetsize_csharp">
 <a href="#targetsize_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Size</a>
 </span>
@@ -4581,14 +4476,6 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the version. Unique among all versions in the scope of this managed instance group.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tag_go">
-<a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of 'name'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetsize_go">
 <a href="#targetsize_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Size</a>
@@ -4620,14 +4507,6 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
     </dt>
     <dd>{{% md %}}Name of the version. Unique among all versions in the scope of this managed instance group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tag_nodejs">
-<a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of 'name'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="targetsize_nodejs">
 <a href="#targetsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Size</a>
 </span>
@@ -4657,14 +4536,6 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the version. Unique among all versions in the scope of this managed instance group.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tag_python">
-<a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of 'name'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_size_python">
 <a href="#target_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>size</a>
@@ -4698,14 +4569,6 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
     </dt>
     <dd>{{% md %}}Name of the version. Unique among all versions in the scope of this managed instance group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="tag_csharp">
-<a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of 'name'.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="targetsize_csharp">
 <a href="#targetsize_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Size</a>
 </span>
@@ -4735,14 +4598,6 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the version. Unique among all versions in the scope of this managed instance group.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="tag_go">
-<a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of 'name'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetsize_go">
 <a href="#targetsize_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Size</a>
@@ -4774,14 +4629,6 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
     </dt>
     <dd>{{% md %}}Name of the version. Unique among all versions in the scope of this managed instance group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="tag_nodejs">
-<a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of 'name'.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="targetsize_nodejs">
 <a href="#targetsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Size</a>
 </span>
@@ -4811,14 +4658,6 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the version. Unique among all versions in the scope of this managed instance group.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="tag_python">
-<a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Tag describing the version. Used to trigger rollout of a target version even if instance_template remains unchanged. Deprecated in favor of 'name'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_size_python">
 <a href="#target_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>size</a>

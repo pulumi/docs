@@ -33,7 +33,6 @@ Creates a cluster, consisting of the specified number and type of Google Compute
             <span class="nx">autoscaling</span><span class="p">:</span> <span class="nx">Optional[_container_v1.ClusterAutoscalingArgs]</span> = None<span class="p">,</span>
             <span class="nx">binary_authorization</span><span class="p">:</span> <span class="nx">Optional[_container_v1.BinaryAuthorizationArgs]</span> = None<span class="p">,</span>
             <span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">clusters_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[_container_v1.StatusConditionArgs]]</span> = None<span class="p">,</span>
             <span class="nx">confidential_nodes</span><span class="p">:</span> <span class="nx">Optional[_container_v1.ConfidentialNodesArgs]</span> = None<span class="p">,</span>
             <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -47,13 +46,11 @@ Creates a cluster, consisting of the specified number and type of Google Compute
             <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">expire_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">initial_cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
             <span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[_container_v1.IPAllocationPolicyArgs]</span> = None<span class="p">,</span>
             <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">legacy_abac</span><span class="p">:</span> <span class="nx">Optional[_container_v1.LegacyAbacArgs]</span> = None<span class="p">,</span>
             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-            <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[_container_v1.MaintenancePolicyArgs]</span> = None<span class="p">,</span>
             <span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[_container_v1.MasterAuthArgs]</span> = None<span class="p">,</span>
@@ -63,13 +60,12 @@ Creates a cluster, consisting of the specified number and type of Google Compute
             <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">network_config</span><span class="p">:</span> <span class="nx">Optional[_container_v1.NetworkConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[_container_v1.NetworkPolicyArgs]</span> = None<span class="p">,</span>
-            <span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[_container_v1.NodeConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">node_ipv4_cidr_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
             <span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[_container_v1.NodePoolArgs]]</span> = None<span class="p">,</span>
             <span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[_container_v1.NotificationConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[_container_v1.PrivateClusterConfigArgs]</span> = None<span class="p">,</span>
-            <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[_container_v1.ReleaseChannelArgs]</span> = None<span class="p">,</span>
             <span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
             <span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[_container_v1.ResourceUsageExportConfigArgs]</span> = None<span class="p">,</span>
@@ -80,8 +76,7 @@ Creates a cluster, consisting of the specified number and type of Google Compute
             <span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">tpu_ipv4_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[_container_v1.VerticalPodAutoscalingArgs]</span> = None<span class="p">,</span>
-            <span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[_container_v1.WorkloadIdentityConfigArgs]</span> = None<span class="p">,</span>
-            <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+            <span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[_container_v1.WorkloadIdentityConfigArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span>
@@ -211,24 +206,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="clustersid_csharp">
-<a href="#clustersid_csharp" style="color: inherit; text-decoration: inherit;">Clusters<wbr>Id</a>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}[Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which the cluster resides.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="locationsid_csharp">
-<a href="#locationsid_csharp" style="color: inherit; text-decoration: inherit;">Locations<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectsid_csharp">
-<a href="#projectsid_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -387,14 +374,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "","-": picks the default Kubernetes version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="initialnodecount_csharp">
-<a href="#initialnodecount_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Node<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a "node_pool" object, since this configuration (along with the "node_config") will be used to create a "NodePool" object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="ipallocationpolicy_csharp">
 <a href="#ipallocationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
 </span>
@@ -418,14 +397,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#legacyabac">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1.<wbr>Inputs.<wbr>Legacy<wbr>Abac<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the legacy ABAC authorization mode.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which the cluster resides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_csharp">
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -506,14 +477,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#networkpolicy">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1.<wbr>Inputs.<wbr>Network<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the NetworkPolicy feature.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="nodeconfig_csharp">
-<a href="#nodeconfig_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfig">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1.<wbr>Inputs.<wbr>Node<wbr>Config<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Parameters used in creating the cluster's nodes. For requests, this field should only be used in lieu of a "node_pool" object, since this configuration (along with the "initial_node_count") will be used to create a "NodePool" object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeipv4cidrsize_csharp">
 <a href="#nodeipv4cidrsize_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Ipv4Cidr<wbr>Size</a>
@@ -641,38 +604,22 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentityconfig">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1.<wbr>Inputs.<wbr>Workload<wbr>Identity<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zone_csharp">
-<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field is deprecated, use location instead.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="clustersid_go">
-<a href="#clustersid_go" style="color: inherit; text-decoration: inherit;">Clusters<wbr>Id</a>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}[Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which the cluster resides.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="locationsid_go">
-<a href="#locationsid_go" style="color: inherit; text-decoration: inherit;">Locations<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectsid_go">
-<a href="#projectsid_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -831,14 +778,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "","-": picks the default Kubernetes version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="initialnodecount_go">
-<a href="#initialnodecount_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Node<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a "node_pool" object, since this configuration (along with the "node_config") will be used to create a "NodePool" object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="ipallocationpolicy_go">
 <a href="#ipallocationpolicy_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
 </span>
@@ -862,14 +801,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#legacyabac">Legacy<wbr>Abac</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the legacy ABAC authorization mode.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which the cluster resides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_go">
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -951,14 +882,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Configuration options for the NetworkPolicy feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="nodeconfig_go">
-<a href="#nodeconfig_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfig">Node<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Parameters used in creating the cluster's nodes. For requests, this field should only be used in lieu of a "node_pool" object, since this configuration (along with the "initial_node_count") will be used to create a "NodePool" object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="nodeipv4cidrsize_go">
 <a href="#nodeipv4cidrsize_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Ipv4Cidr<wbr>Size</a>
 </span>
@@ -971,7 +894,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#nodepools_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepool">[]Node<wbr>Pool</a></span>
+        <span class="property-type"><a href="#nodepool">[]Node<wbr>Pool<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The node pools associated with this cluster. This field should not be set if "node_config" or "initial_node_count" are specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1085,38 +1008,22 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentityconfig">Workload<wbr>Identity<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zone_go">
-<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field is deprecated, use location instead.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="clustersid_nodejs">
-<a href="#clustersid_nodejs" style="color: inherit; text-decoration: inherit;">clusters<wbr>Id</a>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}[Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which the cluster resides.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="locationsid_nodejs">
-<a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectsid_nodejs">
-<a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1275,14 +1182,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "","-": picks the default Kubernetes version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="initialnodecount_nodejs">
-<a href="#initialnodecount_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Node<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a "node_pool" object, since this configuration (along with the "node_config") will be used to create a "NodePool" object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="ipallocationpolicy_nodejs">
 <a href="#ipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policy</a>
 </span>
@@ -1306,14 +1205,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#legacyabac">Legacy<wbr>Abac<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the legacy ABAC authorization mode.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which the cluster resides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_nodejs">
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -1394,14 +1285,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#networkpolicy">Network<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the NetworkPolicy feature.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="nodeconfig_nodejs">
-<a href="#nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfig">Node<wbr>Config<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Parameters used in creating the cluster's nodes. For requests, this field should only be used in lieu of a "node_pool" object, since this configuration (along with the "initial_node_count") will be used to create a "NodePool" object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeipv4cidrsize_nodejs">
 <a href="#nodeipv4cidrsize_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Ipv4Cidr<wbr>Size</a>
@@ -1529,38 +1412,22 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentityconfig">Workload<wbr>Identity<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zone_nodejs">
-<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field is deprecated, use location instead.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="clusters_id_python">
-<a href="#clusters_id_python" style="color: inherit; text-decoration: inherit;">clusters_<wbr>id</a>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}[Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which the cluster resides.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="locations_id_python">
-<a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projects_id_python">
-<a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1719,14 +1586,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "","-": picks the default Kubernetes version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="initial_node_count_python">
-<a href="#initial_node_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>node_<wbr>count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a "node_pool" object, since this configuration (along with the "node_config") will be used to create a "NodePool" object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="ip_allocation_policy_python">
 <a href="#ip_allocation_policy_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>policy</a>
 </span>
@@ -1750,14 +1609,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#legacyabac">Legacy<wbr>Abac<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the legacy ABAC authorization mode.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which the cluster resides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_python">
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -1838,14 +1689,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#networkpolicy">Network<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the NetworkPolicy feature.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="node_config_python">
-<a href="#node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfig">Node<wbr>Config<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Parameters used in creating the cluster's nodes. For requests, this field should only be used in lieu of a "node_pool" object, since this configuration (along with the "initial_node_count") will be used to create a "NodePool" object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_ipv4_cidr_size_python">
 <a href="#node_ipv4_cidr_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>ipv4_<wbr>cidr_<wbr>size</a>
@@ -1973,15 +1816,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentityconfig">Workload<wbr>Identity<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zone_python">
-<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field is deprecated, use location instead.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -5854,14 +5689,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="clusteripv4cidr_csharp">
-<a href="#clusteripv4cidr_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv4Cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use cluster_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="clusteripv4cidrblock_csharp">
 <a href="#clusteripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
@@ -5886,14 +5713,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether a new subnetwork will be created automatically for the cluster. This field is only applicable when `use_ip_aliases` is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="nodeipv4cidr_csharp">
-<a href="#nodeipv4cidr_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Ipv4Cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use node_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="nodeipv4cidrblock_csharp">
 <a href="#nodeipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
@@ -5901,14 +5720,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range of the instance IPs in this cluster. This is applicable only if `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="servicesipv4cidr_csharp">
-<a href="#servicesipv4cidr_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use services_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicesipv4cidrblock_csharp">
 <a href="#servicesipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr<wbr>Block</a>
@@ -5962,14 +5773,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="clusteripv4cidr_go">
-<a href="#clusteripv4cidr_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv4Cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use cluster_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="clusteripv4cidrblock_go">
 <a href="#clusteripv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
@@ -5994,14 +5797,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether a new subnetwork will be created automatically for the cluster. This field is only applicable when `use_ip_aliases` is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="nodeipv4cidr_go">
-<a href="#nodeipv4cidr_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Ipv4Cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use node_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="nodeipv4cidrblock_go">
 <a href="#nodeipv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
@@ -6009,14 +5804,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range of the instance IPs in this cluster. This is applicable only if `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="servicesipv4cidr_go">
-<a href="#servicesipv4cidr_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use services_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicesipv4cidrblock_go">
 <a href="#servicesipv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr<wbr>Block</a>
@@ -6070,14 +5857,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="clusteripv4cidr_nodejs">
-<a href="#clusteripv4cidr_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv4Cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use cluster_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="clusteripv4cidrblock_nodejs">
 <a href="#clusteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
@@ -6102,14 +5881,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether a new subnetwork will be created automatically for the cluster. This field is only applicable when `use_ip_aliases` is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="nodeipv4cidr_nodejs">
-<a href="#nodeipv4cidr_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Ipv4Cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use node_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="nodeipv4cidrblock_nodejs">
 <a href="#nodeipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
@@ -6117,14 +5888,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range of the instance IPs in this cluster. This is applicable only if `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="servicesipv4cidr_nodejs">
-<a href="#servicesipv4cidr_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Ipv4Cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use services_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicesipv4cidrblock_nodejs">
 <a href="#servicesipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Ipv4Cidr<wbr>Block</a>
@@ -6178,14 +5941,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="cluster_ipv4_cidr_python">
-<a href="#cluster_ipv4_cidr_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ipv4_<wbr>cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use cluster_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="cluster_ipv4_cidr_block_python">
 <a href="#cluster_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
@@ -6210,14 +5965,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether a new subnetwork will be created automatically for the cluster. This field is only applicable when `use_ip_aliases` is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="node_ipv4_cidr_python">
-<a href="#node_ipv4_cidr_python" style="color: inherit; text-decoration: inherit;">node_<wbr>ipv4_<wbr>cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use node_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="node_ipv4_cidr_block_python">
 <a href="#node_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">node_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
@@ -6225,14 +5972,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address range of the instance IPs in this cluster. This is applicable only if `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="services_ipv4_cidr_python">
-<a href="#services_ipv4_cidr_python" style="color: inherit; text-decoration: inherit;">services_<wbr>ipv4_<wbr>cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use services_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="services_ipv4_cidr_block_python">
 <a href="#services_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">services_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
@@ -6288,14 +6027,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="clusteripv4cidr_csharp">
-<a href="#clusteripv4cidr_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv4Cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use cluster_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="clusteripv4cidrblock_csharp">
 <a href="#clusteripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
@@ -6320,14 +6051,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether a new subnetwork will be created automatically for the cluster. This field is only applicable when `use_ip_aliases` is true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="nodeipv4cidr_csharp">
-<a href="#nodeipv4cidr_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Ipv4Cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use node_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="nodeipv4cidrblock_csharp">
 <a href="#nodeipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
@@ -6335,14 +6058,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range of the instance IPs in this cluster. This is applicable only if `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="servicesipv4cidr_csharp">
-<a href="#servicesipv4cidr_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use services_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicesipv4cidrblock_csharp">
 <a href="#servicesipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr<wbr>Block</a>
@@ -6396,14 +6111,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="clusteripv4cidr_go">
-<a href="#clusteripv4cidr_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv4Cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use cluster_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="clusteripv4cidrblock_go">
 <a href="#clusteripv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
@@ -6428,14 +6135,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether a new subnetwork will be created automatically for the cluster. This field is only applicable when `use_ip_aliases` is true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="nodeipv4cidr_go">
-<a href="#nodeipv4cidr_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Ipv4Cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use node_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="nodeipv4cidrblock_go">
 <a href="#nodeipv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
@@ -6443,14 +6142,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range of the instance IPs in this cluster. This is applicable only if `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="servicesipv4cidr_go">
-<a href="#servicesipv4cidr_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use services_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicesipv4cidrblock_go">
 <a href="#servicesipv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr<wbr>Block</a>
@@ -6504,14 +6195,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="clusteripv4cidr_nodejs">
-<a href="#clusteripv4cidr_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv4Cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use cluster_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="clusteripv4cidrblock_nodejs">
 <a href="#clusteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
@@ -6536,14 +6219,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether a new subnetwork will be created automatically for the cluster. This field is only applicable when `use_ip_aliases` is true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="nodeipv4cidr_nodejs">
-<a href="#nodeipv4cidr_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Ipv4Cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use node_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="nodeipv4cidrblock_nodejs">
 <a href="#nodeipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
@@ -6551,14 +6226,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range of the instance IPs in this cluster. This is applicable only if `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="servicesipv4cidr_nodejs">
-<a href="#servicesipv4cidr_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Ipv4Cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use services_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicesipv4cidrblock_nodejs">
 <a href="#servicesipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Ipv4Cidr<wbr>Block</a>
@@ -6612,14 +6279,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cluster_ipv4_cidr_python">
-<a href="#cluster_ipv4_cidr_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ipv4_<wbr>cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use cluster_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="cluster_ipv4_cidr_block_python">
 <a href="#cluster_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
@@ -6644,14 +6303,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether a new subnetwork will be created automatically for the cluster. This field is only applicable when `use_ip_aliases` is true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="node_ipv4_cidr_python">
-<a href="#node_ipv4_cidr_python" style="color: inherit; text-decoration: inherit;">node_<wbr>ipv4_<wbr>cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use node_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="node_ipv4_cidr_block_python">
 <a href="#node_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">node_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
@@ -6659,14 +6310,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address range of the instance IPs in this cluster. This is applicable only if `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="services_ipv4_cidr_python">
-<a href="#services_ipv4_cidr_python" style="color: inherit; text-decoration: inherit;">services_<wbr>ipv4_<wbr>cidr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated, use services_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="services_ipv4_cidr_block_python">
 <a href="#services_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">services_<wbr>ipv4_<wbr>cidr_<wbr>block</a>

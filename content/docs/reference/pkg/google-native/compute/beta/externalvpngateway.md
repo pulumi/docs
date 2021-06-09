@@ -29,7 +29,6 @@ Creates a ExternalVpnGateway in the specified project using the data included in
                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                        <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">external_vpn_gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.ExternalVpnGatewayInterfaceArgs]]</span> = None<span class="p">,</span>
                        <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -169,14 +168,6 @@ The ExternalVpnGateway resource accepts the following [input]({{< relref "/docs/
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="externalvpngateway_csharp">
-<a href="#externalvpngateway_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Vpn<wbr>Gateway</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -278,14 +269,6 @@ To see the latest fingerprint, make a get() request to retrieve an ExternalVpnGa
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="externalvpngateway_go">
-<a href="#externalvpngateway_go" style="color: inherit; text-decoration: inherit;">External<wbr>Vpn<wbr>Gateway</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -389,14 +372,6 @@ To see the latest fingerprint, make a get() request to retrieve an ExternalVpnGa
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="externalvpngateway_nodejs">
-<a href="#externalvpngateway_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Vpn<wbr>Gateway</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -498,14 +473,6 @@ To see the latest fingerprint, make a get() request to retrieve an ExternalVpnGa
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="external_vpn_gateway_python">
-<a href="#external_vpn_gateway_python" style="color: inherit; text-decoration: inherit;">external_<wbr>vpn_<wbr>gateway</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>

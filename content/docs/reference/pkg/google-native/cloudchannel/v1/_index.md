@@ -11,10 +11,9 @@ Explore the resources and functions of the google-native.cloudchannel/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="accountchannelpartnerlink" title="AccountChannelPartnerLink"><span class="symbol resource"></span>AccountChannelPartnerLink</a></li>
-    <li><a href="accountchannelpartnerlinkcustomer" title="AccountChannelPartnerLinkCustomer"><span class="symbol resource"></span>AccountChannelPartnerLinkCustomer</a></li>
-    <li><a href="accountcustomer" title="AccountCustomer"><span class="symbol resource"></span>AccountCustomer</a></li>
-    <li><a href="accountcustomerentitlement" title="AccountCustomerEntitlement"><span class="symbol resource"></span>AccountCustomerEntitlement</a></li>
+    <li><a href="channelpartnerlink" title="ChannelPartnerLink"><span class="symbol resource"></span>ChannelPartnerLink</a></li>
+    <li><a href="customer" title="Customer"><span class="symbol resource"></span>Customer</a></li>
+    <li><a href="entitlement" title="Entitlement"><span class="symbol resource"></span>Entitlement</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,6 +23,6 @@ Explore the resources and functions of the google-native.cloudchannel/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

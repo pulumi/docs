@@ -37,7 +37,6 @@ Creates a TargetGrpcProxy in the specified project in the given scope using the 
                     <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                    <span class="nx">target_grpc_proxy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">url_map</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">validate_for_proxyless</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -175,14 +174,6 @@ The TargetGrpcProxy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targetgrpcproxy_csharp">
-<a href="#targetgrpcproxy_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Grpc<wbr>Proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_csharp">
@@ -279,14 +270,6 @@ The TargetGrpcProxy resource accepts the following [input]({{< relref "/docs/int
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targetgrpcproxy_go">
-<a href="#targetgrpcproxy_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Grpc<wbr>Proxy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -391,14 +374,6 @@ The TargetGrpcProxy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targetgrpcproxy_nodejs">
-<a href="#targetgrpcproxy_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Grpc<wbr>Proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_nodejs">
@@ -495,14 +470,6 @@ The TargetGrpcProxy resource accepts the following [input]({{< relref "/docs/int
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="target_grpc_proxy_python">
-<a href="#target_grpc_proxy_python" style="color: inherit; text-decoration: inherit;">target_<wbr>grpc_<wbr>proxy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

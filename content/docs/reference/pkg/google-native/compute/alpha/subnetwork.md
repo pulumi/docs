@@ -33,7 +33,6 @@ Creates a subnetwork in the specified project using the data included in the req
                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">enable_flow_logs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">enable_l2</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-               <span class="nx">enable_private_v6_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">external_ipv6_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">flow_sampling</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
@@ -49,7 +48,6 @@ Creates a subnetwork in the specified project using the data included in the req
                <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">private_ip_google_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">private_ipv6_google_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">private_ipv6_google_access_service_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -60,7 +58,6 @@ Creates a subnetwork in the specified project using the data included in the req
                <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">stack_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">vlans</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Subnetwork</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -205,15 +202,7 @@ The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL of the region where the Subnetwork resides. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnetwork_csharp">
-<a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}URL of the region where the Subnetwork resides. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aggregationinterval_csharp">
 <a href="#aggregationinterval_csharp" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Interval</a>
@@ -268,14 +257,6 @@ This field cannot be set to true at resource creation time.{{% /md %}}</dd><dt c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables Layer2 communication on the subnetwork.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enableprivatev6access_csharp">
-<a href="#enableprivatev6access_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Private<wbr>V6Access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Deprecated in favor of enable in PrivateIpv6GoogleAccess. Whether the VMs in this subnet can directly access Google services via internal IPv6 addresses. This field can be both set at resource creation time and updated using patch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalipv6prefix_csharp">
 <a href="#externalipv6prefix_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Ipv6Prefix</a>
@@ -401,14 +382,6 @@ To see the latest fingerprint, make a get() request to retrieve a Subnetwork.{{%
 
 This field can be both set at resource creation time and updated using patch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="privateipv6googleaccessserviceaccounts_csharp">
-<a href="#privateipv6googleaccessserviceaccounts_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access<wbr>Service<wbr>Accounts</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Deprecated in favor of enable PrivateIpv6GoogleAccess on instance directly. The service accounts can be used to selectively turn on Private IPv6 Google Access only on the VMs primary service account matching the value. This value only takes effect when PrivateIpv6GoogleAccess is ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS or ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="purpose_csharp">
 <a href="#purpose_csharp" style="color: inherit; text-decoration: inherit;">Purpose</a>
 </span>
@@ -501,15 +474,7 @@ This field can be both set at resource creation time and updated using patch.{{%
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL of the region where the Subnetwork resides. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnetwork_go">
-<a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}URL of the region where the Subnetwork resides. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aggregationinterval_go">
 <a href="#aggregationinterval_go" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Interval</a>
@@ -564,14 +529,6 @@ This field cannot be set to true at resource creation time.{{% /md %}}</dd><dt c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables Layer2 communication on the subnetwork.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enableprivatev6access_go">
-<a href="#enableprivatev6access_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Private<wbr>V6Access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Deprecated in favor of enable in PrivateIpv6GoogleAccess. Whether the VMs in this subnet can directly access Google services via internal IPv6 addresses. This field can be both set at resource creation time and updated using patch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalipv6prefix_go">
 <a href="#externalipv6prefix_go" style="color: inherit; text-decoration: inherit;">External<wbr>Ipv6Prefix</a>
@@ -697,14 +654,6 @@ To see the latest fingerprint, make a get() request to retrieve a Subnetwork.{{%
 
 This field can be both set at resource creation time and updated using patch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="privateipv6googleaccessserviceaccounts_go">
-<a href="#privateipv6googleaccessserviceaccounts_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access<wbr>Service<wbr>Accounts</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Deprecated in favor of enable PrivateIpv6GoogleAccess on instance directly. The service accounts can be used to selectively turn on Private IPv6 Google Access only on the VMs primary service account matching the value. This value only takes effect when PrivateIpv6GoogleAccess is ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS or ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="purpose_go">
 <a href="#purpose_go" style="color: inherit; text-decoration: inherit;">Purpose</a>
 </span>
@@ -797,15 +746,7 @@ This field can be both set at resource creation time and updated using patch.{{%
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL of the region where the Subnetwork resides. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnetwork_nodejs">
-<a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}URL of the region where the Subnetwork resides. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aggregationinterval_nodejs">
 <a href="#aggregationinterval_nodejs" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Interval</a>
@@ -860,14 +801,6 @@ This field cannot be set to true at resource creation time.{{% /md %}}</dd><dt c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables Layer2 communication on the subnetwork.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enableprivatev6access_nodejs">
-<a href="#enableprivatev6access_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Private<wbr>V6Access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Deprecated in favor of enable in PrivateIpv6GoogleAccess. Whether the VMs in this subnet can directly access Google services via internal IPv6 addresses. This field can be both set at resource creation time and updated using patch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalipv6prefix_nodejs">
 <a href="#externalipv6prefix_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Ipv6Prefix</a>
@@ -993,14 +926,6 @@ To see the latest fingerprint, make a get() request to retrieve a Subnetwork.{{%
 
 This field can be both set at resource creation time and updated using patch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="privateipv6googleaccessserviceaccounts_nodejs">
-<a href="#privateipv6googleaccessserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv6Google<wbr>Access<wbr>Service<wbr>Accounts</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Deprecated in favor of enable PrivateIpv6GoogleAccess on instance directly. The service accounts can be used to selectively turn on Private IPv6 Google Access only on the VMs primary service account matching the value. This value only takes effect when PrivateIpv6GoogleAccess is ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS or ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="purpose_nodejs">
 <a href="#purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
 </span>
@@ -1093,15 +1018,7 @@ This field can be both set at resource creation time and updated using patch.{{%
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URL of the region where the Subnetwork resides. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnetwork_python">
-<a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}URL of the region where the Subnetwork resides. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aggregation_interval_python">
 <a href="#aggregation_interval_python" style="color: inherit; text-decoration: inherit;">aggregation_<wbr>interval</a>
@@ -1156,14 +1073,6 @@ This field cannot be set to true at resource creation time.{{% /md %}}</dd><dt c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables Layer2 communication on the subnetwork.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enable_private_v6_access_python">
-<a href="#enable_private_v6_access_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>private_<wbr>v6_<wbr>access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Deprecated in favor of enable in PrivateIpv6GoogleAccess. Whether the VMs in this subnet can directly access Google services via internal IPv6 addresses. This field can be both set at resource creation time and updated using patch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_ipv6_prefix_python">
 <a href="#external_ipv6_prefix_python" style="color: inherit; text-decoration: inherit;">external_<wbr>ipv6_<wbr>prefix</a>
@@ -1288,14 +1197,6 @@ To see the latest fingerprint, make a get() request to retrieve a Subnetwork.{{%
     <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet. This is an expanded field of enablePrivateV6Access. If both fields are set, privateIpv6GoogleAccess will take priority.
 
 This field can be both set at resource creation time and updated using patch.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="private_ipv6_google_access_service_accounts_python">
-<a href="#private_ipv6_google_access_service_accounts_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv6_<wbr>google_<wbr>access_<wbr>service_<wbr>accounts</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}Deprecated in favor of enable PrivateIpv6GoogleAccess on instance directly. The service accounts can be used to selectively turn on Private IPv6 Google Access only on the VMs primary service account matching the value. This value only takes effect when PrivateIpv6GoogleAccess is ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS or ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="purpose_python">
 <a href="#purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>

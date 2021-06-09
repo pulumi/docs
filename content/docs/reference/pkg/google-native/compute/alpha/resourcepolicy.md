@@ -37,7 +37,6 @@ Creates a new resource policy.
                    <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">resource_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">resource_status</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.ResourcePolicyResourceStatusArgs]</span> = None<span class="p">,</span>
                    <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -187,14 +186,6 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="resourcepolicy_csharp">
-<a href="#resourcepolicy_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_csharp">
@@ -323,14 +314,6 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="resourcepolicy_go">
-<a href="#resourcepolicy_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -467,14 +450,6 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="resourcepolicy_nodejs">
-<a href="#resourcepolicy_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_nodejs">
@@ -603,14 +578,6 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="resource_policy_python">
-<a href="#resource_policy_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

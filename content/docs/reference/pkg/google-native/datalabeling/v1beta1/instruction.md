@@ -29,14 +29,12 @@ Creates an instruction for how data should be labeled.
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                 <span class="nx">blocking_resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                 <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">csv_instruction</span><span class="p">:</span> <span class="nx">Optional[_datalabeling_v1beta1.GoogleCloudDatalabelingV1beta1CsvInstructionArgs]</span> = None<span class="p">,</span>
                 <span class="nx">data_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">instructions_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">pdf_instruction</span><span class="p">:</span> <span class="nx">Optional[_datalabeling_v1beta1.GoogleCloudDatalabelingV1beta1PdfInstructionArgs]</span> = None<span class="p">,</span>
-                <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Instruction</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -167,16 +165,8 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="instructionsid_csharp">
-<a href="#instructionsid_csharp" style="color: inherit; text-decoration: inherit;">Instructions<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectsid_csharp">
-<a href="#projectsid_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -198,14 +188,6 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation time of instruction.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="csvinstruction_csharp">
-<a href="#csvinstruction_csharp" style="color: inherit; text-decoration: inherit;">Csv<wbr>Instruction</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1csvinstruction">Pulumi.<wbr>Google<wbr>Native.<wbr>Data<wbr>Labeling.<wbr>V1Beta1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Csv<wbr>Instruction<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated: this instruction format is not supported any more. Instruction from a CSV file, such as for classification task. The CSV file should have exact two columns, in the following format: * The first column is labeled data, such as an image reference, text. * The second column is comma separated labels associated with data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datatype_csharp">
 <a href="#datatype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -259,16 +241,8 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="instructionsid_go">
-<a href="#instructionsid_go" style="color: inherit; text-decoration: inherit;">Instructions<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectsid_go">
-<a href="#projectsid_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -290,14 +264,6 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation time of instruction.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="csvinstruction_go">
-<a href="#csvinstruction_go" style="color: inherit; text-decoration: inherit;">Csv<wbr>Instruction</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1csvinstruction">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Csv<wbr>Instruction</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated: this instruction format is not supported any more. Instruction from a CSV file, such as for classification task. The CSV file should have exact two columns, in the following format: * The first column is labeled data, such as an image reference, text. * The second column is comma separated labels associated with data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datatype_go">
 <a href="#datatype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -351,16 +317,8 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="instructionsid_nodejs">
-<a href="#instructionsid_nodejs" style="color: inherit; text-decoration: inherit;">instructions<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectsid_nodejs">
-<a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -382,14 +340,6 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation time of instruction.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="csvinstruction_nodejs">
-<a href="#csvinstruction_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Instruction</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1csvinstruction">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Csv<wbr>Instruction<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated: this instruction format is not supported any more. Instruction from a CSV file, such as for classification task. The CSV file should have exact two columns, in the following format: * The first column is labeled data, such as an image reference, text. * The second column is comma separated labels associated with data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datatype_nodejs">
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
@@ -443,16 +393,8 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="instructions_id_python">
-<a href="#instructions_id_python" style="color: inherit; text-decoration: inherit;">instructions_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projects_id_python">
-<a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -474,14 +416,6 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation time of instruction.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="csv_instruction_python">
-<a href="#csv_instruction_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>instruction</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1csvinstruction">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Csv<wbr>Instruction<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated: this instruction format is not supported any more. Instruction from a CSV file, such as for classification task. The CSV file should have exact two columns, in the following format: * The first column is labeled data, such as an image reference, text. * The second column is comma separated labels associated with data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_type_python">
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
@@ -596,106 +530,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
-
-<h4 id="googleclouddatalabelingv1beta1csvinstruction">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Csv<wbr>Instruction</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="gcsfileuri_csharp">
-<a href="#gcsfileuri_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>File<wbr>Uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}CSV file for the instruction. Only gcs path is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="gcsfileuri_go">
-<a href="#gcsfileuri_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>File<wbr>Uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}CSV file for the instruction. Only gcs path is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="gcsfileuri_nodejs">
-<a href="#gcsfileuri_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>File<wbr>Uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}CSV file for the instruction. Only gcs path is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="gcs_file_uri_python">
-<a href="#gcs_file_uri_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>file_<wbr>uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}CSV file for the instruction. Only gcs path is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="googleclouddatalabelingv1beta1csvinstructionresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Csv<wbr>Instruction<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="gcsfileuri_csharp">
-<a href="#gcsfileuri_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>File<wbr>Uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}CSV file for the instruction. Only gcs path is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="gcsfileuri_go">
-<a href="#gcsfileuri_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>File<wbr>Uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}CSV file for the instruction. Only gcs path is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="gcsfileuri_nodejs">
-<a href="#gcsfileuri_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>File<wbr>Uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}CSV file for the instruction. Only gcs path is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="gcs_file_uri_python">
-<a href="#gcs_file_uri_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>file_<wbr>uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}CSV file for the instruction. Only gcs path is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
 
 <h4 id="googleclouddatalabelingv1beta1pdfinstruction">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Pdf<wbr>Instruction</h4>
 

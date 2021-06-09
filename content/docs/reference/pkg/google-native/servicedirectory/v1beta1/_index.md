@@ -11,11 +11,11 @@ Explore the resources and functions of the google-native.servicedirectory/v1beta
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="endpoint" title="Endpoint"><span class="symbol resource"></span>Endpoint</a></li>
     <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
     <li><a href="namespaceiampolicy" title="NamespaceIamPolicy"><span class="symbol resource"></span>NamespaceIamPolicy</a></li>
-    <li><a href="namespaceservice" title="NamespaceService"><span class="symbol resource"></span>NamespaceService</a></li>
-    <li><a href="namespaceserviceendpoint" title="NamespaceServiceEndpoint"><span class="symbol resource"></span>NamespaceServiceEndpoint</a></li>
     <li><a href="namespaceserviceiampolicy" title="NamespaceServiceIamPolicy"><span class="symbol resource"></span>NamespaceServiceIamPolicy</a></li>
+    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -25,6 +25,6 @@ Explore the resources and functions of the google-native.servicedirectory/v1beta
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

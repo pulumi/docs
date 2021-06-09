@@ -11,11 +11,11 @@ Explore the resources and functions of the google-native.gameservices/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="config" title="Config"><span class="symbol resource"></span>Config</a></li>
+    <li><a href="gameservercluster" title="GameServerCluster"><span class="symbol resource"></span>GameServerCluster</a></li>
     <li><a href="gameserverdeployment" title="GameServerDeployment"><span class="symbol resource"></span>GameServerDeployment</a></li>
-    <li><a href="gameserverdeploymentconfig" title="GameServerDeploymentConfig"><span class="symbol resource"></span>GameServerDeploymentConfig</a></li>
     <li><a href="gameserverdeploymentiampolicy" title="GameServerDeploymentIamPolicy"><span class="symbol resource"></span>GameServerDeploymentIamPolicy</a></li>
     <li><a href="realm" title="Realm"><span class="symbol resource"></span>Realm</a></li>
-    <li><a href="realmgameservercluster" title="RealmGameServerCluster"><span class="symbol resource"></span>RealmGameServerCluster</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -25,6 +25,6 @@ Explore the resources and functions of the google-native.gameservices/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

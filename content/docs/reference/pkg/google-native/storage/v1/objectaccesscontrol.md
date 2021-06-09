@@ -179,25 +179,6 @@ The ObjectAccessControl resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="entity_csharp">
-<a href="#entity_csharp" style="color: inherit; text-decoration: inherit;">Entity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: 
-- user-userId 
-- user-email 
-- group-groupId 
-- group-email 
-- domain-domain 
-- project-team-projectId 
-- allUsers 
-- allAuthenticatedUsers Examples: 
-- The user liz@example.com would be user-liz@example.com. 
-- The group example@googlegroups.com would be group-example@googlegroups.com. 
-- To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="object_csharp">
 <a href="#object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
 </span>
@@ -221,6 +202,25 @@ The ObjectAccessControl resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="entity_csharp">
+<a href="#entity_csharp" style="color: inherit; text-decoration: inherit;">Entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms: 
+- user-userId 
+- user-email 
+- group-groupId 
+- group-email 
+- domain-domain 
+- project-team-projectId 
+- allUsers 
+- allAuthenticatedUsers Examples: 
+- The user liz@example.com would be user-liz@example.com. 
+- The group example@googlegroups.com would be group-example@googlegroups.com. 
+- To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entityid_csharp">
 <a href="#entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -314,25 +314,6 @@ The ObjectAccessControl resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="entity_go">
-<a href="#entity_go" style="color: inherit; text-decoration: inherit;">Entity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: 
-- user-userId 
-- user-email 
-- group-groupId 
-- group-email 
-- domain-domain 
-- project-team-projectId 
-- allUsers 
-- allAuthenticatedUsers Examples: 
-- The user liz@example.com would be user-liz@example.com. 
-- The group example@googlegroups.com would be group-example@googlegroups.com. 
-- To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="object_go">
 <a href="#object_go" style="color: inherit; text-decoration: inherit;">Object</a>
 </span>
@@ -356,6 +337,25 @@ The ObjectAccessControl resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="entity_go">
+<a href="#entity_go" style="color: inherit; text-decoration: inherit;">Entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms: 
+- user-userId 
+- user-email 
+- group-groupId 
+- group-email 
+- domain-domain 
+- project-team-projectId 
+- allUsers 
+- allAuthenticatedUsers Examples: 
+- The user liz@example.com would be user-liz@example.com. 
+- The group example@googlegroups.com would be group-example@googlegroups.com. 
+- To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entityid_go">
 <a href="#entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -449,25 +449,6 @@ The ObjectAccessControl resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="entity_nodejs">
-<a href="#entity_nodejs" style="color: inherit; text-decoration: inherit;">entity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: 
-- user-userId 
-- user-email 
-- group-groupId 
-- group-email 
-- domain-domain 
-- project-team-projectId 
-- allUsers 
-- allAuthenticatedUsers Examples: 
-- The user liz@example.com would be user-liz@example.com. 
-- The group example@googlegroups.com would be group-example@googlegroups.com. 
-- To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="object_nodejs">
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
@@ -491,6 +472,25 @@ The ObjectAccessControl resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="entity_nodejs">
+<a href="#entity_nodejs" style="color: inherit; text-decoration: inherit;">entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms: 
+- user-userId 
+- user-email 
+- group-groupId 
+- group-email 
+- domain-domain 
+- project-team-projectId 
+- allUsers 
+- allAuthenticatedUsers Examples: 
+- The user liz@example.com would be user-liz@example.com. 
+- The group example@googlegroups.com would be group-example@googlegroups.com. 
+- To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entityid_nodejs">
 <a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
@@ -584,25 +584,6 @@ The ObjectAccessControl resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="entity_python">
-<a href="#entity_python" style="color: inherit; text-decoration: inherit;">entity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: 
-- user-userId 
-- user-email 
-- group-groupId 
-- group-email 
-- domain-domain 
-- project-team-projectId 
-- allUsers 
-- allAuthenticatedUsers Examples: 
-- The user liz@example.com would be user-liz@example.com. 
-- The group example@googlegroups.com would be group-example@googlegroups.com. 
-- To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="object_python">
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
@@ -626,6 +607,25 @@ The ObjectAccessControl resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="entity_python">
+<a href="#entity_python" style="color: inherit; text-decoration: inherit;">entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms: 
+- user-userId 
+- user-email 
+- group-groupId 
+- group-email 
+- domain-domain 
+- project-team-projectId 
+- allUsers 
+- allAuthenticatedUsers Examples: 
+- The user liz@example.com would be user-liz@example.com. 
+- The group example@googlegroups.com would be group-example@googlegroups.com. 
+- To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_id_python">
 <a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>

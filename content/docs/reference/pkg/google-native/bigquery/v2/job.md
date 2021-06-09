@@ -30,10 +30,9 @@ Starts a new asynchronous job. Requires the Can View project role.
         <span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.JobConfigurationArgs]</span> = None<span class="p">,</span>
         <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">job_reference</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.JobReferenceArgs]</span> = None<span class="p">,</span>
         <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">statistics</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.JobStatisticsArgs]</span> = None<span class="p">,</span>
         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.JobStatusArgs]</span> = None<span class="p">,</span>
@@ -167,16 +166,8 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="jobid_csharp">
-<a href="#jobid_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -259,16 +250,8 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="jobid_go">
-<a href="#jobid_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -351,16 +334,8 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="jobid_nodejs">
-<a href="#jobid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -443,16 +418,8 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="job_id_python">
-<a href="#job_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1038,8 +1005,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1058,8 +1025,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1078,8 +1045,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1098,8 +1065,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1120,8 +1087,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1140,8 +1107,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1160,8 +1127,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1180,8 +1147,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -5284,22 +5251,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The schema for the destination table. The schema can be omitted if the destination table already exists, or if you're loading data from Google Cloud Datastore.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="schemainline_csharp">
-<a href="#schemainline_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Inline</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The inline schema. For CSV schemas, specify as "Field1:Type1[,Field2:Type2]*". For example, "foo:STRING, bar:INTEGER, baz:FLOAT".{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="schemainlineformat_csharp">
-<a href="#schemainlineformat_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Inline<wbr>Format</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The format of the schemaInline property.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="schemaupdateoptions_csharp">
 <a href="#schemaupdateoptions_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Update<wbr>Options</a>
 </span>
@@ -5527,22 +5478,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#tableschema">Table<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The schema for the destination table. The schema can be omitted if the destination table already exists, or if you're loading data from Google Cloud Datastore.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="schemainline_go">
-<a href="#schemainline_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Inline</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The inline schema. For CSV schemas, specify as "Field1:Type1[,Field2:Type2]*". For example, "foo:STRING, bar:INTEGER, baz:FLOAT".{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="schemainlineformat_go">
-<a href="#schemainlineformat_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Inline<wbr>Format</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The format of the schemaInline property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaupdateoptions_go">
 <a href="#schemaupdateoptions_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Update<wbr>Options</a>
@@ -5772,22 +5707,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The schema for the destination table. The schema can be omitted if the destination table already exists, or if you're loading data from Google Cloud Datastore.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="schemainline_nodejs">
-<a href="#schemainline_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Inline</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The inline schema. For CSV schemas, specify as "Field1:Type1[,Field2:Type2]*". For example, "foo:STRING, bar:INTEGER, baz:FLOAT".{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="schemainlineformat_nodejs">
-<a href="#schemainlineformat_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Inline<wbr>Format</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The format of the schemaInline property.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="schemaupdateoptions_nodejs">
 <a href="#schemaupdateoptions_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Update<wbr>Options</a>
 </span>
@@ -6015,22 +5934,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#tableschema">Table<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The schema for the destination table. The schema can be omitted if the destination table already exists, or if you're loading data from Google Cloud Datastore.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="schema_inline_python">
-<a href="#schema_inline_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>inline</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The inline schema. For CSV schemas, specify as "Field1:Type1[,Field2:Type2]*". For example, "foo:STRING, bar:INTEGER, baz:FLOAT".{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="schema_inline_format_python">
-<a href="#schema_inline_format_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>inline_<wbr>format</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The format of the schemaInline property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_update_options_python">
 <a href="#schema_update_options_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>update_<wbr>options</a>
@@ -6262,22 +6165,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The schema for the destination table. The schema can be omitted if the destination table already exists, or if you're loading data from Google Cloud Datastore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="schemainline_csharp">
-<a href="#schemainline_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Inline</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The inline schema. For CSV schemas, specify as "Field1:Type1[,Field2:Type2]*". For example, "foo:STRING, bar:INTEGER, baz:FLOAT".{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="schemainlineformat_csharp">
-<a href="#schemainlineformat_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Inline<wbr>Format</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The format of the schemaInline property.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="schemaupdateoptions_csharp">
 <a href="#schemaupdateoptions_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Update<wbr>Options</a>
 </span>
@@ -6505,22 +6392,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#tableschemaresponse">Table<wbr>Schema<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The schema for the destination table. The schema can be omitted if the destination table already exists, or if you're loading data from Google Cloud Datastore.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="schemainline_go">
-<a href="#schemainline_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Inline</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The inline schema. For CSV schemas, specify as "Field1:Type1[,Field2:Type2]*". For example, "foo:STRING, bar:INTEGER, baz:FLOAT".{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="schemainlineformat_go">
-<a href="#schemainlineformat_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Inline<wbr>Format</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The format of the schemaInline property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemaupdateoptions_go">
 <a href="#schemaupdateoptions_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Update<wbr>Options</a>
@@ -6750,22 +6621,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The schema for the destination table. The schema can be omitted if the destination table already exists, or if you're loading data from Google Cloud Datastore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="schemainline_nodejs">
-<a href="#schemainline_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Inline</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The inline schema. For CSV schemas, specify as "Field1:Type1[,Field2:Type2]*". For example, "foo:STRING, bar:INTEGER, baz:FLOAT".{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="schemainlineformat_nodejs">
-<a href="#schemainlineformat_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Inline<wbr>Format</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The format of the schemaInline property.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="schemaupdateoptions_nodejs">
 <a href="#schemaupdateoptions_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Update<wbr>Options</a>
 </span>
@@ -6994,22 +6849,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The schema for the destination table. The schema can be omitted if the destination table already exists, or if you're loading data from Google Cloud Datastore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="schema_inline_python">
-<a href="#schema_inline_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>inline</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The inline schema. For CSV schemas, specify as "Field1:Type1[,Field2:Type2]*". For example, "foo:STRING, bar:INTEGER, baz:FLOAT".{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="schema_inline_format_python">
-<a href="#schema_inline_format_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>inline_<wbr>format</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The format of the schemaInline property.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="schema_update_options_python">
 <a href="#schema_update_options_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>update_<wbr>options</a>
 </span>
@@ -7167,14 +7006,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="preservenulls_csharp">
-<a href="#preservenulls_csharp" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Nulls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This property is deprecated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -7364,14 +7195,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="preservenulls_go">
-<a href="#preservenulls_go" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Nulls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This property is deprecated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
 </span>
@@ -7560,14 +7383,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="preservenulls_nodejs">
-<a href="#preservenulls_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Nulls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This property is deprecated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
@@ -7755,14 +7570,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="preserve_nulls_python">
-<a href="#preserve_nulls_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>nulls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This property is deprecated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -7954,14 +7761,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="preservenulls_csharp">
-<a href="#preservenulls_csharp" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Nulls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This property is deprecated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
 </span>
@@ -8149,14 +7948,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="preservenulls_go">
-<a href="#preservenulls_go" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Nulls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This property is deprecated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -8346,14 +8137,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="preservenulls_nodejs">
-<a href="#preservenulls_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Nulls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This property is deprecated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
@@ -8541,14 +8324,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="preserve_nulls_python">
-<a href="#preserve_nulls_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>nulls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This property is deprecated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -9810,8 +9585,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -9838,8 +9613,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -9866,8 +9641,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -9894,8 +9669,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -9924,8 +9699,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -9952,8 +9727,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -9980,8 +9755,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -10008,8 +9783,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -10306,14 +10081,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Output-only] Start time of this job, in milliseconds since the epoch. This field will be present when the job transitions from the PENDING state to either RUNNING or DONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="totalbytesprocessed_csharp">
-<a href="#totalbytesprocessed_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Bytes<wbr>Processed</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] [Deprecated] Use the bytes processed in the query statistics instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="totalslotms_csharp">
 <a href="#totalslotms_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Slot<wbr>Ms</a>
 </span>
@@ -10453,14 +10220,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] Start time of this job, in milliseconds since the epoch. This field will be present when the job transitions from the PENDING state to either RUNNING or DONE.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="totalbytesprocessed_go">
-<a href="#totalbytesprocessed_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Bytes<wbr>Processed</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] [Deprecated] Use the bytes processed in the query statistics instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="totalslotms_go">
 <a href="#totalslotms_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Slot<wbr>Ms</a>
@@ -10602,14 +10361,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Output-only] Start time of this job, in milliseconds since the epoch. This field will be present when the job transitions from the PENDING state to either RUNNING or DONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="totalbytesprocessed_nodejs">
-<a href="#totalbytesprocessed_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Bytes<wbr>Processed</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] [Deprecated] Use the bytes processed in the query statistics instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="totalslotms_nodejs">
 <a href="#totalslotms_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Slot<wbr>Ms</a>
 </span>
@@ -10750,14 +10501,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Output-only] Start time of this job, in milliseconds since the epoch. This field will be present when the job transitions from the PENDING state to either RUNNING or DONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="total_bytes_processed_python">
-<a href="#total_bytes_processed_python" style="color: inherit; text-decoration: inherit;">total_<wbr>bytes_<wbr>processed</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] [Deprecated] Use the bytes processed in the query statistics instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="total_slot_ms_python">
 <a href="#total_slot_ms_python" style="color: inherit; text-decoration: inherit;">total_<wbr>slot_<wbr>ms</a>
 </span>
@@ -10859,22 +10602,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#bigquerymodeltraining">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Big<wbr>Query<wbr>Model<wbr>Training<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Information about create model query job progress.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="modeltrainingcurrentiteration_csharp">
-<a href="#modeltrainingcurrentiteration_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Training<wbr>Current<wbr>Iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}[Output-only, Beta] Deprecated; do not use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="modeltrainingexpectedtotaliteration_csharp">
-<a href="#modeltrainingexpectedtotaliteration_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Training<wbr>Expected<wbr>Total<wbr>Iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only, Beta] Deprecated; do not use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numdmlaffectedrows_csharp">
 <a href="#numdmlaffectedrows_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Dml<wbr>Affected<wbr>Rows</a>
@@ -11072,22 +10799,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Information about create model query job progress.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="modeltrainingcurrentiteration_go">
-<a href="#modeltrainingcurrentiteration_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Training<wbr>Current<wbr>Iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}[Output-only, Beta] Deprecated; do not use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="modeltrainingexpectedtotaliteration_go">
-<a href="#modeltrainingexpectedtotaliteration_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Training<wbr>Expected<wbr>Total<wbr>Iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only, Beta] Deprecated; do not use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="numdmlaffectedrows_go">
 <a href="#numdmlaffectedrows_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Dml<wbr>Affected<wbr>Rows</a>
 </span>
@@ -11284,22 +10995,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Information about create model query job progress.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="modeltrainingcurrentiteration_nodejs">
-<a href="#modeltrainingcurrentiteration_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Training<wbr>Current<wbr>Iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}[Output-only, Beta] Deprecated; do not use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="modeltrainingexpectedtotaliteration_nodejs">
-<a href="#modeltrainingexpectedtotaliteration_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Training<wbr>Expected<wbr>Total<wbr>Iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only, Beta] Deprecated; do not use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="numdmlaffectedrows_nodejs">
 <a href="#numdmlaffectedrows_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Dml<wbr>Affected<wbr>Rows</a>
 </span>
@@ -11495,22 +11190,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#bigquerymodeltraining">Big<wbr>Query<wbr>Model<wbr>Training<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Information about create model query job progress.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="model_training_current_iteration_python">
-<a href="#model_training_current_iteration_python" style="color: inherit; text-decoration: inherit;">model_<wbr>training_<wbr>current_<wbr>iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}[Output-only, Beta] Deprecated; do not use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="model_training_expected_total_iteration_python">
-<a href="#model_training_expected_total_iteration_python" style="color: inherit; text-decoration: inherit;">model_<wbr>training_<wbr>expected_<wbr>total_<wbr>iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output-only, Beta] Deprecated; do not use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="num_dml_affected_rows_python">
 <a href="#num_dml_affected_rows_python" style="color: inherit; text-decoration: inherit;">num_<wbr>dml_<wbr>affected_<wbr>rows</a>
@@ -11710,22 +11389,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Information about create model query job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="modeltrainingcurrentiteration_csharp">
-<a href="#modeltrainingcurrentiteration_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Training<wbr>Current<wbr>Iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}[Output-only, Beta] Deprecated; do not use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="modeltrainingexpectedtotaliteration_csharp">
-<a href="#modeltrainingexpectedtotaliteration_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Training<wbr>Expected<wbr>Total<wbr>Iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only, Beta] Deprecated; do not use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="numdmlaffectedrows_csharp">
 <a href="#numdmlaffectedrows_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Dml<wbr>Affected<wbr>Rows</a>
 </span>
@@ -11921,22 +11584,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#bigquerymodeltrainingresponse">Big<wbr>Query<wbr>Model<wbr>Training<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Information about create model query job progress.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="modeltrainingcurrentiteration_go">
-<a href="#modeltrainingcurrentiteration_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Training<wbr>Current<wbr>Iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}[Output-only, Beta] Deprecated; do not use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="modeltrainingexpectedtotaliteration_go">
-<a href="#modeltrainingexpectedtotaliteration_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Training<wbr>Expected<wbr>Total<wbr>Iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only, Beta] Deprecated; do not use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numdmlaffectedrows_go">
 <a href="#numdmlaffectedrows_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Dml<wbr>Affected<wbr>Rows</a>
@@ -12134,22 +11781,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Information about create model query job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="modeltrainingcurrentiteration_nodejs">
-<a href="#modeltrainingcurrentiteration_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Training<wbr>Current<wbr>Iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}[Output-only, Beta] Deprecated; do not use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="modeltrainingexpectedtotaliteration_nodejs">
-<a href="#modeltrainingexpectedtotaliteration_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Training<wbr>Expected<wbr>Total<wbr>Iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only, Beta] Deprecated; do not use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="numdmlaffectedrows_nodejs">
 <a href="#numdmlaffectedrows_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Dml<wbr>Affected<wbr>Rows</a>
 </span>
@@ -12345,22 +11976,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#bigquerymodeltrainingresponse">Big<wbr>Query<wbr>Model<wbr>Training<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Information about create model query job progress.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="model_training_current_iteration_python">
-<a href="#model_training_current_iteration_python" style="color: inherit; text-decoration: inherit;">model_<wbr>training_<wbr>current_<wbr>iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}[Output-only, Beta] Deprecated; do not use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="model_training_expected_total_iteration_python">
-<a href="#model_training_expected_total_iteration_python" style="color: inherit; text-decoration: inherit;">model_<wbr>training_<wbr>expected_<wbr>total_<wbr>iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output-only, Beta] Deprecated; do not use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="num_dml_affected_rows_python">
 <a href="#num_dml_affected_rows_python" style="color: inherit; text-decoration: inherit;">num_<wbr>dml_<wbr>affected_<wbr>rows</a>
@@ -13120,14 +12735,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Output-only] Start time of this job, in milliseconds since the epoch. This field will be present when the job transitions from the PENDING state to either RUNNING or DONE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="totalbytesprocessed_csharp">
-<a href="#totalbytesprocessed_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Bytes<wbr>Processed</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] [Deprecated] Use the bytes processed in the query statistics instead.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="totalslotms_csharp">
 <a href="#totalslotms_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Slot<wbr>Ms</a>
 </span>
@@ -13267,14 +12874,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] Start time of this job, in milliseconds since the epoch. This field will be present when the job transitions from the PENDING state to either RUNNING or DONE.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="totalbytesprocessed_go">
-<a href="#totalbytesprocessed_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Bytes<wbr>Processed</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] [Deprecated] Use the bytes processed in the query statistics instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalslotms_go">
 <a href="#totalslotms_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Slot<wbr>Ms</a>
@@ -13416,14 +13015,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Output-only] Start time of this job, in milliseconds since the epoch. This field will be present when the job transitions from the PENDING state to either RUNNING or DONE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="totalbytesprocessed_nodejs">
-<a href="#totalbytesprocessed_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Bytes<wbr>Processed</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] [Deprecated] Use the bytes processed in the query statistics instead.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="totalslotms_nodejs">
 <a href="#totalslotms_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Slot<wbr>Ms</a>
 </span>
@@ -13563,14 +13154,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] Start time of this job, in milliseconds since the epoch. This field will be present when the job transitions from the PENDING state to either RUNNING or DONE.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="total_bytes_processed_python">
-<a href="#total_bytes_processed_python" style="color: inherit; text-decoration: inherit;">total_<wbr>bytes_<wbr>processed</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] [Deprecated] Use the bytes processed in the query statistics instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="total_slot_ms_python">
 <a href="#total_slot_ms_python" style="color: inherit; text-decoration: inherit;">total_<wbr>slot_<wbr>ms</a>
@@ -14066,8 +13649,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -14094,8 +13677,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -14122,8 +13705,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -14150,8 +13733,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -14180,8 +13763,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -14208,8 +13791,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -14236,8 +13819,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -14264,8 +13847,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -15654,8 +15237,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -15682,8 +15265,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -15710,8 +15293,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -15738,8 +15321,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -15768,8 +15351,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -15796,8 +15379,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -15824,8 +15407,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -15852,8 +15435,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -15890,8 +15473,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the row access policy. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -15926,8 +15509,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the row access policy. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -15962,8 +15545,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the row access policy. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -15998,8 +15581,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the row access policy. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -16036,8 +15619,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the row access policy. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -16072,8 +15655,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the row access policy. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -16108,8 +15691,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the row access policy. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -16144,8 +15727,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the row access policy. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -17634,8 +17217,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -17662,8 +17245,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -17690,8 +17273,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -17718,8 +17301,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -17748,8 +17331,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -17776,8 +17359,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -17804,8 +17387,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -17832,8 +17415,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

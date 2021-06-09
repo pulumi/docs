@@ -29,10 +29,10 @@ Sets the IAM policy for a taxonomy or a policy tag.
                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                                <span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_datacatalog_v1beta1.BindingArgs]]</span> = None<span class="p">,</span>
                                <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                               <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                               <span class="nx">policy_tags_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                               <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                               <span class="nx">taxonomies_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">policy_tag_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">taxonomy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TaxonomyPolicyTagIamPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -163,32 +163,32 @@ The TaxonomyPolicyTagIamPolicy resource accepts the following [input]({{< relref
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="locationsid_csharp">
-<a href="#locationsid_csharp" style="color: inherit; text-decoration: inherit;">Locations<wbr>Id</a>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="policytagsid_csharp">
-<a href="#policytagsid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Tags<wbr>Id</a>
+        <span id="policytagid_csharp">
+<a href="#policytagid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Tag<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_csharp">
-<a href="#projectsid_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="taxonomiesid_csharp">
-<a href="#taxonomiesid_csharp" style="color: inherit; text-decoration: inherit;">Taxonomies<wbr>Id</a>
+        <span id="taxonomyid_csharp">
+<a href="#taxonomyid_csharp" style="color: inherit; text-decoration: inherit;">Taxonomy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -223,32 +223,32 @@ The TaxonomyPolicyTagIamPolicy resource accepts the following [input]({{< relref
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="locationsid_go">
-<a href="#locationsid_go" style="color: inherit; text-decoration: inherit;">Locations<wbr>Id</a>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="policytagsid_go">
-<a href="#policytagsid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Tags<wbr>Id</a>
+        <span id="policytagid_go">
+<a href="#policytagid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Tag<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_go">
-<a href="#projectsid_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="taxonomiesid_go">
-<a href="#taxonomiesid_go" style="color: inherit; text-decoration: inherit;">Taxonomies<wbr>Id</a>
+        <span id="taxonomyid_go">
+<a href="#taxonomyid_go" style="color: inherit; text-decoration: inherit;">Taxonomy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -283,32 +283,32 @@ The TaxonomyPolicyTagIamPolicy resource accepts the following [input]({{< relref
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="locationsid_nodejs">
-<a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="policytagsid_nodejs">
-<a href="#policytagsid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Tags<wbr>Id</a>
+        <span id="policytagid_nodejs">
+<a href="#policytagid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Tag<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_nodejs">
-<a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="taxonomiesid_nodejs">
-<a href="#taxonomiesid_nodejs" style="color: inherit; text-decoration: inherit;">taxonomies<wbr>Id</a>
+        <span id="taxonomyid_nodejs">
+<a href="#taxonomyid_nodejs" style="color: inherit; text-decoration: inherit;">taxonomy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -343,32 +343,32 @@ The TaxonomyPolicyTagIamPolicy resource accepts the following [input]({{< relref
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="locations_id_python">
-<a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="policy_tags_id_python">
-<a href="#policy_tags_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>tags_<wbr>id</a>
+        <span id="policy_tag_id_python">
+<a href="#policy_tag_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>tag_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projects_id_python">
-<a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="taxonomies_id_python">
-<a href="#taxonomies_id_python" style="color: inherit; text-decoration: inherit;">taxonomies_<wbr>id</a>
+        <span id="taxonomy_id_python">
+<a href="#taxonomy_id_python" style="color: inherit; text-decoration: inherit;">taxonomy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

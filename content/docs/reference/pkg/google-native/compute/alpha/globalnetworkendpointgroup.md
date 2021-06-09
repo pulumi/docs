@@ -36,10 +36,8 @@ Creates a network endpoint group in the specified project using the parameters t
                                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                               <span class="nx">load_balancer</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.NetworkEndpointGroupLbNetworkEndpointGroupArgs]</span> = None<span class="p">,</span>
                                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                               <span class="nx">network_endpoint_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">network_endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">psc_target_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -181,14 +179,6 @@ The GlobalNetworkEndpointGroup resource accepts the following [input]({{< relref
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="networkendpointgroup_csharp">
-<a href="#networkendpointgroup_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoint<wbr>Group</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -268,14 +258,6 @@ The GlobalNetworkEndpointGroup resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#networkEndpointGroup for network endpoint group.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="loadbalancer_csharp">
-<a href="#loadbalancer_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkendpointgrouplbnetworkendpointgroup">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Lb<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -385,14 +367,6 @@ The GlobalNetworkEndpointGroup resource accepts the following [input]({{< relref
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="networkendpointgroup_go">
-<a href="#networkendpointgroup_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoint<wbr>Group</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -472,14 +446,6 @@ The GlobalNetworkEndpointGroup resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#networkEndpointGroup for network endpoint group.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="loadbalancer_go">
-<a href="#loadbalancer_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkendpointgrouplbnetworkendpointgroup">Network<wbr>Endpoint<wbr>Group<wbr>Lb<wbr>Network<wbr>Endpoint<wbr>Group</a></span>
-    </dt>
-    <dd>{{% md %}}This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -589,14 +555,6 @@ The GlobalNetworkEndpointGroup resource accepts the following [input]({{< relref
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="networkendpointgroup_nodejs">
-<a href="#networkendpointgroup_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Endpoint<wbr>Group</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -676,14 +634,6 @@ The GlobalNetworkEndpointGroup resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#networkEndpointGroup for network endpoint group.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="loadbalancer_nodejs">
-<a href="#loadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkendpointgrouplbnetworkendpointgroup">Network<wbr>Endpoint<wbr>Group<wbr>Lb<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -793,14 +743,6 @@ The GlobalNetworkEndpointGroup resource accepts the following [input]({{< relref
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="network_endpoint_group_python">
-<a href="#network_endpoint_group_python" style="color: inherit; text-decoration: inherit;">network_<wbr>endpoint_<wbr>group</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -880,14 +822,6 @@ The GlobalNetworkEndpointGroup resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#networkEndpointGroup for network endpoint group.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="load_balancer_python">
-<a href="#load_balancer_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkendpointgrouplbnetworkendpointgroup">Network<wbr>Endpoint<wbr>Group<wbr>Lb<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}This field is only valid when the network endpoint group is used for load balancing. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1885,298 +1819,6 @@ Example value: "revision-0010".{{% /md %}}</dd><dt class="property-required"
     <dd>{{% md %}}A template to parse service and tag fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services.
 
 For example, request URLs "foo1.domain.com/bar1" and "foo1.domain.com/bar2" can be backed by the same Serverless Network Endpoint Group (NEG) with URL mask ".domain.com/". The URL mask will parse them to { service="bar1", tag="foo1" } and { service="bar2", tag="foo2" } respectively.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="networkendpointgrouplbnetworkendpointgroup">Network<wbr>Endpoint<wbr>Group<wbr>Lb<wbr>Network<wbr>Endpoint<wbr>Group</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="defaultport_csharp">
-<a href="#defaultport_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The default port used if the port number is not specified in the network endpoint. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="network_csharp">
-<a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subnetwork_csharp">
-<a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Optional URL of the subnetwork to which all network endpoints in the NEG belong. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zone_csharp">
-<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The URL of the zone where the network endpoint group is located. [Deprecated] This field is deprecated.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="defaultport_go">
-<a href="#defaultport_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The default port used if the port number is not specified in the network endpoint. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="network_go">
-<a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subnetwork_go">
-<a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Optional URL of the subnetwork to which all network endpoints in the NEG belong. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zone_go">
-<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The URL of the zone where the network endpoint group is located. [Deprecated] This field is deprecated.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="defaultport_nodejs">
-<a href="#defaultport_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The default port used if the port number is not specified in the network endpoint. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="network_nodejs">
-<a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subnetwork_nodejs">
-<a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Optional URL of the subnetwork to which all network endpoints in the NEG belong. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zone_nodejs">
-<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The URL of the zone where the network endpoint group is located. [Deprecated] This field is deprecated.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="default_port_python">
-<a href="#default_port_python" style="color: inherit; text-decoration: inherit;">default_<wbr>port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The default port used if the port number is not specified in the network endpoint. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="network_python">
-<a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subnetwork_python">
-<a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Optional URL of the subnetwork to which all network endpoints in the NEG belong. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zone_python">
-<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The URL of the zone where the network endpoint group is located. [Deprecated] This field is deprecated.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="networkendpointgrouplbnetworkendpointgroupresponse">Network<wbr>Endpoint<wbr>Group<wbr>Lb<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="defaultport_csharp">
-<a href="#defaultport_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The default port used if the port number is not specified in the network endpoint. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="network_csharp">
-<a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnetwork_csharp">
-<a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Optional URL of the subnetwork to which all network endpoints in the NEG belong. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_csharp">
-<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The URL of the zone where the network endpoint group is located. [Deprecated] This field is deprecated.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="defaultport_go">
-<a href="#defaultport_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The default port used if the port number is not specified in the network endpoint. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="network_go">
-<a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnetwork_go">
-<a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Optional URL of the subnetwork to which all network endpoints in the NEG belong. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_go">
-<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The URL of the zone where the network endpoint group is located. [Deprecated] This field is deprecated.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="defaultport_nodejs">
-<a href="#defaultport_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The default port used if the port number is not specified in the network endpoint. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="network_nodejs">
-<a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnetwork_nodejs">
-<a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Optional URL of the subnetwork to which all network endpoints in the NEG belong. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_nodejs">
-<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The URL of the zone where the network endpoint group is located. [Deprecated] This field is deprecated.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="default_port_python">
-<a href="#default_port_python" style="color: inherit; text-decoration: inherit;">default_<wbr>port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The default port used if the port number is not specified in the network endpoint. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="network_python">
-<a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnetwork_python">
-<a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Optional URL of the subnetwork to which all network endpoints in the NEG belong. [Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_python">
-<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The URL of the zone where the network endpoint group is located. [Deprecated] This field is deprecated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkendpointgroupserverlessdeployment">Network<wbr>Endpoint<wbr>Group<wbr>Serverless<wbr>Deployment</h4>

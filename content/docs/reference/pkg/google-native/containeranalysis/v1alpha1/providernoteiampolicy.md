@@ -29,8 +29,8 @@ Sets the access control policy on the specified `Note` or `Occurrence`. Requires
                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                           <span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_containeranalysis_v1alpha1.BindingArgs]]</span> = None<span class="p">,</span>
                           <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                          <span class="nx">notes_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                          <span class="nx">providers_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">note_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">provider_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ProviderNoteIamPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -161,16 +161,16 @@ The ProviderNoteIamPolicy resource accepts the following [input]({{< relref "/do
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="notesid_csharp">
-<a href="#notesid_csharp" style="color: inherit; text-decoration: inherit;">Notes<wbr>Id</a>
+        <span id="noteid_csharp">
+<a href="#noteid_csharp" style="color: inherit; text-decoration: inherit;">Note<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="providersid_csharp">
-<a href="#providersid_csharp" style="color: inherit; text-decoration: inherit;">Providers<wbr>Id</a>
+        <span id="providerid_csharp">
+<a href="#providerid_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -205,16 +205,16 @@ The ProviderNoteIamPolicy resource accepts the following [input]({{< relref "/do
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="notesid_go">
-<a href="#notesid_go" style="color: inherit; text-decoration: inherit;">Notes<wbr>Id</a>
+        <span id="noteid_go">
+<a href="#noteid_go" style="color: inherit; text-decoration: inherit;">Note<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="providersid_go">
-<a href="#providersid_go" style="color: inherit; text-decoration: inherit;">Providers<wbr>Id</a>
+        <span id="providerid_go">
+<a href="#providerid_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -249,16 +249,16 @@ The ProviderNoteIamPolicy resource accepts the following [input]({{< relref "/do
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="notesid_nodejs">
-<a href="#notesid_nodejs" style="color: inherit; text-decoration: inherit;">notes<wbr>Id</a>
+        <span id="noteid_nodejs">
+<a href="#noteid_nodejs" style="color: inherit; text-decoration: inherit;">note<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="providersid_nodejs">
-<a href="#providersid_nodejs" style="color: inherit; text-decoration: inherit;">providers<wbr>Id</a>
+        <span id="providerid_nodejs">
+<a href="#providerid_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -293,16 +293,16 @@ The ProviderNoteIamPolicy resource accepts the following [input]({{< relref "/do
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="notes_id_python">
-<a href="#notes_id_python" style="color: inherit; text-decoration: inherit;">notes_<wbr>id</a>
+        <span id="note_id_python">
+<a href="#note_id_python" style="color: inherit; text-decoration: inherit;">note_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="providers_id_python">
-<a href="#providers_id_python" style="color: inherit; text-decoration: inherit;">providers_<wbr>id</a>
+        <span id="provider_id_python">
+<a href="#provider_id_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

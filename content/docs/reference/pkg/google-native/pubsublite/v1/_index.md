@@ -11,8 +11,8 @@ Explore the resources and functions of the google-native.pubsublite/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="adminsubscription" title="AdminSubscription"><span class="symbol resource"></span>AdminSubscription</a></li>
-    <li><a href="admintopic" title="AdminTopic"><span class="symbol resource"></span>AdminTopic</a></li>
+    <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
+    <li><a href="topic" title="Topic"><span class="symbol resource"></span>Topic</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -22,6 +22,6 @@ Explore the resources and functions of the google-native.pubsublite/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

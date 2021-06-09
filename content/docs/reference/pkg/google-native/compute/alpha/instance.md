@@ -41,7 +41,6 @@ Creates an instance resource in the specified project using the data included in
              <span class="nx">guest_accelerators</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.AcceleratorConfigArgs]]</span> = None<span class="p">,</span>
              <span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">instance_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
              <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -211,14 +210,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="instance_csharp">
-<a href="#instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -688,14 +679,6 @@ Service accounts generate access tokens that can be accessed through the metadat
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="instance_go">
-<a href="#instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -1164,14 +1147,6 @@ Service accounts generate access tokens that can be accessed through the metadat
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="instance_nodejs">
-<a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -1639,14 +1614,6 @@ Service accounts generate access tokens that can be accessed through the metadat
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="instance_python">
-<a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -7250,7 +7217,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
     <dd>{{% md %}}The Platform Key (PK).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="instancetemplateitemsitem">Instance<wbr>Template<wbr>Items<wbr>Item</h4>
+<h4 id="instanceitemsitem">Instance<wbr>Items<wbr>Item</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -7332,7 +7299,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
     <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="instancetemplateitemsitemresponse">Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Response</h4>
+<h4 id="instanceitemsitemresponse">Instance<wbr>Items<wbr>Item<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -7433,7 +7400,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateitemsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceitemsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Instance<wbr>Items<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7463,7 +7430,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateitemsitem">[]Instance<wbr>Template<wbr>Items<wbr>Item</a></span>
+        <span class="property-type"><a href="#instanceitemsitem">[]Instance<wbr>Items<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7493,7 +7460,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateitemsitem">Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instanceitemsitem">Instance<wbr>Items<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7523,7 +7490,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateitemsitem">Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceitemsitem">Instance<wbr>Items<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7555,7 +7522,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateitemsitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceitemsitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Instance<wbr>Items<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7585,7 +7552,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateitemsitemresponse">[]Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Response</a></span>
+        <span class="property-type"><a href="#instanceitemsitemresponse">[]Instance<wbr>Items<wbr>Item<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7615,7 +7582,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateitemsitemresponse">Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instanceitemsitemresponse">Instance<wbr>Items<wbr>Item<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7645,7 +7612,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateitemsitemresponse">Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceitemsitemresponse">Instance<wbr>Items<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11583,14 +11550,6 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="date_csharp">
-<a href="#date_csharp" style="color: inherit; text-decoration: inherit;">Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The date when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="starttimewindow_csharp">
 <a href="#starttimewindow_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time<wbr>Window</a>
 </span>
@@ -11598,14 +11557,6 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
         <span class="property-type"><a href="#upcomingmaintenancetimewindow">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Upcoming<wbr>Maintenance<wbr>Time<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The start time window of the maintenance disruption.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="time_csharp">
-<a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The time when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -11619,14 +11570,6 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="date_go">
-<a href="#date_go" style="color: inherit; text-decoration: inherit;">Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The date when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="starttimewindow_go">
 <a href="#starttimewindow_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time<wbr>Window</a>
 </span>
@@ -11634,14 +11577,6 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
         <span class="property-type"><a href="#upcomingmaintenancetimewindow">Upcoming<wbr>Maintenance<wbr>Time<wbr>Window</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The start time window of the maintenance disruption.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="time_go">
-<a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The time when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -11655,14 +11590,6 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="date_nodejs">
-<a href="#date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The date when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="starttimewindow_nodejs">
 <a href="#starttimewindow_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Window</a>
 </span>
@@ -11670,14 +11597,6 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
         <span class="property-type"><a href="#upcomingmaintenancetimewindow">Upcoming<wbr>Maintenance<wbr>Time<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The start time window of the maintenance disruption.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="time_nodejs">
-<a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The time when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -11691,14 +11610,6 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="date_python">
-<a href="#date_python" style="color: inherit; text-decoration: inherit;">date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The date when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="start_time_window_python">
 <a href="#start_time_window_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>window</a>
 </span>
@@ -11706,14 +11617,6 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
         <span class="property-type"><a href="#upcomingmaintenancetimewindow">Upcoming<wbr>Maintenance<wbr>Time<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The start time window of the maintenance disruption.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="time_python">
-<a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The time when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -11729,14 +11632,6 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="date_csharp">
-<a href="#date_csharp" style="color: inherit; text-decoration: inherit;">Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The date when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="starttimewindow_csharp">
 <a href="#starttimewindow_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time<wbr>Window</a>
 </span>
@@ -11744,14 +11639,6 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
         <span class="property-type"><a href="#upcomingmaintenancetimewindowresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Upcoming<wbr>Maintenance<wbr>Time<wbr>Window<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The start time window of the maintenance disruption.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="time_csharp">
-<a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The time when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -11765,14 +11652,6 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="date_go">
-<a href="#date_go" style="color: inherit; text-decoration: inherit;">Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The date when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="starttimewindow_go">
 <a href="#starttimewindow_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time<wbr>Window</a>
 </span>
@@ -11780,14 +11659,6 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
         <span class="property-type"><a href="#upcomingmaintenancetimewindowresponse">Upcoming<wbr>Maintenance<wbr>Time<wbr>Window<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The start time window of the maintenance disruption.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="time_go">
-<a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The time when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -11801,14 +11672,6 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="date_nodejs">
-<a href="#date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The date when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="starttimewindow_nodejs">
 <a href="#starttimewindow_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Window</a>
 </span>
@@ -11816,14 +11679,6 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
         <span class="property-type"><a href="#upcomingmaintenancetimewindowresponse">Upcoming<wbr>Maintenance<wbr>Time<wbr>Window<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The start time window of the maintenance disruption.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="time_nodejs">
-<a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The time when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -11837,14 +11692,6 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="date_python">
-<a href="#date_python" style="color: inherit; text-decoration: inherit;">date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The date when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="start_time_window_python">
 <a href="#start_time_window_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>window</a>
 </span>
@@ -11852,14 +11699,6 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
         <span class="property-type"><a href="#upcomingmaintenancetimewindowresponse">Upcoming<wbr>Maintenance<wbr>Time<wbr>Window<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The start time window of the maintenance disruption.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="time_python">
-<a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The time when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>

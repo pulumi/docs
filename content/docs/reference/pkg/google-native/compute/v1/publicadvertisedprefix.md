@@ -36,7 +36,6 @@ Creates a PublicAdvertisedPrefix in the specified project using the parameters t
                            <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">public_advertised_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">public_delegated_prefixs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_v1.PublicAdvertisedPrefixPublicDelegatedPrefixArgs]]</span> = None<span class="p">,</span>
                            <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -177,14 +176,6 @@ The PublicAdvertisedPrefix resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="publicadvertisedprefix_csharp">
-<a href="#publicadvertisedprefix_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Advertised<wbr>Prefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_csharp">
@@ -299,14 +290,6 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="publicadvertisedprefix_go">
-<a href="#publicadvertisedprefix_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Advertised<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -429,14 +412,6 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="publicadvertisedprefix_nodejs">
-<a href="#publicadvertisedprefix_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Advertised<wbr>Prefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_nodejs">
@@ -551,14 +526,6 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="public_advertised_prefix_python">
-<a href="#public_advertised_prefix_python" style="color: inherit; text-decoration: inherit;">public_<wbr>advertised_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

@@ -28,13 +28,12 @@ Creates a new custom dashboard. For examples on how you can use this API to crea
 <span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
               <span class="nx">column_layout</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v1.ColumnLayoutArgs]</span> = None<span class="p">,</span>
-              <span class="nx">dashboards_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">grid_layout</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v1.GridLayoutArgs]</span> = None<span class="p">,</span>
               <span class="nx">mosaic_layout</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v1.MosaicLayoutArgs]</span> = None<span class="p">,</span>
               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">row_layout</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v1.RowLayoutArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -165,16 +164,8 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="dashboardsid_csharp">
-<a href="#dashboardsid_csharp" style="color: inherit; text-decoration: inherit;">Dashboards<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectsid_csharp">
-<a href="#projectsid_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -241,16 +232,8 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="dashboardsid_go">
-<a href="#dashboardsid_go" style="color: inherit; text-decoration: inherit;">Dashboards<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectsid_go">
-<a href="#projectsid_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -317,16 +300,8 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="dashboardsid_nodejs">
-<a href="#dashboardsid_nodejs" style="color: inherit; text-decoration: inherit;">dashboards<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectsid_nodejs">
-<a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -393,16 +368,8 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="dashboards_id_python">
-<a href="#dashboards_id_python" style="color: inherit; text-decoration: inherit;">dashboards_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projects_id_python">
-<a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3247,170 +3214,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Required. The type of sparkchart to show in this chartView.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="statisticaltimeseriesfilter">Statistical<wbr>Time<wbr>Series<wbr>Filter</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="numtimeseries_csharp">
-<a href="#numtimeseries_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Time<wbr>Series</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}How many time series to output.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rankingmethod_csharp">
-<a href="#rankingmethod_csharp" style="color: inherit; text-decoration: inherit;">Ranking<wbr>Method</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}rankingMethod is applied to a set of time series, and then the produced value for each individual time series is used to compare a given time series to others. These are methods that cannot be applied stream-by-stream, but rather require the full context of a request to evaluate time series.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="numtimeseries_go">
-<a href="#numtimeseries_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Time<wbr>Series</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}How many time series to output.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rankingmethod_go">
-<a href="#rankingmethod_go" style="color: inherit; text-decoration: inherit;">Ranking<wbr>Method</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}rankingMethod is applied to a set of time series, and then the produced value for each individual time series is used to compare a given time series to others. These are methods that cannot be applied stream-by-stream, but rather require the full context of a request to evaluate time series.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="numtimeseries_nodejs">
-<a href="#numtimeseries_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Time<wbr>Series</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}How many time series to output.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rankingmethod_nodejs">
-<a href="#rankingmethod_nodejs" style="color: inherit; text-decoration: inherit;">ranking<wbr>Method</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}rankingMethod is applied to a set of time series, and then the produced value for each individual time series is used to compare a given time series to others. These are methods that cannot be applied stream-by-stream, but rather require the full context of a request to evaluate time series.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="num_time_series_python">
-<a href="#num_time_series_python" style="color: inherit; text-decoration: inherit;">num_<wbr>time_<wbr>series</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}How many time series to output.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ranking_method_python">
-<a href="#ranking_method_python" style="color: inherit; text-decoration: inherit;">ranking_<wbr>method</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}rankingMethod is applied to a set of time series, and then the produced value for each individual time series is used to compare a given time series to others. These are methods that cannot be applied stream-by-stream, but rather require the full context of a request to evaluate time series.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="statisticaltimeseriesfilterresponse">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="numtimeseries_csharp">
-<a href="#numtimeseries_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Time<wbr>Series</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}How many time series to output.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rankingmethod_csharp">
-<a href="#rankingmethod_csharp" style="color: inherit; text-decoration: inherit;">Ranking<wbr>Method</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}rankingMethod is applied to a set of time series, and then the produced value for each individual time series is used to compare a given time series to others. These are methods that cannot be applied stream-by-stream, but rather require the full context of a request to evaluate time series.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="numtimeseries_go">
-<a href="#numtimeseries_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Time<wbr>Series</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}How many time series to output.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rankingmethod_go">
-<a href="#rankingmethod_go" style="color: inherit; text-decoration: inherit;">Ranking<wbr>Method</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}rankingMethod is applied to a set of time series, and then the produced value for each individual time series is used to compare a given time series to others. These are methods that cannot be applied stream-by-stream, but rather require the full context of a request to evaluate time series.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="numtimeseries_nodejs">
-<a href="#numtimeseries_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Time<wbr>Series</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}How many time series to output.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rankingmethod_nodejs">
-<a href="#rankingmethod_nodejs" style="color: inherit; text-decoration: inherit;">ranking<wbr>Method</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}rankingMethod is applied to a set of time series, and then the produced value for each individual time series is used to compare a given time series to others. These are methods that cannot be applied stream-by-stream, but rather require the full context of a request to evaluate time series.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="num_time_series_python">
-<a href="#num_time_series_python" style="color: inherit; text-decoration: inherit;">num_<wbr>time_<wbr>series</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}How many time series to output.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ranking_method_python">
-<a href="#ranking_method_python" style="color: inherit; text-decoration: inherit;">ranking_<wbr>method</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}rankingMethod is applied to a set of time series, and then the produced value for each individual time series is used to compare a given time series to others. These are methods that cannot be applied stream-by-stream, but rather require the full context of a request to evaluate time series.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="text">Text</h4>
 
 {{% choosable language csharp %}}
@@ -4258,15 +4061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aggregation">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Inputs.<wbr>Aggregation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statisticaltimeseriesfilter_csharp">
-<a href="#statisticaltimeseriesfilter_csharp" style="color: inherit; text-decoration: inherit;">Statistical<wbr>Time<wbr>Series<wbr>Filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilter">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Inputs.<wbr>Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4302,15 +4097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aggregation">Aggregation</a></span>
     </dt>
-    <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statisticaltimeseriesfilter_go">
-<a href="#statisticaltimeseriesfilter_go" style="color: inherit; text-decoration: inherit;">Statistical<wbr>Time<wbr>Series<wbr>Filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilter">Statistical<wbr>Time<wbr>Series<wbr>Filter</a></span>
-    </dt>
-    <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4346,15 +4133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statisticaltimeseriesfilter_nodejs">
-<a href="#statisticaltimeseriesfilter_nodejs" style="color: inherit; text-decoration: inherit;">statistical<wbr>Time<wbr>Series<wbr>Filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilter">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4390,15 +4169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statistical_time_series_filter_python">
-<a href="#statistical_time_series_filter_python" style="color: inherit; text-decoration: inherit;">statistical_<wbr>time_<wbr>series_<wbr>filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilter">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timeseriesfilterratio">Time<wbr>Series<wbr>Filter<wbr>Ratio</h4>
@@ -4436,15 +4207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aggregation">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Inputs.<wbr>Aggregation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statisticaltimeseriesfilter_csharp">
-<a href="#statisticaltimeseriesfilter_csharp" style="color: inherit; text-decoration: inherit;">Statistical<wbr>Time<wbr>Series<wbr>Filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilter">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Inputs.<wbr>Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4480,15 +4243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aggregation">Aggregation</a></span>
     </dt>
-    <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statisticaltimeseriesfilter_go">
-<a href="#statisticaltimeseriesfilter_go" style="color: inherit; text-decoration: inherit;">Statistical<wbr>Time<wbr>Series<wbr>Filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilter">Statistical<wbr>Time<wbr>Series<wbr>Filter</a></span>
-    </dt>
-    <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4524,15 +4279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statisticaltimeseriesfilter_nodejs">
-<a href="#statisticaltimeseriesfilter_nodejs" style="color: inherit; text-decoration: inherit;">statistical<wbr>Time<wbr>Series<wbr>Filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilter">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4568,15 +4315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statistical_time_series_filter_python">
-<a href="#statistical_time_series_filter_python" style="color: inherit; text-decoration: inherit;">statistical_<wbr>time_<wbr>series_<wbr>filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilter">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timeseriesfilterratioresponse">Time<wbr>Series<wbr>Filter<wbr>Ratio<wbr>Response</h4>
@@ -4614,15 +4353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aggregationresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Inputs.<wbr>Aggregation<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="statisticaltimeseriesfilter_csharp">
-<a href="#statisticaltimeseriesfilter_csharp" style="color: inherit; text-decoration: inherit;">Statistical<wbr>Time<wbr>Series<wbr>Filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilterresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Inputs.<wbr>Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4658,15 +4389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="statisticaltimeseriesfilter_go">
-<a href="#statisticaltimeseriesfilter_go" style="color: inherit; text-decoration: inherit;">Statistical<wbr>Time<wbr>Series<wbr>Filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilterresponse">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4702,15 +4425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="statisticaltimeseriesfilter_nodejs">
-<a href="#statisticaltimeseriesfilter_nodejs" style="color: inherit; text-decoration: inherit;">statistical<wbr>Time<wbr>Series<wbr>Filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilterresponse">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4746,15 +4461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="statistical_time_series_filter_python">
-<a href="#statistical_time_series_filter_python" style="color: inherit; text-decoration: inherit;">statistical_<wbr>time_<wbr>series_<wbr>filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilterresponse">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timeseriesfilterresponse">Time<wbr>Series<wbr>Filter<wbr>Response</h4>
@@ -4792,15 +4499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aggregationresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Inputs.<wbr>Aggregation<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="statisticaltimeseriesfilter_csharp">
-<a href="#statisticaltimeseriesfilter_csharp" style="color: inherit; text-decoration: inherit;">Statistical<wbr>Time<wbr>Series<wbr>Filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilterresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Inputs.<wbr>Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4836,15 +4535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="statisticaltimeseriesfilter_go">
-<a href="#statisticaltimeseriesfilter_go" style="color: inherit; text-decoration: inherit;">Statistical<wbr>Time<wbr>Series<wbr>Filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilterresponse">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4880,15 +4571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="statisticaltimeseriesfilter_nodejs">
-<a href="#statisticaltimeseriesfilter_nodejs" style="color: inherit; text-decoration: inherit;">statistical<wbr>Time<wbr>Series<wbr>Filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilterresponse">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4924,15 +4607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="statistical_time_series_filter_python">
-<a href="#statistical_time_series_filter_python" style="color: inherit; text-decoration: inherit;">statistical_<wbr>time_<wbr>series_<wbr>filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilterresponse">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timeseriesquery">Time<wbr>Series<wbr>Query</h4>

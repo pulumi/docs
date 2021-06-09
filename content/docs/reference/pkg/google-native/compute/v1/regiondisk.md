@@ -29,7 +29,6 @@ Creates a persistent regional disk in the specified project using the data inclu
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">disk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">disk_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
                <span class="nx">guest_os_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_v1.GuestOsFeatureArgs]]</span> = None<span class="p">,</span>
                <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -194,14 +193,6 @@ The RegionDisk resource accepts the following [input]({{< relref "/docs/intro/co
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="disk_csharp">
-<a href="#disk_csharp" style="color: inherit; text-decoration: inherit;">Disk</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -550,14 +541,6 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="disk_go">
-<a href="#disk_go" style="color: inherit; text-decoration: inherit;">Disk</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -905,14 +888,6 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="disk_nodejs">
-<a href="#disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -1259,14 +1234,6 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="disk_python">
-<a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>

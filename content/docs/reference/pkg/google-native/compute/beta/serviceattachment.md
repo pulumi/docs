@@ -43,7 +43,6 @@ Creates a ServiceAttachment in the specified project in the given scope using th
                       <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                      <span class="nx">service_attachment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">target_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ServiceAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -188,15 +187,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Output Only] URL of the region where the service attachment resides. This field applies only to the region resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="serviceattachment_csharp">
-<a href="#serviceattachment_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Attachment</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Output Only] URL of the region where the service attachment resides. This field applies only to the region resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectedendpoints_csharp">
 <a href="#connectedendpoints_csharp" style="color: inherit; text-decoration: inherit;">Connected<wbr>Endpoints</a>
@@ -336,15 +327,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Output Only] URL of the region where the service attachment resides. This field applies only to the region resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="serviceattachment_go">
-<a href="#serviceattachment_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Attachment</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Output Only] URL of the region where the service attachment resides. This field applies only to the region resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectedendpoints_go">
 <a href="#connectedendpoints_go" style="color: inherit; text-decoration: inherit;">Connected<wbr>Endpoints</a>
@@ -484,15 +467,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Output Only] URL of the region where the service attachment resides. This field applies only to the region resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="serviceattachment_nodejs">
-<a href="#serviceattachment_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Attachment</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Output Only] URL of the region where the service attachment resides. This field applies only to the region resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectedendpoints_nodejs">
 <a href="#connectedendpoints_nodejs" style="color: inherit; text-decoration: inherit;">connected<wbr>Endpoints</a>
@@ -632,15 +607,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}[Output Only] URL of the region where the service attachment resides. This field applies only to the region resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="service_attachment_python">
-<a href="#service_attachment_python" style="color: inherit; text-decoration: inherit;">service_<wbr>attachment</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Output Only] URL of the region where the service attachment resides. This field applies only to the region resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connected_endpoints_python">
 <a href="#connected_endpoints_python" style="color: inherit; text-decoration: inherit;">connected_<wbr>endpoints</a>
@@ -841,14 +808,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The url of a connected endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="forwardingrule_csharp">
-<a href="#forwardingrule_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Rule</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The url of a consumer forwarding rule. [Deprecated] Do not use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="pscconnectionid_csharp">
 <a href="#pscconnectionid_csharp" style="color: inherit; text-decoration: inherit;">Psc<wbr>Connection<wbr>Id</a>
 </span>
@@ -876,14 +835,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of a connected endpoint.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="forwardingrule_go">
-<a href="#forwardingrule_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Rule</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The url of a consumer forwarding rule. [Deprecated] Do not use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pscconnectionid_go">
 <a href="#pscconnectionid_go" style="color: inherit; text-decoration: inherit;">Psc<wbr>Connection<wbr>Id</a>
@@ -913,14 +864,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The url of a connected endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="forwardingrule_nodejs">
-<a href="#forwardingrule_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Rule</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The url of a consumer forwarding rule. [Deprecated] Do not use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="pscconnectionid_nodejs">
 <a href="#pscconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">psc<wbr>Connection<wbr>Id</a>
 </span>
@@ -948,14 +891,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The url of a connected endpoint.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="forwarding_rule_python">
-<a href="#forwarding_rule_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>rule</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The url of a consumer forwarding rule. [Deprecated] Do not use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="psc_connection_id_python">
 <a href="#psc_connection_id_python" style="color: inherit; text-decoration: inherit;">psc_<wbr>connection_<wbr>id</a>
@@ -987,14 +922,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The url of a connected endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="forwardingrule_csharp">
-<a href="#forwardingrule_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Rule</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The url of a consumer forwarding rule. [Deprecated] Do not use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="pscconnectionid_csharp">
 <a href="#pscconnectionid_csharp" style="color: inherit; text-decoration: inherit;">Psc<wbr>Connection<wbr>Id</a>
 </span>
@@ -1022,14 +949,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of a connected endpoint.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="forwardingrule_go">
-<a href="#forwardingrule_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Rule</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The url of a consumer forwarding rule. [Deprecated] Do not use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pscconnectionid_go">
 <a href="#pscconnectionid_go" style="color: inherit; text-decoration: inherit;">Psc<wbr>Connection<wbr>Id</a>
@@ -1059,14 +978,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The url of a connected endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="forwardingrule_nodejs">
-<a href="#forwardingrule_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Rule</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The url of a consumer forwarding rule. [Deprecated] Do not use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="pscconnectionid_nodejs">
 <a href="#pscconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">psc<wbr>Connection<wbr>Id</a>
 </span>
@@ -1094,14 +1005,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The url of a connected endpoint.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="forwarding_rule_python">
-<a href="#forwarding_rule_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>rule</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The url of a consumer forwarding rule. [Deprecated] Do not use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="psc_connection_id_python">
 <a href="#psc_connection_id_python" style="color: inherit; text-decoration: inherit;">psc_<wbr>connection_<wbr>id</a>

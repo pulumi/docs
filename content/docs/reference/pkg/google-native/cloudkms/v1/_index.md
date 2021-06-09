@@ -11,12 +11,12 @@ Explore the resources and functions of the google-native.cloudkms/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="cryptokey" title="CryptoKey"><span class="symbol resource"></span>CryptoKey</a></li>
+    <li><a href="cryptokeyversion" title="CryptoKeyVersion"><span class="symbol resource"></span>CryptoKeyVersion</a></li>
+    <li><a href="importjob" title="ImportJob"><span class="symbol resource"></span>ImportJob</a></li>
     <li><a href="keyring" title="KeyRing"><span class="symbol resource"></span>KeyRing</a></li>
-    <li><a href="keyringcryptokey" title="KeyRingCryptoKey"><span class="symbol resource"></span>KeyRingCryptoKey</a></li>
-    <li><a href="keyringcryptokeycryptokeyversion" title="KeyRingCryptoKeyCryptoKeyVersion"><span class="symbol resource"></span>KeyRingCryptoKeyCryptoKeyVersion</a></li>
     <li><a href="keyringcryptokeyiampolicy" title="KeyRingCryptoKeyIamPolicy"><span class="symbol resource"></span>KeyRingCryptoKeyIamPolicy</a></li>
     <li><a href="keyringiampolicy" title="KeyRingIamPolicy"><span class="symbol resource"></span>KeyRingIamPolicy</a></li>
-    <li><a href="keyringimportjob" title="KeyRingImportJob"><span class="symbol resource"></span>KeyRingImportJob</a></li>
     <li><a href="keyringimportjobiampolicy" title="KeyRingImportJobIamPolicy"><span class="symbol resource"></span>KeyRingImportJobIamPolicy</a></li>
 </ul>
 
@@ -27,6 +27,6 @@ Explore the resources and functions of the google-native.cloudkms/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

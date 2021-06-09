@@ -11,8 +11,8 @@ Explore the resources and functions of the google-native.appengine/v1alpha modul
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="appauthorizedcertificate" title="AppAuthorizedCertificate"><span class="symbol resource"></span>AppAuthorizedCertificate</a></li>
-    <li><a href="appdomainmapping" title="AppDomainMapping"><span class="symbol resource"></span>AppDomainMapping</a></li>
+    <li><a href="authorizedcertificate" title="AuthorizedCertificate"><span class="symbol resource"></span>AuthorizedCertificate</a></li>
+    <li><a href="domainmapping" title="DomainMapping"><span class="symbol resource"></span>DomainMapping</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -22,6 +22,6 @@ Explore the resources and functions of the google-native.appengine/v1alpha modul
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

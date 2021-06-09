@@ -30,8 +30,8 @@ Sets the access control policy on the specified Source.
                                 <span class="nx">audit_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_securitycenter_v1.AuditConfigArgs]]</span> = None<span class="p">,</span>
                                 <span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_securitycenter_v1.BindingArgs]]</span> = None<span class="p">,</span>
                                 <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                <span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                <span class="nx">sources_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">organization_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                 <span class="nx">update_mask</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                 <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -163,16 +163,16 @@ The OrganizationSourceIamPolicy resource accepts the following [input]({{< relre
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="organizationsid_csharp">
-<a href="#organizationsid_csharp" style="color: inherit; text-decoration: inherit;">Organizations<wbr>Id</a>
+        <span id="organizationid_csharp">
+<a href="#organizationid_csharp" style="color: inherit; text-decoration: inherit;">Organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="sourcesid_csharp">
-<a href="#sourcesid_csharp" style="color: inherit; text-decoration: inherit;">Sources<wbr>Id</a>
+        <span id="sourceid_csharp">
+<a href="#sourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -223,16 +223,16 @@ The OrganizationSourceIamPolicy resource accepts the following [input]({{< relre
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="organizationsid_go">
-<a href="#organizationsid_go" style="color: inherit; text-decoration: inherit;">Organizations<wbr>Id</a>
+        <span id="organizationid_go">
+<a href="#organizationid_go" style="color: inherit; text-decoration: inherit;">Organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="sourcesid_go">
-<a href="#sourcesid_go" style="color: inherit; text-decoration: inherit;">Sources<wbr>Id</a>
+        <span id="sourceid_go">
+<a href="#sourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -283,16 +283,16 @@ The OrganizationSourceIamPolicy resource accepts the following [input]({{< relre
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="organizationsid_nodejs">
-<a href="#organizationsid_nodejs" style="color: inherit; text-decoration: inherit;">organizations<wbr>Id</a>
+        <span id="organizationid_nodejs">
+<a href="#organizationid_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="sourcesid_nodejs">
-<a href="#sourcesid_nodejs" style="color: inherit; text-decoration: inherit;">sources<wbr>Id</a>
+        <span id="sourceid_nodejs">
+<a href="#sourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -343,16 +343,16 @@ The OrganizationSourceIamPolicy resource accepts the following [input]({{< relre
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="organizations_id_python">
-<a href="#organizations_id_python" style="color: inherit; text-decoration: inherit;">organizations_<wbr>id</a>
+        <span id="organization_id_python">
+<a href="#organization_id_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="sources_id_python">
-<a href="#sources_id_python" style="color: inherit; text-decoration: inherit;">sources_<wbr>id</a>
+        <span id="source_id_python">
+<a href="#source_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

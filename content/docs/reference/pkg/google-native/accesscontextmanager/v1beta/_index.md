@@ -11,9 +11,9 @@ Explore the resources and functions of the google-native.accesscontextmanager/v1
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="accesslevel" title="AccessLevel"><span class="symbol resource"></span>AccessLevel</a></li>
     <li><a href="accesspolicy" title="AccessPolicy"><span class="symbol resource"></span>AccessPolicy</a></li>
-    <li><a href="accesspolicyaccesslevel" title="AccessPolicyAccessLevel"><span class="symbol resource"></span>AccessPolicyAccessLevel</a></li>
-    <li><a href="accesspolicyserviceperimeter" title="AccessPolicyServicePerimeter"><span class="symbol resource"></span>AccessPolicyServicePerimeter</a></li>
+    <li><a href="serviceperimeter" title="ServicePerimeter"><span class="symbol resource"></span>ServicePerimeter</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -23,6 +23,6 @@ Explore the resources and functions of the google-native.accesscontextmanager/v1
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

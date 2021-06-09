@@ -27,10 +27,9 @@ Creates a new exclusion in a specified parent resource. Only log entries belongi
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">BillingAccountExclusion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                            <span class="nx">billing_accounts_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">billing_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                             <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-                            <span class="nx">exclusions_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                             <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -162,16 +161,8 @@ The BillingAccountExclusion resource accepts the following [input]({{< relref "/
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billingaccountsid_csharp">
-<a href="#billingaccountsid_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Accounts<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="exclusionsid_csharp">
-<a href="#exclusionsid_csharp" style="color: inherit; text-decoration: inherit;">Exclusions<wbr>Id</a>
+        <span id="billingaccountid_csharp">
+<a href="#billingaccountid_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -214,16 +205,8 @@ The BillingAccountExclusion resource accepts the following [input]({{< relref "/
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billingaccountsid_go">
-<a href="#billingaccountsid_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Accounts<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="exclusionsid_go">
-<a href="#exclusionsid_go" style="color: inherit; text-decoration: inherit;">Exclusions<wbr>Id</a>
+        <span id="billingaccountid_go">
+<a href="#billingaccountid_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -266,16 +249,8 @@ The BillingAccountExclusion resource accepts the following [input]({{< relref "/
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billingaccountsid_nodejs">
-<a href="#billingaccountsid_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Accounts<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="exclusionsid_nodejs">
-<a href="#exclusionsid_nodejs" style="color: inherit; text-decoration: inherit;">exclusions<wbr>Id</a>
+        <span id="billingaccountid_nodejs">
+<a href="#billingaccountid_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -318,16 +293,8 @@ The BillingAccountExclusion resource accepts the following [input]({{< relref "/
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billing_accounts_id_python">
-<a href="#billing_accounts_id_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>accounts_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="exclusions_id_python">
-<a href="#exclusions_id_python" style="color: inherit; text-decoration: inherit;">exclusions_<wbr>id</a>
+        <span id="billing_account_id_python">
+<a href="#billing_account_id_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

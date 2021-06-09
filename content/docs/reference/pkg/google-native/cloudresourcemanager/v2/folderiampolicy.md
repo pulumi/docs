@@ -30,7 +30,7 @@ Sets the access control policy on a Folder, replacing any existing policy. The `
                     <span class="nx">audit_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_cloudresourcemanager_v2.AuditConfigArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_cloudresourcemanager_v2.BindingArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                    <span class="nx">folders_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">update_mask</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -162,8 +162,8 @@ The FolderIamPolicy resource accepts the following [input]({{< relref "/docs/int
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="foldersid_csharp">
-<a href="#foldersid_csharp" style="color: inherit; text-decoration: inherit;">Folders<wbr>Id</a>
+        <span id="folderid_csharp">
+<a href="#folderid_csharp" style="color: inherit; text-decoration: inherit;">Folder<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -214,8 +214,8 @@ The FolderIamPolicy resource accepts the following [input]({{< relref "/docs/int
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="foldersid_go">
-<a href="#foldersid_go" style="color: inherit; text-decoration: inherit;">Folders<wbr>Id</a>
+        <span id="folderid_go">
+<a href="#folderid_go" style="color: inherit; text-decoration: inherit;">Folder<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -266,8 +266,8 @@ The FolderIamPolicy resource accepts the following [input]({{< relref "/docs/int
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="foldersid_nodejs">
-<a href="#foldersid_nodejs" style="color: inherit; text-decoration: inherit;">folders<wbr>Id</a>
+        <span id="folderid_nodejs">
+<a href="#folderid_nodejs" style="color: inherit; text-decoration: inherit;">folder<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -318,8 +318,8 @@ The FolderIamPolicy resource accepts the following [input]({{< relref "/docs/int
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="folders_id_python">
-<a href="#folders_id_python" style="color: inherit; text-decoration: inherit;">folders_<wbr>id</a>
+        <span id="folder_id_python">
+<a href="#folder_id_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

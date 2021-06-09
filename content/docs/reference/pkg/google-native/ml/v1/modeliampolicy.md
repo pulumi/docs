@@ -30,8 +30,8 @@ Sets the access control policy on the specified resource. Replaces any existing 
                    <span class="nx">audit_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_ml_v1.GoogleIamV1__AuditConfigArgs]]</span> = None<span class="p">,</span>
                    <span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_ml_v1.GoogleIamV1__BindingArgs]]</span> = None<span class="p">,</span>
                    <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">models_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">model_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">update_mask</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -163,16 +163,16 @@ The ModelIamPolicy resource accepts the following [input]({{< relref "/docs/intr
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="modelsid_csharp">
-<a href="#modelsid_csharp" style="color: inherit; text-decoration: inherit;">Models<wbr>Id</a>
+        <span id="modelid_csharp">
+<a href="#modelid_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_csharp">
-<a href="#projectsid_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -223,16 +223,16 @@ The ModelIamPolicy resource accepts the following [input]({{< relref "/docs/intr
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="modelsid_go">
-<a href="#modelsid_go" style="color: inherit; text-decoration: inherit;">Models<wbr>Id</a>
+        <span id="modelid_go">
+<a href="#modelid_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_go">
-<a href="#projectsid_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -283,16 +283,16 @@ The ModelIamPolicy resource accepts the following [input]({{< relref "/docs/intr
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="modelsid_nodejs">
-<a href="#modelsid_nodejs" style="color: inherit; text-decoration: inherit;">models<wbr>Id</a>
+        <span id="modelid_nodejs">
+<a href="#modelid_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_nodejs">
-<a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -343,16 +343,16 @@ The ModelIamPolicy resource accepts the following [input]({{< relref "/docs/intr
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="models_id_python">
-<a href="#models_id_python" style="color: inherit; text-decoration: inherit;">models_<wbr>id</a>
+        <span id="model_id_python">
+<a href="#model_id_python" style="color: inherit; text-decoration: inherit;">model_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projects_id_python">
-<a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

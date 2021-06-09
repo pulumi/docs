@@ -28,7 +28,7 @@ Sets the access control policy for a billing account. Replaces any existing poli
 <span class="k">def </span><span class="nx">BillingAccountIamPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                             <span class="nx">audit_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_cloudbilling_v1.AuditConfigArgs]]</span> = None<span class="p">,</span>
-                            <span class="nx">billing_accounts_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">billing_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                             <span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_cloudbilling_v1.BindingArgs]]</span> = None<span class="p">,</span>
                             <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                             <span class="nx">update_mask</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -162,8 +162,8 @@ The BillingAccountIamPolicy resource accepts the following [input]({{< relref "/
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billingaccountsid_csharp">
-<a href="#billingaccountsid_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Accounts<wbr>Id</a>
+        <span id="billingaccountid_csharp">
+<a href="#billingaccountid_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -214,8 +214,8 @@ The BillingAccountIamPolicy resource accepts the following [input]({{< relref "/
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billingaccountsid_go">
-<a href="#billingaccountsid_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Accounts<wbr>Id</a>
+        <span id="billingaccountid_go">
+<a href="#billingaccountid_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -266,8 +266,8 @@ The BillingAccountIamPolicy resource accepts the following [input]({{< relref "/
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billingaccountsid_nodejs">
-<a href="#billingaccountsid_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Accounts<wbr>Id</a>
+        <span id="billingaccountid_nodejs">
+<a href="#billingaccountid_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -318,8 +318,8 @@ The BillingAccountIamPolicy resource accepts the following [input]({{< relref "/
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billing_accounts_id_python">
-<a href="#billing_accounts_id_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>accounts_<wbr>id</a>
+        <span id="billing_account_id_python">
+<a href="#billing_account_id_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

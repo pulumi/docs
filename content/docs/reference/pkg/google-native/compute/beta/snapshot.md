@@ -46,7 +46,6 @@ Creates a snapshot in the specified project using the data included in the reque
              <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">snapshot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">snapshot_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
              <span class="nx">source_disk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">source_disk_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
@@ -186,14 +185,6 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="snapshot_csharp">
-<a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -426,14 +417,6 @@ If you do not provide an encryption key when creating the snapshot, then the sna
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="snapshot_go">
-<a href="#snapshot_go" style="color: inherit; text-decoration: inherit;">Snapshot</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autocreated_go">
@@ -662,14 +645,6 @@ If you do not provide an encryption key when creating the snapshot, then the sna
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="snapshot_nodejs">
-<a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autocreated_nodejs">
@@ -894,14 +869,6 @@ If you do not provide an encryption key when creating the snapshot, then the sna
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="snapshot_python">
-<a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

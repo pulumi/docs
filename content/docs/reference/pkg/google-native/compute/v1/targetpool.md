@@ -40,8 +40,7 @@ Creates a target pool in the specified project and region using the data include
                <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">target_pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+               <span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TargetPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TargetPoolArgs</a></span><span class="p">,</span>
@@ -185,15 +184,7 @@ The TargetPool resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Output Only] URL of the region where the target pool resides.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targetpool_csharp">
-<a href="#targetpool_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Pool</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Output Only] URL of the region where the target pool resides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backuppool_csharp">
 <a href="#backuppool_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Pool</a>
@@ -320,15 +311,7 @@ CLIENT_IP_PROTO: Connections from the same client IP with the same IP protocol w
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Output Only] URL of the region where the target pool resides.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targetpool_go">
-<a href="#targetpool_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Pool</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Output Only] URL of the region where the target pool resides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backuppool_go">
 <a href="#backuppool_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Pool</a>
@@ -455,15 +438,7 @@ CLIENT_IP_PROTO: Connections from the same client IP with the same IP protocol w
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Output Only] URL of the region where the target pool resides.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targetpool_nodejs">
-<a href="#targetpool_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Pool</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Output Only] URL of the region where the target pool resides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backuppool_nodejs">
 <a href="#backuppool_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Pool</a>
@@ -590,15 +565,7 @@ CLIENT_IP_PROTO: Connections from the same client IP with the same IP protocol w
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}[Output Only] URL of the region where the target pool resides.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="target_pool_python">
-<a href="#target_pool_python" style="color: inherit; text-decoration: inherit;">target_<wbr>pool</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Output Only] URL of the region where the target pool resides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_pool_python">
 <a href="#backup_pool_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>pool</a>

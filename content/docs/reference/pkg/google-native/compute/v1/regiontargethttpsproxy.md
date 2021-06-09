@@ -43,7 +43,6 @@ Creates a TargetHttpsProxy resource in the specified project and region using th
                            <span class="nx">server_tls_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">ssl_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                            <span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">target_https_proxy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">url_map</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">RegionTargetHttpsProxy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -188,15 +187,7 @@ The RegionTargetHttpsProxy resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Output Only] URL of the region where the regional TargetHttpsProxy resides. This field is not applicable to global TargetHttpsProxies.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targethttpsproxy_csharp">
-<a href="#targethttpsproxy_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Https<wbr>Proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Output Only] URL of the region where the regional TargetHttpsProxy resides. This field is not applicable to global TargetHttpsProxies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationpolicy_csharp">
 <a href="#authorizationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Policy</a>
@@ -353,15 +344,7 @@ Note: This field currently has no impact.{{% /md %}}</dd><dt class="property-opt
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Output Only] URL of the region where the regional TargetHttpsProxy resides. This field is not applicable to global TargetHttpsProxies.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targethttpsproxy_go">
-<a href="#targethttpsproxy_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Https<wbr>Proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Output Only] URL of the region where the regional TargetHttpsProxy resides. This field is not applicable to global TargetHttpsProxies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationpolicy_go">
 <a href="#authorizationpolicy_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Policy</a>
@@ -518,15 +501,7 @@ Note: This field currently has no impact.{{% /md %}}</dd><dt class="property-opt
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Output Only] URL of the region where the regional TargetHttpsProxy resides. This field is not applicable to global TargetHttpsProxies.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targethttpsproxy_nodejs">
-<a href="#targethttpsproxy_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Https<wbr>Proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Output Only] URL of the region where the regional TargetHttpsProxy resides. This field is not applicable to global TargetHttpsProxies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationpolicy_nodejs">
 <a href="#authorizationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Policy</a>
@@ -683,15 +658,7 @@ Note: This field currently has no impact.{{% /md %}}</dd><dt class="property-opt
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}[Output Only] URL of the region where the regional TargetHttpsProxy resides. This field is not applicable to global TargetHttpsProxies.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="target_https_proxy_python">
-<a href="#target_https_proxy_python" style="color: inherit; text-decoration: inherit;">target_<wbr>https_<wbr>proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Output Only] URL of the region where the regional TargetHttpsProxy resides. This field is not applicable to global TargetHttpsProxies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_policy_python">
 <a href="#authorization_policy_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>policy</a>

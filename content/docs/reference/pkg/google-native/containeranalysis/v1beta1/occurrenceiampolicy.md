@@ -29,8 +29,8 @@ Sets the access control policy on the specified note or occurrence. Requires `co
                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                         <span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_containeranalysis_v1beta1.BindingArgs]]</span> = None<span class="p">,</span>
                         <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">occurrences_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">occurrence_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">OccurrenceIamPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -161,16 +161,16 @@ The OccurrenceIamPolicy resource accepts the following [input]({{< relref "/docs
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="occurrencesid_csharp">
-<a href="#occurrencesid_csharp" style="color: inherit; text-decoration: inherit;">Occurrences<wbr>Id</a>
+        <span id="occurrenceid_csharp">
+<a href="#occurrenceid_csharp" style="color: inherit; text-decoration: inherit;">Occurrence<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_csharp">
-<a href="#projectsid_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -205,16 +205,16 @@ The OccurrenceIamPolicy resource accepts the following [input]({{< relref "/docs
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="occurrencesid_go">
-<a href="#occurrencesid_go" style="color: inherit; text-decoration: inherit;">Occurrences<wbr>Id</a>
+        <span id="occurrenceid_go">
+<a href="#occurrenceid_go" style="color: inherit; text-decoration: inherit;">Occurrence<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_go">
-<a href="#projectsid_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -249,16 +249,16 @@ The OccurrenceIamPolicy resource accepts the following [input]({{< relref "/docs
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="occurrencesid_nodejs">
-<a href="#occurrencesid_nodejs" style="color: inherit; text-decoration: inherit;">occurrences<wbr>Id</a>
+        <span id="occurrenceid_nodejs">
+<a href="#occurrenceid_nodejs" style="color: inherit; text-decoration: inherit;">occurrence<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_nodejs">
-<a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -293,16 +293,16 @@ The OccurrenceIamPolicy resource accepts the following [input]({{< relref "/docs
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="occurrences_id_python">
-<a href="#occurrences_id_python" style="color: inherit; text-decoration: inherit;">occurrences_<wbr>id</a>
+        <span id="occurrence_id_python">
+<a href="#occurrence_id_python" style="color: inherit; text-decoration: inherit;">occurrence_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projects_id_python">
-<a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

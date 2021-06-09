@@ -12,10 +12,10 @@ Explore the resources and functions of the google-native.appengine/v1 module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="app" title="App"><span class="symbol resource"></span>App</a></li>
-    <li><a href="appauthorizedcertificate" title="AppAuthorizedCertificate"><span class="symbol resource"></span>AppAuthorizedCertificate</a></li>
-    <li><a href="appdomainmapping" title="AppDomainMapping"><span class="symbol resource"></span>AppDomainMapping</a></li>
-    <li><a href="appfirewallingressrule" title="AppFirewallIngressRule"><span class="symbol resource"></span>AppFirewallIngressRule</a></li>
-    <li><a href="appserviceversion" title="AppServiceVersion"><span class="symbol resource"></span>AppServiceVersion</a></li>
+    <li><a href="authorizedcertificate" title="AuthorizedCertificate"><span class="symbol resource"></span>AuthorizedCertificate</a></li>
+    <li><a href="domainmapping" title="DomainMapping"><span class="symbol resource"></span>DomainMapping</a></li>
+    <li><a href="ingressrule" title="IngressRule"><span class="symbol resource"></span>IngressRule</a></li>
+    <li><a href="version" title="Version"><span class="symbol resource"></span>Version</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -25,6 +25,6 @@ Explore the resources and functions of the google-native.appengine/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

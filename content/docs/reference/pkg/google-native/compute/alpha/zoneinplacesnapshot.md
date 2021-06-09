@@ -32,7 +32,6 @@ Creates an in-place snapshot in the specified zone.
                         <span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">guest_flush</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                         <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">in_place_snapshot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -174,14 +173,6 @@ The ZoneInPlaceSnapshot resource accepts the following [input]({{< relref "/docs
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="inplacesnapshot_csharp">
-<a href="#inplacesnapshot_csharp" style="color: inherit; text-decoration: inherit;">In<wbr>Place<wbr>Snapshot</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -336,14 +327,6 @@ To see the latest fingerprint, make a get() request to retrieve a InPlaceSnapsho
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="inplacesnapshot_go">
-<a href="#inplacesnapshot_go" style="color: inherit; text-decoration: inherit;">In<wbr>Place<wbr>Snapshot</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -497,14 +480,6 @@ To see the latest fingerprint, make a get() request to retrieve a InPlaceSnapsho
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="inplacesnapshot_nodejs">
-<a href="#inplacesnapshot_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Place<wbr>Snapshot</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -657,14 +632,6 @@ To see the latest fingerprint, make a get() request to retrieve a InPlaceSnapsho
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="in_place_snapshot_python">
-<a href="#in_place_snapshot_python" style="color: inherit; text-decoration: inherit;">in_<wbr>place_<wbr>snapshot</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
