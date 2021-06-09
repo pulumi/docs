@@ -133,6 +133,7 @@ export const kubernetesClusterOutput = my_cluster.then(my_cluster => my_cluster.
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kubernetes_cluster(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKubernetesClusterResult</code></pre></div>
 {{% /choosable %}}
 
@@ -175,7 +176,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the kubernetes Cluster.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -197,7 +206,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the kubernetes Cluster.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -219,7 +236,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the kubernetes Cluster.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -241,7 +266,15 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the kubernetes Cluster.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -316,7 +349,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkubernetesclusterinstance">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Instance&gt;</a></span>
     </dt>
-    <dd>{{% md %}}In addition to the arguments provided, these additional attributes about the cluster's default node instance are exported.
+    <dd>{{% md %}}A list of instance inside the pool
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfig_csharp">
@@ -353,6 +386,15 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pools_csharp">
+<a href="#pools_csharp" style="color: inherit; text-decoration: inherit;">Pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusterpool">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Pool&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of node pools associated with the cluster. Each node pool exports the following attributes:
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ready_csharp">
@@ -397,7 +439,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique ID that can be used to identify and reference a Kubernetes cluster.
+    <dd>{{% md %}}The ID of the pool
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
@@ -407,7 +449,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your cluster,.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -473,7 +523,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkubernetesclusterinstance">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Instance</a></span>
     </dt>
-    <dd>{{% md %}}In addition to the arguments provided, these additional attributes about the cluster's default node instance are exported.
+    <dd>{{% md %}}A list of instance inside the pool
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfig_go">
@@ -510,6 +560,15 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pools_go">
+<a href="#pools_go" style="color: inherit; text-decoration: inherit;">Pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusterpool">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Pool</a></span>
+    </dt>
+    <dd>{{% md %}}A list of node pools associated with the cluster. Each node pool exports the following attributes:
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ready_go">
@@ -554,7 +613,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique ID that can be used to identify and reference a Kubernetes cluster.
+    <dd>{{% md %}}The ID of the pool
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
@@ -564,7 +623,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your cluster,.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -630,7 +697,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkubernetesclusterinstance">Get<wbr>Kubernetes<wbr>Cluster<wbr>Instance[]</a></span>
     </dt>
-    <dd>{{% md %}}In addition to the arguments provided, these additional attributes about the cluster's default node instance are exported.
+    <dd>{{% md %}}A list of instance inside the pool
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfig_nodejs">
@@ -667,6 +734,15 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pools_nodejs">
+<a href="#pools_nodejs" style="color: inherit; text-decoration: inherit;">pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusterpool">Get<wbr>Kubernetes<wbr>Cluster<wbr>Pool[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of node pools associated with the cluster. Each node pool exports the following attributes:
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ready_nodejs">
@@ -711,7 +787,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique ID that can be used to identify and reference a Kubernetes cluster.
+    <dd>{{% md %}}The ID of the pool
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
@@ -721,7 +797,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your cluster,.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -787,7 +871,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkubernetesclusterinstance">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Instance]</a></span>
     </dt>
-    <dd>{{% md %}}In addition to the arguments provided, these additional attributes about the cluster's default node instance are exported.
+    <dd>{{% md %}}A list of instance inside the pool
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfig_python">
@@ -824,6 +908,15 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pools_python">
+<a href="#pools_python" style="color: inherit; text-decoration: inherit;">pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusterpool">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Pool]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of node pools associated with the cluster. Each node pool exports the following attributes:
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ready_python">
@@ -868,7 +961,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique ID that can be used to identify and reference a Kubernetes cluster.
+    <dd>{{% md %}}The ID of the pool
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
@@ -878,7 +971,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of your cluster,.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1067,15 +1168,6 @@ The following output properties are available:
     <dd>{{% md %}}Total cpu of the inatance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="createdat_csharp">
-<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was create.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="diskgb_csharp">
 <a href="#diskgb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Gb</a>
 </span>
@@ -1083,15 +1175,6 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="firewallid_csharp">
-<a href="#firewallid_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The firewall id assigned to the instance
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
@@ -1103,15 +1186,6 @@ The following output properties are available:
     <dd>{{% md %}}The hostname of the instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="publicip_csharp">
-<a href="#publicip_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The public ip of the instances, only available if the instances is the master
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="rammb_csharp">
 <a href="#rammb_csharp" style="color: inherit; text-decoration: inherit;">Ram<wbr>Mb</a>
 </span>
@@ -1119,15 +1193,6 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Total ram of the instance
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="region_csharp">
-<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region where instance are.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_csharp">
@@ -1171,15 +1236,6 @@ The following output properties are available:
     <dd>{{% md %}}Total cpu of the inatance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="createdat_go">
-<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was create.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="diskgb_go">
 <a href="#diskgb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Gb</a>
 </span>
@@ -1187,15 +1243,6 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="firewallid_go">
-<a href="#firewallid_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The firewall id assigned to the instance
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_go">
@@ -1207,15 +1254,6 @@ The following output properties are available:
     <dd>{{% md %}}The hostname of the instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="publicip_go">
-<a href="#publicip_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The public ip of the instances, only available if the instances is the master
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="rammb_go">
 <a href="#rammb_go" style="color: inherit; text-decoration: inherit;">Ram<wbr>Mb</a>
 </span>
@@ -1223,15 +1261,6 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Total ram of the instance
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="region_go">
-<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region where instance are.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_go">
@@ -1275,15 +1304,6 @@ The following output properties are available:
     <dd>{{% md %}}Total cpu of the inatance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="createdat_nodejs">
-<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was create.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="diskgb_nodejs">
 <a href="#diskgb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Gb</a>
 </span>
@@ -1291,15 +1311,6 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the disk.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="firewallid_nodejs">
-<a href="#firewallid_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The firewall id assigned to the instance
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
@@ -1311,15 +1322,6 @@ The following output properties are available:
     <dd>{{% md %}}The hostname of the instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="publicip_nodejs">
-<a href="#publicip_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The public ip of the instances, only available if the instances is the master
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="rammb_nodejs">
 <a href="#rammb_nodejs" style="color: inherit; text-decoration: inherit;">ram<wbr>Mb</a>
 </span>
@@ -1327,15 +1329,6 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Total ram of the instance
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="region_nodejs">
-<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region where instance are.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_nodejs">
@@ -1379,15 +1372,6 @@ The following output properties are available:
     <dd>{{% md %}}Total cpu of the inatance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="created_at_python">
-<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was create.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="disk_gb_python">
 <a href="#disk_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>gb</a>
 </span>
@@ -1395,15 +1379,6 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="firewall_id_python">
-<a href="#firewall_id_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The firewall id assigned to the instance
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_python">
@@ -1415,15 +1390,6 @@ The following output properties are available:
     <dd>{{% md %}}The hostname of the instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="public_ip_python">
-<a href="#public_ip_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The public ip of the instances, only available if the instances is the master
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="ram_mb_python">
 <a href="#ram_mb_python" style="color: inherit; text-decoration: inherit;">ram_<wbr>mb</a>
 </span>
@@ -1433,13 +1399,480 @@ The following output properties are available:
     <dd>{{% md %}}Total ram of the instance
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="region_python">
-<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The region where instance are.
+    <dd>{{% md %}}The size of the instance.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of Kubernetes cluster.
+* `ready` -If the Kubernetes cluster is ready.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The tag of the instances
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getkubernetesclusterpool">Get<wbr>Kubernetes<wbr>Cluster<wbr>Pool</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_csharp">
+<a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the pool
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the kubernetes Cluster
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="instancenames_csharp">
+<a href="#instancenames_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of the instance in the pool
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="instances_csharp">
+<a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusterpoolinstance">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Pool<wbr>Instance&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of instance inside the pool
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_go">
+<a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the pool
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the kubernetes Cluster
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="instancenames_go">
+<a href="#instancenames_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of the instance in the pool
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="instances_go">
+<a href="#instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusterpoolinstance">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Pool<wbr>Instance</a></span>
+    </dt>
+    <dd>{{% md %}}A list of instance inside the pool
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_nodejs">
+<a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The size of the pool
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the kubernetes Cluster
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="instancenames_nodejs">
+<a href="#instancenames_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of the instance in the pool
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="instances_nodejs">
+<a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusterpoolinstance">Get<wbr>Kubernetes<wbr>Cluster<wbr>Pool<wbr>Instance[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of instance inside the pool
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_python">
+<a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the pool
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the kubernetes Cluster
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="instance_names_python">
+<a href="#instance_names_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of the instance in the pool
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="instances_python">
+<a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusterpoolinstance">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Pool<wbr>Instance]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of instance inside the pool
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The size of the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getkubernetesclusterpoolinstance">Get<wbr>Kubernetes<wbr>Cluster<wbr>Pool<wbr>Instance</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cpucores_csharp">
+<a href="#cpucores_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Total cpu of the inatance.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="diskgb_csharp">
+<a href="#diskgb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the disk.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hostname_csharp">
+<a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hostname of the instance.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rammb_csharp">
+<a href="#rammb_csharp" style="color: inherit; text-decoration: inherit;">Ram<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Total ram of the instance
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the instance.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of Kubernetes cluster.
+* `ready` -If the Kubernetes cluster is ready.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The tag of the instances
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cpucores_go">
+<a href="#cpucores_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Total cpu of the inatance.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="diskgb_go">
+<a href="#diskgb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the disk.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hostname_go">
+<a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hostname of the instance.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rammb_go">
+<a href="#rammb_go" style="color: inherit; text-decoration: inherit;">Ram<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Total ram of the instance
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the instance.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of Kubernetes cluster.
+* `ready` -If the Kubernetes cluster is ready.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The tag of the instances
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cpucores_nodejs">
+<a href="#cpucores_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Total cpu of the inatance.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="diskgb_nodejs">
+<a href="#diskgb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The size of the disk.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hostname_nodejs">
+<a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hostname of the instance.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rammb_nodejs">
+<a href="#rammb_nodejs" style="color: inherit; text-decoration: inherit;">ram<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Total ram of the instance
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the instance.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of Kubernetes cluster.
+* `ready` -If the Kubernetes cluster is ready.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The tag of the instances
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cpu_cores_python">
+<a href="#cpu_cores_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Total cpu of the inatance.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="disk_gb_python">
+<a href="#disk_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the disk.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hostname_python">
+<a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The hostname of the instance.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ram_mb_python">
+<a href="#ram_mb_python" style="color: inherit; text-decoration: inherit;">ram_<wbr>mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Total ram of the instance
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_python">
