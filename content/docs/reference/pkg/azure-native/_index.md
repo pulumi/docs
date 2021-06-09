@@ -31,6 +31,7 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="autonomousdevelopmentplatform/" title="autonomousdevelopmentplatform"><span class="symbol module"></span>autonomousdevelopmentplatform</a></li>
     <li><a href="avs/" title="avs"><span class="symbol module"></span>avs</a></li>
     <li><a href="azureactivedirectory/" title="azureactivedirectory"><span class="symbol module"></span>azureactivedirectory</a></li>
+    <li><a href="azurearcdata/" title="azurearcdata"><span class="symbol module"></span>azurearcdata</a></li>
     <li><a href="azuredata/" title="azuredata"><span class="symbol module"></span>azuredata</a></li>
     <li><a href="azurestack/" title="azurestack"><span class="symbol module"></span>azurestack</a></li>
     <li><a href="azurestackhci/" title="azurestackhci"><span class="symbol module"></span>azurestackhci</a></li>
@@ -195,6 +196,6 @@ A native Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.10.0</dd>
+	<dd>1.11.0</dd>
 </dl>
 

@@ -42,6 +42,6 @@ Explore the resources and functions of the azure-native.policyinsights module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.10.0</dd>
+	<dd>1.11.0</dd>
 </dl>
 

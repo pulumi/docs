@@ -954,6 +954,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Dedicated LA cluster resourceId that is linked to the workspaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablelocalauth_csharp">
+<a href="#disablelocalauth_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Local<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable Non-AAD based Auth.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enabledataexport_csharp">
 <a href="#enabledataexport_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Data<wbr>Export</a>
 </span>
@@ -989,6 +997,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dedicated LA cluster resourceId that is linked to the workspaces.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablelocalauth_go">
+<a href="#disablelocalauth_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Local<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable Non-AAD based Auth.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledataexport_go">
 <a href="#enabledataexport_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Data<wbr>Export</a>
@@ -1026,6 +1042,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Dedicated LA cluster resourceId that is linked to the workspaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablelocalauth_nodejs">
+<a href="#disablelocalauth_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Local<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Disable Non-AAD based Auth.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enabledataexport_nodejs">
 <a href="#enabledataexport_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Data<wbr>Export</a>
 </span>
@@ -1061,6 +1085,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dedicated LA cluster resourceId that is linked to the workspaces.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_local_auth_python">
+<a href="#disable_local_auth_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>local_<wbr>auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable Non-AAD based Auth.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_data_export_python">
 <a href="#enable_data_export_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>data_<wbr>export</a>
